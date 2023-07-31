@@ -47,34 +47,42 @@
 
         </section>
         <section class="scroll">
-            <div class="scroll-bg">
-                <div class="scroll-wrap">
-                    <div class="scroll-card">
-                        С&nbsp;помощью солнечного света фитопланктон перерабатывает углекислый газ в&nbsp;кислород,
-                        а&nbsp;значит дает возможность другим организмам жить и&nbsp;дышать.
-                        При этом микроводоросли&nbsp;&mdash; не&nbsp;только лёгкие водоёма, но&nbsp;и&nbsp;пища для
-                        зоопланктона&nbsp;&mdash; мелких рачков, моллюсков и&nbsp;личинок водных животных.
-                    </div>
-                    <div class="scroll-card">
-                        Зоопланктоном питаются мальки и&nbsp;некоторые виды рыб, а&nbsp;ими, в&nbsp;свою
-                        очередь,&nbsp;&mdash;
-                        хищные рыбы.
-                    </div>
-                    <div class="scroll-card">
-                        На&nbsp;вершине этой пищевой или, как её&nbsp;называют учёные, трофической цепи&nbsp;&mdash;
-                        водоплавающие птицы. Они поедают рыбу, а&nbsp;помёт&nbsp;&mdash; продукт
-                        их&nbsp;жизнедеятельности,&nbsp;&mdash; попадает в&nbsp;воду и&nbsp;становится питательной средой
-                        для фитопланктона. Круг замыкается.
-                    </div>
-                    <div class="scroll-card">
-                        Если&nbsp;же из&nbsp;трофической цепи исключить хотя&nbsp;бы одно звено или изменить состав
-                        и&nbsp;соотношение обитателей озера, система начинает разрушаться. Сброс недоочищенных бытовых
-                        и&nbsp;производственных сточных вод, аварийные разливы нефтепродуктов, или чересчур интенсивный
-                        вылов рыбы могут привести к&nbsp;нарушению баланса экосистемы.
-                    </div>
-                </div>
-
+            <div class="scroll-bg bg-1">
+                <!-- <div class="scroll-seaweed"></div> -->
             </div>
+            <div class="scroll-bg bg-2">
+            </div>
+            <div class="scroll-bg bg-3">
+            </div>
+            <div class="scroll-bg bg-4">
+            </div>
+            <div class="scroll-wrap">
+                <div class="scroll-card card-1">
+                    С&nbsp;помощью солнечного света фитопланктон перерабатывает углекислый газ в&nbsp;кислород,
+                    а&nbsp;значит дает возможность другим организмам жить и&nbsp;дышать.
+                    При этом микроводоросли&nbsp;&mdash; не&nbsp;только лёгкие водоёма, но&nbsp;и&nbsp;пища для
+                    зоопланктона&nbsp;&mdash; мелких рачков, моллюсков и&nbsp;личинок водных животных.
+                </div>
+                <div class="scroll-card card-2">
+                    Зоопланктоном питаются мальки и&nbsp;некоторые виды рыб, а&nbsp;ими, в&nbsp;свою
+                    очередь,&nbsp;&mdash;
+                    хищные рыбы.
+                </div>
+                <div class="scroll-card card-3">
+                    На&nbsp;вершине этой пищевой или, как её&nbsp;называют учёные, трофической цепи&nbsp;&mdash;
+                    водоплавающие птицы. Они поедают рыбу, а&nbsp;помёт&nbsp;&mdash; продукт
+                    их&nbsp;жизнедеятельности,&nbsp;&mdash; попадает в&nbsp;воду и&nbsp;становится питательной средой
+                    для фитопланктона. Круг замыкается.
+                </div>
+                <div class="scroll-card card-4">
+                    Если&nbsp;же из&nbsp;трофической цепи исключить хотя&nbsp;бы одно звено или изменить состав
+                    и&nbsp;соотношение обитателей озера, система начинает разрушаться. Сброс недоочищенных бытовых
+                    и&nbsp;производственных сточных вод, аварийные разливы нефтепродуктов, или чересчур интенсивный
+                    вылов рыбы могут привести к&nbsp;нарушению баланса экосистемы.
+                </div>
+            </div>
+
+
         </section>
 
         <section class="work-on-mistakes">
@@ -114,6 +122,14 @@
         </section>
 
         <section class="in-search">
+            <div class="in-search__block-w-1"></div>
+            <div class="in-search__block-w-2"></div>
+            <div class="in-search__eagle"></div>
+            <div class="in-search__bird-2"></div>
+            <div class="in-search__fish-1">Чир</div>
+            <div class="in-search__fish-2">Голец</div>
+            <div class="in-search__text-1">Окольцовывание птиц для изучения путей миграции</div>
+            <div class="in-search__text-2">Сбор проб воды из водоёмов</div>
             <BaseTextBlock :title="'В поиске альтернатив'" :textTop="'21 озеро'"
                 :textBottom="'обследовали учёные в ходе экспедиции'">
                 <p>
@@ -158,16 +174,34 @@
                 <div class="shares__images">
                     <div class="shares__images-wrap">
                         <div class="shares__img-wrap">
-                            <img class="shares__img" src="">
+                            <div class="shares__img_text">ПРОДАЁТСЯ</div>
                         </div>
                         <div class="shares__img-text">без птиц</div>
                     </div>
                     <div class="shares__images-wrap">
                         <div class="shares__img-wrap">
-                            <img class="shares__img" src="">
+                            <img class="shares__img-img" src="img/bird.png">
                         </div>
                         <div class="shares__img-text">с птицами</div>
                     </div>
+                </div>
+            </div>
+
+            <div class="scales__wrap mb-3-75">
+                <div class="scales__row">
+                    <div class="scales__text">Цианобактерии</div>
+                    <BaseScale :percent="'32,6%'" class="mr-4-31" :hasClass="'scale-1'" />
+                    <BaseScale :percent="'16,2%'" :hasClass="'scale-2'" />
+                </div>
+                <div class="scales__row">
+                    <div class="scales__text">Диатомеи</div>
+                    <BaseScale :percent="'27,9%'" class="mr-4-31" :hasClass="'scale-3'" />
+                    <BaseScale :percent="'39,9%'" :hasClass="'scale-4'" />
+                </div>
+                <div class="scales__row">
+                    <div class="scales__text">Зеленые водоросли</div>
+                    <BaseScale :percent="'10,2%'" class="mr-4-31" :hasClass="'scale-6'" />
+                    <BaseScale :percent="'20,2%'" :hasClass="'scale-6'" />
                 </div>
             </div>
 
@@ -193,11 +227,201 @@
 <script>
 import BaseTextBlock from '@/components/BaseTextBlock.vue'
 import BaseSidebar from '@/components/BaseSidebar.vue'
+import BaseScale from '@/components/BaseScale.vue'
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default {
     components: {
         BaseTextBlock,
-        BaseSidebar
+        BaseSidebar,
+        BaseScale
+    },
+    mounted: function () {
+        this.scrollAnimation();
+    },
+    methods: {
+        scrollAnimation() {
+            const collageItems = Array.from(document.querySelectorAll(".text-block__wrap"));
+            collageItems.forEach((elem) => {
+
+                gsap.fromTo(elem,
+                    {
+                        y: 70,
+                    },
+                    {
+                        y: 0,
+                        duration: 1,
+                        scrollTrigger: {
+                            start: '0% 100%',
+                            // end: 'bottom 100%',
+                            trigger: elem,
+                            scrub: true,
+                        },
+                    });
+            });
+
+            const sidebarItems = Array.from(document.querySelectorAll(".sidebar"));
+            sidebarItems.forEach((elem) => {
+                gsap.fromTo(elem,
+                    {
+                        y: 70,
+                    },
+                    {
+                        y: 0,
+                        duration: 1,
+                        scrollTrigger: {
+                            start: '0% 100%',
+                            // end: 'bottom 100%',
+                            trigger: elem,
+                            // markers: true,
+                            scrub: true,
+                        },
+                    });
+            });
+
+
+            gsap.to(".scroll-bg", {
+                scrollTrigger: {
+                    trigger: ".scroll",
+                    start: '0%',
+                    // end: "+=400vh",
+                    // end: '100% 100%',
+                    // markers: true,
+
+                    scrub: true,
+                    toggleClass: { className: "active", targets: ".scroll-bg" }
+                },
+            });
+
+            gsap.fromTo(".bg-1",
+                { opacity: '1' },
+                {
+                    opacity: '0',
+                    scrollTrigger: {
+                        trigger: ".card-1",
+                        start: 'top 0%',
+                        end: 'bottom 50%',
+                        endTrigger: '.card-2',
+                        // markers: true,
+                        scrub: true,
+                    },
+
+                });
+
+            gsap.fromTo(".bg-2",
+                { opacity: '1' },
+                {
+                    opacity: '0',
+                    scrollTrigger: {
+                        trigger: ".card-2",
+                        start: 'top 0%',
+                        end: 'bottom 50%',
+                        endTrigger: '.card-3',
+                        // markers: true,
+                        scrub: true,
+                    },
+
+                });
+
+            gsap.fromTo(".bg-3",
+                { opacity: '1' },
+                {
+                    opacity: '0',
+                    scrollTrigger: {
+                        trigger: ".card-3",
+                        start: 'top 0%',
+                        end: 'bottom 50%',
+                        endTrigger: '.card-4',
+                        // markers: true,
+                        scrub: true,
+                    },
+
+                });
+
+            gsap.fromTo(".scale-1",
+                { width: '0' },
+                {
+                    width: '5.75rem',
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: ".scales__wrap",
+                        start: 'top 75%',
+                        end: 'bottom 60%',
+                        // markers: true,
+                        scrub: true,
+                    },
+                });
+
+            gsap.fromTo(".scale-2",
+                { width: '0' },
+                {
+                    width: '2.875rem',
+                    duration: 4,
+                    scrollTrigger: {
+                        trigger: ".scales__wrap",
+                        start: 'top 75%',
+                        end: 'bottom 60%',
+                        // markers: true,
+                        scrub: true,
+                    },
+                });
+
+            gsap.fromTo(".scale-3",
+                { width: '0' },
+                {
+                    width: '4.94rem',
+                    duration: 4,
+                    scrollTrigger: {
+                        trigger: ".scales__wrap",
+                        start: 'top 75%',
+                        end: 'bottom 60%',
+                        // markers: true,
+                        scrub: true,
+                    },
+                });
+
+            gsap.fromTo(".scale-4",
+                { width: '0' },
+                {
+                    width: '7rem',
+                    duration: 4,
+                    scrollTrigger: {
+                        trigger: ".scales__wrap",
+                        start: 'top 75%',
+                        end: 'bottom 60%',
+                        // markers: true,
+                        scrub: true,
+                    },
+                });
+            gsap.fromTo(".scale-5",
+                { width: '0' },
+                {
+                    width: '1.94rem',
+                    duration: 4,
+                    scrollTrigger: {
+                        trigger: ".scales__wrap",
+                        start: 'top 75%',
+                        end: 'bottom 60%',
+                        // markers: true,
+                        scrub: true,
+                    },
+                });
+            gsap.fromTo(".scale-6",
+                { width: '0' },
+                {
+                    width: '3.6rem',
+                    duration: 4,
+                    scrollTrigger: {
+                        trigger: ".scales__wrap",
+                        start: 'top 75%',
+                        end: 'bottom 60%',
+                        // markers: true,
+                        scrub: true,
+                    },
+                });
+        }
     }
 }
 </script>
@@ -236,19 +460,62 @@ main {
 }
 
 .scroll {
+    position: relative;
     width: 100%;
     height: 500vh;
 
     &-bg {
-        height: 100%;
-        background-image: url(../../public/img/fito-1.png);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        height: 100vh;
+        width: 100%;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        background-attachment: fixed;
+
+        &.active {
+            background-attachment: fixed;
+            height: 100%;
+        }
+
+        &.bg-1 {
+            z-index: 4;
+            background-image: url(../../public/img/fito-1.png);
+        }
+
+        &.bg-2 {
+            z-index: 3;
+            background-image: url(../../public/img/fito-2.png);
+        }
+
+        &.bg-3 {
+            z-index: 2;
+            background-image: url(../../public/img/fito-3.png);
+        }
+
+        &.bg-4 {
+            z-index: 1;
+            background-image: url(../../public/img/fito-4.png);
+        }
     }
 
+    // &-seaweed {
+    //     position: absolute;
+    //     top: 0;
+    //     width: 12rem;
+    //     height: 10.25rem;
+    //     background-image: url(../../public/img/seaweed.png);
+    //     background-position: center;
+    //     background-size: cover;
+    //     background-repeat: no-repeat;
+    // }
+
     &-wrap {
+        position: relative;
+        z-index: 10;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -279,6 +546,7 @@ main {
 }
 
 .in-search {
+    position: relative;
     margin-bottom: 3.87rem;
     height: 155.125rem;
     display: flex;
@@ -288,6 +556,94 @@ main {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    &__block-w-1 {
+        position: absolute;
+        bottom: 21.2rem;
+        left: 34rem;
+        width: 10.3125rem;
+        height: 12.34788rem;
+        background: #fff;
+    }
+
+    &__block-w-2 {
+        position: absolute;
+        bottom: 21.2rem;
+        left: 67rem;
+        width: 10.3125rem;
+        height: 16rem;
+        background: #fff;
+    }
+
+    &__eagle {
+        position: absolute;
+        top: 35rem;
+        right: 16rem;
+        width: 12.625rem;
+        height: 12.28456rem;
+        background-image: url(../../public/img/eagle.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__bird-2 {
+        position: absolute;
+        top: 0;
+        left: 16.69rem;
+        width: 5.53125rem;
+        height: 6.40625rem;
+        background-image: url(../../public/img/bird-2.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__text-1,
+    &__text-2 {
+        position: absolute;
+        width: 9.125rem;
+        color: var(--gray-1, #333);
+        font-size: 0.9375rem;
+        font-weight: 400;
+    }
+
+    &__text-1 {
+        top: 42.5rem;
+        right: 52.87rem;
+    }
+
+    &__text-2 {
+        top: 41rem;
+        right: 32rem;
+    }
+
+    &__fish-1,
+    &__fish-2 {
+        position: absolute;
+        width: 8.25rem;
+        text-align: right;
+        color: var(--gray-1, #333);
+        font-size: 0.9375rem;
+        font-weight: 400;
+        background-image: url(../../public/img/fish.png);
+        background-position: left;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 2.40625rem;
+
+    }
+
+    &__fish-1 {
+        top: 100rem;
+        right: 54.5rem;
+    }
+
+    &__fish-2 {
+        top: 106rem;
+        right: 36rem;
+    }
+
 }
 
 .shares {
@@ -315,19 +671,48 @@ main {
 
     &__images-wrap {
         display: flex;
+        align-items: flex-end;
     }
 
-    &__img {
+    &__img-img {
+        position: absolute;
+        right: 1rem;
+        top: -3.12rem;
+        width: 5.8125rem;
+        height: 6.25rem;
+    }
+
+    &__img-wrap {
+        position: relative;
+        display: flex;
+        width: 9.6875rem;
+        height: 5.75rem;
         background-image: url(../../public/img/nest.png);
         background-position: center;
         background-size: 9.6875rem 5.75rem;
         background-repeat: no-repeat;
     }
 
-    &__img-wrap {
-        display: flex;
-        width: 9.6875rem;
-        height: 5.75rem;
+    &__img_text {
+        position: absolute;
+        top: -2rem;
+        left: 21%;
+        border: 0.412px solid var(--gray-1, #333);
+        padding: 0.51rem;
+        color: var(--gray-1, #333);
+        font-size: 0.82469rem;
+        font-weight: 300;
+        line-height: 130%;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            width: 0.5px;
+            background: #333;
+            height: 3rem;
+        }
     }
 
     &__img-text {
@@ -336,6 +721,27 @@ main {
         font-size: 1rem;
         font-weight: 300;
         line-height: 130%;
+    }
+
+}
+
+.scales {
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem
+    }
+
+    &__row {
+        display: flex;
+    }
+
+    &__text {
+        width: 9.75rem;
+        margin-right: 0.69rem;
+        color: #000;
+        font-size: 1rem;
+        font-weight: 300;
     }
 }
 </style>

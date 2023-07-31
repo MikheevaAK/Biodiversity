@@ -16,9 +16,6 @@
 
 <script>
 import BaseNumberBlock from "@/components/BaseNumberBlock.vue";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 
 export default {
     components: { BaseNumberBlock },
@@ -39,25 +36,6 @@ export default {
             type: Boolean,
             default: false
         },
-    },
-    mounted: function () {
-        this.scrollAnimation();
-    },
-    methods: {
-        scrollAnimation() {
-            gsap.from(".text-block__descr", {
-                y: 30,
-                opacity: 0,
-            });
-            gsap.to(".text-block__descr", {
-                y: 0,
-                opacity: 1,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: ".text-block__wrap"
-                },
-            });
-        }
     }
 }
 </script>
@@ -68,6 +46,7 @@ export default {
         position: relative;
         margin: 0 auto;
         width: 32.68rem;
+        z-index: 10;
     }
 
     &__title {

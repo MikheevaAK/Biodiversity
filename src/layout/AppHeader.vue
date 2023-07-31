@@ -45,7 +45,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    // background-attachment: fixed;
 
     .container {
         padding: 7.13rem 5.03rem;

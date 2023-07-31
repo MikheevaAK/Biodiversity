@@ -1,10 +1,12 @@
 <template>
     <nav class="nav">
-        <ul class="social">
-            <li v-for="item in socials" :key="item.name">
-                <a :id="item.name" href="#" class="social__link" :class="item.icon"></a>
-            </li>
-        </ul>
+        <div class="social">
+            <ul>
+                <li v-for="item in socials" :key="item.name">
+                    <a :id="item.name" href="#" class="social__link" :class="item.icon"></a>
+                </li>
+            </ul>
+        </div>
         <ul class="burger">
             <!-- <li></li>
                 <li></li>
@@ -41,25 +43,60 @@ export default {
 </script>
 
 <style lang="scss">
-    .nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-    }
+.nav {
+    position: fixed;
+    top: 0;
+    right: 1.25rem;
+    z-index: 10;
+    display: flex;
+}
 
-    .social {
-        &__link {
+.social {
+    position: relative;
+    width: 3.4375rem;
+    height: 3.4375rem;
+    background-image: url(../../public/img/svg/sharing.svg);
+    background-size: 100%;
+    background-position: center;
+
+    &:hover {
+        ul {
             display: block;
-            width: 55px;
-            height: 55px;
-            background-size: 100%;
-            background-position: center;
-        }
-
-        .vk {
-            background-image: url(../../public/img/svg/vk.svg);
         }
     }
 
+    ul {
+        position: absolute;
+        top: 100%;
+        display: none;
+    }
+
+    &__link {
+        display: block;
+        width: 3.4375rem;
+        height: 3.4375rem;
+        background-size: 100%;
+        background-position: center;
+    }
+
+    #vk {
+        background-image: url(../../public/img/svg/vk.svg);
+    }
+
+    #telegram {
+        background-image: url(../../public/img/svg/telegram.svg);
+    }
+
+    #ok {
+        background-image: url(../../public/img/svg/ok.svg);
+    }
+}
+
+.burger {
+    background-size: 100%;
+    background-position: center;
+    width: 3.4375rem;
+    height: 3.4375rem;
+    background-image: url(../../public/img/svg/burger.svg);
+}
 </style>

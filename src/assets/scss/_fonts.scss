@@ -1,28 +1,25 @@
 @font-face {
-    font-family: "MabryPro";
-    src: local("MabryPro-Bold"),
-        url("../fonts/MabryPro-Bold.woff2") format("woff2"),
-        url("../fonts/MabryPro-Bold.woff") format("woff");
+    font-family: "Proxima-Nova";
+    src: local("Proxima-Nova-Semibold"),
+        url("../fonts/Proxima-Nova-Semibold.otf") format("otf");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "MabryPro";
-    src: local("MabryPro-Medium"),
-        url("../fonts/MabryPro-Medium.woff2") format("woff2"),
-        url("../fonts/MabryPro-Medium.woff") format("woff");
+    font-family: "Proxima-Nova";
+    src: local("Proxima-Nova-Regular"),
+        url("../fonts/Proxima-Nova-Regular.otf") format("otf");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "MabryPro";
-    src: local("MabryPro-Regular"),
-        url("../fonts/MabryPro-Regular.woff2") format("woff2"),
-        url("../fonts/MabryPro-Regular.woff") format("woff");
+    font-family: "Proxima-Nova";
+    src: local("Proxima-Nova-Light"),
+        url("../fonts/Proxima-Nova-Light.otf") format("otf");
     font-weight: 300;
     font-style: normal;
     font-display: swap;

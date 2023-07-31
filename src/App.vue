@@ -3,12 +3,12 @@
     <AppHeader />
     <AppMain />
     <AppFooter />
-    <!-- <AppNav /> -->
+    <AppNav />
   </div>
 </template>
 
 <script>
-// import AppNav from '@/layout/AppNav.vue'
+import AppNav from '@/layout/AppNav.vue'
 import AppHeader from '@/layout/AppHeader.vue'
 import AppMain from '@/layout/AppMain.vue'
 import AppFooter from '@/layout/AppFooter.vue'
@@ -16,7 +16,7 @@ import AppFooter from '@/layout/AppFooter.vue'
 export default {
   name: 'App',
   components: {
-    // AppNav,
+    AppNav,
     AppHeader,
     AppMain,
     AppFooter

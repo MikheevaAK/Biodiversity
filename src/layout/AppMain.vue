@@ -529,6 +529,24 @@ main {
             z-index: 1;
             background-image: url(../../public/img/fito-4.png);
         }
+
+        @media (max-width: 768px) {
+            &.bg-1 {
+                background-image: url(../../public/img/fito-1-mobile.png);
+            }
+
+            &.bg-2 {
+                background-image: url(../../public/img/fito-2-mobile.png);
+            }
+
+            &.bg-3 {
+                background-image: url(../../public/img/fito-3-mobile.png);
+            }
+
+            &.bg-4 {
+                background-image: url(../../public/img/fito-4-mobile.png);
+            }
+        }
     }
 
     // &-seaweed {
@@ -608,7 +626,7 @@ main {
     @media (max-width: 768px) {
         background-image: url(../../public/img/in-search-mobile.png);
         height: 176.535rem;
-        }
+    }
 
 
 
@@ -634,8 +652,8 @@ main {
     padding: 0 13.25rem;
 
     @media (max-width: 768px) {
-            padding: 0;
-        }
+        padding: 0;
+    }
 
     &__title {
         width: 21.875rem;

@@ -33,6 +33,8 @@
                 </p>
             </div>
         </div>
+
+        <div class="hero-strip"></div>
     </div>
 </template>
 
@@ -41,18 +43,51 @@
     position: relative;
     min-height: 100vh;
     width: 100%;
+    max-width: 100rem;
     background-image: url(../../public/img/hero1.png);
-    background-position: center;
+    background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
-    // background-attachment: fixed;
+
+    @media (max-width: 768px) {
+        // height: 42.5rem;
+        // background-position: -252rem;
+    }
+
+
+    &-strip {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -2.2rem;
+        height: 8.125rem;
+        background-image: url(../../public/img/strip.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @media (max-width: 768px) {
+            left: -107px;
+            right: 0;
+            bottom: -4.2rem;
+            height: 26.67rem;
+        }
+    }
 
     .container {
         padding: 7.13rem 5.03rem;
+
+        @media (max-width: 768px) {
+            padding: 18.8rem 4.3rem;
+        }
     }
 
     &__wrap {
         width: 42.4375rem;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
     }
 
     &__title {
@@ -61,6 +96,12 @@
         font-weight: 600;
         line-height: 110%;
         color: var(--blue-deep, #004C97);
+
+        @media (max-width: 768px) {
+            width: 80%;
+            margin-bottom: 8rem;
+            font-size: 10.66rem;
+        }
     }
 
     &__descr {
@@ -68,6 +109,11 @@
         font-weight: 400;
         line-height: 130%;
         color: var(--gray-1, #333);
+
+        @media (max-width: 768px) {
+            width: 95%;
+            font-size: 5rem;
+        }
     }
 
     &__link {
@@ -77,6 +123,13 @@
         width: 9.9375rem;
         height: 2.0625rem;
         display: block;
+
+        @media (max-width: 768px) {
+            top: 5rem;
+            left: 4.3rem;
+            width: 23.5rem;
+            height: 5rem;
+        }
     }
 }
 </style>

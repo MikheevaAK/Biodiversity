@@ -1,5 +1,5 @@
 <template>
-    <div class="text-block__wrap" >
+    <div class="text-block__wrap">
         <h3 v-if="title" class="text-block__title">
             {{ title }}
         </h3>
@@ -7,10 +7,7 @@
             <slot></slot>
         </div>
 
-        <BaseNumberBlock v-if="textTop || textBottom" 
-                        :textTop="textTop" 
-                        :textBottom="textBottom"
-                        :top="top" />
+        <BaseNumberBlock v-if="textTop || textBottom" :textTop="textTop" :textBottom="textBottom" :top="top" />
     </div>
 </template>
 
@@ -47,6 +44,11 @@ export default {
         margin: 0 auto;
         width: 32.68rem;
         z-index: 10;
+
+        @media (max-width: 768px) {
+            padding: 0 9.5rem;
+            width: 100%;
+        }
     }
 
     &__title {
@@ -55,6 +57,11 @@ export default {
         font-size: 1.375rem;
         font-weight: 600;
         line-height: 130%;
+
+        @media (max-width: 768px) {
+            margin-bottom: 6.4rem;
+            font-size: 5.8667rem;
+        }
     }
 
     &__descr {
@@ -62,6 +69,10 @@ export default {
         font-size: 1.125rem;
         font-weight: 300;
         line-height: 130%;
+
+        @media (max-width: 768px) {
+            font-size: 4.53334rem;
+        }
     }
 }
 </style>

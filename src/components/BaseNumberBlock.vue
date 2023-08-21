@@ -38,6 +38,15 @@ export default {
     bottom: 0;
     left: 37rem;
 
+    @media (max-width: 768px) {
+        position: relative;
+        margin-top: 7.45rem;
+        position: relative;
+        width: 100%;
+        left: 0;
+        padding-left: 5.33334rem;
+    }
+
     &-bottom {
         top: 0;
         bottom: unset;
@@ -48,12 +57,21 @@ export default {
         font-size: 2.5rem;
         font-weight: 600;
         line-height: 130%;
+
+        @media (max-width: 768px) {
+            margin-bottom: 3.4667rem;
+            font-size: 10.67rem;
+        }
     }
 
     &__bottom {
         font-size: 1.125rem;
         font-weight: 300;
         line-height: 130%;
+
+        @media (max-width: 768px) {
+            font-size: 4.53334rem;
+        }
     }
 }
 </style>

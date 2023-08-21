@@ -49,6 +49,10 @@ export default {
     right: 1.25rem;
     z-index: 10;
     display: flex;
+
+    @media (max-width: 768px) {
+        right: 4rem;
+    }
 }
 
 .social {
@@ -58,6 +62,11 @@ export default {
     background-image: url(../../public/img/svg/sharing.svg);
     background-size: 100%;
     background-position: center;
+
+    @media (max-width: 768px) {
+        width: 8.23rem;
+        height: 8.23rem;
+    }
 
     &:hover {
         ul {
@@ -77,6 +86,11 @@ export default {
         height: 3.4375rem;
         background-size: 100%;
         background-position: center;
+
+        @media (max-width: 768px) {
+            width: 8.23rem;
+            height: 8.23rem;
+        }
     }
 
     #vk {
@@ -98,5 +112,10 @@ export default {
     width: 3.4375rem;
     height: 3.4375rem;
     background-image: url(../../public/img/svg/burger.svg);
+
+    @media (max-width: 768px) {
+        width: 8.23rem;
+        height: 8.23rem;
+    }
 }
 </style>

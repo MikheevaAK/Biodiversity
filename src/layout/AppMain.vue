@@ -4,7 +4,7 @@
             <div class="lake__introduction">
                 <img class="lake__introduction-img" src="img/introduction.png">
                 <BaseTextBlock :textTop="'> 50 озёр'" :textBottom="'находится на территории Северного Таймыра'" :top="true">
-                    <p>
+                    <p class="mb-0-625 text-block__descr">
                         В&nbsp;Арктике очень много озёр, особенно тех, которые наполняют подземные родники. В&nbsp;них рыба
                         не&nbsp;водится из-за очень скудной питательной базы. В&nbsp;других&nbsp;же озёрах рыбы настолько
                         много,
@@ -12,8 +12,8 @@
                         озеро
                         в&nbsp;какой‑то момент пустеет, в&nbsp;этом случае вылов запрещают до&nbsp;полного восстановления
                         рыбопродуктивности водоёма.
-                        <br />
-                        <br />
+                    </p>
+                    <p class="text-block__descr">
                         Этот процесс может занимать десятилетия, но&nbsp;учёные придумали как его ускорить оригинальным
                         и&nbsp;экологичным способом. Эксперимент по&nbsp;повышению рыбопродуктивности сейчас проходит
                         на&nbsp;озере Пясино.
@@ -37,7 +37,7 @@
             </div>
 
             <BaseTextBlock :title="'Что делает озеро рыбопродуктивным?'">
-                <p>
+                <p class="text-block__descr">
                     Озеро&nbsp;&mdash; это дом для множества живых организмов: от&nbsp;неразличимых невооруженным взглядом
                     бактерий до&nbsp;крупных рыб и&nbsp;водных млекопитающих. В&nbsp;арктических водоемах фауна уникальна
                     по&nbsp;видовому составу, но&nbsp;ее&nbsp;численность и&nbsp;биомасса невысока. Фауна тоже достаточно
@@ -58,24 +58,26 @@
             <div class="scroll-bg bg-4">
             </div>
             <div class="scroll-wrap">
-                <div class="scroll-card card-1">
+                <div class="scroll-card card-1 text-block__descr ">
                     С&nbsp;помощью солнечного света фитопланктон перерабатывает углекислый газ в&nbsp;кислород,
                     а&nbsp;значит дает возможность другим организмам жить и&nbsp;дышать.
+                    <br />
+                    <br />
                     При этом микроводоросли&nbsp;&mdash; не&nbsp;только лёгкие водоёма, но&nbsp;и&nbsp;пища для
                     зоопланктона&nbsp;&mdash; мелких рачков, моллюсков и&nbsp;личинок водных животных.
                 </div>
-                <div class="scroll-card card-2">
+                <div class="scroll-card card-2 text-block__descr ">
                     Зоопланктоном питаются мальки и&nbsp;некоторые виды рыб, а&nbsp;ими, в&nbsp;свою
                     очередь,&nbsp;&mdash;
                     хищные рыбы.
                 </div>
-                <div class="scroll-card card-3">
+                <div class="scroll-card card-3 text-block__descr ">
                     На&nbsp;вершине этой пищевой или, как её&nbsp;называют учёные, трофической цепи&nbsp;&mdash;
                     водоплавающие птицы. Они поедают рыбу, а&nbsp;помёт&nbsp;&mdash; продукт
                     их&nbsp;жизнедеятельности,&nbsp;&mdash; попадает в&nbsp;воду и&nbsp;становится питательной средой
                     для фитопланктона. Круг замыкается.
                 </div>
-                <div class="scroll-card card-4">
+                <div class="scroll-card card-4 text-block__descr">
                     Если&nbsp;же из&nbsp;трофической цепи исключить хотя&nbsp;бы одно звено или изменить состав
                     и&nbsp;соотношение обитателей озера, система начинает разрушаться. Сброс недоочищенных бытовых
                     и&nbsp;производственных сточных вод, аварийные разливы нефтепродуктов, или чересчур интенсивный
@@ -88,7 +90,7 @@
 
         <section class="work-on-mistakes">
             <BaseTextBlock :title="'Работа над ошибками'">
-                <p>
+                <p class="text-block__descr">
                     По&nbsp;словам учёных, ситуацию можно исправить. Для этого нужно повысить эффективность очистки
                     хозяйственно-бытовых сточных вод, сбрасываемых в&nbsp;окрестные водоемы, и&nbsp;восстановить популяции
                     обитающих в&nbsp;них организмов, начав с&nbsp;основ пищевой цепи&nbsp;&mdash; фитопланктона.
@@ -105,10 +107,11 @@
                 </p>
             </BaseTextBlock>
 
-            <img class="work-on-mistakes__img" src="img/scheme.png">
+            <!-- <img class="work-on-mistakes__img" src="img/scheme.png"> -->
+            <div class="work-on-mistakes__img"></div>
 
-            <BaseTextBlock class="mb-3-75">
-                <p>
+            <BaseTextBlock class="mb-2-31">
+                <p class="text-block__descr">
                     Массовая гибель живых организмов из-за цветения воды приведёт к&nbsp;гниению их&nbsp;останков
                     и&nbsp;загрязнению воды. Разумеется, в&nbsp;здоровой экосистеме цианобактерии также присутствуют,
                     но&nbsp;здесь важен баланс. А&nbsp;преобладание какого‑то одного вида его нарушает.
@@ -124,16 +127,8 @@
             </BaseSidebar>
         </section>
 
-        <section class="in-search">
-            <div class="in-search__block-w-1"></div>
-            <div class="in-search__block-w-2"></div>
-            <div class="in-search__eagle"></div>
-            <div class="in-search__bird-2"></div>
-            <div class="in-search__fish-1">Чир</div>
-            <div class="in-search__fish-2">Голец</div>
-            <div class="in-search__text-1">Окольцовывание птиц для изучения путей миграции</div>
-            <div class="in-search__text-2">Сбор проб воды из водоёмов</div>
-            <BaseTextBlock :title="'В поиске альтернатив'" :textTop="'21 озеро'"
+        <section class="in-search-section">
+            <BaseTextBlock class="mb-3-75" :title="'В поиске альтернатив'" :textTop="'21 озеро'" :top="true"
                 :textBottom="'обследовали учёные в ходе экспедиции'">
                 <p>
                     Пытаясь найти замену минеральным удобрениям, учёные обратили внимание на&nbsp;удобрение
@@ -152,44 +147,45 @@
                     За&nbsp;несколько недель они облетели на&nbsp;специальном гидросамолёте местные озера.
                 </p>
             </BaseTextBlock>
-            <BaseTextBlock :textTop="'на 16 п.п.'" :textBottom="'ниже доля цианобактерий в озёрах, где есть птицы'">
-                <p>
-                    На&nbsp;одних водоёмах птиц не&nbsp;было вовсе, рядом с&nbsp;другими гнездились большие колонии
-                    из&nbsp;десятков и&nbsp;даже сотен особей. Из&nbsp;каждого озера биологи взяли образцы воды, которые
-                    позднее направили на&nbsp;анализ.
-                    <br />
-                    <br />
-                    Результаты лабораторных исследований подтвердили правильность догадки учёных. В&nbsp;озёрах, рядом
-                    с&nbsp;которыми гнездятся птицы (то&nbsp;есть там, где помёт попадает в&nbsp;воду), баланс растворённых
-                    в&nbsp;воде питательных веществ действительно оказался лучше. В&nbsp;то&nbsp;же время в&nbsp;планктоне
-                    преобладали полезные диатомовые и&nbsp;зеленые водоросли, а&nbsp;доля цианобактерий оказалась заметно
-                    меньше, чем в&nbsp;озёрах без птиц.
-                    <br />
-                    <br />
-                    Иными словами, в&nbsp;таких озёрах было сбалансированное сообщество фитопланктона. Благодаря этому
-                    в&nbsp;водоёмах водились ценные кормовые организмы, необходимые для питания уникальных арктических видов
-                    рыб.
-                </p>
-            </BaseTextBlock>
+            <div class="in-search">
+                <div class="in-search__plane"></div>
+                <BaseTextBlock :textTop="'на 16 п.п.'" :textBottom="'ниже доля цианобактерий в озёрах, где есть птицы'">
+                    <p>
+                        На&nbsp;одних водоёмах птиц не&nbsp;было вовсе, рядом с&nbsp;другими гнездились большие колонии
+                        из&nbsp;десятков и&nbsp;даже сотен особей. Из&nbsp;каждого озера биологи взяли образцы воды, которые
+                        позднее направили на&nbsp;анализ.
+                        <br />
+                        <br />
+                        Результаты лабораторных исследований подтвердили правильность догадки учёных. В&nbsp;озёрах, рядом
+                        с&nbsp;которыми гнездятся птицы (то&nbsp;есть там, где помёт попадает в&nbsp;воду), баланс
+                        растворённых
+                        в&nbsp;воде питательных веществ действительно оказался лучше. В&nbsp;то&nbsp;же время
+                        в&nbsp;планктоне
+                        преобладали полезные диатомовые и&nbsp;зеленые водоросли, а&nbsp;доля цианобактерий оказалась
+                        заметно
+                        меньше, чем в&nbsp;озёрах без птиц.
+                        <br />
+                        <br />
+                        Иными словами, в&nbsp;таких озёрах было сбалансированное сообщество фитопланктона. Благодаря этому
+                        в&nbsp;водоёмах водились ценные кормовые организмы, необходимые для питания уникальных арктических
+                        видов
+                        рыб.
+                    </p>
+                </BaseTextBlock>
+            </div>
         </section>
 
         <section class="shares">
             <h3 class="shares__title">
-                Доля различных видов фитопланктона в&nbsp;озёрах
+                Доля различных видов фитопланктона в&nbsp;озёрах с птицами и без птиц
             </h3>
             <div class="shares__wrap">
                 <div class="shares__images">
-                    <div class="shares__images-wrap">
-                        <div class="shares__img-wrap">
-                            <div class="shares__img_text">ПРОДАЁТСЯ</div>
-                        </div>
-                        <div class="shares__img-text">без птиц</div>
+                    <div class="shares__img-wrap">
+                        <img class="shares__img-img" src="img/nest.png">
                     </div>
-                    <div class="shares__images-wrap">
-                        <div class="shares__img-wrap">
-                            <img class="shares__img-img" src="img/bird.png">
-                        </div>
-                        <div class="shares__img-text">с птицами</div>
+                    <div class="shares__img-wrap">
+                        <img class="shares__img-img" src="img/bird.png">
                     </div>
                 </div>
             </div>
@@ -445,10 +441,20 @@ main {
         flex-direction: column;
         align-items: center;
 
+        @media (max-width: 768px) {
+            margin-bottom: 21.33rem;
+        }
+
         &-img {
-            margin-bottom: 1.87rem;
-            width: 16.375rem;
-            height: 8.625rem;
+            margin-bottom: 1.75rem;
+            width: 31.625rem;
+            height: 7.625rem;
+
+            @media (max-width: 768px) {
+                margin-bottom: 5.34rem;
+                width: 100%;
+                height: 26.667rem;
+            }
         }
     }
 
@@ -458,10 +464,23 @@ main {
         flex-direction: column;
         align-items: center;
 
+        @media (max-width: 768px) {
+            margin-bottom: 21.33rem;
+        }
+
+
         &-img {
             margin-top: 1.88rem;
             width: 21.1875rem;
             height: 32.08944rem;
+
+            @media (max-width: 768px) {
+                margin: 0 auto;
+                margin-top: 5.34rem;
+                width: 80.3rem;
+                height: 121.5rem;
+            }
+
         }
     }
 }
@@ -490,7 +509,10 @@ main {
 
         &.bg-1 {
             z-index: 4;
-            background-image: url(../../public/img/fito-1.png);
+            background-image: url(../../public/img/fito-1.png), url(../../public/img/fito-1-text.png);
+            background-size: cover, 40.4375rem 2.09375rem;
+            background-repeat: no-repeat, repeat-y;
+            background-position: center, 6.94rem 19rem;
         }
 
         &.bg-2 {
@@ -539,116 +561,71 @@ main {
         &:first-child {
             margin-top: 50vh;
         }
+
+        @media (max-width: 768px) {
+            padding: 4.2666rem;
+            margin: 0 auto 100vh auto;
+            width: 93%;
+        }
     }
 }
 
 .work-on-mistakes {
     padding-top: 6.25rem;
-    margin-bottom: 9.75rem;
+    margin-bottom: 5.5rem;
 
     &__img {
-        margin-top: 5.19rem;
-        margin-bottom: 3.6rem;
+        margin-top: 2.5rem;
+        margin-bottom: 2.63rem;
+        background-image: url(../../public/img/scheme.png);
+        width: 100%;
+        height: 39.8125rem;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @media (max-width: 768px) {
+            margin-top: 11.2rem;
+            margin-bottom: 14.667rem;
+            background-image: url(../../public/img/scheme-mobile.png);
+            height: 178.135rem;
+        }
     }
 }
 
 .in-search {
     position: relative;
     margin-bottom: 3.87rem;
-    height: 155.125rem;
+    height: 102rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     flex-direction: column;
     background-image: url(../../public/img/in-search.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 
-    &__block-w-1 {
-        position: absolute;
-        bottom: 21.2rem;
-        left: 34rem;
-        width: 10.3125rem;
-        height: 12.34788rem;
-        background: #fff;
-    }
+    @media (max-width: 768px) {
+        background-image: url(../../public/img/in-search-mobile.png);
+        height: 176.535rem;
+        }
 
-    &__block-w-2 {
-        position: absolute;
-        bottom: 21.2rem;
-        left: 67rem;
-        width: 10.3125rem;
-        height: 16rem;
-        background: #fff;
-    }
 
-    &__eagle {
+
+    &__plane {
         position: absolute;
-        top: 35rem;
-        right: 16rem;
-        width: 12.625rem;
-        height: 12.28456rem;
-        background-image: url(../../public/img/eagle.png);
+        top: -21rem;
+        left: 0rem;
+        width: 29.5625rem;
+        height: 22.4375rem;
+        background-image: url(../../public/img/plane.png);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-    }
 
-    &__bird-2 {
-        position: absolute;
-        top: 0;
-        left: 16.69rem;
-        width: 5.53125rem;
-        height: 6.40625rem;
-        background-image: url(../../public/img/bird-2.png);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    &__text-1,
-    &__text-2 {
-        position: absolute;
-        width: 9.125rem;
-        color: var(--gray-1, #333);
-        font-size: 0.9375rem;
-        font-weight: 400;
-    }
-
-    &__text-1 {
-        top: 42.5rem;
-        right: 52.87rem;
-    }
-
-    &__text-2 {
-        top: 41rem;
-        right: 32rem;
-    }
-
-    &__fish-1,
-    &__fish-2 {
-        position: absolute;
-        width: 8.25rem;
-        text-align: right;
-        color: var(--gray-1, #333);
-        font-size: 0.9375rem;
-        font-weight: 400;
-        background-image: url(../../public/img/fish.png);
-        background-position: left;
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: 2.40625rem;
-
-    }
-
-    &__fish-1 {
-        top: 100rem;
-        right: 54.5rem;
-    }
-
-    &__fish-2 {
-        top: 106rem;
-        right: 36rem;
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 
 }
@@ -656,9 +633,12 @@ main {
 .shares {
     padding: 0 13.25rem;
 
+    @media (max-width: 768px) {
+            padding: 0;
+        }
+
     &__title {
-        margin-bottom: 4.75rem;
-        width: 16.3125rem;
+        width: 21.875rem;
         color: #000;
         font-size: 1.125rem;
         font-weight: 600;
@@ -673,61 +653,14 @@ main {
         margin-bottom: 1.81rem;
         padding-left: 8.88rem;
         display: flex;
-        gap: 3.94rem;
-    }
-
-    &__images-wrap {
-        display: flex;
-        align-items: flex-end;
-    }
-
-    &__img-img {
-        position: absolute;
-        right: 1rem;
-        top: -3.12rem;
-        width: 5.8125rem;
-        height: 6.25rem;
+        gap: 14.75rem;
     }
 
     &__img-wrap {
         position: relative;
         display: flex;
-        width: 9.6875rem;
-        height: 5.75rem;
-        background-image: url(../../public/img/nest.png);
-        background-position: center;
-        background-size: 9.6875rem 5.75rem;
-        background-repeat: no-repeat;
-    }
-
-    &__img_text {
-        position: absolute;
-        top: -2rem;
-        left: 21%;
-        border: 0.412px solid var(--gray-1, #333);
-        padding: 0.51rem;
-        color: var(--gray-1, #333);
-        font-size: 0.82469rem;
-        font-weight: 300;
-        line-height: 130%;
-
-        &::after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            width: 0.5px;
-            background: #333;
-            height: 3rem;
-        }
-    }
-
-    &__img-text {
-        width: 11.5rem;
-        color: #000;
-        font-size: 1rem;
-        font-weight: 300;
-        line-height: 130%;
+        width: 10.8125rem;
+        height: 7.25rem;
     }
 
 }

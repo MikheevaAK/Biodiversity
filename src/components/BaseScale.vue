@@ -48,16 +48,10 @@ export default {
         gap: 0.69rem;
         align-items: center;
 
-        &:not(:last-child) {
-            margin-bottom: 1.88rem;
-        }
-
         @media (max-width: 768px) {
             justify-content: space-between;
             width: 100%;
             padding: 0 4rem;
-
-
             margin-bottom: 3.7333rem;
 
             &:not(:last-child) {

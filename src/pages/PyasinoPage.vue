@@ -241,15 +241,15 @@
                         <div class="shares__img-wrap">
                             <img class="shares__img-img" src="img/nest.png">
                         </div>
-                        <div>
+                        <div class="scales__text-wrap">
                             <div class="scales__text-mobile">Цианобактерии</div>
                             <BaseScale :percent="'32,6%'" class="mr-4-31" :hasClass="'scale-1'" />
                         </div>
-                        <div>
+                        <div class="scales__text-wrap">
                             <div class="scales__text-mobile">Диатомеи</div>
                             <BaseScale :percent="'27,9%'" class="mr-4-31" :hasClass="'scale-3'" />
                         </div>
-                        <div>
+                        <div class="scales__text-wrap">
                             <div class="scales__text-mobile">Зеленые водоросли</div>
                             <BaseScale :percent="'10,2%'" class="mr-4-31" :hasClass="'scale-6'" />
                         </div>
@@ -258,15 +258,15 @@
                         <div class="shares__img-wrap">
                             <img class="shares__img-img" src="img/bird.png">
                         </div>
-                        <div>
+                        <div class="scales__text-wrap">
                             <div class="scales__text-mobile">Цианобактерии</div>
                             <BaseScale :percent="'16,2%'" :hasClass="'scale-2'" />
                         </div>
-                        <div>
+                        <div class="scales__text-wrap">
                             <div class="scales__text-mobile">Диатомеи</div>
                             <BaseScale :percent="'39,9%'" :hasClass="'scale-4'" />
                         </div>
-                        <div>
+                        <div class="scales__text-wrap">
                             <div class="scales__text-mobile">Зеленые водоросли</div>
                             <BaseScale :percent="'20,2%'" :hasClass="'scale-6'" />
                         </div>
@@ -982,6 +982,14 @@ export default {
             margin-bottom: 1.88rem;
         }
 
+        &-wrap:not(:last-child) {
+            margin-bottom: 1.88rem;
+
+            @media (max-width: 768px) {
+                margin-bottom: 0;
+            }
+        }
+
         &-mobile {
             display: none;
 
@@ -990,6 +998,7 @@ export default {
                 padding: 0 4rem;
                 margin-bottom: 1.867rem;
                 font-size: 4.2667rem;
+                line-height: 130%;
             }
         }
     }

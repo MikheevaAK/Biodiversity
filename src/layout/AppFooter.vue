@@ -145,6 +145,14 @@ export default {
             margin-bottom: 2.75rem;
             width: 20.3125rem;
             text-align: center;
+
+            
+
+            @media (max-width: 768px) {
+                font-size: 4.53334rem;
+                line-height: 130%;
+                width: 100%;
+        }
         }
     }
 

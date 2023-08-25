@@ -26,7 +26,7 @@ body {
     font-weight: $font-light;
     font-size: 1vw;
     font-weight: 300;
-    line-height: 130%; 
+    line-height: 130%;
 
     // @media (max-width: $screen-md) {
     //     font-size: 1rem;    
@@ -44,20 +44,38 @@ a {
     text-decoration: none;
 }
 
-h1, ul,
-h2, li,
-h3, p {
+h1,
+ul,
+h2,
+li,
+h3,
+p {
     margin: 0;
     padding: 0;
 }
 
-ol, ul {
+ol,
+ul {
     list-style: none;
 }
 
 svg {
     width: 100%;
     height: 100%;
+}
+
+.hidden-mobile {
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.visiable-mobile {
+    display: none;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
 }
 
 .mb-3-75 {
@@ -67,6 +85,7 @@ svg {
 .mb-80-81 {
     margin-bottom: 80.81rem;
 }
+
 .mr-4-31 {
     margin-right: 4.31rem;
 }
@@ -77,4 +96,8 @@ svg {
 
 .mb-2-31 {
     margin-bottom: 2.31rem;
+}
+
+.mb-7-5 {
+    margin-bottom: 7.5rem;
 }

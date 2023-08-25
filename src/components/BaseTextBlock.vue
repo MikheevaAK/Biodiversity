@@ -6,33 +6,17 @@
         <div class="text-block__descr">
             <slot></slot>
         </div>
-
-        <BaseNumberBlock v-if="textTop || textBottom" :textTop="textTop" :textBottom="textBottom" :top="top" />
     </div>
 </template>
 
 <script>
-import BaseNumberBlock from "@/components/BaseNumberBlock.vue";
 
 export default {
-    components: { BaseNumberBlock },
     props: {
         title: {
             type: String,
             default: ''
-        },
-        textTop: {
-            type: String,
-            default: ''
-        },
-        textBottom: {
-            type: String,
-            default: ''
-        },
-        top: {
-            type: Boolean,
-            default: false
-        },
+        }
     }
 }
 </script>

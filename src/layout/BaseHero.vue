@@ -1,5 +1,5 @@
 <template>
-    <div class="hero">
+    <div class="hero" :style="{ 'background-image': image }">
         <div class="container">
             <a href="#" class="hero__link">
                 <svg width="159" height="33" viewBox="0 0 159 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,14 +22,10 @@
             </a>
             <div class="hero__wrap">
                 <h1 class="hero__title">
-                    Вдохнуть жизнь в&nbsp;озеро
+                    {{ title }}
                 </h1>
                 <p class="hero__descr">
-                    Крайний Север нередко называют сокровищницей страны&nbsp;&mdash; так много здесь полезных ископаемых.
-                    Однако&nbsp;то,
-                    что хорошо для экономики, для природы&nbsp;&mdash; экологическая нагрузка. С&nbsp;приходом человека,
-                    меняется не&nbsp;только
-                    земля, но&nbsp;и&nbsp;вода: реки, озёра, грунтовые воды и&nbsp;даже многолетняя мерзлота.
+                    {{ descr }}
                 </p>
             </div>
         </div>
@@ -37,6 +33,38 @@
         <div class="hero-strip"></div>
     </div>
 </template>
+<script>
+export default {
+    props: {
+        title: {
+            type: String,
+            default: ''
+        },
+        descr: {
+            type: String,
+            default: ''
+        },
+        img: {
+            type: String,
+            default: ''
+        },
+        imgMobile: {
+            type: String,
+            default: ''
+        }
+    },
+    computed: {
+        image() {
+            if (window.innerWidth > 768) {
+                return 'url(' + this.img + ')'
+            } else {
+                return 'url(' + this.imgMobile + ')'
+            }
+            
+        }
+    }
+}
+</script>
 
 <style lang="scss">
 .hero {
@@ -44,14 +72,12 @@
     min-height: 100vh;
     width: 100%;
     max-width: 100rem;
-    background-image: url(../../public/img/hero1.png);
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
 
     @media (max-width: 768px) {
-        // height: 42.5rem;
-        // background-position: -252rem;
+        ackground-position: bottom;
     }
 
 

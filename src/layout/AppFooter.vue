@@ -110,11 +110,19 @@ export default {
 .footer {
     padding: 6.44rem 16.44rem 11.06rem 16.44rem;
 
+    @media (max-width: 768px) {
+        padding: 6.44rem 14.1334rem 11.06rem 14.1334rem;
+    }
+
     &__top {
         margin-bottom: 4.79rem;
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @media (max-width: 768px) {
+            padding: 0 1rem;
+        }
 
         &-link {
             display: inline-block;
@@ -146,6 +154,11 @@ export default {
         display: flex;
         flex-wrap: wrap;
         gap: 0.13rem;
+
+        @media (max-width: 768px) {
+            width: 21.6rem;
+            gap: 0.56rem;
+        }
     }
 
     &__block {
@@ -153,16 +166,28 @@ export default {
         border-radius: 0.05625rem;
         background: var(--gray-5, #E0E0E0);
 
+        @media (max-width: 768px) {
+            height: 7.47rem;
+        }
+
         &_active {
             background: var(--gray-4, #BDBDBD);
         }
 
         &-big {
             width: 2.51013rem;
+
+            @media (max-width: 768px) {
+                width: 10.5rem;
+            }
         }
 
         &-small {
             width: 1.17rem;
+
+            @media (max-width: 768px) {
+                width: 4.91rem;
+            }
         }
     }
 
@@ -178,6 +203,13 @@ export default {
         &-list {
             display: flex;
             justify-content: space-between;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20rem;
+            }
         }
     }
 
@@ -186,6 +218,11 @@ export default {
             width: 16.8125rem;
             height: 11.875rem;
             mix-blend-mode: darken;
+
+            @media (max-width: 768px) {
+                width: 100%;
+                height: 50.667rem;
+            }
         }
 
         &-title {

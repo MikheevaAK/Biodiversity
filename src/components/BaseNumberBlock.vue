@@ -1,5 +1,5 @@
 <template>
-    <div class="number-block" :class="{ 'number-block-bottom': top }">
+    <div class="number-block">
         <div class="number-block__top">
             {{ textTop }}
         </div>
@@ -19,11 +19,7 @@ export default {
         textBottom: {
             type: String,
             default: ''
-        },
-        top: {
-            type: Boolean,
-            default: false
-        },
+        }
     }
 }
 </script>
@@ -39,17 +35,11 @@ export default {
     left: 37rem;
 
     @media (max-width: 768px) {
-        position: relative;
+        position: static;
         margin-top: 7.45rem;
-        position: relative;
         width: 100%;
         left: 0;
         padding-left: 5.33334rem;
-    }
-
-    &-bottom {
-        top: 0;
-        bottom: unset;
     }
 
     &__top {

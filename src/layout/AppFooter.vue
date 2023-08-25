@@ -111,7 +111,7 @@ export default {
     padding: 6.44rem 16.44rem 11.06rem 16.44rem;
 
     @media (max-width: 768px) {
-        padding: 6.44rem 14.1334rem 11.06rem 14.1334rem;
+        padding: 21.3334rem 14.1334rem 11.06rem 14.1334rem;
     }
 
     &__top {

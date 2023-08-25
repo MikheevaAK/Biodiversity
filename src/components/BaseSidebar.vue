@@ -18,7 +18,8 @@
     gap: 1.5rem;
 
     @media (max-width: 768px) {
-        width: 95rem;
+        width: 100%;
+        padding: 0 4rem;
         gap: 6.4rem;
     }
 

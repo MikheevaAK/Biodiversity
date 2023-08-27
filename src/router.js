@@ -24,6 +24,11 @@ const routes = [
         component: ExpeditionPage,
         path: '/expedition'
     },
+    {
+        name: 'expedition',
+        component: ExpeditionPage,
+        path: '/expedition'
+    },
 ]
 
 const router = new VueRouter({

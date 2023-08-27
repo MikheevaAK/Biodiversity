@@ -101,3 +101,12 @@ svg {
 .mb-7-5 {
     margin-bottom: 7.5rem;
 }
+
+//40px - mobile
+.mb-2-5 {
+    margin-bottom: 2.5rem;
+
+    @media (max-width: 768px) {
+        margin-bottom: 10.6667rem;
+    }
+}

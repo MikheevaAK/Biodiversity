@@ -706,6 +706,7 @@ export default {
         }
 
         &-number {
+            position: relative;
             width: 1.875rem;
             height: 1.875rem;
             padding: 0.3rem 0.63rem;
@@ -715,6 +716,26 @@ export default {
             font-size: 1.125rem;
             font-weight: 500;
             line-height: 130%;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: -0.1rem;
+                left: -0.1rem;
+                right: -0.1rem;
+                bottom: -0.1rem;
+                background-image: url(../../public/img/svg/circle-bg.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100%;
+
+                @media (max-width: 768px) {
+                    top: -0.5rem;
+                    left: -0.5rem;
+                    right: -0.5rem;
+                    bottom: -0.5rem;
+                }
+            }
 
             @media (max-width: 768px) {
                 width: 9.7937rem;

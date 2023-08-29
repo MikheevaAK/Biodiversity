@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import MainPage from '@/pages/MainPage'
 import PyasinoPage from '@/pages/PyasinoPage'
 import ExpeditionPage from '@/pages/ExpeditionPage'
+import DivisionPage from '@/pages/DivisionPage'
 
 
 Vue.use(VueRouter)
@@ -25,9 +26,9 @@ const routes = [
         path: '/expedition'
     },
     {
-        name: 'expedition',
-        component: ExpeditionPage,
-        path: '/expedition'
+        name: 'division',
+        component: DivisionPage,
+        path: '/division'
     },
 ]
 

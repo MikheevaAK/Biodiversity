@@ -36,7 +36,10 @@
                 </div>
             </div>
         </BaseTextBlock>
-        <img src="img/big-map.png" alt="">
+        <picture>
+            <source media="(max-width: 768px)" srcset="img/big-map-mobile.svg">
+            <img src="img/big-map.svg" alt="">
+        </picture>
         <div class="map-circale map-circale__blue map-circale__1"></div>
         <div class="map-circale map-circale__blue map-circale__2"></div>
         <div class="map-circale map-circale__blue map-circale__3"></div>
@@ -44,7 +47,6 @@
         <div class="map-circale map-circale__green map-circale__5"></div>
         <div class="map-circale map-circale__green map-circale__6"></div>
         <div class="map-circale map-circale__purple map-circale__7"></div>
-
     </div>
 </template>
 <script>
@@ -67,6 +69,18 @@ $purple: #654EA3;
     width: 100%;
     // margin-bottom: 6.25rem;
     // height: 52.125rem;
+
+    img {
+        width: 97rem;
+        margin-top: 1.75rem;
+        margin-left: 2.75rem;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            margin-top: -3.25rem;
+            margin-left: 0;
+        }
+    }
 
     .text {
         position: absolute;
@@ -131,6 +145,11 @@ $purple: #654EA3;
     transition: all 2.3s;
     z-index: 2;
 
+    @media (max-width: 768px) {
+        width: 2rem;
+        height: 2rem;
+    }
+
     &__blue {
         background-color: rgba($blue, 1);
         animation: ripple-blue 1.5s infinite;
@@ -149,36 +168,71 @@ $purple: #654EA3;
     &__1 {
         top: 20.1rem;
         left: 61.5rem;
+
+        @media (max-width: 768px) {
+            top: 102.5rem;
+            left: 68rem;
+        }
     }
 
     &__2 {
         top: 23.9rem;
         left: 67.67rem;
+
+        @media (max-width: 768px) {
+            top: 108.4rem;
+            left: 77.9rem;
+        }
     }
 
     &__3 {
         top: 36rem;
         left: 66.5rem;
+
+        @media (max-width: 768px) {
+            top: 128.2rem;
+            left: 75.8rem;
+        }
     }
 
     &__4 {
         top: 50.4rem;
         left: 32.7rem;
+
+        @media (max-width: 768px) {
+            top: 151.1rem;
+            left: 21.9rem;
+        }
     }
 
     &__5 {
         top: 47.5rem;
         left: 29.4rem;
+
+        @media (max-width: 768px) {
+            top: 146.4rem;
+            left: 16.6rem;
+        }
     }
 
     &__6 {
         top: 42rem;
         left: 27.5rem;
+
+        @media (max-width: 768px) {
+            top: 137.5rem;
+            left: 13.5rem;
+        }
     }
 
     &__7 {
         top: 36.6rem;
         left: 32.35rem;
+
+        @media (max-width: 768px) {
+            top: 129.1rem;
+            left: 21.1rem;
+        }
     }
 }
 

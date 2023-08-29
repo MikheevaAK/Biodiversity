@@ -68,102 +68,20 @@
                             Большая Норильская экспедиция объединила представителей разных наук. В состав команды вошли:
                         </p>
                     </BaseTextBlock>
-                    <div class="team-container">
-                        <div class="team-item hydrochemist">
-                            <img class="team-item__img" src="img/hydrochemist.png" alt="">
-                            <div class="team-item__text-block">
-                                <div class="team-item__title">Гидрохимики</div>
-
-                                <ul class="team-item__list">
-                                    <li class="team-item__list-item">Определяли уровень загрязнения ручьев, рек и озер
-                                        нефтепродуктами;</li>
-                                    <li class="team-item__list-item">Вычисляли, сколько в воде содержится тяжелых металлов;
-                                    </li>
-                                    <li class="team-item__list-item">Исследовали воду на мутность, количество взвесей и
-                                        кислорода.</li>
-                                </ul>
-
-                                <div class="team-item__color-bg">
-                                    Производить замеры гидрохимикам помогает специальный прибор&nbsp;&mdash; зонд.
-                                    Он&nbsp;буквально в&nbsp;считанные секунды может определить, сколько в&nbsp;воде
-                                    присутствует сине-зеленых водорослей, рассчитать концентрацию кислорода
-                                    и&nbsp;кислотность среды.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item geocryologists">
-                            <img class="team-item__img" src="img/geocryologists.png" alt="">
-                            <div class="team-item__text-block">
-                                <div class="team-item__color-bg">
-                                    Ученые не любят и не используют словосочетание «вечная мерзлота», ведь ничего вечного не
-                                    бывает. Правильнее говорить «многолетнемёрзлые породы».
-                                </div>
-
-                                <div class="team-item__title">Геокриологи</div>
-
-                                <ul class="team-item__list">
-                                    <li class="team-item__list-item">Изучали строение и состояние зоны с многолетней
-                                        мерзлотой;</li>
-                                    <li class="team-item__list-item">Оценивали, на какую глубину ежегодно оттаивает и
-                                        промерзает грунт;
-                                    </li>
-                                    <li class="team-item__list-item">
-                                        Строили прогнозы, как в ближайшие годы изменятся геокриологические условия на
-                                        Таймыре.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="team-item scientists">
-                            <img class="team-item__img" src="img/soil-scientists.png" alt="">
-                            <div class="team-item__text-block">
-                                <div class="team-item__title">Почвоведы</div>
-
-                                <ul class="team-item__list">
-                                    <li class="team-item__list-item">
-                                        Оценивали геохимическое состояние береговых почв и донных отложений;
-                                    </li>
-                                    <li class="team-item__list-item">
-                                        Составляли карту территории, описывали и диагностировали почвы;
-                                    </li>
-                                    <li class="team-item__list-item">
-                                        Собирали пробы почв и болотных отложений.
-                                    </li>
-                                </ul>
-                                <div class="team-item__color-bg">
-                                    Почвоведы в своей работе используют только пластиковые и деревянные инструменты. Железо
-                                    под
-                                    запретом — попадание даже мельчайших частиц металла в пробы внесет погрешности в
-                                    химический
-                                    анализ и исказит результаты.
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="team-item zoologist">
-                            <img class="team-item__img" src="img/zoologist.png" alt="">
-
-                            <div class="team-item__text-block">
-                                <div class="team-item__color-bg">
-                                    Чтобы понять, как разлившееся топливо повлияло на мелких млекопитающих, зоологи
-                                    отлавливали
-                                    грызунов с помощью специальных ловушек. Приманкой служили кедровые орешки в скорлупе,
-                                    вымоченные в рыжиковом масле.
-                                </div>
-                                <div class="team-item__title">Ботаники и зоологи</div>
-
-                                <ul class="team-item__list">
-                                    <li class="team-item__list-item">Изучали загрязненные территории и определяли, какие
-                                        виды растений на них растут, какие животные обитают;</li>
-                                    <li class="team-item__list-item">Сравнивали это многообразие видов с видами на фоновых,
-                                        незагрязненных ландшафтах;
-                                    </li>
-                                    <li class="team-item__list-item">Оценивали, какой реальный ущерб нанесла авария на ТЭЦ-3
-                                        флоре и фауне Таймыра.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    <svg class="mobile-icon-scroll" width="96" height="54" viewBox="0 0 96 54" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M83.6023 17.4167L77.934 11.7325L80.1665 9.5L89.6665 19L80.1665 28.5L77.934 26.2675L83.6023 20.5833H64.3332V17.4167H83.6023Z"
+                            fill="#DEDEDE" />
+                        <path
+                            d="M12.3977 17.4167L18.066 11.7325L15.8335 9.5L6.3335 19L15.8335 28.5L18.066 26.2675L12.3977 20.5833H31.6668V17.4167H12.3977Z"
+                            fill="#DEDEDE" />
+                        <circle cx="48.5" cy="18.5" r="18.5" fill="#DEDEDE" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M40.35 28.4855C39.9499 27.8918 39.5705 26.1688 39.2545 25.0944C38.9395 24.0217 38.6892 23.5984 38.3004 23.3184C37.912 23.0376 37.386 22.9021 36.9063 22.8755C36.4258 22.8492 35.9928 22.9325 35.6618 23.0766C35.3324 23.2208 35.1051 23.4235 34.9103 23.9518C34.714 24.48 34.5514 25.3325 34.4674 26.9558C34.3833 28.5791 34.377 30.9702 34.531 33.3717C34.6853 35.7724 34.9991 38.1823 35.1574 39.5283C35.3156 40.8725 35.3191 41.1534 35.0153 41.8695C34.7122 42.5854 34.1016 43.7378 33.7124 44.4612C33.3231 45.1828 33.1545 45.4749 34.9587 46.6846C36.7635 47.8938 40.5421 50.0189 42.496 51.0641C44.4504 52.1085 44.5815 52.0722 44.8609 51.7324C45.1397 51.3919 45.567 50.7478 45.9377 50.1532C46.308 49.5593 46.6215 49.0162 46.9986 48.6489C47.3758 48.2814 47.8164 48.0898 48.2327 47.9417L49.4905 47.5249C49.9396 47.366 50.4458 47.1569 51.0549 46.6731C51.6641 46.1895 52.3767 45.4302 53.3443 43.8995C54.3099 42.3677 55.5312 40.0643 56.2654 38.6492C56.9996 37.2351 57.2479 36.7089 57.3446 36.2082C57.441 35.7062 57.3864 35.2298 57.1153 34.7944C56.8437 34.3588 56.3554 33.9653 55.907 33.7903C55.4588 33.6147 55.0494 33.6562 54.6466 33.9257C54.2436 34.1945 53.8471 34.6903 53.589 35.0424C53.3298 35.3948 53.2091 35.6039 53.0439 35.7024C52.8769 35.8009 52.6629 35.789 52.7343 35.5237C52.8049 35.2579 53.1599 34.7391 53.5216 34.1126C53.8838 33.4853 54.2522 32.7506 54.442 32.1365C54.6321 31.5215 54.6431 31.0257 54.5075 30.642C54.3717 30.257 54.0899 29.9826 53.7837 29.7504C53.4783 29.5186 53.1481 29.3279 52.8197 29.2777C52.4907 29.2272 52.1645 29.3166 51.8807 29.5699C51.5964 29.824 51.3549 30.2422 51.0959 30.5941C50.8377 30.9465 50.5617 31.2337 50.371 31.373C50.1809 31.5143 50.0742 31.5082 50.2741 31.0676C50.4737 30.6253 50.9806 29.7473 51.305 29.0437C51.629 28.3389 51.7707 27.8076 51.7607 27.3008C51.7512 26.7931 51.5893 26.3109 51.3233 25.9618C51.0577 25.6135 50.6859 25.3989 50.2713 25.3544C49.8563 25.3107 49.3998 25.4356 48.9604 25.7672C48.5211 26.0989 48.1005 26.6364 47.8262 26.9236C47.5508 27.2095 47.4198 27.2455 47.6608 26.8281C47.9018 26.4107 48.5159 25.538 49.5339 23.8696C50.5527 22.2017 51.9763 19.7359 52.7013 18.2887C53.4269 16.841 53.4551 16.4114 53.3889 15.955C53.3217 15.498 53.1601 15.0159 52.886 14.6333C52.6114 14.2532 52.2228 13.9727 51.8117 13.8747C51.4003 13.7756 50.9672 13.8598 50.5274 14.0518C50.0851 14.2434 49.6381 14.5419 48.1481 16.8861C46.6581 19.2284 44.1247 23.6165 42.6471 26.0791C41.1709 28.541 40.7504 29.0785 40.35 28.4853L40.35 28.4855Z"
+                            fill="#626261" />
+                    </svg>
+                    <ScrollSwiper />
 
                     <BaseTextBlock class="mb-2-5">
                         <p class="text-block__descr">
@@ -357,6 +275,7 @@ import MainSection from '@/layout/MainSection.vue';
 import BaseTextBlock from '@/components/BaseTextBlock.vue'
 import BaseNumberBlock from "@/components/BaseNumberBlock.vue";
 import BaseSidebar from '@/components/BaseSidebar.vue'
+import ScrollSwiper from '@/components/ScrollSwiper.vue'
 import BigMap from '@/components/BigMap.vue'
 
 import gsap from "gsap";
@@ -364,19 +283,19 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default {
-    name: 'App',
     components: {
         BaseHero,
         BaseNumberBlock,
         MainSection,
         BaseTextBlock,
         BaseSidebar,
-        BigMap
+        BigMap,
+        ScrollSwiper
     },
     mounted() {
-        // this.$nextTick(function () {
-        this.scrollAnimation();
-        // })
+        this.$nextTick(function () {
+            this.scrollAnimation();
+        })
     },
     data() {
         return {
@@ -386,20 +305,20 @@ export default {
     methods: {
         scrollAnimation() {
 
-            if (window.innerWidth > 768) {
-                const panels = gsap.utils.toArray(".team-container .team-item");
-                gsap.to(panels, {
-                    xPercent: -50 * (panels.length - 1),
-                    ease: "none",
-                    scrollTrigger: {
-                        trigger: ".team",
-                        pin: true,
-                        start: "top",
-                        scrub: 1,
-                        end: () => "+=" + (document.querySelector(".team-container").offsetWidth - window.innerWidth)
-                    }
-                });
-            }
+            // if (window.innerWidth > 768) {
+            //     const panels = gsap.utils.toArray(".team-container .team-item");
+            //     gsap.to(panels, {
+            //         xPercent: -50 * (panels.length - 1),
+            //         ease: "none",
+            //         scrollTrigger: {
+            //             trigger: ".team",
+            //             pin: true,
+            //             start: "top",
+            //             scrub: 1,
+            //             end: () => "+=" + (document.querySelector(".team-container").offsetWidth - window.innerWidth)
+            //         }
+            //     });
+            // }
 
             const collageItems = Array.from(document.querySelectorAll(".text-block__wrap"));
             collageItems.forEach((elem) => {
@@ -446,228 +365,228 @@ export default {
 </script>
 
 <style lang="scss">
-.team {
-    position: relative;
-    overflow: hidden;
+// .team {
+//     position: relative;
+//     overflow: hidden;
 
-    .text {
-        position: absolute;
-        top: 6.25rem;
-        left: 29.41rem;
+//     .text {
+//         position: absolute;
+//         top: 6.25rem;
+//         left: 29.41rem;
 
-        @media (max-width: 768px) {
-            position: static;
-            transform: unset;
-        }
-    }
+//         @media (max-width: 768px) {
+//             position: static;
+//             transform: unset;
+//         }
+//     }
 
-    .number-blocks {
-        display: flex;
-        margin: 0 auto;
-        gap: 6.75rem;
-        width: 60.5rem;
-        margin-bottom: 6.25rem;
+//     .number-blocks {
+//         display: flex;
+//         margin: 0 auto;
+//         gap: 6.75rem;
+//         width: 60.5rem;
+//         margin-bottom: 6.25rem;
 
-        @media (max-width: 768px) {
-            flex-direction: column;
-            width: 100%;
-            padding: 0 9.5rem;
-            gap: 7.467rem;
-        }
+//         @media (max-width: 768px) {
+//             flex-direction: column;
+//             width: 100%;
+//             padding: 0 9.5rem;
+//             gap: 7.467rem;
+//         }
 
-        .number-block {
-            position: static;
-        }
-    }
+//         .number-block {
+//             position: static;
+//         }
+//     }
 
-    &-container {
-        margin-bottom: 4.94rem;
-        display: flex;
-        width: 160.36rem;
-        height: 46.1875rem;
+//     &-container {
+//         margin-bottom: 4.94rem;
+//         display: flex;
+//         width: 160.36rem;
+//         height: 46.1875rem;
 
-        @media (max-width: 768px) {
-            height: 139.467rem;
-            width: 530rem;
-        }
-    }
+//         @media (max-width: 768px) {
+//             height: 139.467rem;
+//             width: 530rem;
+//         }
+//     }
 
-    .team-item {
-        position: relative;
+//     .team-item {
+//         position: relative;
 
-        &__text-block {
-            position: absolute;
-            z-index: -1;
-            border-radius: 0.25rem;
-        }
+//         &__text-block {
+//             position: absolute;
+//             z-index: -1;
+//             border-radius: 0.25rem;
+//         }
 
-        &__title {
-            padding: 0.4375rem 0.625rem;
-            margin-bottom: 1.06rem;
-            width: max-content;
-            font-size: 0.9375rem;
-            font-weight: 300;
-            line-height: 130%;
-            color: #fff;
-            border-radius: 1.6875rem;
-            background: var(--grey, #626261);
-        }
+//         &__title {
+//             padding: 0.4375rem 0.625rem;
+//             margin-bottom: 1.06rem;
+//             width: max-content;
+//             font-size: 0.9375rem;
+//             font-weight: 300;
+//             line-height: 130%;
+//             color: #fff;
+//             border-radius: 1.6875rem;
+//             background: var(--grey, #626261);
+//         }
 
-        &__list {
-            width: 17.875rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.94rem;
-            margin-bottom: 1.25rem;
-            list-style-type: disc;
-        }
-    }
+//         &__list {
+//             width: 17.875rem;
+//             display: flex;
+//             flex-direction: column;
+//             gap: 0.94rem;
+//             margin-bottom: 1.25rem;
+//             list-style-type: disc;
+//         }
+//     }
 
-    .hydrochemist {
-        width: 41.125rem;
+//     .hydrochemist {
+//         width: 41.125rem;
 
-        @media (max-width: 768px) {
-            width: 133.4rem;
-        }
+//         @media (max-width: 768px) {
+//             width: 133.4rem;
+//         }
 
-        .team-item {
-            &__img {
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 32.375rem;
-                height: 46.1875rem;
+//         .team-item {
+//             &__img {
+//                 position: absolute;
+//                 left: 0;
+//                 bottom: 0;
+//                 width: 32.375rem;
+//                 height: 46.1875rem;
 
-                @media (max-width: 768px) {
-                    width: 92.534rem;
-                    height: 139.467rem;
-                }
-            }
+//                 @media (max-width: 768px) {
+//                     width: 92.534rem;
+//                     height: 139.467rem;
+//                 }
+//             }
 
-            &__text-block {
-                right: -2rem;
-                bottom: 7.44rem;
-            }
+//             &__text-block {
+//                 right: -2rem;
+//                 bottom: 7.44rem;
+//             }
 
-            &__color-bg {
-                width: 25.0625rem;
-                padding: 0.625rem 1rem 0.875rem 0.875rem;
-                background: #FFEBCC;
-            }
+//             &__color-bg {
+//                 width: 25.0625rem;
+//                 padding: 0.625rem 1rem 0.875rem 0.875rem;
+//                 background: #FFEBCC;
+//             }
 
-            &__list {
-                padding-left: 1rem;
-                width: 18.875rem;
-            }
-        }
-    }
+//             &__list {
+//                 padding-left: 1rem;
+//                 width: 18.875rem;
+//             }
+//         }
+//     }
 
-    .geocryologists {
-        width: 38.315rem;
+//     .geocryologists {
+//         width: 38.315rem;
 
-        .team-item {
-            &__img {
-                position: absolute;
-                left: 0;
-                bottom: 0.25rem;
-                width: 16.1875rem;
-                height: 30.1875rem;
-            }
+//         .team-item {
+//             &__img {
+//                 position: absolute;
+//                 left: 0;
+//                 bottom: 0.25rem;
+//                 width: 16.1875rem;
+//                 height: 30.1875rem;
+//             }
 
-            &__text-block {
-                left: 11.88rem;
-                bottom: 6.19rem;
-            }
+//             &__text-block {
+//                 left: 11.88rem;
+//                 bottom: 6.19rem;
+//             }
 
-            &__color-bg {
-                margin-bottom: 1.94rem;
-                width: 25.0625rem;
-                padding: 0.625rem 1rem 0.875rem 0.875rem;
-                background: #E8F4FA;
-            }
+//             &__color-bg {
+//                 margin-bottom: 1.94rem;
+//                 width: 25.0625rem;
+//                 padding: 0.625rem 1rem 0.875rem 0.875rem;
+//                 background: #E8F4FA;
+//             }
 
-            &__title {
-                margin-left: 5rem;
-            }
+//             &__title {
+//                 margin-left: 5rem;
+//             }
 
-            &__list {
-                width: 22.875rem;
-                padding-left: 5rem;
-            }
-        }
-    }
+//             &__list {
+//                 width: 22.875rem;
+//                 padding-left: 5rem;
+//             }
+//         }
+//     }
 
-    .scientists {
-        width: 39.06rem;
+//     .scientists {
+//         width: 39.06rem;
 
-        .team-item {
-            &__img {
-                width: 20.5rem;
-                height: 32.6875rem;
-                position: absolute;
-                left: 0;
-                bottom: -0.94rem;
-            }
+//         .team-item {
+//             &__img {
+//                 width: 20.5rem;
+//                 height: 32.6875rem;
+//                 position: absolute;
+//                 left: 0;
+//                 bottom: -0.94rem;
+//             }
 
-            &__text-block {
-                left: 13.44rem;
-                bottom: 2.56rem;
-            }
+//             &__text-block {
+//                 left: 13.44rem;
+//                 bottom: 2.56rem;
+//             }
 
-            &__color-bg {
-                width: 26.75rem;
-                padding: 0.625rem 1.75rem 0.875rem 2.8125rem;
-                background: #FFEBCC;
-            }
+//             &__color-bg {
+//                 width: 26.75rem;
+//                 padding: 0.625rem 1.75rem 0.875rem 2.8125rem;
+//                 background: #FFEBCC;
+//             }
 
-            &__title {
-                margin-left: 5rem;
-            }
+//             &__title {
+//                 margin-left: 5rem;
+//             }
 
-            &__list {
-                width: 22.875rem;
-                padding-left: 5rem;
-            }
-        }
-    }
+//             &__list {
+//                 width: 22.875rem;
+//                 padding-left: 5rem;
+//             }
+//         }
+//     }
 
-    .zoologist {
-        width: 40.4975rem;
+//     .zoologist {
+//         width: 40.4975rem;
 
-        .team-item {
-            &__img {
-                position: absolute;
-                left: 0;
-                bottom: -0.94rem;
-                width: 19.9375rem;
-                height: 28.9375rem;
-            }
+//         .team-item {
+//             &__img {
+//                 position: absolute;
+//                 left: 0;
+//                 bottom: -0.94rem;
+//                 width: 19.9375rem;
+//                 height: 28.9375rem;
+//             }
 
-            &__text-block {
-                left: 17.44rem;
-                bottom: 4.68rem;
-            }
+//             &__text-block {
+//                 left: 17.44rem;
+//                 bottom: 4.68rem;
+//             }
 
-            &__color-bg {
-                margin-bottom: 1.88rem;
-                width: 23.0625rem;
-                padding: 0.625rem 1rem 0.875rem 0.875rem;
-                background: #E8F4FA;
-            }
+//             &__color-bg {
+//                 margin-bottom: 1.88rem;
+//                 width: 23.0625rem;
+//                 padding: 0.625rem 1rem 0.875rem 0.875rem;
+//                 background: #E8F4FA;
+//             }
 
-            &__list {
-                padding-left: 3rem;
-                width: 20.875rem;
-            }
+//             &__list {
+//                 padding-left: 3rem;
+//                 width: 20.875rem;
+//             }
 
-            &__title {
-                margin-left: 3rem;
-            }
-        }
+//             &__title {
+//                 margin-left: 3rem;
+//             }
+//         }
 
-    }
+//     }
 
-}
+// }
 
 
 .step-start {
@@ -963,4 +882,5 @@ export default {
     .step-start__lines {
         width: 28.4rem;
     }
-}</style>
+}
+</style>

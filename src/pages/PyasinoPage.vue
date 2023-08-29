@@ -4,13 +4,13 @@
             :imgMobileWebp="'hero1-mobile.webp'" :imgMobileJpeg="'hero1-mobile.jpeg'" />
         <MainSection>
             <section class="lake">
-                <div class="lake__introduction">
+                <div class="lake__introduction mb-100">
                     <picture>
                         <source type="image/webp" srcset="img/introduction.webp">
                         <img class="lake__introduction-img" src="img/introduction.png">
                     </picture>
                     <BaseTextBlock>
-                        <p class="mb-10 text-block__descr">
+                        <p class="mb-10">
                             В&nbsp;Арктике очень много озёр, особенно тех, которые наполняют подземные родники. В&nbsp;них
                             рыба
                             не&nbsp;водится из-за очень скудной питательной базы. В&nbsp;других&nbsp;же озёрах рыбы
@@ -22,7 +22,7 @@
                             восстановления
                             рыбопродуктивности водоёма.
                         </p>
-                        <p class="text-block__descr">
+                        <p>
                             Этот процесс может занимать десятилетия, но&nbsp;учёные придумали как его ускорить оригинальным
                             и&nbsp;экологичным способом. Эксперимент по&nbsp;повышению рыбопродуктивности сейчас проходит
                             на&nbsp;озере Пясино.
@@ -50,7 +50,7 @@
                 </div>
 
                 <BaseTextBlock :title="'Что делает озеро рыбопродуктивным?'">
-                    <p class="text-block__descr">
+                    <p>
                         Озеро&nbsp;&mdash; это дом для множества живых организмов: от&nbsp;неразличимых невооруженным
                         взглядом
                         бактерий до&nbsp;крупных рыб и&nbsp;водных млекопитающих. В&nbsp;арктических водоемах фауна
@@ -63,9 +63,8 @@
                 </BaseTextBlock>
 
             </section>
-            <section class="scroll">
+            <section class="scroll mb-100">
                 <div class="scroll-bg bg-1">
-                    <!-- <div class="scroll-seaweed"></div> -->
                 </div>
                 <div class="scroll-bg bg-2">
                 </div>
@@ -102,35 +101,35 @@
                         вылов рыбы могут привести к&nbsp;нарушению баланса экосистемы.
                     </div>
                 </div>
-
-
+                <div class="scroll-wrap-end"></div>
             </section>
 
-            <section class="work-on-mistakes">
-                <BaseTextBlock :title="'Работа над ошибками'">
-                    <p class="text-block__descr">
-                        По&nbsp;словам учёных, ситуацию можно исправить. Для этого нужно повысить эффективность очистки
-                        хозяйственно-бытовых сточных вод, сбрасываемых в&nbsp;окрестные водоемы, и&nbsp;восстановить
-                        популяции
-                        обитающих в&nbsp;них организмов, начав с&nbsp;основ пищевой цепи&nbsp;&mdash; фитопланктона.
-                        <br />
-                        <br />
-                        Один из&nbsp;способов решить проблему&nbsp;&mdash; внести в&nbsp;озеро минеральные удобрения.
-                        В&nbsp;насыщенной питательными веществами воде ускорится рост микроводорослей, которые станут кормом
-                        для
-                        зоопланктона и&nbsp;рыб.
-                        <br />
-                        <br />
-                        Метод действенный, но, к&nbsp;сожалению, не&nbsp;без недостатков. Если ошибиться с&nbsp;составом
-                        удобрений или внести их&nbsp;слишком много, в&nbsp;озере начнут бурно размножаться сине-зеленые
-                        водоросли&nbsp;&mdash; цианобактерии. Учёные называют это явление &laquo;цветением&raquo; воды.
-                    </p>
+            <section class="work-on-mistakes mb-100">
+                <BaseTextBlock class="mb-40" :title="'Работа над ошибками'">
+                    <div>
+                        <p class="mb-10">
+                            По&nbsp;словам учёных, ситуацию можно исправить. Для этого нужно повысить эффективность очистки
+                            хозяйственно-бытовых сточных вод, сбрасываемых в&nbsp;окрестные водоемы, и&nbsp;восстановить
+                            популяции
+                            обитающих в&nbsp;них организмов, начав с&nbsp;основ пищевой цепи&nbsp;&mdash; фитопланктона.
+                        </p>
+                        <p class="mb-10">
+                            Один из&nbsp;способов решить проблему&nbsp;&mdash; внести в&nbsp;озеро минеральные удобрения.
+                            В&nbsp;насыщенной питательными веществами воде ускорится рост микроводорослей, которые станут
+                            кормом для зоопланктона и&nbsp;рыб.
+                        </p>
+                        <p>
+                            Метод действенный, но, к&nbsp;сожалению, не&nbsp;без недостатков. Если ошибиться с&nbsp;составом
+                            удобрений или внести их&nbsp;слишком много, в&nbsp;озере начнут бурно размножаться сине-зеленые
+                            водоросли&nbsp;&mdash; цианобактерии. Учёные называют это явление &laquo;цветением&raquo; воды.
+                        </p>
+                    </div>
                 </BaseTextBlock>
 
-                <div class="work-on-mistakes__img"></div>
+                <div class="work-on-mistakes__img mb-40"></div>
 
-                <BaseTextBlock class="mb-2-31">
-                    <p class="text-block__descr">
+                <BaseTextBlock class="mb-40">
+                    <p>
                         Массовая гибель живых организмов из-за цветения воды приведёт к&nbsp;гниению их&nbsp;останков
                         и&nbsp;загрязнению воды. Разумеется, в&nbsp;здоровой экосистеме цианобактерии также присутствуют,
                         но&nbsp;здесь важен баланс. А&nbsp;преобладание какого‑то одного вида его нарушает.
@@ -140,7 +139,7 @@
                 <BaseSidebar>
                     <p>
                         &laquo;Цветение&raquo; воды цианобактериями может продолжаться десятилетиями после того, как
-                        в&nbsp;озеро внесли удобрения.<br/>
+                        в&nbsp;озеро внесли удобрения.<br />
                         Так попытка решить одну проблему, может привести к&nbsp;другой,
                         не&nbsp;менее серьёзной.
                     </p>
@@ -148,27 +147,32 @@
             </section>
 
             <section class="in-search-section">
-                <BaseTextBlock class="mb-3-75" :title="'В поиске альтернатив'">
-                    <p>
-                        Пытаясь найти замену минеральным удобрениям, учёные обратили внимание на&nbsp;удобрение
-                        природное&nbsp;&mdash; помёт водоплавающих птиц. В&nbsp;естественных условиях именно
-                        он&nbsp;обеспечивает баланс питательных веществ в&nbsp;озёрах. Если&nbsp;же птицы по&nbsp;каким‑то
-                        причинам перестали гнездиться рядом с&nbsp;озером, помёт в&nbsp;воду можно добавить искусственно.
-                        Эту
-                        экологичную технологию назвали гуанотрофикацией.
-                        <br />
-                        <br />
-                        По&nbsp;мнению специалистов, в&nbsp;удобренном помётом водоёме вместо цианобактерий появятся другие
-                        виды
-                        фитопланктона&nbsp;&mdash; диатомовые и&nbsp;зеленые водоросли. Они лежат в&nbsp;основе пищевой
-                        цепочки
-                        ценных пород рыб, а&nbsp;их&nbsp;размножение не&nbsp;вызывает вредоносное &laquo;цветение&raquo;
-                        воды.
-                        <br />
-                        <br />
-                        Чтобы проверить гипотезу, летом 2022 года учёные отправились в&nbsp;экспедицию по&nbsp;Таймыру.
-                        За&nbsp;несколько недель они облетели на&nbsp;специальном гидросамолёте местные озера.
-                    </p>
+                <BaseTextBlock :title="'В поиске альтернатив'">
+                    <div>
+                        <p class="mb-10">
+                            Пытаясь найти замену минеральным удобрениям, учёные обратили внимание на&nbsp;удобрение
+                            природное&nbsp;&mdash; помёт водоплавающих птиц. В&nbsp;естественных условиях именно
+                            он&nbsp;обеспечивает баланс питательных веществ в&nbsp;озёрах. Если&nbsp;же птицы
+                            по&nbsp;каким‑то
+                            причинам перестали гнездиться рядом с&nbsp;озером, помёт в&nbsp;воду можно добавить
+                            искусственно.
+                            Эту
+                            экологичную технологию назвали гуанотрофикацией.
+                        </p>
+                        <p class="mb-10">
+                            По&nbsp;мнению специалистов, в&nbsp;удобренном помётом водоёме вместо цианобактерий появятся
+                            другие
+                            виды
+                            фитопланктона&nbsp;&mdash; диатомовые и&nbsp;зеленые водоросли. Они лежат в&nbsp;основе пищевой
+                            цепочки
+                            ценных пород рыб, а&nbsp;их&nbsp;размножение не&nbsp;вызывает вредоносное &laquo;цветение&raquo;
+                            воды.
+                        </p>
+                        <p>
+                            Чтобы проверить гипотезу, летом 2022 года учёные отправились в&nbsp;экспедицию по&nbsp;Таймыру.
+                            За&nbsp;несколько недель они облетели на&nbsp;специальном гидросамолёте местные озера.
+                        </p>
+                    </div>
                     <BaseNumberBlock class="hidden-mobile" :textTop="'21 озеро'"
                         :textBottom="'обследовали учёные в ходе экспедиции'" />
                 </BaseTextBlock>
@@ -205,31 +209,27 @@
                     </BaseTextBlock>
                 </div>
                 <BaseTextBlock class="visiable-mobile">
-                    <p>
-                        На&nbsp;одних водоёмах птиц не&nbsp;было вовсе, рядом с&nbsp;другими гнездились большие колонии
-                        из&nbsp;десятков и&nbsp;даже сотен особей. Из&nbsp;каждого озера биологи взяли образцы воды,
-                        которые
-                        позднее направили на&nbsp;анализ.
-                        <br />
-                        <br />
-                        Результаты лабораторных исследований подтвердили правильность догадки учёных. В&nbsp;озёрах,
-                        рядом
-                        с&nbsp;которыми гнездятся птицы (то&nbsp;есть там, где помёт попадает в&nbsp;воду), баланс
-                        растворённых
-                        в&nbsp;воде питательных веществ действительно оказался лучше. В&nbsp;то&nbsp;же время
-                        в&nbsp;планктоне
-                        преобладали полезные диатомовые и&nbsp;зеленые водоросли, а&nbsp;доля цианобактерий оказалась
-                        заметно
-                        меньше, чем в&nbsp;озёрах без птиц.
-                        <br />
-                        <br />
-                        Иными словами, в&nbsp;таких озёрах было сбалансированное сообщество фитопланктона. Благодаря
-                        этому
-                        в&nbsp;водоёмах водились ценные кормовые организмы, необходимые для питания уникальных
-                        арктических
-                        видов
-                        рыб.
-                    </p>
+                    <div>
+                        <p class="mb-10">
+                            На&nbsp;одних водоёмах птиц не&nbsp;было вовсе, рядом с&nbsp;другими гнездились большие колонии
+                            из&nbsp;десятков и&nbsp;даже сотен особей. Из&nbsp;каждого озера биологи взяли образцы воды,
+                            которые позднее направили на&nbsp;анализ.
+                        </p>
+                        <p class="mb-10">
+                            Результаты лабораторных исследований подтвердили правильность догадки учёных. В&nbsp;озёрах,
+                            рядом с&nbsp;которыми гнездятся птицы (то&nbsp;есть там, где помёт попадает в&nbsp;воду), баланс
+                            растворённых в&nbsp;воде питательных веществ действительно оказался лучше. В&nbsp;то&nbsp;же
+                            время
+                            в&nbsp;планктоне преобладали полезные диатомовые и&nbsp;зеленые водоросли, а&nbsp;доля
+                            цианобактерий оказалась
+                            заметно меньше, чем в&nbsp;озёрах без птиц.
+                        </p>
+                        <p>
+                            Иными словами, в&nbsp;таких озёрах было сбалансированное сообщество фитопланктона. Благодаря
+                            этому в&nbsp;водоёмах водились ценные кормовые организмы, необходимые для питания уникальных
+                            арктических видов рыб.
+                        </p>
+                    </div>
                     <BaseNumberBlock :textTop="'на 16 п.п.'"
                         :textBottom="'ниже доля цианобактерий в озёрах, где есть птицы'" />
                 </BaseTextBlock>
@@ -259,7 +259,7 @@
                         </div>
                         <div class="scales__text-wrap">
                             <div class="scales__text-mobile">Зеленые водоросли</div>
-                            <BaseScale :percent="'10,2%'" class="mr-4-31" :hasClass="'scale-6'" />
+                            <BaseScale :percent="'10,2%'" class="mr-4-31" :hasClass="'scale-5'" />
                         </div>
                     </div>
                     <div class="shares__item">
@@ -278,13 +278,10 @@
                             <div class="scales__text-mobile">Зеленые водоросли</div>
                             <BaseScale :percent="'20,2%'" :hasClass="'scale-6'" />
                         </div>
-
-
-
                     </div>
                 </div>
 
-                <BaseTextBlock class="mb-3-75">
+                <BaseTextBlock class="mb-40">
                     <p>
                         Поможет&nbsp;ли гуанотрофикация вернуть жизнь в&nbsp;арктические озера&nbsp;&mdash; вопрос пока
                         открытый, и&nbsp;быстро ответить на&nbsp;него не&nbsp;получится. И&nbsp;все&nbsp;же итоги первого
@@ -298,8 +295,7 @@
                 <BaseSidebar>
                     <p>
                         Учёные надеются разработать и&nbsp;внедрить технологию гуанотрофикации, которая повысит качество
-                        воды
-                        и&nbsp;продуктивность арктических озёр, начиная с&nbsp;озера Пясино.
+                        воды и&nbsp;продуктивность арктических озёр, начиная с&nbsp;озера Пясино.
                     </p>
                 </BaseSidebar>
             </section>
@@ -322,6 +318,10 @@ export default {
     name: 'App',
     data() {
         return {
+            oneScrollTrigger: null,
+            twoScrollTrigger: null,
+            threeScrollTrigger: null,
+            fourScrollTrigger: null,
             heroDescr: 'Крайний Север нередко называют сокровищницей страны — так много здесь полезных ископаемых. Однако то, что хорошо для экономики, для природы — экологическая нагрузка. С приходом человека, меняется не только земля, но и вода: реки, озёра, грунтовые воды и даже многолетняя мерзлота.'
         }
     },
@@ -338,12 +338,22 @@ export default {
             this.scrollAnimation();
         })
     },
+    beforeDestroy() {
+        this.oneScrollTrigger.kill()
+        this.oneScrollTrigger = null
+
+        this.twoScrollTrigger.kill()
+        this.twoScrollTrigger = null
+
+        this.threeScrollTrigger.kill()
+        this.threeScrollTrigger = null
+    },
     methods: {
         scrollAnimation() {
             const collageItems = Array.from(document.querySelectorAll(".text-block__wrap"));
             collageItems.forEach((elem) => {
 
-                gsap.fromTo(elem,
+                this.oneScrollTrigger = gsap.fromTo(elem,
                     {
                         y: 50,
                     },
@@ -362,7 +372,7 @@ export default {
 
             const sidebarItems = Array.from(document.querySelectorAll(".sidebar"));
             sidebarItems.forEach((elem) => {
-                gsap.fromTo(elem,
+                this.twoScrollTrigger = gsap.fromTo(elem,
                     {
                         y: 50,
                     },
@@ -380,63 +390,126 @@ export default {
             });
 
 
-            gsap.to(".scroll-bg", {
+            this.threeScrollTrigger = gsap.to(".scroll-bg", {
                 scrollTrigger: {
                     trigger: ".scroll",
                     start: '0%',
-                    // end: "+=400vh",
-                    // end: '100% 100%',
-                    // markers: true,
-
                     scrub: true,
                     toggleClass: { className: "active", targets: ".scroll-bg" }
                 },
             });
 
-            gsap.fromTo(".bg-1",
-                { opacity: '1' },
-                {
-                    opacity: '0',
-                    scrollTrigger: {
-                        trigger: ".card-1",
-                        start: 'top 0%',
-                        end: 'bottom 50%',
-                        endTrigger: '.card-2',
-                        // markers: true,
-                        scrub: true,
-                    },
 
-                });
+            if (window.innerWidth > 768) {
+                gsap.fromTo(".bg-1",
+                    { opacity: '1' },
+                    {
+                        opacity: '0',
+                        scrollTrigger: {
+                            trigger: ".card-1",
+                            start: 'top 0%',
+                            end: 'bottom 50%',
+                            endTrigger: '.card-2',
+                            // markers: true,
+                            scrub: true,
+                        },
 
-            gsap.fromTo(".bg-2",
-                { opacity: '1' },
-                {
-                    opacity: '0',
-                    scrollTrigger: {
-                        trigger: ".card-2",
-                        start: 'top 0%',
-                        end: 'bottom 50%',
-                        endTrigger: '.card-3',
-                        // markers: true,
-                        scrub: true,
-                    },
+                    });
+            }
+            else {
+                gsap.fromTo(".bg-1",
+                    { opacity: '1' },
+                    {
+                        opacity: '0',
+                        scrollTrigger: {
+                            trigger: ".card-1",
+                            start: 'top 0%',
+                            end: 'bottom 50%',
+                            endTrigger: '.card-2',
+                            // markers: true,
+                            scrub: true,
+                        },
 
-                });
+                    });
+            }
 
-            gsap.fromTo(".bg-3",
-                { opacity: '1' },
-                {
-                    opacity: '0',
-                    scrollTrigger: {
-                        trigger: ".card-3",
-                        start: 'top 0%',
-                        end: 'bottom 50%',
-                        endTrigger: '.card-4',
-                        // markers: true,
-                        scrub: true,
-                    },
+            if (window.innerWidth > 768) {
+                gsap.fromTo(".bg-2",
+                    { opacity: '1' },
+                    {
+                        opacity: '0',
+                        scrollTrigger: {
+                            trigger: ".card-2",
+                            start: 'top 0%',
+                            end: 'bottom 50%',
+                            endTrigger: '.card-3',
+                            // markers: true,
+                            scrub: true,
+                        },
 
-                });
+                    });
+            } else {
+                gsap.fromTo(".bg-2",
+                    { opacity: '1' },
+                    {
+                        opacity: '0',
+                        scrollTrigger: {
+                            trigger: ".card-2",
+                            start: 'top 0%',
+                            end: 'bottom 50%',
+                            endTrigger: '.card-3',
+                            // markers: true,
+                            scrub: true,
+                        },
+
+                    });
+            }
+
+            if (window.innerWidth > 768) {
+                gsap.fromTo(".bg-3",
+                    { opacity: '1' },
+                    {
+                        opacity: '0',
+                        scrollTrigger: {
+                            trigger: ".card-3",
+                            start: 'top 0%',
+                            end: 'bottom 50%',
+                            endTrigger: '.card-4',
+                            // markers: true,
+                            scrub: true,
+                        },
+
+                    });
+            } else {
+                gsap.fromTo(".bg-3",
+                    { opacity: '1' },
+                    {
+                        opacity: '0',
+                        scrollTrigger: {
+                            trigger: ".card-3",
+                            start: 'top 0%',
+                            end: 'bottom 50%',
+                            endTrigger: '.card-4',
+                            // markers: true,
+                            scrub: true,
+                        },
+
+                    });
+            }
+
+            // if (window.innerWidth > 768) {
+            gsap.to(".scroll-bg", {
+                scrollTrigger: {
+                    trigger: ".card-4",
+                    start: () => "+=120%",
+                    // end: 'bottom 100%',
+                    end: () => "+=" + (document.querySelector(".scroll-wrap").offsetHeight),
+                    // markers: true,
+                    scrub: true,
+                    toggleClass: { className: "remove-active", targets: ".scroll-bg" }
+                },
+            });
+            // }
 
             if (window.innerWidth > 768) {
                 gsap.fromTo(".scale-1",
@@ -624,6 +697,9 @@ export default {
             }
 
         }
+    },
+    computed: {
+
     }
 }
 </script>
@@ -631,14 +707,9 @@ export default {
 <style lang="scss">
 .lake {
     &__introduction {
-        margin-bottom: 7.25rem;
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        @media (max-width: 768px) {
-            margin-bottom: 21.33rem;
-        }
 
         &-img {
             margin-bottom: 1.75rem;
@@ -686,7 +757,7 @@ export default {
 .scroll {
     position: relative;
     width: 100%;
-    height: 500vh;
+    // height: 500vh;
 
     &-bg {
         position: absolute;
@@ -696,26 +767,31 @@ export default {
         z-index: 1;
         height: 100vh;
         width: 100%;
-        background-position: top;
-        background-size: cover;
+        background-position: bottom;
+        background-size: contain;
         background-repeat: no-repeat;
 
         &.active {
             background-attachment: fixed;
             height: 100%;
 
-            // @media (max-width: 768px) {
-            //     background-attachment: unset;
-            //     height: 100%;
-            // }
+            @media (max-width: 768px) {
+                background-attachment: unset;
+                height: 100%;
+            }
+
+            &.remove-active {
+                background-attachment: unset;
+                background-position: bottom;
+                // width: 90rem;
+                // height: 43.75rem;
+                background-size: contain;
+            }
         }
 
         &.bg-1 {
             z-index: 4;
-            background-image: url(../../public/img/fito-1-text.png), url(../../public/img/fito-1.jpg);
-            background-size: 40.4375rem 2.09375rem, cover;
-            background-repeat: no-repeat;
-            background-position: 6.94rem 19rem, top;
+            background-image: url(../../public/img/fito-1.jpg);
         }
 
         &.bg-2 {
@@ -733,71 +809,65 @@ export default {
             background-image: url(../../public/img/fito-4.jpg);
         }
 
-        // @media (max-width: 768px) {
+        @media (max-width: 768px) {
 
-        //     &.bg-1,
-        //     &.bg-2,
-        //     &.bg-3,
-        //     &.bg-4 {
-        //         position: relative;
-        //         background-image: none;
-        //     }
+            &.bg-1,
+            &.bg-2,
+            &.bg-3,
+            &.bg-4 {
+                position: relative;
+                background-image: url(../../public/img/fito-1-mobile.jpg);
+                background-position: bottom;
+                background-size: 100%;
+            }
 
-        //     &.bg-1.active,
-        //     &.bg-2.active,
-        //     &.bg-3.active,
-        //     &.bg-4.active {
+            &.bg-1.active,
+            &.bg-2.active,
+            &.bg-3.active,
+            &.bg-4.active {
 
-        //         &::before {
-        //             background-size: cover;
-        //             content: ' ';
-        //             height: 100%;
-        //             left: 0;
-        //             position: fixed;
-        //             top: 0;
-        //             width: 100%;
-        //             will-change: transform;
-        //             z-index: -1;
-        //         }
-        //     }
+                &::before {
 
-        //     &.bg-1 {
-        //         &::before {
-        //             background-image: url(../../public/img/fito-1-mobile.png);
-        //         }
+                    content: '';
+                    height: 100%;
+                    left: 0;
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                    will-change: transform;
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    background-position: bottom;
+                    z-index: -1;
+                }
+            }
 
-        //     }
+            &.bg-1 {
+                &::before {
+                    background-image: url(../../public/img/fito-1-mobile.jpg);
+                }
 
-        //     &.bg-2 {
-        //         &::before {
-        //             background-image: url(../../public/img/fito-2-mobile.png);
-        //         }
-        //     }
+            }
 
-        //     &.bg-3 {
-        //         &::before {
-        //             background-image: url(../../public/img/fito-3-mobile.png);
-        //         }
-        //     }
+            &.bg-2 {
+                &::before {
+                    background-image: url(../../public/img/fito-2-mobile.jpg);
+                }
+            }
 
-        //     &.bg-4 {
-        //         &::before {
-        //             background-image: url(../../public/img/fito-4-mobile.png);
-        //         }
-        //     }
-        // }
+            &.bg-3 {
+                &::before {
+                    background-image: url(../../public/img/fito-3-mobile.jpg);
+                }
+            }
+
+            &.bg-4 {
+                &::before {
+                    background-image: url(../../public/img/fito-4-mobile.jpg);
+                }
+            }
+        }
     }
-
-    // &-seaweed {
-    //     position: absolute;
-    //     top: 0;
-    //     width: 12rem;
-    //     height: 10.25rem;
-    //     background-image: url(../../public/img/seaweed.png);
-    //     background-position: center;
-    //     background-size: cover;
-    //     background-repeat: no-repeat;
-    // }
 
     &-wrap {
         position: relative;
@@ -823,20 +893,19 @@ export default {
             padding: 4.2666rem;
             margin: 0 auto 100vh auto;
             width: 93%;
+
+            &:first-child {
+                margin-top: 100vh;
+            }
         }
     }
 }
 
 .work-on-mistakes {
-    padding-top: 6.25rem;
-    margin-bottom: 5.5rem;
-
     &__img {
-        margin-top: 2.5rem;
-        margin-bottom: 2.63rem;
         background-image: url(../../public/img/scheme.png);
         width: 100%;
-        height: 39.8125rem;
+        height: 33.4723rem;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -846,8 +915,6 @@ export default {
         }
 
         @media (max-width: 768px) {
-            margin-top: 11.2rem;
-            margin-bottom: 14.667rem;
             background-image: url(../../public/img/scheme-mobile.png);
             height: 178.135rem;
 
@@ -860,7 +927,7 @@ export default {
 
 .in-search {
     position: relative;
-    margin-bottom: 3.87rem;
+    margin-bottom: 3.75rem;
     height: 102rem;
     display: flex;
     justify-content: flex-end;
@@ -877,6 +944,8 @@ export default {
     @media (max-width: 768px) {
         background-image: url(../../public/img/in-search-mobile.png);
         height: 176.535rem;
+        margin-bottom: 21.3334rem;
+        ;
 
         @supports (background-image: url(../../public/img/in-search-mobile.webp)) {
             background-image: url(../../public/img/in-search-mobile.webp);
@@ -978,16 +1047,6 @@ export default {
 }
 
 .scales {
-    // &__wrap {
-    //     display: flex;
-    //     flex-direction: column;
-    //     gap: 2rem
-    // }
-
-    // &__row {
-    //     display: flex;
-    // }
-
     &__text {
         width: 9.75rem;
         margin-right: 0.69rem;
@@ -1019,10 +1078,6 @@ export default {
             }
         }
     }
-
-
-
-
 }
 
 .scale__wrap.mr-4-31 {

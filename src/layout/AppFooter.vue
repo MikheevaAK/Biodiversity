@@ -132,12 +132,12 @@ export default {
             font-size: 1.125rem;
             font-weight: 400;
             line-height: 130%;
-            border-radius: 0.5rem;
+            border-radius: 3.125rem;
             background: var(--copper, #D38235);
             transition: all .25s ease-out;
 
             &:hover {
-                background: #A46A32;
+                padding: 19.5px 62.833px;
             }
         }
 
@@ -164,6 +164,7 @@ export default {
         gap: 0.13rem;
 
         @media (max-width: 768px) {
+            margin-bottom: 3.867rem;
             width: 21.6rem;
             gap: 0.56rem;
         }

@@ -49,7 +49,6 @@ export default {
         line-height: 130%;
 
         @media (max-width: 768px) {
-            margin-bottom: 3.4667rem;
             font-size: 10.67rem;
         }
     }

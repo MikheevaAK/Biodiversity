@@ -1,5 +1,5 @@
 <template>
-    <div class="hero" :style="{ 'background-image': image }">
+    <div class="hero" :style="cssProps">
         <div class="container">
             <a href="#" class="hero__link">
                 <svg width="159" height="33" viewBox="0 0 159 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,23 +44,45 @@ export default {
             type: String,
             default: ''
         },
-        img: {
+        imgWebp: {
             type: String,
             default: ''
         },
-        imgMobile: {
+        imgJpeg: {
+            type: String,
+            default: ''
+        },
+        imgMobileWebp: {
+            type: String,
+            default: ''
+        },
+        imgMobileJpeg: {
             type: String,
             default: ''
         }
     },
     computed: {
-        image() {
+        imageWebp() {
             if (window.innerWidth > 768) {
-                return 'url(' + this.img + ')'
+                return 'url(img/' + this.imgWebp + ')'
             } else {
-                return 'url(' + this.imgMobile + ')'
+                return 'url(img/' + this.imgMobileWebp + ')'
             }
             
+        },
+        imageJpeg() {
+            if (window.innerWidth > 768) {
+                return 'url(public/img/' + this.imgJpeg + ')'
+            } else {
+                return 'url(public/img/' + this.imgMobileJpeg + ')'
+            }
+            
+        },
+        cssProps() {
+            return {
+                '--bg-webp': this.imageWebp,
+                '--bg-jepg': this.imageJpeg
+            }
         }
     }
 }
@@ -75,11 +97,15 @@ export default {
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
+    background-image: var(--bg-jepg);
+    @supports (background-image: var(--bg-webp)) {
+        background-image: var(--bg-webp);
+    }
+    
 
     @media (max-width: 768px) {
-        ackground-position: bottom;
+        background-position: bottom;
     }
-
 
     &-strip {
         position: absolute;

@@ -64,9 +64,9 @@ export default {
     background-position: center;
     cursor: pointer;
 
-    &:hover {
-        background-image: url(../../public/img/svg/sharing-hover.svg);
-    }
+    // &:hover {
+    //     background-image: url(../../public/img/svg/sharing-hover.svg);
+    // }
 
     @media (max-width: 768px) {
         width: 12.77rem;

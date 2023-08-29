@@ -1,11 +1,14 @@
 <template>
     <div>
-        <BaseHero :title="'Вдохнуть жизнь в озеро'" :descr="heroDescr" :img="'img/hero1.png'"
-            :imgMobile="'img/hero1-mobile.png'" />
+        <BaseHero :title="'Вдохнуть жизнь в озеро'" :descr="heroDescr" :imgWebp="'hero1.webp'" :imgJpeg="'hero1.jpeg'"
+            :imgMobileWebp="'hero1-mobile.webp'" :imgMobileJpeg="'hero1-mobile.jpeg'" />
         <MainSection>
             <section class="lake">
                 <div class="lake__introduction">
-                    <img class="lake__introduction-img" src="img/introduction.png">
+                    <picture>
+                        <source type="image/webp" srcset="img/introduction.webp">
+                        <img class="lake__introduction-img" src="img/introduction.png">
+                    </picture>
                     <BaseTextBlock>
                         <p class="mb-0-625 text-block__descr">
                             В&nbsp;Арктике очень много озёр, особенно тех, которые наполняют подземные родники. В&nbsp;них
@@ -40,7 +43,10 @@
                             не&nbsp;ясно.
                         </p>
                     </BaseTextBlock>
-                    <img class="lake__map-img" src="img/map.png">
+                    <picture>
+                        <source type="image/webp" srcset="img/lake-map.webp">
+                        <img class="lake__map-img" src="img/lake-map.png">
+                    </picture>
                 </div>
 
                 <BaseTextBlock :title="'Что делает озеро рыбопродуктивным?'">
@@ -119,7 +125,6 @@
                     </p>
                 </BaseTextBlock>
 
-                <!-- <img class="work-on-mistakes__img" src="img/scheme.png"> -->
                 <div class="work-on-mistakes__img"></div>
 
                 <BaseTextBlock class="mb-2-31">
@@ -327,10 +332,9 @@ export default {
     },
     mounted() {
         this.$nextTick(function () {
-        this.scrollAnimation();
+            this.scrollAnimation();
         })
     },
-
     methods: {
         scrollAnimation() {
             const collageItems = Array.from(document.querySelectorAll(".text-block__wrap"));
@@ -711,7 +715,7 @@ export default {
 
         &.bg-1 {
             z-index: 4;
-            background-image:url(../../public/img/fito-1-text.png), url(../../public/img/fito-1.png);
+            background-image: url(../../public/img/fito-1-text.png), url(../../public/img/fito-1.jpg);
             background-size: 40.4375rem 2.09375rem, cover;
             background-repeat: no-repeat;
             background-position: 6.94rem 19rem, center;
@@ -719,17 +723,17 @@ export default {
 
         &.bg-2 {
             z-index: 3;
-            background-image: url(../../public/img/fito-2.png);
+            background-image: url(../../public/img/fito-2.jpg);
         }
 
         &.bg-3 {
             z-index: 2;
-            background-image: url(../../public/img/fito-3.png);
+            background-image: url(../../public/img/fito-3.jpg);
         }
 
         &.bg-4 {
             z-index: 1;
-            background-image: url(../../public/img/fito-4.png);
+            background-image: url(../../public/img/fito-4.jpg);
         }
 
         // @media (max-width: 768px) {
@@ -840,11 +844,19 @@ export default {
         background-size: cover;
         background-repeat: no-repeat;
 
+        @supports (background-image: url(../../public/img/scheme.webp)) {
+            background-image: url(../../public/img/scheme.webp);
+        }
+
         @media (max-width: 768px) {
             margin-top: 11.2rem;
             margin-bottom: 14.667rem;
             background-image: url(../../public/img/scheme-mobile.png);
             height: 178.135rem;
+
+            @supports (background-image: url(../../public/img/scheme-mobile.webp)) {
+                background-image: url(../../public/img/scheme-mobile.webp);
+            }
         }
     }
 }
@@ -861,9 +873,17 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
 
+    @supports (background-image: url(../../public/img/in-search.webp)) {
+        background-image: url(../../public/img/in-search.webp);
+    }
+
     @media (max-width: 768px) {
         background-image: url(../../public/img/in-search-mobile.png);
         height: 176.535rem;
+
+        @supports (background-image: url(../../public/img/in-search-mobile.webp)) {
+            background-image: url(../../public/img/in-search-mobile.webp);
+        }
     }
 
 

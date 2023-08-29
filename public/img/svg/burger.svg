@@ -1,10 +1,6 @@
-<svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Group 1975">
-<rect id="Rectangle 7" width="55" height="55" fill="#0077C8"/>
-<g id="Group 1962">
-<path id="Line 2" d="M16 40.1172H39.5294" stroke="white" stroke-linecap="round"/>
-<path id="Line 3" d="M16 33.0586H39.5294" stroke="white" stroke-linecap="round"/>
-<path id="Line 4" d="M16 26H39.5294" stroke="white" stroke-linecap="round"/>
-</g>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none">
+<rect width="55" height="55" fill="#0077C8"/>
+<path d="M16 34.1172H39.5294" stroke="white" stroke-linecap="round"/>
+<path d="M16 27.0586H39.5294" stroke="white" stroke-linecap="round"/>
+<path d="M16 20H39.5294" stroke="white" stroke-linecap="round"/>
 </svg>

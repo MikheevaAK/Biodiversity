@@ -326,9 +326,9 @@ export default {
         BaseNumberBlock
     },
     mounted() {
-        // this.$nextTick(function () {
+        this.$nextTick(function () {
         this.scrollAnimation();
-        // })
+        })
     },
 
     methods: {
@@ -711,10 +711,10 @@ export default {
 
         &.bg-1 {
             z-index: 4;
-            background-image: url(../../public/img/fito-1.png), url(../../public/img/fito-1-text.png);
-            background-size: cover, 40.4375rem 2.09375rem;
-            background-repeat: no-repeat, repeat-y;
-            background-position: center, 6.94rem 19rem;
+            background-image:url(../../public/img/fito-1-text.png), url(../../public/img/fito-1.png);
+            background-size: 40.4375rem 2.09375rem, cover;
+            background-repeat: no-repeat;
+            background-position: 6.94rem 19rem, center;
         }
 
         &.bg-2 {

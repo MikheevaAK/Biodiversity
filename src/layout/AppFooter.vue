@@ -125,6 +125,7 @@ export default {
         }
 
         &-link {
+            position: relative;
             display: inline-block;
             padding: 1.125rem 3.375rem;
             color: var(--white, #FFF);
@@ -135,6 +136,7 @@ export default {
             border-radius: 3.125rem;
             background: var(--copper, #D38235);
             transition: all .25s ease-out;
+            z-index: 10;
 
             &:hover {
                 padding: 19.5px 62.833px;

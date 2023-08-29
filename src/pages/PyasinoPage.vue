@@ -422,11 +422,11 @@ export default {
                     {
                         opacity: '0',
                         scrollTrigger: {
-                            trigger: ".card-1",
+                            trigger: ".scroll-card.card-1",
                             start: 'top 0%',
                             end: 'bottom 50%',
-                            endTrigger: '.card-2',
-                            // markers: true,
+                            endTrigger: '.scroll-card.card-2',
+                            markers: true,
                             scrub: true,
                         },
 
@@ -454,10 +454,10 @@ export default {
                     {
                         opacity: '0',
                         scrollTrigger: {
-                            trigger: ".card-2",
+                            trigger: ".scroll-card.card-2",
                             start: 'top 0%',
                             end: 'bottom 50%',
-                            endTrigger: '.card-3',
+                            endTrigger: '.scroll-card.card-3',
                             // markers: true,
                             scrub: true,
                         },
@@ -486,10 +486,10 @@ export default {
                     {
                         opacity: '0',
                         scrollTrigger: {
-                            trigger: ".card-3",
+                            trigger: ".scroll-card.card-3",
                             start: 'top 0%',
                             end: 'bottom 50%',
-                            endTrigger: '.card-4',
+                            endTrigger: '.scroll-card.card-4',
                             // markers: true,
                             scrub: true,
                         },
@@ -500,7 +500,7 @@ export default {
             // if (window.innerWidth > 768) {
             gsap.to(".scroll-bg", {
                 scrollTrigger: {
-                    trigger: ".card-4",
+                    trigger: ".scroll-card.card-4",
                     start: () => "+=120%",
                     // end: 'bottom 100%',
                     end: () => "+=" + (document.querySelector(".scroll-wrap").offsetHeight),

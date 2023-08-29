@@ -102,11 +102,30 @@ svg {
     margin-bottom: 7.5rem;
 }
 
-//40px - mobile
-.mb-2-5 {
+
+//10px
+.mb-10 {
+    margin-bottom: 0.625rem;;
+
+    @media (max-width: 768px) {
+        margin-bottom: 2.6667rem;
+    }
+}
+
+//40px
+.mb-40 {
     margin-bottom: 2.5rem;
 
     @media (max-width: 768px) {
         margin-bottom: 10.6667rem;
+    }
+}
+
+//100px - 80px
+.mb-100 {
+    margin-bottom: 6.25rem;
+
+    @media (max-width: 768px) {
+        margin-bottom: 21.3334rem;
     }
 }

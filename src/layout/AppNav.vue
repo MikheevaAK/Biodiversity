@@ -47,7 +47,7 @@ export default {
     position: fixed;
     top: 0;
     right: 1.25rem;
-    z-index: 10;
+    z-index: 20;
     display: flex;
 
     @media (max-width: 768px) {

@@ -10,7 +10,7 @@
                         <img class="lake__introduction-img" src="img/introduction.png">
                     </picture>
                     <BaseTextBlock>
-                        <p class="mb-0-625 text-block__descr">
+                        <p class="mb-10 text-block__descr">
                             В&nbsp;Арктике очень много озёр, особенно тех, которые наполняют подземные родники. В&nbsp;них
                             рыба
                             не&nbsp;водится из-за очень скудной питательной базы. В&nbsp;других&nbsp;же озёрах рыбы
@@ -31,7 +31,7 @@
                     </BaseTextBlock>
                 </div>
 
-                <div class="lake__map">
+                <div class="lake__map mb-100">
                     <BaseTextBlock :title="'Озеро Пясино'">
                         <p>
                             Находится в&nbsp;20&nbsp;километрах от&nbsp;Норильска. Говорят, что сто лет назад в&nbsp;нём
@@ -75,12 +75,14 @@
                 </div>
                 <div class="scroll-wrap">
                     <div class="scroll-card card-1 text-block__descr ">
-                        С&nbsp;помощью солнечного света фитопланктон перерабатывает углекислый газ в&nbsp;кислород,
-                        а&nbsp;значит дает возможность другим организмам жить и&nbsp;дышать.
-                        <br />
-                        <br />
-                        При этом микроводоросли&nbsp;&mdash; не&nbsp;только лёгкие водоёма, но&nbsp;и&nbsp;пища для
-                        зоопланктона&nbsp;&mdash; мелких рачков, моллюсков и&nbsp;личинок водных животных.
+                        <p class="mb-10">
+                            С&nbsp;помощью солнечного света фитопланктон перерабатывает углекислый газ в&nbsp;кислород,
+                            а&nbsp;значит дает возможность другим организмам жить и&nbsp;дышать.
+                        </p>
+                        <p>
+                            При этом микроводоросли&nbsp;&mdash; не&nbsp;только лёгкие водоёма, но&nbsp;и&nbsp;пища для
+                            зоопланктона&nbsp;&mdash; мелких рачков, моллюсков и&nbsp;личинок водных животных.
+                        </p>
                     </div>
                     <div class="scroll-card card-2 text-block__descr ">
                         Зоопланктоном питаются мальки и&nbsp;некоторые виды рыб, а&nbsp;ими, в&nbsp;свою
@@ -138,7 +140,8 @@
                 <BaseSidebar>
                     <p>
                         &laquo;Цветение&raquo; воды цианобактериями может продолжаться десятилетиями после того, как
-                        в&nbsp;озеро внесли удобрения. Так попытка решить одну проблему, может привести к&nbsp;другой,
+                        в&nbsp;озеро внесли удобрения.<br/>
+                        Так попытка решить одну проблему, может привести к&nbsp;другой,
                         не&nbsp;менее серьёзной.
                     </p>
                 </BaseSidebar>
@@ -660,15 +663,9 @@ export default {
     }
 
     &__map {
-        margin-bottom: 6.25rem;
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        @media (max-width: 768px) {
-            margin-bottom: 21.33rem;
-        }
-
 
         &-img {
             margin-top: 1.88rem;
@@ -699,7 +696,7 @@ export default {
         z-index: 1;
         height: 100vh;
         width: 100%;
-        background-position: center;
+        background-position: top;
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -718,7 +715,7 @@ export default {
             background-image: url(../../public/img/fito-1-text.png), url(../../public/img/fito-1.jpg);
             background-size: 40.4375rem 2.09375rem, cover;
             background-repeat: no-repeat;
-            background-position: 6.94rem 19rem, center;
+            background-position: 6.94rem 19rem, top;
         }
 
         &.bg-2 {

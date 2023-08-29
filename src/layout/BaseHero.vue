@@ -21,9 +21,7 @@
                 </svg>
             </a>
             <div class="hero__wrap">
-                <h1 class="hero__title">
-                    {{ title }}
-                </h1>
+                <h1 class="hero__title" v-html="title"></h1>
                 <p class="hero__descr">
                     {{ descr }}
                 </p>

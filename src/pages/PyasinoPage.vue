@@ -1,6 +1,6 @@
 <template>
     <div>
-        <BaseHero :title="'Вдохнуть жизнь в озеро'" :descr="heroDescr" :imgWebp="'hero1.webp'" :imgJpeg="'hero1.jpeg'"
+        <BaseHero :title="'Вдохнуть <br/>жизнь в озеро'" :descr="heroDescr" :imgWebp="'hero1.webp'" :imgJpeg="'hero1.jpeg'"
             :imgMobileWebp="'hero1-mobile.webp'" :imgMobileJpeg="'hero1-mobile.jpeg'" />
         <MainSection>
             <section class="lake">

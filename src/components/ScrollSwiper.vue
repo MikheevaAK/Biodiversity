@@ -22,6 +22,7 @@
                         и&nbsp;кислотность среды.
                     </div>
                 </div>
+                <img class="team-item__img-grass" src="img/grass.png" alt="">
             </div>
             <div class="team-item geocryologists">
                 <img class="team-item__img" src="img/geocryologists.png" alt="">
@@ -180,6 +181,7 @@ export default {
 
         .number-block {
             position: static;
+
             @media (max-width: 768px) {
                 margin-top: 0;
             }
@@ -278,6 +280,18 @@ export default {
                     top: -2rem;
                     width: 92.534rem;
                     height: 139.467rem;
+                }
+
+                &-grass {
+                    position: absolute;
+                    right: -4rem;
+                    bottom: 1.5rem;
+                    width: 12.6875rem;
+                    height: 7rem;
+
+                    @media (max-width: 768px) {
+                        display: none;
+                    }
                 }
             }
 

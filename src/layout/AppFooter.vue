@@ -20,9 +20,11 @@
                 Вернуться на&nbsp;карту
             </a>
         </div>
-        <div class="footer__bottom">
-            <div class="footer__bottom-descr">Читать ещё</div>
-            <ul class="footer__bottom-list">
+        <div class="footer__mid">
+            <div class="footer__mid-descr">Читать ещё</div>
+
+            <div class="footer__mid-img"></div>
+            <!-- <ul class="footer__bottom-list">
                 <li v-for="(item, index) in menu" :key="index" class="footer__item">
                     <img :src="item.img" class="footer__item-img">
                     <div class="footer__item-title"> {{ item.title }}</div>
@@ -32,7 +34,7 @@
                         </li>
                     </ul>
                 </li>
-            </ul>
+            </ul> -->
         </div>
     </footer>
 </template>
@@ -108,7 +110,7 @@ export default {
 
 <style lang="scss">
 .footer {
-    padding: 6.44rem 16.44rem 11.06rem 16.44rem;
+    padding: 6.44rem 7.1rem 11.06rem 7.1rem;
 
     @media (max-width: 768px) {
         padding: 21.3334rem 14.1334rem 11.06rem 14.1334rem;
@@ -139,7 +141,8 @@ export default {
             z-index: 10;
 
             &:hover {
-                padding: 19.5px 62.833px;
+                transform: scale(1.2);
+                // font-size: 1rem;
             }
         }
 
@@ -148,13 +151,13 @@ export default {
             width: 20.3125rem;
             text-align: center;
 
-            
+
 
             @media (max-width: 768px) {
                 font-size: 4.53334rem;
                 line-height: 130%;
                 width: 100%;
-        }
+            }
         }
     }
 
@@ -202,13 +205,21 @@ export default {
         }
     }
 
-    &__bottom {
+    &__mid {
         &-descr {
             margin-bottom: 1.62rem;
             font-size: 1.125rem;
             font-weight: 600;
             line-height: 130%;
             color: #000;
+        }
+
+        &-img {
+            width: 100%;
+            height: 8.25rem;
+            opacity: 0.5;
+            background: #F8FC2B;
+            margin-bottom: 1.44rem;
         }
 
         &-list {

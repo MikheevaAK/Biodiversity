@@ -262,6 +262,8 @@
                 <div class="scena__wrap">
                     <picture>
                         <source media="(max-width: 768px)" srcset="img/step-3-scena-mobile.png">
+                        <source media="(max-width: 768px)" type="image/webp" srcset="img/step-3-scena-mobile.webp">
+                        <source type="image/webp" srcset="img/step-3-scena.webp">
                         <img class="scena" src="img/step-3-scena.png" alt="">
                     </picture>
 
@@ -303,7 +305,8 @@ export default {
     },
     mounted() {
         this.$nextTick(function () {
-            this.scrollAnimation();
+            this.sidebarAnimation();
+            this.textAnimation();
         })
     },
     data() {
@@ -312,26 +315,9 @@ export default {
         }
     },
     methods: {
-        scrollAnimation() {
-
-            // if (window.innerWidth > 768) {
-            //     const panels = gsap.utils.toArray(".team-container .team-item");
-            //     gsap.to(panels, {
-            //         xPercent: -50 * (panels.length - 1),
-            //         ease: "none",
-            //         scrollTrigger: {
-            //             trigger: ".team",
-            //             pin: true,
-            //             start: "top",
-            //             scrub: 1,
-            //             end: () => "+=" + (document.querySelector(".team-container").offsetWidth - window.innerWidth)
-            //         }
-            //     });
-            // }
-
-            const collageItems = Array.from(document.querySelectorAll(".text-block__wrap"));
+        textAnimation() {
+            const collageItems = Array.from(document.querySelectorAll(".text-block__wrap"))
             collageItems.forEach((elem) => {
-
                 gsap.fromTo(elem,
                     {
                         y: 50,
@@ -346,10 +332,11 @@ export default {
                             scrub: true,
                             // markers: true,
                         },
-                    });
-            });
-
-            const sidebarItems = Array.from(document.querySelectorAll(".sidebar"));
+                    })
+            })
+        },
+        sidebarAnimation() {
+            const sidebarItems = Array.from(document.querySelectorAll(".sidebar"))
             sidebarItems.forEach((elem) => {
                 gsap.fromTo(elem,
                     {
@@ -365,8 +352,8 @@ export default {
                             // markers: true,
                             scrub: true,
                         },
-                    });
-            });
+                    })
+            })
         }
     }
 }

@@ -1,7 +1,7 @@
 <template>
     <div>
         <BaseHero :title="'Норильский дивизион. Природные сокровища южного Таймыра'" :descr="heroDescr" :img="'img/hero-3.jpg'"
-            :imgMobile="'img/hero2-mobile.jpg'" />
+            :imgMobile="'img/hero3-mobile.jpg'" />
     </div>
 </template>
 

@@ -175,10 +175,14 @@ export default {
             width: 100%;
             padding: 0 9.5rem;
             gap: 7.467rem;
+            margin-bottom: 10.6667rem;
         }
 
         .number-block {
             position: static;
+            @media (max-width: 768px) {
+                margin-top: 0;
+            }
         }
     }
 
@@ -186,13 +190,14 @@ export default {
         margin-bottom: 4.94rem;
         display: flex;
         width: 160.36rem;
-        height: 46.1875rem;
+        height: 51.1875rem;
 
         @media (max-width: 768px) {
             width: 524rem;
-            min-height: 100%;
+            height: 100%;
 
             &__wrap {
+                margin-bottom: 16rem;
                 width: unset;
                 height: 139.467rem;
                 overflow-x: scroll;
@@ -270,6 +275,7 @@ export default {
 
                 @media (max-width: 768px) {
                     left: -40px;
+                    top: -2rem;
                     width: 92.534rem;
                     height: 139.467rem;
                 }

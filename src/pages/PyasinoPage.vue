@@ -798,11 +798,7 @@ export default {
                 background-position: bottom;
                 // width: 90rem;
                 // height: 43.75rem;
-                background-size: cover;
-
-                @media (max-width: 768px) {
-                    background-size: contain;
-                }
+                background-size: contain;
             }
         }
 

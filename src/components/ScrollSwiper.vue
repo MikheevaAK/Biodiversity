@@ -118,12 +118,12 @@ export default {
             if (window.innerWidth > 768) {
                 const panels = gsap.utils.toArray(".team-container .team-item");
                 gsap.to(panels, {
-                    xPercent: -50 * (panels.length - 1),
+                    xPercent: -55 * (panels.length - 1),
                     ease: "none",
                     scrollTrigger: {
                         trigger: ".team",
                         pin: true,
-                        start: "top",
+                        start: "top -10%",
                         scrub: 1,
                         end: () => "+=" + (document.querySelector(".team-container").offsetWidth - window.innerWidth)
                     }

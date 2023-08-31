@@ -152,17 +152,17 @@ $purple: #654EA3;
 
     &__blue {
         background-color: rgba($blue, 1);
-        animation: ripple-blue 1.5s infinite;
+        animation: ripple-blue 0.9s infinite;
     }
 
     &__green {
         background-color: rgba($green, 1);
-        animation: ripple-green 1.5s infinite;
+        animation: ripple-green 0.9s infinite;
     }
 
     &__purple {
         background-color: rgba($purple, 1);
-        animation: ripple-purple 1.5s infinite;
+        animation: ripple-purple 0.9s infinite;
     }
 
     &__1 {
@@ -244,7 +244,7 @@ $purple: #654EA3;
 
     90% {
         box-shadow: 0 0 0 0.1rem rgba($blue, 0), 0 0 0 0.3rem rgba($blue, 0),
-            0 0 0 0.5rem rgba($blue, 0), 0 0 0 2rem rgba($blue, 0);
+            0 0 0 0.5rem rgba($blue, 0), 0 0 0 1rem rgba($blue, 0);
     }
 }
 
@@ -256,7 +256,7 @@ $purple: #654EA3;
 
     90% {
         box-shadow: 0 0 0 0.1rem rgba($green, 0), 0 0 0 0.3rem rgba($green, 0),
-            0 0 0 0.5rem rgba($green, 0), 0 0 0 2rem rgba($green, 0);
+            0 0 0 0.5rem rgba($green, 0), 0 0 0 1rem rgba($green, 0);
     }
 }
 
@@ -268,7 +268,7 @@ $purple: #654EA3;
 
     90% {
         box-shadow: 0 0 0 0.1rem rgba($purple, 0), 0 0 0 0.3rem rgba($purple, 0),
-            0 0 0 0.5rem rgba($purple, 0), 0 0 0 2rem rgba($purple, 0);
+            0 0 0 0.5rem rgba($purple, 0), 0 0 0 1rem rgba($purple, 0);
     }
 }
 </style>

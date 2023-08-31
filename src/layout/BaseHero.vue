@@ -22,9 +22,7 @@
             </a>
             <div class="hero__wrap">
                 <h1 class="hero__title" v-html="title"></h1>
-                <p class="hero__descr">
-                    {{ descr }}
-                </p>
+                <p class="hero__descr" v-html="descr"></p>
             </div>
         </div>
 

@@ -148,6 +148,8 @@ export default {
         @media (max-width: 768px) {
             position: static;
             transform: unset;
+            margin-top: 19.332rem;
+            margin-bottom: 4.26rem;
         }
     }
 
@@ -156,7 +158,7 @@ export default {
         position: absolute;
         width: 25.7rem;
         height: 14.2rem;
-        top: 33rem;
+        top: 55rem;
         right: 7rem;
 
         @media (max-width: 768px) {
@@ -343,7 +345,7 @@ export default {
                 height: 30.1875rem;
 
                 @media (max-width: 768px) {
-                    bottom: -5rem;
+                    bottom: 0;
                     width: 52.7rem;
                     height: 98.4rem;
                 }
@@ -467,6 +469,7 @@ export default {
                 @media (max-width: 768px) {
                     width: 66.73rem;
                     height: 96.9rem;
+                    bottom: 1rem;
                 }
             }
 

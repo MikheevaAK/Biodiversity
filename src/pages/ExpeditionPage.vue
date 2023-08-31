@@ -757,17 +757,34 @@ export default {
     margin-bottom: 9.5rem;
     padding-bottom: 3.72rem;
 
+    @media (max-width: 768px) {
+        margin-bottom: 22rem;
+    }
+
     .line {
         position: absolute;
         width: 100%;
         height: 9.5rem;
 
+
+        @media (max-width: 768px) {
+            height: 12rem;
+        }
+
         &-top {
             top: -9.5rem;
+
+            @media (max-width: 768px) {
+                top: -12rem;
+            }
         }
 
         &-bottom {
             bottom: -9.5rem;
+
+            @media (max-width: 768px) {
+                bottom: -12rem;
+            }
         }
     }
 
@@ -837,6 +854,10 @@ export default {
 
 .section-white {
     margin-bottom: 9.5rem;
+
+    @media (max-width: 768px) {
+        margin-bottom: 22rem;
+    }
 }
 
 .step-three {

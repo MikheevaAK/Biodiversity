@@ -165,11 +165,33 @@
                         Далдыкан до слияния рек Пясина и Дудыпта.
                     </p>
                 </BaseTextBlock>
-                <picture>
-                    <source media="(max-width: 768px)" srcset="img/map-rivers-mobile.png">
-                    <img class="step-two__img" src="img/map-rivers.png" alt="">
-                </picture>
-
+                <div class="step-two__map">
+                    <ul class="step-two__map-list">
+                        <li class="step-two__map-item">
+                            <span class="step-two__item-number">1</span>
+                            <span class="step-two__item-text">Русло р. Далдыкан</span>
+                        </li>
+                        <li class="step-two__map-item">
+                            <span class="step-two__item-number">2</span>
+                            <span class="step-two__item-text">Слияние рек Далдыкан и Амбарная</span>
+                        </li>
+                        <li class="step-two__map-item">
+                            <span class="step-two__item-number">3</span>
+                            <span class="step-two__item-text">Слияние р. Амбарная и оз. Пясино</span>
+                        </li>
+                        <li class="step-two__map-item">
+                            <span class="step-two__item-number">4</span>
+                            <span class="step-two__item-text">Начало р. Пясина</span>
+                        </li>
+                        <li class="step-two__map-item">
+                            <span class="step-two__item-number">5</span>
+                            <span class="step-two__item-text">Слияние рек Пясина и Дудыпта</span>
+                        </li>
+                    </ul>
+                    <picture>
+                        <img class="step-two__img" src="img/map-rivers.png" alt="">
+                    </picture>
+                </div>
                 <BaseTextBlock class="" :title="'Особенности второго этапа'">
                     <p class="text-block__descr">
                         Главным новшеством полевой программы 2021 года стали гидрологические измерения. Специалисты
@@ -720,6 +742,7 @@ export default {
             height: 1.875rem;
             padding: 0.3rem 0.63rem;
             border-radius: 100%;
+            font-family: 'MuseoSansCyrl';
             background-color: #D38235;
             color: #fff;
             font-size: 1.125rem;
@@ -812,10 +835,84 @@ export default {
         }
     }
 
+    &__map {
+        position: relative;
+        width: 34.3125rem;
+        margin: 0 auto;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
+        &-list {
+            position: absolute;
+            top: 4rem;
+            left: -14.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            @media (max-width: 768px) {
+                position: static;
+                margin-top: 10.6667rem;
+                padding: 0 8rem;
+                gap: 1.6rem;
+            }
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            height: 1.25rem;
+
+            @media (max-width: 768px) {
+                gap: 2.134rem;
+                height: 5.334rem;
+            }
+        }
+    }
+
+    &__item {
+        &-number {
+            width: 1.25rem;
+            height: 1.25rem;
+            padding: 0.18rem 0.43rem 0.38rem 0.42rem;
+            font-size: 0.875rem;
+            font-family: 'MuseoSansCyrl';
+            font-weight: 500;
+            line-height: 130%;
+            color: var(--copper, #D38235);
+
+            @media (max-width: 768px) {
+                width: 6.185rem;
+                height: 6.185rem;
+                padding: 1.1rem 2rem 1rem 2rem;
+                font-size: 3.73334rem;
+            }
+        }
+
+        &-text {
+            font-size: 0.9375rem;
+            font-weight: 300;
+            line-height: 130%;
+
+            @media (max-width: 768px) {
+                font-size: 3.73334rem;
+            }
+        }
+    }
+
     &__img {
-        margin: 6.25rem 0;
-        width: 100%;
-        // height: 29.4rem;
+        margin: 2.06rem 0 4.15rem 0;
+        width: 34.3125rem;
+        height: 29.875rem;
+
+        @media (max-width: 768px) {
+            margin: 0 0 21.3334rem 0;
+            width: 100%;
+            height: 94rem;
+        }
 
         &-measurements {
             display: block;
@@ -933,4 +1030,5 @@ export default {
     .step-start__lines {
         width: 28.4rem;
     }
-}</style>
+}
+</style>

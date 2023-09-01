@@ -144,7 +144,7 @@ export default {
             z-index: 10;
 
             &:hover {
-                transform: scale(11);
+                transform: scale(1);
                 // font-size: 1rem;
             }
 

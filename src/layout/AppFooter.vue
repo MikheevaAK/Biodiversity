@@ -1,6 +1,6 @@
 <template>
     <footer class="footer">
-        <div class="footer__top">
+        <div class="footer__top mb-100">
             <div class="footer__map">
                 <div class="footer__block footer__block-big footer__block_active"></div>
                 <div class="footer__block footer__block-small"></div>
@@ -35,6 +35,10 @@
                     </ul>
                 </li>
             </ul> -->
+        </div>
+
+        <div class="footer__bottom">
+
         </div>
     </footer>
 </template>
@@ -110,14 +114,13 @@ export default {
 
 <style lang="scss">
 .footer {
-    padding: 6.44rem 7.1rem 11.06rem 7.1rem;
+    padding: 6.44rem 7.1rem 0 7.1rem;
 
     @media (max-width: 768px) {
-        padding: 21.3334rem 14.1334rem 11.06rem 14.1334rem;
+        padding: 21.3334rem 0 11.06rem 0;
     }
 
     &__top {
-        margin-bottom: 4.79rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -141,8 +144,14 @@ export default {
             z-index: 10;
 
             &:hover {
-                transform: scale(1.2);
+                transform: scale(11);
                 // font-size: 1rem;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 4.8rem;
+                padding: 4.87rem 13rem;
+                border-radius: 13rem;
             }
         }
 
@@ -151,9 +160,8 @@ export default {
             width: 20.3125rem;
             text-align: center;
 
-
-
             @media (max-width: 768px) {
+                margin-bottom: 5.3334rem;
                 font-size: 4.53334rem;
                 line-height: 130%;
                 width: 100%;
@@ -212,6 +220,14 @@ export default {
             font-weight: 600;
             line-height: 130%;
             color: #000;
+
+            @media (max-width: 768px) {
+                position: relative;
+                top: 5rem;
+                margin-bottom: 0;
+                font-size: 5.86667rem;
+                text-align: center;
+            }
         }
 
         &-img {
@@ -220,6 +236,18 @@ export default {
             opacity: 0.5;
             background: #F8FC2B;
             margin-bottom: 1.44rem;
+            background-repeat: no-repeat;
+
+            @media (max-width: 768px) {
+                opacity: 1;
+                background-color: unset;
+                width: 100%;
+                height: 29.8667rem;
+                margin-bottom: 5.3334rem;
+                background-image: url(../../public/img/footer-mobile.png);
+                background-position: center;
+                background-size: cover;
+            }
         }
 
         &-list {
@@ -272,6 +300,10 @@ export default {
                 color: #004C97;
             }
         }
+    }
+
+    &__bottom {
+        width: 100%;
     }
 }
 </style>

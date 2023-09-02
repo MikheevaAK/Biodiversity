@@ -101,7 +101,6 @@
                         вылов рыбы могут привести к&nbsp;нарушению баланса экосистемы.
                     </div>
                 </div>
-                <div class="scroll-wrap-end"></div>
             </section>
 
             <section class="work-on-mistakes mb-100">
@@ -350,6 +349,13 @@ export default {
         this.threeScrollTrigger = null
     },
     methods: {
+        scrollMobile() {
+            const collageItems = Array.from(document.querySelectorAll(".scroll-bg.active"))
+
+            collageItems.forEach((elem) => {
+                elem.css('background-position', '0px ' + document.scrollTop() + 'px')
+            })
+        },
         scrollAnimation() {
             const collageItems = Array.from(document.querySelectorAll(".text-block__wrap"));
             collageItems.forEach((elem) => {
@@ -398,10 +404,11 @@ export default {
                     scrub: true,
                     toggleClass: { className: "active", targets: ".scroll-bg" }
                 },
-            });
+            })
+            if (window.innerWidth <= 768) {
+                this.scrollMobile()
+            }
 
-
-            // if (window.innerWidth > 768) {
             gsap.fromTo(".bg-1",
                 { opacity: '1' },
                 {
@@ -416,25 +423,7 @@ export default {
                     },
 
                 });
-            // }
-            // else {
-            //     gsap.fromTo(".bg-1",
-            //         { opacity: '1' },
-            //         {
-            //             opacity: '0',
-            //             scrollTrigger: {
-            //                 trigger: ".scroll-card.card-1",
-            //                 start: 'top 0%',
-            //                 end: 'bottom 50%',
-            //                 endTrigger: '.scroll-card.card-2',
-            //                 markers: true,
-            //                 scrub: true,
-            //             },
 
-            //         });
-            // }
-
-            // if (window.innerWidth > 768) {
             gsap.fromTo(".bg-2",
                 { opacity: '1' },
                 {
@@ -449,24 +438,7 @@ export default {
                     },
 
                 });
-            // } else {
-            //     gsap.fromTo(".bg-2",
-            //         { opacity: '1' },
-            //         {
-            //             opacity: '0',
-            //             scrollTrigger: {
-            //                 trigger: ".scroll-card.card-2",
-            //                 start: 'top 0%',
-            //                 end: 'bottom 50%',
-            //                 endTrigger: '.scroll-card.card-3',
-            //                 // markers: true,
-            //                 scrub: true,
-            //             },
 
-            //         });
-            // }
-
-            // if (window.innerWidth > 768) {
             gsap.fromTo(".bg-3",
                 { opacity: '1' },
                 {
@@ -481,24 +453,7 @@ export default {
                     },
 
                 });
-            // } else {
-            //     gsap.fromTo(".bg-3",
-            //         { opacity: '1' },
-            //         {
-            //             opacity: '0',
-            //             scrollTrigger: {
-            //                 trigger: ".scroll-card.card-3",
-            //                 start: 'top 0%',
-            //                 end: 'bottom 50%',
-            //                 endTrigger: '.scroll-card.card-4',
-            //                 // markers: true,
-            //                 scrub: true,
-            //             },
 
-            //         });
-            // }
-
-            // if (window.innerWidth > 768) {
             gsap.to(".scroll-bg", {
                 scrollTrigger: {
                     trigger: ".card-4",
@@ -510,19 +465,6 @@ export default {
                     toggleClass: { className: "remove-active", targets: ".scroll-bg" }
                 },
             });
-            // } else {
-            //     gsap.to(".scroll-bg", {
-            //         scrollTrigger: {
-            //             trigger: ".scroll-card.card-4",
-            //             start: () => "+=120%",
-            //             // end: 'bottom 100%',
-            //             end: () => "+=" + (document.querySelector(".scroll-wrap").offsetHeight),
-            //             // markers: true,
-            //             scrub: true,
-            //             toggleClass: { className: "remove-active", targets: ".scroll-bg" }
-            //         }
-            //     });
-            // }
 
             if (window.innerWidth > 768) {
                 gsap.fromTo(".scale-1",
@@ -767,7 +709,6 @@ export default {
 .scroll {
     position: relative;
     width: 100%;
-    // height: 500vh;
 
     &-bg {
         position: absolute;
@@ -783,6 +724,7 @@ export default {
 
         @media (max-width: 768px) {
             background-position: top;
+            background-size: contain;
         }
 
         &.active {
@@ -790,16 +732,20 @@ export default {
             height: 100%;
 
             @media (max-width: 768px) {
-                // background-attachment: unset;
                 height: 100%;
+                background-size: contain;
+                position: fixed;
             }
 
             &.remove-active {
                 background-attachment: unset;
                 background-position: bottom;
-                // width: 90rem;
-                // height: 43.75rem;
                 background-size: contain;
+
+                @media (max-width: 768px) {
+                    background-position: bottom;
+                    position: absolute;
+                }
             }
         }
 
@@ -824,61 +770,20 @@ export default {
         }
 
         @media (max-width: 768px) {
-
-            // &.bg-1,
-            // &.bg-2,
-            // &.bg-3,
-            // &.bg-4 {
-            //     position: relative;
-            //     background-image: url(../../public/img/fito-1-mobile.jpg);
-            //     background-position: bottom;
-            //     background-size: 100%;
-            // }
-
-            // &.bg-1.active,
-            // &.bg-2.active,
-            // &.bg-3.active,
-            // &.bg-4.active {
-
-            //     &::before {
-
-            //         content: '';
-            //         height: 100%;
-            //         left: 0;
-            //         position: fixed;
-            //         top: 0;
-            //         width: 100%;
-            //         will-change: transform;
-            //         background-size: 100%;
-            //         background-repeat: no-repeat;
-            //         background-position: bottom;
-            //         z-index: -1;
-            //     }
-            // }
-
             &.bg-1 {
-                // &::before {
                 background-image: url(../../public/img/fito-1-mobile.jpg);
-                // }
-
             }
 
             &.bg-2 {
-                // &::before {
                 background-image: url(../../public/img/fito-2-mobile.jpg);
-                // }
             }
 
             &.bg-3 {
-                // &::before {
                 background-image: url(../../public/img/fito-3-mobile.jpg);
-                // }
             }
 
             &.bg-4 {
-                // &::before {
                 background-image: url(../../public/img/fito-4-mobile.jpg);
-                // }
             }
         }
     }
@@ -1018,13 +923,6 @@ export default {
             flex-wrap: wrap;
         }
     }
-
-    // &__images {
-    //     margin-bottom: 1.81rem;
-    //     padding-left: 8.88rem;
-    //     display: flex;
-    //     gap: 14.75rem;
-    // }
 
     &__img-wrap {
         position: relative;

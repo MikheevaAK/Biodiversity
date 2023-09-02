@@ -211,8 +211,7 @@ export default {
             z-index: 10;
 
             &:hover {
-                transform: scale(1);
-                // font-size: 1rem;
+                transform: scale(1.05);
             }
 
             @media (max-width: 768px) {

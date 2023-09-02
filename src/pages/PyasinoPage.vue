@@ -735,6 +735,7 @@ export default {
                 height: 100%;
                 background-size: contain;
                 position: fixed;
+                background-attachment: unset;
             }
 
             &.remove-active {

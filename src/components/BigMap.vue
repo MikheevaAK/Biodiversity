@@ -1,59 +1,37 @@
 <template>
     <div class="big-map">
-        <BaseTextBlock class="text" :title="'Карта исследований'">
-            <p class="text-block__descr mb-40">
-                Исследования проводились по нескольким направлениям: поверхностные воды и донные отложения,
-                почва и многолетнемерзлый грунт, флора и фауна Арктики. Ученые обследовали десятки природных
-                точек: окрестности Норильска, поймы шести таймырских рек, а также побережье Карского моря.
-            </p>
-            <div class="circales">
-                <div class="circale-block">
-
-                    <svg class="circale-block__img" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
-                        viewBox="0 0 14 14" fill="none">
-                        <circle cx="7" cy="7" r="7" fill="#009CA6" />
-                    </svg>
-
-                    <div class="circale-block__text">Пешком</div>
-                </div>
-                <div class="circale-block">
-
-                    <svg class="circale-block__img" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
-                        viewBox="0 0 14 14" fill="none">
-                        <circle cx="7" cy="7" r="7" fill="#654EA3" />
-                    </svg>
-
-                    <div class="circale-block__text">На лодках</div>
-                </div>
-                <div class="circale-block">
-
-                    <svg class="circale-block__img" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
-                        viewBox="0 0 14 14" fill="none">
-                        <circle cx="7" cy="7" r="7" fill="#0077C8" />
-                    </svg>
-
-                    <div class="circale-block__text">По воздуху</div>
-                </div>
-            </div>
-        </BaseTextBlock>
+        <slot></slot>
         <picture>
-            <source media="(max-width: 768px)" srcset="img/big-map-mobile.svg">
-            <img src="img/big-map.svg" alt="">
+            <source media="(max-width: 768px)" :srcset="imgMobile">
+            <img :src="img" alt="">
         </picture>
-        <div class="map-circale map-circale__blue map-circale__1"></div>
-        <div class="map-circale map-circale__blue map-circale__2"></div>
-        <div class="map-circale map-circale__blue map-circale__3"></div>
-        <div class="map-circale map-circale__green map-circale__4"></div>
-        <div class="map-circale map-circale__green map-circale__5"></div>
-        <div class="map-circale map-circale__green map-circale__6"></div>
-        <div class="map-circale map-circale__purple map-circale__7"></div>
+        <div v-for="(circale, index) in circales" :key="index" class="map-circale" :class="{
+            'map-circale__blue': circale.color === 'blue',
+            'map-circale__green': circale.color === 'green',
+            'map-circale__purple': circale.color === 'purple',
+            'map-circale__1': circale.number === '1',
+            'map-circale__2': circale.number === '2',
+            'map-circale__3': circale.number === '3',
+            'map-circale__4': circale.number === '4',
+            'map-circale__5': circale.number === '5',
+            'map-circale__6': circale.number === '6',
+            'map-circale__7': circale.number === '7'
+        }"></div>
     </div>
 </template>
+
 <script>
-import BaseTextBlock from '@/components/BaseTextBlock.vue'
 export default {
-    components: {
-        BaseTextBlock
+    props: {
+        circales: [],
+        img: {
+            type: String,
+            default: ''
+        },
+        imgMobile: {
+            type: String,
+            default: ''
+        }
     }
 }
 </script>
@@ -67,24 +45,9 @@ $purple: #654EA3;
 .big-map {
     position: relative;
     width: 100%;
-    // margin-bottom: 6.25rem;
-    // height: 52.125rem;
-
-    img {
-        width: 97rem;
-        margin-top: 1.75rem;
-        margin-left: 2.75rem;
-
-        @media (max-width: 768px) {
-            width: 100%;
-            margin-top: -3.25rem;
-            margin-left: 0;
-        }
-    }
 
     .text {
         position: absolute;
-        top: -1.44rem;
         left: 50%;
         transform: translateX(-50%);
 
@@ -94,144 +57,36 @@ $purple: #654EA3;
         }
     }
 
-    .circales {
-        display: flex;
-        gap: 1.5rem;
+
+    .map-circale {
+        position: absolute;
+        width: 0.88rem;
+        height: 0.88rem;
+        border-radius: 100%;
+        animation: ripple 1.5s linear;
+        transition-timing-function: ease-in;
+        transition-duration: 0.7s;
+        transition: all 2.3s;
+        z-index: 2;
 
         @media (max-width: 768px) {
-            gap: 3.2rem;
-        }
-    }
-
-    .circale-block {
-        display: flex;
-        gap: 0.5rem;
-        align-items: center;
-
-        @media (max-width: 768px) {
-            gap: 2.134rem;
+            width: 2rem;
+            height: 2rem;
         }
 
-        &__img {
-            width: 0.875rem;
-            height: 0.875rem;
-
-            @media (max-width: 768px) {
-                width: 1.87rem;
-                height: 1.87rem;
-            }
+        &__blue {
+            background-color: rgba($blue, 1);
+            animation: ripple-blue 0.9s infinite;
         }
 
-        &__text {
-            font-size: 0.9375rem;
-            font-weight: 300;
-            line-height: 130%;
-
-            @media (max-width: 768px) {
-                font-size: 3.46667rem;
-            }
+        &__green {
+            background-color: rgba($green, 1);
+            animation: ripple-green 0.9s infinite;
         }
-    }
-}
 
-.map-circale {
-    position: absolute;
-    width: 0.88rem;
-    height: 0.88rem;
-    border-radius: 100%;
-    animation: ripple 1.5s linear;
-    transition-timing-function: ease-in;
-    transition-duration: 0.7s;
-    transition: all 2.3s;
-    z-index: 2;
-
-    @media (max-width: 768px) {
-        width: 2rem;
-        height: 2rem;
-    }
-
-    &__blue {
-        background-color: rgba($blue, 1);
-        animation: ripple-blue 0.9s infinite;
-    }
-
-    &__green {
-        background-color: rgba($green, 1);
-        animation: ripple-green 0.9s infinite;
-    }
-
-    &__purple {
-        background-color: rgba($purple, 1);
-        animation: ripple-purple 0.9s infinite;
-    }
-
-    &__1 {
-        top: 20.1rem;
-        left: 61.5rem;
-
-        @media (max-width: 768px) {
-            top: 102.5rem;
-            left: 68rem;
-        }
-    }
-
-    &__2 {
-        top: 23.9rem;
-        left: 67.67rem;
-
-        @media (max-width: 768px) {
-            top: 108.4rem;
-            left: 77.9rem;
-        }
-    }
-
-    &__3 {
-        top: 36rem;
-        left: 66.5rem;
-
-        @media (max-width: 768px) {
-            top: 128.2rem;
-            left: 75.8rem;
-        }
-    }
-
-    &__4 {
-        top: 50.4rem;
-        left: 32.7rem;
-
-        @media (max-width: 768px) {
-            top: 151.1rem;
-            left: 21.9rem;
-        }
-    }
-
-    &__5 {
-        top: 47.5rem;
-        left: 29.4rem;
-
-        @media (max-width: 768px) {
-            top: 146.4rem;
-            left: 16.6rem;
-        }
-    }
-
-    &__6 {
-        top: 42rem;
-        left: 27.5rem;
-
-        @media (max-width: 768px) {
-            top: 137.5rem;
-            left: 13.5rem;
-        }
-    }
-
-    &__7 {
-        top: 36.6rem;
-        left: 32.35rem;
-
-        @media (max-width: 768px) {
-            top: 129.1rem;
-            left: 21.1rem;
+        &__purple {
+            background-color: rgba($purple, 1);
+            animation: ripple-purple 0.9s infinite;
         }
     }
 }

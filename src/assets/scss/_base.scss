@@ -60,6 +60,10 @@ svg {
     height: 100%;
 }
 
+.flex {
+    display: flex;
+}
+
 .hidden-mobile {
     @media (max-width: 768px) {
         display: none;
@@ -114,6 +118,15 @@ svg {
 
     @media (max-width: 768px) {
         margin-bottom: 10.6667rem;
+    }
+}
+
+//60px
+.mb-60 {
+    margin-bottom: 4.16666rem;
+
+    @media (max-width: 768px) {
+        margin-bottom: 16rem;
     }
 }
 

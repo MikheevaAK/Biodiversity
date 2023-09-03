@@ -23,6 +23,8 @@ export default {
 
 <style lang="scss">
 .text-block {
+    position: relative;
+    
     &__wrap {
         position: relative;
         margin: 0 auto;

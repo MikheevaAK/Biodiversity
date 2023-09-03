@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="expedition">
         <BaseHero :title="'Большая Норильская экспедиция'" :descr="heroDescr" :img="'img/hero2.jpg'"
             :imgMobile="'img/hero2-mobile.jpg'" />
         <MainSection>
@@ -64,7 +64,44 @@
                     </div>
                 </div>
 
-                <BigMap />
+                <BigMap :circales="circales" :img="'img/expedition-big-map.svg'" :imgMobile="'img/expedition-big-map-mobile.svg'">
+                    <BaseTextBlock class="text" :title="'Карта исследований'">
+                        <p class="text-block__descr mb-40">
+                            Исследования проводились по нескольким направлениям: поверхностные воды и донные отложения,
+                            почва и многолетнемерзлый грунт, флора и фауна Арктики. Ученые обследовали десятки природных
+                            точек: окрестности Норильска, поймы шести таймырских рек, а также побережье Карского моря.
+                        </p>
+                        <div class="circales">
+                            <div class="circale-block">
+
+                                <svg class="circale-block__img" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                    viewBox="0 0 14 14" fill="none">
+                                    <circle cx="7" cy="7" r="7" fill="#009CA6" />
+                                </svg>
+
+                                <div class="circale-block__text">Пешком</div>
+                            </div>
+                            <div class="circale-block">
+
+                                <svg class="circale-block__img" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                    viewBox="0 0 14 14" fill="none">
+                                    <circle cx="7" cy="7" r="7" fill="#654EA3" />
+                                </svg>
+
+                                <div class="circale-block__text">На лодках</div>
+                            </div>
+                            <div class="circale-block">
+
+                                <svg class="circale-block__img" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                    viewBox="0 0 14 14" fill="none">
+                                    <circle cx="7" cy="7" r="7" fill="#0077C8" />
+                                </svg>
+
+                                <div class="circale-block__text">По воздуху</div>
+                            </div>
+                        </div>
+                    </BaseTextBlock>
+                </BigMap>
 
                 <div class="team">
                     <BaseTextBlock class="text" :title="'Команда'">
@@ -359,7 +396,37 @@ export default {
     },
     data() {
         return {
-            heroDescr: 'Май 2020 года, Норильск. Из-за таяния вечной мерзлоты одна из цистерн ТЭЦ-3 с Дизельным топливом треснула у основания, и тысячи тонн нефтепродуктов разлились по территории предприятия, а затем попали в реки Далдыкан <br/>и Амбарная.'
+            heroDescr: 'Май 2020 года, Норильск. Из-за таяния вечной мерзлоты одна из цистерн ТЭЦ-3 с Дизельным топливом треснула у основания, и тысячи тонн нефтепродуктов разлились по территории предприятия, а затем попали в реки Далдыкан <br/>и Амбарная.',
+            circales: [
+                {
+                    color: 'blue',
+                    number: '1'
+                },
+                {
+                    color: 'blue',
+                    number: '2'
+                },
+                {
+                    color: 'blue',
+                    number: '3'
+                },
+                {
+                    color: 'green',
+                    number: '4'
+                },
+                {
+                    color: 'green',
+                    number: '5'
+                },
+                {
+                    color: 'green',
+                    number: '6'
+                },
+                {
+                    color: 'purple',
+                    number: '7'
+                }
+            ],
         }
     },
     methods: {
@@ -630,6 +697,134 @@ export default {
 //     }
 
 // }
+.expedition .big-map {
+    img {
+        width: 97rem;
+        margin-top: 1.75rem;
+        margin-left: 2.75rem;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            margin-top: -3.25rem;
+            margin-left: 0;
+        }
+    }
+
+    .text {
+        top: -1.44rem;
+    }
+
+    .circales {
+        display: flex;
+        gap: 1.5rem;
+
+        @media (max-width: 768px) {
+            gap: 3.2rem;
+        }
+    }
+
+    .circale-block {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            gap: 2.134rem;
+        }
+
+        &__img {
+            width: 0.875rem;
+            height: 0.875rem;
+
+            @media (max-width: 768px) {
+                width: 1.87rem;
+                height: 1.87rem;
+            }
+        }
+
+        &__text {
+            font-size: 0.9375rem;
+            font-weight: 300;
+            line-height: 130%;
+
+            @media (max-width: 768px) {
+                font-size: 3.46667rem;
+            }
+        }
+    }
+
+    .map-circale {
+        &__1 {
+            top: 20.1rem;
+            left: 61.5rem;
+
+            @media (max-width: 768px) {
+                top: 102.5rem;
+                left: 68rem;
+            }
+        }
+
+        &__2 {
+            top: 23.9rem;
+            left: 67.67rem;
+
+            @media (max-width: 768px) {
+                top: 108.4rem;
+                left: 77.9rem;
+            }
+        }
+
+        &__3 {
+            top: 36rem;
+            left: 66.5rem;
+
+            @media (max-width: 768px) {
+                top: 128.2rem;
+                left: 75.8rem;
+            }
+        }
+
+        &__4 {
+            top: 50.4rem;
+            left: 32.7rem;
+
+            @media (max-width: 768px) {
+                top: 151.1rem;
+                left: 21.9rem;
+            }
+        }
+
+        &__5 {
+            top: 47.5rem;
+            left: 29.4rem;
+
+            @media (max-width: 768px) {
+                top: 146.4rem;
+                left: 16.6rem;
+            }
+        }
+
+        &__6 {
+            top: 42rem;
+            left: 27.5rem;
+
+            @media (max-width: 768px) {
+                top: 137.5rem;
+                left: 13.5rem;
+            }
+        }
+
+        &__7 {
+            top: 36.6rem;
+            left: 32.35rem;
+
+            @media (max-width: 768px) {
+                top: 129.1rem;
+                left: 21.1rem;
+            }
+        }
+    }
+}
 
 .step-start {
     display: flex;

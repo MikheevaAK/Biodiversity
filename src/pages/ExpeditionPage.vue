@@ -13,12 +13,13 @@
                     </p>
                 </BaseTextBlock>
             </section>
-            <section class="section-white">
+            <SectionWhite>
                 <div class="step-start mb-100">
                     <img class="step-start__img" src="img/step-1.png">
                     <div class="step-start__title">Первый этап</div>
                     <div class="step-start__period">июль – сентябрь 2020 года</div>
-                    <div class="step-start__descr">На приглашение «Норникеля» откликнулись сразу 14 отраслевых институтов
+                    <div class="step-start__descr">На приглашение «Норникеля» откликнулись сразу 14 отраслевых
+                        институтов
                         Сибирского отделения Российской академии наук <br />(СО РАН). Летом 2020 года на Таймыр приехали
                         более 30
                         учёных — участников Большой Норильской экспедиции. Перед ними стояли сразу несколько масштабных
@@ -50,12 +51,14 @@
                         </div>
                         <div class="step-start__item">
                             <div class="step-start__item-number">2</div>
-                            <div class="step-start__item-descr">Оперативное обнаружить возможные скрытые загрязнения после
+                            <div class="step-start__item-descr">Оперативное обнаружить возможные скрытые загрязнения
+                                после
                                 очистки территорий от нефтепродуктов</div>
                         </div>
                         <div class="step-start__item">
                             <div class="step-start__item-number">3</div>
-                            <div class="step-start__item-descr">Оценить реальный ущерб, нанесённый экосистемам аварией на
+                            <div class="step-start__item-descr">Оценить реальный ущерб, нанесённый экосистемам аварией
+                                на
                                 ТЭЦ-3</div>
                         </div>
                     </div>
@@ -86,19 +89,22 @@
 
                     <BaseTextBlock class="mb-40">
                         <p class="text-block__descr">
-                            Полевые работы на&nbsp;первом этапе Большой Норильской экспедиции продлились пять недель. Иной
+                            Полевые работы на&nbsp;первом этапе Большой Норильской экспедиции продлились пять недель.
+                            Иной
                             раз,
                             чтобы взять пробу, ученым приходилось бурить скважины глубиной до&nbsp;15&nbsp;метров или
                             опускаться на
-                            дно озера. Но&nbsp;завершить столь масштабную работу за&nbsp;один&nbsp;&mdash; очень короткий
+                            дно озера. Но&nbsp;завершить столь масштабную работу за&nbsp;один&nbsp;&mdash; очень
+                            короткий
                             на&nbsp;Севере&nbsp;&mdash; сезон
-                            невозможно. Вот почему &laquo;Норникель&raquo; и&nbsp;СО&nbsp;РАН договорились продлить Большую
+                            невозможно. Вот почему &laquo;Норникель&raquo; и&nbsp;СО&nbsp;РАН договорились продлить
+                            Большую
                             Норильскую экспедицию
                             еще на&nbsp;два года.
                         </p>
                     </BaseTextBlock>
 
-                    <div class="number-blocks text-block__descr">
+                    <div class="number-blocks text-block__wrap">
                         <BaseNumberBlock :textTop="'6 рек'" :textBottom="'посетили в ходе экспедиции'" />
                         <BaseNumberBlock :textTop="'> 1 000 км'" :textBottom="'преодолели по земле, воде и воздуху'" />
                         <BaseNumberBlock :textTop="'2 000 проб'" :textBottom="'собрали в процессе исследований'" />
@@ -108,9 +114,11 @@
                         <p>
                             Авария на&nbsp;ТЭЦ-3 действительно негативно сказалась на&nbsp;флоре и&nbsp;фауне
                             в&nbsp;окрестностях Норильска. Особенно пострадали наземные растения&nbsp;&mdash; растущие
-                            по&nbsp;берегам рек&nbsp;ивы и&nbsp;заросли осоки,&nbsp;&mdash; на&nbsp;них ученые обнаружили
+                            по&nbsp;берегам рек&nbsp;ивы и&nbsp;заросли осоки,&nbsp;&mdash; на&nbsp;них ученые
+                            обнаружили
                             химические ожоги, причиной которых стало попадание дизельного топлива. Часть видов животных
-                            и&nbsp;растений погибла. Зато водные растения и&nbsp;сообщества, которые находились под водой,
+                            и&nbsp;растений погибла. Зато водные растения и&nbsp;сообщества, которые находились под
+                            водой,
                             пострадали гораздо меньше или не&nbsp;пострадали совсем.
                         </p>
                     </BaseTextBlock>
@@ -118,14 +126,15 @@
                         <p>
                             Экосистемы вблизи Норильска, отмечают исследователи, пока еще продолжают восстанавливаться
                             от&nbsp;разлива топлива. Но&nbsp;чем дальше от&nbsp;места аварии&nbsp;&mdash; тем меньше
-                            признаков и&nbsp;следов произошедшей аварии. Участок от&nbsp;устья реки Тарея до&nbsp;Карского
+                            признаков и&nbsp;следов произошедшей аварии. Участок от&nbsp;устья реки Тарея
+                            до&nbsp;Карского
                             моря и&nbsp;вовсе не&nbsp;пострадал.
                         </p>
                     </BaseSidebar>
                 </div>
-            </section>
-            <section class="section-orange step-two">
-                <img class="line line-top" src="img/section-line-top.png" alt="">
+            </SectionWhite>
+
+            <SectionOrange class="step-two">
                 <div class="step-start mb-100">
                     <img class="step-start__img" src="img/step-2.png">
                     <div class="step-start__title">Второй этап</div>
@@ -208,8 +217,7 @@
                         предотвратить потенциальные конфликты с местными жителями.
                     </p>
                 </BaseSidebar>
-                <img class="line line-bottom" src="img/section-line-bottom.png" alt="">
-            </section>
+            </SectionOrange>
 
             <section class="step-three">
                 <div class="step-start mb-100">
@@ -323,6 +331,8 @@ import BaseTextBlock from '@/components/BaseTextBlock.vue'
 import BaseNumberBlock from "@/components/BaseNumberBlock.vue";
 import BaseSidebar from '@/components/BaseSidebar.vue'
 import ScrollSwiper from '@/components/ScrollSwiper.vue'
+import SectionOrange from '@/layout/SectionOrange.vue'
+import SectionWhite from '@/layout/SectionWhite.vue'
 import BigMap from '@/components/BigMap.vue'
 
 import gsap from "gsap";
@@ -332,6 +342,8 @@ gsap.registerPlugin(ScrollTrigger);
 export default {
     components: {
         BaseHero,
+        SectionOrange,
+        SectionWhite,
         BaseNumberBlock,
         MainSection,
         BaseTextBlock,
@@ -393,7 +405,6 @@ export default {
         }
     }
 }
-
 </script>
 
 <style lang="scss">
@@ -620,7 +631,6 @@ export default {
 
 // }
 
-
 .step-start {
     display: flex;
     flex-direction: column;
@@ -789,42 +799,6 @@ export default {
 }
 
 .step-two {
-    position: relative;
-    background: #F7F6F2;
-    margin-bottom: 9.5rem;
-    padding-bottom: 3.72rem;
-
-    @media (max-width: 768px) {
-        margin-bottom: 22rem;
-    }
-
-    .line {
-        position: absolute;
-        width: 100%;
-        height: 9.5rem;
-
-
-        @media (max-width: 768px) {
-            height: 12rem;
-        }
-
-        &-top {
-            top: -9.5rem;
-
-            @media (max-width: 768px) {
-                top: -12rem;
-            }
-        }
-
-        &-bottom {
-            bottom: -9.5rem;
-
-            @media (max-width: 768px) {
-                bottom: -12rem;
-            }
-        }
-    }
-
     .step-start__img {
         width: 22.5625rem;
         height: 6.8125rem;
@@ -960,14 +934,6 @@ export default {
                 width: 100%;
             }
         }
-    }
-}
-
-.section-white {
-    margin-bottom: 9.5rem;
-
-    @media (max-width: 768px) {
-        margin-bottom: 22rem;
     }
 }
 

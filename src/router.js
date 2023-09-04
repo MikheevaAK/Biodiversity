@@ -4,7 +4,8 @@ import VueRouter from 'vue-router'
 import MainPage from '@/pages/MainPage'
 import PyasinoPage from '@/pages/PyasinoPage'
 import ExpeditionPage from '@/pages/ExpeditionPage'
-import DivisionPage from '@/pages/DivisionPage'
+import NorilskDivisionPage from '@/pages/NorilskDivisionPage'
+import TransbaikalDivisionPage from '@/pages/TransbaikalDivisionPage'
 
 
 Vue.use(VueRouter)
@@ -26,9 +27,14 @@ const routes = [
         path: '/expedition'
     },
     {
-        name: 'division',
-        component: DivisionPage,
-        path: '/division'
+        name: 'norilsk-division',
+        component: NorilskDivisionPage,
+        path: '/norilsk-division'
+    },
+    {
+        name: 'transbaikal-division',
+        component: TransbaikalDivisionPage,
+        path: '/transbaikal-division'
     },
 ]
 

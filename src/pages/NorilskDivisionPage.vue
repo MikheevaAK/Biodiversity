@@ -4,7 +4,7 @@
             :img="'img/hero-3.jpg'" :imgMobile="'img/hero3-mobile.jpg'" />
         <MainSection>
             <SectionWhite>
-                <BaseTextBlock class="text mb-40" :title="'Особенности дивизиона'">
+                <BaseTextBlock class="text mb-40" :title="'Особенности дивизиона'" :tooltip="true">
                     <p class="mb-10">
                         Горнодобывающие, металлургические и энергетические объекты Норильского
                         <BaseTooltip :word="'дивизиона'">
@@ -25,8 +25,34 @@
                     </p>
                 </BaseTextBlock>
 
-                <BigMap :circales="circales" :img="'img/division-big-map.png'"
-                    :imgMobile="'img/division-big-map.png'">
+                <BigMap :circales="circales" :img="'img/division-big-map.webp'" :imgMobile="'img/division-big-map.png'">
+                    <BaseNumberBlock :textTop="'44 объекта'" :textBottom="'входит в Норильский дивизион'" />
+                    <div class="circales">
+                        <div class="circale-block">
+                            <svg class="circale-block__img" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                viewBox="0 0 14 14" fill="none">
+                                <circle cx="7" cy="7" r="7" fill="#654EA3" />
+                            </svg>
+
+                            <div class="circale-block__text">Промышленные объекты</div>
+                        </div>
+                        <div class="circale-block">
+                            <svg class="circale-block__img" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                viewBox="0 0 14 14" fill="none">
+                                <circle cx="7" cy="7" r="7" fill="#0077C8" />
+                            </svg>
+
+                            <div class="circale-block__text">Энергетические объекты</div>
+                        </div>
+                        <div class="circale-block">
+                            <svg class="circale-block__img" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                viewBox="0 0 14 14" fill="none">
+                                <circle cx="7" cy="7" r="7" fill="#009CA6" />
+                            </svg>
+
+                            <div class="circale-block__text">Особо охраняемые природные территории</div>
+                        </div>
+                    </div>
                 </BigMap>
 
                 <BaseScrollBlock>
@@ -54,10 +80,11 @@
                 <div class="number-blocks text-block__wrap mb-100">
                     <BaseNumberBlock :textTop="'до 280 дней'" :textBottom="'устойчивых морозов'" />
                     <BaseNumberBlock :textTop="'до 500 метров'" :textBottom="'толщина многолетнемёрзлых пород'" />
-                    <BaseNumberBlock :textTop="'-53 0С'" :textBottom="'минимальная температура'" />
+                    <BaseNumberBlock :textTop="'-53 ˚С'" :textBottom="'минимальная температура'" />
                 </div>
 
-                <BaseTextBlock class="text mb-40" :title="'Зона воздействия предприятий Норильского дивизиона'">
+                <BaseTextBlock class="text mb-40" :title="'Зона воздействия предприятий Норильского дивизиона'"
+                    :tooltip="true">
                     <p class="mb-10">
                         По&nbsp;данным Большой научной экспедиции 2022&nbsp;года, радиус воздействия Норильского
                         промышленного района
@@ -96,7 +123,7 @@
                 </BaseSidebar>
             </SectionWhite>
             <SectionOrange>
-                <BaseTextBlock class="text mb-60">
+                <BaseTextBlock class="text mb-60" :tooltip="true">
                     <div class="section-orange__title">
                         Кто обитает на юге Таймыра
                     </div>
@@ -162,7 +189,7 @@
                     <div class="eagle"></div>
                     <div class="bird-1"></div>
                 </div>
-                <BaseTextBlock class="mb-100">
+                <BaseTextBlock class="mb-100" :tooltip="true">
                     <p class="mb-10">
                         В&nbsp;месте расположения Норильского дивизиона, в&nbsp;долине Медвежьего ручья учёные обнаружили
                         уникальную
@@ -274,6 +301,13 @@ export default {
 <style lang="scss">
 .division {
     .big-map {
+        margin-bottom: 3.81rem;
+        height: 40.19419rem;
+
+        @media (max-width: 768px) {
+            margin-bottom: 21.3334rem;
+        }
+
         .map-circale {
             &__1 {
                 top: 14.4rem;
@@ -345,6 +379,56 @@ export default {
                 }
             }
         }
+
+        .circales {
+            position: absolute;
+            top: 8.31rem;
+            left: 8.63rem;
+            width: 11.94rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.12rem;
+
+            .circale-block {
+                display: flex;
+                align-items: flex-start;
+                gap: 1.06rem;
+
+                &__img {
+                    width: 0.875rem;
+                    height: 0.875rem;
+
+                    @media (max-width: 768px) {
+                        width: 1.87rem;
+                        height: 1.87rem;
+                    }
+                }
+
+                &__text {
+                    font-size: 0.9375rem;
+                    font-weight: 300;
+                    line-height: 130%;
+
+                    @media (max-width: 768px) {
+                        font-size: 3.46667rem;
+                    }
+                }
+            }
+        }
+
+        .number-blocks {
+            @media (max-width: 768px) {
+                flex-direction: column;
+                width: 100%;
+                gap: 0;
+            }
+        }
+
+        .number-block {
+            bottom: 5.63rem;
+            left: unset;
+            right: 7.81rem;
+        }
     }
 
     .scroll {
@@ -392,84 +476,88 @@ export default {
     .collage {
         position: relative;
         margin-bottom: 1.25rem;
-        height: 334.75rem;
+        height: 349rem;
         width: 100%;
-        background-image: url(../../public/img/top.png);
+        background-image: url(../../public/img/collage.png);
         background-repeat: no-repeat;
         background-size: contain;
         z-index: 1;
 
-        .spruce {
-            position: absolute;
-            top: 35.9722rem;
-            left: 0;
-            width: 48.889rem;
-            height: 133.0625rem;
-            background-image: url(../../public/img/spruce.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            z-index: 1;
-        }
+        @supports (background-image: url(../../public/img/collage.webp)) {
+        background-image: url(../../public/img/collage.webp);
+    }
 
-        .bird-1 {
-            position: absolute;
-            top: 699px;
-            left: 0;
-            width: 169px;
-            height: 140px;
-            background-image: url(../../public/img/bird-1.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            z-index: 1;
-        }
+        // .spruce {
+        //     position: absolute;
+        //     top: 35.9722rem;
+        //     left: 0;
+        //     width: 48.889rem;
+        //     height: 133.0625rem;
+        //     background-image: url(../../public/img/spruce.png);
+        //     background-repeat: no-repeat;
+        //     background-size: contain;
+        //     z-index: 1;
+        // }
 
-        .eagle {
-            position: absolute;
-            top: -25rem;
-            left: 7.25rem;
-            width: 52.2223rem;
-            height: 47.5rem;
-            background-image: url(../../public/img/eagle.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            z-index: 1;
-        }
+        // .bird-1 {
+        //     position: absolute;
+        //     top: 699px;
+        //     left: 0;
+        //     width: 169px;
+        //     height: 140px;
+        //     background-image: url(../../public/img/bird-1.png);
+        //     background-repeat: no-repeat;
+        //     background-size: contain;
+        //     z-index: 1;
+        // }
 
-        .underwater {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 57.8125rem;
-            background-image: url(../../public/img/underwater.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            z-index: 2;
-        }
+        // .eagle {
+        //     position: absolute;
+        //     top: -25rem;
+        //     left: 7.25rem;
+        //     width: 52.2223rem;
+        //     height: 47.5rem;
+        //     background-image: url(../../public/img/eagle.png);
+        //     background-repeat: no-repeat;
+        //     background-size: contain;
+        //     z-index: 1;
+        // }
 
-        .bottom {
-            position: absolute;
-            bottom: 43.8125rem;
-            left: 0;
-            right: 0;
-            height: 51.25rem;
-            background-image: url(../../public/img/bottom.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            z-index: 1;
-        }
+        // .underwater {
+        //     position: absolute;
+        //     bottom: 0;
+        //     left: 0;
+        //     right: 0;
+        //     height: 57.8125rem;
+        //     background-image: url(../../public/img/underwater.png);
+        //     background-repeat: no-repeat;
+        //     background-size: contain;
+        //     z-index: 2;
+        // }
 
-        .middle {
-            position: absolute;
-            bottom: 67.8125rem;
-            left: 0;
-            right: 0;
-            height: 39.5625rem;
-            background-image: url(../../public/img/middle.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            z-index: 2;
-        }
+        // .bottom {
+        //     position: absolute;
+        //     bottom: 43.8125rem;
+        //     left: 0;
+        //     right: 0;
+        //     height: 51.25rem;
+        //     background-image: url(../../public/img/bottom.png);
+        //     background-repeat: no-repeat;
+        //     background-size: contain;
+        //     z-index: 1;
+        // }
+
+        // .middle {
+        //     position: absolute;
+        //     bottom: 67.8125rem;
+        //     left: 0;
+        //     right: 0;
+        //     height: 39.5625rem;
+        //     background-image: url(../../public/img/middle.png);
+        //     background-repeat: no-repeat;
+        //     background-size: contain;
+        //     z-index: 2;
+        // }
     }
 }
 

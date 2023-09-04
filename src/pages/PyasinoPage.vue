@@ -695,7 +695,6 @@ export default {
         background-image: url(../../public/img/in-search-mobile.png);
         height: 176.535rem;
         margin-bottom: 21.3334rem;
-        ;
 
         @supports (background-image: url(../../public/img/in-search-mobile.webp)) {
             background-image: url(../../public/img/in-search-mobile.webp);

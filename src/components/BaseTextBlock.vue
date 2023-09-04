@@ -1,5 +1,5 @@
 <template>
-    <div class="text-block__wrap">
+    <div class="text-block__wrap" :class="{'text-block__wrap-index' : tooltip}">
         <h3 v-if="title" class="text-block__title">
             {{ title }}
         </h3>
@@ -16,6 +16,10 @@ export default {
         title: {
             type: String,
             default: ''
+        },
+        tooltip: {
+            type: Boolean,
+            default: false
         }
     }
 }
@@ -29,7 +33,11 @@ export default {
         position: relative;
         margin: 0 auto;
         width: 32.68rem;
-        z-index: 10;
+        // z-index: 10;
+
+        &-index {
+            z-index: 10;
+        }
 
         @media (max-width: 768px) {
             padding: 0 9.5rem;

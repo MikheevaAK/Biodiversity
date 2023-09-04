@@ -26,7 +26,7 @@
                 </BaseTextBlock>
 
                 <BigMap :circales="circales" :img="'img/division-big-map.png'"
-                    :imgMobile="'img/division-big-map-mobile.png'">
+                    :imgMobile="'img/division-big-map.png'">
                 </BigMap>
 
                 <BaseScrollBlock>

@@ -25,7 +25,8 @@
                     </p>
                 </BaseTextBlock>
 
-                <BigMap :circales="circales" :img="'img/division-big-map.webp'" :imgMobile="'img/division-big-map.png'">
+                <BigMap :circales="circales" :img="'img/division-big-map.webp'"
+                    :imgMobile="'img/division-big-map-mobile.webp'">
                     <BaseNumberBlock :textTop="'44 объекта'" :textBottom="'входит в Норильский дивизион'" />
                     <div class="circales">
                         <div class="circale-block">
@@ -55,7 +56,7 @@
                     </div>
                 </BigMap>
 
-                <BaseScrollBlock>
+                <!-- <BaseScrollBlock>
                     <div class="scroll-card card-1 text-block__descr">
                         <p>Большой Норильск</p>
                         Норильский промышленный район, или Большой Норильск образован местными предприятиями
@@ -75,7 +76,7 @@
                         По&nbsp;словам специалистов, этого достаточно, чтобы сохранить местные экосистемы
                         в&nbsp;неприкосновенности и&nbsp;исключить воздействие предприятий.
                     </div>
-                </BaseScrollBlock>
+                </BaseScrollBlock> -->
 
                 <div class="number-blocks text-block__wrap mb-100">
                     <BaseNumberBlock :textTop="'до 280 дней'" :textBottom="'устойчивых морозов'" />
@@ -182,12 +183,61 @@
                     </BaseTextBlock>
                 </div>
                 <div class="collage">
-                    <div class="underwater"></div>
-                    <div class="bottom"></div>
-                    <div class="middle"></div>
-                    <div class="spruce"></div>
-                    <div class="eagle"></div>
-                    <div class="bird-1"></div>
+                    <BaseCollageInfo class="protected-species" :text="'Охраняемые виды'" :width="'14rem'"
+                        :color="'#71464E'" />
+                    <BaseCollageInfo class="indicator-species" :text="'Индикаторные виды'" :width="'14rem'"
+                        :color="'#C2C095'" />
+                    <BaseCollageInfo class="eagle" :title="'Орлан-белохвост'" :width="'13.875rem'" :color="'#71464E'"
+                        :text="'Размах его крыльев достигает 2,4 м. Птица нередко питается падалью и&nbsp;считается природным санитаром'" />
+                    <BaseCollageInfo class="lentils" :title="'Чечевица'" :width="'11rem'" :color="'#C2C095'"
+                        :text="'Издаёт ритмичные звуки, в которых слышится: <br/>«Че-че-ви-цу?»'" />
+                    <BaseCollageInfo class="warbler-talovka" :title="'Пеночка-таловка'" :width="'12.5rem'"
+                        :color="'#C2C095'" :text="'Встречается также в&nbsp;Забайкалье'" />
+                    <BaseCollageInfo class="peregrine-falcon" :title="'Сапсан'" :width="'13.875rem'" :color="'#71464E'"
+                        :text="'Самая быстрая птица на&nbsp;планете'" />
+                    <BaseCollageInfo class="willow-warbler" :title="'Пеночка-весничка'" :width="'10.5rem'"
+                        :color="'#C2C095'" :text="'Кроме Норильского обитает также в&nbsp;Кольском дивизионе'" />
+                    <BaseCollageInfo class="merlin" :title="'Кречет'" :width="'17rem'" :color="'#71464E'"
+                        :text="'Самая крупная птица из&nbsp;отряда соколиных. За&nbsp;последние 20&nbsp;лет её&nbsp;популяция в&nbsp;России сократилась втрое. &laquo;Норникель&raquo; вложил 50&nbsp;млн рублей в&nbsp;поддержку и&nbsp;сохранение вида в&nbsp;2022&ndash;2023&nbsp;гг.'" />
+                    <BaseCollageInfo class="polar-bunting" :title="'Полярная овсянка'" :width="'5rem'" :color="'#C2C095'" />
+                    <BaseCollageInfo class="deer" :title="'Дикий северный олень'" :width="'19.5rem'" :color="'#71464E'"
+                        :text="'Отличительная особенность этого вида&nbsp;&mdash; наличие рогов у&nbsp;самок. Наименее изученная и&nbsp;малочисленная популяция дикого северного оленя&nbsp;&mdash; гыданская, она занесена в&nbsp;Красную книгу ЯНАО. По&nbsp;данным исследований, олени почти не&nbsp;мигрируют на&nbsp;дальние расстояния и&nbsp;круглый год остаются в&nbsp;арктической тундре'" />
+                    <BaseCollageInfo class="willow" :title="'Ива мохнатая'" :width="'10rem'" :color="'#C2C095'" />
+                    <BaseCollageInfo class="vole" :title="'Полёвка-экономка'" :width="'5rem'" :color="'#C2C095'" />
+                    <BaseCollageInfo class="ptarmigan" :title="'Белая куропатка'" :width="'10.85rem'"
+                        :text="'Тело птицы сохраняет постоянную температуру 45ºC'" :color="'#C2C095'" />
+                    <BaseCollageInfo class="tundra-shrew" :title="'Тундряная бурозубка'" :width="'13.5rem'"
+                        :text="'За&nbsp;сутки может съесть в&nbsp;4&nbsp;раза больше, чем весит'" :color="'#C2C095'" />
+                    <BaseCollageInfo class="alder-bush" :title="'Ольховник кустарниковый'" :width="'13rem'"
+                        :text="'Древесина срубленной ольхи окрашивается в&nbsp;красный цвет'" :color="'#C2C095'" />
+                    <BaseCollageInfo class="hare" :title="'Заяц-беляк'" :width="'13.8rem'"
+                        :text="'Спасаясь от&nbsp;опасности, развивает скорость до&nbsp;60&nbsp;км/ч. Обитает также в&nbsp;Забайкальском дивизионе'"
+                        :color="'#C2C095'" />
+                    <BaseCollageInfo class="golden-plover" :title="'Золотистая ржанка'" :width="'12rem'"
+                        :text="'В&nbsp;древности считалось, что один взгляд на&nbsp;эту пёструю птичку излечивает от&nbsp;желтухи'"
+                        :color="'#71464E'" />
+                    <BaseCollageInfo class="lycosus-moss" :title="'Плаунок плаунковидный'" :width="'18rem'"
+                        :text="'В районе Промышленного Норильска биологи обнаружили несколько участков, ценных для произрастания этого редкого вида растений. Чтобы сохранить популяции плаунка, вокруг этих участков необходимо создавать защитные зоны'"
+                        :color="'#71464E'" />
+                    <BaseCollageInfo class="goose" :title="'Гуменник'" :width="'12rem'"
+                        :text="'В&nbsp;полёте поднимается на&nbsp;высоту до&nbsp;10&nbsp;км'" :color="'#71464E'" />
+                    <BaseCollageInfo class="swan" :title="'Лебедь-кликун'" :width="'16.4rem'"
+                        :text="'Мощными крыльями может отразить атаку мелких хищников. Встречается также в&nbsp;Кольском дивизионе'"
+                        :color="'#71464E'" />
+                    <BaseCollageInfo class="loon" :title="'Чернозобая гагара'" :width="'12.4rem'"
+                        :text="'Умеет нырять на&nbsp;глубину до&nbsp;20 метров'" :color="'#71464E'" />
+
+                    <BaseDropdownInfo class="ground-beetles" :title="'Жужелицы'"
+                        :text="'Такие виды, как Amara brunnea, Pterostichus fulvescens, Notiophilus fasciatus и Nebria gyllenhali, отрицательно реагируют на&nbsp;промышленное воздействие и&nbsp;помогают исследователям фиксировать изменения в&nbsp;окружающей среде'" />
+                    <BaseDropdownInfo class="myxomycetes" :title="'Миксомицеты'"
+                        :text="'Миксомицеты занимают промежуточное положение между растениями и&nbsp;животными: похожие внешне на&nbsp;грибы, они постоянно передвигаются и&nbsp;едят. На&nbsp;территории воздействия предприятий исследователи обнаружили 14&nbsp;видов этих существ'" />
+                    <BaseDropdownInfo class="microalgae" :title="'Микроводоросли'"
+                        :text="'В&nbsp;реках и&nbsp;озёрах дивизиона биологи обнаружили два вида микроводорослей, способных рассказать об&nbsp;экологической обстановке. Похожая на&nbsp;звезду Asterionella formosa живёт только в&nbsp;чистых водоёмах, в&nbsp;то&nbsp;время как её&nbsp;антогонист Dictyosphaerium pulchellum развивается в&nbsp;загрязнённой воде'" />
+
+                    <BaseDropdownInfo class="zooplankton" :title="'Зоопланктон'"
+                        :text="'Чтобы оценить состояние водоёмов, исследователи отобрали виды зоопланктона, сигнализирующие о&nbsp;качестве воды. Например, планктонный рачок Limnocalanus macrurus любит чистую воду, а&nbsp;если начинает доминировать планктонная коловратка Brachionus sericus&nbsp;&mdash; вода загрязнена'" />
+                    <BaseDropdownInfo class="char" :title="'Арктический голец (боганидская палия)'"
+                        :text="'Считается самой полезной рыбой в&nbsp;мире: кусочек рыбы в&nbsp;30&nbsp;г. покрывает суточную потребность человека в&nbsp;полезных жирных кислотах. Встречается также в&nbsp;водоёмах Кольского дивизиона'" />
                 </div>
                 <BaseTextBlock class="mb-100" :tooltip="true">
                     <p class="mb-10">
@@ -244,8 +294,10 @@ import BaseTextBlock from '@/components/BaseTextBlock.vue'
 import MainSection from '@/layout/MainSection'
 import BaseSidebar from '@/components/BaseSidebar'
 import BaseTooltip from '@/components/ BaseTooltip.vue'
-import BaseScrollBlock from '@/components/BaseScrollBlock.vue'
+// import BaseScrollBlock from '@/components/BaseScrollBlock.vue'
 import BaseNumberBlock from "@/components/BaseNumberBlock.vue";
+import BaseCollageInfo from '@/components/BaseCollageInfo.vue'
+import BaseDropdownInfo from '@/components/BaseDropdownInfo.vue'
 
 export default {
     components: {
@@ -257,8 +309,10 @@ export default {
         MainSection,
         BaseSidebar,
         BaseTooltip,
-        BaseScrollBlock,
-        BaseNumberBlock
+        // BaseScrollBlock,
+        BaseNumberBlock,
+        BaseCollageInfo,
+        BaseDropdownInfo
     },
     data() {
         return {
@@ -305,7 +359,10 @@ export default {
         height: 40.19419rem;
 
         @media (max-width: 768px) {
+            display: flex;
             margin-bottom: 21.3334rem;
+            flex-direction: column-reverse;
+            height: unset;
         }
 
         .map-circale {
@@ -315,8 +372,8 @@ export default {
             }
 
             @media (max-width: 768px) {
-                top: 102.5rem;
-                left: 68rem;
+                top: 56.4rem;
+                left: 70rem;
             }
 
             &__2 {
@@ -324,8 +381,8 @@ export default {
                 left: 43.3rem;
 
                 @media (max-width: 768px) {
-                    top: 108.4rem;
-                    left: 77.9rem;
+                    top: 48.4rem;
+                    left: 44.2rem;
                 }
             }
 
@@ -334,8 +391,8 @@ export default {
                 left: 39.7rem;
 
                 @media (max-width: 768px) {
-                    top: 128.2rem;
-                    left: 75.8rem;
+                    top: 73.4rem;
+                    left: 38rem;
                 }
             }
 
@@ -344,8 +401,8 @@ export default {
                 left: 42rem;
 
                 @media (max-width: 768px) {
-                    top: 151.1rem;
-                    left: 21.9rem;
+                    top: 90.5rem;
+                    left: 42rem;
                 }
             }
 
@@ -354,8 +411,8 @@ export default {
                 left: 41.6rem;
 
                 @media (max-width: 768px) {
-                    top: 146.4rem;
-                    left: 16.6rem;
+                    top: 51.6rem;
+                    left: 40.9rem;
                 }
             }
 
@@ -364,8 +421,8 @@ export default {
                 left: 34.85rem;
 
                 @media (max-width: 768px) {
-                    top: 137.5rem;
-                    left: 13.5rem;
+                    top: 51.4rem;
+                    left: 28rem;
                 }
             }
 
@@ -374,8 +431,8 @@ export default {
                 left: 23.55rem;
 
                 @media (max-width: 768px) {
-                    top: 129.1rem;
-                    left: 21.1rem;
+                    top: 57.4rem;
+                    left: 7.7rem;
                 }
             }
         }
@@ -389,14 +446,31 @@ export default {
             flex-direction: column;
             gap: 1.12rem;
 
+            @media (max-width: 768px) {
+                top: 0;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 81.4rem;
+                gap: 3.3rem;
+            }
+
             .circale-block {
                 display: flex;
                 align-items: flex-start;
                 gap: 1.06rem;
 
+                @media (max-width: 768px) {
+                    width: 39rem;
+
+                    &:last-child {
+                        width: 51rem;
+                    }
+                }
+
                 &__img {
                     width: 0.875rem;
                     height: 0.875rem;
+                    flex-shrink: 0;
 
                     @media (max-width: 768px) {
                         width: 1.87rem;
@@ -416,18 +490,22 @@ export default {
             }
         }
 
-        .number-blocks {
-            @media (max-width: 768px) {
-                flex-direction: column;
-                width: 100%;
-                gap: 0;
-            }
-        }
+        // .number-blocks {
+        //     @media (max-width: 768px) {
+        //         flex-direction: column;
+        //         width: 100%;
+        //         gap: 0;
+        //     }
+        // }
 
         .number-block {
             bottom: 5.63rem;
             left: unset;
             right: 7.81rem;
+
+            @media (max-width: 768px) {
+                margin-left: 9.5rem;
+            }
         }
     }
 
@@ -468,8 +546,18 @@ export default {
         gap: 6.75rem;
         width: 60.5rem;
 
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 7.467rem;
+            width: 100%;
+        }
+
         .number-block {
             position: static;
+
+            @media (max-width: 768px) {
+                margin-top: 0;
+            }
         }
     }
 
@@ -484,80 +572,155 @@ export default {
         z-index: 1;
 
         @supports (background-image: url(../../public/img/collage.webp)) {
-        background-image: url(../../public/img/collage.webp);
-    }
+            background-image: url(../../public/img/collage.webp);
+        }
 
-        // .spruce {
-        //     position: absolute;
-        //     top: 35.9722rem;
-        //     left: 0;
-        //     width: 48.889rem;
-        //     height: 133.0625rem;
-        //     background-image: url(../../public/img/spruce.png);
-        //     background-repeat: no-repeat;
-        //     background-size: contain;
-        //     z-index: 1;
-        // }
+        .eagle {
+            top: 23.5rem;
+            left: 41.75rem;
+        }
 
-        // .bird-1 {
-        //     position: absolute;
-        //     top: 699px;
-        //     left: 0;
-        //     width: 169px;
-        //     height: 140px;
-        //     background-image: url(../../public/img/bird-1.png);
-        //     background-repeat: no-repeat;
-        //     background-size: contain;
-        //     z-index: 1;
-        // }
+        .protected-species {
+            top: 8.81rem;
+            left: 36rem;
 
-        // .eagle {
-        //     position: absolute;
-        //     top: -25rem;
-        //     left: 7.25rem;
-        //     width: 52.2223rem;
-        //     height: 47.5rem;
-        //     background-image: url(../../public/img/eagle.png);
-        //     background-repeat: no-repeat;
-        //     background-size: contain;
-        //     z-index: 1;
-        // }
+            .block-info__img {
+                width: 0.875rem;
+            }
+        }
 
-        // .underwater {
-        //     position: absolute;
-        //     bottom: 0;
-        //     left: 0;
-        //     right: 0;
-        //     height: 57.8125rem;
-        //     background-image: url(../../public/img/underwater.png);
-        //     background-repeat: no-repeat;
-        //     background-size: contain;
-        //     z-index: 2;
-        // }
+        .indicator-species {
+            top: 8.81rem;
+            left: 48.5rem;
 
-        // .bottom {
-        //     position: absolute;
-        //     bottom: 43.8125rem;
-        //     left: 0;
-        //     right: 0;
-        //     height: 51.25rem;
-        //     background-image: url(../../public/img/bottom.png);
-        //     background-repeat: no-repeat;
-        //     background-size: contain;
-        //     z-index: 1;
-        // }
+            .block-info__img {
+                width: 0.875rem;
+            }
+        }
 
-        // .middle {
-        //     position: absolute;
-        //     bottom: 67.8125rem;
-        //     left: 0;
-        //     right: 0;
-        //     height: 39.5625rem;
-        //     background-image: url(../../public/img/middle.png);
-        //     background-repeat: no-repeat;
-        //     background-size: contain;
-        //     z-index: 2;
-        // }
+        .lentils {
+            top: 50.4rem;
+            left: 17.44rem;
+        }
+
+        .warbler-talovka {
+            top: 48.4rem;
+            right: 29rem;
+        }
+
+        .peregrine-falcon {
+            top: 59rem;
+            right: 45rem;
+        }
+
+        .willow-warbler {
+            top: 76rem;
+            right: 36rem;
+        }
+
+        .merlin {
+            top: 95rem;
+            right: 40rem;
+        }
+
+        .polar-bunting {
+            top: 117rem;
+            right: 32rem;
+        }
+
+        .deer {
+            top: 133rem;
+            left: 45rem;
+        }
+
+        .willow {
+            bottom: 113rem;
+            right: 16rem;
+        }
+
+        .vole {
+            bottom: 108rem;
+            right: 11rem;
+        }
+
+        .ptarmigan {
+            top: 172rem;
+            left: 19rem;
+        }
+
+        .tundra-shrew {
+            top: 190rem;
+            left: 30rem;
+        }
+
+        .alder-bush {
+            top: 205rem;
+            left: 47rem;
+        }
+
+        .hare {
+            bottom: 110rem;
+            left: 26rem;
+        }
+
+        .golden-plover {
+            bottom: 104rem;
+            left: 50rem;
+        }
+
+        .lycosus-moss {
+            bottom: 85rem;
+            left: 20rem;
+        }
+
+        .goose {
+            bottom: 84rem;
+            right: 25rem;
+        }
+
+        .swan {
+            bottom: 58rem;
+            left: 38rem;
+        }
+
+        .loon {
+            bottom: 57rem;
+            right: 14rem;
+        }
+
+        .ground-beetles {
+            position: absolute;
+            bottom: 80rem;
+            right: 17rem;
+        }
+
+        .myxomycetes {
+            position: absolute;
+            top: 225rem;
+            right: 18rem;
+        }
+
+        .microalgae {
+            position: absolute;
+            bottom: 43rem;
+            left: 21rem;
+        }
+
+        .zooplankton {
+            position: absolute;
+            bottom: 38rem;
+            right: 39rem;
+        }
+
+        .char {
+            position: absolute;
+            bottom: 27rem;
+            left: 43rem;
+
+            .dropdown-info__text {
+                padding: 3.56rem 0.62rem 0.88rem 3.13rem;
+            }
+        }
     }
 }
 

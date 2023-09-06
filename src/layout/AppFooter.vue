@@ -145,7 +145,7 @@ export default {
                     title: 'Кольский дивизион',
                 },
                 {
-                    link: '',
+                    link: '/transbaikal-division',
                     title: 'Забайкальский дивизион',
                 },
             ],

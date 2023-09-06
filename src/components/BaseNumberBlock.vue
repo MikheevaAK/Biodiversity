@@ -1,11 +1,7 @@
 <template>
     <div class="number-block">
-        <div class="number-block__top">
-            {{ textTop }}
-        </div>
-        <div class="number-block__bottom">
-            {{ textBottom }}
-        </div>
+        <div class="number-block__top" v-html="textTop"></div>
+        <div class="number-block__bottom" v-html="textBottom"></div>
     </div>
 </template>
 

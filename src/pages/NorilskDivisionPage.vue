@@ -79,9 +79,9 @@
                 </BaseScrollBlock> -->
 
                 <div class="number-blocks text-block__wrap mb-100">
-                    <BaseNumberBlock :textTop="'до 280 дней'" :textBottom="'устойчивых морозов'" />
-                    <BaseNumberBlock :textTop="'до 500 метров'" :textBottom="'толщина многолетнемёрзлых пород'" />
-                    <BaseNumberBlock :textTop="'-53 ˚С'" :textBottom="'минимальная температура'" />
+                    <BaseNumberBlock :textTop="'до&nbsp;280&nbsp;дней'" :textBottom="'устойчивых морозов'" />
+                    <BaseNumberBlock :textTop="'до&nbsp;500&nbsp;метров'" :textBottom="'толщина многолетнемёрзлых пород'" />
+                    <BaseNumberBlock :textTop="'-53&nbsp;˚С'" :textBottom="'минимальная температура'" />
                 </div>
 
                 <BaseTextBlock class="text mb-40" :title="'Зона воздействия предприятий Норильского дивизиона'"
@@ -158,7 +158,7 @@
                         </p>
                     </div>
                 </BaseTextBlock>
-                <div class="flex">
+                <div class="flora-and-fauna">
                     <BaseTextBlock :title="'Флора'">
                         <p class="mb-10">
                             Растительный покров региона образуют мхи и&nbsp;лишайники, низкорослые травы
@@ -261,6 +261,17 @@
                         заселять новые места обитания.
                     </p>
                 </BaseTextBlock>
+                <div class="habitat-map">
+                    <div class="habitat-map__wrap">
+                        <div class="habitat-map__title">Карта обитания охраняемых видов</div>
+                        <div class="habitat-map__buttons">
+                            <div class="habitat-map__button" :class="{'habitat-map__button_active' : idMap === map1}" @click="idMap = 1" >Большой Норильск / Дудинка</div>
+                            <div class="habitat-map__button" :class="{'habitat-map__button_active' : idMap === map2}" @click="idMap = 2">Пеляткинское / Мессояха</div>
+                        </div>
+                    </div>
+                    <img v-if="idMap === 1" src="img/habitat-map-1.png" alt="">
+                    <img v-if="idMap === 2" src="img/habitat-map-2.png" alt="">
+                </div>
                 <BaseTextBlock class="mb-100">
                     <p class="mb-10">
                         Некоторые редкие виды могут присутствовать в&nbsp;зонах промышленного воздействия, несмотря
@@ -294,7 +305,6 @@ import BaseTextBlock from '@/components/BaseTextBlock.vue'
 import MainSection from '@/layout/MainSection'
 import BaseSidebar from '@/components/BaseSidebar'
 import BaseTooltip from '@/components/ BaseTooltip.vue'
-// import BaseScrollBlock from '@/components/BaseScrollBlock.vue'
 import BaseNumberBlock from "@/components/BaseNumberBlock.vue";
 import BaseCollageInfo from '@/components/BaseCollageInfo.vue'
 import BaseDropdownInfo from '@/components/BaseDropdownInfo.vue'
@@ -309,13 +319,15 @@ export default {
         MainSection,
         BaseSidebar,
         BaseTooltip,
-        // BaseScrollBlock,
         BaseNumberBlock,
         BaseCollageInfo,
         BaseDropdownInfo
     },
     data() {
         return {
+            map1: 1,
+            map2: 2,
+            idMap: 1,
             circales: [
                 {
                     color: 'green',
@@ -490,14 +502,6 @@ export default {
             }
         }
 
-        // .number-blocks {
-        //     @media (max-width: 768px) {
-        //         flex-direction: column;
-        //         width: 100%;
-        //         gap: 0;
-        //     }
-        // }
-
         .number-block {
             bottom: 5.63rem;
             left: unset;
@@ -505,6 +509,7 @@ export default {
 
             @media (max-width: 768px) {
                 margin-left: 9.5rem;
+                width: unset;
             }
         }
     }
@@ -550,13 +555,57 @@ export default {
             flex-direction: column;
             gap: 7.467rem;
             width: 100%;
+            align-items: flex-start;
         }
 
         .number-block {
             position: static;
+            width: max-content;
 
             @media (max-width: 768px) {
                 margin-top: 0;
+            }
+        }
+    }
+
+    .flora-and-fauna {
+        display: flex;
+        gap: 5.44rem;
+        width: 63.5rem;
+        margin: 0 auto;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            width: unset;
+            gap: 12.27rem;
+            margin-bottom: 16rem;
+        }
+
+        .text-block__wrap {
+            margin: 0;
+
+            &:first-child {
+                width: 29.375rem;
+            }
+
+            &:last-child {
+                width: 28.625rem;
+
+                .number-block {
+                    margin-top: 2.88rem;
+
+                    @media (max-width: 768px) {
+                        margin-top: 7.4rem;
+                    }
+                }
+            }
+
+            @media (max-width: 768px) {
+
+                &:first-child,
+                &:last-child {
+                    width: 100%;
+                }
             }
         }
     }
@@ -722,26 +771,82 @@ export default {
             }
         }
     }
+
+    .section-orange {
+        &__title {
+            color: var(--copper, #D38235);
+            margin-bottom: 2.19rem;
+            font-size: 2.125rem;
+            font-weight: 600;
+            line-height: 130%;
+
+            @media (max-width: 768px) {
+                font-size: 7.4667rem;
+                margin-bottom: 6.4rem;
+            }
+        }
+
+        .text {
+            width: 38.25rem;
+            text-align: center;
+
+            @media (max-width: 768px) {
+                width: unset;
+                text-align: start;
+            }
+        }
+
+        .number-block {
+            position: static;
+        }
+    }
 }
 
-.section-orange {
-    &__title {
-        color: var(--copper, #D38235);
-        margin-bottom: 2.19rem;
-        font-size: 2.125rem;
-        font-weight: 600;
-        line-height: 130%;
+.habitat-map {
+    position: relative;
+    // height: 40rem;
+    margin-bottom: 2.5rem;
 
-        @media (max-width: 768px) {}
+    &__wrap {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
-    .text {
-        width: 38.25rem;
+    &__title {
+        margin-bottom: 1.63rem;
+        font-size: 1.375rem;
+        font-weight: 600;
+        line-height: 130%;
         text-align: center;
     }
 
-    .number-block {
-        position: static;
+    &__buttons {
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__button {
+        cursor: pointer;
+        padding: 0.8125rem 1.25rem;
+        border-radius: 3.125rem;
+        border: 1px solid var(--sea, #21285C);
+        font-size: 1.125rem;
+        color: #21285C;
+        line-height: 130%;
+        opacity: 0.4;
+        transition: .2s;
+
+        &_active {
+            opacity: 1;
+        }
+
+        &:hover {
+            color: var(--copper, #D38235);
+            border-color: #D38235;
+            opacity: 1;
+        }
     }
 }
 </style>

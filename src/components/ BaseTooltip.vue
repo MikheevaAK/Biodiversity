@@ -5,8 +5,8 @@
         <div v-if="isModile" class="clue__external" @click="toggalShow">{{ word }}</div>
         <div v-if="show" class="clue__substrate"></div>
         <div v-if="show" class="clue__hidden">
-            <svg v-if="isModile" class="clue__hidden-close" @click="toggalShow" xmlns="http://www.w3.org/2000/svg" width="17" height="17"
-                viewBox="0 0 17 17" fill="none">
+            <svg v-if="isModile" class="clue__hidden-close" @click="toggalShow" xmlns="http://www.w3.org/2000/svg"
+                width="17" height="17" viewBox="0 0 17 17" fill="none">
                 <path d="M16 1L1 16" stroke="#333333" stroke-linecap="round" stroke-linejoin="round" />
                 <path d="M1 1L16 16" stroke="#333333" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
@@ -32,6 +32,13 @@ export default {
     methods: {
         toggalShow() {
             this.show = !this.show
+
+            if (this.show && this.isModile) {
+                document.body.style.overflow = 'hidden'
+            }
+            else {
+                document.body.style.overflow = 'auto'
+            }
         },
         onResize() {
             this.isMobile = (window.innerWidth <= 768);

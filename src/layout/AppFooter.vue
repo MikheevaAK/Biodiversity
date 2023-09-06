@@ -50,7 +50,7 @@
 
         <div class="footer__bottom">
             <div class="footer__bottom-left">
-                <a class="footer__bottom-logo" href="https://nornickel.ru/">
+                <a class="footer__bottom-logo" href="https://nornickel.ru/" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="165" height="34" viewBox="0 0 165 34" fill="none">
                         <g clip-path="url(#clip0_2037_4860)">
                             <path
@@ -73,18 +73,18 @@
                 <div class="footer__bottom-left-line">|</div>
                 <p class="footer__bottom-text">
                     Создано в агентстве <a class="footer__bottom-link"
-                        href="https://www.infografika.agency/">Инфографика</a>
+                        href="https://www.infografika.agency/" target="_blank">Инфографика</a>
                 </p>
             </div>
             <div class="footer__bottom-right">
-                <a href="https://t.me/nornickel_official">
+                <a href="https://t.me/nornickel_official" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M17.9666 34.7665C27.245 34.7665 34.7666 27.2449 34.7666 17.9665C34.7666 8.68812 27.245 1.1665 17.9666 1.1665C8.68824 1.1665 1.16663 8.68812 1.16663 17.9665C1.16663 27.2449 8.68824 34.7665 17.9666 34.7665ZM11.9075 18.7784L7.34772 17.1732C6.88401 17.0273 6.88401 16.3706 7.34772 16.2247L26.1278 9.36628C26.5142 9.22036 26.9006 9.58516 26.8233 9.94997L23.4228 25.272C23.3455 25.6368 22.8818 25.7827 22.5727 25.5638L18.0129 22.4265C17.7038 22.2076 17.3174 22.2076 17.0855 22.4265L14.5352 24.3964C14.226 24.6153 13.7623 24.5424 13.685 24.1775L11.9075 18.7784ZM22.4181 12.7955L13.4532 17.9758C13.0668 18.1217 12.9122 18.5595 13.144 18.9243L14.0714 22.1346C14.1487 22.4265 14.5352 22.3535 14.5352 22.1346L14.767 20.3835C14.767 20.0187 14.9989 19.7269 15.2307 19.508L22.5727 13.0144C22.7273 12.9414 22.5727 12.7225 22.4181 12.7955Z"
                             fill="#626261" />
                     </svg>
                 </a>
-                <a href="https://www.youtube.com/user/NornikOfficial">
+                <a href="https://www.youtube.com/user/NornikOfficial" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
                         <g clip-path="url(#clip0_2037_4851)">
                             <path
@@ -98,7 +98,7 @@
                         </defs>
                     </svg>
                 </a>
-                <a href="https://vk.com/nornickel_official">
+                <a href="https://vk.com/nornickel_official" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
                         <g clip-path="url(#clip0_2037_4853)">
                             <path
@@ -112,7 +112,7 @@
                         </defs>
                     </svg>
                 </a>
-                <a href="https://ok.ru/group/55429567348892">
+                <a href="https://ok.ru/group/55429567348892" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
                         <circle cx="17.5" cy="17.5" r="17.5" fill="#626261" />
                         <path

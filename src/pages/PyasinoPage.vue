@@ -64,35 +64,45 @@
 
             </section>
 
-            <BaseScrollBlock>
-                <div class="scroll-card card-1 text-block__descr">
-                    <p class="mb-10">
-                        С&nbsp;помощью солнечного света фитопланктон перерабатывает углекислый газ в&nbsp;кислород,
-                        а&nbsp;значит дает возможность другим организмам жить и&nbsp;дышать.
-                    </p>
-                    <p>
-                        При этом микроводоросли&nbsp;&mdash; не&nbsp;только лёгкие водоёма, но&nbsp;и&nbsp;пища для
-                        зоопланктона&nbsp;&mdash; мелких рачков, моллюсков и&nbsp;личинок водных животных.
-                    </p>
+            <section class="scroll mb-100">
+                <div class="scroll-bg bg-1">
                 </div>
-                <div class="scroll-card card-2 text-block__descr">
-                    Зоопланктоном питаются мальки и&nbsp;некоторые виды рыб, а&nbsp;ими, в&nbsp;свою
-                    очередь,&nbsp;&mdash;
-                    хищные рыбы.
+                <div class="scroll-bg bg-2">
                 </div>
-                <div class="scroll-card card-3 text-block__descr">
-                    На&nbsp;вершине этой пищевой или, как её&nbsp;называют учёные, трофической цепи&nbsp;&mdash;
-                    водоплавающие птицы. Они поедают рыбу, а&nbsp;помёт&nbsp;&mdash; продукт
-                    их&nbsp;жизнедеятельности,&nbsp;&mdash; попадает в&nbsp;воду и&nbsp;становится питательной средой
-                    для фитопланктона. Круг замыкается.
+                <div class="scroll-bg bg-3">
                 </div>
-                <div class="scroll-card card-4 text-block__descr">
-                    Если&nbsp;же из&nbsp;трофической цепи исключить хотя&nbsp;бы одно звено или изменить состав
-                    и&nbsp;соотношение обитателей озера, система начинает разрушаться. Сброс недоочищенных бытовых
-                    и&nbsp;производственных сточных вод, аварийные разливы нефтепродуктов, или чересчур интенсивный
-                    вылов рыбы могут привести к&nbsp;нарушению баланса экосистемы.
+                <div class="scroll-bg bg-4">
                 </div>
-            </BaseScrollBlock>
+                <div class="scroll-wrap">
+                    <div class="scroll-card card-1 text-block__descr">
+                        <p class="mb-10">
+                            С&nbsp;помощью солнечного света фитопланктон перерабатывает углекислый газ в&nbsp;кислород,
+                            а&nbsp;значит дает возможность другим организмам жить и&nbsp;дышать.
+                        </p>
+                        <p>
+                            При этом микроводоросли&nbsp;&mdash; не&nbsp;только лёгкие водоёма, но&nbsp;и&nbsp;пища для
+                            зоопланктона&nbsp;&mdash; мелких рачков, моллюсков и&nbsp;личинок водных животных.
+                        </p>
+                    </div>
+                    <div class="scroll-card card-2 text-block__descr">
+                        Зоопланктоном питаются мальки и&nbsp;некоторые виды рыб, а&nbsp;ими, в&nbsp;свою
+                        очередь,&nbsp;&mdash;
+                        хищные рыбы.
+                    </div>
+                    <div class="scroll-card card-3 text-block__descr">
+                        На&nbsp;вершине этой пищевой или, как её&nbsp;называют учёные, трофической цепи&nbsp;&mdash;
+                        водоплавающие птицы. Они поедают рыбу, а&nbsp;помёт&nbsp;&mdash; продукт
+                        их&nbsp;жизнедеятельности,&nbsp;&mdash; попадает в&nbsp;воду и&nbsp;становится питательной средой
+                        для фитопланктона. Круг замыкается.
+                    </div>
+                    <div class="scroll-card card-4 text-block__descr">
+                        Если&nbsp;же из&nbsp;трофической цепи исключить хотя&nbsp;бы одно звено или изменить состав
+                        и&nbsp;соотношение обитателей озера, система начинает разрушаться. Сброс недоочищенных бытовых
+                        и&nbsp;производственных сточных вод, аварийные разливы нефтепродуктов, или чересчур интенсивный
+                        вылов рыбы могут привести к&nbsp;нарушению баланса экосистемы.
+                    </div>
+                </div>
+            </section>
 
             <section class="work-on-mistakes mb-100">
                 <BaseTextBlock class="mb-40" :title="'Работа над ошибками'">
@@ -301,7 +311,7 @@ import BaseNumberBlock from "@/components/BaseNumberBlock.vue";
 import BaseTextBlock from '@/components/BaseTextBlock.vue'
 import BaseSidebar from '@/components/BaseSidebar.vue'
 import BaseScale from '@/components/BaseScale.vue'
-import BaseScrollBlock from '@/components/BaseScrollBlock'
+// import BaseScrollBlock from '@/components/BaseScrollBlock'
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -324,7 +334,7 @@ export default {
         BaseScale,
         MainSection,
         BaseNumberBlock,
-        BaseScrollBlock
+        // BaseScrollBlock
     },
     mounted() {
         this.$nextTick(function () {
@@ -339,6 +349,13 @@ export default {
         this.twoScrollTrigger = null
     },
     methods: {
+        scrollMobile() {
+            const collageItems = Array.from(document.querySelectorAll(".scroll-bg.active"))
+
+            collageItems.forEach((elem) => {
+                elem.css('background-position', '0px ' + document.scrollTop() + 'px')
+            })
+        },
         scrollAnimation() {
             const collageItems = Array.from(document.querySelectorAll(".text-block__wrap"));
             collageItems.forEach((elem) => {
@@ -377,6 +394,74 @@ export default {
                             scrub: true,
                         },
                     });
+            });
+
+            this.ScrollTrigger = gsap.to(".scroll-bg", {
+                scrollTrigger: {
+                    trigger: ".scroll",
+                    start: '0%',
+                    scrub: true,
+                    toggleClass: { className: "active", targets: ".scroll-bg" }
+                },
+            })
+            if (window.innerWidth <= 768) {
+                this.scrollMobile()
+            }
+
+            gsap.fromTo(".bg-1",
+                { opacity: '1' },
+                {
+                    opacity: '0',
+                    scrollTrigger: {
+                        trigger: ".card-1",
+                        start: 'top 0%',
+                        end: 'bottom 50%',
+                        endTrigger: '.card-2',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                });
+
+            gsap.fromTo(".bg-2",
+                { opacity: '1' },
+                {
+                    opacity: '0',
+                    scrollTrigger: {
+                        trigger: ".card-2",
+                        start: 'top 0%',
+                        end: 'bottom 50%',
+                        endTrigger: '.card-3',
+                        // markers: true,
+                        scrub: true,
+                    },
+
+                });
+
+            gsap.fromTo(".bg-3",
+                { opacity: '1' },
+                {
+                    opacity: '0',
+                    scrollTrigger: {
+                        trigger: ".card-3",
+                        start: 'top 0%',
+                        end: 'bottom 50%',
+                        endTrigger: '.card-4',
+                        // markers: true,
+                        scrub: true,
+                    },
+
+                });
+
+            gsap.to(".scroll-bg", {
+                scrollTrigger: {
+                    trigger: ".card-4",
+                    start: () => "+=120%",
+                    end: () => "+=" + (document.querySelector(".scroll-wrap").offsetHeight),
+                    // markers: true,
+                    scrub: true,
+                    toggleClass: { className: "remove-active", targets: ".scroll-bg" }
+                },
             });
 
             if (window.innerWidth > 768) {
@@ -614,20 +699,66 @@ export default {
 }
 
 .pyasino .scroll {
+    position: relative;
+    width: 100%;
+
     &-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        height: 100vh;
+        width: 100%;
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @media (max-width: 768px) {
+            background-position: top;
+            background-size: contain;
+        }
+
+        &.active {
+            background-attachment: fixed;
+            height: 100%;
+
+            @media (max-width: 768px) {
+                height: 100%;
+                background-size: contain;
+                position: fixed;
+                background-attachment: unset;
+            }
+
+            &.remove-active {
+                background-attachment: unset;
+                background-position: bottom;
+                background-size: contain;
+
+                @media (max-width: 768px) {
+                    background-position: bottom;
+                    position: absolute;
+                }
+            }
+        }
+
         &.bg-1 {
+            z-index: 4;
             background-image: url(../../public/img/fito-1.jpg);
         }
 
         &.bg-2 {
-            background-image: url(../../public/img/fito-2.jpg);
+            z-index: 3;
+            background-image: url(../../public/img/fito-2.jpg)
         }
 
         &.bg-3 {
+            z-index: 2;
             background-image: url(../../public/img/fito-3.jpg);
         }
 
         &.bg-4 {
+            z-index: 1;
             background-image: url(../../public/img/fito-4.jpg);
         }
 
@@ -646,6 +777,37 @@ export default {
 
             &.bg-4 {
                 background-image: url(../../public/img/fito-4-mobile.jpg);
+            }
+        }
+    }
+
+    &-wrap {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 1.25rem;
+    }
+
+    &-card {
+        padding: 1.5rem;
+        margin-bottom: 100vh;
+        width: 34.2rem;
+        border-radius: 0.25rem;
+        background: #FFF;
+
+        &:first-child {
+            margin-top: 50vh;
+        }
+
+        @media (max-width: 768px) {
+            padding: 4.2666rem;
+            margin: 0 auto 100vh auto;
+            width: 93%;
+
+            &:first-child {
+                margin-top: 100vh;
             }
         }
     }

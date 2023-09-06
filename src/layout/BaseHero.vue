@@ -120,7 +120,6 @@ export default {
         color: var(--blue-deep, #004C97);
 
         @media (max-width: 768px) {
-            width: 80%;
             margin-bottom: 8rem;
             font-size: 10.66rem;
         }
@@ -133,7 +132,6 @@ export default {
         color: var(--gray-1, #333);
 
         @media (max-width: 768px) {
-            width: 95%;
             font-size: 5rem;
         }
     }

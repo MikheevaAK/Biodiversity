@@ -183,50 +183,6 @@
                     </BaseTextBlock>
                 </div>
                 <div class="collage">
-                    <BaseCollageInfo class="protected-species" :text="'Охраняемые виды'" :width="'14rem'"
-                        :color="'#71464E'" />
-                    <BaseCollageInfo class="indicator-species" :text="'Индикаторные виды'" :width="'14rem'"
-                        :color="'#C2C095'" />
-                    <BaseCollageInfo class="eagle" :title="'Орлан-белохвост'" :width="'13.875rem'" :color="'#71464E'"
-                        :text="'Размах его крыльев достигает 2,4 м. Птица нередко питается падалью и&nbsp;считается природным санитаром'" />
-                    <BaseCollageInfo class="lentils" :title="'Чечевица'" :width="'11rem'" :color="'#C2C095'"
-                        :text="'Издаёт ритмичные звуки, в которых слышится: <br/>«Че-че-ви-цу?»'" />
-                    <BaseCollageInfo class="warbler-talovka" :title="'Пеночка-таловка'" :width="'12.5rem'"
-                        :color="'#C2C095'" :text="'Встречается также в&nbsp;Забайкалье'" />
-                    <BaseCollageInfo class="peregrine-falcon" :title="'Сапсан'" :width="'13.875rem'" :color="'#71464E'"
-                        :text="'Самая быстрая птица на&nbsp;планете'" />
-                    <BaseCollageInfo class="willow-warbler" :title="'Пеночка-весничка'" :width="'10.5rem'"
-                        :color="'#C2C095'" :text="'Кроме Норильского обитает также в&nbsp;Кольском дивизионе'" />
-                    <BaseCollageInfo class="merlin" :title="'Кречет'" :width="'17rem'" :color="'#71464E'"
-                        :text="'Самая крупная птица из&nbsp;отряда соколиных. За&nbsp;последние 20&nbsp;лет её&nbsp;популяция в&nbsp;России сократилась втрое. &laquo;Норникель&raquo; вложил 50&nbsp;млн рублей в&nbsp;поддержку и&nbsp;сохранение вида в&nbsp;2022&ndash;2023&nbsp;гг.'" />
-                    <BaseCollageInfo class="polar-bunting" :title="'Полярная овсянка'" :width="'5rem'" :color="'#C2C095'" />
-                    <BaseCollageInfo class="deer" :title="'Дикий северный олень'" :width="'19.5rem'" :color="'#71464E'"
-                        :text="'Отличительная особенность этого вида&nbsp;&mdash; наличие рогов у&nbsp;самок. Наименее изученная и&nbsp;малочисленная популяция дикого северного оленя&nbsp;&mdash; гыданская, она занесена в&nbsp;Красную книгу ЯНАО. По&nbsp;данным исследований, олени почти не&nbsp;мигрируют на&nbsp;дальние расстояния и&nbsp;круглый год остаются в&nbsp;арктической тундре'" />
-                    <BaseCollageInfo class="willow" :title="'Ива мохнатая'" :width="'10rem'" :color="'#C2C095'" />
-                    <BaseCollageInfo class="vole" :title="'Полёвка-экономка'" :width="'5rem'" :color="'#C2C095'" />
-                    <BaseCollageInfo class="ptarmigan" :title="'Белая куропатка'" :width="'10.85rem'"
-                        :text="'Тело птицы сохраняет постоянную температуру 45ºC'" :color="'#C2C095'" />
-                    <BaseCollageInfo class="tundra-shrew" :title="'Тундряная бурозубка'" :width="'13.5rem'"
-                        :text="'За&nbsp;сутки может съесть в&nbsp;4&nbsp;раза больше, чем весит'" :color="'#C2C095'" />
-                    <BaseCollageInfo class="alder-bush" :title="'Ольховник кустарниковый'" :width="'13rem'"
-                        :text="'Древесина срубленной ольхи окрашивается в&nbsp;красный цвет'" :color="'#C2C095'" />
-                    <BaseCollageInfo class="hare" :title="'Заяц-беляк'" :width="'13.8rem'"
-                        :text="'Спасаясь от&nbsp;опасности, развивает скорость до&nbsp;60&nbsp;км/ч. Обитает также в&nbsp;Забайкальском дивизионе'"
-                        :color="'#C2C095'" />
-                    <BaseCollageInfo class="golden-plover" :title="'Золотистая ржанка'" :width="'12rem'"
-                        :text="'В&nbsp;древности считалось, что один взгляд на&nbsp;эту пёструю птичку излечивает от&nbsp;желтухи'"
-                        :color="'#71464E'" />
-                    <BaseCollageInfo class="lycosus-moss" :title="'Плаунок плаунковидный'" :width="'18rem'"
-                        :text="'В районе Промышленного Норильска биологи обнаружили несколько участков, ценных для произрастания этого редкого вида растений. Чтобы сохранить популяции плаунка, вокруг этих участков необходимо создавать защитные зоны'"
-                        :color="'#71464E'" />
-                    <BaseCollageInfo class="goose" :title="'Гуменник'" :width="'12rem'"
-                        :text="'В&nbsp;полёте поднимается на&nbsp;высоту до&nbsp;10&nbsp;км'" :color="'#71464E'" />
-                    <BaseCollageInfo class="swan" :title="'Лебедь-кликун'" :width="'16.4rem'"
-                        :text="'Мощными крыльями может отразить атаку мелких хищников. Встречается также в&nbsp;Кольском дивизионе'"
-                        :color="'#71464E'" />
-                    <BaseCollageInfo class="loon" :title="'Чернозобая гагара'" :width="'12.4rem'"
-                        :text="'Умеет нырять на&nbsp;глубину до&nbsp;20 метров'" :color="'#71464E'" />
-
                     <BaseDropdownInfo class="ground-beetles" :title="'Жужелицы'"
                         :text="'Такие виды, как Amara brunnea, Pterostichus fulvescens, Notiophilus fasciatus и Nebria gyllenhali, отрицательно реагируют на&nbsp;промышленное воздействие и&nbsp;помогают исследователям фиксировать изменения в&nbsp;окружающей среде'" />
                     <BaseDropdownInfo class="myxomycetes" :title="'Миксомицеты'"
@@ -236,8 +192,19 @@
 
                     <BaseDropdownInfo class="zooplankton" :title="'Зоопланктон'"
                         :text="'Чтобы оценить состояние водоёмов, исследователи отобрали виды зоопланктона, сигнализирующие о&nbsp;качестве воды. Например, планктонный рачок Limnocalanus macrurus любит чистую воду, а&nbsp;если начинает доминировать планктонная коловратка Brachionus sericus&nbsp;&mdash; вода загрязнена'" />
-                    <BaseDropdownInfo class="char" :title="'Арктический голец (боганидская палия)'"
+                    <BaseDropdownInfo v-if="!isModile" class="char" :title="'Арктический голец (боганидская палия)'"
                         :text="'Считается самой полезной рыбой в&nbsp;мире: кусочек рыбы в&nbsp;30&nbsp;г. покрывает суточную потребность человека в&nbsp;полезных жирных кислотах. Встречается также в&nbsp;водоёмах Кольского дивизиона'" />
+
+                    <BaseDropdownInfo v-if="isModile" class="merlin" :title="'Кречет'" :color="'#71464E'"
+                        :text="'Самая крупная птица из&nbsp;отряда соколиных. За&nbsp;последние 20&nbsp;лет её&nbsp;популяция в&nbsp;России сократилась втрое. &laquo;Норникель&raquo; вложил 50&nbsp;млн рублей в&nbsp;поддержку и&nbsp;сохранение вида в&nbsp;2022&ndash;2023&nbsp;гг'" />
+
+                    <BaseDropdownInfo v-if="isModile" class="deer" :title="'Дикий северный олень'" :color="'#71464E'"
+                        :text="'Отличительная особенность этого вида&nbsp;&mdash; наличие рогов у&nbsp;самок. Наименее изученная и&nbsp;малочисленная популяция дикого северного оленя&nbsp;&mdash; гыданская, она занесена в&nbsp;Красную книгу ЯНАО. По&nbsp;данным исследований, олени почти не&nbsp;мигрируют на&nbsp;дальние расстояния и&nbsp;круглый год остаются в&nbsp;арктической тундре'" />
+                    <BaseDropdownInfo v-if="isModile" class="lycosus-moss" :title="'Плаунок плаунковидный'"
+                        :color="'#71464E'"
+                        :text="'В&nbsp;районе Промышленного Норильска биологи обнаружили несколько участков, ценных для произрастания этого редкого вида растений. Чтобы сохранить популяции плаунка, вокруг этих участков необходимо создавать защитные зоны'" />
+                    <BaseDropdownInfo v-if="isModile" class="hare" :title="'Заяц-беляк'"
+                        :text="'Спасаясь от&nbsp;опасности, развивает скорость до&nbsp;60 км/ч'" />
                 </div>
                 <BaseTextBlock class="mb-100" :tooltip="true">
                     <p class="mb-10">
@@ -263,14 +230,26 @@
                 </BaseTextBlock>
                 <div class="habitat-map">
                     <div class="habitat-map__wrap">
-                        <div class="habitat-map__title">Карта обитания охраняемых видов</div>
+                        <div v-if="!isModile" class="habitat-map__title">Карта обитания охраняемых видов</div>
+                        <div v-if="isModile" class="habitat-map__title">Зона воздействия предприятий и виды</div>
+                        <div v-if="isModile" class="habitat-map__list"></div>
                         <div class="habitat-map__buttons">
-                            <div class="habitat-map__button" :class="{'habitat-map__button_active' : idMap === map1}" @click="idMap = 1" >Большой Норильск / Дудинка</div>
-                            <div class="habitat-map__button" :class="{'habitat-map__button_active' : idMap === map2}" @click="idMap = 2">Пеляткинское / Мессояха</div>
+                            <div class="habitat-map__button" :class="{ 'habitat-map__button_active': idMap === map1 }"
+                                @click="idMap = 1">Большой Норильск / Дудинка</div>
+                            <div class="habitat-map__button" :class="{ 'habitat-map__button_active': idMap === map2 }"
+                                @click="idMap = 2">Пеляткинское / Мессояха</div>
                         </div>
                     </div>
-                    <img v-if="idMap === 1" src="img/habitat-map-1.png" alt="">
-                    <img v-if="idMap === 2" src="img/habitat-map-2.png" alt="">
+
+                    <picture v-if="idMap === 1">
+                        <source media="(max-width: 768px)" srcset="img/habitat-map-1-mobile.png">
+                        <img src="img/habitat-map-1.png" alt="">
+                    </picture>
+
+                    <picture v-if="idMap === 2">
+                        <source media="(max-width: 768px)" srcset="img/habitat-map-2-mobile.png">
+                        <img src="img/habitat-map-2.png" alt="">
+                    </picture>
                 </div>
                 <BaseTextBlock class="mb-100">
                     <p class="mb-10">
@@ -306,7 +285,7 @@ import MainSection from '@/layout/MainSection'
 import BaseSidebar from '@/components/BaseSidebar'
 import BaseTooltip from '@/components/ BaseTooltip.vue'
 import BaseNumberBlock from "@/components/BaseNumberBlock.vue";
-import BaseCollageInfo from '@/components/BaseCollageInfo.vue'
+// import BaseCollageInfo from '@/components/BaseCollageInfo.vue'
 import BaseDropdownInfo from '@/components/BaseDropdownInfo.vue'
 
 export default {
@@ -320,7 +299,7 @@ export default {
         BaseSidebar,
         BaseTooltip,
         BaseNumberBlock,
-        BaseCollageInfo,
+        // BaseCollageInfo,
         BaseDropdownInfo
     },
     data() {
@@ -358,8 +337,14 @@ export default {
                     number: '7'
                 }
             ],
+            isModile: (window.innerWidth <= 768),
             heroDescr: 'Какие виды животных и растений живут по соседству с промышленным гигантом Красноярского края — Большим Норильском'
         }
+    },
+    methods: {
+        onResize() {
+            this.isMobile = (window.innerWidth <= 768);
+        },
     }
 }
 </script>
@@ -624,141 +609,170 @@ export default {
             background-image: url(../../public/img/collage.webp);
         }
 
-        .eagle {
-            top: 23.5rem;
-            left: 41.75rem;
+        @media (max-width: 768px) {
+            height: 792rem;
+            background-image: url(../../public/img/collage-mobile.png);
+            // @supports (background-image: url(../../public/img/collage-mobile.webp)) {
+            // background-image: url(../../public/img/collage-mobile.webp);
+            // } 
         }
 
-        .protected-species {
-            top: 8.81rem;
-            left: 36rem;
 
-            .block-info__img {
-                width: 0.875rem;
-            }
-        }
+        // .eagle {
+        //     top: 23.5rem;
+        //     left: 41.75rem;
+        // }
 
-        .indicator-species {
-            top: 8.81rem;
-            left: 48.5rem;
+        // .protected-species {
+        //     top: 8.81rem;
+        //     left: 36rem;
 
-            .block-info__img {
-                width: 0.875rem;
-            }
-        }
+        //     .block-info__img {
+        //         width: 0.875rem;
+        //     }
+        // }
 
-        .lentils {
-            top: 50.4rem;
-            left: 17.44rem;
-        }
+        // .indicator-species {
+        //     top: 8.81rem;
+        //     left: 48.5rem;
 
-        .warbler-talovka {
-            top: 48.4rem;
-            right: 29rem;
-        }
+        //     .block-info__img {
+        //         width: 0.875rem;
+        //     }
+        // }
 
-        .peregrine-falcon {
-            top: 59rem;
-            right: 45rem;
-        }
+        // .lentils {
+        //     top: 50.4rem;
+        //     left: 17.44rem;
+        // }
 
-        .willow-warbler {
-            top: 76rem;
-            right: 36rem;
-        }
+        // .warbler-talovka {
+        //     top: 48.4rem;
+        //     right: 29rem;
+        // }
 
-        .merlin {
-            top: 95rem;
-            right: 40rem;
-        }
+        // .peregrine-falcon {
+        //     top: 59rem;
+        //     right: 45rem;
+        // }
 
-        .polar-bunting {
-            top: 117rem;
-            right: 32rem;
-        }
+        // .willow-warbler {
+        //     top: 76rem;
+        //     right: 36rem;
+        // }
 
-        .deer {
-            top: 133rem;
-            left: 45rem;
-        }
+        // .merlin {
+        //     top: 95rem;
+        //     right: 40rem;
+        // }
 
-        .willow {
-            bottom: 113rem;
-            right: 16rem;
-        }
+        // .polar-bunting {
+        //     top: 117rem;
+        //     right: 32rem;
+        // }
 
-        .vole {
-            bottom: 108rem;
-            right: 11rem;
-        }
+        // .deer {
+        //     top: 133rem;
+        //     left: 45rem;
+        // }
 
-        .ptarmigan {
-            top: 172rem;
-            left: 19rem;
-        }
+        // .willow {
+        //     bottom: 113rem;
+        //     right: 16rem;
+        // }
 
-        .tundra-shrew {
-            top: 190rem;
-            left: 30rem;
-        }
+        // .vole {
+        //     bottom: 108rem;
+        //     right: 11rem;
+        // }
 
-        .alder-bush {
-            top: 205rem;
-            left: 47rem;
-        }
+        // .ptarmigan {
+        //     top: 172rem;
+        //     left: 19rem;
+        // }
 
-        .hare {
-            bottom: 110rem;
-            left: 26rem;
-        }
+        // .tundra-shrew {
+        //     top: 190rem;
+        //     left: 30rem;
+        // }
 
-        .golden-plover {
-            bottom: 104rem;
-            left: 50rem;
-        }
+        // .alder-bush {
+        //     top: 205rem;
+        //     left: 47rem;
+        // }
 
-        .lycosus-moss {
-            bottom: 85rem;
-            left: 20rem;
-        }
+        // .hare {
+        //     bottom: 110rem;
+        //     left: 26rem;
+        // }
 
-        .goose {
-            bottom: 84rem;
-            right: 25rem;
-        }
+        // .golden-plover {
+        //     bottom: 104rem;
+        //     left: 50rem;
+        // }
 
-        .swan {
-            bottom: 58rem;
-            left: 38rem;
-        }
+        // .lycosus-moss {
+        //     bottom: 85rem;
+        //     left: 20rem;
+        // }
 
-        .loon {
-            bottom: 57rem;
-            right: 14rem;
-        }
+        // .goose {
+        //     bottom: 84rem;
+        //     right: 25rem;
+        // }
+
+        // .swan {
+        //     bottom: 58rem;
+        //     left: 38rem;
+        // }
+
+        // .loon {
+        //     bottom: 57rem;
+        //     right: 14rem;
+        // }
 
         .ground-beetles {
             position: absolute;
             bottom: 80rem;
             right: 17rem;
+
+            @media (max-width: 768px) {
+                bottom: 311rem;
+                right: 40rem;
+            }
         }
 
         .myxomycetes {
             position: absolute;
             top: 225rem;
             right: 18rem;
+
+            @media (max-width: 768px) {
+                top: 433rem;
+                right: 30rem;
+            }
         }
 
         .microalgae {
             position: absolute;
             bottom: 43rem;
             left: 21rem;
+
+            @media (max-width: 768px) {
+                bottom: 86rem;
+                left: 8rem;
+            }
         }
 
         .zooplankton {
             position: absolute;
             bottom: 38rem;
             right: 39rem;
+
+            @media (max-width: 768px) {
+                bottom: 74rem;
+                right: 29rem;
+            }
         }
 
         .char {
@@ -769,6 +783,30 @@ export default {
             .dropdown-info__text {
                 padding: 3.56rem 0.62rem 0.88rem 3.13rem;
             }
+        }
+
+        .merlin {
+            position: absolute;
+            top: 115rem;
+            left: 12rem;
+        }
+
+        .deer {
+            position: absolute;
+            top: 278rem;
+            left: 5rem;
+        }
+
+        .lycosus-moss {
+            position: absolute;
+            bottom: 193rem;
+            left: 2rem;
+        }
+
+        .hare {
+            position: absolute;
+            bottom: 260rem;
+            left: 7rem;
         }
     }
 
@@ -812,6 +850,13 @@ export default {
         top: 0;
         left: 50%;
         transform: translateX(-50%);
+
+        @media (max-width: 768px) {
+            position: static;
+            transform: translateX(0);
+            margin-bottom: 5.867rem;
+            padding: 0 5rem;
+        }
     }
 
     &__title {
@@ -820,11 +865,22 @@ export default {
         font-weight: 600;
         line-height: 130%;
         text-align: center;
+
+        @media (max-width: 768px) {
+            text-align: start;
+            width: 52.5rem;
+            margin-bottom: 7.75rem;
+            font-size: 4.8rem
+        }
     }
 
     &__buttons {
         display: flex;
         gap: 1rem;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
     }
 
     &__button {
@@ -837,6 +893,13 @@ export default {
         line-height: 130%;
         opacity: 0.4;
         transition: .2s;
+
+        @media (max-width: 768px) {
+            padding: 5rem 7rem;
+            border-radius: 8.125rem;
+            font-size: 4.53334rem;
+            text-align: center;
+        }
 
         &_active {
             opacity: 1;

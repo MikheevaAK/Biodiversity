@@ -58,6 +58,10 @@ export default {
     font-size: 0.9375rem;
     line-height: 130%;
 
+    @media (max-width: 768px) {
+        font-size: 3.73334rem;
+    }
+
     &__wrap {
         display: flex;
         align-items: center;
@@ -65,6 +69,10 @@ export default {
         position: relative;
         z-index: 2;
         cursor: pointer;
+
+        @media (max-width: 768px) {
+            gap: 2rem;
+        }
     }
 
     &__svg {
@@ -74,7 +82,13 @@ export default {
         width: 1.625rem;
         height: 1.625rem;
         flex-shrink: 0;
-        border-radius: 1.0625rem;
+        border-radius: 50%;
+
+        @media (max-width: 768px) {
+            padding: 2.6rem;
+            width: 8.467rem;
+            height: 8.467rem;
+        }
     }
 
     &__minus {
@@ -82,6 +96,11 @@ export default {
         width: 0.625rem;
         height: 0.625rem;
         transition: .5s;
+
+        @media (max-width: 768px) {
+            width: 3.2rem;
+            height: 3.2rem;
+        }
 
         &:last-child {
             transform: rotateZ(90deg);

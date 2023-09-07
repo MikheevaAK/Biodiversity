@@ -56,27 +56,36 @@
                     </div>
                 </BigMap>
 
-                <!-- <BaseScrollBlock>
-                    <div class="scroll-card card-1 text-block__descr">
-                        <p>Большой Норильск</p>
-                        Норильский промышленный район, или Большой Норильск образован местными предприятиями
-                        &laquo;Норникеля&raquo;. Также в&nbsp;район входят города Норильск, Дудинка и&nbsp;ещё несколько
-                        населённых пунктов. Здесь в&nbsp;условиях многолетней мерзлоты компания добывает
-                        и&nbsp;перерабатывает медь, драгоценные металлы, теллур, серу и&nbsp;селен.
+                <section class="scroll">
+                    <div class="scroll-bg bg-1">
                     </div>
-                    <div class="scroll-card card-2 text-block__descr">
-                        <p>Энергетические объекты</p>
-                        Теплом и&nbsp;светом Промышленный район обеспечивают теплоцентрали, ГЭС и&nbsp;газодобывающие
-                        предприятия &laquo;Норникеля&raquo;.
+                    <div class="scroll-bg bg-2">
                     </div>
-                    <div class="scroll-card card-3 text-block__descr">
-                        <p>Путоранский заповедник</p>
-                        Природный объект, важный для поддержания и&nbsp;восстановления местного биоразнообразия. Расстояние
-                        от&nbsp;Промышленного района до&nbsp;границ заповедника&nbsp;&mdash; более 50&nbsp;км.
-                        По&nbsp;словам специалистов, этого достаточно, чтобы сохранить местные экосистемы
-                        в&nbsp;неприкосновенности и&nbsp;исключить воздействие предприятий.
+                    <div class="scroll-bg bg-3">
                     </div>
-                </BaseScrollBlock> -->
+                    <div class="scroll-wrap">
+                        <div class="scroll-card card-1 text-block__descr">
+                            <p>Большой Норильск</p>
+                            Норильский промышленный район, или Большой Норильск образован местными предприятиями
+                            &laquo;Норникеля&raquo;. Также в&nbsp;район входят города Норильск, Дудинка и&nbsp;ещё несколько
+                            населённых пунктов. Здесь в&nbsp;условиях многолетней мерзлоты компания добывает
+                            и&nbsp;перерабатывает медь, драгоценные металлы, теллур, серу и&nbsp;селен.
+                        </div>
+                        <div class="scroll-card card-2 text-block__descr">
+                            <p>Энергетические объекты</p>
+                            Теплом и&nbsp;светом Промышленный район обеспечивают теплоцентрали, ГЭС и&nbsp;газодобывающие
+                            предприятия &laquo;Норникеля&raquo;.
+                        </div>
+                        <div class="scroll-card card-3 text-block__descr">
+                            <p>Путоранский заповедник</p>
+                            Природный объект, важный для поддержания и&nbsp;восстановления местного биоразнообразия.
+                            Расстояние
+                            от&nbsp;Промышленного района до&nbsp;границ заповедника&nbsp;&mdash; более 50&nbsp;км.
+                            По&nbsp;словам специалистов, этого достаточно, чтобы сохранить местные экосистемы
+                            в&nbsp;неприкосновенности и&nbsp;исключить воздействие предприятий.
+                        </div>
+                    </div>
+                </section>
 
                 <div class="number-blocks text-block__wrap mb-100">
                     <BaseNumberBlock :textTop="'до&nbsp;280&nbsp;дней'" :textBottom="'устойчивых морозов'" />
@@ -229,10 +238,139 @@
                     </p>
                 </BaseTextBlock>
                 <div class="habitat-map">
+                    <div class="habitat-map__legend">
+                        <div class="habitat-map__legend-top">
+                            <div class="habitat-map__legend-title">Зона воздействия предприятий</div>
+                            <div class="habitat-map__legend-top-item habitat-map__legend-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <circle cx="7" cy="7" r="7" fill="#D38235" />
+                                </svg>
+                                <div>Интенсивная</div>
+                            </div>
+                            <div class="habitat-map__legend-top-item habitat-map__legend-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <circle cx="7" cy="7" r="7" fill="#FFEC42" />
+                                </svg>
+                                <div>Умеренная</div>
+                            </div>
+                            <div class="habitat-map__legend-top-item habitat-map__legend-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <circle cx="7" cy="7" r="7" fill="#009CA6" />
+                                </svg>
+                                <div>Незначительная</div>
+                            </div>
+                            <div class="habitat-map__legend-top-item habitat-map__legend-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none">
+                                    <circle cx="8" cy="8" r="7" fill="white" stroke="#333333" />
+                                </svg>
+                                <div>Фоновая</div>
+                            </div>
+                        </div>
+                        <div class="habitat-map__legend-bottom">
+                            <div class="habitat-map__legend-title">Виды</div>
+                            <div class="habitat-map__legend-top-item habitat-map__legend-text">
+                                1 – Кречет
+                            </div>
+                            <div class="habitat-map__legend-top-item habitat-map__legend-text">
+                                2 – Сапсан
+                            </div>
+                            <div class="habitat-map__legend-top-item habitat-map__legend-text">
+                                3 – Орлан-белохвост
+                            </div>
+                            <div class="habitat-map__legend-top-item habitat-map__legend-text">
+                                4 – Гуменник
+                            </div>
+                            <div class="habitat-map__legend-top-item habitat-map__legend-text">
+                                5 – Золотистая ржанка
+                            </div>
+                            <div class="habitat-map__legend-top-item habitat-map__legend-text">
+                                6 – Лебедь-кликун
+                            </div>
+                            <div class="habitat-map__legend-top-item habitat-map__legend-text">
+                                7 – Чернозобая гагара
+                            </div>
+                            <div class="habitat-map__legend-top-item habitat-map__legend-text">
+                                8 – Плаунок плаунковидный
+                            </div>
+                            <div class="habitat-map__legend-top-item habitat-map__legend-text">
+                                9 – Реликтовые тундростепи
+                            </div>
+                        </div>
+                    </div>
                     <div class="habitat-map__wrap">
                         <div v-if="!isModile" class="habitat-map__title">Карта обитания охраняемых видов</div>
                         <div v-if="isModile" class="habitat-map__title">Зона воздействия предприятий и виды</div>
-                        <div v-if="isModile" class="habitat-map__list"></div>
+                        <div class="habitat-map__list">
+                            <div class="habitat-map__list-item-wrap">
+                                <div class="habitat-map__list-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                        fill="none">
+                                        <circle cx="7" cy="7" r="7" fill="#D38235" />
+                                    </svg>
+                                    <div>Интенсивная</div>
+                                </div>
+                                <ul class="habitat-map__list-list">
+                                    <li>Орлан-белохвост</li>
+                                    <li>Золотистая ржанка</li>
+                                    <li>Лебедь-кликун</li>
+                                    <li>Чернозобая гагара</li>
+                                    <li>Сапсан</li>
+                                </ul>
+                            </div>
+
+                            <div class="habitat-map__list-item-wrap">
+                                <div class="habitat-map__list-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                        fill="none">
+                                        <circle cx="7" cy="7" r="7" fill="#FFEC42" />
+                                    </svg>
+                                    <div>Умеренная</div>
+                                </div>
+                                <ul class="habitat-map__list-list">
+                                    <li>Гуменник</li>
+                                    <li>Золотистая ржанка</li>
+                                    <li>Лебедь-кликун</li>
+                                    <li>Чернозобая гагара</li>
+                                    <li>Плаунок</li>
+                                </ul>
+                            </div>
+
+                            <div class="habitat-map__list-item-wrap">
+                                <div class="habitat-map__list-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                        fill="none">
+                                        <circle cx="7" cy="7" r="7" fill="#009CA6" />
+                                    </svg>
+                                    <div>Незначительная</div>
+                                </div>
+                                <ul class="habitat-map__list-list">
+                                    <li>Золотистая ржанка</li>
+                                    <li>Лебедь-кликун</li>
+                                    <li>Чернозобая гагара</li>
+                                    <li>Реликтовые&nbsp;тундростепи</li>
+                                    <li>Кречет и Сапсан</li>
+                                </ul>
+                            </div>
+
+                            <div class="habitat-map__list-item-wrap">
+                                <div class="habitat-map__list-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <circle cx="8" cy="8" r="7" fill="white" stroke="#333333" />
+                                    </svg>
+                                    <div>Фоновая</div>
+                                </div>
+                                <ul class="habitat-map__list-list">
+                                    <li>Гуменник</li>
+                                    <li>Золотистая ржанка</li>
+                                </ul>
+                            </div>
+
+                        </div>
                         <div class="habitat-map__buttons">
                             <div class="habitat-map__button" :class="{ 'habitat-map__button_active': idMap === map1 }"
                                 @click="idMap = 1">Большой Норильск / Дудинка</div>
@@ -243,23 +381,53 @@
 
                     <picture v-if="idMap === 1">
                         <source media="(max-width: 768px)" srcset="img/habitat-map-1-mobile.png">
+                        <source type="image/webp" srcset="img/habitat-map-1.webp">
                         <img src="img/habitat-map-1.png" alt="">
                     </picture>
 
                     <picture v-if="idMap === 2">
                         <source media="(max-width: 768px)" srcset="img/habitat-map-2-mobile.png">
+                        <source type="image/webp" srcset="img/habitat-map-2.webp">
                         <img src="img/habitat-map-2.png" alt="">
                     </picture>
+
+                    <div v-if="idMap === 1">
+                        <div class="habitat-map__name-lake">
+                            оз. Пясино
+                        </div>
+                        <div class="habitat-map__city habitat-map__city-1">
+                            <div class="habitat-map__city-circale"></div>
+                            <span>Талнах</span>
+                        </div>
+                        <div class="habitat-map__city habitat-map__city-2">
+                            <div class="habitat-map__city-circale"></div>
+                            <span>Норильск</span>
+                        </div>
+                        <div class="habitat-map__city habitat-map__city-3">
+                            <div class="habitat-map__city-circale"></div>
+                            <span>Дудинка</span>
+                        </div>
+                    </div>
+                    <div v-if="idMap === 2">
+                        <div class="habitat-map__river">
+                            р. Енисей
+                        </div>
+                        <div class="habitat-map__city habitat-map__city-4">
+                            <div class="habitat-map__city-circale"></div>
+                            <span>Пеляткинское газоконденсатное
+                                месторождение</span>
+                        </div>
+                        <div class="habitat-map__city habitat-map__city-5">
+                            <div class="habitat-map__city-circale"></div>
+                            <span>Мессояхское газоконденсатное месторождение</span>
+                        </div>
+                    </div>
                 </div>
                 <BaseTextBlock class="mb-100">
-                    <p class="mb-10">
-                        Некоторые редкие виды могут присутствовать в&nbsp;зонах промышленного воздействия, несмотря
-                        на&nbsp;шум,
-                        загрязнение и&nbsp;изъятие почв.
-                    </p>
                     <p>
-                        Для них приоритетным фактором выживания оказывается доступ к&nbsp;кормовой
-                        базе, которая обильнее в&nbsp;местах обитания человека.
+                        Некоторые редкие виды могут проживать в&nbsp;зонах воздействия предприятий, несмотря на&nbsp;шум или
+                        другие факторы воздействия. Ведь для их&nbsp;выживания главное&nbsp;&mdash; наличие корма
+                        и&nbsp;отсутствие беспокойства со&nbsp;стороны человека.
                     </p>
                 </BaseTextBlock>
                 <BaseSidebar>
@@ -287,6 +455,9 @@ import BaseTooltip from '@/components/ BaseTooltip.vue'
 import BaseNumberBlock from "@/components/BaseNumberBlock.vue";
 // import BaseCollageInfo from '@/components/BaseCollageInfo.vue'
 import BaseDropdownInfo from '@/components/BaseDropdownInfo.vue'
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default {
     components: {
@@ -341,10 +512,115 @@ export default {
             heroDescr: 'Какие виды животных и растений живут по соседству с промышленным гигантом Красноярского края — Большим Норильском'
         }
     },
+    mounted() {
+        this.$nextTick(function () {
+            this.scrollAnimation();
+        })
+    },
     methods: {
         onResize() {
             this.isMobile = (window.innerWidth <= 768);
         },
+        scrollMobile() {
+            const collageItems = Array.from(document.querySelectorAll(".scroll-bg.active"))
+
+            collageItems.forEach((elem) => {
+                elem.css('background-position', '0px ' + document.scrollTop() + 'px')
+            })
+        },
+        scrollAnimation() {
+            const collageItems = Array.from(document.querySelectorAll(".text-block__wrap"));
+            collageItems.forEach((elem) => {
+
+                this.oneScrollTrigger = gsap.fromTo(elem,
+                    {
+                        y: 50,
+                    },
+                    {
+                        y: 0,
+                        duration: 1,
+                        scrollTrigger: {
+                            start: '0% 100%',
+                            end: 'bottom 75%',
+                            trigger: elem,
+                            scrub: true,
+                            // markers: true,
+                        },
+                    });
+            });
+
+            const sidebarItems = Array.from(document.querySelectorAll(".sidebar"));
+            sidebarItems.forEach((elem) => {
+                this.twoScrollTrigger = gsap.fromTo(elem,
+                    {
+                        y: 50,
+                    },
+                    {
+                        y: 0,
+                        duration: 1,
+                        scrollTrigger: {
+                            start: '0% 100%',
+                            end: 'bottom 75%',
+                            trigger: elem,
+                            // markers: true,
+                            scrub: true,
+                        },
+                    });
+            });
+
+            this.ScrollTrigger = gsap.to(".scroll-bg", {
+                scrollTrigger: {
+                    trigger: ".scroll",
+                    start: '0%',
+                    scrub: true,
+                    toggleClass: { className: "active", targets: ".scroll-bg" }
+                },
+            })
+            if (window.innerWidth <= 768) {
+                this.scrollMobile()
+            }
+
+            gsap.fromTo(".bg-1",
+                { opacity: '1' },
+                {
+                    opacity: '0',
+                    scrollTrigger: {
+                        trigger: ".card-1",
+                        start: 'top 0%',
+                        end: 'bottom 50%',
+                        endTrigger: '.card-2',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                });
+
+            gsap.fromTo(".bg-2",
+                { opacity: '1' },
+                {
+                    opacity: '0',
+                    scrollTrigger: {
+                        trigger: ".card-2",
+                        start: 'top 0%',
+                        end: 'bottom 50%',
+                        endTrigger: '.card-3',
+                        // markers: true,
+                        scrub: true,
+                    },
+
+                });
+
+            gsap.to(".scroll-bg", {
+                scrollTrigger: {
+                    trigger: ".card-3",
+                    start: () => "+=120%",
+                    end: () => "+=" + (document.querySelector(".scroll-wrap").offsetHeight),
+                    // markers: true,
+                    scrub: true,
+                    toggleClass: { className: "remove-active", targets: ".scroll-bg" }
+                },
+            });
+        }
     }
 }
 </script>
@@ -500,17 +776,60 @@ export default {
     }
 
     .scroll {
+        position: relative;
+        width: 100%;
+
         &-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            height: 100vh;
+            // margin: 0 6.75rem;
+            // width: calc(100% - 13.5rem);
+            background-position: bottom;
+            background-size: calc(100% - 13.5rem) 49rem;
+            background-repeat: no-repeat;
+
+            &.active {
+                background-attachment: fixed;
+                height: 100%;
+
+                @media (max-width: 768px) {
+                    height: 100%;
+                    background-size: contain;
+                    position: fixed;
+                    background-attachment: unset;
+                }
+
+                &.remove-active {
+                    background-attachment: unset;
+                    background-position: 6.75rem 310vh;
+                    background-size: calc(100% - 13.5rem) 49rem;
+                    // margin: 0 6.75rem;
+                    // width: calc(100% - 13.5rem);
+
+                    @media (max-width: 768px) {
+                        background-position: bottom;
+                        position: absolute;
+                    }
+                }
+            }
+
             &.bg-1 {
-                background-image: url(../../public/img/map-1.png);
+                z-index: 3;
+                background-image: url(../../public/img/map-1.jpg);
             }
 
             &.bg-2 {
-                background-image: url(../../public/img/map-2.png);
+                z-index: 2;
+                background-image: url(../../public/img/map-2.jpg);
             }
 
             &.bg-3 {
-                background-image: url(../../public/img/map-3.png);
+                z-index: 1;
+                background-image: url(../../public/img/map-3.jpg);
             }
 
             @media (max-width: 768px) {
@@ -524,6 +843,37 @@ export default {
 
                 &.bg-3 {
                     background-image: url(../../public/img/fito-3-mobile.jpg);
+                }
+            }
+        }
+
+        &-wrap {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-right: 1.25rem;
+        }
+
+        &-card {
+            padding: 1.5rem;
+            margin-bottom: 100vh;
+            width: 34.2rem;
+            border-radius: 0.25rem;
+            background: #FFF;
+
+            &:first-child {
+                margin-top: 50vh;
+            }
+
+            @media (max-width: 768px) {
+                padding: 4.2666rem;
+                margin: 0 auto 100vh auto;
+                width: 93%;
+
+                &:first-child {
+                    margin-top: 100vh;
                 }
             }
         }
@@ -616,120 +966,6 @@ export default {
             // background-image: url(../../public/img/collage-mobile.webp);
             // } 
         }
-
-
-        // .eagle {
-        //     top: 23.5rem;
-        //     left: 41.75rem;
-        // }
-
-        // .protected-species {
-        //     top: 8.81rem;
-        //     left: 36rem;
-
-        //     .block-info__img {
-        //         width: 0.875rem;
-        //     }
-        // }
-
-        // .indicator-species {
-        //     top: 8.81rem;
-        //     left: 48.5rem;
-
-        //     .block-info__img {
-        //         width: 0.875rem;
-        //     }
-        // }
-
-        // .lentils {
-        //     top: 50.4rem;
-        //     left: 17.44rem;
-        // }
-
-        // .warbler-talovka {
-        //     top: 48.4rem;
-        //     right: 29rem;
-        // }
-
-        // .peregrine-falcon {
-        //     top: 59rem;
-        //     right: 45rem;
-        // }
-
-        // .willow-warbler {
-        //     top: 76rem;
-        //     right: 36rem;
-        // }
-
-        // .merlin {
-        //     top: 95rem;
-        //     right: 40rem;
-        // }
-
-        // .polar-bunting {
-        //     top: 117rem;
-        //     right: 32rem;
-        // }
-
-        // .deer {
-        //     top: 133rem;
-        //     left: 45rem;
-        // }
-
-        // .willow {
-        //     bottom: 113rem;
-        //     right: 16rem;
-        // }
-
-        // .vole {
-        //     bottom: 108rem;
-        //     right: 11rem;
-        // }
-
-        // .ptarmigan {
-        //     top: 172rem;
-        //     left: 19rem;
-        // }
-
-        // .tundra-shrew {
-        //     top: 190rem;
-        //     left: 30rem;
-        // }
-
-        // .alder-bush {
-        //     top: 205rem;
-        //     left: 47rem;
-        // }
-
-        // .hare {
-        //     bottom: 110rem;
-        //     left: 26rem;
-        // }
-
-        // .golden-plover {
-        //     bottom: 104rem;
-        //     left: 50rem;
-        // }
-
-        // .lycosus-moss {
-        //     bottom: 85rem;
-        //     left: 20rem;
-        // }
-
-        // .goose {
-        //     bottom: 84rem;
-        //     right: 25rem;
-        // }
-
-        // .swan {
-        //     bottom: 58rem;
-        //     left: 38rem;
-        // }
-
-        // .loon {
-        //     bottom: 57rem;
-        //     right: 14rem;
-        // }
 
         .ground-beetles {
             position: absolute;
@@ -842,8 +1078,12 @@ export default {
 
 .habitat-map {
     position: relative;
-    // height: 40rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 4.5rem;
+    height: 40rem;
+
+    @media (max-width: 768px) {
+        height: unset;
+    }
 
     &__wrap {
         position: absolute;
@@ -880,6 +1120,7 @@ export default {
 
         @media (max-width: 768px) {
             flex-direction: column;
+            gap: 2rem;
         }
     }
 
@@ -895,7 +1136,7 @@ export default {
         transition: .2s;
 
         @media (max-width: 768px) {
-            padding: 5rem 7rem;
+            padding: 4rem 6rem;
             border-radius: 8.125rem;
             font-size: 4.53334rem;
             text-align: center;
@@ -910,6 +1151,278 @@ export default {
             border-color: #D38235;
             opacity: 1;
         }
+    }
+
+    &__legend {
+        position: absolute;
+        left: 7.37rem;
+        top: 10.19rem;
+        width: 12.4rem;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+
+        &-title {
+            margin-bottom: 1rem;
+            font-size: 0.9375rem;
+            font-weight: 700;
+            line-height: 130%;
+        }
+
+        &-text {
+            font-size: 0.9375rem;
+            font-weight: 300;
+            line-height: 130%;
+        }
+
+        &-top {
+            margin-bottom: 2.81rem;
+
+            &-item {
+                display: flex;
+                gap: 0.56rem;
+                align-items: center;
+
+                &:not(:last-child) {
+                    margin-bottom: 0.62rem;
+                }
+
+                svg {
+                    width: 0.875rem;
+                    height: 0.875rem;
+                }
+            }
+        }
+
+        &-bottom {
+            &-item {
+                &:not(:last-child) {
+                    margin-bottom: 0.69rem;
+                }
+            }
+        }
+    }
+
+    &__list {
+        display: none;
+        flex-wrap: wrap;
+        row-gap: 6rem;
+        margin-bottom: 3rem;
+
+        @media (max-width: 768px) {
+            display: flex;
+        }
+
+        &-item {
+            display: flex;
+            margin-bottom: 2rem;
+            align-items: center;
+            gap: 1rem;
+            font-size: 4.2042rem;
+            line-height: 130%;
+
+            &-wrap {
+                width: 50%;
+            }
+
+            svg {
+                width: 3.7333rem;
+                height: 3.7333rem;
+            }
+        }
+
+        &-list {
+            margin-left: 4rem;
+            padding-left: 4rem;
+            font-size: 3.6036rem;
+            font-weight: 300;
+            line-height: 130%;
+
+            li {
+                list-style-type: disc;
+
+                &:not(:last-child) {
+                    margin-bottom: 2.66rem;
+                }
+            }
+        }
+    }
+
+    &__river,
+    &__name-lake {
+        position: absolute;
+        color: var(--blue-deep, #004C97);
+        font-size: 0.5625rem;
+        font-weight: 300;
+        line-height: 130%;
+
+        @media (max-width: 768px) {
+            font-size: 2.4rem;
+        }
+    }
+
+    &__name-lake {
+        top: 14rem;
+        right: 28rem;
+
+        @media (max-width: 768px) {
+            top: unset;
+            right: 25rem;
+            bottom: 57rem;
+        }
+    }
+
+    &__river {
+        top: 16rem;
+        transform: rotate(49deg);
+        right: 24.7rem;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__city {
+        position: absolute;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        font-size: 0.9375rem;
+        font-weight: 400;
+        line-height: 130%;
+        gap: 0.31rem;
+
+        @media (max-width: 768px) {
+            font-size: 3.2rem;
+            gap: 1rem;
+        }
+
+        &-circale {
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 100%;
+            transition-timing-function: ease-in;
+            transition-duration: 0.7s;
+            transition: all 2.3s;
+            z-index: 2;
+            background-color: rgba(#333, 1);
+            flex-shrink: 0;
+
+
+            @media (min-width: 769px) {
+                width: 0.375rem;
+                height: 0.375rem;
+                animation: ripple-black 0.9s infinite;
+            }
+        }
+
+        &-1 {
+            top: 16rem;
+            right: 10.5rem;
+
+            @media (max-width: 768px) {
+                top: unset;
+                bottom: 48rem;
+                right: 6.5rem;
+            }
+        }
+
+        &-2 {
+            top: 26.5rem;
+            right: 15rem;
+
+            @media (max-width: 768px) {
+                top: unset;
+                bottom: 36rem;
+                right: 9rem;
+                left: unset;
+            }
+        }
+
+        &-3 {
+            top: 22.5rem;
+            left: 28.5rem;
+
+            @media (max-width: 768px) {
+                top: unset;
+                bottom: 40rem;
+                left: 10.5rem;
+            }
+        }
+
+        &-4 {
+            width: 8rem;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 3.34rem;
+            top: 17.5rem;
+            left: 34rem;
+
+            &::after {
+                position: absolute;
+                content: '';
+                top: 0.1rem;
+                left: 0.15rem;
+                height: 3.34375rem;
+                width: 1px;
+                background-color: #000;
+            }
+
+            @media (max-width: 768px) {
+                flex-direction: row;
+                top: unset;
+                bottom: 36rem;
+                right: unset;
+                left: 11.5rem;
+                gap: 1.34rem;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+
+        &-5 {
+            width: 8rem;
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            gap: 3.34rem;
+            top: 29.2rem;
+            left: 57.2rem;
+
+            &::after {
+                position: absolute;
+                bottom: 0.1rem;
+                left: 0.15rem;
+                content: '';
+                height: 3.34375rem;
+                width: 1px;
+                background-color: #000;
+            }
+
+            @media (max-width: 768px) {
+                flex-direction: row;
+                top: unset;
+                bottom: 8rem;
+                left: 39rem;
+                gap: 1.34rem;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@keyframes ripple-black {
+    0% {
+        box-shadow: 0 0 0 0 rgba(51, 51, 51, 0.5), 0 0 0 0.1rem rgba(51, 51, 51, 0.3), 0 0 0 0.3rem rgba(51, 51, 51, 0.3), 0 0 0 0.3rem rgba(51, 51, 51, 0.3);
+    }
+
+    90% {
+        box-shadow: 0 0 0 0.1rem rgba(51, 51, 51, 0), 0 0 0 0.2rem rgba(51, 51, 51, 0), 0 0 0 0.3rem rgba(51, 51, 51, 0), 0 0 0 0.4rem rgba(51, 51, 51, 0);
     }
 }
 </style>

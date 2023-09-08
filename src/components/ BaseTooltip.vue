@@ -33,11 +33,19 @@ export default {
         toggalShow() {
             this.show = !this.show
 
+            const collageItems = Array.from(document.querySelectorAll(".text-block__wrap"));
+
             if (this.show && this.isModile) {
                 document.body.style.overflow = 'hidden'
-            }
-            else {
+                collageItems.forEach((elem) => {
+                    elem.style.transform = 'unset'
+                })
+            } else {
                 document.body.style.overflow = 'auto'
+
+                collageItems.forEach((elem) => {
+                    elem.style.transform = 'auto'
+                })
             }
         },
         onResize() {

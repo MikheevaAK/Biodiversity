@@ -66,23 +66,31 @@
                     <div class="scroll-wrap">
                         <div class="scroll-card card-1 text-block__descr">
                             <p>Большой Норильск</p>
-                            Норильский промышленный район, или Большой Норильск образован местными предприятиями
-                            &laquo;Норникеля&raquo;. Также в&nbsp;район входят города Норильск, Дудинка и&nbsp;ещё несколько
-                            населённых пунктов. Здесь в&nbsp;условиях многолетней мерзлоты компания добывает
-                            и&nbsp;перерабатывает медь, драгоценные металлы, теллур, серу и&nbsp;селен.
+                            <p>Норильский промышленный район, или Большой Норильск образован местными предприятиями
+                                &laquo;Норникеля&raquo;. Также в&nbsp;район входят города Норильск, Дудинка и&nbsp;ещё
+                                несколько
+                                населённых пунктов. Здесь в&nbsp;условиях многолетней мерзлоты компания добывает
+                                и&nbsp;перерабатывает медь, драгоценные металлы, теллур, серу и&nbsp;селен.
+                            </p>
+                            <BaseDropdownInfo :title="'Предприятия'" :color="'#D38235'"
+                                :text="'<ul><li>Талнахский рудный узел: 5 рудников</li><li>Норильский рудный узел: 1 рудник</li><li>Талнахская обогатительная фабрика</li><li>Норильская обогатительная фабрика</li><li>Надеждинский металлургический завод</li><li>Медный завод</li></ul>'" />
                         </div>
                         <div class="scroll-card card-2 text-block__descr">
                             <p>Энергетические объекты</p>
-                            Теплом и&nbsp;светом Промышленный район обеспечивают теплоцентрали, ГЭС и&nbsp;газодобывающие
-                            предприятия &laquo;Норникеля&raquo;.
+                            <p>Теплом и&nbsp;светом Промышленный район обеспечивают теплоцентрали, ГЭС и&nbsp;газодобывающие
+                                предприятия &laquo;Норникеля&raquo;.
+                            </p>
+                            <BaseDropdownInfo :title="'Объекты'" :color="'#D38235'"
+                                :text="'<ul><li>Южно-Соленинское газоконденсатное месторождение</li><li>Мессояхское газовое месторождение</li><li>Северо-Соленинское газоконденсатное месторождение</li><li>Пеляткинское газоконденсатное месторождение</li><li>ТЭЦ-1 г. Норильск</li><li>ТЭЦ-2 г. Талнах</li><li>ТЭЦ-3 г. Кайеркан</li><li>Курейская ГЭС</li><li>Усть-Хантайская ГЭС</li></ul>'" />
                         </div>
                         <div class="scroll-card card-3 text-block__descr">
                             <p>Путоранский заповедник</p>
-                            Природный объект, важный для поддержания и&nbsp;восстановления местного биоразнообразия.
-                            Расстояние
-                            от&nbsp;Промышленного района до&nbsp;границ заповедника&nbsp;&mdash; более 50&nbsp;км.
-                            По&nbsp;словам специалистов, этого достаточно, чтобы сохранить местные экосистемы
-                            в&nbsp;неприкосновенности и&nbsp;исключить воздействие предприятий.
+                            <p>Природный объект, важный для поддержания и&nbsp;восстановления местного биоразнообразия.
+                                Расстояние
+                                от&nbsp;Промышленного района до&nbsp;границ заповедника&nbsp;&mdash; более 50&nbsp;км.
+                                По&nbsp;словам специалистов, этого достаточно, чтобы сохранить местные экосистемы
+                                в&nbsp;неприкосновенности и&nbsp;исключить воздействие предприятий.
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -509,7 +517,7 @@ export default {
                 }
             ],
             isModile: (window.innerWidth <= 768),
-            heroDescr: 'Какие виды животных и растений живут по соседству с промышленным гигантом Красноярского края — Большим Норильском'
+            heroDescr: 'Какие виды животных и&nbsp;растений живут по&nbsp;соседству с&nbsp;промышленным гигантом&nbsp;Красноярского края&nbsp;&mdash; Большим Норильском'
         }
     },
     mounted() {
@@ -786,11 +794,14 @@ export default {
             right: 0;
             z-index: 1;
             height: 100vh;
-            // margin: 0 6.75rem;
-            // width: calc(100% - 13.5rem);
             background-position: bottom;
             background-size: calc(100% - 13.5rem) 49rem;
             background-repeat: no-repeat;
+
+            @media (max-width: 768px) {
+                background-position: center;
+                background-size: 100%;
+            }
 
             &.active {
                 background-attachment: fixed;
@@ -798,7 +809,7 @@ export default {
 
                 @media (max-width: 768px) {
                     height: 100%;
-                    background-size: contain;
+                    background-size: cover;
                     position: fixed;
                     background-attachment: unset;
                 }
@@ -807,12 +818,11 @@ export default {
                     background-attachment: unset;
                     background-position: 6.75rem 310vh;
                     background-size: calc(100% - 13.5rem) 49rem;
-                    // margin: 0 6.75rem;
-                    // width: calc(100% - 13.5rem);
 
                     @media (max-width: 768px) {
                         background-position: bottom;
                         position: absolute;
+                        background-size: 100%;
                     }
                 }
             }
@@ -834,15 +844,15 @@ export default {
 
             @media (max-width: 768px) {
                 &.bg-1 {
-                    background-image: url(../../public/img/fito-1-mobile.jpg);
+                    background-image: url(../../public/img/map-1-mobile.jpg);
                 }
 
                 &.bg-2 {
-                    background-image: url(../../public/img/fito-2-mobile.jpg);
+                    background-image: url(../../public/img/map-2-mobile.jpg);
                 }
 
                 &.bg-3 {
-                    background-image: url(../../public/img/fito-3-mobile.jpg);
+                    background-image: url(../../public/img/map-3-mobile.jpg);
                 }
             }
         }
@@ -874,6 +884,66 @@ export default {
 
                 &:first-child {
                     margin-top: 100vh;
+                }
+            }
+
+            p {
+                font-size: 1.125rem;
+                font-weight: 300;
+                line-height: 130%;
+
+                @media (max-width: 768px) {
+                    font-size: 4.53334rem;
+                }
+
+                &:first-child {
+                    margin-bottom: 1.56rem;
+                    font-size: 1.125rem;
+                    font-weight: 600;
+
+                    @media (max-width: 768px) {
+                        margin-bottom: 6.6667rem;
+                        font-size: 4.8rem;
+                    }
+                }
+            }
+
+            .dropdown-info {
+                margin-top: 1.88rem;
+
+                @media (max-width: 768px) {
+                    margin-top: 7.4666rem;
+                }
+
+                &__title {
+                    @media (max-width: 768px) {
+                        font-size: 4.8rem;
+                    }
+                }
+
+                &__text {
+                    background: #F7F6F2;
+                    width: 27rem;
+                    padding: 3.5rem 1.4375rem 1.5625rem 3.375rem;
+
+                    @media (max-width: 768px) {
+                        left: -4.3rem;
+                        top: -4.3rem;
+                        width: 91.734rem;
+                        padding: 14.9334rem 6.1333rem 6.6666rem 13.8666rem;
+                    }
+                }
+
+                ul {
+                    list-style-type: disc;
+
+                    li {
+                        padding-left: 0.94rem;
+                    }
+
+                    li:not(:last-child) {
+                        margin-bottom: 0.8rem;
+                    }
                 }
             }
         }
@@ -965,6 +1035,20 @@ export default {
             // @supports (background-image: url(../../public/img/collage-mobile.webp)) {
             // background-image: url(../../public/img/collage-mobile.webp);
             // } 
+        }
+
+        .dropdown-info__wrap {
+            @media (max-width: 768px) {
+                // z-index: 1;
+            }
+        }
+
+        .dropdown-info__text {
+            @media (max-width: 768px) {
+                // position: static;
+                width: 93.34rem;
+                padding: 10.6667rem 5.3333rem 3.7333rem 12.2666rem;
+            }
         }
 
         .ground-beetles {
@@ -1074,9 +1158,8 @@ export default {
             position: static;
         }
     }
-}
 
-.habitat-map {
+    .habitat-map {
     position: relative;
     margin-bottom: 4.5rem;
     height: 40rem;
@@ -1414,6 +1497,7 @@ export default {
             }
         }
     }
+}
 }
 
 @keyframes ripple-black {

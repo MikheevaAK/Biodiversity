@@ -6,6 +6,7 @@ import PyasinoPage from '@/pages/PyasinoPage'
 import ExpeditionPage from '@/pages/ExpeditionPage'
 import NorilskDivisionPage from '@/pages/NorilskDivisionPage'
 import TransbaikalDivisionPage from '@/pages/TransbaikalDivisionPage'
+import KolaDivisionPage from '@/pages/KolaDivisionPage'
 
 
 Vue.use(VueRouter)
@@ -35,6 +36,11 @@ const routes = [
         name: 'transbaikal-division',
         component: TransbaikalDivisionPage,
         path: '/transbaikal-division'
+    },
+    {
+        name: 'kola-division',
+        component: KolaDivisionPage,
+        path: '/kola-division'
     },
 ]
 

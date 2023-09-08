@@ -137,11 +137,11 @@ export default {
         return {
             list1: [
                 {
-                    link: '/division',
+                    link: '/norilsk-division',
                     title: 'Норильский дивизион',
                 },
                 {
-                    link: '',
+                    link: '/kola-division',
                     title: 'Кольский дивизион',
                 },
                 {

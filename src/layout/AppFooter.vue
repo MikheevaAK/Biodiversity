@@ -280,14 +280,15 @@ export default {
     }
 
     &__mid {
-        padding: 0 7.1rem 3.5rem 7.1rem;
+        position: relative;
+        padding: 0 5.5rem 3.5rem 5.5rem;
 
         @media (max-width: 768px) {
             padding: 0 0 11.06rem 0;
         }
 
         &-descr {
-            margin-bottom: 1.62rem;
+            position: absolute;
             font-size: 1.125rem;
             font-weight: 600;
             line-height: 130%;
@@ -296,7 +297,6 @@ export default {
             @media (max-width: 768px) {
                 position: relative;
                 top: 5rem;
-                margin-bottom: 0;
                 font-size: 5.86667rem;
                 text-align: center;
             }
@@ -304,25 +304,23 @@ export default {
 
         &-img {
             width: 100%;
-            height: 8.25rem;
-            opacity: 0.5;
-            background: #F8FC2B;
+            height: 11rem;
+            background-image: url(../../public/img/footer.png);
+            background-size: cover;
             margin-bottom: 1.44rem;
             background-repeat: no-repeat;
 
             @media (max-width: 768px) {
-                opacity: 1;
-                background-color: unset;
                 width: 100%;
                 height: 29.8667rem;
                 margin-bottom: 5.3334rem;
                 background-image: url(../../public/img/footer-mobile.png);
                 background-position: center;
-                background-size: cover;
             }
         }
 
         &-wrap {
+            padding-left: 1.3rem;
             display: flex;
             gap: 0.75rem;
             width: 100%;

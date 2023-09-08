@@ -322,7 +322,7 @@ export default {
         &-wrap {
             padding-left: 1.3rem;
             display: flex;
-            gap: 0.75rem;
+            gap: 3.75rem;
             width: 100%;
 
             @media (max-width: 768px) {

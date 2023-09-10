@@ -20,6 +20,18 @@
         <Transition name="dropdown-info">
             <div v-if="show" class="dropdown-info__text" v-html="text"></div>
         </Transition>
+
+        <!-- <div v-if="show && isModal && window.innerWidth <= 768" class="modal">
+            <svg class="hidden-close" @click="toggleInfo" xmlns="http://www.w3.org/2000/svg"
+                width="17" height="17" viewBox="0 0 17 17" fill="none">
+                <path d="M16 1L1 16" stroke="#333333" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M1 1L16 16" stroke="#333333" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <div class="dropdown-info__title">
+                {{ title }}
+            </div>
+            <div class="dropdown-info__text" v-html="text"></div>
+        </div> -->
     </div>
 </template>
 
@@ -42,6 +54,10 @@ export default {
         color: {
             type: String,
             default: '#C2C095'
+        },
+        isModal: {
+            type: Boolean,
+            default: false
         }
     },
     methods: {

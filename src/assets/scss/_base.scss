@@ -138,3 +138,13 @@ svg {
         margin-bottom: 21.3334rem;
     }
 }
+
+@keyframes ripple-black {
+    0% {
+        box-shadow: 0 0 0 0 rgba(51, 51, 51, 0.5), 0 0 0 0.1rem rgba(51, 51, 51, 0.3), 0 0 0 0.3rem rgba(51, 51, 51, 0.3), 0 0 0 0.3rem rgba(51, 51, 51, 0.3);
+    }
+
+    90% {
+        box-shadow: 0 0 0 0.1rem rgba(51, 51, 51, 0), 0 0 0 0.2rem rgba(51, 51, 51, 0), 0 0 0 0.3rem rgba(51, 51, 51, 0), 0 0 0 0.4rem rgba(51, 51, 51, 0);
+    }
+}

@@ -1,6 +1,6 @@
 <template>
     <div class="transbaikal">
-        <BaseHero :title="'Забайкальский дивизион. Природа в окрестностях Быстринского комбината'" :descr="heroDescr"
+        <BaseHero :title="'Забайкальский дивизион. Природа в&nbsp;окрестностях Быстринского комбината'" :descr="heroDescr"
             :img="'img/hero4.jpg'" :imgMobile="'img/hero4-mobile.jpg'" />
         <MainSection>
             <SectionWhite>
@@ -8,7 +8,8 @@
                     Забайкальский
                     <BaseTooltip :word="'дивизиона'">
                         Компании объединяют в&nbsp;дивизион предприятия одного региона или объекты с&nbsp;общей задачей,
-                        например, перевозка сырья или энергоснабжение. Деление на&nbsp;дивизионы (от&nbsp;французского слова
+                        например, перевозкой сырья или энергоснабжением. Деление на&nbsp;дивизионы (от&nbsp;французского
+                        слова
                         division&nbsp;&mdash; &laquo;разделение&raquo;) упрощает управление крупной организацией.
                     </BaseTooltip>
                     «Норникеля» отвечает за разработку золото-железо-медных руд Быстринского
@@ -18,7 +19,7 @@
                 </BaseTextBlock>
 
                 <BigMap :circales="circales" :img="'img/transbaikal-big-map.jpg'" class="mb-100"
-                    :imgMobile="'img/division-big-map-mobile.webp'">
+                    :imgMobile="'img/transbaikal-big-map-mobile.jpg'">
                     <div class="circales">
                         <div class="circale-block">
                             <svg class="circale-block__img" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
@@ -52,15 +53,17 @@
                     <p>
                         Созданный в&nbsp;80-х природный заказник сохраняет экосистемы Забайкалья и&nbsp;поддерживает
                         экологический баланс. Промышленные объекты дивизиона расположены на&nbsp;расстоянии 22&nbsp;км
-                        от&nbsp;границ заказника, и&nbsp;по&nbsp;мнению исследователей, не&nbsp;влияют на&nbsp;его природных
+                        от&nbsp;границ заказника и,&nbsp;по&nbsp;мнению исследователей, не&nbsp;влияют на&nbsp;его природных
                         обитателей.
                     </p>
                 </BaseTextBlock>
 
                 <picture>
-                        <!-- <source type="image/webp" srcset="img/area.webp"> -->
-                        <img src="img/area.png">
-                    </picture>
+                    <source media="(max-width: 768px)" srcset="img/area-mobile.png">
+                    <source media="(max-width: 768px)" type="image/webp" srcset="img/area-mobile.webp">
+                    <source type="image/webp" srcset="img/area.webp">
+                    <img class="mb-100" src="img/area.png" alt="">
+                </picture>
 
                 <BaseTextBlock class="text mb-40" :title="'Зона воздействия предприятий Забайкальского дивизиона'"
                     :tooltip="true">
@@ -99,7 +102,7 @@
                     <p>
                         Состояние природного окружения дивизиона подтверждает эффективность экологических технологий,
                         которые были использованы при строительстве Быстринского ГОК. Воздействие комбината
-                        на&nbsp;экосистемы не&nbsp;выходит за&nbsp;территорию промышленных объектов
+                        на&nbsp;экосистемы не&nbsp;выходит за&nbsp;территорию промышленных объектов.
                     </p>
                 </BaseSidebar>
             </SectionWhite>
@@ -111,14 +114,14 @@
                     <div class="section-orange__descr">
                         <p>
                             В&nbsp;зоне, прилегающей к&nbsp;Быстринскому комбинату, участники Большой Научной экспедиции
-                            обнаружили несколько охраняемых
+                            обнаружили несколько
                             <BaseTooltip :word="'охраняемых'">
                                 Редкие и&nbsp;находящиеся под угрозой исчезновения виды, чья численность сокращается или уже
                                 сократилась до&nbsp;опасного уровня. Им&nbsp;присваивают статус охраняемых и&nbsp;заносят
                                 в&nbsp;Красные книги&nbsp;&mdash; общероссийскую или региональные. Охранный статус запрещает
                                 охоту на&nbsp;животных, а&nbsp;в&nbsp;местах обитания краснокнижных растений и&nbsp;грибов
                                 ограничено строительство и&nbsp;другая хозяйственная деятельность.
-                            </BaseTooltip> видов растений и&nbsp;птиц, а&nbsp;также отобрали индикаторные
+                            </BaseTooltip> видов растений и&nbsp;птиц, а&nbsp;также отобрали
                             <BaseTooltip :word="'индикаторные'">
                                 Исследователи выбирают виды-индикаторы из&nbsp;числа типичных для региона организмов,
                                 наиболее чутко реагирующих на&nbsp;отклонения в&nbsp;состоянии природной среды. Если
@@ -141,6 +144,7 @@
                             по&nbsp;площади занимают луга, на&nbsp;южных склонах хребтов формируются степи.
                             По&nbsp;межгорным долинам протекают реки, образуя болота, заболоченные и&nbsp;пойменные луга.
                         </p>
+                        <BaseNumberBlock class="" :textTop="'245 видов'" :textBottom="'сосудистых растений'" />
                     </BaseTextBlock>
                     <BaseTextBlock :title="'Фауна'">
                         <p class="mb-10">
@@ -153,32 +157,29 @@
                             распространены рябчик и&nbsp;глухарь. Разнообразие птиц становится гораздо богаче в&nbsp;тёплое
                             время года.
                         </p>
-                        <!-- <BaseNumberBlock class="" :textTop="'56 видов'" :textBottom="'птиц'" /> -->
+                        <div class="wrap-numbers">
+                            <BaseNumberBlock class="" :textTop="'56 видов'" :textBottom="'птиц'" />
+                            <BaseNumberBlock class="" :textTop="'21 вид'" :textBottom="'млекопитающих'" />
+                        </div>
                     </BaseTextBlock>
                 </div>
-                <div class="collage">
-                    <!-- <BaseDropdownInfo class="ground-beetles" :title="'Жужелицы'"
-                        :text="'Такие виды, как Amara brunnea, Pterostichus fulvescens, Notiophilus fasciatus и Nebria gyllenhali, отрицательно реагируют на&nbsp;промышленное воздействие и&nbsp;помогают исследователям фиксировать изменения в&nbsp;окружающей среде'" />
-                    <BaseDropdownInfo class="myxomycetes" :title="'Миксомицеты'"
-                        :text="'Миксомицеты занимают промежуточное положение между растениями и&nbsp;животными: похожие внешне на&nbsp;грибы, они постоянно передвигаются и&nbsp;едят. На&nbsp;территории воздействия предприятий исследователи обнаружили 14&nbsp;видов этих существ'" />
-                    <BaseDropdownInfo class="microalgae" :title="'Микроводоросли'"
-                        :text="'В&nbsp;реках и&nbsp;озёрах дивизиона биологи обнаружили два вида микроводорослей, способных рассказать об&nbsp;экологической обстановке. Похожая на&nbsp;звезду Asterionella formosa живёт только в&nbsp;чистых водоёмах, в&nbsp;то&nbsp;время как её&nbsp;антогонист Dictyosphaerium pulchellum развивается в&nbsp;загрязнённой воде'" />
+                <div class="collage mb-100">
+                    <BaseDropdownInfo :isModal="true" class="dubrovnik" :title="'Дубровник'" :color="'#71464E'"
+                        :text="'Имеет китайское происхождение. В&nbsp;19&nbsp;веке вид проник в&nbsp;Европу и&nbsp;очень быстро освоил её&nbsp;&mdash; в&nbsp;1920-х годах птичек с&nbsp;яркой внешностью можно было встретить уже в&nbsp;Финляндии. За&nbsp;последнее время популяция дубровника в&nbsp;мире сократилась на&nbsp;90%, вид занесён в&nbsp;Красную книгу России'" />
+                    <BaseDropdownInfo :isModal="true" class="siberian-deer" :title="'Сибирская косуля'"
+                        :text="'Как показали исследования, численность сибирских косуль рядом c&nbsp;Быстринским ГОК и&nbsp;на&nbsp;территории за&nbsp;пределами радиуса промышленного воздействия одинаковая. Вид встречается настолько часто, что учёные РАН выбрали его индикатором состояния экосистем дивизиона'" />
 
-                    <BaseDropdownInfo class="zooplankton" :title="'Зоопланктон'"
-                        :text="'Чтобы оценить состояние водоёмов, исследователи отобрали виды зоопланктона, сигнализирующие о&nbsp;качестве воды. Например, планктонный рачок Limnocalanus macrurus любит чистую воду, а&nbsp;если начинает доминировать планктонная коловратка Brachionus sericus&nbsp;&mdash; вода загрязнена'" />
-                    <BaseDropdownInfo v-if="!isModile" class="char" :title="'Арктический голец (боганидская палия)'"
-                        :text="'Считается самой полезной рыбой в&nbsp;мире: кусочек рыбы в&nbsp;30&nbsp;г. покрывает суточную потребность человека в&nbsp;полезных жирных кислотах. Встречается также в&nbsp;водоёмах Кольского дивизиона'" />
+                    <BaseDropdownInfo :isModal="true" class="ants" :title="'Муравьи'"
+                        :text="'Как показали исследования, численность сибирских косуль рядом c&nbsp;Быстринским ГОК и&nbsp;на&nbsp;территории за&nbsp;пределами радиуса промышленного воздействия одинаковая. Вид встречается настолько часто, что учёные РАН выбрали его индикатором состояния экосистем дивизиона'" />
 
-                    <BaseDropdownInfo v-if="isModile" class="merlin" :title="'Кречет'" :color="'#71464E'"
-                        :text="'Самая крупная птица из&nbsp;отряда соколиных. За&nbsp;последние 20&nbsp;лет её&nbsp;популяция в&nbsp;России сократилась втрое. &laquo;Норникель&raquo; вложил 50&nbsp;млн рублей в&nbsp;поддержку и&nbsp;сохранение вида в&nbsp;2022&ndash;2023&nbsp;гг'" />
+                    <BaseDropdownInfo :isModal="true" class="maksimovichs-vole" :title="'Полёвка Максимовича'"
+                        :text="'Доминирует среди других 10&nbsp;видов грызунов на&nbsp;территории всех зон воздействия Забайкальского дивизиона. Рядом с&nbsp;Быстринским комбинатом исследователи отметили особенно высокий уровень доминирования, поэтому выбрали полёвку Максимовича видом-индикатором'" />
+                    <BaseDropdownInfo :isModal="true" class="killer-whale" :title="'Касатка'" :color="'#71464E'"
+                        :text="'Охота&nbsp;&mdash; одна из&nbsp;причин сокращения численности этого вида уток. В&nbsp;брачный период самцы касаток приобретают выразительный элегантный окрас, из-за чего становятся желанным трофеем'" />
+                    <BaseDropdownInfo :isModal="true" class="zooplankton-2" :title="'Зоопланктон'"
+                        :text="'В&nbsp;водоёмах Забайкалья учёные использовали три вида как индикаторы степени воздействия: планктонная коловратка Lophocharis oxysternon присутствовала только в&nbsp;реках фоновых территорий, личинки подёнок Ephoron nigridorsum не&nbsp;обнаруживались в&nbsp;зоне интенсивного воздействия, а&nbsp;отделить пояса интенсивного и&nbsp;умеренного воздействия помогли личинки веснянок Agnetina extremа'" />
 
-                    <BaseDropdownInfo v-if="isModile" class="deer" :title="'Дикий северный олень'" :color="'#71464E'"
-                        :text="'Отличительная особенность этого вида&nbsp;&mdash; наличие рогов у&nbsp;самок. Наименее изученная и&nbsp;малочисленная популяция дикого северного оленя&nbsp;&mdash; гыданская, она занесена в&nbsp;Красную книгу ЯНАО. По&nbsp;данным исследований, олени почти не&nbsp;мигрируют на&nbsp;дальние расстояния и&nbsp;круглый год остаются в&nbsp;арктической тундре'" />
-                    <BaseDropdownInfo v-if="isModile" class="lycosus-moss" :title="'Плаунок плаунковидный'"
-                        :color="'#71464E'"
-                        :text="'В&nbsp;районе Промышленного Норильска биологи обнаружили несколько участков, ценных для произрастания этого редкого вида растений. Чтобы сохранить популяции плаунка, вокруг этих участков необходимо создавать защитные зоны'" />
-                    <BaseDropdownInfo v-if="isModile" class="hare" :title="'Заяц-беляк'"
-                        :text="'Спасаясь от&nbsp;опасности, развивает скорость до&nbsp;60 км/ч'" /> -->
+
                 </div>
                 <div class="habitat-map">
                     <div class="habitat-map__legend">
@@ -216,31 +217,40 @@
                         <div class="habitat-map__legend-bottom">
                             <div class="habitat-map__legend-title">Виды</div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                1 – Кречет
+                                1 – Касатка
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                2 – Сапсан
+                                2 – Большой подорлик
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                3 – Орлан-белохвост
+                                3 – Полевой лунь
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                4 – Гуменник
+                                4 – Большой кроншнеп
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                5 – Золотистая ржанка
+                                5 – Журавль-красавка
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                6 – Лебедь-кликун
+                                6 – Дубровник
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                7 – Чернозобая гагара
+                                7 – Сибирская пестрогрудка
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                8 – Плаунок плаунковидный
+                                8 – Рябина сибирская
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                9 – Реликтовые тундростепи
+                                9 – Лилия карликовая
+                            </div>
+                            <div class="habitat-map__legend-top-item habitat-map__legend-text">
+                                10 – Красоднев малый
+                            </div>
+                            <div class="habitat-map__legend-top-item habitat-map__legend-text">
+                                11 – Клопогон даурский
+                            </div>
+                            <div class="habitat-map__legend-top-item habitat-map__legend-text">
+                                12 – Венерин башмачок
                             </div>
                         </div>
                     </div>
@@ -257,11 +267,9 @@
                                     <div>Интенсивная</div>
                                 </div>
                                 <ul class="habitat-map__list-list">
-                                    <li>Орлан-белохвост</li>
-                                    <li>Золотистая ржанка</li>
-                                    <li>Лебедь-кликун</li>
-                                    <li>Чернозобая гагара</li>
-                                    <li>Сапсан</li>
+                                    <li>Касатка</li>
+                                    <li>Венерин башмачок</li>
+                                    <li>Клопогон даурский</li>
                                 </ul>
                             </div>
 
@@ -274,11 +282,10 @@
                                     <div>Умеренная</div>
                                 </div>
                                 <ul class="habitat-map__list-list">
-                                    <li>Гуменник</li>
-                                    <li>Золотистая ржанка</li>
-                                    <li>Лебедь-кликун</li>
-                                    <li>Чернозобая гагара</li>
-                                    <li>Плаунок</li>
+                                    <li>Большой кроншнеп</li>
+                                    <li>Журавль-красавка</li>
+                                    <li>Рябина сибирская</li>
+                                    <li>Клопогон даурский</li>
                                 </ul>
                             </div>
 
@@ -291,11 +298,10 @@
                                     <div>Незначительная</div>
                                 </div>
                                 <ul class="habitat-map__list-list">
-                                    <li>Золотистая ржанка</li>
-                                    <li>Лебедь-кликун</li>
-                                    <li>Чернозобая гагара</li>
-                                    <li>Реликтовые&nbsp;тундростепи</li>
-                                    <li>Кречет и Сапсан</li>
+                                    <li>Полевой лунь</li>
+                                    <li>Сибирская&nbsp;пестрогрудка</li>
+                                    <li>Лилия карликовая</li>
+                                    <li>Красоднев малый</li>
                                 </ul>
                             </div>
 
@@ -308,37 +314,29 @@
                                     <div>Фоновая</div>
                                 </div>
                                 <ul class="habitat-map__list-list">
-                                    <li>Гуменник</li>
-                                    <li>Золотистая ржанка</li>
+                                    <li>Большой подорлик</li>
+                                    <li>Венерин башмачок</li>
+                                    <li>Дубровник</li>
+                                    <li>Красоднев малый</li>
                                 </ul>
                             </div>
 
                         </div>
                     </div>
-
+                    <div class="habitat-map__city habitat-map__city-1">
+                        <div class="habitat-map__city-circale"></div>
+                        <span>Быстринский ГОК</span>
+                    </div>
+                    <div class="habitat-map__city habitat-map__city-2">
+                        <div class="habitat-map__city-circale"></div>
+                        <span>село Газимурский Завод</span>
+                    </div>
                     <picture>
-                        <!-- <source media="(max-width: 768px)" srcset="img/habitat-map-1-mobile.png"> -->
-                        <!-- <source type="image/webp" srcset="img/habitat-map-1.webp"> -->
+                        <source media="(max-width: 768px)" srcset="img/habitat-map-mobile.png">
+                        <source media="(max-width: 768px)" type="image/webp" srcset="img/habitat-map-mobile.webp">
                         <img src="img/habitat-map.jpg" alt="">
                     </picture>
 
-                    <!-- <div>
-                        <div class="habitat-map__name-lake">
-                            оз. Пясино
-                        </div>
-                        <div class="habitat-map__city habitat-map__city-1">
-                            <div class="habitat-map__city-circale"></div>
-                            <span>Талнах</span>
-                        </div>
-                        <div class="habitat-map__city habitat-map__city-2">
-                            <div class="habitat-map__city-circale"></div>
-                            <span>Норильск</span>
-                        </div>
-                        <div class="habitat-map__city habitat-map__city-3">
-                            <div class="habitat-map__city-circale"></div>
-                            <span>Дудинка</span>
-                        </div>
-                    </div> -->
                 </div>
                 <BaseTextBlock class="text mb-40">
                     <p class="mb-10">
@@ -355,7 +353,7 @@
                         Усиление промышленного воздействия природными факторами требует от&nbsp;&laquo;Норникеля&raquo;
                         внимательного отношения к&nbsp;состоянию экосистем дивизиона. Компания совместно с&nbsp;учёными
                         продолжит исследования в&nbsp;районе месторождения, чтобы сделать эти места максимально безопасными
-                        для их&nbsp;обитателей
+                        для их&nbsp;обитателей.
                     </p>
                 </BaseSidebar>
             </SectionOrange>
@@ -372,6 +370,8 @@ import MainSection from '@/layout/MainSection'
 import BaseTooltip from '@/components/ BaseTooltip.vue'
 import BaseTextBlock from '@/components/BaseTextBlock.vue'
 import BaseSidebar from '@/components/BaseSidebar'
+import BaseNumberBlock from '@/components/BaseNumberBlock'
+import BaseDropdownInfo from '@/components/BaseDropdownInfo.vue'
 export default {
     components: {
         BaseHero,
@@ -383,7 +383,8 @@ export default {
         BaseSidebar,
         BaseTooltip,
         // BaseScrollBlock,
-        // BaseNumberBlock
+        BaseDropdownInfo,
+        BaseNumberBlock
     },
     data() {
         return {
@@ -420,8 +421,8 @@ export default {
             }
 
             @media (max-width: 768px) {
-                top: 56.4rem;
-                left: 70rem;
+                top: 43rem;
+                left: 73rem;
             }
 
             &__2 {
@@ -429,8 +430,8 @@ export default {
                 right: 39.3rem;
 
                 @media (max-width: 768px) {
-                    top: 48.4rem;
-                    left: 44.2rem;
+                    top: 58rem;
+                    left: 54rem;
                 }
             }
         }
@@ -447,7 +448,6 @@ export default {
             @media (max-width: 768px) {
                 top: 0;
                 flex-direction: row;
-                flex-wrap: wrap;
                 width: 81.4rem;
                 gap: 3.3rem;
             }
@@ -491,7 +491,6 @@ export default {
 
     .collage {
         position: relative;
-        margin-bottom: 1.25rem;
         height: 388rem;
         width: 100%;
         background-image: url(../../public/img/collage2.webp);
@@ -499,9 +498,83 @@ export default {
         background-size: contain;
         z-index: 1;
 
-        // @supports (background-image: url(../../public/img/collage.webp)) {
-        //     background-image: url(../../public/img/collage.webp);
+        // @supports (background-image: url(../../public/img/collage2.webp)) {
+        //     background-image: url(../../public/img/collage2.webp);
         // }
+
+        @media (max-width: 768px) {
+            height: 792rem;
+            background-image: url(../../public/img/collage-mobile.png);
+            // @supports (background-image: url(../../public/img/collage-mobile.webp)) {
+            // background-image: url(../../public/img/collage-mobile.webp);
+            // } 
+        }
+
+        .dubrovnik {
+            position: absolute;
+            top: 59.5rem;
+            right: 18.5rem;
+
+            @media (max-width: 768px) {
+                top: 311rem;
+                right: 40rem;
+            }
+        }
+
+        .siberian-deer {
+            position: absolute;
+            top: 122rem;
+            left: 14rem;
+
+            @media (max-width: 768px) {
+                top: 311rem;
+                left: 40rem;
+            }
+        }
+
+        .ants {
+            position: absolute;
+            bottom: 177rem;
+            left: 44rem;
+
+            @media (max-width: 768px) {
+                bottom: 177rem;
+                left: 44rem;
+            }
+        }
+
+        .maksimovichs-vole {
+            position: absolute;
+            bottom: 81rem;
+            left: 3rem;
+
+            @media (max-width: 768px) {
+                bottom: 177rem;
+                left: 44rem;
+            }
+        }
+
+        .killer-whale {
+            position: absolute;
+            bottom: 35.5rem;
+            right: 22rem;
+
+            @media (max-width: 768px) {
+                bottom: 15rem;
+                left: 44rem;
+            }
+        }
+
+        .zooplankton-2 {
+            position: absolute;
+            bottom: 22.5rem;
+            right: 48rem;
+
+            @media (max-width: 768px) {
+                bottom: 10rem;
+                left: 44rem;
+            }
+        }
     }
 
     .habitat-map {
@@ -593,6 +666,62 @@ export default {
             }
         }
 
+        &__city {
+            position: absolute;
+            width: 5rem;
+            display: flex;
+            flex-direction: column;
+            font-size: 0.9375rem;
+            font-weight: 400;
+            line-height: 130%;
+            gap: 0.37rem;
+
+            @media (max-width: 768px) {
+                font-size: 3.2rem;
+                gap: 1rem;
+            }
+
+            &-circale {
+                width: 1.6rem;
+                height: 1.6rem;
+                border-radius: 100%;
+                transition-timing-function: ease-in;
+                transition-duration: 0.7s;
+                transition: all 2.3s;
+                z-index: 2;
+                background-color: rgba(#333, 1);
+                flex-shrink: 0;
+
+
+                @media (min-width: 769px) {
+                    width: 0.375rem;
+                    height: 0.375rem;
+                    animation: ripple-black 0.9s infinite;
+                }
+            }
+
+            &-1 {
+                top: 32.5rem;
+                left: 50.5rem;
+
+                @media (max-width: 768px) {
+                    top: unset;
+                    bottom: 36rem;
+                    left: 56rem;
+                }
+            }
+
+            &-2 {
+                display: none;
+
+                @media (max-width: 768px) {
+                    display: flex;
+                    bottom: 36rem;
+                    left: 23rem;
+                }
+            }
+        }
+
         &__list {
             display: none;
             flex-wrap: wrap;
@@ -638,4 +767,88 @@ export default {
             }
         }
     }
-}</style>
+
+    .section-orange {
+        &__title {
+            color: var(--copper, #D38235);
+            margin-bottom: 2.19rem;
+            font-size: 2.125rem;
+            font-weight: 600;
+            line-height: 130%;
+
+            @media (max-width: 768px) {
+                font-size: 7.4667rem;
+                margin-bottom: 6.4rem;
+            }
+        }
+
+        .text {
+            width: 38.25rem;
+            text-align: center;
+
+            @media (max-width: 768px) {
+                width: unset;
+                text-align: start;
+            }
+        }
+
+        .number-block {
+            position: static;
+        }
+    }
+
+    .flora-and-fauna {
+        display: flex;
+        gap: 5.44rem;
+        width: 63.5rem;
+        margin: 0 auto;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            width: unset;
+            gap: 12.27rem;
+            margin-bottom: 16rem;
+        }
+
+        .text-block__wrap {
+            margin: 0;
+
+            &:first-child {
+                width: 29.375rem;
+
+                .number-block {
+                    margin-top: 2.88rem;
+
+                    @media (max-width: 768px) {
+                        margin-top: 7.4rem;
+                    }
+                }
+            }
+
+            &:last-child {
+                width: 28.625rem;
+
+                .wrap-numbers {
+                    display: flex;
+                    gap: 2.88rem;
+                    margin-top: 2.88rem;
+
+                    @media (max-width: 768px) {
+                        margin-top: 7.4rem;
+                        gap: 7.4rem;
+                        flex-direction: column;
+                    }
+                }
+            }
+
+            @media (max-width: 768px) {
+
+                &:first-child,
+                &:last-child {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+</style>

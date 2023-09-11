@@ -2,8 +2,8 @@
     <div class="big-map">
         <slot></slot>
         <picture>
-            <source media="(max-width: 768px)" :srcset="imgMobile+ '.png'">
             <source media="(max-width: 768px)" type="image/webp" :srcset="imgMobile+ '.webp'">
+            <source media="(max-width: 768px)" :srcset="imgMobile+ '.png'">
             <source type="image/webp" :srcset="img+ '.webp'">
             <img :src="img + '.png'" alt="">
         </picture>

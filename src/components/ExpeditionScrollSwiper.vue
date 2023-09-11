@@ -3,6 +3,10 @@
         <div class="team-container">
             <div class="team-item hydrochemist">
                 <img class="team-item__img" src="img/hydrochemist.png" alt="">
+                <picture>
+                    <source type="image/webp" srcset="img/hydrochemist.webp">
+                    <img class="team-item__img" src="img/hydrochemist.png" alt="">
+                </picture>
                 <div class="team-item__text-block">
                     <div class="team-item__title">Гидрохимики</div>
 
@@ -28,7 +32,11 @@
                 <img class="team-item__img-grass" src="img/grass.png" alt="">
             </div>
             <div class="team-item geocryologists">
-                <img class="team-item__img" src="img/geocryologists.png" alt="">
+                <picture>
+                    <source type="image/webp" srcset="img/geocryologists.webp">
+                    <img class="team-item__img" src="img/geocryologists.png" alt="">
+                </picture>
+
                 <div class="team-item__text-block">
                     <div class="team-item__color-bg">
                         Учёные не&nbsp;любят и&nbsp;не&nbsp;используют словосочетание &laquo;вечная мерзлота&raquo;,
@@ -52,7 +60,11 @@
                 </div>
             </div>
             <div class="team-item scientists">
-                <img class="team-item__img" src="img/soil-scientists.png" alt="">
+                <picture>
+                    <source type="image/webp" srcset="img/soil-scientists.webp">
+                    <img class="team-item__img" src="img/soil-scientists.png" alt="">
+                </picture>
+
                 <div class="team-item__text-block">
                     <div class="team-item__title">Почвоведы</div>
 
@@ -76,7 +88,10 @@
 
             </div>
             <div class="team-item zoologist">
-                <img class="team-item__img" src="img/zoologist.png" alt="">
+                <picture>
+                    <source type="image/webp" srcset="img/zoologist.webp">
+                    <img class="team-item__img" src="img/zoologist.png" alt="">
+                </picture>
 
                 <div class="team-item__text-block">
                     <div class="team-item__color-bg">

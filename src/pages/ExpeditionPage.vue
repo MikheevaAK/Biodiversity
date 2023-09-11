@@ -242,8 +242,8 @@
                         </li>
                     </ul>
                     <picture>
-                        <source media="(max-width: 768px)" srcset="img/map-rivers-mobile.png">
                         <source media="(max-width: 768px)" type="image/webp" srcset="img/map-rivers-mobile.webp">
+                        <source media="(max-width: 768px)" srcset="img/map-rivers-mobile.png">
                         <source type="image/webp" srcset="img/map-rivers.webp">
                         <img class="step-two__img" src="img/map-rivers.png" alt="">
                     </picture>
@@ -363,8 +363,9 @@
                 </BaseSidebar>
                 <div class="scena__wrap">
                     <picture>
-                        <source media="(max-width: 768px)" srcset="img/step-3-scena-mobile.png">
+<!--                        <source media="(max-width: 768px)" srcset="img/step-3-scena-mobile.png">-->
                         <source media="(max-width: 768px)" type="image/webp" srcset="img/step-3-scena-mobile.webp">
+                        <source media="(max-width: 768px)" srcset="img/step-3-scena-mobile.png">
                         <source type="image/webp" srcset="img/step-3-scena.webp">
                         <img class="scena" src="img/step-3-scena.png" alt="">
                     </picture>

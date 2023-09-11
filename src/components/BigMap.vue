@@ -2,10 +2,10 @@
     <div class="big-map">
         <slot></slot>
         <picture>
-            <source media="(max-width: 768px)" :srcset="imgMobile">
-<!--            <source media="(max-width: 768px)" type="image/webp" srcset="img/step-3-scena-mobile.webp">-->
-<!--            <source type="image/webp" srcset="img/step-3-scena.webp">-->
-            <img :src="img" alt="">
+            <source media="(max-width: 768px)" :srcset="imgMobile+ '.png'">
+            <source media="(max-width: 768px)" type="image/webp" :srcset="imgMobile+ '.webp'">
+            <source type="image/webp" :srcset="img+ '.webp'">
+            <img :src="img + '.png'" alt="">
         </picture>
         <div v-for="(circale, index) in circales" :key="index" class="map-circale" :class="{
             'map-circale__blue': circale.color === 'blue',

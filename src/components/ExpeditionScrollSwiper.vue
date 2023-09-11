@@ -7,18 +7,21 @@
                     <div class="team-item__title">Гидрохимики</div>
 
                     <ul class="team-item__list">
-                        <li class="team-item__list-item">Определяли уровень загрязнения ручьев, рек и озер
-                            нефтепродуктами;</li>
-                        <li class="team-item__list-item">Вычисляли, сколько в воде содержится тяжелых металлов;
+                        <li class="team-item__list-item">Определяли уровень загрязнения ручьёв, рек и озёр
+                            нефтепродуктами;
+                        </li>
+                        <li class="team-item__list-item">Вычисляли, сколько в воде содержится нефтепродуктов и тяжёлых
+                            металлов;
                         </li>
                         <li class="team-item__list-item">Исследовали воду на мутность, количество взвесей и
-                            кислорода.</li>
+                            кислорода.
+                        </li>
                     </ul>
 
                     <div class="team-item__color-bg">
                         Производить замеры гидрохимикам помогает специальный прибор&nbsp;&mdash; зонд.
                         Он&nbsp;буквально в&nbsp;считанные секунды может определить, сколько в&nbsp;воде
-                        присутствует сине-зеленых водорослей, рассчитать концентрацию кислорода
+                        присутствует сине-зелёных водорослей, рассчитать концентрацию кислорода
                         и&nbsp;кислотность среды.
                     </div>
                 </div>
@@ -28,15 +31,16 @@
                 <img class="team-item__img" src="img/geocryologists.png" alt="">
                 <div class="team-item__text-block">
                     <div class="team-item__color-bg">
-                        Ученые не любят и не используют словосочетание «вечная мерзлота», ведь ничего вечного не
-                        бывает. Правильнее говорить «многолетнемёрзлые породы».
+                        Учёные не&nbsp;любят и&nbsp;не&nbsp;используют словосочетание &laquo;вечная мерзлота&raquo;,
+                        ведь ничего вечного не&nbsp;бывает. Правильнее говорить &laquo;многолетняя мерзлота&raquo;.
                     </div>
 
                     <div class="team-item__title">Геокриологи</div>
 
                     <ul class="team-item__list">
                         <li class="team-item__list-item">Изучали строение и&nbsp;состояние зоны с&nbsp;многолетней
-                            мерзлотой;</li>
+                            мерзлотой;
+                        </li>
                         <li class="team-item__list-item">Оценивали, на какую глубину ежегодно оттаивает и
                             промерзает грунт;
                         </li>
@@ -64,11 +68,9 @@
                         </li>
                     </ul>
                     <div class="team-item__color-bg">
-                        Почвоведы в своей работе используют только пластиковые и деревянные инструменты. Железо
-                        под
-                        запретом — попадание даже мельчайших частиц металла в пробы внесет погрешности в
-                        химический
-                        анализ и исказит результаты.
+                        Почвоведы в&nbsp;своей работе используют только пластиковые и&nbsp;деревянные инструменты.
+                        Железо под запретом: попадание в&nbsp;пробы даже мельчайших частиц металла добавит погрешность
+                        при обработке собранных проб и&nbsp;результаты анализов будут искажены.
                     </div>
                 </div>
 
@@ -85,12 +87,15 @@
                     <div class="team-item__title">Ботаники и зоологи</div>
 
                     <ul class="team-item__list">
-                        <li class="team-item__list-item">Изучали загрязненные территории и&nbsp;определяли, какие виды
-                            растений на&nbsp;них растут, какие животные обитают;</li>
-                        <li class="team-item__list-item">Сравнивали это многообразие видов с&nbsp;видами на&nbsp;фоновых, незагрязненных ландшафтах;
+                        <li class="team-item__list-item">Изучали загрязнённые территории и&nbsp;определяли, какие виды
+                            растений на&nbsp;них растут, какие животные обитают;
+                        </li>
+                        <li class="team-item__list-item">Сравнивали это многообразие видов с&nbsp;видами на&nbsp;фоновых,
+                            незагрязнённых ландшафтах;
                         </li>
                         <li class="team-item__list-item">Оценивали, какой реальный ущерб нанесла авария на&nbsp;ТЭЦ-3
-флоре и&nbsp;фауне Таймыра.</li>
+                            флоре и&nbsp;фауне Таймыра.
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -101,8 +106,8 @@
 <script>
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 
+gsap.registerPlugin(ScrollTrigger);
 
 
 export default {
@@ -168,7 +173,7 @@ export default {
         display: flex;
         margin: 0 auto;
         gap: 6.75rem;
-        width: 60.5rem;
+        width: 54rem;
         margin-bottom: 6.25rem;
 
         @media (max-width: 768px) {
@@ -181,9 +186,14 @@ export default {
 
         .number-block {
             position: static;
+            width: 15rem;
 
             @media (max-width: 768px) {
                 margin-top: 0;
+            }
+
+            &:first-child {
+                width: 11rem;
             }
         }
     }

@@ -39,7 +39,7 @@ export default {
     }
 
     &__top {
-        font-size: 2.5rem;
+        font-size: 2.77778rem;
         font-weight: 600;
         line-height: 130%;
 
@@ -49,7 +49,7 @@ export default {
     }
 
     &__bottom {
-        font-size: 1.125rem;
+        font-size: 1.25rem;
         font-weight: 300;
         line-height: 130%;
 

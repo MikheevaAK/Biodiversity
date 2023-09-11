@@ -38,7 +38,7 @@
                 <div class="lake__map mb-100">
                     <BaseTextBlock :title="'Озеро Пясино'">
                         <p>
-                            Находится в&nbsp;20&nbsp;километрах от&nbsp;Норильска. Говорят, что сто лет назад в&nbsp;нём
+                            Находится в&nbsp;20&nbsp;километрах от&nbsp;Норильска. Говорят, что&nbsp;сто лет назад в&nbsp;нём
                             водилась рыба и&nbsp;озеро даже использовалось местными жителями для рыболовного промысла.
                             Но&nbsp;затем водоём начал пустеть. Произошло это из-за промышленного освоения территорий
                             или избыточного вылова&nbsp;&mdash; не&nbsp;ясно.
@@ -712,7 +712,7 @@ export default {
 
 .pyasino {
     .hero__descr {
-        width: 41rem;
+        width: 46rem;
     }
 }
 
@@ -925,9 +925,9 @@ export default {
 
     &__title {
         margin-left: 4.2rem;
-        width: 21.875rem;
+        width: 24rem;
         color: #000;
-        font-size: 1.125rem;
+        font-size: 1.25rem;
         font-weight: 600;
         line-height: 130%;
 
@@ -989,10 +989,10 @@ export default {
 
 .scales {
     &__text {
-        width: 9.75rem;
+        width: 11rem;
         margin-right: 0.69rem;
         color: #000;
-        font-size: 1rem;
+        font-size: 1.11111rem;
         font-weight: 300;
 
         &:not(:last-child) {

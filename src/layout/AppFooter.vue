@@ -222,6 +222,7 @@ export default {
         }
 
         &-descr {
+            font-size: 1.25rem;
             margin-bottom: 2.75rem;
             width: 20.3125rem;
             text-align: center;
@@ -289,7 +290,7 @@ export default {
 
         &-descr {
             position: absolute;
-            font-size: 1.125rem;
+            font-size: 1.25rem;
             font-weight: 600;
             line-height: 130%;
             color: #000;
@@ -353,7 +354,7 @@ export default {
         }
 
         &-link {
-            font-size: 1.125rem;
+            font-size: 1.25rem;
             font-weight: 300;
             line-height: 130%;
             transition: color .3s ease;

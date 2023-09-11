@@ -47,7 +47,7 @@
 
     &__text {
         padding: 0 2.5rem;
-        font-size: 1.25rem;
+        font-size: 1.38889rem;
         font-weight: 300;
         line-height: 130%;
         text-align: center;

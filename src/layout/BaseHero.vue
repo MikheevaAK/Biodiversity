@@ -114,7 +114,7 @@ export default {
 
     &__title {
         margin-bottom: 2rem;
-        font-size: 3.75rem;
+        font-size: 4.16667rem;
         font-weight: 600;
         line-height: 110%;
         color: var(--blue-deep, #004C97);
@@ -127,7 +127,7 @@ export default {
 
     &__descr {
         width: 39rem;
-        font-size: 1.125rem;
+        font-size: 1.25rem;
         font-weight: 400;
         line-height: 130%;
         color: var(--gray-1, #333);

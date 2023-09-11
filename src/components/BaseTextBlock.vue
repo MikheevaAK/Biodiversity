@@ -32,7 +32,7 @@ export default {
     &__wrap {
         position: relative;
         margin: 0 auto;
-        width: 32.68rem;
+        width: 34rem;
         // z-index: 10;
 
         &-index {
@@ -48,7 +48,7 @@ export default {
     &__title {
         margin-bottom: 1.75rem;
         color: var(--gray-1, #333);
-        font-size: 1.375rem;
+        font-size: 1.52778rem;
         font-weight: 600;
         line-height: 130%;
 
@@ -60,7 +60,7 @@ export default {
 
     &__descr {
         color: var(--gray-1, #333);
-        font-size: 1.125rem;
+        font-size: 1.25rem;
         font-weight: 300;
         line-height: 130%;
 

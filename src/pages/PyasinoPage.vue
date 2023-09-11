@@ -729,12 +729,12 @@ export default {
         height: 100vh;
         width: 100%;
         background-position: bottom;
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
 
         @media (max-width: 768px) {
             background-position: top;
-            background-size: contain;
+            background-size: 100%;
         }
 
         &.active {
@@ -743,7 +743,7 @@ export default {
 
             @media (max-width: 768px) {
                 height: 100%;
-                background-size: contain;
+                background-size: 100%;
                 position: fixed;
                 background-attachment: unset;
             }

@@ -19,7 +19,7 @@
                 </BaseTextBlock>
 
                 <BigMap :circales="circales" :img="'img/transbaikal-big-map.jpg'" class="mb-100"
-                    :imgMobile="'img/transbaikal-big-map-mobile.jpg'">
+                    :imgMobile="'img/transbaikal-big-map-mobile.png'">
                     <div class="circales">
                         <div class="circale-block">
                             <svg class="circale-block__img" xmlns="http://www.w3.org/2000/svg" width="14" height="14"

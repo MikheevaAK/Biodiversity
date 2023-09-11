@@ -157,7 +157,7 @@
                                 сократилась до&nbsp;опасного уровня. Им&nbsp;присваивают статус охраняемых и&nbsp;заносят
                                 в&nbsp;Красные книги&nbsp;&mdash; общероссийскую или региональные. Охранный статус запрещает
                                 охоту на&nbsp;животных, а&nbsp;в&nbsp;местах обитания краснокнижных растений и&nbsp;грибов
-                                ограничено строительство и&nbsp;другая хозяйственная деятельность.
+                                ограничены строительство и&nbsp;другая хозяйственная деятельность.
                             </BaseTooltip> животных и&nbsp;растений,
                             а&nbsp;также
                             несколько участков с&nbsp;уникальными экосистемами.
@@ -212,7 +212,7 @@
                     <BaseDropdownInfo class="zooplankton" :title="'Зоопланктон'"
                         :text="'Чтобы оценить состояние водоёмов, исследователи отобрали виды зоопланктона, сигнализирующие о&nbsp;качестве воды. Например, планктонный рачок Limnocalanus macrurus любит чистую воду, а&nbsp;если начинает доминировать планктонная коловратка Brachionus sericus&nbsp;&mdash; вода загрязнена'" />
                     <BaseDropdownInfo v-if="!isModile" class="char" :title="'Арктический голец (боганидская палия)'"
-                        :text="'Считается самой полезной рыбой в&nbsp;мире: кусочек рыбы в&nbsp;30&nbsp;г. покрывает суточную потребность человека в&nbsp;полезных жирных кислотах. Встречается также в&nbsp;водоёмах Кольского дивизиона'" />
+                        :text="'Считается самой полезной рыбой в&nbsp;мире: кусочек рыбы в&nbsp;30&nbsp;г покрывает суточную потребность человека в&nbsp;полезных жирных кислотах. Встречается также в&nbsp;водоёмах Кольского дивизиона'" />
 
                     <BaseDropdownInfo v-if="isModile" class="merlin" :title="'Кречет'" :color="'#71464E'"
                         :text="'Самая крупная птица из&nbsp;отряда соколиных. За&nbsp;последние 20&nbsp;лет её&nbsp;популяция в&nbsp;России сократилась втрое. &laquo;Норникель&raquo; вложил 50&nbsp;млн рублей в&nbsp;поддержку и&nbsp;сохранение вида в&nbsp;2022&ndash;2023&nbsp;гг'" />
@@ -1032,11 +1032,12 @@ export default {
         }
 
         @media (max-width: 768px) {
-            height: 792rem;
+            height: 810rem;
             background-image: url(../../public/img/collage-mobile.png);
-            // @supports (background-image: url(../../public/img/collage-mobile.webp)) {
-            // background-image: url(../../public/img/collage-mobile.webp);
-            // } 
+
+            @supports (background-image: url(../../public/img/collage-mobile.webp)) {
+                background-image: url(../../public/img/collage-mobile.webp);
+            }
         }
 
         .dropdown-info__wrap {
@@ -1070,8 +1071,8 @@ export default {
             right: 18rem;
 
             @media (max-width: 768px) {
-                top: 433rem;
-                right: 30rem;
+                top: 453rem;
+                right: 31rem;
             }
         }
 
@@ -1105,30 +1106,65 @@ export default {
             .dropdown-info__text {
                 padding: 3.56rem 0.62rem 0.88rem 3.13rem;
             }
+
+            @media (max-width: 768px) {
+                display: none;
+            }
         }
 
         .merlin {
             position: absolute;
-            top: 115rem;
+            display: none;
+            top: 135rem;
             left: 12rem;
+
+            @media (max-width: 768px) {
+                display: block;
+            }
         }
 
         .deer {
+            display: none;
             position: absolute;
-            top: 278rem;
+            top: 301rem;
             left: 5rem;
+
+            @media (max-width: 768px) {
+                display: block;
+
+                .dropdown-info__title {
+                    max-width: unset;
+                }
+            }
         }
 
         .lycosus-moss {
             position: absolute;
             bottom: 193rem;
             left: 2rem;
+
+            @media (max-width: 768px) {
+                display: block;
+
+                .dropdown-info__title {
+                    max-width: unset;
+                }
+            }
         }
 
         .hare {
+            display: none;
             position: absolute;
             bottom: 260rem;
             left: 7rem;
+
+            @media (max-width: 768px) {
+                display: block;
+
+                .dropdown-info__title {
+                    max-width: unset;
+                }
+            }
         }
     }
 

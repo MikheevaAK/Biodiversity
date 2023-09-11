@@ -51,15 +51,15 @@
                         </div>
                         <div class="step-start__item">
                             <div class="step-start__item-number">2</div>
-                            <div class="step-start__item-descr">Оперативное обнаружить возможные скрытые загрязнения
-                                после
-                                очистки территорий от нефтепродуктов</div>
+                            <div class="step-start__item-descr">
+                                Оперативно обнаружить возможные скрытые загрязнения после очистки территорий от&nbsp;нефтепродуктов
+                            </div>
                         </div>
                         <div class="step-start__item">
                             <div class="step-start__item-number">3</div>
-                            <div class="step-start__item-descr">Оценить реальный ущерб, нанесённый экосистемам аварией
-                                на
-                                ТЭЦ-3</div>
+                            <div class="step-start__item-descr">
+                                Оценить реальный ущерб, нанесённый экосистемам, и&nbsp;определить меры по&nbsp;их&nbsp;восстановлению
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -67,9 +67,9 @@
                 <BigMap :circales="circales" :img="'img/expedition-big-map.svg'" :imgMobile="'img/expedition-big-map-mobile.svg'">
                     <BaseTextBlock class="text" :title="'Карта исследований'">
                         <p class="text-block__descr mb-40">
-                            Исследования проводились по нескольким направлениям: поверхностные воды и донные отложения,
-                            почва и многолетнемерзлый грунт, флора и фауна Арктики. Ученые обследовали десятки природных
-                            точек: окрестности Норильска, поймы шести таймырских рек, а также побережье Карского моря.
+                            Исследования проводились по нескольким направлениям: поверхностные воды и&nbsp;донные отложения,
+                            почва и&nbsp;многолетнемёрзлый грунт, флора и&nbsp;фауна Арктики. Учёные обследовали десятки природных
+                            точек: окрестности Норильска, поймы шести таймырских рек, а&nbsp;также побережье Карского моря.
                         </p>
                         <div class="circales">
                             <div class="circale-block">
@@ -828,7 +828,7 @@ export default {
 
 .expedition {
     .hero__descr {
-        width: unset;
+        width: 50rem;
     }
 }
 

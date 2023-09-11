@@ -3,6 +3,8 @@
         <slot></slot>
         <picture>
             <source media="(max-width: 768px)" :srcset="imgMobile">
+<!--            <source media="(max-width: 768px)" type="image/webp" srcset="img/step-3-scena-mobile.webp">-->
+<!--            <source type="image/webp" srcset="img/step-3-scena.webp">-->
             <img :src="img" alt="">
         </picture>
         <div v-for="(circale, index) in circales" :key="index" class="map-circale" :class="{

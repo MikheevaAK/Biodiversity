@@ -1106,6 +1106,10 @@ export default {
             .dropdown-info__text {
                 padding: 3.56rem 0.62rem 0.88rem 3.13rem;
             }
+
+            @media (max-width: 768px) {
+                display: none;
+            }
         }
 
         .merlin {

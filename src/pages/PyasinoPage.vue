@@ -705,7 +705,6 @@ export default {
                 width: 80.3rem;
                 height: 121.5rem;
             }
-
         }
     }
 }
@@ -713,6 +712,10 @@ export default {
 .pyasino {
     .hero__descr {
         width: 46rem;
+
+        @media (max-width: 768px) {
+            width: unset;
+        }
     }
 }
 

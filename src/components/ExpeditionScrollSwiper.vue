@@ -188,12 +188,15 @@ export default {
             position: static;
             width: 15rem;
 
-            @media (max-width: 768px) {
-                margin-top: 0;
-            }
-
             &:first-child {
                 width: 11rem;
+                @media (max-width: 768px) {
+                    width: unset;
+                }
+            }
+
+            @media (max-width: 768px) {
+                width: unset;
             }
         }
     }

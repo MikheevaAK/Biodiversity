@@ -1,7 +1,7 @@
 <template>
     <div class="pyasino">
         <BaseHero :title="'Вдохнуть <br/>жизнь в озеро'" :descr="heroDescr" :img="'img/hero1.jpg'"
-            :imgMobile="'img/hero1-mobile.jpg'" />
+                  :imgMobile="'img/hero1-mobile.jpg'"/>
         <MainSection>
             <section class="lake">
                 <div class="lake__introduction mb-100">
@@ -16,18 +16,22 @@
                             не&nbsp;водится из-за очень скудной питательной базы. В&nbsp;других&nbsp;же озёрах рыбы
                             настолько
                             много,
-                            что её&nbsp;можно вылавливать в&nbsp;производственных масштабах. Но&nbsp;бывает и&nbsp;так, что
+                            что её&nbsp;можно вылавливать в&nbsp;производственных масштабах. Но&nbsp;бывает и&nbsp;так,
+                            что
                             озеро
-                            в&nbsp;какой‑то момент пустеет, в&nbsp;этом случае вылов запрещают до&nbsp;полного
+                            в&nbsp;какой‑то момент пустеет &mdash; в&nbsp;этом случае вылов запрещают до&nbsp;полного
                             восстановления
                             рыбопродуктивности водоёма.
                         </p>
                         <p>
-                            Этот процесс может занимать десятилетия, но&nbsp;учёные придумали как его ускорить оригинальным
-                            и&nbsp;экологичным способом. Эксперимент по&nbsp;повышению рыбопродуктивности сейчас проходит
+                            Этот процесс может занимать десятилетия, но&nbsp;учёные придумали, как его ускорить
+                            оригинальным
+                            и&nbsp;экологичным способом. Эксперимент по&nbsp;повышению рыбопродуктивности сейчас
+                            проходит
                             на&nbsp;озере Пясино.
                         </p>
-                        <BaseNumberBlock :textTop="'> 50 озёр'" :textBottom="'находится на территории Северного Таймыра'" />
+                        <BaseNumberBlock :textTop="'> 50 озёр'"
+                                         :textBottom="'находится на территории Северного Таймыра'"/>
                     </BaseTextBlock>
                 </div>
 
@@ -35,12 +39,9 @@
                     <BaseTextBlock :title="'Озеро Пясино'">
                         <p>
                             Находится в&nbsp;20&nbsp;километрах от&nbsp;Норильска. Говорят, что сто лет назад в&nbsp;нём
-                            водилась
-                            рыба, и&nbsp;озеро даже использовалось местными жителями для рыболовного промысла. Но&nbsp;затем
-                            водоём
-                            начал пустеть. Произошло это из-за промышленного освоения территорий или избыточного
-                            вылова&nbsp;&mdash;
-                            не&nbsp;ясно.
+                            водилась рыба и&nbsp;озеро даже использовалось местными жителями для рыболовного промысла.
+                            Но&nbsp;затем водоём начал пустеть. Произошло это из-за промышленного освоения территорий
+                            или избыточного вылова&nbsp;&mdash; не&nbsp;ясно.
                         </p>
                     </BaseTextBlock>
                     <picture>
@@ -52,13 +53,10 @@
                 <BaseTextBlock :title="'Что делает озеро рыбопродуктивным?'">
                     <p>
                         Озеро&nbsp;&mdash; это дом для множества живых организмов: от&nbsp;неразличимых невооруженным
-                        взглядом
-                        бактерий до&nbsp;крупных рыб и&nbsp;водных млекопитающих. В&nbsp;арктических водоемах фауна
-                        уникальна
-                        по&nbsp;видовому составу, но&nbsp;ее&nbsp;численность и&nbsp;биомасса невысока. Фауна тоже
-                        достаточно
-                        бедная: в&nbsp;северных водоемах нет крупных водорослей, а&nbsp;только микроскопические&nbsp;&mdash;
-                        фитопланктон.
+                        взглядом бактерий до&nbsp;крупных рыб и&nbsp;водных млекопитающих. В&nbsp;арктических водоёмах
+                        фауна уникальна по&nbsp;видовому составу, но&nbsp;её&nbsp;численность и&nbsp;биомасса невысока.
+                        Флора тоже достаточно бедная: в&nbsp;северных водоёмах нет крупных водорослей, а&nbsp;только
+                        микроскопические&nbsp;&mdash; фитопланктон.
                     </p>
                 </BaseTextBlock>
 
@@ -77,11 +75,11 @@
                     <div class="scroll-card card-1 text-block__descr">
                         <p class="mb-10">
                             С&nbsp;помощью солнечного света фитопланктон перерабатывает углекислый газ в&nbsp;кислород,
-                            а&nbsp;значит дает возможность другим организмам жить и&nbsp;дышать.
+                            а&nbsp;значит, даёт возможность другим организмам жить и&nbsp;дышать.
                         </p>
                         <p>
                             При этом микроводоросли&nbsp;&mdash; не&nbsp;только лёгкие водоёма, но&nbsp;и&nbsp;пища для
-                            зоопланктона&nbsp;&mdash; мелких рачков, моллюсков и&nbsp;личинок водных животных.
+                            зоопланктона: мелких рачков, моллюсков и&nbsp;личинок водных животных.
                         </p>
                     </div>
                     <div class="scroll-card card-2 text-block__descr">
@@ -92,13 +90,14 @@
                     <div class="scroll-card card-3 text-block__descr">
                         На&nbsp;вершине этой пищевой или, как её&nbsp;называют учёные, трофической цепи&nbsp;&mdash;
                         водоплавающие птицы. Они поедают рыбу, а&nbsp;помёт&nbsp;&mdash; продукт
-                        их&nbsp;жизнедеятельности,&nbsp;&mdash; попадает в&nbsp;воду и&nbsp;становится питательной средой
+                        их&nbsp;жизнедеятельности,&nbsp;&mdash; попадает в&nbsp;воду и&nbsp;становится питательной
+                        средой
                         для фитопланктона. Круг замыкается.
                     </div>
                     <div class="scroll-card card-4 text-block__descr">
                         Если&nbsp;же из&nbsp;трофической цепи исключить хотя&nbsp;бы одно звено или изменить состав
                         и&nbsp;соотношение обитателей озера, система начинает разрушаться. Сброс недоочищенных бытовых
-                        и&nbsp;производственных сточных вод, аварийные разливы нефтепродуктов, или чересчур интенсивный
+                        и&nbsp;производственных сточных вод, аварийные разливы нефтепродуктов или чересчур интенсивный
                         вылов рыбы могут привести к&nbsp;нарушению баланса экосистемы.
                     </div>
                 </div>
@@ -108,20 +107,25 @@
                 <BaseTextBlock class="mb-40" :title="'Работа над ошибками'">
                     <div>
                         <p class="mb-10">
-                            По&nbsp;словам учёных, ситуацию можно исправить. Для этого нужно повысить эффективность очистки
+                            По&nbsp;словам учёных, ситуацию можно исправить. Для этого нужно повысить эффективность
+                            очистки
                             хозяйственно-бытовых сточных вод, сбрасываемых в&nbsp;окрестные водоемы, и&nbsp;восстановить
                             популяции
                             обитающих в&nbsp;них организмов, начав с&nbsp;основ пищевой цепи&nbsp;&mdash; фитопланктона.
                         </p>
                         <p class="mb-10">
-                            Один из&nbsp;способов решить проблему&nbsp;&mdash; внести в&nbsp;озеро минеральные удобрения.
-                            В&nbsp;насыщенной питательными веществами воде ускорится рост микроводорослей, которые станут
+                            Один из&nbsp;способов решить проблему&nbsp;&mdash; внести в&nbsp;озеро минеральные
+                            удобрения.
+                            В&nbsp;насыщенной питательными веществами воде ускорится рост микроводорослей, которые
+                            станут
                             кормом для зоопланктона и&nbsp;рыб.
                         </p>
                         <p>
                             Метод действенный, но, к&nbsp;сожалению, не&nbsp;без недостатков. Если ошибиться с&nbsp;составом
-                            удобрений или внести их&nbsp;слишком много, в&nbsp;озере начнут бурно размножаться сине-зеленые
-                            водоросли&nbsp;&mdash; цианобактерии. Учёные называют это явление &laquo;цветением&raquo; воды.
+                            удобрений или внести их&nbsp;слишком много, в&nbsp;озере начнут бурно размножаться
+                            сине-зеленые
+                            водоросли&nbsp;&mdash; цианобактерии. Учёные называют это явление &laquo;цветением&raquo;
+                            воды.
                         </p>
                     </div>
                 </BaseTextBlock>
@@ -131,7 +135,8 @@
                 <BaseTextBlock class="mb-40">
                     <p>
                         Массовая гибель живых организмов из-за цветения воды приведёт к&nbsp;гниению их&nbsp;останков
-                        и&nbsp;загрязнению воды. Разумеется, в&nbsp;здоровой экосистеме цианобактерии также присутствуют,
+                        и&nbsp;загрязнению воды. Разумеется, в&nbsp;здоровой экосистеме цианобактерии также
+                        присутствуют,
                         но&nbsp;здесь важен баланс. А&nbsp;преобладание какого‑то одного вида его нарушает.
                     </p>
                 </BaseTextBlock>
@@ -163,7 +168,8 @@
                             По&nbsp;мнению специалистов, в&nbsp;удобренном помётом водоёме вместо цианобактерий появятся
                             другие
                             виды
-                            фитопланктона&nbsp;&mdash; диатомовые и&nbsp;зеленые водоросли. Они лежат в&nbsp;основе пищевой
+                            фитопланктона&nbsp;&mdash; диатомовые и&nbsp;зеленые водоросли. Они лежат в&nbsp;основе
+                            пищевой
                             цепочки
                             ценных пород рыб, а&nbsp;их&nbsp;размножение не&nbsp;вызывает вредоносное &laquo;цветение&raquo;
                             воды.
@@ -174,29 +180,31 @@
                         </p>
                     </div>
                     <BaseNumberBlock class="hidden-mobile" :textTop="'21 озеро'"
-                        :textBottom="'обследовали учёные в ходе экспедиции'" />
+                                     :textBottom="'обследовали учёные в ходе экспедиции'"/>
                 </BaseTextBlock>
                 <div class="in-search">
                     <div class="in-search__plane"></div>
                     <BaseTextBlock class="hidden-mobile">
                         <p>
-                            На&nbsp;одних водоёмах птиц не&nbsp;было вовсе, рядом с&nbsp;другими гнездились большие колонии
+                            На&nbsp;одних водоёмах птиц не&nbsp;было вовсе, рядом с&nbsp;другими гнездились большие
+                            колонии
                             из&nbsp;десятков и&nbsp;даже сотен особей. Из&nbsp;каждого озера биологи взяли образцы воды,
                             которые
                             позднее направили на&nbsp;анализ.
-                            <br />
-                            <br />
+                            <br/>
+                            <br/>
                             Результаты лабораторных исследований подтвердили правильность догадки учёных. В&nbsp;озёрах,
                             рядом
                             с&nbsp;которыми гнездятся птицы (то&nbsp;есть там, где помёт попадает в&nbsp;воду), баланс
                             растворённых
                             в&nbsp;воде питательных веществ действительно оказался лучше. В&nbsp;то&nbsp;же время
                             в&nbsp;планктоне
-                            преобладали полезные диатомовые и&nbsp;зеленые водоросли, а&nbsp;доля цианобактерий оказалась
+                            преобладали полезные диатомовые и&nbsp;зеленые водоросли, а&nbsp;доля цианобактерий
+                            оказалась
                             заметно
                             меньше, чем в&nbsp;озёрах без птиц.
-                            <br />
-                            <br />
+                            <br/>
+                            <br/>
                             Иными словами, в&nbsp;таких озёрах было сбалансированное сообщество фитопланктона. Благодаря
                             этому
                             в&nbsp;водоёмах водились ценные кормовые организмы, необходимые для питания уникальных
@@ -205,19 +213,21 @@
                             рыб.
                         </p>
                         <BaseNumberBlock :textTop="'на 16 п.п.'"
-                            :textBottom="'ниже доля цианобактерий в озёрах, где есть птицы'" />
+                                         :textBottom="'ниже доля цианобактерий в озёрах, где есть птицы'"/>
                     </BaseTextBlock>
                 </div>
                 <BaseTextBlock class="visiable-mobile">
                     <div>
                         <p class="mb-10">
-                            На&nbsp;одних водоёмах птиц не&nbsp;было вовсе, рядом с&nbsp;другими гнездились большие колонии
+                            На&nbsp;одних водоёмах птиц не&nbsp;было вовсе, рядом с&nbsp;другими гнездились большие
+                            колонии
                             из&nbsp;десятков и&nbsp;даже сотен особей. Из&nbsp;каждого озера биологи взяли образцы воды,
                             которые позднее направили на&nbsp;анализ.
                         </p>
                         <p class="mb-10">
                             Результаты лабораторных исследований подтвердили правильность догадки учёных. В&nbsp;озёрах,
-                            рядом с&nbsp;которыми гнездятся птицы (то&nbsp;есть там, где помёт попадает в&nbsp;воду), баланс
+                            рядом с&nbsp;которыми гнездятся птицы (то&nbsp;есть там, где помёт попадает в&nbsp;воду),
+                            баланс
                             растворённых в&nbsp;воде питательных веществ действительно оказался лучше. В&nbsp;то&nbsp;же
                             время
                             в&nbsp;планктоне преобладали полезные диатомовые и&nbsp;зеленые водоросли, а&nbsp;доля
@@ -231,7 +241,7 @@
                         </p>
                     </div>
                     <BaseNumberBlock :textTop="'на 16 п.п.'"
-                        :textBottom="'ниже доля цианобактерий в озёрах, где есть птицы'" />
+                                     :textBottom="'ниже доля цианобактерий в озёрах, где есть птицы'"/>
                 </BaseTextBlock>
             </section>
 
@@ -251,15 +261,15 @@
                         </div>
                         <div class="scales__text-wrap">
                             <div class="scales__text-mobile">Цианобактерии</div>
-                            <BaseScale :percent="'32,6%'" class="mr-4-31" :hasClass="'scale-1'" />
+                            <BaseScale :percent="'32,6%'" class="mr-4-31" :hasClass="'scale-1'"/>
                         </div>
                         <div class="scales__text-wrap">
                             <div class="scales__text-mobile">Диатомеи</div>
-                            <BaseScale :percent="'27,9%'" class="mr-4-31" :hasClass="'scale-3'" />
+                            <BaseScale :percent="'27,9%'" class="mr-4-31" :hasClass="'scale-3'"/>
                         </div>
                         <div class="scales__text-wrap">
                             <div class="scales__text-mobile">Зеленые водоросли</div>
-                            <BaseScale :percent="'10,2%'" class="mr-4-31" :hasClass="'scale-5'" />
+                            <BaseScale :percent="'10,2%'" class="mr-4-31" :hasClass="'scale-5'"/>
                         </div>
                     </div>
                     <div class="shares__item">
@@ -268,15 +278,15 @@
                         </div>
                         <div class="scales__text-wrap">
                             <div class="scales__text-mobile">Цианобактерии</div>
-                            <BaseScale :percent="'16,2%'" :hasClass="'scale-2'" />
+                            <BaseScale :percent="'16,2%'" :hasClass="'scale-2'"/>
                         </div>
                         <div class="scales__text-wrap">
                             <div class="scales__text-mobile">Диатомеи</div>
-                            <BaseScale :percent="'39,9%'" :hasClass="'scale-4'" />
+                            <BaseScale :percent="'39,9%'" :hasClass="'scale-4'"/>
                         </div>
                         <div class="scales__text-wrap">
                             <div class="scales__text-mobile">Зеленые водоросли</div>
-                            <BaseScale :percent="'20,2%'" :hasClass="'scale-6'" />
+                            <BaseScale :percent="'20,2%'" :hasClass="'scale-6'"/>
                         </div>
                     </div>
                 </div>
@@ -284,7 +294,8 @@
                 <BaseTextBlock class="mb-40">
                     <p>
                         Поможет&nbsp;ли гуанотрофикация вернуть жизнь в&nbsp;арктические озера&nbsp;&mdash; вопрос пока
-                        открытый, и&nbsp;быстро ответить на&nbsp;него не&nbsp;получится. И&nbsp;все&nbsp;же итоги первого
+                        открытый, и&nbsp;быстро ответить на&nbsp;него не&nbsp;получится. И&nbsp;все&nbsp;же итоги
+                        первого
                         года
                         внушают сдержанный оптимизм, а&nbsp;учёные продолжают свои исследования, которые активно
                         поддерживаются
@@ -314,6 +325,7 @@ import BaseScale from '@/components/BaseScale.vue'
 // import BaseScrollBlock from '@/components/BaseScrollBlock'
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default {
@@ -401,7 +413,7 @@ export default {
                     trigger: ".scroll",
                     start: '0%',
                     scrub: true,
-                    toggleClass: { className: "active", targets: ".scroll-bg" }
+                    toggleClass: {className: "active", targets: ".scroll-bg"}
                 },
             })
             if (window.innerWidth <= 768) {
@@ -409,7 +421,7 @@ export default {
             }
 
             gsap.fromTo(".bg-1",
-                { opacity: '1' },
+                {opacity: '1'},
                 {
                     opacity: '0',
                     scrollTrigger: {
@@ -424,7 +436,7 @@ export default {
                 });
 
             gsap.fromTo(".bg-2",
-                { opacity: '1' },
+                {opacity: '1'},
                 {
                     opacity: '0',
                     scrollTrigger: {
@@ -439,7 +451,7 @@ export default {
                 });
 
             gsap.fromTo(".bg-3",
-                { opacity: '1' },
+                {opacity: '1'},
                 {
                     opacity: '0',
                     scrollTrigger: {
@@ -460,13 +472,13 @@ export default {
                     end: () => "+=" + (document.querySelector(".scroll-wrap").offsetHeight),
                     // markers: true,
                     scrub: true,
-                    toggleClass: { className: "remove-active", targets: ".scroll-bg" }
+                    toggleClass: {className: "remove-active", targets: ".scroll-bg"}
                 },
             });
 
             if (window.innerWidth > 768) {
                 gsap.fromTo(".scale-1",
-                    { width: '0' },
+                    {width: '0'},
                     {
                         width: '5.75rem',
                         duration: 1,
@@ -480,7 +492,7 @@ export default {
                     });
             } else {
                 gsap.fromTo(".scale-1",
-                    { width: '0' },
+                    {width: '0'},
                     {
                         width: '24.534rem',
                         duration: 1,
@@ -496,7 +508,7 @@ export default {
 
             if (window.innerWidth > 768) {
                 gsap.fromTo(".scale-2",
-                    { width: '0' },
+                    {width: '0'},
                     {
                         width: '2.875rem',
                         duration: 4,
@@ -510,7 +522,7 @@ export default {
                     });
             } else {
                 gsap.fromTo(".scale-2",
-                    { width: '0' },
+                    {width: '0'},
                     {
                         width: '12.267rem',
                         duration: 4,
@@ -526,7 +538,7 @@ export default {
 
             if (window.innerWidth > 768) {
                 gsap.fromTo(".scale-3",
-                    { width: '0' },
+                    {width: '0'},
                     {
                         width: '4.94rem',
                         duration: 4,
@@ -540,7 +552,7 @@ export default {
                     });
             } else {
                 gsap.fromTo(".scale-3",
-                    { width: '0' },
+                    {width: '0'},
                     {
                         width: '21.067rem',
                         duration: 4,
@@ -556,7 +568,7 @@ export default {
 
             if (window.innerWidth > 768) {
                 gsap.fromTo(".scale-4",
-                    { width: '0' },
+                    {width: '0'},
                     {
                         width: '7rem',
                         duration: 4,
@@ -570,7 +582,7 @@ export default {
                     });
             } else {
                 gsap.fromTo(".scale-4",
-                    { width: '0' },
+                    {width: '0'},
                     {
                         width: '29.867rem',
                         duration: 4,
@@ -586,7 +598,7 @@ export default {
 
             if (window.innerWidth > 768) {
                 gsap.fromTo(".scale-5",
-                    { width: '0' },
+                    {width: '0'},
                     {
                         width: '1.94rem',
                         duration: 4,
@@ -600,7 +612,7 @@ export default {
                     });
             } else {
                 gsap.fromTo(".scale-5",
-                    { width: '0' },
+                    {width: '0'},
                     {
                         width: '15.2rem',
                         duration: 4,
@@ -616,7 +628,7 @@ export default {
 
             if (window.innerWidth > 768) {
                 gsap.fromTo(".scale-6",
-                    { width: '0' },
+                    {width: '0'},
                     {
                         width: '3.6rem',
                         duration: 4,
@@ -630,7 +642,7 @@ export default {
                     });
             } else {
                 gsap.fromTo(".scale-6",
-                    { width: '0' },
+                    {width: '0'},
                     {
                         width: '8.267rem',
                         duration: 4,
@@ -751,21 +763,37 @@ export default {
         &.bg-1 {
             z-index: 4;
             background-image: url(../../public/img/fito-1.jpg);
+
+             @supports (background-image: url(../../public/img/fito-1.webp)) {
+                 background-image: url(../../public/img/fito-1.webp);
+             }
         }
 
         &.bg-2 {
             z-index: 3;
-            background-image: url(../../public/img/fito-2.jpg)
+            background-image: url(../../public/img/fito-2.jpg);
+
+             @supports (background-image: url(../../public/img/fito-2.webp)) {
+                 background-image: url(../../public/img/fito-2.webp);
+             }
         }
 
         &.bg-3 {
             z-index: 2;
             background-image: url(../../public/img/fito-3.jpg);
+
+             @supports (background-image: url(../../public/img/fito-3.webp)) {
+                 background-image: url(../../public/img/fito-3.webp);
+             }
         }
 
         &.bg-4 {
             z-index: 1;
             background-image: url(../../public/img/fito-4.jpg);
+
+             @supports (background-image: url(../../public/img/fito-4.webp)) {
+                 background-image: url(../../public/img/fito-4.webp);
+             }
         }
 
         @media (max-width: 768px) {
@@ -868,7 +896,6 @@ export default {
             background-image: url(../../public/img/in-search-mobile.webp);
         }
     }
-
 
 
     &__plane {

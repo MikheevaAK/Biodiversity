@@ -924,6 +924,7 @@ export default {
     }
 
     &__title {
+        margin-left: 4.2rem;
         width: 21.875rem;
         color: #000;
         font-size: 1.125rem;
@@ -931,6 +932,7 @@ export default {
         line-height: 130%;
 
         @media (max-width: 768px) {
+            margin-left: 0;
             margin-top: 21.3334rem;
             margin-bottom: 4rem;
             padding: 0 4rem;
@@ -941,10 +943,12 @@ export default {
     }
 
     &__wrap {
+        margin-left: 4.2rem;
         margin-bottom: 3.75rem;
         display: flex;
 
         @media (max-width: 768px) {
+            margin-left: 0;
             flex-wrap: wrap;
         }
     }

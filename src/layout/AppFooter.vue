@@ -14,7 +14,7 @@
                 <div class="footer__block footer__block-small"></div>
             </div>
             <div class="footer__top-descr">
-                Вы&nbsp;собрали первую часть карты биоразнообразия Норникель.
+                Вы&nbsp;собрали первую часть карты биоразнообразия &laquo;Норникель&raquo;.
             </div>
             <a href="#" class="footer__top-link">
                 Вернуться на&nbsp;карту
@@ -310,12 +310,20 @@ export default {
             margin-bottom: 1.44rem;
             background-repeat: no-repeat;
 
+            @supports (background-image: url(../../public/img/footer.webp)) {
+                background-image: url(../../public/img/footer.webp);
+            }
+
             @media (max-width: 768px) {
                 width: 100%;
                 height: 29.8667rem;
                 margin-bottom: 5.3334rem;
                 background-image: url(../../public/img/footer-mobile.png);
                 background-position: center;
+
+                @supports (background-image: url(../../public/img/footer-mobile.webp)) {
+                    background-image: url(../../public/img/footer-mobile.webp);
+                }
             }
         }
 

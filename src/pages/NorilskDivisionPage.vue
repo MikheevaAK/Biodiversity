@@ -8,8 +8,8 @@
                     <p class="mb-10">
                         Горнодобывающие, металлургические и энергетические объекты Норильского
                         <BaseTooltip :word="'дивизиона'">
-                            Компании объединяют в&nbsp;дивизион предприятия одного региона или объекты с&nbsp;общей задачей,
-                            например, перевозка сырья или энергоснабжение. Деление на&nbsp;дивизионы (от&nbsp;французского
+                            Компании объединяют в&nbsp;дивизион предприятия одного региона или объекты с&nbsp;общей задачей:
+                            например, перевозкой сырья или энергоснабжением. Деление на&nbsp;дивизионы (от&nbsp;французского
                             слова division&nbsp;&mdash; &laquo;разделение&raquo;) упрощает управление крупной организацией.
                         </BaseTooltip>
                         расположены в зоне,
@@ -25,8 +25,8 @@
                     </p>
                 </BaseTextBlock>
 
-                <BigMap :circales="circales" :img="'img/division-big-map.webp'"
-                    :imgMobile="'img/division-big-map-mobile.webp'">
+                <BigMap :circales="circales" :img="'img/division-big-map'"
+                    :imgMobile="'img/division-big-map-mobile'">
                     <BaseNumberBlock :textTop="'44 объекта'" :textBottom="'входит в Норильский дивизион'" />
                     <div class="circales">
                         <div class="circale-block">
@@ -66,7 +66,7 @@
                     <div class="scroll-wrap">
                         <div class="scroll-card card-1 text-block__descr">
                             <p>Большой Норильск</p>
-                            <p>Норильский промышленный район, или Большой Норильск образован местными предприятиями
+                            <p>Норильский промышленный район, или Большой Норильск, образован местными предприятиями
                                 &laquo;Норникеля&raquo;. Также в&nbsp;район входят города Норильск, Дудинка и&nbsp;ещё
                                 несколько
                                 населённых пунктов. Здесь в&nbsp;условиях многолетней мерзлоты компания добывает
@@ -81,7 +81,7 @@
                                 предприятия &laquo;Норникеля&raquo;.
                             </p>
                             <BaseDropdownInfo :title="'Объекты'" :color="'#D38235'"
-                                :text="'<ul><li>Южно-Соленинское газоконденсатное месторождение</li><li>Мессояхское газовое месторождение</li><li>Северо-Соленинское газоконденсатное месторождение</li><li>Пеляткинское газоконденсатное месторождение</li><li>ТЭЦ-1 г. Норильск</li><li>ТЭЦ-2 г. Талнах</li><li>ТЭЦ-3 г. Кайеркан</li><li>Курейская ГЭС</li><li>Усть-Хантайская ГЭС</li></ul>'" />
+                                :text="'<ul><li>Южно-Солёнинское газоконденсатное месторождение</li><li>Мессояхское газовое месторождение</li><li>Северо-Солёнинское газоконденсатное месторождение</li><li>Пеляткинское газоконденсатное месторождение</li><li>ТЭЦ-1 г. Норильск</li><li>ТЭЦ-2 г. Талнах</li><li>ТЭЦ-3 г. Кайеркан</li><li>Курейская ГЭС</li><li>Усть-Хантайская ГЭС</li></ul>'" />
                         </div>
                         <div class="scroll-card card-3 text-block__descr">
                             <p>Путоранский заповедник</p>
@@ -126,7 +126,9 @@
                 </BaseTextBlock>
                 <div class="division-radius mb-60">
                     <picture>
+                        <source media="(max-width: 768px)" type="image/webp" srcset="img/division-radius-mobile.webp">
                         <source media="(max-width: 768px)" srcset="img/division-radius-mobile.png">
+                        <source type="image/webp" srcset="img/division-radius.webp">
                         <img src="img/division-radius.png" alt="">
                     </picture>
                 </div>
@@ -136,7 +138,7 @@
                         воздействие,
                         поэтому исследователи рассматривают Большой Норильск как единый источник воздействия
                         на&nbsp;экосистемы
-                        дивизиона
+                        дивизиона.
                     </p>
                 </BaseSidebar>
             </SectionWhite>

@@ -709,16 +709,6 @@ export default {
     }
 }
 
-.pyasino {
-    .hero__descr {
-        width: 46rem;
-
-        @media (max-width: 768px) {
-            width: unset;
-        }
-    }
-}
-
 .pyasino .scroll {
     position: relative;
     width: 100%;

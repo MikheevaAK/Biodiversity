@@ -105,7 +105,7 @@ export default {
     }
 
     &__wrap {
-        width: 45.6rem;
+        width: 46rem;
 
         @media (max-width: 768px) {
             width: 100%;
@@ -126,7 +126,7 @@ export default {
     }
 
     &__descr {
-        width: 39rem;
+        width: 46rem;
         font-size: 1.25rem;
         font-weight: 400;
         line-height: 130%;

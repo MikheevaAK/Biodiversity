@@ -2,7 +2,6 @@
     <div class="team-container__wrap">
         <div class="team-container">
             <div class="team-item hydrochemist">
-                <img class="team-item__img" src="img/hydrochemist.png" alt="">
                 <picture>
                     <source type="image/webp" srcset="img/hydrochemist.webp">
                     <img class="team-item__img" src="img/hydrochemist.png" alt="">

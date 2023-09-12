@@ -363,7 +363,6 @@
                 </BaseSidebar>
                 <div class="scena__wrap">
                     <picture>
-<!--                        <source media="(max-width: 768px)" srcset="img/step-3-scena-mobile.png">-->
                         <source media="(max-width: 768px)" type="image/webp" srcset="img/step-3-scena-mobile.webp">
                         <source media="(max-width: 768px)" srcset="img/step-3-scena-mobile.png">
                         <source type="image/webp" srcset="img/step-3-scena.webp">

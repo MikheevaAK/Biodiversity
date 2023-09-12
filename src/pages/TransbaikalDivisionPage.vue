@@ -65,6 +65,30 @@
                     <img class="mb-100" src="img/area.png" alt="">
                 </picture>
 
+                <div class="transbaikal-scroll mb-100">
+                    <BaseTextBlock class="text" :title="'Экотехнологии Быстринского ГОК'">
+                        <p>
+                            При создании &laquo;Быстры&raquo; и&nbsp;её&nbsp;инфраструктуры использовались передовые
+                            технологии, сокращающие экологический след предприятия.
+                        </p>
+                    </BaseTextBlock>
+                    <svg class="mobile-icon-scroll" width="96" height="54" viewBox="0 0 96 54" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M83.6023 17.4167L77.934 11.7325L80.1665 9.5L89.6665 19L80.1665 28.5L77.934 26.2675L83.6023 20.5833H64.3332V17.4167H83.6023Z"
+                            fill="#DEDEDE" />
+                        <path
+                            d="M12.3977 17.4167L18.066 11.7325L15.8335 9.5L6.3335 19L15.8335 28.5L18.066 26.2675L12.3977 20.5833H31.6668V17.4167H12.3977Z"
+                            fill="#DEDEDE" />
+                        <circle cx="48.5" cy="18.5" r="18.5" fill="#DEDEDE" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M40.35 28.4855C39.9499 27.8918 39.5705 26.1688 39.2545 25.0944C38.9395 24.0217 38.6892 23.5984 38.3004 23.3184C37.912 23.0376 37.386 22.9021 36.9063 22.8755C36.4258 22.8492 35.9928 22.9325 35.6618 23.0766C35.3324 23.2208 35.1051 23.4235 34.9103 23.9518C34.714 24.48 34.5514 25.3325 34.4674 26.9558C34.3833 28.5791 34.377 30.9702 34.531 33.3717C34.6853 35.7724 34.9991 38.1823 35.1574 39.5283C35.3156 40.8725 35.3191 41.1534 35.0153 41.8695C34.7122 42.5854 34.1016 43.7378 33.7124 44.4612C33.3231 45.1828 33.1545 45.4749 34.9587 46.6846C36.7635 47.8938 40.5421 50.0189 42.496 51.0641C44.4504 52.1085 44.5815 52.0722 44.8609 51.7324C45.1397 51.3919 45.567 50.7478 45.9377 50.1532C46.308 49.5593 46.6215 49.0162 46.9986 48.6489C47.3758 48.2814 47.8164 48.0898 48.2327 47.9417L49.4905 47.5249C49.9396 47.366 50.4458 47.1569 51.0549 46.6731C51.6641 46.1895 52.3767 45.4302 53.3443 43.8995C54.3099 42.3677 55.5312 40.0643 56.2654 38.6492C56.9996 37.2351 57.2479 36.7089 57.3446 36.2082C57.441 35.7062 57.3864 35.2298 57.1153 34.7944C56.8437 34.3588 56.3554 33.9653 55.907 33.7903C55.4588 33.6147 55.0494 33.6562 54.6466 33.9257C54.2436 34.1945 53.8471 34.6903 53.589 35.0424C53.3298 35.3948 53.2091 35.6039 53.0439 35.7024C52.8769 35.8009 52.6629 35.789 52.7343 35.5237C52.8049 35.2579 53.1599 34.7391 53.5216 34.1126C53.8838 33.4853 54.2522 32.7506 54.442 32.1365C54.6321 31.5215 54.6431 31.0257 54.5075 30.642C54.3717 30.257 54.0899 29.9826 53.7837 29.7504C53.4783 29.5186 53.1481 29.3279 52.8197 29.2777C52.4907 29.2272 52.1645 29.3166 51.8807 29.5699C51.5964 29.824 51.3549 30.2422 51.0959 30.5941C50.8377 30.9465 50.5617 31.2337 50.371 31.373C50.1809 31.5143 50.0742 31.5082 50.2741 31.0676C50.4737 30.6253 50.9806 29.7473 51.305 29.0437C51.629 28.3389 51.7707 27.8076 51.7607 27.3008C51.7512 26.7931 51.5893 26.3109 51.3233 25.9618C51.0577 25.6135 50.6859 25.3989 50.2713 25.3544C49.8563 25.3107 49.3998 25.4356 48.9604 25.7672C48.5211 26.0989 48.1005 26.6364 47.8262 26.9236C47.5508 27.2095 47.4198 27.2455 47.6608 26.8281C47.9018 26.4107 48.5159 25.538 49.5339 23.8696C50.5527 22.2017 51.9763 19.7359 52.7013 18.2887C53.4269 16.841 53.4551 16.4114 53.3889 15.955C53.3217 15.498 53.1601 15.0159 52.886 14.6333C52.6114 14.2532 52.2228 13.9727 51.8117 13.8747C51.4003 13.7756 50.9672 13.8598 50.5274 14.0518C50.0851 14.2434 49.6381 14.5419 48.1481 16.8861C46.6581 19.2284 44.1247 23.6165 42.6471 26.0791C41.1709 28.541 40.7504 29.0785 40.35 28.4853L40.35 28.4855Z"
+                            fill="#626261" />
+                    </svg>
+
+                    <TransbaikalScrollSwiper />
+                </div>
+
                 <BaseTextBlock class="text mb-40" :title="'Зона воздействия предприятий Забайкальского дивизиона'"
                     :tooltip="true">
                     <p class="mb-10">
@@ -160,19 +184,28 @@
                             время года.
                         </p>
                         <div class="wrap-numbers">
-                            <BaseNumberBlock class="" :textTop="'56 видов'" :textBottom="'птиц'" />
-                            <BaseNumberBlock class="" :textTop="'21 вид'" :textBottom="'млекопитающих'" />
+                            <BaseNumberBlock class="" :textTop="'56&nbsp;видов'" :textBottom="'птиц'" />
+                            <BaseNumberBlock class="" :textTop="'21&nbsp;вид'" :textBottom="'млекопитающих'" />
                         </div>
                     </BaseTextBlock>
                 </div>
                 <div class="collage mb-100">
                     <BaseDropdownInfo :isModal="true" class="dubrovnik" :title="'Дубровник'" :color="'#71464E'"
-                        :text="'Имеет китайское происхождение. В&nbsp;19&nbsp;веке вид проник в&nbsp;Европу и&nbsp;очень быстро освоил её&nbsp;&mdash; в&nbsp;1920-х годах птичек с&nbsp;яркой внешностью можно было встретить уже в&nbsp;Финляндии. За&nbsp;последнее время популяция дубровника в&nbsp;мире сократилась на&nbsp;90%, вид занесён в&nbsp;Красную книгу России'" />
+                        :text="'Имеет китайское происхождение. В&nbsp;19&nbsp;веке вид проник в&nbsp;Европу и&nbsp;очень быстро освоил её: в&nbsp;1920-х годах птичек с&nbsp;яркой внешностью можно было встретить уже в&nbsp;Финляндии. За&nbsp;последнее время популяция дубровника в&nbsp;мире сократилась на&nbsp;90%, вид занесён в&nbsp;Красную книгу России'" />
+                    <BaseDropdownInfo :isModal="true" class="moskovka" :title="'Московка'"
+                        :text="'Во&nbsp;время когда московка возбуждена, она приподнимает перья на&nbsp;лбу в&nbsp;виде небольшого хохолка.'" />
                     <BaseDropdownInfo :isModal="true" class="siberian-deer" :title="'Сибирская косуля'"
-                        :text="'Как показали исследования, численность сибирских косуль рядом c&nbsp;Быстринским ГОК и&nbsp;на&nbsp;территории за&nbsp;пределами радиуса промышленного воздействия одинаковая. Вид встречается настолько часто, что учёные РАН выбрали его индикатором состояния экосистем дивизиона'" />
+                        :text="'Как показали исследования, численность сибирских косуль рядом с&nbsp;Быстринским ГОК и&nbsp;на&nbsp;территории за&nbsp;пределами радиуса промышленного воздействия одинаковая. Вид встречается настолько часто, что учёные РАН выбрали его индикатором состояния экосистем дивизиона'" />
 
                     <BaseDropdownInfo :isModal="true" class="ants" :title="'Муравьи'"
-                        :text="'Как показали исследования, численность сибирских косуль рядом c&nbsp;Быстринским ГОК и&nbsp;на&nbsp;территории за&nbsp;пределами радиуса промышленного воздействия одинаковая. Вид встречается настолько часто, что учёные РАН выбрали его индикатором состояния экосистем дивизиона'" />
+                        :text="'В&nbsp;Забайкальском дивизионе исследователи обнаружили 29&nbsp;видов муравьев, из&nbsp;них три были выбраны индикаторами состояния экосистем: Чёрный болотный муравей, Черноголовый муравей и&nbsp;Бледноногий садовый муравей'" />
+
+                    <BaseDropdownInfo :isModal="true" class="hare" :title="'Заяц-беляк'"
+                        :text="'Широко расставленные глаза помогают быстрее заметить опасность и&nbsp;убежать. Спасаясь, развивает скорость до&nbsp;60&nbsp;км/ч. Обитает также в&nbsp;Норильском дивизионе'" />
+
+                    <BaseDropdownInfo :isModal="true" class="shrew" :title="'Бурозубка'"
+                        :text="'Быстро стареет из-за необычайно интенсивного обмена веществ'" />
+
 
                     <BaseDropdownInfo :isModal="true" class="maksimovichs-vole" :title="'Полёвка Максимовича'"
                         :text="'Доминирует среди других 10&nbsp;видов грызунов на&nbsp;территории всех зон воздействия Забайкальского дивизиона. Рядом с&nbsp;Быстринским комбинатом исследователи отметили особенно высокий уровень доминирования, поэтому выбрали полёвку Максимовича видом-индикатором'" />
@@ -340,7 +373,7 @@
                     </picture>
 
                 </div>
-                <BaseTextBlock class="text mb-40">
+                <BaseTextBlock class="mb-40">
                     <p class="mb-10">
                         Некоторые редкие виды могут присутствовать в&nbsp;зонах промышленного воздействия, несмотря
                         на&nbsp;шум, загрязнение и&nbsp;изъятие почв.
@@ -374,6 +407,11 @@ import BaseTextBlock from '@/components/BaseTextBlock.vue'
 import BaseSidebar from '@/components/BaseSidebar'
 import BaseNumberBlock from '@/components/BaseNumberBlock'
 import BaseDropdownInfo from '@/components/BaseDropdownInfo.vue'
+import TransbaikalScrollSwiper from '@/components/TransbaikalScrollSwiper.vue'
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 export default {
     components: {
         BaseHero,
@@ -384,7 +422,7 @@ export default {
         MainSection,
         BaseSidebar,
         BaseTooltip,
-        // BaseScrollBlock,
+        TransbaikalScrollSwiper,
         BaseDropdownInfo,
         BaseNumberBlock
     },
@@ -401,6 +439,53 @@ export default {
                 }
             ],
             heroDescr: 'Кто обитает на&nbsp;территории одного из&nbsp;самых современных и&nbsp;технологичных дивизионов &laquo;Норникеля&raquo;'
+        }
+    },
+    mounted() {
+        this.$nextTick(function () {
+            this.scrollAnimation();
+        })
+    },
+    methods: {
+        scrollAnimation() {
+            const collageItems = Array.from(document.querySelectorAll(".text-block__wrap"));
+            collageItems.forEach((elem) => {
+
+                this.oneScrollTrigger = gsap.fromTo(elem,
+                    {
+                        y: 50,
+                    },
+                    {
+                        y: 0,
+                        duration: 1,
+                        scrollTrigger: {
+                            start: '0% 100%',
+                            end: 'bottom 75%',
+                            trigger: elem,
+                            scrub: true,
+                            // markers: true,
+                        },
+                    });
+            });
+
+            const sidebarItems = Array.from(document.querySelectorAll(".sidebar"));
+            sidebarItems.forEach((elem) => {
+                this.twoScrollTrigger = gsap.fromTo(elem,
+                    {
+                        y: 50,
+                    },
+                    {
+                        y: 0,
+                        duration: 1,
+                        scrollTrigger: {
+                            start: '0% 100%',
+                            end: 'bottom 75%',
+                            trigger: elem,
+                            // markers: true,
+                            scrub: true,
+                        },
+                    });
+            });
         }
     }
 }
@@ -521,21 +606,22 @@ export default {
         position: relative;
         height: 388rem;
         width: 100%;
-        background-image: url(../../public/img/collage2.webp);
+        background-image: url(../../public/img/collage-2.png);
         background-repeat: no-repeat;
         background-size: contain;
         z-index: 1;
 
-        // @supports (background-image: url(../../public/img/collage2.webp)) {
-        //     background-image: url(../../public/img/collage2.webp);
-        // }
+        @supports (background-image: url(../../public/img/collage-2.webp)) {
+            background-image: url(../../public/img/collage-2.webp);
+        }
 
         @media (max-width: 768px) {
-            height: 792rem;
-            background-image: url(../../public/img/collage-mobile.png);
-            // @supports (background-image: url(../../public/img/collage-mobile.webp)) {
-            // background-image: url(../../public/img/collage-mobile.webp);
-            // } 
+            height: 1416rem;
+            background-image: url(../../public/img/collage-2-mobile.png);
+
+            @supports (background-image: url(../../public/img/collage-2-mobile.webp)) {
+                background-image: url(../../public/img/collage-2-mobile.webp);
+            }
         }
 
         .dubrovnik {
@@ -544,8 +630,19 @@ export default {
             right: 18.5rem;
 
             @media (max-width: 768px) {
-                top: 311rem;
-                right: 40rem;
+                top: 161rem;
+                right: 43rem;
+            }
+        }
+
+        .moskovka {
+            display: none;
+            position: absolute;
+
+            @media (max-width: 768px) {
+                display: block;
+                top: 192rem;
+                right: 12rem;
             }
         }
 
@@ -555,8 +652,12 @@ export default {
             left: 14rem;
 
             @media (max-width: 768px) {
-                top: 311rem;
-                left: 40rem;
+                top: 419rem;
+                left: 35rem;
+
+                .dropdown-info__title {
+                    max-width: unset;
+                }
             }
         }
 
@@ -566,8 +667,8 @@ export default {
             left: 44rem;
 
             @media (max-width: 768px) {
-                bottom: 177rem;
-                left: 44rem;
+                bottom: 650rem;
+                left: 61rem;
             }
         }
 
@@ -577,8 +678,38 @@ export default {
             left: 3rem;
 
             @media (max-width: 768px) {
-                bottom: 177rem;
-                left: 44rem;
+                bottom: 865rem;
+                left: 4rem;
+
+                .dropdown-info__title {
+                    max-width: unset;
+                }
+            }
+        }
+
+        .hare {
+            display: none;
+            position: absolute;
+
+            @media (max-width: 768px) {
+                display: block;
+                bottom: 881rem;
+                right: 35rem;
+
+                .dropdown-info__title {
+                    max-width: unset;
+                }
+            }
+        }
+
+        .shrew {
+            display: none;
+            position: absolute;
+
+            @media (max-width: 768px) {
+                display: block;
+                bottom: 540rem;
+                right: 10rem;
             }
         }
 
@@ -588,8 +719,8 @@ export default {
             right: 22rem;
 
             @media (max-width: 768px) {
-                bottom: 15rem;
-                left: 44rem;
+                bottom: 86rem;
+                left: 61rem;
             }
         }
 
@@ -599,8 +730,8 @@ export default {
             right: 48rem;
 
             @media (max-width: 768px) {
-                bottom: 10rem;
-                left: 44rem;
+                bottom: 65.5rem;
+                left: 24rem;
             }
         }
     }
@@ -862,8 +993,8 @@ export default {
                     margin-top: 2.88rem;
 
                     @media (max-width: 768px) {
-                        margin-top: 7.4rem;
-                        gap: 7.4rem;
+                        margin-top: 0;
+                        gap: 0;
                         flex-direction: column;
                     }
                 }

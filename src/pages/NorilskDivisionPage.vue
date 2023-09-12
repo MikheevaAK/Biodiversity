@@ -202,28 +202,28 @@
                     </BaseTextBlock>
                 </div>
                 <div class="collage">
-                    <BaseDropdownInfo class="ground-beetles" :title="'Жужелицы'"
+                    <BaseDropdownInfo class="ground-beetles" :title="'Жужелицы'" :is-modal="true"
                         :text="'Такие виды, как Amara brunnea, Pterostichus fulvescens, Notiophilus fasciatus и Nebria gyllenhali, отрицательно реагируют на&nbsp;промышленное воздействие и&nbsp;помогают исследователям фиксировать изменения в&nbsp;окружающей среде'" />
-                    <BaseDropdownInfo class="myxomycetes" :title="'Миксомицеты'"
+                    <BaseDropdownInfo class="myxomycetes" :title="'Миксомицеты'" :is-modal="true"
                         :text="'Миксомицеты занимают промежуточное положение между растениями и&nbsp;животными: похожие внешне на&nbsp;грибы, они постоянно передвигаются и&nbsp;едят. На&nbsp;территории воздействия предприятий исследователи обнаружили 14&nbsp;видов этих существ'" />
-                    <BaseDropdownInfo class="microalgae" :title="'Микроводоросли'"
+                    <BaseDropdownInfo class="microalgae" :title="'Микроводоросли'" :is-modal="true"
                         :text="'В&nbsp;реках и&nbsp;озёрах дивизиона биологи обнаружили два вида микроводорослей, способных рассказать об&nbsp;экологической обстановке. Похожая на&nbsp;звезду Asterionella formosa живёт только в&nbsp;чистых водоёмах, в&nbsp;то&nbsp;время как её&nbsp;антогонист Dictyosphaerium pulchellum развивается в&nbsp;загрязнённой воде'" />
 
-                    <BaseDropdownInfo class="zooplankton" :title="'Зоопланктон'"
+                    <BaseDropdownInfo class="zooplankton" :title="'Зоопланктон'" :is-modal="true"
                         :text="'Чтобы оценить состояние водоёмов, исследователи отобрали виды зоопланктона, сигнализирующие о&nbsp;качестве воды. Например, планктонный рачок Limnocalanus macrurus любит чистую воду, а&nbsp;если начинает доминировать планктонная коловратка Brachionus sericus&nbsp;&mdash; вода загрязнена'" />
                     <BaseDropdownInfo v-if="!isModile" class="char" :title="'Арктический голец (боганидская палия)'"
                         :text="'Считается самой полезной рыбой в&nbsp;мире: кусочек рыбы в&nbsp;30&nbsp;г покрывает суточную потребность человека в&nbsp;полезных жирных кислотах. Встречается также в&nbsp;водоёмах Кольского дивизиона'" />
 
-                    <BaseDropdownInfo v-if="isModile" class="merlin" :title="'Кречет'" :color="'#71464E'"
+                    <BaseDropdownInfo v-if="isModile" class="merlin" :title="'Кречет'" :color="'#71464E'" :is-modal="true"
                         :text="'Самая крупная птица из&nbsp;отряда соколиных. За&nbsp;последние 20&nbsp;лет её&nbsp;популяция в&nbsp;России сократилась втрое. &laquo;Норникель&raquo; вложил 50&nbsp;млн рублей в&nbsp;поддержку и&nbsp;сохранение вида в&nbsp;2022&ndash;2023&nbsp;гг'" />
 
-                    <BaseDropdownInfo v-if="isModile" class="deer" :title="'Дикий северный олень'" :color="'#71464E'"
+                    <BaseDropdownInfo v-if="isModile" class="deer" :title="'Дикий северный олень'" :color="'#71464E'" :is-modal="true"
                         :text="'Отличительная особенность этого вида&nbsp;&mdash; наличие рогов у&nbsp;самок. Наименее изученная и&nbsp;малочисленная популяция дикого северного оленя&nbsp;&mdash; гыданская, она занесена в&nbsp;Красную книгу ЯНАО. По&nbsp;данным исследований, олени почти не&nbsp;мигрируют на&nbsp;дальние расстояния и&nbsp;круглый год остаются в&nbsp;арктической тундре'" />
-                    <BaseDropdownInfo v-if="isModile" class="lycosus-moss" :title="'Плаунок плаунковидный'"
+                    <BaseDropdownInfo v-if="isModile" class="lycosus-moss" :title="'Плаунок плаунковидный'" :is-modal="true"
                         :color="'#71464E'"
                         :text="'В&nbsp;районе Промышленного Норильска биологи обнаружили несколько участков, ценных для произрастания этого редкого вида растений. Чтобы сохранить популяции плаунка, вокруг этих участков необходимо создавать защитные зоны'" />
-                    <BaseDropdownInfo v-if="isModile" class="hare" :title="'Заяц-беляк'"
-                        :text="'Спасаясь от&nbsp;опасности, развивает скорость до&nbsp;60 км/ч'" />
+                    <BaseDropdownInfo v-if="isModile" class="hare" :title="'Заяц-беляк'" :is-modal="true"
+                        :text="'Спасаясь от&nbsp;опасности, развивает скорость до&nbsp;60&nbsp;км/ч'" />
                 </div>
                 <BaseTextBlock class="mb-100" :tooltip="true">
                     <p class="mb-10">
@@ -811,7 +811,7 @@ export default {
 
                 @media (max-width: 768px) {
                     height: 100%;
-                    background-size: cover;
+                    background-size: 100%;
                     position: fixed;
                     background-attachment: unset;
                 }
@@ -1025,7 +1025,7 @@ export default {
         background-image: url(../../public/img/collage.png);
         background-repeat: no-repeat;
         background-size: contain;
-        z-index: 1;
+        z-index: 11;
 
         @supports (background-image: url(../../public/img/collage.webp)) {
             background-image: url(../../public/img/collage.webp);

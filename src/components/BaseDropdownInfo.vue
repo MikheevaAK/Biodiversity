@@ -18,20 +18,23 @@
             </div>
         </div>
         <Transition name="dropdown-info">
-            <div v-if="show" class="dropdown-info__text" v-html="text"></div>
+            <div v-if="show && !isModal" class="dropdown-info__text" v-html="text"></div>
         </Transition>
 
-        <!-- <div v-if="show && isModal && window.innerWidth <= 768" class="modal">
-            <svg class="hidden-close" @click="toggleInfo" xmlns="http://www.w3.org/2000/svg"
-                width="17" height="17" viewBox="0 0 17 17" fill="none">
-                <path d="M16 1L1 16" stroke="#333333" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M1 1L16 16" stroke="#333333" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            <div class="dropdown-info__title">
-                {{ title }}
+        <div v-if="show && isModal" class="modal">
+            <div class="modal__substrate"></div>
+            <div class="modal__wrap">
+                <svg class="modal-close" @click="toggleInfo" xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                    viewBox="0 0 17 17" fill="none">
+                    <path d="M16 1L1 16" stroke="#333333" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M1 1L16 16" stroke="#333333" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <div class="modal__title">
+                    {{ title }}
+                </div>
+                <div class="modal__text" v-html="text"></div>
             </div>
-            <div class="dropdown-info__text" v-html="text"></div>
-        </div> -->
+        </div>
     </div>
 </template>
 
@@ -63,6 +66,12 @@ export default {
     methods: {
         toggleInfo() {
             this.show = !this.show
+
+            if (this.show && this.isModal && window.innerWidth <= 768) {
+                document.body.style.overflow = 'hidden'
+            } else {
+                document.body.style.overflow = 'auto'
+            }
         }
     }
 }
@@ -101,9 +110,9 @@ export default {
         border-radius: 50%;
 
         @media (max-width: 768px) {
-            padding: 2.6rem;
-            width: 8.467rem;
-            height: 8.467rem;
+            padding: 2.2rem;
+            width: 7.467rem;
+            height: 7.467rem;
         }
     }
 
@@ -130,6 +139,10 @@ export default {
     &__title {
         font-weight: 600;
         max-width: 14rem;
+
+        @media (max-width: 768px) {
+            font-size: 3.75rem;
+        }
     }
 
     &__text {
@@ -152,15 +165,45 @@ export default {
         animation: bounce-in .5s reverse;
     }
 
-    @keyframes bounce-in {
-        0% {
-            transform: scale(0.6);
-            opacity: 0;
+    .modal {
+        &__substrate {
+            @media (max-width: 768px) {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                opacity: 0.7;
+                background: #F7F6F2;
+                z-index: 3;
+            }
         }
 
-        100% {
-            transform: scale(1);
-            opacity: 1;
+        &__wrap {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            background: #fff;
+            z-index: 3;
+            padding: 13.3334rem 5.3334rem 7.467rem 5.3334rem;
+        }
+
+        &-close {
+            position: absolute;
+            top: 6.1332rem;
+            right: 5.3334rem;
+            width: 4rem;
+            height: 4rem;
+            z-index: 3;
+        }
+
+        &__title {
+            margin-bottom: 2rem;
+            font-size: 4.8rem;
+            font-weight: 600;
+            line-height: 130%;
         }
     }
-}</style>
+}
+</style>

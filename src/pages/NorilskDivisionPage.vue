@@ -211,7 +211,7 @@
 
                     <BaseDropdownInfo class="zooplankton" :title="'Зоопланктон'" :is-modal="true"
                         :text="'Чтобы оценить состояние водоёмов, исследователи отобрали виды зоопланктона, сигнализирующие о&nbsp;качестве воды. Например, планктонный рачок Limnocalanus macrurus любит чистую воду, а&nbsp;если начинает доминировать планктонная коловратка Brachionus sericus&nbsp;&mdash; вода загрязнена'" />
-                    <BaseDropdownInfo v-if="!isModile" class="char" :title="'Арктический голец (боганидская палия)'"
+                    <BaseDropdownInfo v-if="!isModile" class="char" :title="'Арктический голец (боганидская палия)'" :is-modal="true"
                         :text="'Считается самой полезной рыбой в&nbsp;мире: кусочек рыбы в&nbsp;30&nbsp;г покрывает суточную потребность человека в&nbsp;полезных жирных кислотах. Встречается также в&nbsp;водоёмах Кольского дивизиона'" />
 
                     <BaseDropdownInfo v-if="isModile" class="merlin" :title="'Кречет'" :color="'#71464E'" :is-modal="true"

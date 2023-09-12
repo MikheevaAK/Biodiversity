@@ -18,10 +18,10 @@
             </div>
         </div>
         <Transition name="dropdown-info">
-            <div v-if="show && !isModal" class="dropdown-info__text" v-html="text"></div>
+            <div v-if="show && (!isModal ||isModal && !isMobile)" class="dropdown-info__text" v-html="text"></div>
         </Transition>
 
-        <div v-if="show && isModal" class="modal">
+        <div v-if="show && isModal && isMobile" class="modal">
             <div class="modal__substrate"></div>
             <div class="modal__wrap">
                 <svg class="modal-close" @click="toggleInfo" xmlns="http://www.w3.org/2000/svg" width="17" height="17"
@@ -42,7 +42,8 @@
 export default {
     data() {
         return {
-            show: false
+            show: false,
+            isMobile: window.innerWidth <= 768
         }
     },
     props: {

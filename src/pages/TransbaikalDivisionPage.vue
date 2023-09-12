@@ -18,8 +18,8 @@
                     числе сокращающие воздействие на окружающую среду.
                 </BaseTextBlock>
 
-                <BigMap :circales="circales" :img="'img/transbaikal-big-map.jpg'" class="mb-100"
-                    :imgMobile="'img/transbaikal-big-map-mobile.png'">
+                <BigMap :circales="circales" :img="'img/transbaikal-big-map'" class="mb-100"
+                    :imgMobile="'img/transbaikal-big-map-mobile'">
                     <div class="circales">
                         <div class="circale-block">
                             <svg class="circale-block__img" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
@@ -41,7 +41,7 @@
                 </BigMap>
                 <!-- scroll -->
 
-                <BaseTextBlock class="text mb-40" :title="'Быстринский горно-обогатительный комбинат'">
+                <BaseTextBlock class="text mb-40 max-width" :title="'Быстринский горно-обогатительный комбинат'">
                     <p>
                         Комбинат расположился в&nbsp;труднодоступной местности Газимуро-Заводского района Забайкальского
                         края. Здесь перерабатывают руду Быстринского месторождения и&nbsp;получают медный, магнетитовый
@@ -59,8 +59,8 @@
                 </BaseTextBlock>
 
                 <picture>
-                    <source media="(max-width: 768px)" srcset="img/area-mobile.png">
                     <source media="(max-width: 768px)" type="image/webp" srcset="img/area-mobile.webp">
+                    <source media="(max-width: 768px)" srcset="img/area-mobile.png">
                     <source type="image/webp" srcset="img/area.webp">
                     <img class="mb-100" src="img/area.png" alt="">
                 </picture>
@@ -94,7 +94,9 @@
                 </BaseTextBlock>
                 <div class="transbaikal-radius mb-60">
                     <picture>
+                        <source media="(max-width: 768px)" type="image/webp" srcset="img/transbaikal-radius-mobile.webp">
                         <source media="(max-width: 768px)" srcset="img/transbaikal-radius-mobile.png">
+                        <!-- <source type="image/webp" srcset="img/transbaikal-radius.webp"> -->
                         <img src="img/transbaikal-radius.png" alt="">
                     </picture>
                 </div>
@@ -120,7 +122,7 @@
                                 сократилась до&nbsp;опасного уровня. Им&nbsp;присваивают статус охраняемых и&nbsp;заносят
                                 в&nbsp;Красные книги&nbsp;&mdash; общероссийскую или региональные. Охранный статус запрещает
                                 охоту на&nbsp;животных, а&nbsp;в&nbsp;местах обитания краснокнижных растений и&nbsp;грибов
-                                ограничено строительство и&nbsp;другая хозяйственная деятельность.
+                                ограничены строительство и&nbsp;другая хозяйственная деятельность.
                             </BaseTooltip> видов растений и&nbsp;птиц, а&nbsp;также отобрали
                             <BaseTooltip :word="'индикаторные'">
                                 Исследователи выбирают виды-индикаторы из&nbsp;числа типичных для региона организмов,
@@ -485,6 +487,32 @@ export default {
                         font-size: 3.46667rem;
                     }
                 }
+            }
+        }
+    }
+
+    .hero__wrap {
+        width: 51rem;
+
+        @media (max-width: 768px) {
+            width: unset;
+        }
+    }
+
+    .hero__descr {
+        width: 43rem;
+
+        @media (max-width: 768px) {
+            width: unset;
+        }
+    }
+
+    .max-width {
+        .text-block__title {
+            width: 20rem;
+
+            @media (max-width: 768px) {
+                width: unset;
             }
         }
     }

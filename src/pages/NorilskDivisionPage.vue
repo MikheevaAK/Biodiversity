@@ -818,7 +818,7 @@ export default {
 
                 &.remove-active {
                     background-attachment: unset;
-                    background-position: 6.75rem 310vh;
+                    background-position: 6.75rem 352vh;
                     background-size: calc(100% - 13.5rem) 49rem;
 
                     @media (max-width: 768px) {

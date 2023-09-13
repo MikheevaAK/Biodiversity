@@ -12,7 +12,7 @@
 .sidebar {
     display: flex;
     margin: 0 auto;
-    width: 41.125rem;
+    width: 44.125rem;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;

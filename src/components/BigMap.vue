@@ -62,8 +62,8 @@ $purple: #654EA3;
 
     .map-circale {
         position: absolute;
-        width: 0.88rem;
-        height: 0.88rem;
+        width: 0.9724rem;
+        height: 0.9724rem;
         border-radius: 100%;
         animation: ripple 1.5s linear;
         transition-timing-function: ease-in;

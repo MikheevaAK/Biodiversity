@@ -62,6 +62,7 @@ export default {
     &__external {
         display: inline-block;
         text-decoration-line: underline;
+        text-decoration-skip-ink: none;
         color: var(--copper, #D38235);
         cursor: pointer;
     }

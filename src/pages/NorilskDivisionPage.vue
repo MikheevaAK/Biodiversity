@@ -25,8 +25,7 @@
                     </p>
                 </BaseTextBlock>
 
-                <BigMap :circales="circales" :img="'img/division-big-map'"
-                    :imgMobile="'img/division-big-map-mobile'">
+                <BigMap :circales="circales" :img="'img/division-big-map'" :imgMobile="'img/division-big-map-mobile'">
                     <BaseNumberBlock :textTop="'44 объекта'" :textBottom="'входит в Норильский дивизион'" />
                     <div class="circales">
                         <div class="circale-block">
@@ -211,13 +210,15 @@
 
                     <BaseDropdownInfo class="zooplankton" :title="'Зоопланктон'" :is-modal="true"
                         :text="'Чтобы оценить состояние водоёмов, исследователи отобрали виды зоопланктона, сигнализирующие о&nbsp;качестве воды. Например, планктонный рачок Limnocalanus macrurus любит чистую воду, а&nbsp;если начинает доминировать планктонная коловратка Brachionus sericus&nbsp;&mdash; вода загрязнена'" />
-                    <BaseDropdownInfo v-if="!isModile" class="char" :title="'Арктический голец (боганидская палия)'" :is-modal="true"
+                    <BaseDropdownInfo v-if="!isModile" class="char" :title="'Арктический голец (боганидская палия)'"
+                        :is-modal="true"
                         :text="'Считается самой полезной рыбой в&nbsp;мире: кусочек рыбы в&nbsp;30&nbsp;г покрывает суточную потребность человека в&nbsp;полезных жирных кислотах. Встречается также в&nbsp;водоёмах Кольского дивизиона'" />
 
                     <BaseDropdownInfo v-if="isModile" class="merlin" :title="'Кречет'" :color="'#71464E'" :is-modal="true"
                         :text="'Самая крупная птица из&nbsp;отряда соколиных. За&nbsp;последние 20&nbsp;лет её&nbsp;популяция в&nbsp;России сократилась втрое. &laquo;Норникель&raquo; вложил 50&nbsp;млн рублей в&nbsp;поддержку и&nbsp;сохранение вида в&nbsp;2022&ndash;2023&nbsp;гг'" />
 
-                    <BaseDropdownInfo v-if="isModile" class="deer" :title="'Дикий северный олень'" :color="'#71464E'" :is-modal="true"
+                    <BaseDropdownInfo v-if="isModile" class="deer" :title="'Дикий северный олень'" :color="'#71464E'"
+                        :is-modal="true"
                         :text="'Отличительная особенность этого вида&nbsp;&mdash; наличие рогов у&nbsp;самок. Наименее изученная и&nbsp;малочисленная популяция дикого северного оленя&nbsp;&mdash; гыданская, она занесена в&nbsp;Красную книгу ЯНАО. По&nbsp;данным исследований, олени почти не&nbsp;мигрируют на&nbsp;дальние расстояния и&nbsp;круглый год остаются в&nbsp;арктической тундре'" />
                     <BaseDropdownInfo v-if="isModile" class="lycosus-moss" :title="'Плаунок плаунковидный'" :is-modal="true"
                         :color="'#71464E'"
@@ -890,7 +891,7 @@ export default {
             }
 
             p {
-                font-size: 1.125rem;
+                font-size: 1.25rem;
                 font-weight: 300;
                 line-height: 130%;
 
@@ -900,7 +901,7 @@ export default {
 
                 &:first-child {
                     margin-bottom: 1.56rem;
-                    font-size: 1.125rem;
+                    font-size: 1.25rem;
                     font-weight: 600;
 
                     @media (max-width: 768px) {
@@ -918,6 +919,8 @@ export default {
                 }
 
                 &__title {
+                    font-size: 1.25rem;
+
                     @media (max-width: 768px) {
                         font-size: 4.8rem;
                     }
@@ -926,12 +929,14 @@ export default {
                 &__text {
                     background: #F7F6F2;
                     width: 27rem;
+                    font-size: 1.04167rem;
                     padding: 3.5rem 1.4375rem 1.5625rem 3.375rem;
 
                     @media (max-width: 768px) {
                         left: -4.3rem;
                         top: -4.3rem;
                         width: 91.734rem;
+                        font-size: 3.73334rem;
                         padding: 14.9334rem 6.1333rem 6.6666rem 13.8666rem;
                     }
                 }
@@ -945,6 +950,10 @@ export default {
 
                     li:not(:last-child) {
                         margin-bottom: 0.8rem;
+
+                        @media (max-width: 768px) {
+                            margin-bottom: 3.2rem;
+                        }
                     }
                 }
             }
@@ -1250,7 +1259,7 @@ export default {
             padding: 0.8125rem 1.25rem;
             border-radius: 3.125rem;
             border: 1px solid var(--sea, #21285C);
-            font-size: 1.125rem;
+            font-size: 1.25rem;
             color: #21285C;
             line-height: 130%;
             opacity: 0.4;
@@ -1536,5 +1545,4 @@ export default {
             }
         }
     }
-}
-</style>
+}</style>

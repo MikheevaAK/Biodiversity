@@ -202,7 +202,7 @@ export default {
             padding: 1.125rem 3.375rem;
             color: var(--white, #FFF);
             text-align: center;
-            font-size: 1.125rem;
+            font-size: 1.25rem;
             font-weight: 400;
             line-height: 130%;
             border-radius: 3.125rem;

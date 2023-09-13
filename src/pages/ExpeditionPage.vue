@@ -675,7 +675,7 @@ export default {
     &__period {
         margin-bottom: 1.75rem;
         color: var(--copper, #D38235);
-        font-size: 1.125rem;
+        font-size: 1.25rem;
         font-weight: 300;
         line-height: 130%;
 

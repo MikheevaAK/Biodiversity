@@ -45,7 +45,7 @@
                         </div>
                     </div>
                 </BigMap>
-                <section class="scroll">
+                <section class="scroll mb-100">
                     <div class="scroll-bg bg-1">
                     </div>
                     <div class="scroll-bg bg-2">
@@ -102,8 +102,22 @@
                     </div>
                 </section>
 
-                <BaseTextBlock class="text mb-40" :title="'Зона воздействия предприятий Кольского дивизиона'"
-                    :tooltip="true">
+                <BaseTextBlock class="text mb-40" :title="'Модернизация производства'">
+                    <p class="mb-10">
+                        Сегодня &laquo;Норникель&raquo; активно модернизирует действующие предприятия Кольской ГМК
+                        и&nbsp;закрывает устаревшие, опираясь на&nbsp;современное видение экологичного производства.
+                    </p>
+                    <p class="mb-10">
+                        <b>2020 год</b>&nbsp;&mdash; Компания закрыла одно из&nbsp;самых старых производств
+                        в&nbsp;регионе&nbsp;&mdash; плавильный цех в&nbsp;посёлке Никель.
+                    </p>
+                    <p>
+                        <b>2021 год</b>&nbsp;&mdash; В&nbsp;Мончегорске была остановлена рафинировочная медная площадка,
+                        производящая медь по&nbsp;устаревшей технологии.
+                    </p>
+                </BaseTextBlock>
+
+                <BaseTextBlock class="text mb-40" :title="'Зона воздействия предприятий Кольского дивизиона'">
                     <p class="mb-10">
                         Опираясь на&nbsp;состояние экосистем в&nbsp;регионе, участники Большой Научной экспедиции определили
                         предполагаемый радиус общего промышленного воздействия&nbsp;&mdash; 16&nbsp;км от&nbsp;объектов
@@ -127,10 +141,10 @@
                 </BaseTextBlock>
                 <div class="transbaikal-radius mb-60">
                     <picture>
-                        <source media="(max-width: 768px)" type="image/webp" srcset="img/transbaikal-radius-mobile.webp">
-                        <source media="(max-width: 768px)" srcset="img/transbaikal-radius-mobile.png">
-                        <!-- <source type="image/webp" srcset="img/transbaikal-radius.webp"> -->
-                        <img src="img/transbaikal-radius.png" alt="">
+                        <source media="(max-width: 768px)" type="image/webp" srcset="img/kola-radius-mobile.webp">
+                        <source media="(max-width: 768px)" srcset="img/kola-radius-mobile.png">
+                        <!-- <source type="image/webp" srcset="img/kola-radius.webp"> -->
+                        <img src="img/kola-radius.png" alt="">
                     </picture>
                 </div>
                 <BaseSidebar>
@@ -473,6 +487,10 @@ export default {
     .scroll {
         position: relative;
         width: 100%;
+
+        .card-4 {
+                position: relative;
+            }
 
         &-bg {
             position: absolute;

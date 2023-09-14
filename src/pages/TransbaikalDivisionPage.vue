@@ -747,7 +747,7 @@ export default {
 
         &__wrap {
             position: absolute;
-            top: 0;
+            top: 1rem;
             left: 50%;
             transform: translateX(-50%);
 
@@ -760,8 +760,7 @@ export default {
         }
 
         &__title {
-            margin-bottom: 1.63rem;
-            font-size: 1.375rem;
+            font-size: 1.53rem;
             font-weight: 600;
             line-height: 130%;
             text-align: center;
@@ -786,13 +785,13 @@ export default {
 
             &-title {
                 margin-bottom: 1rem;
-                font-size: 0.9375rem;
+                font-size: 1.04167rem;
                 font-weight: 700;
                 line-height: 130%;
             }
 
             &-text {
-                font-size: 0.9375rem;
+                font-size: 1.04167rem;
                 font-weight: 300;
                 line-height: 130%;
             }
@@ -953,6 +952,10 @@ export default {
 
         .number-block {
             position: static;
+        }
+
+        .sidebar__text {
+            padding: 0;
         }
     }
 

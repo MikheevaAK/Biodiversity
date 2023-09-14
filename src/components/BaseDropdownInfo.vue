@@ -1,7 +1,7 @@
 <template>
     <div class="dropdown-info">
         <div @click="toggleInfo" class="dropdown-info__wrap" :class="{
-            'z-index': toggleClass
+            'z-index': this.show && (!this.isModal || this.isModal && !this.isMobile)
         }">
             <div class="dropdown-info__svg" :style="{ background: color }">
                 <svg class="dropdown-info__minus" xmlns="http://www.w3.org/2000/svg" width="12" height="2"

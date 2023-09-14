@@ -482,7 +482,7 @@ export default {
             z-index: 1;
             height: 100vh;
             background-position: bottom;
-            background-size: calc(100% - 13.5rem) 49rem;
+            background-size: 100%;
             background-repeat: no-repeat;
 
             @media (max-width: 768px) {
@@ -503,8 +503,8 @@ export default {
 
                 &.remove-active {
                     background-attachment: unset;
-                    background-position: 6.75rem 352vh;
-                    background-size: calc(100% - 13.5rem) 49rem;
+                    background-position: 0 515vh;
+                    background-size: 100%;
 
                     @media (max-width: 768px) {
                         background-position: bottom;

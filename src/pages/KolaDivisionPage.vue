@@ -45,7 +45,62 @@
                         </div>
                     </div>
                 </BigMap>
-                <!-- scroll -->
+                <section class="scroll">
+                    <div class="scroll-bg bg-1">
+                    </div>
+                    <div class="scroll-bg bg-2">
+                    </div>
+                    <div class="scroll-bg bg-3">
+                    </div>
+                    <div class="scroll-bg bg-4">
+                    </div>
+                    <div class="scroll-wrap">
+                        <div class="scroll-card card-1 text-block__descr">
+                            <p>Промышленная площадка «Никель — Заполярный»</p>
+                            <p>
+                                Отвечает за&nbsp;разработку месторождений, расположенных между посёлком Никель
+                                и&nbsp;городом Заполярный на&nbsp;западе Мурманской области. Здесь компания добывает руду,
+                                содержащую никель, медь и&nbsp;другие полезные компоненты, а&nbsp;затем обогащает
+                                её&nbsp;на&nbsp;фабрике Заполярного, получая медно-никелевый концентрат.
+                            </p>
+                            <BaseDropdownInfo :title="'Объекты'" :color="'#D38235'"
+                                :text="'<ul><li>Рудник Северный</li><li>Рудник Каула-Котсельваара</li><li>Обогатительная фабрика г. Заполярный</li></ul>'" />
+                        </div>
+                        <div class="scroll-card card-2 text-block__descr">
+                            <p>Заповедник «Пасвик»</p>
+                            <p>
+                                Призван сохранить северные сосновые леса, обширные болотные угодья мирового значения
+                                и&nbsp;фауны водоплавающих птиц Мурманской области. Части площадей заповедника оказались
+                                в&nbsp;пределах пояса умеренного воздействия объектов Кольского дивизиона.
+                            </p>
+                        </div>
+                        <div class="scroll-card card-3 text-block__descr">
+                            <p>Промышленная площадка «Мончегорск»</p>
+                            <p>Расположена юго-западнее жилой застройки города Мончегорск, в&nbsp;центральной части региона.
+                                Объединяет металлургические объекты Кольской ГМК, где производят катодные никель
+                                и&nbsp;медь, карбонильный никель, электролитный кобальт, концентраты драгоценных металлов,
+                                меди и&nbsp;никеля, а&nbsp;также серную кислоту.
+                            </p>
+                            <BaseDropdownInfo :title="'Объекты'" :color="'#D38235'"
+                                :text="'<ul><li>Рафинировочный цех</li><li>Химико-металлургический цех</li><li>Цеха электролиза никеля №1 и №2</li></ul>'" />
+                        </div>
+                        <div class="scroll-card card-4 text-block__descr">
+                            <p>Лапландский заповедник</p>
+                            <p>Ближайший и&nbsp;важнейший для восстановления и&nbsp;сохранения разнообразия видов
+                                в&nbsp;районе воздействия промышленных объектов Мончегорской площадки. Заповедник был создан
+                                для охраны западной популяции горно-тундровой формы дикого северного оленя и&nbsp;отдельных
+                                уникальных для Кольского полуострова экосистем. Часть
+                                <BaseTooltip :word="'буферной зоны'">
+                                    Периметры безопасности, которые защищают и&nbsp;поддерживают жизнедеятельность
+                                    охраняемых растений, растительной группы или целой природной территории. В&nbsp;буферных
+                                    зонах нельзя вырубать деревья, охотиться и&nbsp;передвигаться на&nbsp;автомобиле.
+                                </BaseTooltip> заповедника попадает
+                                в&nbsp;пояса умеренного и&nbsp;незначительного воздействия предприятий
+                                &laquo;Норникеля&raquo;.
+                            </p>
+                        </div>
+                    </div>
+                </section>
 
                 <BaseTextBlock class="text mb-40" :title="'Зона воздействия предприятий Кольского дивизиона'"
                     :tooltip="true">
@@ -136,6 +191,12 @@ import MainSection from '@/layout/MainSection'
 import BaseTooltip from '@/components/ BaseTooltip.vue'
 import BaseTextBlock from '@/components/BaseTextBlock.vue'
 import BaseSidebar from '@/components/BaseSidebar'
+import BaseDropdownInfo from '@/components/BaseDropdownInfo.vue'
+
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 export default {
     components: {
         BaseHero,
@@ -146,6 +207,7 @@ export default {
         MainSection,
         BaseSidebar,
         BaseTooltip,
+        BaseDropdownInfo
         // BaseScrollBlock,
         // BaseNumberBlock
     },
@@ -170,6 +232,131 @@ export default {
                 },
             ],
             heroDescr: 'Растительный и&nbsp;животный мир рядом с&nbsp;промышленными площадками &laquo;Норникеля&raquo; в&nbsp;Мурманской области'
+        }
+    },
+    mounted() {
+        this.$nextTick(function () {
+            this.scrollAnimation();
+        })
+    },
+    methods: {
+        onResize() {
+            this.isMobile = (window.innerWidth <= 768);
+        },
+        scrollMobile() {
+            const collageItems = Array.from(document.querySelectorAll(".scroll-bg.active"))
+
+            collageItems.forEach((elem) => {
+                elem.css('background-position', '0px ' + document.scrollTop() + 'px')
+            })
+        },
+        scrollAnimation() {
+            const collageItems = Array.from(document.querySelectorAll(".text-block__wrap"));
+            collageItems.forEach((elem) => {
+
+                this.oneScrollTrigger = gsap.fromTo(elem,
+                    {
+                        y: 50,
+                    },
+                    {
+                        y: 0,
+                        duration: 1,
+                        scrollTrigger: {
+                            start: '0% 100%',
+                            end: 'bottom 75%',
+                            trigger: elem,
+                            scrub: true,
+                            // markers: true,
+                        },
+                    });
+            });
+
+            const sidebarItems = Array.from(document.querySelectorAll(".sidebar"));
+            sidebarItems.forEach((elem) => {
+                this.twoScrollTrigger = gsap.fromTo(elem,
+                    {
+                        y: 50,
+                    },
+                    {
+                        y: 0,
+                        duration: 1,
+                        scrollTrigger: {
+                            start: '0% 100%',
+                            end: 'bottom 75%',
+                            trigger: elem,
+                            // markers: true,
+                            scrub: true,
+                        },
+                    });
+            });
+
+            this.ScrollTrigger = gsap.to(".scroll-bg", {
+                scrollTrigger: {
+                    trigger: ".scroll",
+                    start: '0%',
+                    scrub: true,
+                    toggleClass: { className: "active", targets: ".scroll-bg" }
+                },
+            })
+            if (window.innerWidth <= 768) {
+                this.scrollMobile()
+            }
+
+            gsap.fromTo(".bg-1",
+                { opacity: '1' },
+                {
+                    opacity: '0',
+                    scrollTrigger: {
+                        trigger: ".card-1",
+                        start: 'top 0%',
+                        end: 'bottom 50%',
+                        endTrigger: '.card-2',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                });
+
+            gsap.fromTo(".bg-2",
+                { opacity: '1' },
+                {
+                    opacity: '0',
+                    scrollTrigger: {
+                        trigger: ".card-2",
+                        start: 'top 0%',
+                        end: 'bottom 50%',
+                        endTrigger: '.card-3',
+                        // markers: true,
+                        scrub: true,
+                    },
+
+                });
+
+                gsap.fromTo(".bg-3",
+                { opacity: '1' },
+                {
+                    opacity: '0',
+                    scrollTrigger: {
+                        trigger: ".card-3",
+                        start: 'top 0%',
+                        end: 'bottom 50%',
+                        endTrigger: '.card-4',
+                        // markers: true,
+                        scrub: true,
+                    },
+
+                });
+
+            gsap.to(".scroll-bg", {
+                scrollTrigger: {
+                    trigger: ".card-4",
+                    start: () => "+=120%",
+                    end: () => "+=" + (document.querySelector(".scroll-wrap").offsetHeight),
+                    // markers: true,
+                    scrub: true,
+                    toggleClass: { className: "remove-active", targets: ".scroll-bg" }
+                },
+            });
         }
     }
 }
@@ -282,5 +469,187 @@ export default {
             }
         }
     }
-}
-</style>
+
+    .scroll {
+        position: relative;
+        width: 100%;
+
+        &-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            height: 100vh;
+            background-position: bottom;
+            background-size: calc(100% - 13.5rem) 49rem;
+            background-repeat: no-repeat;
+
+            @media (max-width: 768px) {
+                background-position: center;
+                background-size: 100%;
+            }
+
+            &.active {
+                background-attachment: fixed;
+                height: 100%;
+
+                @media (max-width: 768px) {
+                    height: 100%;
+                    background-size: 100%;
+                    position: fixed;
+                    background-attachment: unset;
+                }
+
+                &.remove-active {
+                    background-attachment: unset;
+                    background-position: 6.75rem 352vh;
+                    background-size: calc(100% - 13.5rem) 49rem;
+
+                    @media (max-width: 768px) {
+                        background-position: bottom;
+                        position: absolute;
+                        background-size: 100%;
+                    }
+                }
+            }
+
+            &.bg-1 {
+                z-index: 4;
+                background-image: url(../../public/img/pasvik-1.jpg);
+            }
+
+            &.bg-2 {
+                z-index: 3;
+                background-image: url(../../public/img/pasvik-2.jpg);
+            }
+
+            &.bg-3 {
+                z-index: 2;
+                background-image: url(../../public/img/pasvik-3.jpg);
+            }
+
+            &.bg-4 {
+                z-index: 1;
+                background-image: url(../../public/img/pasvik-4.jpg);
+            }
+
+            @media (max-width: 768px) {
+                &.bg-1 {
+                    background-image: url(../../public/img/map-1-mobile.jpg);
+                }
+
+                &.bg-2 {
+                    background-image: url(../../public/img/map-2-mobile.jpg);
+                }
+
+                &.bg-3 {
+                    background-image: url(../../public/img/map-3-mobile.jpg);
+                }
+
+                &.bg-4 {
+                    background-image: url(../../public/img/map-3-mobile.jpg);
+                }
+            }
+        }
+
+        &-wrap {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-right: 1.25rem;
+        }
+
+        &-card {
+            padding: 1.5rem;
+            margin-bottom: 100vh;
+            width: 34.2rem;
+            border-radius: 0.25rem;
+            background: #FFF;
+
+            &:first-child {
+                margin-top: 50vh;
+            }
+
+            @media (max-width: 768px) {
+                padding: 4.2666rem;
+                margin: 0 auto 100vh auto;
+                width: 93%;
+
+                &:first-child {
+                    margin-top: 100vh;
+                }
+            }
+
+            p {
+                font-size: 1.25rem;
+                font-weight: 300;
+                line-height: 130%;
+
+                @media (max-width: 768px) {
+                    font-size: 4.53334rem;
+                }
+
+                &:first-child {
+                    margin-bottom: 1.56rem;
+                    font-size: 1.25rem;
+                    font-weight: 600;
+
+                    @media (max-width: 768px) {
+                        margin-bottom: 6.6667rem;
+                        font-size: 4.8rem;
+                    }
+                }
+            }
+
+            .dropdown-info {
+                margin-top: 1.88rem;
+
+                @media (max-width: 768px) {
+                    margin-top: 7.4666rem;
+                }
+
+                &__title {
+                    font-size: 1.25rem;
+
+                    @media (max-width: 768px) {
+                        font-size: 4.8rem;
+                    }
+                }
+
+                &__text {
+                    background: #F7F6F2;
+                    width: 27rem;
+                    font-size: 1.04167rem;
+                    padding: 3.5rem 1.4375rem 1.5625rem 3.375rem;
+
+                    @media (max-width: 768px) {
+                        left: -4.3rem;
+                        top: -4.3rem;
+                        width: 91.734rem;
+                        font-size: 3.73334rem;
+                        padding: 14.9334rem 6.1333rem 6.6666rem 13.8666rem;
+                    }
+                }
+
+                ul {
+                    list-style-type: disc;
+
+                    li {
+                        padding-left: 0.94rem;
+                    }
+
+                    li:not(:last-child) {
+                        margin-bottom: 0.8rem;
+
+                        @media (max-width: 768px) {
+                            margin-bottom: 3.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}</style>

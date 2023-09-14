@@ -133,7 +133,7 @@
                 </BaseSidebar>
             </SectionWhite>
             <SectionOrange>
-                <BaseTextBlock class="text mb-60" :tooltip="true">
+                <BaseTextBlock class="text mb-60 mb-60-m" :tooltip="true">
                     <div class="section-orange__title">
                         Кто обитает в Забайкалье
                     </div>
@@ -950,6 +950,12 @@ export default {
             }
         }
 
+        .mb-60-m.mb-60 {
+            @media (max-width: 768px) {
+                margin-bottom: 10.6667rem;
+            }
+        }
+
         .number-block {
             position: static;
         }
@@ -968,7 +974,7 @@ export default {
         @media (max-width: 768px) {
             flex-direction: column;
             width: unset;
-            gap: 12.27rem;
+            gap: 10.6667rem;
             margin-bottom: 16rem;
         }
 

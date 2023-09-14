@@ -109,6 +109,5 @@ export default {
             z-index: 2;
         }
     }
-
 }
 </style>

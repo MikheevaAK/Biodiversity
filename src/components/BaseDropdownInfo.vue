@@ -1,6 +1,8 @@
 <template>
     <div class="dropdown-info">
-        <div @click="toggleInfo" class="dropdown-info__wrap">
+        <div @click="toggleInfo" class="dropdown-info__wrap" :class="{
+            'z-index': toggleClass
+        }">
             <div class="dropdown-info__svg" :style="{ background: color }">
                 <svg class="dropdown-info__minus" xmlns="http://www.w3.org/2000/svg" width="12" height="2"
                     viewBox="0 0 12 2" fill="none">
@@ -18,7 +20,7 @@
             </div>
         </div>
         <Transition name="dropdown-info">
-            <div v-if="show && (!isModal ||isModal && !isMobile)" class="dropdown-info__text" v-html="text"></div>
+            <div v-if="show && (!isModal || isModal && !isMobile)" class="dropdown-info__text" v-html="text"></div>
         </Transition>
 
         <div v-if="show && isModal && isMobile" class="modal">
@@ -43,7 +45,8 @@ export default {
     data() {
         return {
             show: false,
-            isMobile: window.innerWidth <= 768
+            isMobile: window.innerWidth <= 768,
+            toggleClass: false
         }
     },
     props: {
@@ -64,6 +67,15 @@ export default {
             default: false
         }
     },
+    mounted() {
+        if (this.show && (!this.isModal || this.isModal && !this.isMobile)) {
+            this.toggleClass = true
+        } else {
+            setTimeout(function () {
+                this.toggleClass = false
+            }, 1000)
+        }
+    },
     methods: {
         toggleInfo() {
             this.show = !this.show
@@ -73,7 +85,7 @@ export default {
             } else {
                 document.body.style.overflow = 'auto'
             }
-        }
+        },
     }
 }
 </script>
@@ -81,7 +93,7 @@ export default {
 <style lang="scss">
 .dropdown-info {
     position: relative;
-    font-size: 0.9375rem;
+    font-size: 1.04167rem;
     line-height: 130%;
 
     @media (max-width: 768px) {
@@ -94,6 +106,7 @@ export default {
         gap: 0.88rem;
         position: relative;
         z-index: 2;
+        animation-name: none;
         cursor: pointer;
 
         @media (max-width: 768px) {
@@ -152,7 +165,7 @@ export default {
         padding: 2.56rem 0.62rem 0.88rem 3.13rem;
         border-radius: 0.25rem;
         background: #FFF;
-        z-index: 1;
+        z-index: 3;
         top: -0.62rem;
         left: -0.62rem;
         transform-origin: top left;
@@ -205,6 +218,10 @@ export default {
             font-weight: 600;
             line-height: 130%;
         }
+    }
+
+    .z-index {
+        z-index: 4;
     }
 }
 </style>

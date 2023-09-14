@@ -135,7 +135,7 @@
             <SectionOrange>
                 <BaseTextBlock class="text mb-60" :tooltip="true">
                     <div class="section-orange__title">
-                        Кто обитает на юге Таймыра
+                        Кто обитает в Забайкалье
                     </div>
                     <div class="section-orange__descr">
                         <p>
@@ -626,8 +626,8 @@ export default {
 
         .dubrovnik {
             position: absolute;
-            top: 59.5rem;
-            right: 18.5rem;
+            top: 60rem;
+            right: 18rem;
 
             @media (max-width: 768px) {
                 top: 161rem;
@@ -663,8 +663,8 @@ export default {
 
         .ants {
             position: absolute;
-            bottom: 177rem;
-            left: 44rem;
+            bottom: 177.3rem;
+            left: 43.6rem;
 
             @media (max-width: 768px) {
                 bottom: 650rem;
@@ -674,8 +674,8 @@ export default {
 
         .maksimovichs-vole {
             position: absolute;
-            bottom: 81rem;
-            left: 3rem;
+            bottom: 80.5rem;
+            left: 4.3rem;
 
             @media (max-width: 768px) {
                 bottom: 865rem;
@@ -716,7 +716,7 @@ export default {
         .killer-whale {
             position: absolute;
             bottom: 35.5rem;
-            right: 22rem;
+            right: 22.5rem;
 
             @media (max-width: 768px) {
                 bottom: 86rem;
@@ -726,8 +726,8 @@ export default {
 
         .zooplankton-2 {
             position: absolute;
-            bottom: 22.5rem;
-            right: 48rem;
+            bottom: 23rem;
+            right: 47rem;
 
             @media (max-width: 768px) {
                 bottom: 65.5rem;

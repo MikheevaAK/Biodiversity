@@ -270,7 +270,7 @@
                                 6 – Дубровник
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                7 – Сибирская пестрогрудка
+                                7 – Сибирская&nbsp;пестрогрудка
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
                                 8 – Рябина сибирская
@@ -334,7 +334,7 @@
                                 </div>
                                 <ul class="habitat-map__list-list">
                                     <li>Полевой лунь</li>
-                                    <li>Сибирская&nbsp;пестрогрудка</li>
+                                    <li>Сибирская пестрогрудка</li>
                                     <li>Лилия карликовая</li>
                                     <li>Красоднев малый</li>
                                 </ul>
@@ -777,7 +777,7 @@ export default {
             position: absolute;
             left: 7.37rem;
             top: 10.19rem;
-            width: 12.4rem;
+            width: 14.4rem;
 
             @media (max-width: 768px) {
                 display: none;

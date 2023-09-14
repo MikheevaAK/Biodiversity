@@ -1,8 +1,6 @@
 <template>
     <div class="dropdown-info">
-        <div @click="toggleInfo" class="dropdown-info__wrap" :class="{
-            'z-index': this.show && (!this.isModal || this.isModal && !this.isMobile)
-        }">
+        <div @click="toggleInfo" class="dropdown-info__wrap" :class="toggleClass">
             <div class="dropdown-info__svg" :style="{ background: color }">
                 <svg class="dropdown-info__minus" xmlns="http://www.w3.org/2000/svg" width="12" height="2"
                     viewBox="0 0 12 2" fill="none">
@@ -46,7 +44,7 @@ export default {
         return {
             show: false,
             isMobile: window.innerWidth <= 768,
-            toggleClass: false
+            toggleClass: ''
         }
     },
     props: {
@@ -67,17 +65,9 @@ export default {
             default: false
         }
     },
-    mounted() {
-        if (this.show && (!this.isModal || this.isModal && !this.isMobile)) {
-            this.toggleClass = true
-        } else {
-            setTimeout(function () {
-                this.toggleClass = false
-            }, 1000)
-        }
-    },
     methods: {
         toggleInfo() {
+            console.log('start')
             this.show = !this.show
 
             if (this.show && this.isModal && window.innerWidth <= 768) {
@@ -85,8 +75,16 @@ export default {
             } else {
                 document.body.style.overflow = 'auto'
             }
+
+            if (this.show && (!this.isModal || this.isModal && !this.isMobile)) {
+                this.toggleClass = 'z-index'
+            } else {
+                setTimeout(function() {
+                    this.toggleClass = ''
+                }.bind(this), 500)
+            }
         },
-    }
+    },
 }
 </script>
 

@@ -66,20 +66,25 @@ export default {
         }
     },
     methods: {
+        onResize() {
+            this.isMobile = (window.innerWidth <= 768);
+        },
         toggleInfo() {
-            console.log('start')
             this.show = !this.show
 
-            if (this.show && this.isModal && window.innerWidth <= 768) {
+            if (this.show && this.isModal && this.isMobile) {
                 document.body.style.overflow = 'hidden'
             } else {
                 document.body.style.overflow = 'auto'
             }
-
+            
+            let isTimeout = null
             if (this.show && (!this.isModal || this.isModal && !this.isMobile)) {
+                clearTimeout(isTimeout)
                 this.toggleClass = 'z-index'
             } else {
-                setTimeout(function() {
+                clearTimeout(isTimeout)
+                isTimeout = setTimeout(function() {
                     this.toggleClass = ''
                 }.bind(this), 500)
             }

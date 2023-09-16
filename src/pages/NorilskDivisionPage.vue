@@ -313,8 +313,8 @@
                         </div>
                     </div>
                     <div class="habitat-map__wrap">
-                        <div v-if="!isModile" class="habitat-map__title">Карта обитания охраняемых видов</div>
-                        <div v-if="isModile" class="habitat-map__title">Зона воздействия предприятий и виды</div>
+                        <div v-if="!isMobile" class="habitat-map__title">Карта обитания охраняемых видов</div>
+                        <div v-if="isMobile" class="habitat-map__title">Зона воздействия предприятий и виды</div>
                         <div class="habitat-map__list">
                             <div class="habitat-map__list-item-wrap">
                                 <div class="habitat-map__list-item">
@@ -519,7 +519,7 @@ export default {
                     number: '7'
                 }
             ],
-            isModile: (window.innerWidth <= 768),
+            isMobile: (window.innerWidth <= 768),
             heroDescr: 'Какие виды животных и&nbsp;растений живут по&nbsp;соседству с&nbsp;промышленным гигантом&nbsp;Красноярского края&nbsp;&mdash; Большим Норильском'
         }
     },

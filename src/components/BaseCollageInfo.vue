@@ -17,7 +17,7 @@ export default {
     props: {
         color: {
             type: String,
-            default: ''
+            default: '#C2C095'
         },
         width: {
             type: String,
@@ -41,7 +41,7 @@ export default {
     position: absolute;
     display: flex;
     gap: 0.62rem;
-    font-size: 0.9375rem;
+    font-size: 1.04167rem;
     line-height: 130%;
 
     &__img {

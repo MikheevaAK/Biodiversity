@@ -44,15 +44,29 @@ export default {
     font-size: 1.04167rem;
     line-height: 130%;
 
+    @media (max-width: 768px) {
+        font-size: 3.73334rem;
+        gap: 1.6rem;
+    }
+
     &__img {
         width: 0.875rem;
         height: 0.875rem;
         flex-shrink: 0;
+
+        @media (max-width: 768px) {
+            width: 1.87rem;
+            height: 1.87rem;
+        }
     }
 
     &__title {
         margin-bottom: 0.5rem;
         font-weight: 600;
+
+        @media (max-width: 768px) {
+            margin-bottom: 2.6667rem;
+        }
     }
 }
 </style>

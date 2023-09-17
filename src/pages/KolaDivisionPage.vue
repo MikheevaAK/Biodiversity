@@ -248,27 +248,27 @@
                     <BaseCollageInfo :text="'Индикаторные виды'" />
                 </div>
                 <div class="collage mb-100">
-                    <BaseCollageInfo class="golden-eagle" :title="'Беркут'" :width="'20.5rem'" :color="'#71464E'"
+                    <BaseCollageInfo class="golden-eagle" :title="'Беркут'" :color="'#71464E'"
                         :text="'Самый крупный из&nbsp;орлов: размах крыльев достигает 230&nbsp;см при длине тела до&nbsp;93&nbsp;см. Беркуты чувствительны к&nbsp;беспокойству со&nbsp;стороны человека, чаще обитают в&nbsp;горах и&nbsp;реже на&nbsp;равнинных ландшафтах. За&nbsp;последние столетия вид исчез из&nbsp;многих районов из-за массового истребления, пестицидов, увеличения числа городов и&nbsp;изъятия земель под&nbsp;хозяйственные нужды'" />
-                    <BaseDropdownInfo class="golden-eagle_mobile" :title="'Беркут'" :is-modal="true"
+                    <BaseDropdownInfo class="golden-eagle_mobile" :title="'Беркут'" :is-modal="true" :color="'#71464E'"
                         :text="'Самый крупный из&nbsp;орлов: размах крыльев достигает 230&nbsp;см при длине тела до&nbsp;93&nbsp;см. Беркуты чувствительны к&nbsp;беспокойству со&nbsp;стороны человека, чаще обитают в&nbsp;горах и&nbsp;реже на&nbsp;равнинных ландшафтах. За&nbsp;последние столетия вид исчез из&nbsp;многих районов из-за массового истребления, пестицидов, увеличения числа городов и&nbsp;изъятия земель под&nbsp;хозяйственные нужды'" />
 
-                    <BaseCollageInfo class="belobrovik" :title="'Белобровик'" :width="'15rem'"
+                    <BaseCollageInfo class="belobrovik" :title="'Белобровик'"
                         :text="'Меняет пение в&nbsp;разных ситуациях: оповещает при&nbsp;опасности и&nbsp;подзывает, если найдена пища'" />
                     <BaseDropdownInfo class="belobrovik_mobile" :title="'Белобровик'" :is-modal="true"
                         :text="'Меняет пение в&nbsp;разных ситуациях: оповещает при&nbsp;опасности и&nbsp;подзывает, если найдена пища'" />
 
-                    <BaseCollageInfo class="tap-dancing" :title="'Белобровик'" :width="'13rem'"
+                    <BaseCollageInfo class="tap-dancing" :title="'Чечётка'"
                         :text="'Песня чечётки напоминает перестук каблуков в&nbsp;танце'" />
 
-                    <BaseCollageInfo class="bluethroat" :title="'Варакушка'" :width="'13rem'"
+                    <BaseCollageInfo class="bluethroat" :title="'Варакушка'"
                         :text="'Прекрасный имитатор: в&nbsp;пении заимствует звуки у&nbsp;других птиц'" />
 
-                    <BaseCollageInfo class="redstart-coot" :title="'Горихвостка-лысушка'" :width="'13rem'"
+                    <BaseCollageInfo class="redstart-coot" :title="'Горихвостка-лысушка'"
                         :text="'Красный хвост самцов, слегка подергиваясь, напоминает горящее пламя&nbsp;&mdash; &laquo;горихвост&raquo;'" />
 
                     <BaseCollageInfo class="yurok" :title="'Юрок'" />
-                    <BaseCollageInfo class="warbler" :title="'Пеночка-весничка'" :width="'10rem'" />
+                    <BaseCollageInfo class="warbler" :title="'Пеночка-весничка'" />
 
                     <BaseDropdownInfo class="ground-beetles" :title="'Жужелицы'" :is-modal="true"
                         :text="'В&nbsp;Кольском дивизионе исследователи обнаружили 14&nbsp;видов жужелиц, из&nbsp;них два были назначены индикаторами: Carabus glabratus и&nbsp;Amara brunnea. Carabus glabratus отрицательно реагирует на&nbsp;промышленное воздействие: чем оно интенсивнее, тем меньше плотность вида на&nbsp;территории. Amara brunnea, в&nbsp;свою очередь, увеличивает численность в&nbsp;районах с&nbsp;интенсивным воздействием и&nbsp;постепенно снижает ближе к&nbsp;фоновым территориям'" />
@@ -280,6 +280,7 @@
                         :text="'Из&nbsp;12&nbsp;видов муравьёв, обнаруженных участниками Экспедиции в&nbsp;Кольском дивизионе, четыре представителя рода Formica стали индикаторами: Северный чёрный муравей, Красноголовый муравей, Волосистый лесной муравей и&nbsp;Кровавый муравей-рабовладелец. Распределение и&nbsp;численность этих муравьёв помогли учёным подтвердить предположения о&nbsp;поясах воздействия промышленных объектов на&nbsp;природу дивизиона'" />
 
                     <BaseCollageInfo class="shrew" :title="'Бурозубка'" />
+                    <BaseCollageInfo class="vole" :title="'Красно-серая полёвка'" />
 
                     <BaseCollageInfo class="kokushnik" :title="'Кокушник комарниковый'" :width="'10rem'"
                         :color="'#71464E'" />
@@ -291,7 +292,7 @@
                     <BaseCollageInfo class="ledum" :title="'Багульник болотный'" :width="'10rem'" />
 
                     <div class="background background-1"></div>
-                    <BaseCollageInfo class="swan" :title="'Лебедь-кликун'" :color="'#71464E'" :width="'17rem'"
+                    <BaseCollageInfo class="swan" :title="'Лебедь-кликун'" :color="'#71464E'"
                         :text="'Получил название за&nbsp;громкие, трубные крики, которые часто издает в&nbsp;полёте. Способен развить скорость до&nbsp;80&nbsp;км/ч. Является Национальным символом Финляндии'" />
 
                     <BaseDropdownInfo class="broody" :title="'Клуша'" :is-modal="true" :color="'#71464E'"
@@ -307,15 +308,15 @@
                         :text="'Зелёные водоросли Scenedesmus quadricauda встречаются только в&nbsp;пробах из&nbsp;зоны интенсивного воздействия Кольского дивизиона, а&nbsp;цианобактерия Oscillatoria amoena обитает исключительно на&nbsp;территории фона'" />
 
                     <div class="background background-4"></div>
-                    <BaseCollageInfo class="tubifex" :title="'Трубочник обыкновенный'" :width="'14.5rem'"
+                    <BaseCollageInfo class="tubifex" :title="'Трубочник обыкновенный'"
                         :text="'Общеизвестный индикатор органического загрязнения водоёмов'" />
 
                     <div class="background background-5"></div>
-                    <BaseCollageInfo class="loach" :title="'Арктический голец'" :width="'19rem'"
+                    <BaseCollageInfo class="loach" :title="'Арктический голец'"
                         :text="'Считается самой полезной рыбой в&nbsp;мире: кусочек рыбы в&nbsp;30&nbsp;г покрывает суточную потребность человека в&nbsp;полезных жирных кислотах. Встречается также в&nbsp;водоёмах Кольского дивизиона'" />
 
                     <div class="background background-6"></div>
-                    <BaseCollageInfo class="grayling" :title="'Европейский хариус'" :width="'12rem'" :color="'#71464E'"
+                    <BaseCollageInfo class="grayling" :title="'Европейский хариус'" :color="'#71464E'"
                         :text="'Вес рыбы может достигать 6,7&nbsp;кг'" />
 
                 </div>
@@ -1140,6 +1141,14 @@ export default {
         justify-content: center;
         gap: 2.28rem;
 
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 9.6rem;
+            gap: 2rem;
+            margin-bottom: 8.8rem
+        }
+
         .block-info {
             position: static;
         }
@@ -1158,14 +1167,14 @@ export default {
             background-image: url(../../public/img/kola-collage.webp);
         }
 
-        // @media (max-width: 768px) {
-        //     height: 810rem;
-        //     background-image: url(../../public/img/collage-mobile.png);
+        @media (max-width: 768px) {
+            height: 797rem;
+            background-image: url(../../public/img/kola-collage-mobile.png);
 
-        //     @supports (background-image: url(../../public/img/collage-mobile.webp)) {
-        //         background-image: url(../../public/img/collage-mobile.webp);
-        //     }
-        // }
+            @supports (background-image: url(../../public/img/kola-collage-mobile.webp)) {
+                background-image: url(../../public/img/kola-collage-mobile.webp);
+            }
+        }
 
         .dropdown-info__wrap {
             @media (max-width: 768px) {
@@ -1194,6 +1203,10 @@ export default {
                 width: 19.25rem;
                 height: 8.417rem;
                 transform: rotate(13.682deg);
+
+                @media (max-width: 768px) {
+                    display: none;
+                }
             }
 
             &-2 {
@@ -1233,6 +1246,7 @@ export default {
         }
 
         .golden-eagle {
+            width: 20.5rem;
             top: 2rem;
             right: 24rem;
 
@@ -1243,8 +1257,8 @@ export default {
             &_mobile {
                 display: none;
                 position: absolute;
-                top: 2rem;
-                right: 24rem;
+                top: 69rem;
+                left: 7.5rem;
 
                 @media (max-width: 768px) {
                     display: block;
@@ -1253,6 +1267,7 @@ export default {
         }
 
         .belobrovik {
+            width: 15rem;
             top: 47rem;
             right: 5.07rem;
 
@@ -1263,8 +1278,8 @@ export default {
             &_mobile {
                 display: none;
                 position: absolute;
-                top: 2rem;
-                right: 24rem;
+                top: 111rem;
+                right: 17rem;
 
                 @media (max-width: 768px) {
                     display: block;
@@ -1273,38 +1288,62 @@ export default {
         }
 
         .tap-dancing {
+            width: 13rem;
             top: 64.7rem;
             left: 52.8rem;
 
-            @media (max-width: 768px) {}
+            @media (max-width: 768px) {
+                width: 35rem;
+                top: 135rem;
+                left: 55rem;
+            }
         }
 
         .bluethroat {
+            width: 13rem;
             top: 82rem;
             left: 57rem;
 
-            @media (max-width: 768px) {}
+            @media (max-width: 768px) {
+                width: 42rem;
+                top: 0rem;
+                left: unset;
+                right: 2rem;
+            }
         }
 
         .redstart-coot {
+            width: 13rem;
             top: 103.7rem;
             left: 46rem;
 
-            @media (max-width: 768px) {}
+            @media (max-width: 768px) {
+                width: 45rem;
+                top: 185.2rem;
+                left: 25rem;
+            }
         }
 
         .yurok {
+            width: 10rem;
             top: 117rem;
             right: 23.7rem;
 
-            @media (max-width: 768px) {}
+            @media (max-width: 768px) {
+                top: 231rem;
+                right: 23.7rem;
+            }
         }
 
         .warbler {
+            width: 10rem;
             top: 115.5rem;
             left: 5.5rem;
 
-            @media (max-width: 768px) {}
+            @media (max-width: 768px) {
+                top: 94rem;
+                left: 32rem;
+            }
         }
 
         .ground-beetles {
@@ -1313,8 +1352,8 @@ export default {
             left: 7.5rem;
 
             @media (max-width: 768px) {
-                top: 453rem;
-                left: 31rem;
+                top: 220rem;
+                left: 12rem;
             }
         }
 
@@ -1324,8 +1363,10 @@ export default {
             left: 33rem;
 
             @media (max-width: 768px) {
-                top: 86rem;
-                left: 8rem;
+                top: unset;
+                bottom: 237rem;
+                left: unset;
+                right: 26rem;
             }
         }
 
@@ -1335,8 +1376,9 @@ export default {
             right: 28rem;
 
             @media (max-width: 768px) {
-                top: 86rem;
-                right: 8rem;
+                top: unset;
+                bottom: 206rem;
+                right: 16rem;
             }
         }
 
@@ -1344,14 +1386,21 @@ export default {
             bottom: 145rem;
             right: 11.5rem;
 
-            @media (max-width: 768px) {}
+            @media (max-width: 768px) {
+                bottom: 329rem;
+                right: unset;
+                left: 12rem;
+            }
         }
 
         .kokushnik {
             bottom: 138rem;
             left: 17rem;
 
-            @media (max-width: 768px) {}
+            @media (max-width: 768px) {
+                bottom: 402rem;
+                left: 3rem;
+            }
         }
 
         .fingerroot {
@@ -1364,8 +1413,8 @@ export default {
             }
 
             @media (max-width: 768px) {
-                bottom: 74rem;
-                right: 29rem;
+                bottom: 387rem;
+                right: 26rem;
             }
         }
 
@@ -1373,21 +1422,34 @@ export default {
             bottom: 91rem;
             left: 25rem;
 
-            @media (max-width: 768px) {}
+            @media (max-width: 768px) {
+                bottom: 235rem;
+                left: 8rem;
+            }
         }
 
         .vole {
+            width: 10rem;
             bottom: 87rem;
             left: 5rem;
 
-            @media (max-width: 768px) {}
+            @media (max-width: 768px) {
+                width: 28rem;
+                bottom: 285rem;
+                left: 4rem;
+            }
         }
 
         .swan {
+            width: 17rem;
             bottom: 62rem;
             left: 10.5rem;
 
-            @media (max-width: 768px) {}
+            @media (max-width: 768px) {
+                width: 56rem;
+                bottom: 167rem;
+                left: 6rem;
+            }
         }
 
         .broody {
@@ -1395,7 +1457,10 @@ export default {
             bottom: 62.7rem;
             right: 31.5rem;
 
-            @media (max-width: 768px) {}
+            @media (max-width: 768px) {
+                bottom: 133rem;
+                right: 13rem;
+            }
         }
 
         .zooplankton {
@@ -1405,7 +1470,7 @@ export default {
 
             @media (max-width: 768px) {
                 bottom: 74rem;
-                left: 29rem;
+                left: 32rem;
             }
         }
 
@@ -1415,30 +1480,47 @@ export default {
             right: 35rem;
 
             @media (max-width: 768px) {
-                bottom: 74rem;
-                right: 29rem;
+                bottom: 90rem;
+                right: 21rem;
             }
         }
 
         .tubifex {
             bottom: 21.5rem;
             left: 17rem;
+            width: 14.5rem;
 
-            @media (max-width: 768px) {}
+            @media (max-width: 768px) {
+                bottom: 96rem;
+                left: 5rem;
+                width: 52rem;
+            }
         }
 
         .loach {
             bottom: 23.5rem;
             left: 45rem;
+            width: 19rem;
 
-            @media (max-width: 768px) {}
+            @media (max-width: 768px) {
+                display: none;
+            }
+
+            &_mobile {
+                display: none;
+            }
         }
 
         .grayling {
             bottom: 33rem;
             right: 15rem;
+            width: 12rem;
 
-            @media (max-width: 768px) {}
+            @media (max-width: 768px) {
+                bottom: 50rem;
+                right: 6rem;
+                width: 40rem;
+            }
         }
     }
 

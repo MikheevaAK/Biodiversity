@@ -314,6 +314,8 @@
                     <div class="background background-5"></div>
                     <BaseCollageInfo class="loach" :title="'Арктический голец'"
                         :text="'Считается самой полезной рыбой в&nbsp;мире: кусочек рыбы в&nbsp;30&nbsp;г покрывает суточную потребность человека в&nbsp;полезных жирных кислотах. Встречается также в&nbsp;водоёмах Кольского дивизиона'" />
+                    <BaseDropdownInfo class="loach_mobile" :title="'Арктический голец'" :is-modal="true"
+                        :text="'Считается самой полезной рыбой в&nbsp;мире: кусочек рыбы в&nbsp;30&nbsp;г покрывает суточную потребность человека в&nbsp;полезных жирных кислотах. Встречается также в&nbsp;водоёмах Кольского дивизиона'" />
 
                     <div class="background background-6"></div>
                     <BaseCollageInfo class="grayling" :title="'Европейский хариус'" :color="'#71464E'"
@@ -1025,6 +1027,15 @@ export default {
             display: flex;
             flex-direction: column;
 
+            @media (max-width: 768px) {
+                font-size: 4rem;
+                padding: 0;
+                width: 56rem;
+                align-items: center;
+                text-align: center;
+                right: 22rem;
+            }
+
             &-top {
                 font-weight: 600;
             }
@@ -1176,15 +1187,8 @@ export default {
             }
         }
 
-        .dropdown-info__wrap {
-            @media (max-width: 768px) {
-                // z-index: 1;
-            }
-        }
-
         .dropdown-info__text {
             @media (max-width: 768px) {
-                // position: static;
                 width: 93.34rem;
                 padding: 10.6667rem 5.3333rem 3.7333rem 12.2666rem;
             }
@@ -1196,6 +1200,10 @@ export default {
             opacity: 0.8;
             mix-blend-mode: hard-light;
             filter: blur(30px);
+
+            @media (max-width: 768px) {
+                filter: blur(11px);
+            }
 
             &-1 {
                 bottom: 64rem;
@@ -1214,6 +1222,13 @@ export default {
                 left: 31rem;
                 width: 9rem;
                 height: 5rem;
+
+                @media (max-width: 768px) {
+                    bottom: 101rem;
+                    left: 8rem;
+                    width: 45rem;
+                    height: 14rem;
+                }
             }
 
             &-3 {
@@ -1221,6 +1236,13 @@ export default {
                 right: 34rem;
                 width: 10rem;
                 height: 5rem;
+
+                @media (max-width: 768px) {
+                    bottom: 89rem;
+                    right: 8rem;
+                    width: 35rem;
+                    height: 5rem;
+                }
             }
 
             &-4 {
@@ -1228,6 +1250,13 @@ export default {
                 left: 18rem;
                 width: 13rem;
                 height: 7rem;
+
+                @media (max-width: 768px) {
+                    bottom: 74rem;
+                    left: 33rem;
+                    width: 30rem;
+                    height: 6rem;
+                }
             }
 
             &-5 {
@@ -1235,6 +1264,13 @@ export default {
                 left: 44rem;
                 width: 20rem;
                 height: 10rem;
+
+                @media (max-width: 768px) {
+                    bottom: 54rem;
+                    left: 18rem;
+                    width: 25rem;
+                    height: 9rem;
+                }
             }
 
             &-6 {
@@ -1242,6 +1278,13 @@ export default {
                 right: 15rem;
                 width: 12rem;
                 height: 4rem;
+
+                @media (max-width: 768px) {
+                    bottom: 52rem;
+                    right: 10rem;
+                    width: 31rem;
+                    height: 14rem;
+                }
             }
         }
 
@@ -1508,6 +1551,13 @@ export default {
 
             &_mobile {
                 display: none;
+                position: absolute;
+                bottom: 53rem;
+                left: 13rem;
+
+                @media (max-width: 768px) {
+                    display: block;
+                }
             }
         }
 

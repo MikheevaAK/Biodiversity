@@ -117,6 +117,51 @@
                     </p>
                 </BaseTextBlock>
 
+                <div class="modernization">
+                    <div class="modernization__item">
+                        <div class="modernization__item-top">2015</div>
+                        <div class="modernization__item-mid">
+                            <div class="modernization__mid-text_1">
+                                2020
+                            </div>
+                            <div class="modernization__mid-text_2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="28" viewBox="0 0 18 28"
+                                    fill="none">
+                                    <path
+                                        d="M9 28L17.6603 13L0.339745 13L9 28ZM7.5 -6.55666e-08L7.5 14.5L10.5 14.5L10.5 6.55666e-08L7.5 -6.55666e-08Z"
+                                        fill="#333333" />
+                                </svg>
+                                71<span>%</span>
+                            </div>
+                            <div class="modernization__mid-bg"></div>
+                        </div>
+                        <div class="modernization__item-bottom">
+                            Объём выбросов SO₂ в&nbsp;районе&nbsp;п.&nbsp;Никель&nbsp;и&nbsp;г.&nbsp;Заполярный
+                        </div>
+                    </div>
+                    <div class="modernization__item">
+                        <div class="modernization__item-top">2015</div>
+                        <div class="modernization__item-mid">
+                            <div class="modernization__mid-text_1">
+                                2021
+                            </div>
+                            <div class="modernization__mid-text_2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="28" viewBox="0 0 18 28"
+                                    fill="none">
+                                    <path
+                                        d="M9 28L17.6603 13L0.339745 13L9 28ZM7.5 -6.55666e-08L7.5 14.5L10.5 14.5L10.5 6.55666e-08L7.5 -6.55666e-08Z"
+                                        fill="#333333" />
+                                </svg>
+                                90<span>%</span>
+                            </div>
+                            <div class="modernization__mid-bg"></div>
+                        </div>
+                        <div class="modernization__item-bottom">
+                            Общий объём выбросов SO₂ предприятиями Кольского&nbsp;дивизиона
+                        </div>
+                    </div>
+                </div>
+
                 <BaseTextBlock class="text mb-40" :title="'Зона воздействия предприятий Кольского дивизиона'">
                     <p class="mb-10">
                         Опираясь на&nbsp;состояние экосистем в&nbsp;регионе, участники Большой Научной экспедиции определили
@@ -1048,6 +1093,11 @@ export default {
         .clue__hidden {
             left: -13rem;
             width: 38rem;
+
+            @media (max-width: 768px) {
+                left: 0;
+                width: unset;
+            }
         }
     }
 
@@ -1861,6 +1911,148 @@ export default {
                     right: 8rem;
                     bottom: 28rem;
                 }
+            }
+        }
+    }
+
+    .modernization {
+        width: 83.4rem;
+        margin: 0 auto;
+        margin-bottom: 6.25rem;
+
+        @media (max-width: 768px) {
+            width: unset;
+            padding: 0 9.5rem;
+            margin-bottom: 6.25rem;
+        }
+
+        &__item {
+            &:not(:last-child) {
+                margin-bottom: 2.09rem;
+
+                @media (max-width: 768px) {
+                    margin-bottom: 7.4667rem;
+                }
+            }
+
+            &-top {
+                margin-bottom: 1.31945rem;
+                font-size: 1.52778rem;
+                font-weight: 600;
+                line-height: 130%;
+
+                @media (max-width: 768px) {
+                    margin-bottom: 4.2667rem;
+                    font-size: 3.2rem;
+                }
+            }
+
+            &-mid {
+                margin-bottom: 1.3rem;
+                position: relative;
+                height: 1px;
+                width: 100%;
+                background-color: #333;
+
+                @media (max-width: 768px) {
+                    margin-bottom: 3.7334rem;
+                }
+            }
+
+            &-bottom {
+                width: 19rem;
+                font-size: 1.25rem;
+                font-weight: 300;
+                line-height: 130%;
+
+                @media (max-width: 768px) {
+                    width: 42rem;
+                    font-size: 3.2rem;
+                }
+            }
+
+            &:last-child {
+                .modernization__mid-bg {
+                    width: 8.34rem;
+                }
+
+                .modernization__mid-text_1 {
+                    right: 5rem;
+                }
+
+                .modernization__mid-text_2 {
+                    right: 1rem;
+
+                    @media (max-width: 768px) {
+                        right: 0;
+                    }
+                }
+
+                .modernization__item-bottom {
+                    width: 22rem;
+
+                    @media (max-width: 768px) {
+                        width: 37rem;
+                    }
+                }
+            }
+        }
+
+        &__mid-text_1 {
+            position: absolute;
+            top: -3rem;
+            right: 21rem;
+            font-size: 1.52778rem;
+            font-weight: 600;
+            line-height: 130%;
+
+            @media (max-width: 768px) {
+                top: -8rem;
+                right: 20rem;
+                font-size: 3.2rem;
+            }
+        }
+
+        &__mid-text_2 {
+            position: absolute;
+            top: 1rem;
+            right: 18.5rem;
+            font-size: 2.77778rem;
+            font-weight: 600;
+            line-height: 130%;
+
+            @media (max-width: 768px) {
+                font-size: 10.66667rem;
+                top: 3rem;
+                right: 0;
+
+                span {
+                    font-size: 4.8rem;
+                }
+            }
+
+            svg {
+                width: 1.25rem;
+                height: 1.9445rem;
+
+                @media (max-width: 768px) {
+                    width: 4.8rem;
+                    height: 7.467rem;
+                }
+            }
+        }
+
+        &__mid-bg {
+            position: absolute;
+            top: -0.5rem;
+            right: 0;
+            height: 1.1112rem;
+            width: 25rem;
+            background-color: #CEEDFF;
+
+            @media (max-width: 768px) {
+                height: 4.267rem;
+                top: -2rem;
             }
         }
     }

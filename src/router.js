@@ -8,6 +8,7 @@ import NorilskDivisionPage from '@/pages/NorilskDivisionPage'
 import TransbaikalDivisionPage from '@/pages/TransbaikalDivisionPage'
 import KolaDivisionPage from '@/pages/KolaDivisionPage'
 import WhiteBearsPage from '@/pages/WhiteBearsPage'
+import BigExpeditionPage from '@/pages/BigExpeditionPage'
 
 
 Vue.use(VueRouter)
@@ -27,6 +28,11 @@ const routes = [
         name: 'expedition',
         component: ExpeditionPage,
         path: '/expedition'
+    },
+    {
+        name: 'big-expedition',
+        component: BigExpeditionPage,
+        path: '/big-expedition'
     },
     {
         name: 'norilsk-division',

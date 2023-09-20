@@ -13,7 +13,7 @@
                     Первым шагом в&nbsp;правильном направлении стала Большая Норильская экспедиция, которая прошла
                     с&nbsp;2020 по&nbsp;2022&nbsp;годы.
                 </p>
-                <p>
+                <p class="mb-28">
                     &laquo;Норникель&raquo; и&nbsp;Сибирское отделение Российской академии наук решили продолжить
                     сотрудничество. Так родилась идея Большой научной экспедиции. Она стартовала одновременно
                     с&nbsp;завершением Большой Норильской экспедиции. Компании было важно оценить воздействие всех своих
@@ -21,14 +21,170 @@
                     на&nbsp;Кольском полуострове, в&nbsp;Забайкалье и&nbsp;в&nbsp;Ямало-Ненецком автономном округе,
                     а&nbsp;также вдоль Северного морского пути.
                 </p>
+
+                <a class="link" href="/expedition">
+                    <div>Читать про Норильскую экспедицию</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="8" viewBox="0 0 20 8" fill="none">
+                        <path
+                            d="M19.8536 4.35355C20.0488 4.15829 20.0488 3.84171 19.8536 3.64645L16.6716 0.464466C16.4763 0.269204 16.1597 0.269204 15.9645 0.464466C15.7692 0.659728 15.7692 0.976311 15.9645 1.17157L18.7929 4L15.9645 6.82843C15.7692 7.02369 15.7692 7.34027 15.9645 7.53553C16.1597 7.7308 16.4763 7.7308 16.6716 7.53553L19.8536 4.35355ZM0 4.5H19.5V3.5H0V4.5Z"
+                            fill="black" />
+                    </svg>
+                </a>
             </BaseTextBlock>
-            <BaseSidebar>
+            <div class="big-wexpedition__tasks">
+                <div class="big-wexpedition__tasks-title title">
+                    Задачи Большой научной экспедиции
+                </div>
+
+                <div class="big-wexpedition__tasks-wrap">
+                    <div class="big-wexpedition__tasks-img-block">
+                        <img src="img/tasks-block.png" alt="">
+                        <div>Определить мероприятия для сохранения биоразнообразия животных и&nbsp;растений</div>
+                    </div>
+                </div>
+            </div>
+            <BaseTextBlock class="mb-40 text-center">
+                Кроме того, в&nbsp;ходе экспедиции учёные разрабатывали и&nbsp;апробировали методы, которые позволяют
+                провести чёткую границу между естественными причинами изменения экосистем и&nbsp;изменениями из-за
+                промышленного воздействия.
+            </BaseTextBlock>
+            <BaseSidebar class="mb-100">
                 <p>
                     &laquo;Норникель&raquo; работает над сохранением 14&nbsp;морских экосистем и&nbsp;15&nbsp;экосистем
                     суши. Сотрудничество с&nbsp;научными организациями&nbsp;&mdash; одно из&nbsp;обязательств, взятых
                     компанией в&nbsp;рамках экологической стратегии.
                 </p>
             </BaseSidebar>
+            <BaseTextBlock class="mb-40" :title="'Старт экспедиции'">
+                Полевой этап работ Большой научной экспедиции начался весной 2022&nbsp;года. Несколько групп учёных
+                отправились в&nbsp;локации производственной активности &laquo;Норникеля&raquo;, чтобы обследовать территории
+                в&nbsp;радиусе примерно 15&nbsp;км вокруг промышленных площадок.
+            </BaseTextBlock>
+            <img class="big-wexpedition__tasks-map mb-100" src="img/tasks-block-map.png" alt="">
+
+            <BaseTextBlock class="mb-100">
+                <p>
+                    В&nbsp;Арктике очень много озёр, особенно тех, которые наполняют подземные родники. В&nbsp;них
+                    рыба
+                    не&nbsp;водится из-за очень скудной питательной базы. В&nbsp;других&nbsp;же озёрах рыбы
+                    настолько
+                    много,
+                    что её&nbsp;можно вылавливать в&nbsp;производственных масштабах. Но&nbsp;бывает и&nbsp;так,
+                    что
+                    озеро
+                    в&nbsp;какой‑то момент пустеет &mdash; в&nbsp;этом случае вылов запрещают до&nbsp;полного
+                    восстановления
+                    рыбопродуктивности водоёма.
+                </p>
+                <BaseNumberBlock :textTop="'71&nbsp;300&nbsp;км&sup2;'"
+                    :textBottom="'общая площадь территории, в&nbsp;пределах которой проводился сбор научных проб'" />
+            </BaseTextBlock>
+            <BaseTextBlock class="mb-40" :title="'Участники экспедиции'">
+                Большая научная экспедиция объединила представителей 13&nbsp;научно-исследовательских институтов, вузов
+                и&nbsp;заповедников.
+            </BaseTextBlock>
+
+            <img class="big-wexpedition-team mb-100" src="img/big-wexpedition-team.webp" alt="">
+
+            <div class="big-wexpedition__plants mb-100">
+                <div class="big-wexpedition__plants-title title mb-40">
+                    Предварительные результаты
+                </div>
+                <BaseTextBlock class="mb-40">
+                    Во&nbsp;время полевых работ участники экспедиции изучили различные группы организмов, растений,
+                    а&nbsp;также почвы. Полученные данные позволили им&nbsp;понять, как промышленные объекты
+                    &laquo;Норникеля&raquo; влияют на&nbsp;экосистемы. Так, удалось выделить зоны интенсивного, умеренного
+                    и&nbsp;незначительного воздействия. Каждая из&nbsp;них характеризуется своими условиями обитания, что
+                    сказывается на&nbsp;видовом разнообразии.
+                </BaseTextBlock>
+                <BaseTextBlock class="mb-40" :title="'Почвы, растительность и грибы'">
+                    <p class="mb-10">
+                        Во&nbsp;время изучения почв во&nbsp;всех трёх промышленных дивизионах учёные обнаружили несколько
+                        природных геохимических аномалий. Так, в&nbsp;Забайкалье они выявили участки с&nbsp;высоким
+                        присутствием в&nbsp;почве соединений мышьяка, а&nbsp;в&nbsp;Норильском и&nbsp;Кольском
+                        дивизионах&nbsp;&mdash; никеля, меди и&nbsp;хрома.
+                    </p>
+                    <p>
+                        Важно отметить, что речь идёт не&nbsp;просто о&nbsp;локальных загрязнениях на&nbsp;относительно
+                        небольшой территории, но&nbsp;и&nbsp;о&nbsp;природных особенностях&nbsp;&mdash; промышленные
+                        предприятия по&nbsp;добыче и&nbsp;переработке полезных ископаемых расположены как раз в&nbsp;тех
+                        местах, где богатые металлами руды близко подходят к&nbsp;поверхности земной коры, и&nbsp;металлы
+                        из&nbsp;рудных тел легко мигрируют в&nbsp;почву. Это явление учёные называют геохимической
+                        аномалией.
+                    </p>
+                </BaseTextBlock>
+                <BaseSidebar class="mb-100">
+                    <p>
+                        По&nbsp;мнению исследователей, высокие концентрации химических элементов на&nbsp;этих участках
+                        угрожают разнообразию растений и&nbsp;животных, а&nbsp;потому необходимо при помощи различных
+                        мероприятий привести показатели почв к&nbsp;благоприятным значениям там, где это возможно.
+                        К&nbsp;сожалению, в&nbsp;местах геохимических аномалий это невозможно.
+                    </p>
+                </BaseSidebar>
+            </div>
+
+            <div class="big-wexpedition__insects mb-100">
+                <BaseTextBlock class="mb-40" :title="'Насекомые и пауки'">
+                    <p class="mb-10">
+                        Работа предприятий &laquo;Норникеля&raquo;, по&nbsp;мнению участников Большой научной экспедиции,
+                        не&nbsp;оказывает серьёзного влияния на&nbsp;жизнь насекомых. Например, в&nbsp;Норильском дивизионе
+                        большинство видов жужелиц одинаково хорошо чувствуют себя как в&nbsp;непосредственной близости
+                        от&nbsp;промышленных площадок, так и&nbsp;на&nbsp;значительном от&nbsp;них удалении. Заметную
+                        отрицательную реакцию на&nbsp;выбросы демонстрируют только четыре вида жуков.
+                    </p>
+                    <p>
+                        Разнообразие пауков на&nbsp;территории Кольского дивизиона напрямую зависит от&nbsp;количества
+                        растений на&nbsp;изученных участках: чем меньше растительности, тем меньше арахнид там проживает.
+                        Но&nbsp;в&nbsp;скудности флоры, по&nbsp;мнению биологов, повинны не&nbsp;только промышленные
+                        выбросы, но&nbsp;и&nbsp;пожары, которые возникают вблизи городов и&nbsp;посёлков из-за человека.
+                        Кроме того, северные широты сами по&nbsp;себе не&nbsp;отличаются богатым разнообразием.
+                    </p>
+                </BaseTextBlock>
+                <BaseSidebar class="mb-100">
+                    <p>
+                        Концентрация загрязняющих веществ на&nbsp;исследовательских полигонах всех четырёх дивизионов
+                        &laquo;Норникеля&raquo; не&nbsp;достигает значений, способных существенно повлиять на&nbsp;свойства
+                        экологических сообществ жужелиц.
+                    </p>
+                </BaseSidebar>
+            </div>
+
+            <div class="big-wexpedition__birds mb-100">
+                <BaseTextBlock class="mb-40" :title="'Птицы'">
+                    <p class="mb-10">
+                        На&nbsp;орнитофауну Норильского дивизиона значительно влияют изменения ландшафта и&nbsp;отторжение
+                        территорий под строительство новых промышленных объектов. Вмешательство человека&nbsp;&mdash;
+                        например, изъятие территорий под карьеры&nbsp;&mdash; вынуждает птиц покидать привычные места
+                        гнездований и&nbsp;искать новые.
+                    </p>
+                    <p class="mb-10">
+                        В&nbsp;непосредственной близости от&nbsp;промышленных площадок птиц очень мало,
+                        но&nbsp;на&nbsp;расстоянии уже нескольких километров ситуация значительно улучшается.
+                    </p>
+                    <p class="mb-10">
+                        В&nbsp;холодное и&nbsp;тёплое время года видовое разнообразие птиц всех трёх дивизионов заметно
+                        отличается: многие птицы предпочитают зимовать в&nbsp;южных регионах.
+                    </p>
+                    <p class="mb-10">
+                        Наблюдали за&nbsp;птицами учёные и&nbsp;во&nbsp;время плавания по&nbsp;Северному морскому пути.
+                        В&nbsp;основном это были морские виды (большой и&nbsp;хохлатый баклан, северная олуша, большой
+                        поморник, гага-гребенушка и&nbsp;другие), однако на&nbsp;глаза орнитологам попались также охраняемые
+                        виды, такие как сапсан и&nbsp;рогатый жаворонок.
+                    </p>
+                    <p>
+                        Видовое разнообразие птиц, встреченных летом и&nbsp;осенью над акваториями Баренцева и&nbsp;Карского
+                        морей, отличалось незначительно&nbsp;&mdash; 29&nbsp;и&nbsp;24&nbsp;вида соответственно.
+                    </p>
+                </BaseTextBlock>
+                <BaseSidebar class="mb-100">
+                    <p>
+                        Наиболее значительное воздействие на&nbsp;сообщества птиц предприятия &laquo;Норникеля&raquo;
+                        оказывают в&nbsp;Норильском промышленном районе.
+                        А&nbsp;в&nbsp;соседнем Ямало-Ненецком районе, напротив, влияние настолько незначительно, что учёные
+                        затруднились даже выделить зоны воздействия.
+                    </p>
+                </BaseSidebar>
+            </div>
         </MainSection>
     </div>
 </template>
@@ -39,12 +195,14 @@ import MainSection from '@/layout/MainSection'
 // import SectionWhite from '@/layout/SectionWhite.vue'
 import BaseTextBlock from '@/components/BaseTextBlock.vue'
 import BaseSidebar from '@/components/BaseSidebar'
+import BaseNumberBlock from "@/components/BaseNumberBlock.vue";
 
 export default {
     components: {
         BaseHero,
         //     SectionOrange,
         // SectionWhite,
+        BaseNumberBlock,
         BaseTextBlock,
         MainSection,
         BaseSidebar,
@@ -60,3 +218,138 @@ export default {
     }
 }
 </script>
+
+<style lang="scss">
+.big-wexpedition {
+    .link {
+        display: flex;
+        align-items: center;
+        gap: 0.625rem;
+        padding: 0.764rem 1.39rem;
+        border-radius: 32px;
+        background: #F7F6F2;
+        font-size: 1.25rem;
+        font-weight: 300;
+        color: var(--Gray-1, #333);
+        line-height: 130%;
+        transition: .3s;
+        width: max-content;
+
+        @media (max-width: 768px) {
+            padding: 3.2rem;
+            font-size: 4.8rem;
+            text-align: center;
+            width: unset;
+            border-radius: 34px
+        }
+
+        svg {
+            width: 20px;
+            height: 8px;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        &:hover {
+            color: #fff;
+            background: var(--copper, #D38235);
+
+            svg path {
+                fill: #FFF;
+            }
+        }
+    }
+
+    .title {
+        margin: 0 auto;
+        color: var(--copper, #D38235);
+        text-align: center;
+        font-size: 2.36111rem;
+        font-weight: 600;
+        line-height: 130%;
+        width: 29rem;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    &__tasks {
+        margin: 0 auto;
+        // width: 69.1875rem;
+
+        &-title.title {
+            margin-bottom: 4.722rem;
+        }
+
+        &-wrap {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0px 19.87rem 5.55556rem 18.81rem;
+            width: 55.6875rem;
+            height: 35.5rem;
+            background-image: url(../../public/img/circle-group.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        &-img-block {
+            display: flex;
+            flex-direction: column;
+            padding-left: 6rem;
+            text-align: center;
+            gap: 1.06rem;
+            width: 26.625rem;
+
+            img {
+                width: 21.75rem;
+                height: 7.9375rem;
+            }
+
+            div {
+                text-align: center;
+            }
+        }
+
+        &-map {
+            width: 46.8125rem;
+            height: 18rem;
+        }
+    }
+
+    &-team {
+        width: 69.1875rem;
+        height: 23.6875rem;
+        margin: 0 auto;
+        display: block;
+    }
+
+    &__plants {
+        padding-bottom: 11rem;
+        background-image: url(../../public/img/big-wexpedition-plants.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+
+    &__insects {
+        padding-bottom: 24rem;
+        background-image: url(../../public/img/big-wexpedition-insects.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+
+    &__birds {
+        padding-bottom: 29rem;
+        background-image: url(../../public/img/big-wexpedition-birds.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+}
+</style>

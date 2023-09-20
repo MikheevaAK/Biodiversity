@@ -105,10 +105,19 @@ svg {
 
 //10px
 .mb-10 {
-    margin-bottom: 0.625rem;;
+    margin-bottom: 0.625rem;
 
     @media (max-width: 768px) {
         margin-bottom: 2.6667rem;
+    }
+}
+
+//28px
+.mb-28 {
+    margin-bottom: 1.94445rem;
+
+    @media (max-width: 768px) {
+        margin-bottom: 7.4667rem;
     }
 }
 

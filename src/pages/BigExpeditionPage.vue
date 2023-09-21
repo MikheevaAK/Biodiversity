@@ -185,6 +185,55 @@
                     </p>
                 </BaseSidebar>
             </div>
+            <div class="big-wexpedition__animals mb-100">
+                <BaseTextBlock class="mb-40" :title="'Млекопитающие'">
+                    <p class="mb-10">
+                        Как&nbsp;и&nbsp;в&nbsp;случае с&nbsp;птицами, на&nbsp;видовое разнообразие млекопитающих влияют
+                        не&nbsp;только изменение ландшафта и&nbsp;промышленное воздействие на&nbsp;воздух, воду
+                        и&nbsp;почву, но&nbsp;и&nbsp;простое изъятие территорий.
+                    </p>
+                    <p>
+                        Впрочем, экспедиция показала, что&nbsp;сразу за&nbsp;границами промышленной зоны некоторые
+                        экосистемы практически не&nbsp;изменились, а&nbsp;в&nbsp;некоторых случаях даже&nbsp;улучшили свои
+                        показатели. Так, в&nbsp;Забайкалье обочины дорог, ведущие к&nbsp;предприятиям «Норникеля», заросли
+                        кустарником и&nbsp;стали убежищем и&nbsp;кормовой базой для&nbsp;косуль и&nbsp;зайцев.
+                        Шум&nbsp;грузовиков животных не&nbsp;пугает, зато на&nbsp;этих территориях нет&nbsp;самых опасных
+                        их&nbsp;врагов&nbsp;— охотников.
+                    </p>
+                </BaseTextBlock>
+                <BaseSidebar class="mb-100">
+                    <p>
+                        Учёные пришли к&nbsp;выводу, что&nbsp;наличие убежища, воды и&nbsp;пищи для&nbsp;животных гораздо
+                        важнее помех от&nbsp;предприятий.
+                    </p>
+                </BaseSidebar>
+            </div>
+            <div class="big-wexpedition__water-animals mb-100">
+                <BaseTextBlock class="mb-40" :title="'Морские млекопитающие'">
+                    <p class="mb-10">
+                        На&nbsp;жизнь морских обитателей влияют шум, издаваемый судами, а&nbsp;также возможные разливы
+                        нефтепродуктов. Второй фактор наиболее опасен: попадая на&nbsp;кожу, топливо оставляет химические
+                        ожоги, изменяет воздухо- и&nbsp;теплообмен в&nbsp;организмах морских млекопитающих. Это&nbsp;может
+                        стать причиной гибели животных.
+                    </p>
+                    <p>
+                        Исследования в&nbsp;рамках Большой научной экспедиции проводилось с&nbsp;борта судна «Норникеля».
+                        На&nbsp;нём&nbsp;учёные отправились по&nbsp;тому&nbsp;же&nbsp;маршруту, по&nbsp;которому регулярно
+                        перемещаются суда компании. Все&nbsp;встречи с&nbsp;морскими млекопитающими фиксировались
+                        в&nbsp;судовом дневнике исследований.
+                    </p>
+                </BaseTextBlock>
+                <BaseSidebar class="mb-100">
+                    <p>
+                        За&nbsp;время работ на&nbsp;судах «Норникеля» при&nbsp;переходе по&nbsp;Северному морскому пути
+                        не&nbsp;происходило разлива нефтепродуктов. Не&nbsp;отмечался он&nbsp;и&nbsp;во&nbsp;время стоянок
+                        судов в&nbsp;портах Дудинки и&nbsp;Мурманска.
+                        Разливов и&nbsp;не&nbsp;могло произойти, ведь&nbsp;«Норникель» принимает превентивные меры
+                        для&nbsp;предотвращения потенциальных разливов нефтепродуктов и&nbsp;следует всем правилам обращения
+                        с&nbsp;судовыми сточными водами.
+                    </p>
+                </BaseSidebar>
+            </div>
         </MainSection>
     </div>
 </template>
@@ -351,5 +400,20 @@ export default {
         background-repeat: no-repeat;
         background-position: bottom;
     }
-}
-</style>
+
+    &__animals {
+        padding-bottom: 28rem;
+        background-image: url(../../public/img/big-wexpedition-animals.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+
+    &__water-animals {
+        padding-bottom: 21.44rem;
+        background-image: url(../../public/img/big-wexpedition-water-animals.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+}</style>

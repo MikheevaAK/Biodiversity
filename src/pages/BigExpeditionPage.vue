@@ -3,7 +3,7 @@
         <BaseHero :title="'Большая научная экспедиция'" :descr="heroDescr" :img="'img/hero7.jpg'"
             :imgMobile="'img/hero6-mobile.jpg'" />
         <MainSection>
-            <BaseTextBlock class="mb-40">
+            <BaseTextBlock class="mb-100">
                 <p class="mb-10">
                     Авария 2020 года на&nbsp;норильской ТЭЦ-3 привела к&nbsp;значительным изменениям в&nbsp;экологической
                     политике &laquo;Норникеля&raquo; и&nbsp;в&nbsp;сознании работников. В&nbsp;компании решили
@@ -39,11 +39,46 @@
                 <div class="big-wexpedition__tasks-wrap">
                     <div class="big-wexpedition__tasks-img-block">
                         <img src="img/tasks-block.png" alt="">
-                        <div>Определить мероприятия для сохранения биоразнообразия животных и&nbsp;растений</div>
+                        <div>Определить мероприятия <br />для сохранения биоразнообразия <br />животных и&nbsp;растений
+                        </div>
+                    </div>
+                    <div class="big-wexpedition__tasks-item big-wexpedition__tasks-item_1">
+                        <div class="big-wexpedition__tasks-number">
+                            1
+                        </div>
+                        <div class="big-wexpedition__tasks-text">
+                            Изучить, какое воздействие на&nbsp;биоразнообразие экосистем оказывает деятельность предприятий
+                            «Норникеля»
+                        </div>
+                    </div>
+                    <div class="big-wexpedition__tasks-item big-wexpedition__tasks-item_2">
+                        <div class="big-wexpedition__tasks-number">
+                            2
+                        </div>
+                        <div class="big-wexpedition__tasks-text">
+                            Опробовать на&nbsp;практике методы, которые позволяют отследить изменения в&nbsp;состоянии
+                            экосистем на&nbsp;ранних этапах, когда они&nbsp;ещё&nbsp;незаметны&nbsp;глазу
+                        </div>
+                    </div>
+                    <div class="big-wexpedition__tasks-item big-wexpedition__tasks-item_3">
+                        <div class="big-wexpedition__tasks-number">
+                            3
+                        </div>
+                        <div class="big-wexpedition__tasks-text">
+                            Определить степень негативного воздействия (уровень условных потерь биоразнообразия)
+                        </div>
+                    </div>
+                    <div class="big-wexpedition__tasks-item big-wexpedition__tasks-item_4">
+                        <div class="big-wexpedition__tasks-number">
+                            4
+                        </div>
+                        <div class="big-wexpedition__tasks-text">
+                            Изучить и&nbsp;оценить текущее состояние экосистем, разнообразие растений и&nbsp;животных
+                        </div>
                     </div>
                 </div>
             </div>
-            <BaseTextBlock class="mb-40 text-center">
+            <BaseTextBlock class="mb-60 text-center">
                 Кроме того, в&nbsp;ходе экспедиции учёные разрабатывали и&nbsp;апробировали методы, которые позволяют
                 провести чёткую границу между естественными причинами изменения экосистем и&nbsp;изменениями из-за
                 промышленного воздействия.
@@ -60,21 +95,27 @@
                 отправились в&nbsp;локации производственной активности &laquo;Норникеля&raquo;, чтобы обследовать территории
                 в&nbsp;радиусе примерно 15&nbsp;км вокруг промышленных площадок.
             </BaseTextBlock>
-            <img class="big-wexpedition__tasks-map mb-100" src="img/tasks-block-map.png" alt="">
+            <div class="big-wexpedition__tasks-map mb-100">
+                <img src="img/tasks-block-map.svg" alt="">
+                <BaseNumberBlock :textTop="'в&nbsp;5&nbsp;регионах'"
+                    :textBottom="'провели полевые работы всего&nbsp;за&nbsp;восемь месяцев'" />
+            </div>
+
+            <ScrollSwiper class="mb-100" />
+
 
             <BaseTextBlock class="mb-100">
+                <p class="mb-10">
+                    Необъятность сибирских и&nbsp;арктических просторов&nbsp;&mdash; не&nbsp;единственная сложность,
+                    с&nbsp;которой столкнулись учёные. Немало проблем доставили сложный ландшафт, суровый климат
+                    и&nbsp;трудности с&nbsp;логистикой: в&nbsp;некоторые районы можно было добраться только
+                    на&nbsp;вертолёте. Вот почему каждый полевой выезд становился комплексной мини-экспедицией.
+                </p>
                 <p>
-                    В&nbsp;Арктике очень много озёр, особенно тех, которые наполняют подземные родники. В&nbsp;них
-                    рыба
-                    не&nbsp;водится из-за очень скудной питательной базы. В&nbsp;других&nbsp;же озёрах рыбы
-                    настолько
-                    много,
-                    что её&nbsp;можно вылавливать в&nbsp;производственных масштабах. Но&nbsp;бывает и&nbsp;так,
-                    что
-                    озеро
-                    в&nbsp;какой‑то момент пустеет &mdash; в&nbsp;этом случае вылов запрещают до&nbsp;полного
-                    восстановления
-                    рыбопродуктивности водоёма.
+                    В&nbsp;поле зрения учёных попали не&nbsp;только хорошо изученные районы (например, Таймыр),
+                    но&nbsp;и&nbsp;те, где исследовательская работа прежде никогда не&nbsp;проводилась. Среди
+                    последних&nbsp;&mdash; газовые месторождения на&nbsp;Гыданском полуострове Ямало-Ненецкого автономного
+                    округа.
                 </p>
                 <BaseNumberBlock :textTop="'71&nbsp;300&nbsp;км&sup2;'"
                     :textBottom="'общая площадь территории, в&nbsp;пределах которой проводился сбор научных проб'" />
@@ -90,14 +131,14 @@
                 <div class="big-wexpedition__plants-title title mb-40">
                     Предварительные результаты
                 </div>
-                <BaseTextBlock class="mb-40">
+                <BaseTextBlock class="mb-80">
                     Во&nbsp;время полевых работ участники экспедиции изучили различные группы организмов, растений,
                     а&nbsp;также почвы. Полученные данные позволили им&nbsp;понять, как промышленные объекты
                     &laquo;Норникеля&raquo; влияют на&nbsp;экосистемы. Так, удалось выделить зоны интенсивного, умеренного
                     и&nbsp;незначительного воздействия. Каждая из&nbsp;них характеризуется своими условиями обитания, что
                     сказывается на&nbsp;видовом разнообразии.
                 </BaseTextBlock>
-                <BaseTextBlock class="mb-40" :title="'Почвы, растительность и грибы'">
+                <BaseTextBlock class="mb-100" :title="'Почвы, растительность и грибы'">
                     <p class="mb-10">
                         Во&nbsp;время изучения почв во&nbsp;всех трёх промышленных дивизионах учёные обнаружили несколько
                         природных геохимических аномалий. Так, в&nbsp;Забайкалье они выявили участки с&nbsp;высоким
@@ -245,7 +286,7 @@ import MainSection from '@/layout/MainSection'
 import BaseTextBlock from '@/components/BaseTextBlock.vue'
 import BaseSidebar from '@/components/BaseSidebar'
 import BaseNumberBlock from "@/components/BaseNumberBlock.vue";
-
+import ScrollSwiper from '@/components/BigExpeditionScrollSwiper.vue'
 export default {
     components: {
         BaseHero,
@@ -255,6 +296,7 @@ export default {
         BaseTextBlock,
         MainSection,
         BaseSidebar,
+        ScrollSwiper,
         //     BaseTooltip,
         //     BaseDropdownInfo,
         //     BaseCollageInfo,
@@ -349,26 +391,121 @@ export default {
         &-img-block {
             display: flex;
             flex-direction: column;
-            padding-left: 6rem;
+            margin-left: 7rem;
             text-align: center;
+            justify-content: center;
             gap: 1.06rem;
-            width: 26.625rem;
+            width: 25rem;
 
             img {
-                width: 21.75rem;
-                height: 7.9375rem;
+                width: 100%;
             }
 
             div {
                 text-align: center;
+                font-size: 1.52778rem;
+                font-weight: 600;
+                line-height: 130%;
             }
         }
 
         &-map {
-            width: 46.8125rem;
+            margin: 0 auto;
+            width: 34.5rem;
             height: 18rem;
+            position: relative;
+
+            img {
+                height: 100%;
+            }
+
+            .number-block {
+                background-color: #fff;
+                left: -15rem;
+                border-right: 1px solid #333333;
+                border-left: none;
+                width: 20rem;
+                left: -14rem;
+                bottom: 2rem;
+            }
+        }
+
+        &-item {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            gap: 0.88rem;
+            width: 17rem;
+
+            &_1 {
+                top: 2.5rem;
+                left: -3rem;
+            }
+
+            &_2 {
+                top: 2.5rem;
+                right: -15rem;
+            }
+
+            &_3 {
+                bottom: -1.5rem;
+                left: -3rem;
+            }
+
+            &_4 {
+                bottom: -1.5rem;
+                right: -17rem;
+            }
+        }
+
+        &-number {
+            position: relative;
+            width: 2.2223rem;
+            height: 2.2223rem;
+            padding: 0.45rem 0.75rem;
+            border-radius: 100%;
+            font-family: 'MuseoSansCyrl';
+            background-color: #D38235;
+            color: #fff;
+            font-size: 1.25rem;
+            font-weight: 500;
+            line-height: 130%;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: -0.1rem;
+                left: -0.1rem;
+                right: -0.1rem;
+                bottom: -0.1rem;
+                background-image: url(../../public/img/svg/circle-bg.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100%;
+
+                @media (max-width: 768px) {
+                    top: -0.5rem;
+                    left: -0.5rem;
+                    right: -0.5rem;
+                    bottom: -0.5rem;
+                }
+            }
+
+            @media (max-width: 768px) {
+                width: 9.7937rem;
+                height: 9.7937rem;
+                font-size: 4.8rem;
+                padding: 2rem 3.7rem;
+            }
+        }
+
+        &-text {
+            font-size: 1.25rem;
+            font-weight: 300;
+            line-height: 130%;
         }
     }
+
 
     &-team {
         width: 69.1875rem;
@@ -416,4 +553,5 @@ export default {
         background-repeat: no-repeat;
         background-position: bottom;
     }
-}</style>
+}
+</style>

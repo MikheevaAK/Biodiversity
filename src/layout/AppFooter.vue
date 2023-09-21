@@ -305,7 +305,7 @@ export default {
 
         &-img {
             width: 100%;
-            height: 11rem;
+            height: 14.5rem;
             background-image: url(../../public/img/footer.png);
             background-size: cover;
             margin-bottom: 1.44rem;
@@ -329,9 +329,9 @@ export default {
         }
 
         &-wrap {
-            padding-left: 1.3rem;
+            padding-left: 3rem;
             display: flex;
-            gap: 3.75rem;
+            gap: 7rem;
             width: 100%;
 
             @media (max-width: 768px) {

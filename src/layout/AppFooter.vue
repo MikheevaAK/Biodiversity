@@ -27,22 +27,22 @@
             <div class="footer__mid-wrap">
                 <ul class="footer__mid-list">
                     <li class="footer__mid-link" v-for="(link, index) in list1" :key="index">
-                        <router-link :to="link.link">{{ link.title }}</router-link>
+                        <a :href="link.link">{{ link.title }}</a>
                     </li>
                 </ul>
                 <ul class="footer__mid-list">
                     <li class="footer__mid-link" v-for="(link, index) in list2" :key="index">
-                        <router-link :to="link.link">{{ link.title }}</router-link>
+                        <a :href="link.link">{{ link.title }}</a>
                     </li>
                 </ul>
                 <ul class="footer__mid-list">
                     <li class="footer__mid-link" v-for="(link, index) in list3" :key="index">
-                        <router-link :to="link.link">{{ link.title }}</router-link>
+                        <a :href="link.link">{{ link.title }}</a>
                     </li>
                 </ul>
                 <ul class="footer__mid-list">
                     <li class="footer__mid-link" v-for="(link, index) in list4" :key="index">
-                        <router-link :to="link.link">{{ link.title }}</router-link>
+                        <a :href="link.link">{{ link.title }}</a>
                     </li>
                 </ul>
             </div>
@@ -155,7 +155,7 @@ export default {
                     title: 'Большая Норильская',
                 },
                 {
-                    link: '',
+                    link: '/big-expedition',
                     title: 'Научная экспедиция',
                 },
             ],

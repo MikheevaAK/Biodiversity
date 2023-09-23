@@ -32,8 +32,7 @@ export default {
     &__wrap {
         position: relative;
         margin: 0 auto;
-        width: 36rem;
-        // z-index: 10;
+        width: 34rem;
 
         &-index {
             z-index: 10;

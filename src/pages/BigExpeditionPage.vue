@@ -1,5 +1,5 @@
 <template>
-    <div class="big-wexpedition">
+    <div class="big-expedition">
         <BaseHero :title="'Большая научная экспедиция'" :descr="heroDescr" :img="'img/hero7.jpg'"
             :imgMobile="'img/hero6-mobile.jpg'" />
         <MainSection>
@@ -31,48 +31,48 @@
                     </svg>
                 </a>
             </BaseTextBlock>
-            <div class="big-wexpedition__tasks">
-                <div class="big-wexpedition__tasks-title title">
+            <div class="big-expedition__tasks">
+                <div class="big-expedition__tasks-title title">
                     Задачи Большой научной экспедиции
                 </div>
 
-                <div class="big-wexpedition__tasks-wrap">
-                    <div class="big-wexpedition__tasks-img-block">
+                <div class="big-expedition__tasks-wrap">
+                    <div class="big-expedition__tasks-img-block">
                         <img src="img/tasks-block.png" alt="">
                         <div>Определить мероприятия <br />для сохранения биоразнообразия <br />животных и&nbsp;растений
                         </div>
                     </div>
-                    <div class="big-wexpedition__tasks-item big-wexpedition__tasks-item_1">
-                        <div class="big-wexpedition__tasks-number">
+                    <div class="big-expedition__tasks-item big-expedition__tasks-item_1">
+                        <div class="big-expedition__tasks-number">
                             1
                         </div>
-                        <div class="big-wexpedition__tasks-text">
+                        <div class="big-expedition__tasks-text">
                             Изучить, какое воздействие на&nbsp;биоразнообразие экосистем оказывает деятельность предприятий
                             «Норникеля»
                         </div>
                     </div>
-                    <div class="big-wexpedition__tasks-item big-wexpedition__tasks-item_2">
-                        <div class="big-wexpedition__tasks-number">
+                    <div class="big-expedition__tasks-item big-expedition__tasks-item_2">
+                        <div class="big-expedition__tasks-number">
                             2
                         </div>
-                        <div class="big-wexpedition__tasks-text">
+                        <div class="big-expedition__tasks-text">
                             Опробовать на&nbsp;практике методы, которые позволяют отследить изменения в&nbsp;состоянии
                             экосистем на&nbsp;ранних этапах, когда они&nbsp;ещё&nbsp;незаметны&nbsp;глазу
                         </div>
                     </div>
-                    <div class="big-wexpedition__tasks-item big-wexpedition__tasks-item_3">
-                        <div class="big-wexpedition__tasks-number">
+                    <div class="big-expedition__tasks-item big-expedition__tasks-item_3">
+                        <div class="big-expedition__tasks-number">
                             3
                         </div>
-                        <div class="big-wexpedition__tasks-text">
+                        <div class="big-expedition__tasks-text">
                             Определить степень негативного воздействия (уровень условных потерь биоразнообразия)
                         </div>
                     </div>
-                    <div class="big-wexpedition__tasks-item big-wexpedition__tasks-item_4">
-                        <div class="big-wexpedition__tasks-number">
+                    <div class="big-expedition__tasks-item big-expedition__tasks-item_4">
+                        <div class="big-expedition__tasks-number">
                             4
                         </div>
-                        <div class="big-wexpedition__tasks-text">
+                        <div class="big-expedition__tasks-text">
                             Изучить и&nbsp;оценить текущее состояние экосистем, разнообразие растений и&nbsp;животных
                         </div>
                     </div>
@@ -95,14 +95,13 @@
                 отправились в&nbsp;локации производственной активности &laquo;Норникеля&raquo;, чтобы обследовать территории
                 в&nbsp;радиусе примерно 15&nbsp;км вокруг промышленных площадок.
             </BaseTextBlock>
-            <div class="big-wexpedition__tasks-map mb-100">
+            <div class="big-expedition__tasks-map mb-100">
                 <img src="img/tasks-block-map.svg" alt="">
                 <BaseNumberBlock :textTop="'в&nbsp;5&nbsp;регионах'"
                     :textBottom="'провели полевые работы всего&nbsp;за&nbsp;восемь месяцев'" />
             </div>
 
             <ScrollSwiper class="mb-100" />
-
 
             <BaseTextBlock class="mb-100">
                 <p class="mb-10">
@@ -117,7 +116,7 @@
                     последних&nbsp;&mdash; газовые месторождения на&nbsp;Гыданском полуострове Ямало-Ненецкого автономного
                     округа.
                 </p>
-                <BaseNumberBlock :textTop="'71&nbsp;300&nbsp;км&sup2;'"
+                <BaseNumberBlock class="big-expedition__number_width" :textTop="'71&nbsp;300&nbsp;км&sup2;'"
                     :textBottom="'общая площадь территории, в&nbsp;пределах которой проводился сбор научных проб'" />
             </BaseTextBlock>
             <BaseTextBlock class="mb-40" :title="'Участники экспедиции'">
@@ -125,17 +124,19 @@
                 и&nbsp;заповедников.
             </BaseTextBlock>
 
-            <img class="big-wexpedition-team mb-100" src="img/big-wexpedition-team.webp" alt="">
+            <img class="big-expedition-team mb-100" src="img/big-expedition-team.webp" alt="">
 
-            <div class="big-wexpedition__plants mb-100">
-                <div class="big-wexpedition__plants-title title mb-40">
+            <div class="big-expedition__plants mb-100">
+                <div class="big-expedition__plants-title title">
                     Предварительные результаты
                 </div>
-                <BaseTextBlock class="mb-80">
+                <BaseTextBlock class="text">
                     Во&nbsp;время полевых работ участники экспедиции изучили различные группы организмов, растений,
                     а&nbsp;также почвы. Полученные данные позволили им&nbsp;понять, как промышленные объекты
-                    &laquo;Норникеля&raquo; влияют на&nbsp;экосистемы. Так, удалось выделить зоны интенсивного, умеренного
-                    и&nbsp;незначительного воздействия. Каждая из&nbsp;них характеризуется своими условиями обитания, что
+                    &laquo;Норникеля&raquo; влияют на&nbsp;экосистемы. Так, удалось выделить зоны интенсивного,
+                    умеренного
+                    и&nbsp;незначительного воздействия. Каждая из&nbsp;них характеризуется своими условиями обитания,
+                    что
                     сказывается на&nbsp;видовом разнообразии.
                 </BaseTextBlock>
                 <BaseTextBlock class="mb-100" :title="'Почвы, растительность и грибы'">
@@ -153,18 +154,28 @@
                         из&nbsp;рудных тел легко мигрируют в&nbsp;почву. Это явление учёные называют геохимической
                         аномалией.
                     </p>
+
+                    <div class="position-info">
+                        <img src="img/plants.png" alt="">
+                        <div class="position-info__descr">Загрязнение почвы напрямую не&nbsp;ограничивает распространение
+                            грибов
+                            по&nbsp;разным зонам воздействия в&nbsp;Норильском дивизионе.
+                        </div>
+                        <BaseDropdownInfo :title="'Что не так с почвой?'" :color="'#D38235'"
+                            :text="'Из-за&nbsp;природного дефицита фосфора и калия почвы в Норильском дивизионе слабо- и среднеплодородны. Они пригодны для растений, которые нетребовательны к уровню минерального питания.'" />
+                    </div>
                 </BaseTextBlock>
                 <BaseSidebar class="mb-100">
                     <p>
                         По&nbsp;мнению исследователей, высокие концентрации химических элементов на&nbsp;этих участках
                         угрожают разнообразию растений и&nbsp;животных, а&nbsp;потому необходимо при помощи различных
-                        мероприятий привести показатели почв к&nbsp;благоприятным значениям там, где это возможно.
-                        К&nbsp;сожалению, в&nbsp;местах геохимических аномалий это невозможно.
+                        мероприятий привести показатели почв к&nbsp;благоприятным значениям там, где&nbsp;это&nbsp;возможно.
+                        К&nbsp;сожалению, в&nbsp;местах геохимических аномалий это&nbsp;невозможно.
                     </p>
                 </BaseSidebar>
             </div>
 
-            <div class="big-wexpedition__insects mb-100">
+            <div class="big-expedition__insects">
                 <BaseTextBlock class="mb-40" :title="'Насекомые и пауки'">
                     <p class="mb-10">
                         Работа предприятий &laquo;Норникеля&raquo;, по&nbsp;мнению участников Большой научной экспедиции,
@@ -180,6 +191,14 @@
                         выбросы, но&nbsp;и&nbsp;пожары, которые возникают вблизи городов и&nbsp;посёлков из-за человека.
                         Кроме того, северные широты сами по&nbsp;себе не&nbsp;отличаются богатым разнообразием.
                     </p>
+
+                    <div class="position-info">
+                        <img src="img/bug.png" alt="">
+                        <BaseNumberBlock :textTop="'1 402'"
+                            :textBottom="'экземпляра жужелиц собрано только в Норильском регионе'" />
+                        <BaseDropdownInfo :title="'Как удалось поймать так много?'" :color="'#D38235'"
+                            :text="'Для ловли беспозвоночных учёные используют различные виды почвенных ловушек, энтомологические сачки и… пластиковые тарелки жёлтого цвета, которые привлекают насекомых.'" />
+                    </div>
                 </BaseTextBlock>
                 <BaseSidebar class="mb-100">
                     <p>
@@ -190,7 +209,7 @@
                 </BaseSidebar>
             </div>
 
-            <div class="big-wexpedition__birds mb-100">
+            <div class="big-expedition__birds">
                 <BaseTextBlock class="mb-40" :title="'Птицы'">
                     <p class="mb-10">
                         На&nbsp;орнитофауну Норильского дивизиона значительно влияют изменения ландшафта и&nbsp;отторжение
@@ -216,17 +235,34 @@
                         Видовое разнообразие птиц, встреченных летом и&nbsp;осенью над акваториями Баренцева и&nbsp;Карского
                         морей, отличалось незначительно&nbsp;&mdash; 29&nbsp;и&nbsp;24&nbsp;вида соответственно.
                     </p>
+                    <div class="position-info">
+                        <img src="img/big-expedition-bird.png" alt="">
+                        <div class="position-info__descr">
+                            <p class="mb-10">
+                                В&nbsp;Кольском дивизионе наибольшее видовое богатство птиц орнитологи выявили в&nbsp;зоне
+                                значительного воздействия предприятий.
+                            </p>
+                            <p>
+                                Это явление учёные связывают с&nbsp;большим количеством природных водоёмов, расположенных
+                                в&nbsp;зоне значительного воздействия, и&nbsp;живущих там видов околоводных птиц.
+                            </p>
+                        </div>
+                        <BaseDropdownInfo :title="'Почему ещё так может происходить?'" :color="'#D38235'"
+                            :text="'Промышленные и&nbsp;хозяйственные здания, расположенные рядом жилые массивы привлекают так называемых синантропных птиц&nbsp;&mdash; виды, которые живут рядом с&nbsp;человеком и&nbsp;зависят от&nbsp;его деятельности. Это воробьи, голуби и&nbsp;вороны. При удалении от&nbsp;промышленных объектов и&nbsp;городов, структура сообщества птиц резко меняется: синантропные виды и&nbsp;чайки исчезают, а&nbsp;вместо них появляются охотничьи виды.'" />
+                    </div>
                 </BaseTextBlock>
                 <BaseSidebar class="mb-100">
-                    <p>
+                    <p class="mb-10">
                         Наиболее значительное воздействие на&nbsp;сообщества птиц предприятия &laquo;Норникеля&raquo;
                         оказывают в&nbsp;Норильском промышленном районе.
+                    </p>
+                    <p>
                         А&nbsp;в&nbsp;соседнем Ямало-Ненецком районе, напротив, влияние настолько незначительно, что учёные
                         затруднились даже выделить зоны воздействия.
                     </p>
                 </BaseSidebar>
             </div>
-            <div class="big-wexpedition__animals mb-100">
+            <div class="big-expedition__animals">
                 <BaseTextBlock class="mb-40" :title="'Млекопитающие'">
                     <p class="mb-10">
                         Как&nbsp;и&nbsp;в&nbsp;случае с&nbsp;птицами, на&nbsp;видовое разнообразие млекопитающих влияют
@@ -241,6 +277,13 @@
                         Шум&nbsp;грузовиков животных не&nbsp;пугает, зато на&nbsp;этих территориях нет&nbsp;самых опасных
                         их&nbsp;врагов&nbsp;— охотников.
                     </p>
+                    <div class="position-info">
+                        <img src="img/squirrel.png" alt="">
+                        <BaseNumberBlock :textTop="'7 видов'"
+                            :textBottom="'млекопитающих обнаружили в Кольском дивизионе в зимний период'" />
+                        <BaseDropdownInfo :title="'Какие виды обнаружили учёные?'" :color="'#D38235'"
+                            :text="'Исследователям удалось встретить белку, зайца-беляка, лесную куницу, горностая, росомаху, лисицу и&nbsp;лося. Численность всех видов невелика.'" />
+                    </div>
                 </BaseTextBlock>
                 <BaseSidebar class="mb-100">
                     <p>
@@ -249,7 +292,7 @@
                     </p>
                 </BaseSidebar>
             </div>
-            <div class="big-wexpedition__water-animals mb-100">
+            <div class="big-expedition__water-animals mb-100">
                 <BaseTextBlock class="mb-40" :title="'Морские млекопитающие'">
                     <p class="mb-10">
                         На&nbsp;жизнь морских обитателей влияют шум, издаваемый судами, а&nbsp;также возможные разливы
@@ -263,12 +306,22 @@
                         перемещаются суда компании. Все&nbsp;встречи с&nbsp;морскими млекопитающими фиксировались
                         в&nbsp;судовом дневнике исследований.
                     </p>
+                    <div class="position-info">
+                        <img src="img/whale.png" alt="">
+                        <BaseNumberBlock :textTop="'5 видов'"
+                            :textBottom="'китообразных водятся в районе Северного морского пути на участке от Мурманска до Дудинки'" />
+
+                        <BaseDropdownInfo :title="'Каких китов встретили учёные?'" :color="'#D38235'"
+                            :text="'В&nbsp;этом районе водятся морская свинья, северный малый полосатик, белуха, а&nbsp;также два вида крупных китов: горбач и&nbsp;финвал.'" />
+                    </div>
                 </BaseTextBlock>
                 <BaseSidebar class="mb-100">
-                    <p>
+                    <p class="mb-10">
                         За&nbsp;время работ на&nbsp;судах «Норникеля» при&nbsp;переходе по&nbsp;Северному морскому пути
                         не&nbsp;происходило разлива нефтепродуктов. Не&nbsp;отмечался он&nbsp;и&nbsp;во&nbsp;время стоянок
                         судов в&nbsp;портах Дудинки и&nbsp;Мурманска.
+                    </p>
+                    <p>
                         Разливов и&nbsp;не&nbsp;могло произойти, ведь&nbsp;«Норникель» принимает превентивные меры
                         для&nbsp;предотвращения потенциальных разливов нефтепродуктов и&nbsp;следует всем правилам обращения
                         с&nbsp;судовыми сточными водами.
@@ -283,6 +336,7 @@
 import BaseHero from '@/layout/BaseHero.vue'
 import MainSection from '@/layout/MainSection'
 // import SectionWhite from '@/layout/SectionWhite.vue'
+import BaseDropdownInfo from '@/components/BaseDropdownInfo.vue'
 import BaseTextBlock from '@/components/BaseTextBlock.vue'
 import BaseSidebar from '@/components/BaseSidebar'
 import BaseNumberBlock from "@/components/BaseNumberBlock.vue";
@@ -298,7 +352,7 @@ export default {
         BaseSidebar,
         ScrollSwiper,
         //     BaseTooltip,
-        //     BaseDropdownInfo,
+        BaseDropdownInfo,
         //     BaseCollageInfo,
         //     BaseNumberBlock
     },
@@ -311,7 +365,7 @@ export default {
 </script>
 
 <style lang="scss">
-.big-wexpedition {
+.big-expedition {
     .link {
         display: flex;
         align-items: center;
@@ -516,42 +570,256 @@ export default {
 
     &__plants {
         padding-bottom: 11rem;
-        background-image: url(../../public/img/big-wexpedition-plants.webp);
+        background-image: url(../../public/img/big-expedition-plants.png);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: bottom;
+
+        @supports (background-image: url(../../public/img/big-expedition-plants.webp)) {
+            background-image: url(../../public/img/big-expedition-plants.webp);
+        }
+
+        &-title.title {
+            margin-bottom: 2.5rem;
+        }
+
+        .text-block__wrap.text {
+            margin-bottom: 5rem;
+            text-align: center;
+            width: 37rem;
+        }
+
+        .position-info {
+            top: 5rem;
+            right: -25rem;
+            width: 18.7rem;
+
+            img {
+                width: 7.25rem;
+                height: 6rem;
+                margin-bottom: 0.75rem;
+            }
+
+            &__descr {
+                font-size: 1.042rem;
+                margin-bottom: 0.75rem;
+                line-height: 130%;
+            }
+        }
+
+        .sidebar {
+            width: 51rem;
+        }
     }
 
     &__insects {
         padding-bottom: 24rem;
-        background-image: url(../../public/img/big-wexpedition-insects.webp);
+        background-image: url(../../public/img/big-expedition-insects.webp);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: bottom;
+
+        @supports (background-image: url(../../public/img/big-expedition-insects.webp)) {
+            background-image: url(../../public/img/big-expedition-insects.webp);
+        }
+
+        .position-info {
+            top: 5rem;
+            left: -22rem;
+            width: 18.7rem;
+
+            img {
+                width: 6.125rem;
+                height: 4.125rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .number-block {
+                position: static;
+                border-right: 1px solid #333333;
+                border-left: none;
+                padding-left: 0;
+                margin-bottom: 1rem;
+                width: 15.5rem;
+            }
+
+            .dropdown-info__text {
+                padding: 4.31rem 0.62rem 0.88rem 3.13rem;
+            }
+
+            .dropdown-info__title {
+                max-width: 12rem;
+            }
+
+            &__descr {
+                font-size: 1.042rem;
+                margin-bottom: 0.75rem;
+                line-height: 130%;
+            }
+        }
+
+        .sidebar {
+            width: 46rem;
+        }
     }
 
     &__birds {
+        margin-bottom: 3.4722rem;
         padding-bottom: 29rem;
-        background-image: url(../../public/img/big-wexpedition-birds.webp);
+        background-image: url(../../public/img/big-expedition-birds.webp);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: bottom;
+
+        @supports (background-image: url(../../public/img/big-expedition-birds.webp)) {
+            background-image: url(../../public/img/big-expedition-birds.webp);
+        }
+
+        .position-info {
+            position: relative;
+            top: 8rem;
+            right: -25rem;
+            width: 18.7rem;
+
+            img {
+                width: 12.25rem;
+                height: 12.1875rem;
+                position: absolute;
+                top: -9.5rem;
+                left: -3rem;
+
+            }
+
+            &__descr {
+                font-size: 1.042rem;
+                margin-bottom: 0.75rem;
+                line-height: 130%;
+            }
+
+            .dropdown-info__text {
+                width: 21rem;
+                padding: 4.31rem 0.62rem 0.88rem 3.13rem;
+            }
+        }
+
+        .sidebar {
+            width: 51rem;
+        }
     }
 
     &__animals {
         padding-bottom: 28rem;
-        background-image: url(../../public/img/big-wexpedition-animals.webp);
+        background-image: url(../../public/img/big-expedition-animals.png);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: bottom;
+
+        @supports (background-image: url(../../public/img/big-expedition-animals.webp)) {
+            background-image: url(../../public/img/big-expedition-animals.webp);
+        }
+
+        .position-info {
+            position: relative;
+            top: 8rem;
+            left: -22rem;
+            width: 18.7rem;
+
+            img {
+                width: 10.375rem;
+                height: 11.25rem;
+                position: absolute;
+                top: -9rem;
+            }
+
+            .number-block {
+                position: static;
+                border-right: 1px solid #333333;
+                border-left: none;
+                padding-left: 0;
+                margin-bottom: 1rem;
+                width: 15.5rem;
+            }
+
+            .dropdown-info__text {
+                padding: 4.31rem 0.62rem 0.88rem 3.13rem;
+            }
+
+            &__descr {
+                font-size: 1.042rem;
+                margin-bottom: 0.75rem;
+                line-height: 130%;
+            }
+        }
+
+        .sidebar {
+            width: 36rem;
+        }
     }
 
     &__water-animals {
         padding-bottom: 21.44rem;
-        background-image: url(../../public/img/big-wexpedition-water-animals.webp);
+        background-image: url(../../public/img/big-expedition-water-animals.png);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: bottom;
+
+        @supports (background-image: url(../../public/img/big-expedition-water-animals.webp)) {
+            background-image: url(../../public/img/big-expedition-water-animals.webp);
+        }
+
+        .position-info {
+            position: relative;
+            top: 7rem;
+            right: -25rem;
+            width: 18.7rem;
+
+            img {
+                width: 16.875rem;
+                height: 8.9375rem;
+                position: absolute;
+                top: -6.5rem;
+                left: -0.5rem;
+            }
+
+            .number-block {
+                position: static;
+                margin-bottom: 1rem;
+                width: 19rem;
+            }
+
+            .dropdown-info__text {
+                width: 19rem;
+                padding: 4.31rem 0.62rem 0.88rem 3.13rem;
+            }
+
+            &__descr {
+                font-size: 1.042rem;
+                margin-bottom: 0.75rem;
+                line-height: 130%;
+            }
+        }
+    }
+
+    .position-info {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text-block__wrap {
+        width: 36rem;
+    }
+
+    .dropdown-info__text {
+        background-color: #F7F6F2;
+    }
+
+    &__number_width {
+        width: 20rem;
+    }
+
+    .sidebar {
+        width: 52rem;
     }
 }
 </style>

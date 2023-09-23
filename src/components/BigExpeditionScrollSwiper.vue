@@ -8,7 +8,7 @@
                         <div class="map-item__title">Норильский дивизион</div>
                         <div class="map-item__descr">Группа объектов в&nbsp;районе Норильска и&nbsp;Талнаха</div>
                     </div>
-                    <a class="link" href="/expedition">
+                    <a class="link" href="/norilsk-division">
                         <div>Перейти в&nbsp;раздел дивизиона</div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="8" viewBox="0 0 20 8" fill="none">
                             <path
@@ -21,10 +21,10 @@
                 <div class="map-item">
                     <img src="img/map-big-expedition-1.png" alt="">
                     <div class="map-item__text">
-                        <div class="map-item__title">Норильский дивизион</div>
-                        <div class="map-item__descr">Группа объектов в&nbsp;районе Норильска и&nbsp;Талнаха</div>
+                        <div class="map-item__title">Забайкальский дивизион</div>
+                        <div class="map-item__descr">Быстринский ГОК</div>
                     </div>
-                    <a class="link" href="/expedition">
+                    <a class="link" href="/transbaikal-division">
                         <div>Перейти в&nbsp;раздел дивизиона</div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="8" viewBox="0 0 20 8" fill="none">
                             <path
@@ -37,10 +37,10 @@
                 <div class="map-item">
                     <img src="img/map-big-expedition-1.png" alt="">
                     <div class="map-item__text">
-                        <div class="map-item__title">Норильский дивизион</div>
-                        <div class="map-item__descr">Группа объектов в&nbsp;районе Норильска и&nbsp;Талнаха</div>
+                        <div class="map-item__title">Кольский дивизион</div>
+                        <div class="map-item__descr">Мончегорск, Никель, Заполярный</div>
                     </div>
-                    <a class="link" href="/expedition">
+                    <a class="link" href="/kola-division">
                         <div>Перейти в&nbsp;раздел дивизиона</div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="8" viewBox="0 0 20 8" fill="none">
                             <path
@@ -53,33 +53,17 @@
                 <div class="map-item">
                     <img src="img/map-big-expedition-1.png" alt="">
                     <div class="map-item__text">
-                        <div class="map-item__title">Норильский дивизион</div>
-                        <div class="map-item__descr">Группа объектов в&nbsp;районе Норильска и&nbsp;Талнаха</div>
+                        <div class="map-item__title">Речные порты</div>
+                        <div class="map-item__descr">Красноярский речной порт, Лесосибирский порт</div>
                     </div>
-                    <a class="link" href="/expedition">
-                        <div>Перейти в&nbsp;раздел дивизиона</div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="8" viewBox="0 0 20 8" fill="none">
-                            <path
-                                d="M19.8536 4.35355C20.0488 4.15829 20.0488 3.84171 19.8536 3.64645L16.6716 0.464466C16.4763 0.269204 16.1597 0.269204 15.9645 0.464466C15.7692 0.659728 15.7692 0.976311 15.9645 1.17157L18.7929 4L15.9645 6.82843C15.7692 7.02369 15.7692 7.34027 15.9645 7.53553C16.1597 7.7308 16.4763 7.7308 16.6716 7.53553L19.8536 4.35355ZM0 4.5H19.5V3.5H0V4.5Z"
-                                fill="black" />
-                        </svg>
-                    </a>
                 </div>
 
                 <div class="map-item">
                     <img src="img/map-big-expedition-1.png" alt="">
                     <div class="map-item__text">
-                        <div class="map-item__title">Норильский дивизион</div>
-                        <div class="map-item__descr">Группа объектов в&nbsp;районе Норильска и&nbsp;Талнаха</div>
+                        <div class="map-item__title">Северный морской путь</div>
+                        <div class="map-item__descr">Дудинка — Мурманск, Мурманский транспортный филиал</div>
                     </div>
-                    <a class="link" href="/expedition">
-                        <div>Перейти в&nbsp;раздел дивизиона</div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="8" viewBox="0 0 20 8" fill="none">
-                            <path
-                                d="M19.8536 4.35355C20.0488 4.15829 20.0488 3.84171 19.8536 3.64645L16.6716 0.464466C16.4763 0.269204 16.1597 0.269204 15.9645 0.464466C15.7692 0.659728 15.7692 0.976311 15.9645 1.17157L18.7929 4L15.9645 6.82843C15.7692 7.02369 15.7692 7.34027 15.9645 7.53553C16.1597 7.7308 16.4763 7.7308 16.6716 7.53553L19.8536 4.35355ZM0 4.5H19.5V3.5H0V4.5Z"
-                                fill="black" />
-                        </svg>
-                    </a>
                 </div>
             </div>
         </div>
@@ -109,7 +93,7 @@ export default {
                     scrollTrigger: {
                         trigger: ".map-container__wrap",
                         pin: true,
-                        start: "top +15%",
+                        start: "top +20%",
                         scrub: 1,
                         end: () => "+=" + (document.querySelector(".map-container").offsetWidth - window.innerWidth)
                     }
@@ -171,18 +155,29 @@ export default {
 
 }
 
-
 .map-item {
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 33px;
-    justify-content: space-between;
     width: 343px;
 
     img {
         width: 237px;
         height: 237px;
+    }
+
+    &__title {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 130%;
+    }
+
+    &__descr {
+        font-size: 1.25rem;
+        font-weight: 300;
+        line-height: 130%;
     }
 }
 </style>

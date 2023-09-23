@@ -2,7 +2,7 @@
     <section class="section-orange">
         <img class="line line-top" src="img/section-line-top.png" alt="">
         <slot></slot>
-        <img class="line line-bottom" src="img/section-line-bottom.png" alt="">
+        <img v-if="this.$route.path !== '/big-expedition'" class="line line-bottom" src="img/section-line-bottom.png" alt="">
     </section>
 </template>
 

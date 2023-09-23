@@ -210,20 +210,20 @@
 
                     <BaseDropdownInfo class="zooplankton" :title="'Зоопланктон'" :is-modal="true"
                         :text="'Чтобы оценить состояние водоёмов, исследователи отобрали виды зоопланктона, сигнализирующие о&nbsp;качестве воды. Например, планктонный рачок Limnocalanus macrurus любит чистую воду, а&nbsp;если начинает доминировать планктонная коловратка Brachionus sericus&nbsp;&mdash; вода загрязнена'" />
-                    <BaseDropdownInfo v-if="!isModile" class="char" :title="'Арктический голец (боганидская палия)'"
+                    <BaseDropdownInfo v-if="!isMobile" class="char" :title="'Арктический голец (боганидская палия)'"
                         :is-modal="true"
                         :text="'Считается самой полезной рыбой в&nbsp;мире: кусочек рыбы в&nbsp;30&nbsp;г покрывает суточную потребность человека в&nbsp;полезных жирных кислотах. Встречается также в&nbsp;водоёмах Кольского дивизиона'" />
 
-                    <BaseDropdownInfo v-if="isModile" class="merlin" :title="'Кречет'" :color="'#71464E'" :is-modal="true"
+                    <BaseDropdownInfo v-if="isMobile" class="merlin" :title="'Кречет'" :color="'#71464E'" :is-modal="true"
                         :text="'Самая крупная птица из&nbsp;отряда соколиных. За&nbsp;последние 20&nbsp;лет её&nbsp;популяция в&nbsp;России сократилась втрое. &laquo;Норникель&raquo; вложил 50&nbsp;млн рублей в&nbsp;поддержку и&nbsp;сохранение вида в&nbsp;2022&ndash;2023&nbsp;гг'" />
 
-                    <BaseDropdownInfo v-if="isModile" class="deer" :title="'Дикий северный олень'" :color="'#71464E'"
+                    <BaseDropdownInfo v-if="isMobile" class="deer" :title="'Дикий северный олень'" :color="'#71464E'"
                         :is-modal="true"
                         :text="'Отличительная особенность этого вида&nbsp;&mdash; наличие рогов у&nbsp;самок. Наименее изученная и&nbsp;малочисленная популяция дикого северного оленя&nbsp;&mdash; гыданская, она занесена в&nbsp;Красную книгу ЯНАО. По&nbsp;данным исследований, олени почти не&nbsp;мигрируют на&nbsp;дальние расстояния и&nbsp;круглый год остаются в&nbsp;арктической тундре'" />
-                    <BaseDropdownInfo v-if="isModile" class="lycosus-moss" :title="'Плаунок плаунковидный'" :is-modal="true"
+                    <BaseDropdownInfo v-if="isMobile" class="lycosus-moss" :title="'Плаунок плаунковидный'" :is-modal="true"
                         :color="'#71464E'"
                         :text="'В&nbsp;районе Промышленного Норильска биологи обнаружили несколько участков, ценных для произрастания этого редкого вида растений. Чтобы сохранить популяции плаунка, вокруг этих участков необходимо создавать защитные зоны'" />
-                    <BaseDropdownInfo v-if="isModile" class="hare" :title="'Заяц-беляк'" :is-modal="true"
+                    <BaseDropdownInfo v-if="isMobile" class="hare" :title="'Заяц-беляк'" :is-modal="true"
                         :text="'Спасаясь от&nbsp;опасности, развивает скорость до&nbsp;60&nbsp;км/ч'" />
                 </div>
                 <BaseTextBlock class="mb-100" :tooltip="true">

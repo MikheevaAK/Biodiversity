@@ -711,6 +711,11 @@ export default {
         height: 23.6875rem;
         margin: 0 auto;
         display: block;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            height: unset;
+        }
     }
 
     &__plants {
@@ -726,12 +731,22 @@ export default {
 
         &-title.title {
             margin-bottom: 2.5rem;
+
+            @media (max-width: 768px) {
+                padding: 0 9.5rem;
+                margin-bottom: 6.4rem;
+            }
         }
 
         .text-block__wrap.text {
             margin-bottom: 5rem;
             text-align: center;
             width: 37rem;
+
+            @media (max-width: 768px) {
+                width: unset;
+                margin-bottom: 16rem;
+            }
         }
 
         .position-info {
@@ -989,6 +1004,10 @@ export default {
         position: absolute;
         display: flex;
         flex-direction: column;
+
+        @media (max-width: 768px) {
+            position: relative;
+        }
     }
 
     .text-block__wrap {

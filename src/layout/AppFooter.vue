@@ -16,7 +16,7 @@
             <div class="footer__top-descr">
                 Вы&nbsp;собрали первую часть карты биоразнообразия &laquo;Норникель&raquo;.
             </div>
-            <a href="#" class="footer__top-link">
+            <a href="/" class="footer__top-link">
                 Вернуться на&nbsp;карту
             </a>
         </div>
@@ -161,7 +161,7 @@ export default {
             ],
             list3: [
                 {
-                    link: '',
+                    link: '/white-bears',
                     title: 'Спасение белых медведей',
                 },
                 {
@@ -171,11 +171,11 @@ export default {
             ],
             list4: [
                 {
-                    link: '',
+                    link: 'indicator',
                     title: 'Загадочный ИПСЭ',
                 },
                 {
-                    link: '',
+                    link: '/treasures-of-biodiversity',
                     title: 'Сокровищницы биоразнообразия',
                 },
             ],

@@ -8,6 +8,8 @@ import NorilskDivisionPage from '@/pages/NorilskDivisionPage'
 import TransbaikalDivisionPage from '@/pages/TransbaikalDivisionPage'
 import KolaDivisionPage from '@/pages/KolaDivisionPage'
 import WhiteBearsPage from '@/pages/WhiteBearsPage'
+import TreasuresPage from '@/pages/TreasuresPage'
+import IndicatorPage from '@/pages/IndicatorPage'
 import BigExpeditionPage from '@/pages/BigExpeditionPage'
 
 
@@ -50,9 +52,20 @@ const routes = [
         path: '/kola-division'
     },
     {
+        name: 'treasures-biodiversity',
+        component: TreasuresPage,
+        path: '/treasures-of-biodiversity'
+    },
+    {
         name: 'white-bears',
         component: WhiteBearsPage,
         path: '/white-bears'
+    }
+    ,
+    {
+        name: 'indicator',
+        component: IndicatorPage,
+        path: '/indicator'
     }
 ]
 

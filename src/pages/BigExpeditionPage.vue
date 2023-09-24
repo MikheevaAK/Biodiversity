@@ -166,13 +166,13 @@
 
                         <div class="position-info">
                             <img src="img/plants.png" alt="">
-                            <div class="position-info__descr">Загрязнение почвы напрямую не&nbsp;ограничивает
+                            <div class="position-info__descr">Загрязнение почвы напрямую&nbsp;не&nbsp;ограничивает
                                 распространение
                                 грибов
                                 по&nbsp;разным зонам воздействия в&nbsp;Норильском дивизионе.
                             </div>
                             <BaseDropdownInfo :title="'Что не так с почвой?'" :color="'#D38235'"
-                                :text="'Из-за&nbsp;природного дефицита фосфора и калия почвы в Норильском дивизионе слабо- и среднеплодородны. Они пригодны для растений, которые нетребовательны к уровню минерального питания.'" />
+                                :text="'Из-за&nbsp;природного дефицита фосфора и&nbsp;калия почвы в&nbsp;Норильском дивизионе слабо- и&nbsp;среднеплодородны. Они пригодны для растений, которые нетребовательны к&nbsp;уровню минерального питания.'" />
                         </div>
                     </BaseTextBlock>
                     <BaseSidebar class="mb-100">
@@ -304,7 +304,7 @@
                         <div class="position-info">
                             <img src="img/squirrel.png" alt="">
                             <BaseNumberBlock :textTop="'7 видов'"
-                                :textBottom="'млекопитающих обнаружили в Кольском дивизионе в зимний период'" />
+                                :textBottom="'млекопитающих обнаружили в&nbsp;Кольском дивизионе в&nbsp;зимний период'" />
                             <BaseDropdownInfo :title="'Какие виды обнаружили учёные?'" :color="'#D38235'"
                                 :text="'Исследователям удалось встретить белку, зайца-беляка, лесную куницу, горностая, росомаху, лисицу и&nbsp;лося. Численность всех видов невелика.'" />
                         </div>
@@ -344,7 +344,7 @@
                                 :text="'В&nbsp;этом районе водятся морская свинья, северный малый полосатик, белуха, а&nbsp;также два вида крупных китов: горбач и&nbsp;финвал.'" />
                         </div>
                     </BaseTextBlock>
-                    <BaseSidebar class="mb-100">
+                    <BaseSidebar>
                         <p class="mb-10">
                             За&nbsp;время работ на&nbsp;судах «Норникеля» при&nbsp;переходе по&nbsp;Северному морскому пути
                             не&nbsp;происходило разлива нефтепродуктов. Не&nbsp;отмечался он&nbsp;и&nbsp;во&nbsp;время
@@ -404,6 +404,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <BaseAccordion class="big-expedition__result-faq" v-for="faq in faqs" :key="faq.id" :faq="faq" />
                 </div>
                 <BaseSidebar>
                     <p>
@@ -427,6 +429,7 @@ import BaseDropdownInfo from '@/components/BaseDropdownInfo.vue'
 import BaseTextBlock from '@/components/BaseTextBlock.vue'
 import BaseSidebar from '@/components/BaseSidebar'
 import BaseNumberBlock from "@/components/BaseNumberBlock.vue";
+import BaseAccordion from '@/components/BaseAccordion.vue'
 // import ScrollSwiper from '@/components/BigExpeditionScrollSwiper.vue'
 
 export default {
@@ -439,12 +442,33 @@ export default {
         MainSection,
         BaseSidebar,
         // ScrollSwiper,
+        BaseAccordion,
         BaseDropdownInfo,
     },
     data() {
         return {
-            heroDescr: 'Три региона страны, десятки учёных, сотни взятых на&nbsp;анализ проб, тысячи километров пути&nbsp;&mdash; в&nbsp;2022 году по&nbsp;инициативе &laquo;Норникеля&raquo; стартовал первый этап Большой научной экспедиции. Работы по&nbsp;изучению экосистем проводились одновременно в&nbsp;Красноярском крае, на&nbsp;Кольском полуострове и&nbsp;в&nbsp;Забайкалье, а&nbsp;также на&nbsp;отрезке Северного морского пути и&nbsp;вокруг территорий речных портов компании на&nbsp;Енисее. Ничего сопоставимого по&nbsp;масштабу в&nbsp;нашей стране не&nbsp;было за&nbsp;весь постсоветский период.'
+            heroDescr: 'Три региона страны, десятки учёных, сотни взятых на&nbsp;анализ проб, тысячи километров пути&nbsp;&mdash; в&nbsp;2022 году по&nbsp;инициативе &laquo;Норникеля&raquo; стартовал первый этап Большой научной экспедиции. Работы по&nbsp;изучению экосистем проводились одновременно в&nbsp;Красноярском крае, на&nbsp;Кольском полуострове и&nbsp;в&nbsp;Забайкалье, а&nbsp;также на&nbsp;отрезке Северного морского пути и&nbsp;вокруг территорий речных портов компании на&nbsp;Енисее. Ничего сопоставимого по&nbsp;масштабу в&nbsp;нашей стране не&nbsp;было за&nbsp;весь постсоветский период.',
+            faqs: [
+                {
+                    "question": 'Устойчивость к&nbsp;загрязнениям?',
+                    "answer": 'Биоценозы демонстрируют хорошую устойчивость к&nbsp;промышленным выбросам, если только не&nbsp;находятся на&nbsp;территории работающего предприятия. Уровень&nbsp;же воздействия производственных объектов компании &laquo;Норникель&raquo; на&nbsp;экосистемы оказался сопоставим с&nbsp;воздействием города. Более серьёзную нагрузку оказывают хвостохранилища, и&nbsp;это нужно будет учитывать при рекультивации земель.',
+                    "isOpen": false
+                },
+                {
+                    "question": 'Изучение в&nbsp;динамике',
+                    "answer": 'Относительно надёжно оценить состояние экосистем можно только с&nbsp;учётом естественной внутренней динамики всех компонентов. Например, почвы и&nbsp;растительные сообщества достаточно стабильны во&nbsp;времени. Животные, напротив, характеризуются выраженной популяционной динамикой. Получить адекватный результат можно минимум за&nbsp;два, а&nbsp;то&nbsp;и&nbsp;три года наблюдений.',
+                    "isOpen": false
+                },
+                {
+                    "question": 'Необходимость&nbsp;продолжать исследования',
+                    "answer": 'В&nbsp;течение 2023 года на&nbsp;территориях вокруг промышленных объектов &laquo;Норникеля&raquo; проходит второй этап Большой научной экспедиции. Её&nbsp;участники занимаются углублёнными исследованиями и&nbsp;наблюдением за&nbsp;выявленными годом ранее параметрами биоразнообразия. По&nbsp;итогам работы учёные проведут генетический анализ различных компонентов систем и&nbsp;составят ДНК-библиотеки. Чтобы получить достоверные и&nbsp;научно обоснованные данные, исследования нужно проводить от&nbsp;3&nbsp;до&nbsp;5&nbsp;лет.',
+                    "isOpen": false
+                }
+            ]
         }
+    },
+    methods: {
+
     }
 }
 </script>
@@ -729,6 +753,15 @@ export default {
             background-image: url(../../public/img/big-expedition-plants.webp);
         }
 
+        @media (max-width: 768px) {
+            padding-bottom: 45rem;
+            background-image: url(../../public/img/big-expedition-plants-mobile.png);
+
+            @supports (background-image: url(../../public/img/big-expedition-plants-mobile.webp)) {
+                background-image: url(../../public/img/big-expedition-plants-mobile.webp);
+            }
+        }
+
         &-title.title {
             margin-bottom: 2.5rem;
 
@@ -754,16 +787,45 @@ export default {
             right: -25rem;
             width: 18.7rem;
 
+            @media (max-width: 768px) {
+                width: unset;
+                right: 0;
+                top: 12.8rem;
+            }
+
             img {
                 width: 7.25rem;
                 height: 6rem;
                 margin-bottom: 0.75rem;
+
+                @media (max-width: 768px) {
+                    position: absolute;
+                    margin-bottom: 0;
+                    width: 22.94rem;
+                    height: 19rem;
+                    top: -13rem;
+                    right: 8rem;
+                }
             }
 
             &__descr {
                 font-size: 1.042rem;
                 margin-bottom: 0.75rem;
                 line-height: 130%;
+
+                @media (max-width: 768px) {
+                    font-size: 4.53334rem;
+                    padding-left: 5.3334rem;
+                    margin-bottom: 5.3334rem;
+                    width: 85%;
+                    border-left: 1px solid #333;
+                }
+            }
+
+            .dropdown-info__title {
+                @media (max-width: 768px) {
+                    max-width: unset;
+                }
             }
         }
 
@@ -783,6 +845,16 @@ export default {
             background-image: url(../../public/img/big-expedition-insects.webp);
         }
 
+        @media (max-width: 768px) {
+            margin-bottom: 14rem;
+            padding-bottom: 35rem;
+            background-image: url(../../public/img/big-expedition-insects-mobile.png);
+
+            @supports (background-image: url(../../public/img/big-expedition-insects-mobile.webp)) {
+                background-image: url(../../public/img/big-expedition-insects-mobile.webp);
+            }
+        }
+
         .position-info {
             top: 5rem;
             left: -22rem;
@@ -792,6 +864,16 @@ export default {
                 width: 6.125rem;
                 height: 4.125rem;
                 margin-bottom: 0.75rem;
+
+                @media (max-width: 768px) {
+                    width: 21.7rem;
+                    height: 14.5rem;
+                    transform: rotate(-145deg);
+                    top: 0;
+                    right: 6rem;
+                    position: absolute;
+                    margin-bottom: 0;
+                }
             }
 
             .number-block {
@@ -801,20 +883,40 @@ export default {
                 padding-left: 0;
                 margin-bottom: 1rem;
                 width: 15.5rem;
+
+                @media (max-width: 768px) {
+                    width: unset;
+                    border-right: none;
+                    border-left: 1px solid #333333;
+                    padding-left: 5.3334rem;
+                    margin-bottom: 5rem;
+                }
             }
 
             .dropdown-info__text {
                 padding: 4.31rem 0.62rem 0.88rem 3.13rem;
+
+                @media (max-width: 768px) {
+                    left: -4.3rem;
+                    top: -4.3rem;
+                    width: 91.734rem;
+                    font-size: 3.73334rem;
+                    padding: 14.9334rem 6.1333rem 6.6666rem 13.8666rem;
+                }
             }
 
             .dropdown-info__title {
                 max-width: 12rem;
+
+                @media (max-width: 768px) {
+                    max-width: unset;
+                }
             }
 
-            &__descr {
-                font-size: 1.042rem;
-                margin-bottom: 0.75rem;
-                line-height: 130%;
+            @media (max-width: 768px) {
+                width: unset;
+                left: 0;
+                top: 2rem;
             }
         }
 
@@ -835,11 +937,27 @@ export default {
             background-image: url(../../public/img/big-expedition-birds.webp);
         }
 
+        @media (max-width: 768px) {
+            padding-bottom: 58rem;
+            margin-bottom: 14rem;
+            background-image: url(../../public/img/big-expedition-birds-mobile.png);
+
+            @supports (background-image: url(../../public/img/big-expedition-birds-mobile.webp)) {
+                background-image: url(../../public/img/big-expedition-birds-mobile.webp);
+            }
+        }
+
         .position-info {
             position: relative;
             top: 8rem;
             right: -25rem;
             width: 18.7rem;
+
+            @media (max-width: 768px) {
+                width: unset;
+                right: 0;
+                top: 20rem;
+            }
 
             img {
                 width: 12.25rem;
@@ -848,17 +966,56 @@ export default {
                 top: -9.5rem;
                 left: -3rem;
 
+                @media (max-width: 768px) {
+                    position: absolute;
+                    margin-bottom: 0;
+                    width: 46.12rem;
+                    height: 45rem;
+                    top: -29rem;
+                    right: -9rem;
+                    left: unset;
+                    transform: scaleX(-1);
+                }
             }
 
             &__descr {
                 font-size: 1.042rem;
                 margin-bottom: 0.75rem;
                 line-height: 130%;
+
+                @media (max-width: 768px) {
+                    font-size: 4.53334rem;
+                    padding-left: 5.3334rem;
+                    margin-bottom: 5.3334rem;
+                    width: 91%;
+                    border-left: 1px solid #333;
+                }
             }
 
             .dropdown-info__text {
                 width: 21rem;
                 padding: 4.31rem 0.62rem 0.88rem 3.13rem;
+
+                @media (max-width: 768px) {
+                    width: unset;
+                    left: -4.3rem;
+                    top: -4.3rem;
+                    width: 91.734rem;
+                    font-size: 3.73334rem;
+                    padding: 14.9334rem 6.1333rem 6.6666rem 13.8666rem;
+                }
+            }
+
+            .dropdown-info__title {
+                @media (max-width: 768px) {
+                    max-width: unset;
+                }
+            }
+        }
+
+        .text-block__wrap.mb-40 {
+            @media (max-width: 768px) {
+                margin-bottom: 30.6667rem;
             }
         }
 
@@ -878,17 +1035,41 @@ export default {
             background-image: url(../../public/img/big-expedition-animals.webp);
         }
 
+        @media (max-width: 768px) {
+            padding-bottom: 58rem;
+            margin-bottom: 14rem;
+            background-image: url(../../public/img/big-expedition-animals-mobile.png);
+
+            @supports (background-image: url(../../public/img/big-expedition-animals-mobile.webp)) {
+                background-image: url(../../public/img/big-expedition-animals-mobile.webp);
+            }
+        }
+
         .position-info {
             position: relative;
             top: 8rem;
             left: -22rem;
             width: 18.7rem;
 
+            @media (max-width: 768px) {
+                width: unset;
+                left: 0;
+                top: 2rem;
+            }
+
             img {
                 width: 10.375rem;
                 height: 11.25rem;
                 position: absolute;
                 top: -9rem;
+
+                @media (max-width: 768px) {
+                    width: 32.24rem;
+                    height: 35.1rem;
+                    right: -2rem;
+                    top: -12rem;
+                    transform: scaleX(-1);
+                }
             }
 
             .number-block {
@@ -898,16 +1079,38 @@ export default {
                 padding-left: 0;
                 margin-bottom: 1rem;
                 width: 15.5rem;
+
+                @media (max-width: 768px) {
+                    width: unset;
+                    border-right: none;
+                    border-left: 1px solid #333333;
+                    padding-left: 5.3334rem;
+                    margin-bottom: 5rem;
+                }
             }
 
             .dropdown-info__text {
                 padding: 4.31rem 0.62rem 0.88rem 3.13rem;
+
+                @media (max-width: 768px) {
+                    left: -4.3rem;
+                    top: -4.3rem;
+                    width: 91.734rem;
+                    font-size: 3.73334rem;
+                    padding: 14.9334rem 6.1333rem 6.6666rem 13.8666rem;
+                }
             }
 
-            &__descr {
-                font-size: 1.042rem;
-                margin-bottom: 0.75rem;
-                line-height: 130%;
+            .dropdown-info__title {
+                @media (max-width: 768px) {
+                    max-width: unset;
+                }
+            }
+        }
+
+        .text-block__wrap.mb-40 {
+            @media (max-width: 768px) {
+                margin-bottom: 12rem;
             }
         }
 
@@ -917,7 +1120,7 @@ export default {
     }
 
     &__water-animals {
-        padding-bottom: 21.44rem;
+        padding-bottom: 23.44rem;
         background-image: url(../../public/img/big-expedition-water-animals.png);
         background-size: contain;
         background-repeat: no-repeat;
@@ -927,11 +1130,27 @@ export default {
             background-image: url(../../public/img/big-expedition-water-animals.webp);
         }
 
+        @media (max-width: 768px) {
+            padding-bottom: 58rem;
+            margin-bottom: 14rem;
+            background-image: url(../../public/img/big-expedition-water-animals-mobile.png);
+
+            @supports (background-image: url(../../public/img/big-expedition-water-animals-mobile.webp)) {
+                background-image: url(../../public/img/big-expedition-water-animals-mobile.webp);
+            }
+        }
+
         .position-info {
             position: relative;
             top: 7rem;
             right: -25rem;
             width: 18.7rem;
+
+            @media (max-width: 768px) {
+                width: unset;
+                left: 0;
+                // top: 2rem;
+            }
 
             img {
                 width: 16.875rem;
@@ -939,23 +1158,45 @@ export default {
                 position: absolute;
                 top: -6.5rem;
                 left: -0.5rem;
+
+                @media (max-width: 768px) {
+                    width: 46.36rem;
+                    height: 24.8rem;
+                    top: -6rem;
+                    left: unset;
+                    right: -4rem;
+                    transform: rotate(16.652deg);
+                }
             }
 
             .number-block {
                 position: static;
                 margin-bottom: 1rem;
                 width: 19rem;
+
+                @media (max-width: 768px) {
+                    width: unset;
+                    margin-bottom: 4.8rem;
+                }
             }
 
             .dropdown-info__text {
                 width: 19rem;
                 padding: 4.31rem 0.62rem 0.88rem 3.13rem;
+
+                @media (max-width: 768px) {
+                    left: -4.3rem;
+                    top: -4.3rem;
+                    width: 91.734rem;
+                    font-size: 3.73334rem;
+                    padding: 14.9334rem 6.1333rem 6.6666rem 13.8666rem;
+                }
             }
 
-            &__descr {
-                font-size: 1.042rem;
-                margin-bottom: 0.75rem;
-                line-height: 130%;
+            .dropdown-info__title {
+                @media (max-width: 768px) {
+                    max-width: unset;
+                }
             }
         }
     }
@@ -964,17 +1205,30 @@ export default {
 
         .title {
             margin-bottom: 1.94445rem;
+
+            @media (max-width: 768px) {
+                margin-bottom: 6.4rem;
+            }
         }
 
         .text {
             text-align: center;
             margin-bottom: 5.55556rem;
+
+            @media (max-width: 768px) {
+                text-align: left;
+                margin-bottom: 11rem;
+            }
         }
 
         &-wrap {
             justify-content: center;
             display: flex;
             gap: 3.95834rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
         }
 
         &-item {
@@ -998,6 +1252,15 @@ export default {
             font-weight: 300;
             line-height: 130%;
         }
+
+        &-faq {
+            display: none;
+            border-top: 0.5px solid var(--grey, #626261);
+
+            @media (max-width: 768px) {
+                display: block;
+            }
+        }
     }
 
     .position-info {
@@ -1020,6 +1283,14 @@ export default {
 
     .dropdown-info__text {
         background-color: #F7F6F2;
+
+        @media (max-width: 768px) {
+            left: -4.3rem;
+            top: -4.3rem;
+            width: 91.734rem;
+            font-size: 3.73334rem;
+            padding: 14.9334rem 6.1333rem 6.6666rem 13.8666rem;
+        }
     }
 
     &__number_width {

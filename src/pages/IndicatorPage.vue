@@ -1,7 +1,7 @@
 <template>
     <div class="white-bears">
         <BaseHero :title="'Загадочный ИПСЭ'" :descr="heroDescr"
-            :img="'img/hero6.jpg'" :imgMobile="'img/hero6-mobile.jpg'" />
+            :img="'img/hero9.jpg'" :imgMobile="'img/hero6-mobile.jpg'" />
         <MainSection>
             <SectionWhite>
                 <BaseTextBlock class="mb-40">

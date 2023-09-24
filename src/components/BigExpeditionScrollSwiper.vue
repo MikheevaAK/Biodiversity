@@ -1,9 +1,12 @@
 <template>
-    <div class="map-big-expidition">
+    <!-- <div class="map-big-expidition"> -->
         <div class="map-container__wrap">
             <div class="map-container">
                 <div class="map-item">
-                    <img src="img/map-big-expedition-1.png" alt="">
+                    <picture>
+                       <source type="image/webp" srcset="img/map-big-expedition-1.webp">
+                        <img src="img/map-big-expedition-1.png" alt="">
+                    </picture>
                     <div class="map-item__text">
                         <div class="map-item__title">Норильский дивизион</div>
                         <div class="map-item__descr">Группа объектов в&nbsp;районе Норильска и&nbsp;Талнаха</div>
@@ -19,7 +22,10 @@
                 </div>
 
                 <div class="map-item">
-                    <img src="img/map-big-expedition-1.png" alt="">
+                    <picture>
+                       <source type="image/webp" srcset="img/map-big-expedition-2.webp">
+                        <img src="img/map-big-expedition-2.png" alt="">
+                    </picture>
                     <div class="map-item__text">
                         <div class="map-item__title">Забайкальский дивизион</div>
                         <div class="map-item__descr">Быстринский ГОК</div>
@@ -35,7 +41,10 @@
                 </div>
 
                 <div class="map-item">
-                    <img src="img/map-big-expedition-1.png" alt="">
+                    <picture>
+                       <source type="image/webp" srcset="img/map-big-expedition-3.webp">
+                        <img src="img/map-big-expedition-3.png" alt="">
+                    </picture>
                     <div class="map-item__text">
                         <div class="map-item__title">Кольский дивизион</div>
                         <div class="map-item__descr">Мончегорск, Никель, Заполярный</div>
@@ -51,7 +60,10 @@
                 </div>
 
                 <div class="map-item">
-                    <img src="img/map-big-expedition-1.png" alt="">
+                    <picture>
+                       <source type="image/webp" srcset="img/map-big-expedition-4.webp">
+                        <img src="img/map-big-expedition-4.png" alt="">
+                    </picture>
                     <div class="map-item__text">
                         <div class="map-item__title">Речные порты</div>
                         <div class="map-item__descr">Красноярский речной порт, Лесосибирский порт</div>
@@ -59,7 +71,10 @@
                 </div>
 
                 <div class="map-item">
-                    <img src="img/map-big-expedition-1.png" alt="">
+                    <picture>
+                       <source type="image/webp" srcset="img/map-big-expedition-5.webp">
+                        <img src="img/map-big-expedition-5.png" alt="">
+                    </picture>
                     <div class="map-item__text">
                         <div class="map-item__title">Северный морской путь</div>
                         <div class="map-item__descr">Дудинка — Мурманск, Мурманский транспортный филиал</div>
@@ -67,7 +82,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    <!-- </div> -->
 </template>
 
 <script>
@@ -93,7 +108,7 @@ export default {
                     scrollTrigger: {
                         trigger: ".map-container__wrap",
                         pin: true,
-                        start: "top +20%",
+                        start: "top 10%",
                         scrub: 1,
                         end: () => "+=" + (document.querySelector(".map-container").offsetWidth - window.innerWidth)
                     }
@@ -105,9 +120,10 @@ export default {
 </script>
 
 <style lang="scss">
-.map-big-expidition {
-    margin-left: 10rem;
-}
+// .map-big-expidition {
+    
+//     overflow: hidden;
+// }
 
 .map {
     position: relative;
@@ -127,6 +143,7 @@ export default {
     }
 
     &-container {
+        margin-left: 10rem;
         margin-bottom: 4.94rem;
         display: flex;
         gap: 22px;

@@ -107,7 +107,7 @@
                         :textBottom="'провели полевые работы всего&nbsp;за&nbsp;восемь месяцев'" />
                 </div>
 
-                <!-- <ScrollSwiper class="mb-100" /> -->
+                <ScrollSwiper class="map mb-100" />
 
                 <BaseTextBlock class="mb-100">
                     <p class="mb-10">
@@ -430,7 +430,7 @@ import BaseTextBlock from '@/components/BaseTextBlock.vue'
 import BaseSidebar from '@/components/BaseSidebar'
 import BaseNumberBlock from "@/components/BaseNumberBlock.vue";
 import BaseAccordion from '@/components/BaseAccordion.vue'
-// import ScrollSwiper from '@/components/BigExpeditionScrollSwiper.vue'
+import ScrollSwiper from '@/components/BigExpeditionScrollSwiper.vue'
 
 export default {
     components: {
@@ -441,7 +441,7 @@ export default {
         BaseTextBlock,
         MainSection,
         BaseSidebar,
-        // ScrollSwiper,
+        ScrollSwiper,
         BaseAccordion,
         BaseDropdownInfo,
     },
@@ -1259,6 +1259,12 @@ export default {
 
             @media (max-width: 768px) {
                 display: block;
+            }
+        }
+
+        &.mb-60 {
+            @media (max-width: 768px) {
+                margin-bottom: 10.667rem;
             }
         }
     }

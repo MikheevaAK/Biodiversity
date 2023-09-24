@@ -447,6 +447,10 @@ import BaseNumberBlock from "@/components/BaseNumberBlock.vue";
 import BaseAccordion from '@/components/BaseAccordion.vue'
 import ScrollSwiper from '@/components/BigExpeditionScrollSwiper.vue'
 
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 export default {
     components: {
         BaseHero,
@@ -482,8 +486,53 @@ export default {
             ]
         }
     },
+    mounted() {
+        this.$nextTick(function () {
+            this.sidebarAnimation();
+            this.textAnimation();
+        })
+    },
     methods: {
-
+        textAnimation() {
+            const collageItems = Array.from(document.querySelectorAll(".text-block__wrap"))
+            collageItems.forEach((elem) => {
+                gsap.fromTo(elem,
+                    {
+                        y: 50,
+                    },
+                    {
+                        y: 0,
+                        duration: 1,
+                        scrollTrigger: {
+                            start: '0% 100%',
+                            end: 'bottom 75%',
+                            trigger: elem,
+                            scrub: true,
+                            // markers: true,
+                        },
+                    })
+            })
+        },
+        sidebarAnimation() {
+            const sidebarItems = Array.from(document.querySelectorAll(".sidebar"))
+            sidebarItems.forEach((elem) => {
+                gsap.fromTo(elem,
+                    {
+                        y: 50,
+                    },
+                    {
+                        y: 0,
+                        duration: 1,
+                        scrollTrigger: {
+                            start: '0% 100%',
+                            end: 'bottom 75%',
+                            trigger: elem,
+                            // markers: true,
+                            scrub: true,
+                        },
+                    })
+            })
+        }
     }
 }
 </script>

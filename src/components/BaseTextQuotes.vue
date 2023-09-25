@@ -17,6 +17,13 @@
     font-weight: 300;
     line-height: 130%;
 
+    @media (max-width: 768px) {
+        width: unset;
+        padding: 5.6rem 5.0667rem;
+        margin: 0 4.2667rem;
+        font-size: 4.53334rem;
+    }
+
     .quote-left,
     .quote-right {
         position: absolute;
@@ -24,6 +31,10 @@
         top: 40%;
         font-size: 5.556rem;
         font-weight: 300;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 
     .quote-left {

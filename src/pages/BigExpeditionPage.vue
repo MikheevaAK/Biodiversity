@@ -1348,6 +1348,7 @@ export default {
 
         @media (max-width: 768px) {
             width: unset;
+            z-index: 2;
         }
     }
 

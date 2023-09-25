@@ -121,6 +121,8 @@
             </BaseTextBlock>
 
             <picture>
+                <!-- <source media="(max-width: 768px)" type="image/webp" srcset="img/kola-radius-mobile.webp"> -->
+                <source media="(max-width: 768px)" srcset="img/indicator-schedule-mobile.png">
                 <source type="image/webp" srcset="img/indicator-schedule.webp">
                 <img class="indicator__schedule mb-100" src="img/indicator-schedule.png">
             </picture>
@@ -464,6 +466,11 @@ export default {
         margin: 0 auto;
         width: 68.34rem;
         height: 36.53rem;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            height: auto;
+        }
     }
 
     &__drop {
@@ -471,8 +478,8 @@ export default {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 984px;
-        height: 338px;
+        width: 68.34rem;
+        height: 23.473rem;
         background-size: contain;
         background-repeat: no-repeat;
         background-image: url(../../public/img/indicator-drop.png);
@@ -481,16 +488,35 @@ export default {
             background-image: url(../../public/img/indicator-drop.webp);
         }
 
+        @media (max-width: 768px) {
+            width: 90.134rem;
+            height: 220rem;
+            background-image: url(../../public/img/indicator-drop-mobile.png);
+        }
+
         &-wrap {
             width: 34.1rem;
+
+            @media (max-width: 768px) {
+                width: 100%;
+            }
         }
 
         &-text {
-            width: 357px;
+            width: 24.792rem;
             color: var(--coppre-text, #A46A32);
             font-size: 1.25rem;
             font-weight: 600;
             line-height: 130%;
+
+            @media (max-width: 768px) {
+                width: 53%;
+                margin: 0 auto;
+                font-size: 4.26667rem;
+                text-align: center;
+                position: relative;
+                top: -26rem;
+            }
         }
     }
 }

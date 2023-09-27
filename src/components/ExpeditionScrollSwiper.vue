@@ -10,14 +10,11 @@
                     <div class="team-item__title">Гидрохимики</div>
 
                     <ul class="team-item__list">
-                        <li class="team-item__list-item">Определяли уровень загрязнения ручьёв, рек и озёр
-                            нефтепродуктами;
+                        <li class="team-item__list-item">Определяли уровень загрязнения ручьёв, рек и озёр;
                         </li>
-                        <li class="team-item__list-item">Вычисляли, сколько в воде содержится нефтепродуктов и тяжёлых
-                            металлов;
+                        <li class="team-item__list-item">Вычисляли, сколько в&nbsp;воде содержится нефтепродуктов и&nbsp;тяжёлых металлов;
                         </li>
-                        <li class="team-item__list-item">Исследовали воду на мутность, количество взвесей и
-                            кислорода.
+                        <li class="team-item__list-item">Исследовали воду на&nbsp;мутность, количество взвесей и&nbsp;кислорода.
                         </li>
                     </ul>
 
@@ -345,7 +342,7 @@ export default {
 
             &__list {
                 padding-left: 1rem;
-                width: 18.875rem;
+                width: 19.875rem;
 
                 @media (max-width: 768px) {
                     width: 72.875rem;

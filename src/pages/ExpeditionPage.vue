@@ -245,6 +245,8 @@
                         <source type="image/webp" srcset="img/map-rivers.webp">
                         <img class="step-two__img" src="img/map-rivers.png" alt="">
                     </picture>
+                    <BaseNumberBlock class="step-two__number" :textTop="'1 400 км'"
+                        :textBottom="'общая протяжённость маршрутов второго этапа экспедиции'" />
                 </div>
                 <BaseTextBlock class="" :title="'Особенности второго этапа'">
                     <p class="text-block__descr">
@@ -899,14 +901,14 @@ export default {
 
     &__img {
         margin: 2.06rem 0 4.15rem 0;
-        width: 38.125rem;
-        height: 33.2rem;
+        width: 28.43rem;
+        height: 35.56rem;
+        mix-blend-mode: darken;
 
         @media (max-width: 768px) {
             margin: 0 0 14.4rem 0;
-            width: 92.8rem;
+            width: 86.4rem;
             height: 108.27rem;
-            mix-blend-mode: darken;
         }
 
         &-measurements {
@@ -920,6 +922,20 @@ export default {
                 width: 100%;
                 height: 53.0625rem;
             }
+        }
+    }
+
+    &__number {
+        background-color: #F7F6F2;
+        border-left: 0;
+        bottom: 8rem;
+        left: 21rem;
+
+        @media (max-width: 768px) {
+            position: absolute;
+            width: 52rem;
+            bottom: 42rem;
+            left: 39rem;
         }
     }
 

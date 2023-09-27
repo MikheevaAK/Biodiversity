@@ -919,7 +919,7 @@ export default {
 
                 &.remove-active {
                     background-attachment: unset;
-                    background-position: 0 515vh;
+                    background-position: 0 500vh;
                     background-size: 100%;
 
                     @media (max-width: 768px) {

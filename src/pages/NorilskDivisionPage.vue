@@ -201,6 +201,68 @@
                     </BaseTextBlock>
                 </div>
                 <div class="collage">
+                    <div class="legend">
+                        <BaseCollageInfo :text="'Охраняемые виды'" :color="'#71464E'" />
+                        <BaseCollageInfo :text="'Индикаторные виды'" />
+                    </div>
+
+                    <BaseCollageInfo class="eagle" :title="'Орлан-белохвост'" :color="'#71464E'"
+                        :text="'Размах его крыльев достигает 2,4&nbsp;м. Птица нередко питается падалью и&nbsp;считается природным санитаром'" />
+
+                    <BaseCollageInfo class="falcon" :title="'Сапсан'" :color="'#71464E'"
+                        :text="'Самая быстрая птица на планете'" />
+
+                    <BaseCollageInfo class="warbler" :title="'Пеночка-таловка'"
+                        :text="'Встречается также в&nbsp;Забайкалье'" />
+                    <BaseCollageInfo class="lentils" :title="'Чечевица'"
+                        :text="'Издаёт ритмичные звуки, в&nbsp;которых слышится: <br/>&laquo;Че-че-ви-цу?&raquo;'" />
+
+                    <BaseCollageInfo class="willow-warbler" :title="'Пеночка-весничка'"
+                        :text="'Кроме Норильского обитает также в&nbsp;Кольском дивизионе'" />
+
+                    <BaseCollageInfo class="merlin" :title="'Кречет'" :color="'#71464E'"
+                        :text="'Самая крупная птица из&nbsp;отряда соколиных. За&nbsp;последние 20&nbsp;лет её&nbsp;популяция в&nbsp;России сократилась втрое. &laquo;Норникель&raquo; вложил 50&nbsp;млн&nbsp;рублей в&nbsp;поддержку и&nbsp;сохранение вида в&nbsp;2022&ndash;2023&nbsp;гг.'" />
+
+                    <BaseCollageInfo class="oatmeal" :title="'Полярная овсянка'" />
+                    <BaseCollageInfo class="larch" :title="'Лиственница сибирская'" :color="'#71464E'" />
+
+                    <BaseCollageInfo class="deer" :title="'Дикий северный олень'" :color="'#71464E'"
+                        :text="'Отличительная особенность этого вида&nbsp;&mdash; наличие рогов у&nbsp;самок. Наименее изученная и&nbsp;малочисленная популяция дикого северного оленя&nbsp;&mdash; гыданская, она занесена в&nbsp;Красную книгу ЯНАО. По&nbsp;данным исследований, олени почти не&nbsp;мигрируют на&nbsp;дальние расстояния и&nbsp;круглый год остаются в&nbsp;арктической тундре'" />
+
+                    <BaseCollageInfo class="ptarmigan" :title="'Белая куропатка'"
+                        :text="'Тело птицы сохраняет&nbsp;постоянную температуру 45ºC'" />
+
+                    <BaseCollageInfo class="shrew" :title="'Тундряная бурозубка'"
+                        :text="'За&nbsp;сутки может съесть в&nbsp;4&nbsp;раза больше, чем весит'" />
+
+                    <BaseCollageInfo class="wolverine" :title="'Росомаха'" :color="'#71464E'" />
+
+                    <BaseCollageInfo class="olkhovnik" :title="'Ольховник кустарниковый'"
+                        :text="'Древесина срубленной ольхи окрашивается в&nbsp;красный цвет'" />
+
+                    <BaseCollageInfo class="willow" :title="'Ива мохнатая'" />
+                    <BaseCollageInfo class="vole" :title="'Полёвка-экономка'" />
+
+                    <BaseCollageInfo class="hare" :title="'Заяц-беляк'"
+                        :text="'Спасаясь от&nbsp;опасности, развивает скорость до&nbsp;60&nbsp;км/ч. Обитает также в&nbsp;Забайкальском дивизионе'" />
+
+                    <BaseCollageInfo class="plover" :title="'Золотистая ржанка'" :color="'#71464E'"
+                        :text="'В&nbsp;древности считалось, что один взгляд на&nbsp;эту пёструю птичку излечивает от&nbsp;желтухи'" />
+
+                    <BaseCollageInfo class="gooseberry" :title="'Гуменник'" :color="'#71464E'"
+                        :text="'В&nbsp;полёте поднимается на&nbsp;высоту до&nbsp;10&nbsp;км'" />
+
+                    <BaseCollageInfo class="loon" :title="'Чернозобая гагара'" :color="'#71464E'"
+                        :text="'Умеет нырять на&nbsp;глубину до&nbsp;20&nbsp;метров'" />
+
+                    <BaseCollageInfo class="swan" :title="'Лебедь-кликун'" :color="'#71464E'"
+                        :text="'Мощными крыльями может отразить атаку мелких хищников. Встречается также в&nbsp;Кольском дивизионе'" />
+
+                    <BaseCollageInfo class="lycosus-moss" :title="'Плаунок плаунковидный'" :color="'#71464E'"
+                        :text="'В&nbsp;районе Промышленного Норильска биологи обнаружили несколько участков, ценных для произрастания этого редкого вида растений. Чтобы сохранить популяции плаунка, вокруг этих участков необходимо создавать защитные зоны'" />
+
+                    <BaseCollageInfo class="char" :title="'Арктический голец'" />
+
                     <BaseDropdownInfo class="ground-beetles" :title="'Жужелицы'" :is-modal="true"
                         :text="'Такие виды, как Amara brunnea, Pterostichus fulvescens, Notiophilus fasciatus и Nebria gyllenhali, отрицательно реагируют на&nbsp;промышленное воздействие и&nbsp;помогают исследователям фиксировать изменения в&nbsp;окружающей среде'" />
                     <BaseDropdownInfo class="myxomycetes" :title="'Миксомицеты'" :is-modal="true"
@@ -210,20 +272,20 @@
 
                     <BaseDropdownInfo class="zooplankton" :title="'Зоопланктон'" :is-modal="true"
                         :text="'Чтобы оценить состояние водоёмов, исследователи отобрали виды зоопланктона, сигнализирующие о&nbsp;качестве воды. Например, планктонный рачок Limnocalanus macrurus любит чистую воду, а&nbsp;если начинает доминировать планктонная коловратка Brachionus sericus&nbsp;&mdash; вода загрязнена'" />
-                    <BaseDropdownInfo v-if="!isMobile" class="char" :title="'Арктический голец (боганидская палия)'"
-                        :is-modal="true"
+                    <BaseDropdownInfo v-if="!isMobile" class="palia" :title="'Боганидская палия'" :is-modal="true"
                         :text="'Считается самой полезной рыбой в&nbsp;мире: кусочек рыбы в&nbsp;30&nbsp;г покрывает суточную потребность человека в&nbsp;полезных жирных кислотах. Встречается также в&nbsp;водоёмах Кольского дивизиона'" />
 
-                    <BaseDropdownInfo v-if="isMobile" class="merlin" :title="'Кречет'" :color="'#71464E'" :is-modal="true"
+                    <BaseDropdownInfo v-if="isMobile" class="merlin_mobile" :title="'Кречет'" :color="'#71464E'"
+                        :is-modal="true"
                         :text="'Самая крупная птица из&nbsp;отряда соколиных. За&nbsp;последние 20&nbsp;лет её&nbsp;популяция в&nbsp;России сократилась втрое. &laquo;Норникель&raquo; вложил 50&nbsp;млн рублей в&nbsp;поддержку и&nbsp;сохранение вида в&nbsp;2022&ndash;2023&nbsp;гг'" />
 
-                    <BaseDropdownInfo v-if="isMobile" class="deer" :title="'Дикий северный олень'" :color="'#71464E'"
+                    <BaseDropdownInfo v-if="isMobile" class="deer_mobile" :title="'Дикий северный олень'" :color="'#71464E'"
                         :is-modal="true"
                         :text="'Отличительная особенность этого вида&nbsp;&mdash; наличие рогов у&nbsp;самок. Наименее изученная и&nbsp;малочисленная популяция дикого северного оленя&nbsp;&mdash; гыданская, она занесена в&nbsp;Красную книгу ЯНАО. По&nbsp;данным исследований, олени почти не&nbsp;мигрируют на&nbsp;дальние расстояния и&nbsp;круглый год остаются в&nbsp;арктической тундре'" />
-                    <BaseDropdownInfo v-if="isMobile" class="lycosus-moss" :title="'Плаунок плаунковидный'" :is-modal="true"
-                        :color="'#71464E'"
+                    <BaseDropdownInfo v-if="isMobile" class="lycosus-moss_mobile" :title="'Плаунок плаунковидный'"
+                        :is-modal="true" :color="'#71464E'"
                         :text="'В&nbsp;районе Промышленного Норильска биологи обнаружили несколько участков, ценных для произрастания этого редкого вида растений. Чтобы сохранить популяции плаунка, вокруг этих участков необходимо создавать защитные зоны'" />
-                    <BaseDropdownInfo v-if="isMobile" class="hare" :title="'Заяц-беляк'" :is-modal="true"
+                    <BaseDropdownInfo v-if="isMobile" class="hare_mobile" :title="'Заяц-беляк'" :is-modal="true"
                         :text="'Спасаясь от&nbsp;опасности, развивает скорость до&nbsp;60&nbsp;км/ч'" />
                 </div>
                 <BaseTextBlock class="mb-100" :tooltip="true">
@@ -464,7 +526,7 @@ import MainSection from '@/layout/MainSection'
 import BaseSidebar from '@/components/BaseSidebar'
 import BaseTooltip from '@/components/ BaseTooltip.vue'
 import BaseNumberBlock from "@/components/BaseNumberBlock.vue";
-// import BaseCollageInfo from '@/components/BaseCollageInfo.vue'
+import BaseCollageInfo from '@/components/BaseCollageInfo.vue'
 import BaseDropdownInfo from '@/components/BaseDropdownInfo.vue'
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -481,7 +543,7 @@ export default {
         BaseSidebar,
         BaseTooltip,
         BaseNumberBlock,
-        // BaseCollageInfo,
+        BaseCollageInfo,
         BaseDropdownInfo
     },
     data() {
@@ -1063,6 +1125,303 @@ export default {
             }
         }
 
+        .legend {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2.5rem;
+            top: 9.5rem;
+
+            .block-info {
+                position: static;
+                font-size: 1.25rem;
+            }
+        }
+
+        .eagle {
+            width: 15rem;
+            top: 25.7rem;
+            right: 42.3rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .falcon {
+            width: 12rem;
+            top: 58.45rem;
+            right: 46.2rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .warbler {
+            width: 11rem;
+            top: 48.4rem;
+            right: 28.5rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .lentils {
+            width: 11rem;
+            top: 50.4rem;
+            left: 17.5rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .willow-warbler {
+            width: 12rem;
+            top: 76rem;
+            right: 36rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .merlin {
+            width: 20rem;
+            top: 94rem;
+            right: 37.3rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+
+            &_mobile {
+                position: absolute;
+                display: none;
+                top: 135rem;
+                left: 12rem;
+
+                @media (max-width: 768px) {
+                    display: block;
+                }
+
+            }
+        }
+
+        .oatmeal {
+            width: 7rem;
+            top: 116.5rem;
+            right: 30.5rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .larch {
+            width: 7rem;
+            top: 137rem;
+            right: 15.5rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .deer {
+            width: 22rem;
+            top: 132.2rem;
+            right: 33rem;
+
+            &_mobile {
+                display: none;
+                position: absolute;
+                top: 301rem;
+                left: 5rem;
+
+                @media (max-width: 768px) {
+                    display: block;
+
+                    .dropdown-info__title {
+                        max-width: unset;
+                    }
+                }
+            }
+        }
+
+        .ptarmigan {
+            width: 13rem;
+            top: 172.2rem;
+            left: 18.8rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .shrew {
+            width: 15rem;
+            top: 189.8rem;
+            left: 30.2rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .wolverine {
+            width: 7rem;
+            top: 195.9rem;
+            right: 40.7rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .olkhovnik {
+            width: 14rem;
+            top: 205rem;
+            left: 46.7rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .willow {
+            width: 9rem;
+            top: 234rem;
+            right: 17rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .vole {
+            width: 7rem;
+            top: 237.3rem;
+            right: 8.7rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .hare {
+            width: 15rem;
+            top: 233.5rem;
+            left: 27rem;
+
+            &_mobile {
+                display: none;
+                position: absolute;
+                bottom: 260rem;
+                left: 7rem;
+
+                @media (max-width: 768px) {
+                    display: block;
+
+                    .dropdown-info__title {
+                        max-width: unset;
+                    }
+                }
+            }
+        }
+
+        .plover {
+            width: 14rem;
+            top: 238.3rem;
+            right: 36rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .gooseberry {
+            width: 14rem;
+            top: 259.7rem;
+            right: 23.9rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .loon {
+            width: 14rem;
+            top: 287.2rem;
+            right: 12.9rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .swan {
+            width: 18rem;
+            top: 284.69rem;
+            left: 38.9rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .lycosus-moss {
+            width: 20rem;
+            top: 253.69rem;
+            left: 19rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+
+            &_mobile {
+                position: absolute;
+                bottom: 193rem;
+                left: 2rem;
+
+                @media (max-width: 768px) {
+                    display: block;
+
+                    .dropdown-info__title {
+                        max-width: unset;
+                    }
+                }
+            }
+        }
+
+        .char {
+            width: 11rem;
+            top: 316.8rem;
+            left: 24rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .palia {
+            position: absolute;
+            bottom: 24.4rem;
+            left: 46rem;
+
+
+            .dropdown-info__text {
+                padding: 3.56rem 0.62rem 0.88rem 3.13rem;
+            }
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
         .ground-beetles {
             position: absolute;
             bottom: 80rem;
@@ -1104,75 +1463,6 @@ export default {
             @media (max-width: 768px) {
                 bottom: 74rem;
                 right: 29rem;
-            }
-        }
-
-        .char {
-            position: absolute;
-            bottom: 27rem;
-            left: 43rem;
-
-            .dropdown-info__text {
-                padding: 3.56rem 0.62rem 0.88rem 3.13rem;
-            }
-
-            @media (max-width: 768px) {
-                display: none;
-            }
-        }
-
-        .merlin {
-            position: absolute;
-            display: none;
-            top: 135rem;
-            left: 12rem;
-
-            @media (max-width: 768px) {
-                display: block;
-            }
-        }
-
-        .deer {
-            display: none;
-            position: absolute;
-            top: 301rem;
-            left: 5rem;
-
-            @media (max-width: 768px) {
-                display: block;
-
-                .dropdown-info__title {
-                    max-width: unset;
-                }
-            }
-        }
-
-        .lycosus-moss {
-            position: absolute;
-            bottom: 193rem;
-            left: 2rem;
-
-            @media (max-width: 768px) {
-                display: block;
-
-                .dropdown-info__title {
-                    max-width: unset;
-                }
-            }
-        }
-
-        .hare {
-            display: none;
-            position: absolute;
-            bottom: 260rem;
-            left: 7rem;
-
-            @media (max-width: 768px) {
-                display: block;
-
-                .dropdown-info__title {
-                    max-width: unset;
-                }
             }
         }
     }
@@ -1545,4 +1835,5 @@ export default {
             }
         }
     }
-}</style>
+}
+</style>

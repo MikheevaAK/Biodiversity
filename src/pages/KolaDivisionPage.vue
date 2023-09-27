@@ -1112,6 +1112,8 @@ export default {
     }
 
     .section-orange {
+        margin-bottom: 0;
+
         &__title {
             color: var(--copper, #D38235);
             margin-bottom: 2.19rem;

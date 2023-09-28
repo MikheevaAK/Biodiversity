@@ -597,6 +597,13 @@ export default {
         }
     }
 
+    .hero {
+        @media (max-width: 768px) {
+            min-height: unset;
+            height: 212rem;
+        }
+    }
+
     .text-center {
         text-align: center;
     }

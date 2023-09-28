@@ -699,13 +699,6 @@ export default {
 
 <style lang="scss">
 .division {
-    .hero {
-        @media (max-width: 768px) {
-            min-height: unset;
-            height: 210rem;
-        }
-    }
-
     .big-map {
         margin-bottom: 3.81rem;
         height: 40.19419rem;

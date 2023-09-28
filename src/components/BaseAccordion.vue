@@ -2,7 +2,7 @@
     <div class="faq">
         <div class="header" @click="handleClick(faq)">
             <div class="question" v-html="faq.question"></div>
-            <div class="faq_svg" :style="{ background: color }">
+            <div class="faq_svg">
                 <svg class="faq_svg__minus" xmlns="http://www.w3.org/2000/svg" width="29" height="2" viewBox="0 0 29 2"
                     fill="none">
                     <path d="M0 1.0802H29" stroke="black" />

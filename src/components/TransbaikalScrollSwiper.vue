@@ -68,10 +68,10 @@
 
                 <div class="transbaikal-scroll-item__text-block">
                     <div class="transbaikal-scroll-item__title">Возобновляемые источники энергии</div>
-
                     <div>&laquo;Быстра&raquo; уже использует мощности ГЭС как альтернативу углеродному топливу
-                        и&nbsp;планирует построить солнечную электростанцию.</div>
-                    <BaseNumberBlock class="" :textTop="'~40%&nbsp;энергии'"
+                        и&nbsp;прорабатывает варианты реализации проекта по&nbsp;установке солнечной электростанции (СЭС).
+                    </div>
+                    <BaseNumberBlock class="" :textTop="'~34%&nbsp;энергии'"
                         :textBottom="'поступает&nbsp;на&nbsp;комбинат&nbsp;от&nbsp;ГЭС'" />
 
                 </div>

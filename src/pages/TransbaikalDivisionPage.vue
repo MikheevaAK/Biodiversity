@@ -829,7 +829,7 @@ export default {
             font-size: 0.9375rem;
             font-weight: 400;
             line-height: 130%;
-            gap: 0.37rem;
+            gap: 0.25rem;
 
             @media (max-width: 768px) {
                 font-size: 3.2rem;
@@ -856,8 +856,8 @@ export default {
             }
 
             &-1 {
-                top: 32.5rem;
-                left: 50.5rem;
+                top: 33rem;
+                left: 51rem;
 
                 @media (max-width: 768px) {
                     top: unset;
@@ -867,7 +867,8 @@ export default {
             }
 
             &-2 {
-                display: none;
+                left: 44.8rem;
+                bottom: 13.3rem;
 
                 @media (max-width: 768px) {
                     display: flex;

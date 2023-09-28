@@ -188,6 +188,12 @@ export default {
 .footer {
     &_orange {
         background-color: #F7F6F2;
+
+        .footer__mid-link {
+            @media (max-width: 768px) {
+                background-color: #fff;
+            }
+        }
     }
 
     &__top {

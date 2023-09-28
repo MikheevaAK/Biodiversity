@@ -627,7 +627,7 @@ export default {
             @media (max-width: 768px) {
                 background: none;
                 flex-direction: column;
-                margin: 0 0 10.6667rem 0;
+                margin: 0 0 8.1rem 0;
                 width: unset;
                 height: unset;
                 gap: 6rem;

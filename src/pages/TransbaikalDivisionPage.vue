@@ -189,6 +189,10 @@
                         </div>
                     </BaseTextBlock>
                 </div>
+                <div class="legend">
+                    <BaseCollageInfo :text="'Охраняемые виды'" :color="'#71464E'" />
+                    <BaseCollageInfo :text="'Индикаторные виды'" />
+                </div>
                 <div class="collage mb-100">
                     <BaseDropdownInfo :isModal="true" class="dubrovnik" :title="'Дубровник'" :color="'#71464E'"
                         :text="'Имеет китайское происхождение. В&nbsp;19&nbsp;веке вид проник в&nbsp;Европу и&nbsp;очень быстро освоил её: в&nbsp;1920-х годах птичек с&nbsp;яркой внешностью можно было встретить уже в&nbsp;Финляндии. За&nbsp;последнее время популяция дубровника в&nbsp;мире сократилась на&nbsp;90%, вид занесён в&nbsp;Красную книгу России'" />
@@ -404,6 +408,7 @@ import BaseTextBlock from '@/components/BaseTextBlock.vue'
 import BaseSidebar from '@/components/BaseSidebar'
 import BaseNumberBlock from '@/components/BaseNumberBlock'
 import BaseDropdownInfo from '@/components/BaseDropdownInfo.vue'
+import BaseCollageInfo from '@/components/BaseCollageInfo.vue'
 import TransbaikalScrollSwiper from '@/components/TransbaikalScrollSwiper.vue'
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -421,7 +426,8 @@ export default {
         BaseTooltip,
         TransbaikalScrollSwiper,
         BaseDropdownInfo,
-        BaseNumberBlock
+        BaseNumberBlock,
+        BaseCollageInfo
     },
     data() {
         return {
@@ -599,9 +605,29 @@ export default {
         }
     }
 
+    .legend {
+        margin-bottom: 5.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2.28rem;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 9.6rem;
+            gap: 2rem;
+            margin-bottom: 8.8rem
+        }
+
+        .block-info {
+            position: static;
+        }
+    }
+
     .collage {
         position: relative;
-        height: 388rem;
+        height: 389rem;
         width: 100%;
         background-image: url(../../public/img/collage-2.png);
         background-repeat: no-repeat;
@@ -968,6 +994,7 @@ export default {
         gap: 5.44rem;
         width: 63.5rem;
         margin: 0 auto;
+        margin-bottom: 8.69rem;
 
         @media (max-width: 768px) {
             flex-direction: column;

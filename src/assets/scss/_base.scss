@@ -28,6 +28,12 @@ body {
     font-weight: 300;
     line-height: 130%;
     overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 img {

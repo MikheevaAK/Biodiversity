@@ -529,21 +529,21 @@
                         </div>
                     </div>
 
-                    <picture v-if="idMap === 1">
+                    <picture v-show="idMap === 1">
                         <source media="(max-width: 768px)" type="image/webp" srcset="img/habitat-map-kola-1-mobile.webp">
                         <source media="(max-width: 768px)" srcset="img/habitat-map-kola-1-mobile.png">
                         <source type="image/webp" srcset="img/habitat-map-kola-1.webp">
                         <img src="img/habitat-map-kola-1.png" alt="">
                     </picture>
 
-                    <picture v-if="idMap === 2">
+                    <picture v-show="idMap === 2">
                         <source media="(max-width: 768px)" type="image/webp" srcset="img/habitat-map-kola-2-mobile.webp">
                         <source media="(max-width: 768px)" srcset="img/habitat-map-kola-2-mobile.png">
                         <source type="image/webp" srcset="img/habitat-map-kola-2.webp">
                         <img src="img/habitat-map-kola-2.png" alt="">
                     </picture>
 
-                    <div v-if="idMap === 1">
+                    <div v-show="idMap === 1">
                         <div class="habitat-map__city habitat-map__city-1">
                             <div class="habitat-map__city-circale"></div>
                             <span>Мончегорск</span>
@@ -552,7 +552,7 @@
                             Имандра
                         </div>
                     </div>
-                    <div v-if="idMap === 2">
+                    <div v-show="idMap === 2">
                         <div class="habitat-map__city habitat-map__city-2">
                             <div class="habitat-map__city-circale"></div>
                             <span>Никель</span>

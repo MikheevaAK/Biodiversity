@@ -809,7 +809,7 @@ export default {
         }
     }
 
-    &__start-expedition &.mb-60 {
+    &__start-expedition.mb-40 {
         @media (max-width: 768px) {
             margin-bottom: 0;
         }

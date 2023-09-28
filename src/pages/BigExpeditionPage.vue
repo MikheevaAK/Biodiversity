@@ -83,7 +83,7 @@
                         </div>
                     </div>
                 </div>
-                <BaseTextBlock class="mb-60 text-center">
+                <BaseTextBlock class="big-expedition__tasks-before mb-60 text-center">
                     Кроме того, в&nbsp;ходе экспедиции учёные разрабатывали и&nbsp;апробировали методы, которые позволяют
                     провести чёткую границу между естественными причинами изменения экосистем и&nbsp;изменениями из-за
                     промышленного воздействия.
@@ -662,6 +662,7 @@ export default {
                 @media (max-width: 768px) {
                     padding: 0 9.5rem;
                     font-size: 4.53334rem;
+                    text-align: start;
                 }
             }
         }
@@ -789,6 +790,12 @@ export default {
 
             @media (max-width: 768px) {
                 font-size: 4.53334rem;
+            }
+        }
+
+        &-before.text-center {
+            @media (max-width: 768px) {
+                text-align: start;
             }
         }
     }

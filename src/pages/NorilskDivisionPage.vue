@@ -451,19 +451,19 @@
                         </div>
                     </div>
 
-                    <picture v-if="idMap === 1">
+                    <picture v-show="idMap === 1">
                         <source media="(max-width: 768px)" srcset="img/habitat-map-1-mobile.png">
                         <source type="image/webp" srcset="img/habitat-map-1.webp">
                         <img src="img/habitat-map-1.png" alt="">
                     </picture>
 
-                    <picture v-if="idMap === 2">
+                    <picture v-show="idMap === 2">
                         <source media="(max-width: 768px)" srcset="img/habitat-map-2-mobile.png">
                         <source type="image/webp" srcset="img/habitat-map-2.webp">
                         <img src="img/habitat-map-2.png" alt="">
                     </picture>
 
-                    <div v-if="idMap === 1">
+                    <div v-show="idMap === 1">
                         <div class="habitat-map__name-lake">
                             оз. Пясино
                         </div>
@@ -480,7 +480,7 @@
                             <span>Дудинка</span>
                         </div>
                     </div>
-                    <div v-if="idMap === 2">
+                    <div v-show="idMap === 2">
                         <div class="habitat-map__river">
                             р. Енисей
                         </div>

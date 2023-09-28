@@ -4,7 +4,7 @@
             :img="'img/hero6.jpg'" :imgMobile="'img/hero6-mobile.jpg'" />
         <MainSection>
             <SectionWhite>
-                <BaseTextBlock>
+                <BaseTextBlock class="mb-60">
                     В&nbsp;России действуют сразу несколько программ по&nbsp;сохранению этого вида, и&nbsp;активное участие
                     в&nbsp;них на&nbsp;протяжении многих лет принимает &laquo;Норникель&raquo;. В&nbsp;компании отмечают,
                     что эта работа по&nbsp;сохранению биоразнообразия в&nbsp;целом и&nbsp;локальные программы
@@ -145,7 +145,7 @@
                 </BaseTextBlock>
                 <div class="white-bears__new-ward mb-100">
                     <div class="white-bears__new-ward-title">
-                        Новый подопечный — кречет
+                        Новый подопечный&nbsp;— кречет
                     </div>
                     <div class="white-bears__new-ward-descr">
                         С&nbsp;2023 года компания также помогает в&nbsp;сохранении самого крупного сокола
@@ -154,6 +154,10 @@
                         Ближнего Востока. Российские браконьеры незаконно отлавливают этих птиц и&nbsp;отправляют
                         за&nbsp;границу.
                     </div>
+                    <picture>
+                        <source type="image/webp" srcset="img/merlin.webp">
+                        <img src="img/merlin.png" alt="">
+                    </picture>
                 </div>
                 <BaseSidebar>
                     <p>
@@ -235,6 +239,10 @@ export default {
 
     .section-blue {
         background-color: #F3F7FA;
+    }
+
+    .section-white {
+        margin-bottom: 0;
     }
 
     .thunderstorm-arctic {
@@ -334,15 +342,34 @@ export default {
         position: relative;
         border-radius: 19px;
         border: 1px solid var(--grey, #626261);
-        width: 966px;
-        padding: 63px 48px 40px 268px;
+        width: 67.09rem;
+        padding: 4.378rem 3.34rem 2.777rem 19rem;
         margin: 0 auto;
+        display: flex;
+        gap: 3.2rem;
 
         &-title {
-            font-size: 22px;
-            width: 168px;
+            font-size: 1.527778rem;
             font-weight: 600;
             line-height: 130%;
         }
+
+        &-descr {
+            width: 30.278rem;
+            font-size: 1.25rem;
+            font-weight: 300;
+            line-height: 130%;
+            flex-shrink: 0;
+        }
+
+        img {
+            position: absolute;
+            display: block;
+            width: 29.167rem;
+            height: 20.6945rem;
+            top: -3.54167rem;
+            left: -7.366rem;
+        }
     }
-}</style>
+}
+</style>

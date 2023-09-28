@@ -95,7 +95,7 @@
                         компанией в&nbsp;рамках экологической стратегии.
                     </p>
                 </BaseSidebar>
-                <BaseTextBlock class="mb-40" :title="'Старт экспедиции'">
+                <BaseTextBlock class="mb-40 big-expedition__start-expedition" :title="'Старт экспедиции'">
                     Полевой этап работ Большой научной экспедиции начался весной 2022&nbsp;года. Несколько групп учёных
                     отправились в&nbsp;локации производственной активности &laquo;Норникеля&raquo;, чтобы обследовать
                     территории
@@ -793,13 +793,24 @@ export default {
             }
         }
 
-        &-before.text-center {
+        &-before {
             @media (max-width: 768px) {
-                text-align: start;
+                &.text-center {
+                    text-align: start;
+                }
+
+                &.mb-60 {
+                    margin-bottom: 11rem;
+                }
             }
         }
     }
 
+    &__start-expedition &.mb-60 {
+        @media (max-width: 768px) {
+            margin-bottom: 0;
+        }
+    }
 
     &-team {
         width: 69.1875rem;

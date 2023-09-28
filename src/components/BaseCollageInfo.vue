@@ -65,7 +65,7 @@ export default {
         font-weight: 600;
 
         @media (max-width: 768px) {
-            margin-bottom: 2.6667rem;
+            margin-bottom: 1.6667rem;
         }
     }
 }

@@ -272,20 +272,19 @@
 
                     <BaseDropdownInfo class="zooplankton" :title="'Зоопланктон'" :is-modal="true"
                         :text="'Чтобы оценить состояние водоёмов, исследователи отобрали виды зоопланктона, сигнализирующие о&nbsp;качестве воды. Например, планктонный рачок Limnocalanus macrurus любит чистую воду, а&nbsp;если начинает доминировать планктонная коловратка Brachionus sericus&nbsp;&mdash; вода загрязнена'" />
-                    <BaseDropdownInfo v-if="!isMobile" class="palia" :title="'Боганидская палия'" :is-modal="true"
+                    <BaseDropdownInfo class="palia" :title="'Боганидская палия'" :is-modal="true"
                         :text="'Считается самой полезной рыбой в&nbsp;мире: кусочек рыбы в&nbsp;30&nbsp;г покрывает суточную потребность человека в&nbsp;полезных жирных кислотах. Встречается также в&nbsp;водоёмах Кольского дивизиона'" />
 
-                    <BaseDropdownInfo v-if="isMobile" class="merlin_mobile" :title="'Кречет'" :color="'#71464E'"
-                        :is-modal="true"
+                    <BaseDropdownInfo class="merlin_mobile" :title="'Кречет'" :color="'#71464E'" :is-modal="true"
                         :text="'Самая крупная птица из&nbsp;отряда соколиных. За&nbsp;последние 20&nbsp;лет её&nbsp;популяция в&nbsp;России сократилась втрое. &laquo;Норникель&raquo; вложил 50&nbsp;млн рублей в&nbsp;поддержку и&nbsp;сохранение вида в&nbsp;2022&ndash;2023&nbsp;гг'" />
 
-                    <BaseDropdownInfo v-if="isMobile" class="deer_mobile" :title="'Дикий северный олень'" :color="'#71464E'"
+                    <BaseDropdownInfo class="deer_mobile" :title="'Дикий северный олень'" :color="'#71464E'"
                         :is-modal="true"
                         :text="'Отличительная особенность этого вида&nbsp;&mdash; наличие рогов у&nbsp;самок. Наименее изученная и&nbsp;малочисленная популяция дикого северного оленя&nbsp;&mdash; гыданская, она занесена в&nbsp;Красную книгу ЯНАО. По&nbsp;данным исследований, олени почти не&nbsp;мигрируют на&nbsp;дальние расстояния и&nbsp;круглый год остаются в&nbsp;арктической тундре'" />
-                    <BaseDropdownInfo v-if="isMobile" class="lycosus-moss_mobile" :title="'Плаунок плаунковидный'"
-                        :is-modal="true" :color="'#71464E'"
+                    <BaseDropdownInfo class="lycosus-moss_mobile" :title="'Плаунок плаунковидный'" :is-modal="true"
+                        :color="'#71464E'"
                         :text="'В&nbsp;районе Промышленного Норильска биологи обнаружили несколько участков, ценных для произрастания этого редкого вида растений. Чтобы сохранить популяции плаунка, вокруг этих участков необходимо создавать защитные зоны'" />
-                    <BaseDropdownInfo v-if="isMobile" class="hare_mobile" :title="'Заяц-беляк'" :is-modal="true"
+                    <BaseDropdownInfo class="hare_mobile" :title="'Заяц-беляк'" :is-modal="true"
                         :text="'Спасаясь от&nbsp;опасности, развивает скорость до&nbsp;60&nbsp;км/ч'" />
                 </div>
                 <BaseTextBlock class="mb-100" :tooltip="true">
@@ -1104,6 +1103,7 @@ export default {
 
         @media (max-width: 768px) {
             height: 810rem;
+            background-position: left 18rem;
             background-image: url(../../public/img/collage-mobile.png);
 
             @supports (background-image: url(../../public/img/collage-mobile.webp)) {
@@ -1136,6 +1136,24 @@ export default {
             .block-info {
                 position: static;
                 font-size: 1.25rem;
+
+                @media (max-width: 768px) {
+                    font-size: 4.53334rem;
+                }
+            }
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+                top: -1rem;
+                padding-left: 10rem;
+
+                .block-info__text {
+                    font-size: 4.53334rem;
+                    line-height: 130%;
+                }
+
             }
         }
 
@@ -1145,7 +1163,9 @@ export default {
             right: 42.3rem;
 
             @media (max-width: 768px) {
-                display: none;
+                width: 42rem;
+                top: 34rem;
+                right: 8rem;
             }
         }
 
@@ -1155,7 +1175,9 @@ export default {
             right: 46.2rem;
 
             @media (max-width: 768px) {
-                display: none;
+                width: 33rem;
+                top: 94rem;
+                right: 53rem;
             }
         }
 
@@ -1165,7 +1187,12 @@ export default {
             right: 28.5rem;
 
             @media (max-width: 768px) {
-                display: none;
+                top: 193rem;
+                right: 41rem;
+
+                .block-info__text p {
+                    display: none;
+                }
             }
         }
 
@@ -1175,7 +1202,9 @@ export default {
             left: 17.5rem;
 
             @media (max-width: 768px) {
-                display: none;
+                top: 256.4rem;
+                left: 29.5rem;
+                width: 41rem;
             }
         }
 
@@ -1185,7 +1214,12 @@ export default {
             right: 36rem;
 
             @media (max-width: 768px) {
-                display: none;
+                top: 205.5rem;
+                right: 72.5rem;
+
+                .block-info__text p {
+                    display: none;
+                }
             }
         }
 
@@ -1217,7 +1251,8 @@ export default {
             right: 30.5rem;
 
             @media (max-width: 768px) {
-                display: none;
+                top: 223rem;
+                right: 42.5rem;
             }
         }
 
@@ -1227,7 +1262,8 @@ export default {
             right: 15.5rem;
 
             @media (max-width: 768px) {
-                display: none;
+                top: 154rem;
+                right: 30rem;
             }
         }
 
@@ -1235,6 +1271,10 @@ export default {
             width: 22rem;
             top: 132.2rem;
             right: 33rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
 
             &_mobile {
                 display: none;
@@ -1258,7 +1298,8 @@ export default {
             left: 18.8rem;
 
             @media (max-width: 768px) {
-                display: none;
+                top: 371.2rem;
+                left: 25.8rem;
             }
         }
 
@@ -1268,7 +1309,9 @@ export default {
             left: 30.2rem;
 
             @media (max-width: 768px) {
-                display: none;
+                width: 31rem;
+                top: 553rem;
+                left: 37.2rem;
             }
         }
 
@@ -1278,7 +1321,8 @@ export default {
             right: 40.7rem;
 
             @media (max-width: 768px) {
-                display: none;
+                top: 399rem;
+                right: 20.7rem;
             }
         }
 
@@ -1288,7 +1332,9 @@ export default {
             left: 46.7rem;
 
             @media (max-width: 768px) {
-                display: none;
+                top: 412rem;
+                width: 50rem;
+                left: 4rem;
             }
         }
 
@@ -1298,7 +1344,8 @@ export default {
             right: 17rem;
 
             @media (max-width: 768px) {
-                display: none;
+                top: 561rem;
+                right: 19rem;
             }
         }
 
@@ -1308,7 +1355,8 @@ export default {
             right: 8.7rem;
 
             @media (max-width: 768px) {
-                display: none;
+                top: 364rem;
+                right: 18.7rem;
             }
         }
 
@@ -1316,6 +1364,10 @@ export default {
             width: 15rem;
             top: 233.5rem;
             left: 27rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
 
             &_mobile {
                 display: none;
@@ -1339,7 +1391,9 @@ export default {
             right: 36rem;
 
             @media (max-width: 768px) {
-                display: none;
+                width: 59rem;
+                top: 509rem;
+                right: 34rem;
             }
         }
 
@@ -1349,7 +1403,9 @@ export default {
             right: 23.9rem;
 
             @media (max-width: 768px) {
-                display: none;
+                width: 48rem;
+                top: 627rem;
+                right: 23.9rem;
             }
         }
 
@@ -1359,7 +1415,9 @@ export default {
             right: 12.9rem;
 
             @media (max-width: 768px) {
-                display: none;
+                width: 38rem;
+                top: 681rem;
+                right: 1.9rem;
             }
         }
 
@@ -1369,7 +1427,9 @@ export default {
             left: 38.9rem;
 
             @media (max-width: 768px) {
-                display: none;
+                width: 43rem;
+                top: 677rem;
+                left: 2.9rem;
             }
         }
 
@@ -1383,6 +1443,7 @@ export default {
             }
 
             &_mobile {
+                display: none;
                 position: absolute;
                 bottom: 193rem;
                 left: 2rem;
@@ -1403,7 +1464,13 @@ export default {
             left: 24rem;
 
             @media (max-width: 768px) {
-                display: none;
+                width: 33rem;
+                top: 772rem;
+                left: 52rem;
+
+                .block-info__title {
+                    font-size: 3.2rem;
+                }
             }
         }
 
@@ -1418,7 +1485,13 @@ export default {
             }
 
             @media (max-width: 768px) {
-                display: none;
+                bottom: 44.4rem;
+                left: 10rem;
+
+                .dropdown-info__title {
+                    font-size: 3.2rem;
+                    max-width: 33rem;
+                }
             }
         }
 
@@ -1451,7 +1524,11 @@ export default {
 
             @media (max-width: 768px) {
                 bottom: 86rem;
-                left: 8rem;
+                left: 11rem;
+
+                .dropdown-info__title {
+                    font-size: 3.2rem;
+                }
             }
         }
 
@@ -1462,7 +1539,11 @@ export default {
 
             @media (max-width: 768px) {
                 bottom: 74rem;
-                right: 29rem;
+                right: 22rem;
+
+                .dropdown-info__title {
+                    font-size: 3.2rem;
+                }
             }
         }
     }

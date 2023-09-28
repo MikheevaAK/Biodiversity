@@ -570,12 +570,14 @@ export default {
             }
         }
 
-        &:hover {
-            color: #fff;
-            background: var(--copper, #D38235);
+        @media (min-width: 769px) {
+            &:hover {
+                color: #fff;
+                background: var(--copper, #D38235);
 
-            svg path {
-                fill: #FFF;
+                svg path {
+                    fill: #FFF;
+                }
             }
         }
     }
@@ -601,12 +603,6 @@ export default {
 
     &__tasks {
         margin: 0 auto;
-
-        // .text-center {
-        //     @media (max-width: 768px) {
-        //         text-align: left;
-        //     }
-        // }
 
         &-title.title {
             margin-bottom: 4.722rem;
@@ -809,6 +805,12 @@ export default {
     &__start-expedition &.mb-60 {
         @media (max-width: 768px) {
             margin-bottom: 0;
+        }
+    }
+
+    .map__wrap.mb-100 {
+        @media (max-width: 768px) {
+            margin-bottom: 16rem;
         }
     }
 

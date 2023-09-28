@@ -86,8 +86,10 @@
                         возникают проблемы с&nbsp;пищеварением.
                     </p>
 
-                    <div class="thunderstorm-arctic__">
-
+                    <div class="white-bears__what-to-do">
+                        <img src="img/white-bear-meet.png" alt="">
+                        <BaseDropdownInfo :title="'Что делать, если вы встретили белого медведя?'" :text="''"
+                            :color="'#0077C8'" />
                     </div>
                 </BaseTextBlock>
 
@@ -177,6 +179,7 @@ import MainSection from '@/layout/MainSection'
 import SectionWhite from '@/layout/SectionWhite.vue'
 import BaseTextBlock from '@/components/BaseTextBlock.vue'
 import BaseSidebar from '@/components/BaseSidebar'
+import BaseDropdownInfo from '@/components/BaseDropdownInfo'
 
 export default {
     components: {
@@ -187,7 +190,7 @@ export default {
         MainSection,
         BaseSidebar,
         //     BaseTooltip,
-        //     BaseDropdownInfo,
+        BaseDropdownInfo,
         //     BaseCollageInfo,
         //     BaseNumberBlock
     },
@@ -335,6 +338,27 @@ export default {
                     width: 11rem;
                 }
             }
+        }
+    }
+
+    &__what-to-do {
+        position: absolute;
+        top: 0;
+        right: -26rem;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 6.7366rem;
+            height: 7.09rem;
+        }
+
+        .dropdown-info__title {
+            max-width: 13rem;
+        }
+
+        .dropdown-info__wrap {
+            align-items: flex-start;
         }
     }
 

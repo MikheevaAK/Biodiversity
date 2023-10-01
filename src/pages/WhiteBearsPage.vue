@@ -47,12 +47,6 @@
                         Длинные морда и&nbsp;шея помогают медведю ловить тюленей в&nbsp;снежных норах и&nbsp;лунках
                         во&nbsp;льду.
                     </div>
-                    <div class="thunderstorm-arctic__item thunderstorm-arctic__item_leather">
-                        <img src="img/leather.png" alt="">
-                        <div class="thunderstorm-arctic__item-title">Кожа чёрного цвета</div>
-                        <div class="thunderstorm-arctic__item-descr">Благодаря этому она поглощает больше солнечного света,
-                            что, как&nbsp;предполагают учёные, помогает животным согреться.</div>
-                    </div>
                     <div class="thunderstorm-arctic__item thunderstorm-arctic__item_paw">
                         <img src="img/paw.png" alt="">
                         <div class="thunderstorm-arctic__item-title">Сцепление со льдом</div>
@@ -73,7 +67,12 @@
                             микроскопические водоросли.
                         </div>
                     </div>
-
+                    <div class="thunderstorm-arctic__item thunderstorm-arctic__item_leather">
+                        <img src="img/leather.png" alt="">
+                        <div class="thunderstorm-arctic__item-title">Кожа чёрного цвета</div>
+                        <div class="thunderstorm-arctic__item-descr">Благодаря этому она поглощает больше солнечного света,
+                            что, как&nbsp;предполагают учёные, помогает животным согреться.</div>
+                    </div>
                     <div class="thunderstorm-arctic__nutrition">
                         <div class="thunderstorm-arctic__nutrition-title">Основа питания</div>
                         <div class="thunderstorm-arctic__nutrition-line">
@@ -340,15 +339,11 @@ gsap.registerPlugin(ScrollTrigger);
 export default {
     components: {
         BaseHero,
-        //     SectionOrange,
         SectionWhite,
         BaseTextBlock,
         MainSection,
         BaseSidebar,
-        //     BaseTooltip,
         BaseDropdownInfo,
-        //     BaseCollageInfo,
-        //     BaseNumberBlock
     },
     data() {
         return {
@@ -375,6 +370,46 @@ export default {
             })
         },
         scrollAnimation() {
+
+            const collageItems = Array.from(document.querySelectorAll(".text-block__wrap"));
+            collageItems.forEach((elem) => {
+
+                this.oneScrollTrigger = gsap.fromTo(elem,
+                    {
+                        y: 50,
+                    },
+                    {
+                        y: 0,
+                        duration: 1,
+                        scrollTrigger: {
+                            start: '0% 100%',
+                            end: 'bottom 75%',
+                            trigger: elem,
+                            scrub: true,
+                            // markers: true,
+                        },
+                    });
+            });
+
+            const sidebarItems = Array.from(document.querySelectorAll(".sidebar"));
+            sidebarItems.forEach((elem) => {
+                this.twoScrollTrigger = gsap.fromTo(elem,
+                    {
+                        y: 50,
+                    },
+                    {
+                        y: 0,
+                        duration: 1,
+                        scrollTrigger: {
+                            start: '0% 100%',
+                            end: 'bottom 75%',
+                            trigger: elem,
+                            // markers: true,
+                            scrub: true,
+                        },
+                    });
+            });
+
             gsap.to(".scroll-bg", {
                 scrollTrigger: {
                     trigger: ".scroll",
@@ -603,7 +638,7 @@ export default {
         @media (max-width: 768px) {
             margin-bottom: -63rem;
             top: -81rem;
-            min-height: 303rem;
+            min-height: 413rem;
             background-position: top;
             background-image: url(../../public/img/bear-mobile.png);
 
@@ -623,8 +658,8 @@ export default {
                 right: unset;
                 top: 19rem;
                 left: 9rem;
-                width: 82px;
-                height: 43px;
+                width: 22rem;
+                height: 11.5rem;
             }
         }
 
@@ -651,13 +686,14 @@ export default {
             @media (max-width: 768px) {
                 position: static;
                 padding: 0 9.5rem;
+                margin-top: 4rem;
             }
 
             img {
                 margin-bottom: 0.56rem;
 
                 @media (max-width: 768px) {
-                    margin-bottom: 7px;
+                    margin-bottom: 1.9rem;
                 }
             }
 
@@ -669,7 +705,7 @@ export default {
 
                 @media (max-width: 768px) {
                     font-size: 4.6rem;
-                    margin-bottom: 15px;
+                    margin-bottom: 4rem;
                 }
             }
 
@@ -697,8 +733,8 @@ export default {
                     height: 6.54rem;
 
                     @media (max-width: 768px) {
-                        width: 59px;
-                        height: 62px;
+                        width: 15.76rem;
+                        height: 16.534rem;
                     }
                 }
             }
@@ -717,8 +753,8 @@ export default {
                     height: 7.3rem;
 
                     @media (max-width: 768px) {
-                        width: 59px;
-                        height: 62px;
+                        width: 15.76rem;
+                        height: 16.534rem;
                     }
                 }
             }
@@ -737,8 +773,8 @@ export default {
                     height: 6.46rem;
 
                     @media (max-width: 768px) {
-                        width: 82px;
-                        height: 62px;
+                        width: 22rem;
+                        height: 16.6rem;
                     }
                 }
 
@@ -760,6 +796,7 @@ export default {
             @media (max-width: 768px) {
                 align-items: flex-start;
                 padding: 0 9.5rem;
+                margin-top: 10rem;
             }
 
             &-title {
@@ -825,8 +862,10 @@ export default {
         }
 
         &__map {
-            margin: 0 4rem 16rem 4rem;
-            width: 92rem;
+            @media (max-width: 768px) {
+                margin: 0 4rem 16rem 4rem;
+                width: 92rem;
+            }
         }
     }
 

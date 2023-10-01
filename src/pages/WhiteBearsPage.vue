@@ -121,7 +121,8 @@
 
                     <div class="white-bears__what-to-do">
                         <img src="img/white-bear-meet.png" alt="">
-                        <BaseDropdownInfo :title="'Что делать, если вы встретили белого медведя?'" :text="''"
+                        <BaseDropdownInfo :title="'Что делать, если вы встретили белого медведя?'"
+                            :text="'<div class=what-to-do__wrap><div class=what-to-do__wrap-left>< 10 м</div><div class=what-to-do__wrap-right>Спокойно стойте, медленно уходите;</div></div><div class=what-to-do__wrap><div class=what-to-do__wrap-left>10-15 м</div><div class=what-to-do__wrap-right>Спугните медведя голосом, свистком или ракетницей;</div></div><div class=what-to-do__wrap><div class=what-to-do__wrap-left>> 20 м</div><div class=what-to-do__wrap-right>Не давайте зверю сократить дистанцию.</div></div><p>Нельзя ложиться на&nbsp;землю и&nbsp;притворяться мёртвым: медведь может принять вас за&nbsp;тюленя&nbsp;&mdash; свою привычную пищу&nbsp;&mdash; и&nbsp;попытается съесть.</p>'"
                             :color="'#0077C8'" />
                     </div>
                 </BaseTextBlock>
@@ -205,6 +206,14 @@
                                 на&nbsp;вертолёте, предоставленном компанией &laquo;Норникель&raquo;, их&nbsp;переправили
                                 в&nbsp;Диксон.
                             </p>
+                            <div class="card-2__descr">
+                                <img src="img/cell.png" alt="">
+                                <p>
+                                    Перевозили в&nbsp;специальной клетке&nbsp;для&nbsp;безопасной перевозки, изготовленной
+                                    специально
+                                    на&nbsp;Норильском механическом заводе.
+                                </p>
+                            </div>
                         </div>
                         <div class="scroll-card card-3 text-block__descr">
                             Обезвоженную и&nbsp;обессилевшую Монеточку обнаружили неподалёку от&nbsp;аэропорта Диксона.
@@ -484,6 +493,13 @@ export default {
 
 <style lang="scss">
 .white-bears {
+    .hero {
+        @media (max-width: 768px) {
+            min-height: unset;
+            height: 235rem;
+        }
+    }
+
     .title {
         margin-bottom: 1.94445rem;
         font-size: 2.3612rem;
@@ -492,8 +508,8 @@ export default {
         color: #004C97;
 
         @media (max-width: 768px) {
-            margin-bottom: 24px;
-            font-size: 28px;
+            margin-bottom: 6.395rem;
+            font-size: 7.461rem;
         }
     }
 
@@ -509,15 +525,27 @@ export default {
 
     .text-center {
         text-align: center;
+
+        @media (max-width: 768px) {
+            text-align: left;
+        }
     }
 
     .width-525 {
         width: 36.46rem;
+
+        @media (max-width: 768px) {
+            width: unset;
+        }
     }
 
     .bg-white {
         background-color: #fff;
         height: 42rem;
+
+        @media (max-width: 768px) {
+            height: 155rem;
+        }
     }
 
     .section-blue {
@@ -567,12 +595,31 @@ export default {
             background-image: url(../../public/img/bear.webp);
         }
 
+        @media (max-width: 768px) {
+            margin-bottom: 0;
+            top: -81rem;
+            min-height: 149rem;
+            background-image: url(../../public/img/bear-mobile.png);
+
+            @supports (background-image: url(../../public/img/bear-mobile.webp)) {
+                background-image: url(../../public/img/bear-mobile.webp);
+            }
+        }
+
         &__icon-bear {
             position: absolute;
             width: 10.35rem;
             height: 5.4rem;
             top: 15rem;
             right: 13rem;
+
+            @media (max-width: 768px) {
+                right: unset;
+                top: 19rem;
+                left: 9rem;
+                width: 82px;
+                height: 43px;
+            }
         }
 
         &__descr {
@@ -584,10 +631,20 @@ export default {
             line-height: 130%;
             top: 29.5rem;
             right: 10rem;
+
+            @media (max-width: 768px) {
+                top: 44rem;
+                font-size: 4rem;
+                width: 66rem;
+            }
         }
 
         &__item {
             position: absolute;
+
+            @media (max-width: 768px) {
+                position: relative;
+            }
 
             img {
                 margin-bottom: 0.56rem;
@@ -687,6 +744,10 @@ export default {
         display: flex;
         align-items: center;
 
+        @media (max-width: 768px) {
+            position: static;
+        }
+
         img {
             width: 6.7366rem;
             height: 7.09rem;
@@ -696,9 +757,29 @@ export default {
             max-width: 13rem;
         }
 
+        .dropdown-info__text {
+            padding: 5.56rem 0.62rem 0.88rem 3.13rem;
+        }
+
         .dropdown-info__wrap {
             align-items: flex-start;
         }
+
+        .what-to-do {
+            &__wrap {
+                display: flex;
+                margin-bottom: 1.25rem;
+
+                &-left {
+                    width: 4rem;
+                }
+
+                &-right {
+                    width: 10.5rem;
+                }
+            }
+        }
+
     }
 
     &__educational-work {
@@ -819,7 +900,7 @@ export default {
         &-card {
             padding: 1.5rem;
             margin-bottom: 100vh;
-            width: 34.2rem;
+            width: 38rem;
             border-radius: 0.25rem;
             background: #FFF;
 
@@ -834,6 +915,24 @@ export default {
 
                 &:first-child {
                     margin-top: 100vh;
+                }
+            }
+
+            .card-2__descr {
+                display: flex;
+                align-items: center;
+                gap: 0.9rem;
+
+                img {
+                    width: 13.612rem;
+                    height: 12rem;
+                    flex-shrink: 0;
+                }
+
+                p {
+                    font-size: 1.04167rem;
+                    font-weight: 300;
+                    line-height: 130%;
                 }
             }
         }
@@ -903,7 +1002,7 @@ export default {
                     background-image: url(../../public/img/fito-1-mobile.jpg);
                 }
 
-                &.bg-6{
+                &.bg-6 {
                     background-image: url(../../public/img/fito-2-mobile.jpg);
                 }
 
@@ -929,7 +1028,7 @@ export default {
         &-card {
             padding: 1.5rem;
             margin-bottom: 100vh;
-            width: 34.2rem;
+            width: 38rem;
             border-radius: 0.25rem;
             background: #FFF;
 
@@ -982,4 +1081,5 @@ export default {
             left: -7.366rem;
         }
     }
-}</style>
+}
+</style>

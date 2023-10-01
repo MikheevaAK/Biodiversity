@@ -685,7 +685,6 @@ export default {
             @media (max-width: 768px) {
                 position: static;
             }
-
         }
     }
 

@@ -1,7 +1,8 @@
 <template>
-    <div class="text-block__wrap" :class="{'text-block__wrap-index' : tooltip}">
+    <div class="text-block__wrap" :class="{ 'text-block__wrap-index': tooltip }">
         <h3 v-if="title" class="text-block__title">
             {{ title }}
+            <div v-if="undertitle" class="text-block__undertitle">{{ undertitle }}</div>
         </h3>
         <div class="text-block__descr">
             <slot></slot>
@@ -20,7 +21,11 @@ export default {
         tooltip: {
             type: Boolean,
             default: false
-        }
+        },
+        undertitle: {
+            type: String,
+            default: ''
+        },
     }
 }
 </script>
@@ -28,7 +33,7 @@ export default {
 <style lang="scss">
 .text-block {
     position: relative;
-    
+
     &__wrap {
         position: relative;
         margin: 0 auto;
@@ -54,6 +59,19 @@ export default {
         @media (max-width: 768px) {
             margin-bottom: 6.4rem;
             font-size: 5.8667rem;
+        }
+    }
+
+    &__undertitle {
+        margin-top: 0.6rem;
+        color: #D38235;
+        font-size: 1.25rem;
+        font-weight: 300;
+        line-height: 130%;
+
+        @media (max-width: 768px) {
+            font-size: 4.8rem;
+            margin-top: 3rem;
         }
     }
 

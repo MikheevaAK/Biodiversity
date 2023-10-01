@@ -42,7 +42,6 @@
                                 </clipPath>
                             </defs>
                         </svg>
-
                     </div>
                     <div class="thunderstorm-arctic__descr">
                         Длинные морда и&nbsp;шея помогают медведю ловить тюленей в&nbsp;снежных норах и&nbsp;лунках
@@ -76,7 +75,41 @@
                     </div>
 
                     <div class="thunderstorm-arctic__nutrition">
-
+                        <div class="thunderstorm-arctic__nutrition-title">Основа питания</div>
+                        <div class="thunderstorm-arctic__nutrition-line">
+                            <svg width="470" height="130" viewBox="0 0 470 130" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M235.452 84.9059C236.491 84.5309 237.03 83.3847 236.655 82.3457C236.28 81.3067 235.133 80.7685 234.095 81.1434C233.056 81.5184 232.517 82.6646 232.892 83.7036C233.267 84.7426 234.413 85.2809 235.452 84.9059ZM234.54 24.5004L234.398 83.0237L235.148 83.0256L235.29 24.5022L234.54 24.5004Z"
+                                    fill="#4F4F4F" />
+                                <path
+                                    d="M12.1171 97.2909C13.1728 96.9661 13.6796 95.8781 13.249 94.861C12.8184 93.8438 11.6134 93.2825 10.5577 93.6073C9.50198 93.9322 8.99521 95.0201 9.42582 96.0372C9.85642 97.0544 11.0613 97.6157 12.1171 97.2909ZM189.989 64.9883L43.5741 64.8587L43.6338 65.5837L190.049 65.7133L189.989 64.9883ZM43.5741 64.8587C25.1461 64.8423 10.9273 78.1628 10.9503 95.4212L11.7245 95.477C11.7019 78.5965 25.6094 65.5677 43.6338 65.5837L43.5741 64.8587ZM233.192 24.5151C233.223 47.37 214.393 65.0099 189.989 64.9883L190.049 65.7133C214.856 65.7352 233.997 47.8036 233.966 24.5709L233.192 24.5151Z"
+                                    fill="#4F4F4F" />
+                                <path
+                                    d="M457.871 97.2909C456.815 96.9661 456.309 95.8781 456.739 94.861C457.17 93.8438 458.375 93.2825 459.431 93.6073C460.486 93.9322 460.993 95.0201 460.562 96.0372C460.132 97.0544 458.927 97.6157 457.871 97.2909ZM279.999 64.9883L426.414 64.8587L426.354 65.5837L279.939 65.7133L279.999 64.9883ZM426.414 64.8587C444.842 64.8423 459.061 78.1628 459.038 95.4212L458.264 95.477C458.286 78.5965 444.379 65.5677 426.354 65.5837L426.414 64.8587ZM236.796 24.5151C236.766 47.37 255.595 65.0099 279.999 64.9883L279.939 65.7133C255.132 65.7352 235.991 47.8036 236.022 24.5709L236.796 24.5151Z"
+                                    fill="#4F4F4F" />
+                            </svg>
+                        </div>
+                        <div class="thunderstorm-arctic__nutrition-wrap">
+                            <div class="thunderstorm-arctic__nutrition-item">
+                                <img src="img/fur-seal.png" alt="">
+                                <div class="thunderstorm-arctic__nutrition-item-descr">
+                                    Ластоногие
+                                </div>
+                            </div>
+                            <div class="thunderstorm-arctic__nutrition-item">
+                                <img src="img/narwhal.png" alt="">
+                                <div class="thunderstorm-arctic__nutrition-item-descr">
+                                    Туши выброшенных на берег китов, нарвалов, белуг; мёртвых птиц и наземных млекопитающих
+                                </div>
+                            </div>
+                            <div class="thunderstorm-arctic__nutrition-item">
+                                <img src="img/white-bear-fish.png" alt="">
+                                <div class="thunderstorm-arctic__nutrition-item-descr">
+                                    Жирная морская рыба
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <BaseTextBlock class="mb-100">
@@ -106,8 +139,8 @@
                         &laquo;Норникеля&raquo;.
                     </p>
                 </BaseTextBlock>
-                <img class="thunderstorm-arctic__map" src="img/thunderstorm-arctic-map.png" alt="">
-                <BaseTextBlock :title="'Просветительская работа'" class="mb-60">
+                <img class="thunderstorm-arctic__map mb-100" src="img/thunderstorm-arctic-map.png" alt="">
+                <BaseTextBlock :title="'Просветительская работа'" class="white-bears__educational-work mb-60">
                     <p class="mb-10">
                         Занимается &laquo;Норникель&raquo; и&nbsp;просветительской работой. С&nbsp;2018 года работает проект
                         &laquo;Сохраним белого медведя&raquo;. На&nbsp;сайте проекта можно прочитать о&nbsp;полярных
@@ -122,10 +155,115 @@
                         И&nbsp;в&nbsp;ситуациях, когда речь идёт о&nbsp;жизни и&nbsp;смерти, &laquo;Норникель&raquo; активно
                         включается в&nbsp;работу, помогая техникой и&nbsp;специалистами.
                     </p>
+                    <a href="#" target="_blank" class="white-bears__educational-work-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <circle cx="10" cy="10" r="9.5" stroke="#004C97" />
+                            <path
+                                d="M14.5 10C14.5 12.7006 13.9516 15.1209 13.0883 16.8475C12.2101 18.604 11.0893 19.5 10 19.5C8.9107 19.5 7.78993 18.604 6.91168 16.8475C6.04839 15.1209 5.5 12.7006 5.5 10C5.5 7.29937 6.04839 4.87912 6.91168 3.15254C7.78993 1.39605 8.9107 0.5 10 0.5C11.0893 0.5 12.2101 1.39605 13.0883 3.15254C13.9516 4.87912 14.5 7.29937 14.5 10Z"
+                                stroke="#004C97" />
+                            <path d="M0.5 10H19.5" stroke="#004C97" />
+                        </svg>
+                        <div class="white-bears__educational-work-descr">
+                            Перейти на&nbsp;сайт проекта «Сохраним белого медведя»
+                        </div>
+                    </a>
                 </BaseTextBlock>
+                <img class="line line-bottom" src="img/strip.png" alt="">
             </section>
 
             <SectionWhite>
+                <BaseTextBlock class="mb-40 text-center width-525">
+                    <div class="title">
+                        Помощь медведице Монеточке
+                    </div>
+                    <div class="text-center">
+                        В&nbsp;июле 2022 года в&nbsp;посёлок Диксон забрела истощённая молодая медведица. В&nbsp;последние
+                        годы животные здесь частые гости, и&nbsp;местных жителей этим давно не&nbsp;удивишь.
+                    </div>
+                </BaseTextBlock>
+                <section class="scroll mb-100">
+                    <div class="scroll-bg bg-1">
+                    </div>
+                    <div class="scroll-bg bg-2">
+                    </div>
+                    <div class="scroll-bg bg-3">
+                    </div>
+                    <div class="scroll-bg bg-4">
+                    </div>
+                    <div class="scroll-wrap">
+                        <div class="scroll-card card-1 text-block__descr">
+                            Хищница вела себя необычно&nbsp;&mdash; будто просила о&nbsp;помощи.
+                            И&nbsp;действительно&nbsp;&mdash; в&nbsp;зубах она сжимала банку из-под сгущёнки,
+                            а&nbsp;в&nbsp;язык зверя глубоко врезалась острая крышка. Вероятно, медведица нашла угощение
+                            на&nbsp;свалке, но, пытаясь полакомиться, угодила в&nbsp;ловушку.
+                        </div>
+                        <div class="scroll-card card-2 text-block__descr">
+                            <p>
+                                Жители посёлка не&nbsp;сумели самостоятельно вытащить банку из&nbsp;пасти Монеточки (так
+                                назвали животное) и&nbsp;обратились за&nbsp;помощью к&nbsp;специалистам. Уже
+                                на&nbsp;следующий день в&nbsp;Норильск прибыли ветеринары Московского зоопарка, откуда
+                                на&nbsp;вертолёте, предоставленном компанией &laquo;Норникель&raquo;, их&nbsp;переправили
+                                в&nbsp;Диксон.
+                            </p>
+                        </div>
+                        <div class="scroll-card card-3 text-block__descr">
+                            Обезвоженную и&nbsp;обессилевшую Монеточку обнаружили неподалёку от&nbsp;аэропорта Диксона.
+                            Ветеринары усыпили хищницу и&nbsp;всего за&nbsp;10&nbsp;минут удалили из&nbsp;её&nbsp;пасти
+                            банку. Операция, по&nbsp;словам врачей, животному не&nbsp;потребовалась&nbsp;&mdash; язык
+                            заживёт самостоятельно.
+                        </div>
+                        <div class="scroll-card card-4 text-block__descr">
+                            <p class="mb-10">
+                                Спящую после операции медведицу отвезли подальше от&nbsp;людей, в&nbsp;дикую природу,
+                                и&nbsp;оставили рядом с&nbsp;ней на&nbsp;прощанье несколько десятков килограммов рыбы.
+                            </p>
+                            <p>
+                                Через две недели специалисты проверили место, где оставили Монеточку. Не&nbsp;обнаружив
+                                ни&nbsp;её, ни&nbsp;рыбы, поняли: хищница ожила, съела рыбу и&nbsp;ушла.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <BaseTextBlock class="mb-40 text-center width-525">
+                    <div class="title">
+                        Диксон из&nbsp;Диксона
+                    </div>
+                    <div class="text-center">
+                        Ещё одним медведем, которому понадобилась экстренная помощь, стал Диксон. И&nbsp;совместный опыт,
+                        который сотрудники &laquo;Норникеля&raquo;, Росприроднадзора и&nbsp;ветеринары столичного зоопарка
+                        получили во&nbsp;время операции по&nbsp;спасению Монеточки, очень пригодился.
+                    </div>
+                </BaseTextBlock>
+                <section class="scroll-2 mb-100">
+                    <div class="scroll-2-bg bg-5">
+                    </div>
+                    <div class="scroll-2-bg bg-6">
+                    </div>
+                    <div class="scroll-2-bg bg-7">
+                    </div>
+                    <div class="scroll-2-wrap">
+                        <div class="scroll-2-card card-5 text-block__descr">
+                            В&nbsp;начале сентября 2022 года жители Диксона обнаружили на&nbsp;окраине посёлка раненого
+                            молодого медведя. Зверь неподвижно лежал на&nbsp;спине, а&nbsp;его задние лапы оказались
+                            парализованы. По&nbsp;всей видимости, его подстрелил какой‑то охотник. Медлить было
+                            нельзя&nbsp;&mdash; животному грозила неминуемая гибель от&nbsp;кровопотери, голода
+                            и&nbsp;жажды.
+                        </div>
+                        <div class="scroll-2-card card-6 text-block__descr">
+                            Хищника сотрудники &laquo;Норникеля&raquo;, совместно с&nbsp;ветеринарами, доставили
+                            с&nbsp;севера Таймыра в&nbsp;Москву. Врачам удалось совершить чудо: они спасли жизнь медведю
+                            и&nbsp;во&nbsp;время операции извлекли из&nbsp;его тела более 30&nbsp;шариков картечи.
+                            К&nbsp;сожалению, прогноз ветеринаров неутешительный: ходить животное больше не&nbsp;сможет,
+                            а&nbsp;значит, вернуться в&nbsp;дикую природу ему не&nbsp;суждено.
+                        </div>
+                        <div class="scroll-2-card card-7 text-block__descr">
+                            Медведя решили оставить в&nbsp;Московском зоопарке. Для него разработали уникальную программу
+                            реабилитации&nbsp;&mdash; прежде нигде в&nbsp;мире такую работу не&nbsp;проводили со&nbsp;столь
+                            крупным хищником. Диксон оказался любопытным и&nbsp;дружелюбным животным: он&nbsp;охотно шёл
+                            на&nbsp;контакт с&nbsp;зоологами и&nbsp;выполнял все их&nbsp;задания.
+                        </div>
+                    </div>
+                </section>
                 <BaseTextBlock class="mb-100" :title="'После спасения'">
                     <p class="mb-10">
                         За&nbsp;спасение Монеточки и&nbsp;Диксона глава Росприроднадзора Светлана Радионова вручила
@@ -180,6 +318,10 @@ import SectionWhite from '@/layout/SectionWhite.vue'
 import BaseTextBlock from '@/components/BaseTextBlock.vue'
 import BaseSidebar from '@/components/BaseSidebar'
 import BaseDropdownInfo from '@/components/BaseDropdownInfo'
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default {
     components: {
@@ -198,6 +340,144 @@ export default {
         return {
             heroDescr: 'Когда‑то вся Арктика принадлежала белым медведям: на&nbsp;Севере не&nbsp;было зверей, которые могли&nbsp;бы на&nbsp;равных соперничать с&nbsp;ними. Но&nbsp;глобальное изменение климата и&nbsp;соседство с&nbsp;людьми привело полярных хищников на&nbsp;грань вымирания: сейчас, по&nbsp;оценкам учёных, в&nbsp;мире осталось не&nbsp;более 25&nbsp;тыс. особей, из&nbsp;них 5&ndash;6&nbsp;тыс. живут на&nbsp;территории нашей страны.'
         }
+    },
+    mounted() {
+        this.$nextTick(function () {
+            this.scrollAnimation();
+        })
+    },
+    methods: {
+        scrollMobile() {
+            const collageItems = Array.from(document.querySelectorAll(".scroll-bg.active"))
+
+            collageItems.forEach((elem) => {
+                elem.css('background-position', '0px ' + document.scrollTop() + 'px')
+            })
+
+            const collageItems2 = Array.from(document.querySelectorAll(".scroll-2-bg.active"))
+
+            collageItems2.forEach((elem) => {
+                elem.css('background-position', '0px ' + document.scrollTop() + 'px')
+            })
+        },
+        scrollAnimation() {
+            gsap.to(".scroll-bg", {
+                scrollTrigger: {
+                    trigger: ".scroll",
+                    start: '0%',
+                    scrub: true,
+                    toggleClass: { className: "active", targets: ".scroll-bg" }
+                },
+            })
+
+            gsap.to(".scroll-2-bg", {
+                scrollTrigger: {
+                    trigger: ".scroll-2",
+                    start: '0%',
+                    scrub: true,
+                    toggleClass: { className: "active", targets: ".scroll-2-bg" }
+                },
+            })
+            if (window.innerWidth <= 768) {
+                this.scrollMobile()
+            }
+
+            gsap.fromTo(".bg-1",
+                { opacity: '1' },
+                {
+                    opacity: '0',
+                    scrollTrigger: {
+                        trigger: ".card-1",
+                        start: 'top 0%',
+                        end: 'bottom 50%',
+                        endTrigger: '.card-2',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                });
+
+            gsap.fromTo(".bg-2",
+                { opacity: '1' },
+                {
+                    opacity: '0',
+                    scrollTrigger: {
+                        trigger: ".card-2",
+                        start: 'top 0%',
+                        end: 'bottom 50%',
+                        endTrigger: '.card-3',
+                        // markers: true,
+                        scrub: true,
+                    },
+
+                });
+
+            gsap.fromTo(".bg-3",
+                { opacity: '1' },
+                {
+                    opacity: '0',
+                    scrollTrigger: {
+                        trigger: ".card-3",
+                        start: 'top 0%',
+                        end: 'bottom 50%',
+                        endTrigger: '.card-4',
+                        // markers: true,
+                        scrub: true,
+                    },
+
+                });
+
+            gsap.fromTo(".bg-5",
+                { opacity: '1' },
+                {
+                    opacity: '0',
+                    scrollTrigger: {
+                        trigger: ".card-5",
+                        start: 'top 0%',
+                        end: 'bottom 50%',
+                        endTrigger: '.card-6',
+                        // markers: true,
+                        scrub: true,
+                    },
+
+                });
+            gsap.fromTo(".bg-6",
+                { opacity: '1' },
+                {
+                    opacity: '0',
+                    scrollTrigger: {
+                        trigger: ".card-6",
+                        start: 'top 0%',
+                        end: 'bottom 50%',
+                        endTrigger: '.card-7',
+                        // markers: true,
+                        scrub: true,
+                    },
+
+                });
+
+            gsap.to(".scroll-bg", {
+                scrollTrigger: {
+                    trigger: ".card-4",
+                    start: () => "+=120%",
+                    end: () => "+=" + (document.querySelector(".scroll-wrap").offsetHeight),
+                    // markers: true,
+                    scrub: true,
+                    toggleClass: { className: "remove-active", targets: ".scroll-bg" }
+                },
+            });
+
+            gsap.to(".scroll-2-bg", {
+                scrollTrigger: {
+                    trigger: ".card-7",
+                    start: () => "+=120%",
+                    end: () => "+=" + (document.querySelector(".scroll-2-wrap").offsetHeight),
+                    // markers: true,
+                    scrub: true,
+                    toggleClass: { className: "remove-active", targets: ".scroll-2-bg" }
+                },
+            });
+        }
     }
 }
 </script>
@@ -205,8 +485,8 @@ export default {
 <style lang="scss">
 .white-bears {
     .title {
-        margin-bottom: 28px;
-        font-size: 34px;
+        margin-bottom: 1.94445rem;
+        font-size: 2.3612rem;
         font-weight: 600;
         line-height: 130%;
         color: #004C97;
@@ -241,7 +521,29 @@ export default {
     }
 
     .section-blue {
+        position: relative;
         background-color: #F3F7FA;
+        margin-bottom: 2.8rem;
+        padding-bottom: 1.72rem;
+
+
+        .line {
+            position: absolute;
+            width: 100%;
+            height: 10.5rem;
+
+            // @media (max-width: 768px) {
+            //     height: 12rem;
+            // }
+
+            &-bottom {
+                bottom: -1.5rem;
+
+                // @media (max-width: 768px) {
+                //     bottom: -12rem;
+                // }
+            }
+        }
     }
 
     .section-white {
@@ -249,12 +551,15 @@ export default {
     }
 
     .thunderstorm-arctic {
-        margin-bottom: -39rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-bottom: -38rem;
         position: relative;
-        top: -39rem;
+        top: -42rem;
         background-image: url(../../public/img/bear.png);
         background-size: contain;
-        min-height: 80rem;
+        min-height: 86rem;
         background-repeat: no-repeat;
         background-position: 100%;
 
@@ -339,6 +644,40 @@ export default {
                 }
             }
         }
+
+        &__nutrition {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &-title {
+                margin-bottom: 1.38889rem;
+                font-size: 1.04167rem;
+                font-weight: 600;
+                line-height: 130%;
+            }
+
+            &-line {
+                width: 32.6rem;
+                height: 8.9rem;
+            }
+
+            &-wrap {
+                display: flex;
+                gap: 2.085rem;
+            }
+
+            &-item {
+                width: 15rem;
+
+                &-descr {
+                    text-align: center;
+                    font-size: 1.04167rem;
+                    font-weight: 300;
+                    line-height: 130%;
+                }
+            }
+        }
     }
 
     &__what-to-do {
@@ -359,6 +698,254 @@ export default {
 
         .dropdown-info__wrap {
             align-items: flex-start;
+        }
+    }
+
+    &__educational-work {
+        &-link {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            margin-top: 3.125rem;
+            gap: 0.903rem;
+
+            svg {
+                width: 1.389rem;
+                height: 1.389rem;
+            }
+        }
+
+        &-descr {
+            color: var(--blue-deep, #004C97);
+            width: 14rem;
+            font-size: 1.04167rem;
+            font-weight: 300;
+            line-height: 130%;
+        }
+    }
+
+    .scroll {
+        position: relative;
+        width: 100%;
+
+        &-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            height: 100vh;
+            width: 100%;
+            background-position: bottom;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            @media (max-width: 768px) {
+                background-position: top;
+                background-size: 100%;
+            }
+
+            &.active {
+                background-attachment: fixed;
+                height: 100%;
+
+                @media (max-width: 768px) {
+                    height: 100%;
+                    background-size: 100%;
+                    position: fixed;
+                    background-attachment: unset;
+                }
+
+                &.remove-active {
+                    background-attachment: unset;
+                    background-position: bottom;
+                    background-size: contain;
+
+                    @media (max-width: 768px) {
+                        background-position: bottom;
+                        position: absolute;
+                    }
+                }
+            }
+
+            &.bg-1 {
+                z-index: 4;
+                background-image: url(../../public/img/white-bear-1.jpg);
+            }
+
+            &.bg-2 {
+                z-index: 3;
+                background-image: url(../../public/img/white-bear-2.jpg);
+            }
+
+            &.bg-3 {
+                z-index: 2;
+                background-image: url(../../public/img/white-bear-3.jpg);
+            }
+
+            &.bg-4 {
+                z-index: 1;
+                background-image: url(../../public/img/white-bear-4.jpg);
+            }
+
+            @media (max-width: 768px) {
+                &.bg-1 {
+                    background-image: url(../../public/img/fito-1-mobile.jpg);
+                }
+
+                &.bg-2 {
+                    background-image: url(../../public/img/fito-2-mobile.jpg);
+                }
+
+                &.bg-3 {
+                    background-image: url(../../public/img/fito-3-mobile.jpg);
+                }
+
+                &.bg-4 {
+                    background-image: url(../../public/img/fito-4-mobile.jpg);
+                }
+            }
+        }
+
+        &-wrap {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-right: 1.25rem;
+        }
+
+        &-card {
+            padding: 1.5rem;
+            margin-bottom: 100vh;
+            width: 34.2rem;
+            border-radius: 0.25rem;
+            background: #FFF;
+
+            &:first-child {
+                margin-top: 50vh;
+            }
+
+            @media (max-width: 768px) {
+                padding: 4.2666rem;
+                margin: 0 auto 100vh auto;
+                width: 93%;
+
+                &:first-child {
+                    margin-top: 100vh;
+                }
+            }
+        }
+    }
+
+    .scroll-2 {
+        position: relative;
+        width: 100%;
+
+        &-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            height: 100vh;
+            width: 100%;
+            background-position: bottom;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            @media (max-width: 768px) {
+                background-position: top;
+                background-size: 100%;
+            }
+
+            &.active {
+                background-attachment: fixed;
+                height: 100%;
+
+                @media (max-width: 768px) {
+                    height: 100%;
+                    background-size: 100%;
+                    position: fixed;
+                    background-attachment: unset;
+                }
+
+                &.remove-active {
+                    background-attachment: unset;
+                    background-position: bottom;
+                    background-size: contain;
+
+                    @media (max-width: 768px) {
+                        background-position: bottom;
+                        position: absolute;
+                    }
+                }
+            }
+
+            &.bg-5 {
+                z-index: 4;
+                background-image: url(../../public/img/white-bear-5.jpg);
+            }
+
+            &.bg-6 {
+                z-index: 3;
+                background-image: url(../../public/img/white-bear-6.jpg);
+            }
+
+            &.bg-7 {
+                z-index: 2;
+                background-image: url(../../public/img/white-bear-7.jpg);
+            }
+
+            @media (max-width: 768px) {
+                &.bg-5 {
+                    background-image: url(../../public/img/fito-1-mobile.jpg);
+                }
+
+                &.bg-6{
+                    background-image: url(../../public/img/fito-2-mobile.jpg);
+                }
+
+                &.bg-7 {
+                    background-image: url(../../public/img/fito-3-mobile.jpg);
+                }
+
+                &.bg-4 {
+                    background-image: url(../../public/img/fito-4-mobile.jpg);
+                }
+            }
+        }
+
+        &-wrap {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-right: 1.25rem;
+        }
+
+        &-card {
+            padding: 1.5rem;
+            margin-bottom: 100vh;
+            width: 34.2rem;
+            border-radius: 0.25rem;
+            background: #FFF;
+
+            &:first-child {
+                margin-top: 50vh;
+            }
+
+            @media (max-width: 768px) {
+                padding: 4.2666rem;
+                margin: 0 auto 100vh auto;
+                width: 93%;
+
+                &:first-child {
+                    margin-top: 100vh;
+                }
+            }
         }
     }
 
@@ -395,5 +982,4 @@ export default {
             left: -7.366rem;
         }
     }
-}
-</style>
+}</style>

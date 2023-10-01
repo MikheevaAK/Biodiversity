@@ -66,17 +66,17 @@ export default {
 
 <style lang="scss">
 .white-bears {
-    .title {
-        margin-bottom: 28px;
-        font-size: 34px;
-        font-weight: 600;
-        line-height: 130%;
-        color: #004C97;
+    // .title {
+    //     margin-bottom: 28px;
+    //     font-size: 34px;
+    //     font-weight: 600;
+    //     line-height: 130%;
+    //     color: #004C97;
 
-        @media (max-width: 768px) {
-            margin-bottom: 24px;
-            font-size: 28px;
-        }
-    }
+    //     @media (max-width: 768px) {
+    //         margin-bottom: 24px;
+    //         font-size: 28px;
+    //     }
+    // }
 }
 </style>

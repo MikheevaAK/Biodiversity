@@ -189,33 +189,100 @@
                         </div>
                     </BaseTextBlock>
                 </div>
-                <div class="legend">
-                    <BaseCollageInfo :text="'Охраняемые виды'" :color="'#71464E'" />
-                    <BaseCollageInfo :text="'Индикаторные виды'" />
-                </div>
                 <div class="collage mb-100">
-                    <BaseDropdownInfo :isModal="true" class="dubrovnik" :title="'Дубровник'" :color="'#71464E'"
-                        :text="'Имеет китайское происхождение. В&nbsp;19&nbsp;веке вид проник в&nbsp;Европу и&nbsp;очень быстро освоил её: в&nbsp;1920-х годах птичек с&nbsp;яркой внешностью можно было встретить уже в&nbsp;Финляндии. За&nbsp;последнее время популяция дубровника в&nbsp;мире сократилась на&nbsp;90%, вид занесён в&nbsp;Красную книгу России'" />
-                    <BaseDropdownInfo :isModal="true" class="moskovka" :title="'Московка'"
-                        :text="'Во&nbsp;время когда московка возбуждена, она приподнимает перья на&nbsp;лбу в&nbsp;виде небольшого хохолка.'" />
-                    <BaseDropdownInfo :isModal="true" class="siberian-deer" :title="'Сибирская косуля'"
-                        :text="'Как показали исследования, численность сибирских косуль рядом с&nbsp;Быстринским ГОК и&nbsp;на&nbsp;территории за&nbsp;пределами радиуса промышленного воздействия одинаковая. Вид встречается настолько часто, что учёные РАН выбрали его индикатором состояния экосистем дивизиона'" />
+                    <div class="legend">
+                        <BaseCollageInfo :text="'Охраняемые виды'" :color="'#71464E'" />
+                        <BaseCollageInfo :text="'Индикаторные виды'" />
+                    </div>
+                    <BaseCollageInfo class="eagle" :title="'Большой подорлик'" :color="'#71464E'"
+                        :text="'Размах крыльев в&nbsp;2,5&nbsp;раза длиннее тела&nbsp;—&nbsp;около 180&nbsp;см'" />
 
-                    <BaseDropdownInfo :isModal="true" class="ants" :title="'Муравьи'"
-                        :text="'В&nbsp;Забайкальском дивизионе исследователи обнаружили 29&nbsp;видов муравьев, из&nbsp;них три были выбраны индикаторами состояния экосистем: Чёрный болотный муравей, Черноголовый муравей и&nbsp;Бледноногий садовый муравей'" />
+                    <BaseCollageInfo class="harrier" :title="'Полевой лунь'" :color="'#71464E'"
+                        :text="'Самки крупнее самцов почти в&nbsp;два раза и&nbsp;весят до&nbsp;600&nbsp;г'" />
 
-                    <BaseDropdownInfo :isModal="true" class="hare" :title="'Заяц-беляк'"
+                    <BaseCollageInfo class="puffy" :title="'Пухляк'"
+                        :text="'Устраивает повсюду множество кладовых из&nbsp;семян и&nbsp;помнит, где они находятся'" />
+
+                    <BaseCollageInfo class="warbler" :title="'Толстоклювая пеночка'"
+                        :text="'Поёт свою песню, каждый раз меняя тональность, поэтому разные специалисты описывают её&nbsp;голос по-разному'" />
+
+                    <BaseCollageInfo class="mottled-breast" :title="'Сибирская пестрогрудка'" :color="'#71464E'"
+                        :text="'Голосом напоминает жужжание электропроводов'" />
+
+                    <BaseCollageInfo class="moskovka" :title="'Московка'"
+                        :text="'Когда московка возбуждена, она приподнимает перья на&nbsp;лбу в&nbsp;виде небольшого хохолка'" />
+
+                    <BaseCollageInfo class="lily-dwarf" :title="'Лилия карликовая'" :color="'#71464E'"
+                        :text="'Цветы часто срывают на&nbsp;букеты, что резко ограничивает семенное размножение вида'" />
+
+                    <BaseCollageInfo class="rowan" :title="'Рябина сибирская'" :color="'#71464E'"
+                        :text="'Легко приспосабливается к&nbsp;новым условиям, выдерживает холод и&nbsp;засуху'" />
+
+                    <BaseCollageInfo class="ground-beetle" :title="'Жужелица Карабус&nbsp;крюбери'" :color="'#71464E'"
+                        :text="'Редкий, малоизученный вид, встречаются единичные особи'" />
+
+                    <BaseCollageInfo class="shrew" :title="'Бурозубка'"
+                        :text="'Быстро стареет из-за необычайно интенсивного обмена веществ'" />
+
+                    <BaseCollageInfo class="hare" :title="'Заяц-беляк'"
                         :text="'Широко расставленные глаза помогают быстрее заметить опасность и&nbsp;убежать. Спасаясь, развивает скорость до&nbsp;60&nbsp;км/ч. Обитает также в&nbsp;Норильском дивизионе'" />
 
-                    <BaseDropdownInfo :isModal="true" class="shrew" :title="'Бурозубка'"
+                    <BaseCollageInfo class="black-cohosh" :title="'Клопогон даурский'" :color="'#71464E'"
+                        :text="'Живописное лекарственное растение отпугивает насекомых сильным запахом'" />
+
+                    <BaseCollageInfo class="spiraea-average" :title="'Спирея средняя'" />
+                    <BaseCollageInfo class="spotted-pipit" :title="'Пятнистый конёк'" />
+
+                    <BaseCollageInfo class="grouse" :title="'Рябчик'"
+                        :text="'Российская популяция&nbsp;вида самая многочисленная&nbsp;&mdash; около 40&nbsp;млн птиц'" />
+
+                    <BaseCollageInfo class="mouse" :title="'Восточноазиатская мышь'"
+                        :text="'Природный носитель возбудителей не&nbsp;менее десятка опасных для человека заболеваний, среди которых: японский энцефалит, туляремия и&nbsp;геморрагическая лихорадка'" />
+
+
+                    <BaseCollageInfo class="krasodnev" :title="'Красоднев малый'" :color="'#71464E'"
+                        :text="'Каждый цветок красоднева распускается лишь на&nbsp;один день'" />
+
+                    <BaseCollageInfo class="slipper" :title="'Венерин башмачок'" :color="'#71464E'"
+                        :text="'Имеет причудливое строение цветка, напоминающего носок обуви'" />
+
+                    <BaseCollageInfo class="curlew" :title="'Большой кроншнеп'" :color="'#71464E'"
+                        :text="'Изогнутый клюв птицы достигает 140&nbsp;мм'" />
+
+                    <BaseCollageInfo class="crane" :title="'Журавль-красавка'" :color="'#71464E'"
+                        :text="'Самый маленький из&nbsp;журавлей, его рост меньше метра'" />
+
+                    <BaseCollageInfo class="ledum" :title="'Багульник болотный'"
+                        :text="'В&nbsp;народных поверьях багульнику приписывались приворотные свойства'" />
+                    <div class="background background-1"></div>
+                    <div class="background background-2"></div>
+                    <div class="background background-3"></div>
+                    <div class="background background-4"></div>
+                    <div class="background-text background-text-1">Амурский горчак</div>
+                    <div class="background-text background-text-2">Пескарь сибирский</div>
+
+                    <BaseDropdownInfo class="dubrovnik" :title="'Дубровник'" :color="'#71464E'"
+                        :text="'Имеет китайское происхождение. В&nbsp;19&nbsp;веке вид проник в&nbsp;Европу и&nbsp;очень быстро освоил её: в&nbsp;1920-х годах птичек с&nbsp;яркой внешностью можно было встретить уже в&nbsp;Финляндии. За&nbsp;последнее время популяция дубровника в&nbsp;мире сократилась на&nbsp;90%, вид занесён в&nbsp;Красную книгу России'" />
+                    <BaseDropdownInfo class="moskovka_mobile" :title="'Московка'"
+                        :text="'Во&nbsp;время когда московка возбуждена, она приподнимает перья на&nbsp;лбу в&nbsp;виде небольшого хохолка.'" />
+                    <BaseDropdownInfo class="siberian-deer" :title="'Сибирская косуля'"
+                        :text="'Как показали исследования, численность сибирских косуль рядом с&nbsp;Быстринским ГОК и&nbsp;на&nbsp;территории за&nbsp;пределами радиуса промышленного воздействия одинаковая. Вид встречается настолько часто, что учёные РАН выбрали его индикатором состояния экосистем дивизиона'" />
+
+                    <BaseDropdownInfo class="ants" :title="'Муравьи'"
+                        :text="'В&nbsp;Забайкальском дивизионе исследователи обнаружили 29&nbsp;видов муравьев, из&nbsp;них три были выбраны индикаторами состояния экосистем: Чёрный болотный муравей, Черноголовый муравей и&nbsp;Бледноногий садовый муравей'" />
+
+                    <BaseDropdownInfo class="hare_mobile" :title="'Заяц-беляк'"
+                        :text="'Широко расставленные глаза помогают быстрее заметить опасность и&nbsp;убежать. Спасаясь, развивает скорость до&nbsp;60&nbsp;км/ч. Обитает также в&nbsp;Норильском дивизионе'" />
+
+                    <BaseDropdownInfo class="shrew_mobile" :title="'Бурозубка'"
                         :text="'Быстро стареет из-за необычайно интенсивного обмена веществ'" />
 
 
-                    <BaseDropdownInfo :isModal="true" class="maksimovichs-vole" :title="'Полёвка Максимовича'"
+                    <BaseDropdownInfo class="maksimovichs-vole" :title="'Полёвка Максимовича'"
                         :text="'Доминирует среди других 10&nbsp;видов грызунов на&nbsp;территории всех зон воздействия Забайкальского дивизиона. Рядом с&nbsp;Быстринским комбинатом исследователи отметили особенно высокий уровень доминирования, поэтому выбрали полёвку Максимовича видом-индикатором'" />
-                    <BaseDropdownInfo :isModal="true" class="killer-whale" :title="'Касатка'" :color="'#71464E'"
+                    <BaseDropdownInfo class="killer-whale" :title="'Касатка'" :color="'#71464E'"
                         :text="'Охота&nbsp;&mdash; одна из&nbsp;причин сокращения численности этого вида уток. В&nbsp;брачный период самцы касаток приобретают выразительный элегантный окрас, из-за чего становятся желанным трофеем'" />
-                    <BaseDropdownInfo :isModal="true" class="zooplankton-2" :title="'Зоопланктон'"
+                    <BaseDropdownInfo class="zooplankton-2" :title="'Зоопланктон'"
                         :text="'В&nbsp;водоёмах Забайкалья учёные использовали три вида как индикаторы степени воздействия: планктонная коловратка Lophocharis oxysternon присутствовала только в&nbsp;реках фоновых территорий, личинки подёнок Ephoron nigridorsum не&nbsp;обнаруживались в&nbsp;зоне интенсивного воздействия, а&nbsp;отделить пояса интенсивного и&nbsp;умеренного воздействия помогли личинки веснянок Agnetina extremа'" />
 
 
@@ -606,7 +673,8 @@ export default {
     }
 
     .legend {
-        margin-bottom: 5.25rem;
+        position: relative;
+        top: 6rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -617,11 +685,15 @@ export default {
             align-items: flex-start;
             padding-left: 9.6rem;
             gap: 2rem;
-            margin-bottom: 8.8rem
+            top: 0;
         }
 
         .block-info {
             position: static;
+
+            @media (max-width: 768px) {
+                font-size: 4.73334rem;
+            }
         }
     }
 
@@ -647,6 +719,272 @@ export default {
             }
         }
 
+        .eagle {
+            width: 14rem;
+            top: 30rem;
+            left: 14rem;
+
+            @media (max-width: 768px) {
+                width: 42rem;
+                top: 104rem;
+                left: 16rem;
+            }
+        }
+
+        .harrier {
+            width: 14rem;
+            top: 78rem;
+            left: 5rem;
+
+            @media (max-width: 768px) {
+                width: 42rem;
+                top: 31rem;
+                left: 52rem;
+            }
+        }
+
+        .puffy {
+            width: 15rem;
+            top: 79.5rem;
+            right: 4rem;
+
+            @media (max-width: 768px) {
+                width: 42rem;
+                top: 244rem;
+                right: 15rem;
+            }
+        }
+
+        .warbler {
+            width: 15rem;
+            top: 99rem;
+            left: 26rem;
+
+            @media (max-width: 768px) {
+                width: 49rem;
+                top: 326rem;
+                left: 33rem;
+            }
+        }
+
+        .mottled-breast {
+            width: 13rem;
+            top: 102.5rem;
+            right: 4.5rem;
+
+            @media (max-width: 768px) {
+                width: 42rem;
+                top: 292rem;
+                right: 1rem;
+            }
+        }
+
+        .moskovka {
+            width: 16rem;
+            top: 119.5rem;
+            right: 7rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+
+            &_mobile {
+                display: none;
+                position: absolute;
+                top: 194rem;
+                right: 7rem;
+
+                @media (max-width: 768px) {
+                    display: block;
+
+                    .dropdown-info__title {
+                        max-width: unset;
+                    }
+                }
+            }
+        }
+
+        .lily-dwarf {
+            width: 16rem;
+            top: 131rem;
+            right: 40rem;
+
+            @media (max-width: 768px) {
+                width: 60rem;
+                top: 494rem;
+                right: 35rem;
+            }
+        }
+
+        .rowan {
+            width: 15rem;
+            top: 162rem;
+            right: 12rem;
+
+            @media (max-width: 768px) {
+                width: 50rem;
+                top: 575rem;
+                right: 37rem;
+            }
+        }
+
+        .ground-beetle {
+            width: 16rem;
+            top: 164rem;
+            left: 27rem;
+
+            @media (max-width: 768px) {
+                width: 46rem;
+                top: 827rem;
+                left: 51rem;
+            }
+        }
+
+        .black-cohosh {
+            width: 16rem;
+            top: 220.5rem;
+            left: 10rem;
+
+            @media (max-width: 768px) {
+                width: 42rem;
+                top: 847rem;
+                left: 5rem;
+            }
+        }
+
+        .spiraea-average {
+            width: 9rem;
+            top: 225rem;
+            right: 5rem;
+
+            @media (max-width: 768px) {
+                width: 18rem;
+                top: 900rem;
+                right: 6rem;
+            }
+        }
+
+        .spotted-pipit {
+            width: 10rem;
+            top: 272.5rem;
+            left: 9.5rem;
+
+            @media (max-width: 768px) {
+                width: 42rem;
+                top: 741rem;
+                left: 32rem;
+            }
+        }
+
+        .grouse {
+            width: 12.5rem;
+            top: 272.5rem;
+            left: 52rem;
+
+            @media (max-width: 768px) {
+                width: 42rem;
+                top: 627rem;
+                left: 13rem;
+            }
+        }
+
+        .mouse {
+            width: 17rem;
+            top: 289rem;
+            right: 16rem;
+
+            @media (max-width: 768px) {
+                width: 74rem;
+                top: 1034rem;
+                right: 10rem;
+            }
+        }
+
+        .krasodnev {
+            width: 13rem;
+            top: 292rem;
+            left: 30rem;
+
+            @media (max-width: 768px) {
+                width: 48rem;
+                top: 1077rem;
+                left: 6rem;
+            }
+        }
+
+        .slipper {
+            width: 12rem;
+            top: 306rem;
+            right: 3rem;
+
+            @media (max-width: 768px) {
+                width: 42rem;
+                top: 988rem;
+                right: 19rem;
+            }
+        }
+
+        .curlew {
+            width: 13rem;
+            top: 304rem;
+            right: 39rem;
+
+            @media (max-width: 768px) {
+                width: 43rem;
+                top: 1148rem;
+                right: 2rem;
+            }
+        }
+
+        .crane {
+            width: 13rem;
+            top: 321rem;
+            left: 8rem;
+
+            @media (max-width: 768px) {
+                width: 42rem;
+                top: 1259rem;
+                left: 56rem;
+            }
+        }
+
+        .ledum {
+            width: 13rem;
+            top: 327rem;
+            left: 32rem;
+
+            @media (max-width: 768px) {
+                width: 43rem;
+                top: 1162rem;
+                left: 4rem;
+            }
+        }
+
+        .hare {
+            width: 17rem;
+            top: 241rem;
+            left: 4rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+
+            &_mobile {
+                display: none;
+                position: absolute;
+                bottom: 885rem;
+                left: 34rem;
+
+                @media (max-width: 768px) {
+                    display: block;
+
+                    .dropdown-info__title {
+                        max-width: unset;
+                    }
+                }
+            }
+        }
+
         .dubrovnik {
             position: absolute;
             top: 60rem;
@@ -655,17 +993,6 @@ export default {
             @media (max-width: 768px) {
                 top: 161rem;
                 right: 43rem;
-            }
-        }
-
-        .moskovka {
-            display: none;
-            position: absolute;
-
-            @media (max-width: 768px) {
-                display: block;
-                top: 192rem;
-                right: 12rem;
             }
         }
 
@@ -686,7 +1013,7 @@ export default {
 
         .ants {
             position: absolute;
-            bottom: 177.3rem;
+            bottom: 178rem;
             left: 43.6rem;
 
             @media (max-width: 768px) {
@@ -710,35 +1037,34 @@ export default {
             }
         }
 
-        .hare {
-            display: none;
-            position: absolute;
-
-            @media (max-width: 768px) {
-                display: block;
-                bottom: 881rem;
-                right: 35rem;
-
-                .dropdown-info__title {
-                    max-width: unset;
-                }
-            }
-        }
-
         .shrew {
-            display: none;
-            position: absolute;
+            width: 10.5rem;
+            top: 174rem;
+            left: 54rem;
 
             @media (max-width: 768px) {
-                display: block;
-                bottom: 540rem;
-                right: 10rem;
+                display: none;
+            }
+
+            &_mobile {
+                display: none;
+                position: absolute;
+                bottom: 542rem;
+                left: 64rem;
+
+                @media (max-width: 768px) {
+                    display: block;
+
+                    .dropdown-info__title {
+                        max-width: unset;
+                    }
+                }
             }
         }
 
         .killer-whale {
             position: absolute;
-            bottom: 35.5rem;
+            bottom: 36rem;
             right: 22.5rem;
 
             @media (max-width: 768px) {
@@ -749,12 +1075,111 @@ export default {
 
         .zooplankton-2 {
             position: absolute;
-            bottom: 23rem;
+            bottom: 24rem;
             right: 47rem;
 
             @media (max-width: 768px) {
                 bottom: 65.5rem;
                 left: 24rem;
+            }
+        }
+
+        .background {
+            position: absolute;
+            background-color: #fff;
+            opacity: 0.8;
+            mix-blend-mode: hard-light;
+            filter: blur(30px);
+
+            @media (max-width: 768px) {
+                filter: blur(11px);
+            }
+
+            &-1 {
+                bottom: 79rem;
+                left: 5.5rem;
+                width: 15.25rem;
+                height: 3.417rem;
+                background-color: #C3C3C3;
+
+                @media (max-width: 768px) {
+                    display: none;
+                }
+            }
+
+            &-2 {
+                bottom: 22rem;
+                left: 43.5rem;
+                width: 12.25rem;
+                height: 3.417rem;
+
+                @media (max-width: 768px) {
+                    bottom: 61rem;
+                    left: 25.5rem;
+                    width: 32.25rem;
+                    height: 16.417rem;
+                }
+            }
+
+            &-3 {
+                bottom: 25rem;
+                left: 64.5rem;
+                width: 8.25rem;
+                height: 3.417rem;
+
+                @media (max-width: 768px) {
+                    bottom: 42rem;
+                    left: 56.5rem;
+                    width: 28.25rem;
+                    height: 11.417rem;
+                }
+            }
+
+            &-4 {
+                bottom: 13.5rem;
+                right: 34.5rem;
+                width: 7.25rem;
+                height: 4.417rem;
+
+                @media (max-width: 768px) {
+                    bottom: 35.5rem;
+                    right: 60.5rem;
+                    width: 25.25rem;
+                    height: 13.417rem;
+                }
+            }
+
+            &-text {
+                position: absolute;
+                font-size: 1.04rem;
+                font-weight: 600;
+                line-height: 130%;
+
+                @media (max-width: 768px) {
+                    font-size: 4rem;
+                }
+
+                &-1 {
+                    bottom: 25.3rem;
+                    left: 63.1rem;
+
+                    @media (max-width: 768px) {
+                        bottom: 44.3rem;
+                        left: 62.1rem;
+                        width: 32rem;
+                    }
+                }
+
+                &-2 {
+                    width: 9rem;
+                    bottom: 14.5rem;
+                    right: 31rem;
+
+                    @media (max-width: 768px) {
+                        bottom: 37.5rem;
+                        right: 72rem;
+                    }
+                }
             }
         }
     }
@@ -994,7 +1419,6 @@ export default {
         gap: 5.44rem;
         width: 63.5rem;
         margin: 0 auto;
-        margin-bottom: 8.69rem;
 
         @media (max-width: 768px) {
             flex-direction: column;

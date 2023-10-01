@@ -1,7 +1,7 @@
 <template>
     <div class="indicator">
         <BaseHero :title="'Загадочный ИПСЭ'" :descr="heroDescr" :img="'img/hero9.jpg'"
-            :imgMobile="'img/hero6-mobile.jpg'" />
+            :imgMobile="'img/hero9-mobile.jpg'" />
         <MainSection>
             <BaseTextBlock class="mb-40" :title="'Суть метода'">
                 Начиная с&nbsp;2022 года на&nbsp;территориях вокруг промышленных площадок &laquo;Норникеля&raquo;
@@ -102,6 +102,11 @@
                 </BaseTextQuotes>
             </div>
 
+            <picture>
+                <source type="image/webp" srcset="img/indicator-deer-mobile.webp">
+                <img class="indicator__deer mb-100" src="img/indicator-deer-mobile.png">
+            </picture>
+
             <BaseTextBlock class="mb-100" :title="'Наблюдения во времени'">
                 <p class="mb-10">
                     Метод показывает свою эффективность как при оценке ситуации за&nbsp;конкретный год, так
@@ -132,6 +137,28 @@
                 связаны с&nbsp;промышленным воздействием, не&nbsp;всегда бывает просто. Чтобы сделать это, учёные проводят
                 наблюдения на&nbsp;разных участках изучаемой территории.
             </BaseTextBlock>
+
+            <section class="scroll-2 mb-100">
+                <div class="scroll-2-bg bg-4"></div>
+                <div class="scroll-2-bg bg-5"></div>
+                <div class="scroll-2-bg bg-6"></div>
+                <div class="scroll-2-wrap">
+                    <div class="scroll-2-card card-4 text-block__descr">
+                        Значительные колебания численности видов могут отмечаться не&nbsp;только в&nbsp;зоне воздействия
+                        предприятий, но&nbsp;и&nbsp;на&nbsp;фоновых территориях. Это также важно учитывать при расчётах.
+                        Отличия в&nbsp;динамике этих колебаний на&nbsp;фоновой площадке от&nbsp;динамики в&nbsp;зоне
+                        воздействия и&nbsp;позволяют сделать выводы.
+                    </div>
+                    <div class="scroll-2-card card-5 text-block__descr">
+                        Если в&nbsp;зоне воздействия численность падает, и&nbsp;на&nbsp;фоновой площадке тоже&nbsp;&mdash;
+                        это естественное колебание.
+                    </div>
+                    <div class="scroll-2-card card-6 text-block__descr">
+                        В&nbsp;зоне воздействия падает, а&nbsp;на&nbsp;фоновой площадке стабильно&nbsp;&mdash; значит,
+                        причина в&nbsp;деятельности предприятия.
+                    </div>
+                </div>
+            </section>
 
             <BaseTextQuotes class="mb-100">
                 <p>
@@ -187,7 +214,7 @@
                     улавливать как негативные, так и&nbsp;позитивные изменения.
                 </p>
                 <p>
-                    Это поможет компании оперативно проводить мероприятия для снижения негативного воздействия
+                    Это поможет компании оперативно проводить мероприятия для&nbsp;снижения негативного воздействия
                     на&nbsp;окружающую среду и&nbsp;принимать наилучшие решения, которые способствуют восстановлению
                     биоразнообразия и&nbsp;оздоровлению экосистем.
                 </p>
@@ -224,7 +251,7 @@ export default {
     },
     data() {
         return {
-            heroDescr: 'Как оценить состояние экосистемы? Как отличить естественные процессы в&nbsp;сообществе живых организмов от&nbsp;изменений, которые происходят под влиянием антропогенных и&nbsp;техногенных факторов? &laquo;Норникель&raquo; уделяет большое внимание сохранению биоразнообразия, и&nbsp;для него это важные вопросы. Чтобы получить на&nbsp;них ответ и&nbsp;эффективно отслеживать изменения, компания поручила учёным разработать показатель для оценки состояния экосистем. И&nbsp;учёные разработали для компании Интегральный показатель состояния экосистем, сокращённо&nbsp;&mdash; ИПСЭ.'
+            heroDescr: 'Как оценить состояние экосистемы? Как&nbsp;отличить естественные процессы в&nbsp;сообществе живых организмов от&nbsp;изменений, которые происходят под&nbsp;влиянием антропогенных и&nbsp;техногенных факторов? &laquo;Норникель&raquo; уделяет большое внимание сохранению биоразнообразия, и&nbsp;для&nbsp;него это важные вопросы. Чтобы&nbsp;получить на&nbsp;них ответ и&nbsp;эффективно отслеживать изменения, компания поручила учёным разработать показатель для оценки состояния экосистем. И&nbsp;учёные разработали для компании Интегральный показатель состояния экосистем, сокращённо&nbsp;&mdash; ИПСЭ.'
         }
     },
     mounted() {
@@ -288,6 +315,14 @@ export default {
                     toggleClass: { className: "active", targets: ".scroll-bg" }
                 },
             })
+            this.ScrollTrigger = gsap.to(".scroll-2-bg", {
+                scrollTrigger: {
+                    trigger: ".scroll-2",
+                    start: '0%',
+                    scrub: true,
+                    toggleClass: { className: "active", targets: ".scroll-2-bg" }
+                },
+            })
             if (window.innerWidth <= 768) {
                 this.scrollMobile()
             }
@@ -322,6 +357,35 @@ export default {
 
                 });
 
+            gsap.fromTo(".bg-4",
+                { opacity: '1' },
+                {
+                    opacity: '0',
+                    scrollTrigger: {
+                        trigger: ".card-4",
+                        start: 'top 0%',
+                        end: 'bottom 50%',
+                        endTrigger: '.card-5',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                });
+            gsap.fromTo(".bg-5",
+                { opacity: '1' },
+                {
+                    opacity: '0',
+                    scrollTrigger: {
+                        trigger: ".card-5",
+                        start: 'top 0%',
+                        end: 'bottom 50%',
+                        endTrigger: '.card-6',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                });
+
             gsap.to(".scroll-bg", {
                 scrollTrigger: {
                     trigger: ".card-3",
@@ -332,6 +396,17 @@ export default {
                     toggleClass: { className: "remove-active", targets: ".scroll-bg" }
                 },
             });
+
+            gsap.to(".scroll-2-bg", {
+                scrollTrigger: {
+                    trigger: ".card-6",
+                    start: () => "+=100%",
+                    end: () => "+=" + (document.querySelector(".scroll-2-wrap").offsetHeight),
+                    // markers: true,
+                    scrub: true,
+                    toggleClass: { className: "remove-active", targets: ".scroll-2-bg" }
+                },
+            });
         }
     }
 }
@@ -339,6 +414,20 @@ export default {
 
 <style lang="scss">
 .indicator {
+    .hero {
+        @media (max-width: 768px) {
+            min-height: unset;
+            height: 206rem;
+        }
+    }
+
+    .sidebar {
+        width: 50rem;
+        @media (max-width: 768px) {
+            width: unset;
+        }
+    }
+
     .scroll {
         position: relative;
         width: 100%;
@@ -400,15 +489,15 @@ export default {
 
             @media (max-width: 768px) {
                 &.bg-1 {
-                    background-image: url(../../public/img/map-1-mobile.jpg);
+                    background-image: url(../../public/img/indicator-1-mobile.jpg);
                 }
 
                 &.bg-2 {
-                    background-image: url(../../public/img/map-2-mobile.jpg);
+                    background-image: url(../../public/img/indicator-2-mobile.jpg);
                 }
 
                 &.bg-3 {
-                    background-image: url(../../public/img/map-3-mobile.jpg);
+                    background-image: url(../../public/img/indicator-3-mobile.jpg);
                 }
             }
         }
@@ -428,6 +517,10 @@ export default {
             width: 34.2rem;
             border-radius: 0.25rem;
             background: #FFF;
+
+            .text-block__wrap {
+                padding: 0;
+            }
 
             &:first-child {
                 margin-top: 50vh;
@@ -449,6 +542,138 @@ export default {
         }
     }
 
+    .scroll-2 {
+        position: relative;
+        width: 100%;
+
+        &-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            height: 100vh;
+            background-position: center;
+            background-size: 68.34rem 32.23rem;
+            background-repeat: no-repeat;
+
+            @media (max-width: 768px) {
+                background-position: center;
+                background-size: 100%;
+            }
+
+            &.active {
+                background-attachment: fixed;
+                height: 100%;
+
+                @media (max-width: 768px) {
+                    height: 100%;
+                    background-size: 100%;
+                    position: fixed;
+                    background-attachment: unset;
+                }
+
+                &.remove-active {
+                    background-attachment: unset;
+                    background-position: 15.9rem 310vh;
+                    background-size: 68.34rem 32.23rem;
+
+                    @media (max-width: 768px) {
+                        background-position: 0rem 360vh;
+                        position: absolute;
+                        background-size: 100%;
+                    }
+                }
+            }
+
+            &.bg-4 {
+                z-index: 3;
+                background-image: url(../../public/img/impact-zone-1.jpg);
+            }
+
+            &.bg-5 {
+                z-index: 2;
+                background-image: url(../../public/img/impact-zone-2.jpg);
+            }
+
+            &.bg-6 {
+                z-index: 1;
+                background-image: url(../../public/img/impact-zone-3.jpg);
+            }
+
+            @media (max-width: 768px) {
+                &.bg-4 {
+                    background-image: url(../../public/img/impact-zone-1-mobile.jpg);
+                }
+
+                &.bg-5 {
+                    background-image: url(../../public/img/impact-zone-2-mobile.jpg);
+                }
+
+                &.bg-6 {
+                    background-image: url(../../public/img/impact-zone-3-mobile.jpg);
+                }
+            }
+        }
+
+        &-wrap {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-right: 1.25rem;
+        }
+
+        &-card {
+            padding: 1.5rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 100vh;
+            width: 41rem;
+            border-radius: 0.25rem;
+            background: #FFF;
+            text-align: center;
+
+            .text-block__wrap {
+                padding: 0;
+            }
+
+            &:first-child {
+                margin-top: 50vh;
+            }
+
+            @media (max-width: 768px) {
+                padding: 4.2666rem;
+                margin: 0 auto 100vh auto;
+                width: 93%;
+                text-align: left;
+
+                &:first-child {
+                    margin-top: 100vh;
+                }
+            }
+
+            .text-block__wrap {
+                width: 100%;
+            }
+        }
+    }
+
+    &__deer {
+        display: none;
+
+        @media (max-width: 768px) {
+            display: block;
+            position: relative;
+            top: -5rem;
+
+            &.mb-100 {
+                margin-bottom: 13.3334rem;
+            }
+        }
+    }
+
     &__block {
         padding-bottom: 31rem;
         background-position: bottom;
@@ -458,6 +683,11 @@ export default {
 
         @supports (background-image: url(../../public/img/indicator-deer.webp)) {
             background-image: url(../../public/img/indicator-deer.webp);
+        }
+
+        @media (max-width: 768px) {
+            padding-bottom: 0;
+            background-image: none;
         }
     }
 

@@ -140,7 +140,12 @@
                         &laquo;Норникеля&raquo;.
                     </p>
                 </BaseTextBlock>
-                <img class="thunderstorm-arctic__map mb-100" src="img/thunderstorm-arctic-map.png" alt="">
+                <picture>
+                    <source media="(max-width: 768px)" type="image/webp" srcset="img/thunderstorm-arctic-map-mobile.webp">
+                    <source media="(max-width: 768px)" srcset="img/thunderstorm-arctic-map-mobile.png">
+                    <source type="image/webp" srcset="img/thunderstorm-arctic-map.webp">
+                    <img class="thunderstorm-arctic__map mb-100" src="img/thunderstorm-arctic-map.png" alt="">
+                </picture>
                 <BaseTextBlock :title="'Просветительская работа'" class="white-bears__educational-work mb-60">
                     <p class="mb-10">
                         Занимается &laquo;Норникель&raquo; и&nbsp;просветительской работой. С&nbsp;2018 года работает проект
@@ -560,16 +565,16 @@ export default {
             width: 100%;
             height: 10.5rem;
 
-            // @media (max-width: 768px) {
-            //     height: 12rem;
-            // }
+            @media (max-width: 768px) {
+                height: 40rem;
+            }
 
             &-bottom {
                 bottom: -1.5rem;
 
-                // @media (max-width: 768px) {
-                //     bottom: -12rem;
-                // }
+                @media (max-width: 768px) {
+                    bottom: -9.5rem;
+                }
             }
         }
     }
@@ -596,9 +601,10 @@ export default {
         }
 
         @media (max-width: 768px) {
-            margin-bottom: 0;
+            margin-bottom: -63rem;
             top: -81rem;
-            min-height: 149rem;
+            min-height: 303rem;
+            background-position: top;
             background-image: url(../../public/img/bear-mobile.png);
 
             @supports (background-image: url(../../public/img/bear-mobile.webp)) {
@@ -643,11 +649,16 @@ export default {
             position: absolute;
 
             @media (max-width: 768px) {
-                position: relative;
+                position: static;
+                padding: 0 9.5rem;
             }
 
             img {
                 margin-bottom: 0.56rem;
+
+                @media (max-width: 768px) {
+                    margin-bottom: 7px;
+                }
             }
 
             &-title {
@@ -655,13 +666,21 @@ export default {
                 font-size: 1.042rem;
                 font-weight: 600;
                 line-height: 130%;
+
+                @media (max-width: 768px) {
+                    font-size: 4.6rem;
+                    margin-bottom: 15px;
+                }
             }
 
             &-descr {
-                font-size: 15px;
                 font-size: 1.042rem;
                 font-weight: 300;
                 line-height: 130%;
+
+                @media (max-width: 768px) {
+                    font-size: 4.53334rem;
+                }
             }
 
             &_leather {
@@ -669,9 +688,18 @@ export default {
                 left: 16rem;
                 width: 14.88rem;
 
+                @media (max-width: 768px) {
+                    width: unset;
+                }
+
                 img {
                     width: 7rem;
                     height: 6.54rem;
+
+                    @media (max-width: 768px) {
+                        width: 59px;
+                        height: 62px;
+                    }
                 }
             }
 
@@ -680,9 +708,18 @@ export default {
                 left: 18rem;
                 width: 19rem;
 
+                @media (max-width: 768px) {
+                    width: unset;
+                }
+
                 img {
                     width: 7.85rem;
                     height: 7.3rem;
+
+                    @media (max-width: 768px) {
+                        width: 59px;
+                        height: 62px;
+                    }
                 }
             }
 
@@ -691,13 +728,26 @@ export default {
                 right: 7rem;
                 width: 19rem;
 
+                @media (max-width: 768px) {
+                    width: unset;
+                }
+
                 img {
                     width: 8.545rem;
                     height: 6.46rem;
+
+                    @media (max-width: 768px) {
+                        width: 82px;
+                        height: 62px;
+                    }
                 }
 
                 .thunderstorm-arctic__item-title {
                     width: 11rem;
+
+                    @media (max-width: 768px) {
+                        width: unset;
+                    }
                 }
             }
         }
@@ -707,33 +757,76 @@ export default {
             flex-direction: column;
             align-items: center;
 
+            @media (max-width: 768px) {
+                align-items: flex-start;
+                padding: 0 9.5rem;
+            }
+
             &-title {
                 margin-bottom: 1.38889rem;
                 font-size: 1.04167rem;
                 font-weight: 600;
                 line-height: 130%;
+
+                @media (max-width: 768px) {
+                    font-size: 4.53334rem;
+                    margin-bottom: 2.67rem;
+                }
             }
 
             &-line {
                 width: 32.6rem;
                 height: 8.9rem;
+
+                @media (max-width: 768px) {
+                    display: none;
+                }
             }
 
             &-wrap {
                 display: flex;
                 gap: 2.085rem;
+
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                    gap: 5rem;
+                }
             }
 
             &-item {
                 width: 15rem;
+
+                @media (max-width: 768px) {
+                    display: flex;
+                    align-items: center;
+                    width: unset;
+                    gap: 7.2rem;
+                }
 
                 &-descr {
                     text-align: center;
                     font-size: 1.04167rem;
                     font-weight: 300;
                     line-height: 130%;
+
+                    @media (max-width: 768px) {
+                        font-size: 4.53334rem;
+                        text-align: start;
+                    }
+                }
+
+                img {
+                    @media (max-width: 768px) {
+                        width: 135.29px;
+                        height: 63.887px;
+                    }
                 }
             }
+        }
+
+        &__map {
+            margin: 0 4rem 16rem 4rem;
+            width: 92rem;
         }
     }
 
@@ -746,19 +839,36 @@ export default {
 
         @media (max-width: 768px) {
             position: static;
+            margin-top: 7.47rem;
         }
 
         img {
             width: 6.7366rem;
             height: 7.09rem;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
         }
 
         .dropdown-info__title {
             max-width: 13rem;
+
+            @media (max-width: 768px) {
+                max-width: unset;
+                font-size: 4.53334rem;
+            }
         }
 
         .dropdown-info__text {
             padding: 5.56rem 0.62rem 0.88rem 3.13rem;
+
+            @media (max-width: 768px) {
+                top: -3rem;
+                left: -2rem;
+                padding: 16.56rem 8.62rem 3.88rem 13.13rem;
+                width: unset;
+            }
         }
 
         .dropdown-info__wrap {
@@ -770,12 +880,24 @@ export default {
                 display: flex;
                 margin-bottom: 1.25rem;
 
+                @media (max-width: 768px) {
+                    margin-bottom: 4.7rem;
+                }
+
                 &-left {
                     width: 4rem;
+
+                    @media (max-width: 768px) {
+                        width: 21rem;
+                    }
                 }
 
                 &-right {
                     width: 10.5rem;
+
+                    @media (max-width: 768px) {
+                        width: 40rem;
+                    }
                 }
             }
         }
@@ -790,9 +912,19 @@ export default {
             margin-top: 3.125rem;
             gap: 0.903rem;
 
+            @media (max-width: 768px) {
+                margin-top: 8rem;
+                gap: 3.47rem;
+            }
+
             svg {
                 width: 1.389rem;
                 height: 1.389rem;
+
+                @media (max-width: 768px) {
+                    width: 5.334rem;
+                    height: 5.334rem;
+                }
             }
         }
 
@@ -802,6 +934,11 @@ export default {
             font-size: 1.04167rem;
             font-weight: 300;
             line-height: 130%;
+
+            @media (max-width: 768px) {
+                width: 52rem;
+                font-size: 4rem;
+            }
         }
     }
 
@@ -871,19 +1008,19 @@ export default {
 
             @media (max-width: 768px) {
                 &.bg-1 {
-                    background-image: url(../../public/img/fito-1-mobile.jpg);
+                    background-image: url(../../public/img/white-bear-1-mobile.jpg);
                 }
 
                 &.bg-2 {
-                    background-image: url(../../public/img/fito-2-mobile.jpg);
+                    background-image: url(../../public/img/white-bear-2-mobile.jpg);
                 }
 
                 &.bg-3 {
-                    background-image: url(../../public/img/fito-3-mobile.jpg);
+                    background-image: url(../../public/img/white-bear-3-mobile.jpg);
                 }
 
                 &.bg-4 {
-                    background-image: url(../../public/img/fito-4-mobile.jpg);
+                    background-image: url(../../public/img/white-bear-4-mobile.jpg);
                 }
             }
         }
@@ -923,16 +1060,30 @@ export default {
                 align-items: center;
                 gap: 0.9rem;
 
+                @media (max-width: 768px) {
+                    margin-top: 6.4rem;
+                    gap: 3.7rem;
+                }
+
                 img {
                     width: 13.612rem;
                     height: 12rem;
                     flex-shrink: 0;
+
+                    @media (max-width: 768px) {
+                        width: 26.7rem;
+                        height: 23.8rem;
+                    }
                 }
 
                 p {
                     font-size: 1.04167rem;
                     font-weight: 300;
                     line-height: 130%;
+
+                    @media (max-width: 768px) {
+                        font-size: 4rem;
+                    }
                 }
             }
         }
@@ -941,6 +1092,12 @@ export default {
     .scroll-2 {
         position: relative;
         width: 100%;
+
+        &.mb-100 {
+            @media (max-width: 768px) {
+                margin-bottom: 13rem;
+            }
+        }
 
         &-bg {
             position: absolute;
@@ -999,19 +1156,15 @@ export default {
 
             @media (max-width: 768px) {
                 &.bg-5 {
-                    background-image: url(../../public/img/fito-1-mobile.jpg);
+                    background-image: url(../../public/img/white-bear-5-mobile.jpg);
                 }
 
                 &.bg-6 {
-                    background-image: url(../../public/img/fito-2-mobile.jpg);
+                    background-image: url(../../public/img/white-bear-6-mobile.jpg);
                 }
 
                 &.bg-7 {
-                    background-image: url(../../public/img/fito-3-mobile.jpg);
-                }
-
-                &.bg-4 {
-                    background-image: url(../../public/img/fito-4-mobile.jpg);
+                    background-image: url(../../public/img/white-bear-7-mobile.jpg);
                 }
             }
         }
@@ -1058,10 +1211,24 @@ export default {
         display: flex;
         gap: 3.2rem;
 
+        @media (max-width: 768px) {
+            width: unset;
+            margin: 0 9.5rem;
+            padding: 40rem 3.76rem 7.47rem 3.76rem;
+            flex-direction: column;
+            align-items: center;
+        }
+
         &-title {
             font-size: 1.527778rem;
             font-weight: 600;
             line-height: 130%;
+
+            @media (max-width: 768px) {
+                font-size: 4.8rem;
+                text-align: center;
+                width: 54rem;
+            }
         }
 
         &-descr {
@@ -1070,6 +1237,12 @@ export default {
             font-weight: 300;
             line-height: 130%;
             flex-shrink: 0;
+
+            @media (max-width: 768px) {
+                width: unset;
+                font-size: 4.53334rem;
+                text-align: center;
+            }
         }
 
         img {
@@ -1079,6 +1252,13 @@ export default {
             height: 20.6945rem;
             top: -3.54167rem;
             left: -7.366rem;
+
+            @media (max-width: 768px) {
+                width: 71.5rem;
+                height: 50.6rem;
+                left: 5.5rem;
+                top: -14.5rem;
+            }
         }
     }
 }

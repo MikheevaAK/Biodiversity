@@ -19,7 +19,7 @@
                 <div class="text-center">
                     Белый медведь&nbsp;&mdash; один из&nbsp;крупнейших сухопутных хищников на&nbsp;Земле. Своё
                     название
-                    он&nbsp;получил из-за цвета шубы&nbsp;&mdash; он&nbsp;варьируется от&nbsp;чисто белого
+                    он&nbsp;получил из&#8209;за цвета шубы&nbsp;&mdash; он&nbsp;варьируется от&nbsp;чисто белого
                     до&nbsp;желтоватого. Большую часть своей жизни эти медведи проводят, дрейфуя по&nbsp;морю
                     на&nbsp;льдинах, но&nbsp;иногда забираются вглубь материка на&nbsp;десятки километров.
                 </div>
@@ -61,7 +61,7 @@
                         <img src="img/hairs.png" alt="">
                         <div class="thunderstorm-arctic__item-title">Ворсинки — прозрачные&nbsp;и&nbsp;полые</div>
                         <div class="thunderstorm-arctic__item-descr">
-                            Потому что лишены пигмента. Иногда живущие в&nbsp;зоопарках медведи на&nbsp;какое-то время
+                            Потому что лишены пигмента. Иногда живущие в&nbsp;зоопарках медведи на&nbsp;какое&#8209;то время
                             зеленеют&nbsp;&mdash; из&#8209;за&nbsp;плохой фильтрации воды в&nbsp;бассейне, внутрь волосков
                             поселяются
                             микроскопические водоросли.
@@ -145,7 +145,8 @@
                     <source type="image/webp" srcset="img/thunderstorm-arctic-map.webp">
                     <img class="thunderstorm-arctic__map mb-100" src="img/thunderstorm-arctic-map.png" alt="">
                 </picture>
-                <BaseTextBlock :title="'Просветительская работа'" class="white-bears__educational-work mb-60" :tooltip="true">
+                <BaseTextBlock :title="'Просветительская работа'" class="white-bears__educational-work mb-60"
+                    :tooltip="true">
                     <p class="mb-10">
                         Занимается &laquo;Норникель&raquo; и&nbsp;просветительской работой. С&nbsp;2018 года работает проект
                         &laquo;Сохраним белого медведя&raquo;. На&nbsp;сайте проекта можно прочитать о&nbsp;полярных
@@ -622,14 +623,14 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        margin-bottom: -38rem;
+        margin-bottom: -32rem;
         position: relative;
-        top: -42rem;
+        top: -38rem;
         background-image: url(../../public/img/bear.png);
         background-size: contain;
-        min-height: 86rem;
+        min-height: 87rem;
         background-repeat: no-repeat;
-        background-position: 100%;
+        background-position: top;
 
         @supports (background-image: url(../../public/img/bear.webp)) {
             background-image: url(../../public/img/bear.webp);
@@ -670,8 +671,8 @@ export default {
             font-size: 1.042rem;
             font-weight: 300;
             line-height: 130%;
-            top: 29.5rem;
-            right: 10rem;
+            top: 28rem;
+            right: 9.5rem;
 
             @media (max-width: 768px) {
                 top: 44rem;
@@ -721,7 +722,7 @@ export default {
 
             &_leather {
                 top: 18.5rem;
-                left: 16rem;
+                left: 14rem;
                 width: 14.88rem;
 
                 @media (max-width: 768px) {
@@ -741,7 +742,7 @@ export default {
 
             &_paw {
                 top: 43rem;
-                left: 18rem;
+                left: 14rem;
                 width: 19rem;
 
                 @media (max-width: 768px) {
@@ -761,8 +762,8 @@ export default {
 
             &_hairs {
                 top: 43rem;
-                right: 7rem;
-                width: 19rem;
+                right: 3rem;
+                width: 20.5rem;
 
                 @media (max-width: 768px) {
                     width: unset;
@@ -872,9 +873,10 @@ export default {
     &__what-to-do {
         position: absolute;
         top: 0;
-        right: -26rem;
+        right: -20rem;
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
 
         @media (max-width: 768px) {
             position: static;
@@ -884,6 +886,7 @@ export default {
         img {
             width: 6.7366rem;
             height: 7.09rem;
+            margin-left: 2rem;
 
             @media (max-width: 768px) {
                 display: none;

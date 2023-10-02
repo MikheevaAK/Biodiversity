@@ -261,28 +261,28 @@
                     <div class="background-text background-text-1">Амурский горчак</div>
                     <div class="background-text background-text-2">Пескарь сибирский</div>
 
-                    <BaseDropdownInfo class="dubrovnik" :title="'Дубровник'" :color="'#71464E'"
+                    <BaseDropdownInfo :is-modal="true" class="dubrovnik" :title="'Дубровник'" :color="'#71464E'"
                         :text="'Имеет китайское происхождение. В&nbsp;19&nbsp;веке вид проник в&nbsp;Европу и&nbsp;очень быстро освоил её: в&nbsp;1920-х годах птичек с&nbsp;яркой внешностью можно было встретить уже в&nbsp;Финляндии. За&nbsp;последнее время популяция дубровника в&nbsp;мире сократилась на&nbsp;90%, вид занесён в&nbsp;Красную книгу России'" />
-                    <BaseDropdownInfo class="moskovka_mobile" :title="'Московка'"
+                    <BaseDropdownInfo :is-modal="true" class="moskovka_mobile" :title="'Московка'"
                         :text="'Во&nbsp;время когда московка возбуждена, она приподнимает перья на&nbsp;лбу в&nbsp;виде небольшого хохолка.'" />
-                    <BaseDropdownInfo class="siberian-deer" :title="'Сибирская косуля'"
+                    <BaseDropdownInfo :is-modal="true" class="siberian-deer" :title="'Сибирская косуля'"
                         :text="'Как показали исследования, численность сибирских косуль рядом с&nbsp;Быстринским ГОК и&nbsp;на&nbsp;территории за&nbsp;пределами радиуса промышленного воздействия одинаковая. Вид встречается настолько часто, что учёные РАН выбрали его индикатором состояния экосистем дивизиона'" />
 
-                    <BaseDropdownInfo class="ants" :title="'Муравьи'"
+                    <BaseDropdownInfo :is-modal="true" class="ants" :title="'Муравьи'"
                         :text="'В&nbsp;Забайкальском дивизионе исследователи обнаружили 29&nbsp;видов муравьев, из&nbsp;них три были выбраны индикаторами состояния экосистем: Чёрный болотный муравей, Черноголовый муравей и&nbsp;Бледноногий садовый муравей'" />
 
-                    <BaseDropdownInfo class="hare_mobile" :title="'Заяц-беляк'"
+                    <BaseDropdownInfo :is-modal="true" class="hare_mobile" :title="'Заяц-беляк'"
                         :text="'Широко расставленные глаза помогают быстрее заметить опасность и&nbsp;убежать. Спасаясь, развивает скорость до&nbsp;60&nbsp;км/ч. Обитает также в&nbsp;Норильском дивизионе'" />
 
-                    <BaseDropdownInfo class="shrew_mobile" :title="'Бурозубка'"
+                    <BaseDropdownInfo :is-modal="true" class="shrew_mobile" :title="'Бурозубка'"
                         :text="'Быстро стареет из-за необычайно интенсивного обмена веществ'" />
 
 
-                    <BaseDropdownInfo class="maksimovichs-vole" :title="'Полёвка Максимовича'"
+                    <BaseDropdownInfo :is-modal="true" class="maksimovichs-vole" :title="'Полёвка Максимовича'"
                         :text="'Доминирует среди других 10&nbsp;видов грызунов на&nbsp;территории всех зон воздействия Забайкальского дивизиона. Рядом с&nbsp;Быстринским комбинатом исследователи отметили особенно высокий уровень доминирования, поэтому выбрали полёвку Максимовича видом-индикатором'" />
-                    <BaseDropdownInfo class="killer-whale" :title="'Касатка'" :color="'#71464E'"
+                    <BaseDropdownInfo :is-modal="true" class="killer-whale" :title="'Касатка'" :color="'#71464E'"
                         :text="'Охота&nbsp;&mdash; одна из&nbsp;причин сокращения численности этого вида уток. В&nbsp;брачный период самцы касаток приобретают выразительный элегантный окрас, из-за чего становятся желанным трофеем'" />
-                    <BaseDropdownInfo class="zooplankton-2" :title="'Зоопланктон'"
+                    <BaseDropdownInfo :is-modal="true" class="zooplankton-2" :title="'Зоопланктон'"
                         :text="'В&nbsp;водоёмах Забайкалья учёные использовали три вида как индикаторы степени воздействия: планктонная коловратка Lophocharis oxysternon присутствовала только в&nbsp;реках фоновых территорий, личинки подёнок Ephoron nigridorsum не&nbsp;обнаруживались в&nbsp;зоне интенсивного воздействия, а&nbsp;отделить пояса интенсивного и&nbsp;умеренного воздействия помогли личинки веснянок Agnetina extremа'" />
 
 
@@ -1090,10 +1090,6 @@ export default {
             opacity: 0.8;
             mix-blend-mode: hard-light;
             filter: blur(30px);
-
-            @media (max-width: 768px) {
-                filter: blur(11px);
-            }
 
             &-1 {
                 bottom: 79rem;

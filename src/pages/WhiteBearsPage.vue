@@ -145,7 +145,7 @@
                     <source type="image/webp" srcset="img/thunderstorm-arctic-map.webp">
                     <img class="thunderstorm-arctic__map mb-100" src="img/thunderstorm-arctic-map.png" alt="">
                 </picture>
-                <BaseTextBlock :title="'Просветительская работа'" class="white-bears__educational-work mb-60">
+                <BaseTextBlock :title="'Просветительская работа'" class="white-bears__educational-work mb-60" :tooltip="true">
                     <p class="mb-10">
                         Занимается &laquo;Норникель&raquo; и&nbsp;просветительской работой. С&nbsp;2018 года работает проект
                         &laquo;Сохраним белого медведя&raquo;. На&nbsp;сайте проекта можно прочитать о&nbsp;полярных
@@ -160,7 +160,7 @@
                         И&nbsp;в&nbsp;ситуациях, когда речь идёт о&nbsp;жизни и&nbsp;смерти, &laquo;Норникель&raquo; активно
                         включается в&nbsp;работу, помогая техникой и&nbsp;специалистами.
                     </p>
-                    <a href="#" target="_blank" class="white-bears__educational-work-link">
+                    <a href="https://spasimishku.ru/" target="_blank" class="white-bears__educational-work-link">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <circle cx="10" cy="10" r="9.5" stroke="#004C97" />
                             <path
@@ -169,7 +169,7 @@
                             <path d="M0.5 10H19.5" stroke="#004C97" />
                         </svg>
                         <div class="white-bears__educational-work-descr">
-                            Перейти на&nbsp;сайт проекта «Сохраним белого медведя»
+                            Перейти на&nbsp;сайт проекта «Сохраним&nbsp;белого&nbsp;медведя»
                         </div>
                     </a>
                 </BaseTextBlock>

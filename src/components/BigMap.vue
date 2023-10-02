@@ -92,40 +92,4 @@ $purple: #654EA3;
         }
     }
 }
-
-@keyframes ripple-blue {
-    0% {
-        box-shadow: 0 0 0 0 rgba($blue, 0.5), 0 0 0 0.1rem rgba($blue, 0.3),
-            0 0 0 0.3rem rgba($blue, 0.3), 0 0 0 0.5rem rgba($blue, 0.3);
-    }
-
-    90% {
-        box-shadow: 0 0 0 0.1rem rgba($blue, 0), 0 0 0 0.3rem rgba($blue, 0),
-            0 0 0 0.5rem rgba($blue, 0), 0 0 0 1rem rgba($blue, 0);
-    }
-}
-
-@keyframes ripple-green {
-    0% {
-        box-shadow: 0 0 0 0 rgba($green, 0.5), 0 0 0 0.1rem rgba($green, 0.3),
-            0 0 0 0.3rem rgba($green, 0.3), 0 0 0 0.5rem rgba($green, 0.3);
-    }
-
-    90% {
-        box-shadow: 0 0 0 0.1rem rgba($green, 0), 0 0 0 0.3rem rgba($green, 0),
-            0 0 0 0.5rem rgba($green, 0), 0 0 0 1rem rgba($green, 0);
-    }
-}
-
-@keyframes ripple-purple {
-    0% {
-        box-shadow: 0 0 0 0 rgba($purple, 0.5), 0 0 0 0.1rem rgba($purple, 0.3),
-            0 0 0 0.3rem rgba($purple, 0.3), 0 0 0 0.5rem rgba($purple, 0.3);
-    }
-
-    90% {
-        box-shadow: 0 0 0 0.1rem rgba($purple, 0), 0 0 0 0.3rem rgba($purple, 0),
-            0 0 0 0.5rem rgba($purple, 0), 0 0 0 1rem rgba($purple, 0);
-    }
-}
 </style>

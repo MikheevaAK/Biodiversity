@@ -139,12 +139,18 @@
                         &laquo;Норникеля&raquo;.
                     </p>
                 </BaseTextBlock>
-                <picture>
-                    <source media="(max-width: 768px)" type="image/webp" srcset="img/thunderstorm-arctic-map-mobile.webp">
-                    <source media="(max-width: 768px)" srcset="img/thunderstorm-arctic-map-mobile.png">
-                    <source type="image/webp" srcset="img/thunderstorm-arctic-map.webp">
-                    <img class="thunderstorm-arctic__map mb-100" src="img/thunderstorm-arctic-map.png" alt="">
-                </picture>
+                <div class="thunderstorm-arctic__map mb-100">
+                    <picture>
+                        <source media="(max-width: 768px)" type="image/webp"
+                            srcset="img/thunderstorm-arctic-map-mobile.webp">
+                        <source media="(max-width: 768px)" srcset="img/thunderstorm-arctic-map-mobile.png">
+                        <source type="image/webp" srcset="img/thunderstorm-arctic-map.webp">
+                        <img src="img/thunderstorm-arctic-map.png" alt="">
+                    </picture>
+
+                    <div class="circale-block circale-block_1"></div>
+                    <div class="circale-block circale-block_2"></div>
+                </div>
                 <BaseTextBlock :title="'Просветительская работа'" class="white-bears__educational-work mb-60"
                     :tooltip="true">
                     <p class="mb-10">
@@ -863,9 +869,50 @@ export default {
         }
 
         &__map {
+            position: relative;
+
             @media (max-width: 768px) {
                 margin: 0 4rem 16rem 4rem;
                 width: 92rem;
+            }
+
+            .circale-block {
+                position: absolute;
+                width: 0.5rem;
+                height: 0.5rem;
+                border-radius: 100%;
+                transition-timing-function: ease-in;
+                transition-duration: 0.7s;
+                transition: all 2.3s;
+                z-index: 2;
+                background-color: rgba(#333, 1);
+                flex-shrink: 0;
+                animation: ripple-blue-min 0.9s infinite;
+
+                @media (max-width: 768px) {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+
+                &_1 {
+                    top: 16.5rem;
+                    right: 44.15rem;
+
+                    @media (max-width: 768px) {
+                        top: 73.4rem;
+                        right: 26.8rem;
+                    }
+                }
+
+                &_2 {
+                    top: 7.25rem;
+                    left: 49.8rem;
+
+                    @media (max-width: 768px) {
+                        top: 43rem;
+                        left: 45.3rem;
+                    }
+                }
             }
         }
     }
@@ -996,7 +1043,7 @@ export default {
             z-index: 1;
             height: 100vh;
             width: 100%;
-            background-position: bottom;
+            background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
 
@@ -1018,7 +1065,7 @@ export default {
 
                 &.remove-active {
                     background-attachment: unset;
-                    background-position: bottom;
+                    background-position: 0 442vh;
                     background-size: contain;
 
                     @media (max-width: 768px) {
@@ -1149,7 +1196,7 @@ export default {
             z-index: 1;
             height: 100vh;
             width: 100%;
-            background-position: bottom;
+            background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
 

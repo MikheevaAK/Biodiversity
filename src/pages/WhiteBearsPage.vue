@@ -1300,5 +1300,11 @@ export default {
             }
         }
     }
+
+    .sidebar {
+        @media (max-width: 768px) {
+            width: 93%;
+        }
+    }
 }
 </style>

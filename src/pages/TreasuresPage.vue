@@ -4,7 +4,15 @@
             :imgMobile="'img/hero6-mobile.jpg'" />
         <MainSection>
             <SectionWhite>
-                <BaseTextBlock class="mb-40" :title="'Заповедник «Пасвик»'" :undertitle="'Мурманская область'">
+                <BaseTextBlock class="treasures__start">
+                    <picture>
+                        <source type="image/webp" srcset="img/treasures-1.webp">
+                        <img src="img/treasures-1.png" alt="">
+                    </picture>
+                    <div class="title">Заповедники Кольского&nbsp;дивизиона</div>
+                </BaseTextBlock>
+
+                <BaseTextBlock class="mb-60" :title="'Заповедник «Пасвик»'" :undertitle="'Мурманская область'">
                     Заповедник &laquo;Пасвик&raquo; узкой полосой вытянулся вдоль государственной границы России
                     и&nbsp;Норвегии. В&nbsp;переводе с&nbsp;языка саамов &laquo;Пасвик&raquo; означает &laquo;святая
                     река&raquo;&nbsp;&mdash; так местные жители называли реку Паз, которая протекает по&nbsp;особо
@@ -22,7 +30,12 @@
                     природных зон и&nbsp;их&nbsp;обитателей.
                 </BaseTextBlock>
 
-                <!---->
+                <div class="number-blocks text-block__wrap mb-60">
+                    <BaseNumberBlock :textTop="'242&nbsp;вида'" :textBottom="'птиц'" />
+                    <BaseNumberBlock :textTop="'32&nbsp;вида'" :textBottom="'млекопитающих'" />
+                    <BaseNumberBlock :textTop="'1814&nbsp;видов'" :textBottom="'растений и&nbsp;грибов'" />
+                </div>
+
                 <BaseTextBlock class="mb-60">
                     Но&nbsp;&laquo;Пасвик&raquo; впечатляет не&nbsp;только своей природой&nbsp;&mdash; немало интересного
                     здесь найдут этнографы и&nbsp;антропологи. В&nbsp;разное время на&nbsp;территории, занятой в&nbsp;наши
@@ -94,6 +107,7 @@ import MainSection from '@/layout/MainSection'
 import SectionWhite from '@/layout/SectionWhite.vue'
 import BaseTextBlock from '@/components/BaseTextBlock.vue'
 import BaseSidebar from '@/components/BaseSidebar'
+import BaseNumberBlock from "@/components/BaseNumberBlock.vue";
 
 export default {
     components: {
@@ -106,7 +120,7 @@ export default {
         //     BaseTooltip,
         //     BaseDropdownInfo,
         //     BaseCollageInfo,
-        //     BaseNumberBlock
+            BaseNumberBlock
     },
     data() {
         return {
@@ -120,22 +134,68 @@ export default {
 .treasures {
     .hero__descr {
         width: 47rem;
+
+        @media (max-width: 768px) {
+            width: unset;
+        }
     }
+
     .text-block__wrap {
         width: 36.25rem;
+
+        @media (max-width: 768px) {
+            width: unset;
+        }
     }
 
-    // .title {
-    //     margin-bottom: 28px;
-    //     font-size: 34px;
-    //     font-weight: 600;
-    //     line-height: 130%;
-    //     color: #004C97;
+    .title {
+        font-size: 2.36111rem;
+        font-weight: 600;
+        line-height: 130%;
+        color: #D38235;
 
-    //     @media (max-width: 768px) {
-    //         margin-bottom: 24px;
-    //         font-size: 28px;
-    //     }
-    // }
+        @media (max-width: 768px) {
+            font-size: 28px;
+        }
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    &__start {
+        text-align: center;
+        margin-bottom: 4.16667rem;
+
+        img {
+            width: 26.528rem;
+            height: 8.542rem;
+            margin-bottom: 1.875rem;
+        }
+    }
+
+    .number-blocks {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2.778rem;
+        width: 51.7rem;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 7.467rem;
+            width: 100%;
+            align-items: flex-start;
+        }
+
+        .number-block {
+            position: static;
+            width: 15.278rem;
+
+            @media (max-width: 768px) {
+                margin-top: 0;
+            }
+        }
+    }
 }
 </style>

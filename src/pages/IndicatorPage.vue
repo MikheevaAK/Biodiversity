@@ -439,7 +439,7 @@ export default {
             right: 0;
             z-index: 1;
             height: 100vh;
-            background-position: bottom;
+            background-position: 0 -3rem;
             background-size: contain;
             background-repeat: no-repeat;
 
@@ -461,7 +461,7 @@ export default {
 
                 &.remove-active {
                     background-attachment: unset;
-                    background-position: bottom;
+                    background-position: 0 348vh;
                     background-size: contain;
 
                     @media (max-width: 768px) {

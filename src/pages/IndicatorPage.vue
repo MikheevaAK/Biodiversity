@@ -107,7 +107,7 @@
                 <img class="indicator__deer mb-100" src="img/indicator-deer-mobile.png">
             </picture>
 
-            <BaseTextBlock class="mb-100" :title="'Наблюдения во времени'">
+            <BaseTextBlock :title="'Наблюдения во времени'">
                 <p class="mb-10">
                     Метод показывает свою эффективность как при оценке ситуации за&nbsp;конкретный год, так
                     и&nbsp;в&nbsp;динамике,&nbsp;&mdash; всё зависит от&nbsp;задач. В&nbsp;первом случае он&nbsp;позволяет
@@ -129,7 +129,7 @@
                 <!-- <source media="(max-width: 768px)" type="image/webp" srcset="img/kola-radius-mobile.webp"> -->
                 <source media="(max-width: 768px)" srcset="img/indicator-schedule-mobile.png">
                 <source type="image/webp" srcset="img/indicator-schedule.webp">
-                <img class="indicator__schedule mb-100" src="img/indicator-schedule.png">
+                <img class="indicator__schedule" src="img/indicator-schedule.png">
             </picture>
 
             <BaseTextBlock class="mb-40" :title="'Природное или техногенное воздействие?'">
@@ -694,12 +694,16 @@ export default {
     &__schedule {
         display: block;
         margin: 0 auto;
+        margin-top: 5.6rem;
+        margin-bottom: 8.3rem;
         width: 68.34rem;
         height: 36.53rem;
 
         @media (max-width: 768px) {
             width: 100%;
             height: auto;
+            margin-bottom: 10rem;
+            margin-top: 11rem;
         }
     }
 

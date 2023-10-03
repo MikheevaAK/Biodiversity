@@ -188,7 +188,7 @@
                 </div>
             </div>
 
-            <BaseTextQuotes class="mb-60">
+            <BaseTextQuotes class="mb-60 indicator__impact">
                 <p>
                     В&nbsp;Норильске в&nbsp;зоне интенсивного воздействия энтомологи обнаружили огромную по&nbsp;сравнению
                     с&nbsp;другими участками численность жужелиц. На&nbsp;первый взгляд&nbsp;&mdash; это хороший показатель.
@@ -201,7 +201,7 @@
                 </p>
             </BaseTextQuotes>
 
-            <BaseTextBlock class="mb-40">
+            <BaseTextBlock class="mb-100">
                 В&nbsp;&laquo;Норникеле&raquo; надеются, что ИПСЭ поможет выстроить рабочую систему управления воздействием
                 на&nbsp;биоразнообразие и&nbsp;в&nbsp;перспективе добиться отсутствия нетто-потерь биоразнообразия,
                 а&nbsp;в&nbsp;идеале&nbsp;&mdash; его чистого прироста.
@@ -268,44 +268,63 @@ export default {
             })
         },
         scrollAnimation() {
-            // const collageItems = Array.from(document.querySelectorAll(".text-block__wrap"));
-            // collageItems.forEach((elem) => {
+            const collageItems = Array.from(document.querySelectorAll(".text-block__wrap"));
+            collageItems.forEach((elem) => {
 
-            //     this.oneScrollTrigger = gsap.fromTo(elem,
-            //         {
-            //             y: 50,
-            //         },
-            //         {
-            //             y: 0,
-            //             duration: 1,
-            //             scrollTrigger: {
-            //                 start: '0% 100%',
-            //                 end: 'bottom 75%',
-            //                 trigger: elem,
-            //                 scrub: true,
-            //                 // markers: true,
-            //             },
-            //         });
-            // });
+                this.oneScrollTrigger = gsap.fromTo(elem,
+                    {
+                        y: 50,
+                    },
+                    {
+                        y: 0,
+                        duration: 1,
+                        scrollTrigger: {
+                            start: '0% 100%',
+                            end: 'bottom 75%',
+                            trigger: elem,
+                            scrub: true,
+                            // markers: true,
+                        },
+                    });
+            });
 
-            // const sidebarItems = Array.from(document.querySelectorAll(".sidebar"));
-            // sidebarItems.forEach((elem) => {
-            //     this.twoScrollTrigger = gsap.fromTo(elem,
-            //         {
-            //             y: 50,
-            //         },
-            //         {
-            //             y: 0,
-            //             duration: 1,
-            //             scrollTrigger: {
-            //                 start: '0% 100%',
-            //                 end: 'bottom 75%',
-            //                 trigger: elem,
-            //                 // markers: true,
-            //                 scrub: true,
-            //             },
-            //         });
-            // });
+            const sidebarItems = Array.from(document.querySelectorAll(".sidebar"));
+            sidebarItems.forEach((elem) => {
+                this.twoScrollTrigger = gsap.fromTo(elem,
+                    {
+                        y: 50,
+                    },
+                    {
+                        y: 0,
+                        duration: 1,
+                        scrollTrigger: {
+                            start: '0% 100%',
+                            end: 'bottom 75%',
+                            trigger: elem,
+                            // markers: true,
+                            scrub: true,
+                        },
+                    });
+            });
+
+            const quotesItems = Array.from(document.querySelectorAll(".text-quotes"));
+            quotesItems.forEach((elem) => {
+                gsap.fromTo(elem,
+                    {
+                        y: 50,
+                    },
+                    {
+                        y: 0,
+                        duration: 1,
+                        scrollTrigger: {
+                            start: '0% 100%',
+                            end: 'bottom 75%',
+                            trigger: elem,
+                            scrub: true,
+                            // markers: true,
+                        },
+                    });
+            });
 
             this.ScrollTrigger = gsap.to(".scroll-bg", {
                 scrollTrigger: {
@@ -423,6 +442,7 @@ export default {
 
     .sidebar {
         width: 50rem;
+
         @media (max-width: 768px) {
             width: unset;
         }
@@ -707,6 +727,14 @@ export default {
         }
     }
 
+    &__impact {
+        @media (max-width: 768px) {
+            &.mb-60 {
+                margin-bottom: 11rem;
+            }
+        }
+    }
+
     &__drop {
         margin: 0 auto;
         display: flex;
@@ -726,6 +754,10 @@ export default {
             width: 90.134rem;
             height: 220rem;
             background-image: url(../../public/img/indicator-drop-mobile.png);
+
+            &.mb-60 {
+                margin-bottom: 4.8rem;
+            }
         }
 
         &-wrap {

@@ -892,6 +892,7 @@ export default {
                 @media (max-width: 768px) {
                     width: 1.5rem;
                     height: 1.5rem;
+                    animation: ripple-blue-min-mobile 0.9s infinite;
                 }
 
                 &_1 {

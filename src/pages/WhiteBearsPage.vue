@@ -1066,7 +1066,7 @@ export default {
 
                 &.remove-active {
                     background-attachment: unset;
-                    background-position: 0 442vh;
+                    background-position: 0 460vh;
                     background-size: contain;
 
                     @media (max-width: 768px) {
@@ -1219,7 +1219,7 @@ export default {
 
                 &.remove-active {
                     background-attachment: unset;
-                    background-position: bottom;
+                    background-position: 0 330vh;
                     background-size: contain;
 
                     @media (max-width: 768px) {

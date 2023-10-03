@@ -60,7 +60,68 @@
                 </p>
             </BaseTextBlock>
 
-            <!---->
+            <section class="indicator__calculation">
+                <div class="indicator__calculation-circle indicator__calculation-circle-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="115" height="115" viewBox="0 0 115 115" fill="none">
+                        <circle cx="57.5" cy="57.5" r="57.5" fill="#D38235" />
+                    </svg>
+                    <div class="indicator__calculation-circle-1-number indicator__calculation-circle-number">1,6</div>
+                </div>
+
+                <div class="indicator__calculation-circle indicator__calculation-circle-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
+                        <circle cx="29" cy="29" r="29" fill="#F9C492" />
+                    </svg>
+                    <div class="indicator__calculation-circle-2-number indicator__calculation-circle-number">0,8</div>
+                </div>
+
+                <div class=" indicator__calculation-circle indicator__calculation-circle-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="88" height="88" viewBox="0 0 88 88" fill="none">
+                        <circle cx="44" cy="44" r="44" fill="#A3550C" />
+                    </svg>
+                    <div class="indicator__calculation-circle-3-number indicator__calculation-circle-number">1,2</div>
+                </div>
+
+                <div class="indicator__calculation-circle-num">
+                    3,6
+                </div>
+
+                <div class="indicator__calculation-circle-4">
+                    <svg width="115" height="115" viewBox="0 0 115 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="57.5" cy="57.5" r="57.5" fill="url(#paint0_linear_2510_20796)" />
+                        <path
+                            d="M35.2872 39H34.2792V26.994H35.3052V37.164L42.8292 26.994H43.8732V39H42.8472V28.686L35.2872 39ZM56.5491 39H55.5051V27.93H47.8911V39H46.8651V26.994H56.5491V39ZM65.1553 39.216C61.7533 39.216 59.0713 36.696 59.0713 33.006C59.0713 29.316 61.7533 26.796 65.1553 26.796C67.0633 26.796 68.5033 27.642 69.5293 28.92L68.6653 29.478C67.9093 28.434 66.5953 27.732 65.1553 27.732C62.3293 27.732 60.1513 29.874 60.1513 33.006C60.1513 36.102 62.3293 38.28 65.1553 38.28C66.5953 38.28 67.9093 37.578 68.6653 36.534L69.5293 37.074C68.4673 38.388 67.0633 39.216 65.1553 39.216ZM75.0891 39.216C73.1631 39.216 71.7771 38.388 70.6971 37.074L71.5611 36.534C72.3351 37.578 73.6491 38.28 75.0891 38.28C77.8071 38.28 79.9311 36.246 80.0571 33.312H73.3251V32.376H80.0391C79.7691 29.604 77.6991 27.732 75.0891 27.732C73.6491 27.732 72.3351 28.434 71.5611 29.478L70.7151 28.92C71.7231 27.642 73.1631 26.796 75.0891 26.796C78.4731 26.796 81.1731 29.316 81.1731 33.006C81.1731 36.696 78.4731 39.216 75.0891 39.216ZM41.1607 56.216C39.4327 56.216 38.1727 55.676 37.2907 54.776L37.7767 54.164C38.5867 54.992 39.7567 55.406 41.1607 55.406C42.8707 55.406 44.0407 54.722 44.0407 53.642C44.0407 52.4 42.6367 51.986 40.9807 51.986H38.9647V51.194H40.9807C42.5287 51.194 43.8787 50.654 43.8787 49.484C43.8787 48.53 42.6187 47.9 40.9987 47.9C39.7207 47.9 38.7487 48.26 37.9927 49.052L37.4527 48.476C38.2627 47.666 39.3787 47.09 40.9627 47.09C43.1587 47.09 44.8687 47.918 44.8687 49.412C44.8687 50.78 43.4647 51.446 42.4927 51.572C43.4827 51.644 45.0487 52.22 45.0487 53.696C45.0487 55.136 43.6267 56.216 41.1607 56.216ZM51.1427 56.216C48.6047 56.216 46.9667 54.182 46.9667 51.644C46.9667 49.106 48.6047 47.09 51.1427 47.09C53.7167 47.09 55.3367 49.106 55.3367 51.644C55.3367 54.182 53.7167 56.216 51.1427 56.216ZM51.1427 55.37C53.1947 55.37 54.3287 53.588 54.3287 51.644C54.3287 49.718 53.1947 47.936 51.1427 47.936C49.1267 47.936 47.9747 49.718 47.9747 51.644C47.9747 53.588 49.1267 55.37 51.1427 55.37ZM58.6899 56H57.7539V47.306H58.6899V51.086H63.6219V47.306H64.5579V56H63.6219V51.914H58.6899V56ZM67.4746 47.306H68.4106V50.852H71.7946C73.5226 50.852 74.4406 52.04 74.4406 53.426C74.4406 54.812 73.5226 56 71.7946 56H67.4746V47.306ZM71.7226 51.68H68.4106V55.154H71.7226C72.8566 55.154 73.4506 54.434 73.4506 53.426C73.4506 52.418 72.8746 51.68 71.7226 51.68ZM76.8706 56H75.9166V47.306H76.8706V56Z"
+                            fill="white" />
+                        <path
+                            d="M48.27 88H44.76V72.55L41.49 75.94L39.45 73.81L45.21 67.99H48.27V88ZM56.3365 86.86C56.3365 88.93 55.1665 90.82 53.5165 91.99L52.1065 90.82C53.0665 90.25 54.0565 89.02 54.2665 88C54.1765 88.03 53.9365 88.09 53.7565 88.09C52.7365 88.09 51.9565 87.31 51.9565 86.2C51.9565 85.06 52.8865 84.13 53.9965 84.13C55.2265 84.13 56.3365 85.12 56.3365 86.86ZM73.74 88H59.25V85.24C67.02 79.36 70.05 76.75 70.05 73.87C70.05 71.77 68.25 70.81 66.42 70.81C64.08 70.81 62.28 71.77 61.02 73.21L58.98 70.9C60.75 68.77 63.57 67.69 66.36 67.69C70.23 67.69 73.62 69.88 73.62 73.87C73.62 77.56 70.23 80.86 64.86 84.91H73.74V88Z"
+                            fill="white" />
+                        <defs>
+                            <linearGradient id="paint0_linear_2510_20796" x1="136.5" y1="69.5" x2="0.0237397" y2="67.6998"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset="0.147404" stop-color="#A3550C" />
+                                <stop offset="0.489005" stop-color="#D38235" />
+                                <stop offset="0.942814" stop-color="#F9C492" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="indicator__calculation-steps">
+                    <div class="indicator__calculation-step indicator__calculation-step-1">
+                        <div class="indicator__calculation-step-number">1</div>
+                        <div class="indicator__calculation-step-descr">Просчитываем отклонения для каждого индикатора
+                            в&nbsp;зоне воздействия</div>
+                    </div>
+                    <div class="indicator__calculation-step indicator__calculation-step-2">
+                        <div class="indicator__calculation-step-number">2</div>
+                        <div class="indicator__calculation-step-descr">Суммируем все коэффициенты</div>
+                    </div>
+                    <div class="indicator__calculation-step indicator__calculation-step-3">
+                        <div class="indicator__calculation-step-number">3</div>
+                        <div class="indicator__calculation-step-descr">Делим сумму на&nbsp;количество индикаторов
+                            в&nbsp;зоне</div>
+                    </div>
+                </div>
+            </section>
 
             <BaseTextBlock class="mb-60">
                 <p class="mb-10">
@@ -256,7 +317,7 @@ export default {
     },
     mounted() {
         this.$nextTick(function () {
-            this.scrollAnimation();
+            this.scrollAnimation()
         })
     },
     methods: {
@@ -426,6 +487,38 @@ export default {
                     toggleClass: { className: "remove-active", targets: ".scroll-2-bg" }
                 },
             });
+
+            this.animationBlock()
+        },
+        animationBlock() {
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".indicator__calculation",
+                    end: () => "+=2000",
+                    // markers: true,
+                    pin: true,
+                    scrub: true,
+                },
+            })
+
+            tl.to(".indicator__calculation-circle", { left: 460 })
+                .to(".indicator__calculation-circle", { left: 465, opacity: 0 })
+                .to(".indicator__calculation-circle-1", { left: 634, top: 194 })
+                .to(".indicator__calculation-circle-2", { left: 703, top: 247 }, "<")
+                .to(".indicator__calculation-circle-3", { left: 698, top: 188 }, "<")
+                .to(".indicator__calculation-circle-number", { display: "none" }, "<")
+                .to(".indicator__calculation-step-2", { opacity: 1 }, "<")
+                .to(".indicator__calculation-circle", { opacity: 1 })
+                .to(".indicator__calculation-circle-1", { opacity: 1, repeat: 0, rotation: 360, transformOrigin: "50px 10%", ease: "linear", })
+                .to(".indicator__calculation-circle-2", { opacity: 1, repeat: 0, rotation: 360, transformOrigin: "10px 70%", ease: "linear", }, "<")
+                .to(".indicator__calculation-circle-3", { opacity: 1, repeat: 0, rotation: 360, transformOrigin: "30px 50%", ease: "linear", }, "<")
+                .to(".indicator__calculation-circle-num", { opacity: 1 }, "<")
+                .to(".indicator__calculation-circle", { opacity: 0 })
+                .to(".indicator__calculation-circle-num", { opacity: 1 }, "<")
+                .to(".indicator__calculation-step-3", { opacity: 1 })
+                .to(".indicator__calculation-circle-4", { opacity: 1 }, "<")
+                .to(".indicator__calculation-circle-4", { left: 1075 })
+
         }
     }
 }
@@ -559,6 +652,127 @@ export default {
             .text-block__wrap {
                 width: 100%;
             }
+        }
+    }
+
+    &__calculation {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 80px;
+        width: 100%;
+        height: 626px;
+        background-image: url(../../public/img/indicator-bg.svg);
+        background-repeat: no-repeat;
+        background-position: center 80px;
+        background-size: 984px 338px;
+
+        &-steps {
+            display: flex;
+            gap: 90px;
+            width: 984px;
+        }
+
+        &-step {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #A46A32;
+            opacity: 0.2;
+
+            &-number {
+                font-size: 60px;
+                font-weight: 300;
+                line-height: 130%;
+            }
+
+            &-descr {
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 130%;
+            }
+        }
+
+        &-step-1 {
+            opacity: 1;
+        }
+
+        &-circle-1 {
+            position: absolute;
+            width: 115px;
+            height: 115px;
+            top: 95px;
+            // left: 460px;
+            left: 253px;
+
+            &-number {
+                position: absolute;
+                top: 40px;
+                left: 39px;
+                font-size: 30px;
+                color: #fff;
+                font-weight: 600;
+                line-height: 130%;
+            }
+        }
+
+        &-circle-2 {
+            position: absolute;
+            width: 58px;
+            height: 58px;
+            top: 217px;
+            left: 354px;
+            // left: 460px;
+
+            &-number {
+                position: absolute;
+                top: 11px;
+                left: 7px;
+                font-size: 30px;
+                color: #fff;
+                font-weight: 600;
+                line-height: 130%;
+            }
+        }
+
+        &-circle-3 {
+            position: absolute;
+            width: 88px;
+            height: 88px;
+            top: 296px;
+            left: 244px;
+
+            &-number {
+                position: absolute;
+                top: 26px;
+                left: 26px;
+                font-size: 30px;
+                color: #fff;
+                font-weight: 600;
+                line-height: 130%;
+            }
+        }
+
+        &-circle-4 {
+            position: absolute;
+            width: 115px;
+            height: 115px;
+            top: 191px;
+            left: 890px;
+            opacity: 0;
+        }
+
+        &-circle-num {
+            position: absolute;
+            top: 226px;
+            left: 692px;
+            font-size: 30px;
+            color: #fff;
+            font-weight: 600;
+            line-height: 130%;
+            opacity: 0;
         }
     }
 

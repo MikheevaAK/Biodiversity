@@ -1,6 +1,6 @@
 <template>
-    <footer class="footer" :class="{ 'footer_orange': this.$route.path === '/big-expedition' }">
-        <div class="footer__top mb-100">
+    <footer class="footer" :class="{ 'footer_orange': this.$route.path === '/big-expedition' || this.$route.path === '/' }">
+        <div v-if="this.$route.path !== '/'" class="footer__top mb-100">
             <div class="footer__map">
                 <div class="footer__block footer__block-big footer__block_active"></div>
                 <div class="footer__block footer__block-small"></div>
@@ -20,7 +20,7 @@
                 Вернуться на&nbsp;карту
             </a>
         </div>
-        <div class="footer__mid">
+        <div  v-if="this.$route.path !== '/'" class="footer__mid">
             <div class="footer__mid-descr">Читать ещё</div>
 
             <div class="footer__mid-img"></div>
@@ -48,7 +48,7 @@
             </div>
         </div>
 
-        <div class="footer__bottom" :class="{ 'footer__bottom_white': this.$route.path === '/big-expedition' }">
+        <div class="footer__bottom" :class="{ 'footer__bottom_white': this.$route.path === '/big-expedition' || this.$route.path === '/' }">
             <div class="footer__bottom-left">
                 <a class="footer__bottom-logo" href="https://nornickel.ru/" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="165" height="34" viewBox="0 0 165 34" fill="none">

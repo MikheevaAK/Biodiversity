@@ -1,7 +1,7 @@
 <template>
     <div class="treasures">
         <BaseHero :title="'Сокровищницы биоразнообразия'" :descr="heroDescr" :img="'img/hero8.jpg'"
-            :imgMobile="'img/hero6-mobile.jpg'" />
+            :imgMobile="'img/hero8-mobile.jpg'" />
         <MainSection>
             <SectionWhite>
                 <BaseTextBlock class="treasures__start">
@@ -547,6 +547,8 @@
                         дома приёма и&nbsp;экологические тропы. Кроме того, компания займётся научно-просветительской
                         работой: поможет с&nbsp;организацией лекций для детей и&nbsp;взрослых.
                     </p>
+                    <BaseNumberBlock class="number-block-2" :textTop="'20&nbsp;млн&nbsp;рублей'"
+                        :textBottom="'&laquo;Норникель&raquo; инвестировал в&nbsp;развитие заказника &laquo;Реликтовые дубы&raquo; с&nbsp;2017 по&nbsp;2019 год'" />
                     <a href="http://www.oopt.aari.ru/oopt/%D0%A0%D0%B5%D0%BB%D0%B8%D0%BA%D1%82%D0%BE%D0%B2%D1%8B%D0%B5-%D0%B4%D1%83%D0%B1%D1%8B"
                         target="_blank" class="treasures__link">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -560,9 +562,6 @@
                             Перейти на&nbsp;сайт заказника &laquo;Реликтовые дубы&raquo;
                         </div>
                     </a>
-
-                    <BaseNumberBlock class="number-block-2" :textTop="'20&nbsp;млн&nbsp;рублей'"
-                        :textBottom="'&laquo;Норникель&raquo; инвестировал в&nbsp;развитие заказника &laquo;Реликтовые дубы&raquo; с&nbsp;2017 по&nbsp;2019 год'" />
                 </BaseTextBlock>
             </SectionOrange>
             <SectionWhite class="mb-0">
@@ -654,6 +653,10 @@ export default {
         gap: 0.903rem;
         align-items: center;
 
+        @media (max-width: 768px) {
+            margin-top: 10rem;
+        }
+
         svg {
             width: 1.389rem;
             height: 1.389rem;
@@ -681,10 +684,20 @@ export default {
         text-align: center;
         margin-bottom: 4.16667rem;
 
+        @media (max-width: 768px) {
+            margin-bottom: 9.16667rem;
+        }
+
         img {
             width: 26.528rem;
             height: 8.542rem;
             margin-bottom: 1.875rem;
+
+            @media (max-width: 768px) {
+                width: 100%;
+                height: auto;
+                margin-bottom: 4.833rem;
+            }
         }
     }
 
@@ -708,6 +721,7 @@ export default {
 
             @media (max-width: 768px) {
                 margin-top: 0;
+                width: unset;
             }
         }
     }
@@ -719,6 +733,12 @@ export default {
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100%;
+
+        @media (max-width: 768px) {
+            width: 89.6rem;
+            height: 89.6rem;
+            margin: 0 auto;
+        }
 
         &-text {
             position: absolute;
@@ -904,6 +924,14 @@ export default {
                 background-image: url(../../public/img/treasures-map-6.webp);
             }
 
+            @media (max-width: 768px) {
+                background-image: url(../../public/img/treasures-map-6-mobile.png);
+
+                @supports (background-image: url(../../public/img/treasures-map-6-mobile.webp)) {
+                    background-image: url(../../public/img/treasures-map-6-mobile.webp);
+                }
+            }
+
             .treasures__photo-block {
                 position: absolute;
                 top: 14rem;
@@ -940,6 +968,10 @@ export default {
             bottom: 17rem;
             width: 19rem;
             left: 40rem;
+
+            @media (max-width: 768px) {
+                width: unset;
+            }
         }
     }
 

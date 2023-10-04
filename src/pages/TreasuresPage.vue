@@ -23,6 +23,20 @@
                 </BaseTextBlock>
 
                 <!---->
+                <div class="treasures__map treasures__map-1">
+                    <BaseNumberBlock class="number-block-1" :textTop="'16&nbsp;июля 1992&nbsp;г.'"
+                        :textBottom="'дата создания'" />
+                    <BaseNumberBlock class="number-block-2" :textTop="'14&nbsp;687&nbsp;га'"
+                        :textBottom="'площадь заповедника'" />
+                    <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-1.jpg'" />
+                    <div class="treasures__map-text treasures__map-text-1">
+                        Вместе с&nbsp;норвежским национальным парком &laquo;Эвре-Пасвик&raquo; и&nbsp;финским
+                        &laquo;Вятсяри&raquo; образует трёхсторонний трансграничный парк &laquo;Пасвик-Инари&raquo;
+                    </div>
+                    <div class="treasures__map-text treasures__map-text-2">
+                        Границы заповедника находятся в&nbsp;15&nbsp;км от&nbsp;предприятий &laquo;Норникеля&raquo;
+                    </div>
+                </div>
 
                 <BaseTextBlock class="mb-60" :title="'Флора и фауна'">
                     Больше половины территории &laquo;Пасвика&raquo; покрыто сосновым лесом, а&nbsp;оставшаяся
@@ -86,6 +100,17 @@
                     </p>
                 </BaseTextBlock>
             </SectionWhite>
+            <SectionOrange>
+                <BaseTextBlock class="mb-60" :title="'Лапландский заповедник'" :undertitle="'Мурманская область'">
+                    <p class="mb-10">
+                        Один из&nbsp;старейших заповедников России. Его основали в&nbsp;январе 1930 года для сохранения
+                        популяции дикого северного оленя и&nbsp;защиты природы в&nbsp;нетронутом первозданном состоянии.
+                    </p>
+                    <p>
+                        Границы заповедника находятся в&nbsp;7&nbsp;км от&nbsp;предприятий &laquo;Норникеля&raquo;.
+                    </p>
+                </BaseTextBlock>
+            </SectionOrange>
             <SectionWhite>
                 <BaseSidebar>
                     <p>
@@ -105,14 +130,16 @@
 import BaseHero from '@/layout/BaseHero.vue'
 import MainSection from '@/layout/MainSection'
 import SectionWhite from '@/layout/SectionWhite.vue'
+import SectionOrange from '@/layout/SectionOrange.vue'
 import BaseTextBlock from '@/components/BaseTextBlock.vue'
 import BaseSidebar from '@/components/BaseSidebar'
 import BaseNumberBlock from "@/components/BaseNumberBlock.vue";
+import BasePhoto from "@/components/BasePhoto.vue";
 
 export default {
     components: {
         BaseHero,
-        //     SectionOrange,
+        SectionOrange,
         SectionWhite,
         BaseTextBlock,
         MainSection,
@@ -120,7 +147,8 @@ export default {
         //     BaseTooltip,
         //     BaseDropdownInfo,
         //     BaseCollageInfo,
-            BaseNumberBlock
+        BasePhoto,
+        BaseNumberBlock
     },
     data() {
         return {
@@ -197,5 +225,64 @@ export default {
             }
         }
     }
+
+    &__map {
+        position: relative;
+        height: 36.667rem;
+        margin-bottom: 3.95833rem;
+        background-image: url(../../public/img/treasures-map-1.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+
+        @supports (background-image: url(../../public/img/treasures-map-1.webp)) {
+            background-image: url(../../public/img/treasures-map-1.webp);
+        }
+
+        &-text {
+            position: absolute;
+            font-size: 1.25rem;
+            font-weight: 300;
+            line-height: 130%;
+        }
+
+        &-1 {
+            .treasures__photo-block {
+                position: absolute;
+                top: 14.4rem;
+                left: 55rem;
+            }
+
+            .treasures__map-text-1 {
+                width: 23rem;
+                top: 28.4rem;
+                left: 8.4rem;
+            }
+
+            .treasures__map-text-2 {
+                width: 20rem;
+                top: 28.4rem;
+                left: 69.4rem;
+            }
+
+            .number-block {
+                border-left: none;
+                width: 22rem;
+
+                &-1 {
+                    bottom: unset;
+                    top: 2.4rem;
+                    left: 69.4rem;
+                }
+
+                &-2 {
+                    bottom: unset;
+                    top: 2.3rem;
+                    left: 10.4rem;
+                }
+            }
+        }
+    }
+
 }
 </style>

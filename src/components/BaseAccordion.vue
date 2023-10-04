@@ -13,13 +13,120 @@
                 </svg>
             </div>
         </div>
-        <div class="answer" :class="{ 'open': faq.isOpen }" v-html="faq.answer">
+        <div v-if="faq.mainPageItem" class="answer" :class="{ 'open': faq.isOpen }">
+            <div class=fqa-flex>
+                <div class=fqa-num>01</div>
+                <div class=fqa-text>
+                    Организует ежегодные научные экспедиции совместно с&nbsp;сотрудниками РАН, где изучает экосистемы
+                    дивизионов и&nbsp;наблюдает за&nbsp;состоянием биоразнообразия.
+                </div>
+            </div>
+
+            <div class=fqa-flex>
+                <div class=fqa-num>02</div>
+                <div class=fqa-text>
+                    Проводит исследования и&nbsp;эксперименты по&nbsp;стимулированию естественного восстановления природных
+                    сред.
+                </div>
+            </div>
+
+            <div class=fqa-flex>
+                <div class=fqa-num>03</div>
+                <div class=fqa-text>
+                    Поддерживает работу 
+                    <BaseTooltip :word="'ООПТ'">
+                        Особо охраняемые природные территории&nbsp;&mdash; участки земли или воды, где природа
+                        и&nbsp;её&nbsp;биоразнообразие защищены государством. Создаются для сохранения редких
+                        и&nbsp;уязвимых видов растений, животных и&nbsp;экосистем, а&nbsp;также для поддержания природных
+                        процессов и&nbsp;культурных ценностей. К&nbsp;ООПТ относятся заповедники, национальные парки,
+                        природные заказники или другие участки с&nbsp;особыми правилами и&nbsp;ограничениями, направленными
+                        на&nbsp;долгосрочную защиту природы. <br />Всего в&nbsp;России 13&nbsp;тысяч ООПТ, они
+                        занимают&nbsp;12% площади страны.
+                    </BaseTooltip> и&nbsp;их&nbsp;отдельные научно-исследовательские программы.
+                </div>
+            </div>
+
+            <div class=fqa-flex>
+                <div class=fqa-num>04</div>
+                <div class=fqa-text>
+                    Спонсирует программы по&nbsp;изучению и&nbsp;охране редких и&nbsp;исчезающих видов животных и&nbsp;растений.
+                </div>
+            </div>
+
+            <div class=fqa-flex>
+                <div class=fqa-num>05</div>
+                <div class=fqa-text>
+                    Восстанавливает нарушенные земельные участки, приводит их&nbsp;к&nbsp;исходному или более благоприятному состоянию.
+                </div>
+            </div>
+
+            <div class=fqa-flex>
+                <div class=fqa-num>06</div>
+                <div class=fqa-text>
+                    Снижает уровень загрязнённости воздуха SO₂ с&nbsp;помощью систем улавливания на&nbsp;действующих и&nbsp;проектируемых предприятиях (&laquo;Серная программа&raquo;).
+                </div>
+            </div>
+
+            <div class=fqa-flex>
+                <div class=fqa-num>07</div>
+                <div class=fqa-text>
+                    Строит и&nbsp;модернизирует локальные очистные сооружения на&nbsp;предприятиях, чтобы уменьшить количество загрязняющих веществ, поступающих в&nbsp;водоёмы вместе со&nbsp;сбросами сточных вод.
+                </div>
+            </div>
+
+            <div class=fqa-flex>
+                <div class=fqa-num>08</div>
+                <div class=fqa-text>
+                    Организует выпуск мальков ценных пород рыбы в&nbsp;водные бассейны российских рек.
+                </div>
+            </div>
+
+            <div class=fqa-flex>
+                <div class=fqa-num>09</div>
+                <div class=fqa-text>
+                    Отслеживает состояние мест, где размещаются отходы, и&nbsp;здоровье экосистем вокруг таких объектов.
+                </div>
+            </div>
+
+            <div class=fqa-flex>
+                <div class=fqa-num>10</div>
+                <div class=fqa-text>
+                    Соблюдает шумовой режим при взрывных и&nbsp;других работах.
+                </div>
+            </div>
+
+            <div class=fqa-flex>
+                <div class=fqa-num>11</div>
+                <div class=fqa-text>
+                    Отслеживает уровень загрязнённости природных сред с&nbsp;помощью экологического мониторинга.
+                </div>
+            </div>
+
+            <div class=fqa-flex>
+                <div class=fqa-num>12</div>
+                <div class=fqa-text>
+                    Повышает готовность к&nbsp;аварийным ситуациям, которые могут повлиять на&nbsp;окружающую природную среду.
+                </div>
+            </div>
+
+            <div class=fqa-flex>
+                <div class=fqa-num>13</div>
+                <div class=fqa-text>
+                    Ограничивает некоторые виды работ там, где были обнаружены наиболее значимые ценности биоразнообразия: охраняемые виды и&nbsp;уникальные природные экосистемы.
+                </div>
+            </div>
+        </div>
+        <div v-else class="answer" :class="{ 'open': faq.isOpen }" v-html="faq.answer">
         </div>
     </div>
 </template>
 
 <script>
+import BaseTooltip from '@/components/BaseTooltip.vue'
 export default {
+    components: {
+        BaseTooltip
+    },
     props: {
         faq: {
             type: Object,
@@ -67,26 +174,25 @@ export default {
         .faq_svg {
             position: relative;
             display: flex;
-            margin-right: 10px;
-            width: 29px;
-            height: 29px;
+            margin-right: 0.695rem;
+            width: 2.014rem;
+            height: 2.014rem;
             flex-shrink: 0;
 
             @media (max-width: 768px) {
-                width: 29px;
-                height: 29px;
+                width: 7.734rem;
+                height: 7.734rem;
             }
         }
 
         .faq_svg__minus {
             position: absolute;
-            width: 29px;
-            height: 29px;
-            transition: .5s;
+            width: 2.014rem;
+            height: 2.014rem;
 
             @media (max-width: 768px) {
-                width: 29px;
-                height: 29px;
+                width: 7.734rem;
+                height: 7.734rem;
             }
 
             &:last-child {
@@ -106,7 +212,7 @@ export default {
         font-weight: 300;
         font-size: 1.25rem;
         line-height: 130%;
-        transition: overflow .5s;
+        transition: .5s;
 
         @media (max-width: 768px) {
             font-size: 4.8rem;

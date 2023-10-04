@@ -523,7 +523,7 @@ import BigMap from '@/components/BigMap.vue'
 import BaseTextBlock from '@/components/BaseTextBlock.vue'
 import MainSection from '@/layout/MainSection'
 import BaseSidebar from '@/components/BaseSidebar'
-import BaseTooltip from '@/components/ BaseTooltip.vue'
+import BaseTooltip from '@/components/BaseTooltip.vue'
 import BaseNumberBlock from "@/components/BaseNumberBlock.vue";
 import BaseCollageInfo from '@/components/BaseCollageInfo.vue'
 import BaseDropdownInfo from '@/components/BaseDropdownInfo.vue'

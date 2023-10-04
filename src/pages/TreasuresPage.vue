@@ -49,7 +49,7 @@
                     <BaseNumberBlock :textTop="'1814&nbsp;видов'" :textBottom="'растений и&nbsp;грибов'" />
                 </div>
 
-                <BaseTextBlock class="mb-60">
+                <BaseTextBlock>
                     Но&nbsp;&laquo;Пасвик&raquo; впечатляет не&nbsp;только своей природой&nbsp;&mdash; немало интересного
                     здесь найдут этнографы и&nbsp;антропологи. В&nbsp;разное время на&nbsp;территории, занятой в&nbsp;наши
                     дни заповедником, жили саамы, финны, русские и&nbsp;норвежцы, а&nbsp;на&nbsp;некоторых участках
@@ -59,7 +59,23 @@
                     некоторые из&nbsp;них:
                 </BaseTextBlock>
 
-                <!---->
+                <div class="treasures-1 mb-100 treasures__scroll-block">
+                    <TreasuresScrollSwiper1 />
+                    <svg class="mobile-icon-scroll" width="96" height="54" viewBox="0 0 96 54" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M83.6023 17.4167L77.934 11.7325L80.1665 9.5L89.6665 19L80.1665 28.5L77.934 26.2675L83.6023 20.5833H64.3332V17.4167H83.6023Z"
+                            fill="#DEDEDE" />
+                        <path
+                            d="M12.3977 17.4167L18.066 11.7325L15.8335 9.5L6.3335 19L15.8335 28.5L18.066 26.2675L12.3977 20.5833H31.6668V17.4167H12.3977Z"
+                            fill="#DEDEDE" />
+                        <circle cx="48.5" cy="18.5" r="18.5" fill="#DEDEDE" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M40.35 28.4855C39.9499 27.8918 39.5705 26.1688 39.2545 25.0944C38.9395 24.0217 38.6892 23.5984 38.3004 23.3184C37.912 23.0376 37.386 22.9021 36.9063 22.8755C36.4258 22.8492 35.9928 22.9325 35.6618 23.0766C35.3324 23.2208 35.1051 23.4235 34.9103 23.9518C34.714 24.48 34.5514 25.3325 34.4674 26.9558C34.3833 28.5791 34.377 30.9702 34.531 33.3717C34.6853 35.7724 34.9991 38.1823 35.1574 39.5283C35.3156 40.8725 35.3191 41.1534 35.0153 41.8695C34.7122 42.5854 34.1016 43.7378 33.7124 44.4612C33.3231 45.1828 33.1545 45.4749 34.9587 46.6846C36.7635 47.8938 40.5421 50.0189 42.496 51.0641C44.4504 52.1085 44.5815 52.0722 44.8609 51.7324C45.1397 51.3919 45.567 50.7478 45.9377 50.1532C46.308 49.5593 46.6215 49.0162 46.9986 48.6489C47.3758 48.2814 47.8164 48.0898 48.2327 47.9417L49.4905 47.5249C49.9396 47.366 50.4458 47.1569 51.0549 46.6731C51.6641 46.1895 52.3767 45.4302 53.3443 43.8995C54.3099 42.3677 55.5312 40.0643 56.2654 38.6492C56.9996 37.2351 57.2479 36.7089 57.3446 36.2082C57.441 35.7062 57.3864 35.2298 57.1153 34.7944C56.8437 34.3588 56.3554 33.9653 55.907 33.7903C55.4588 33.6147 55.0494 33.6562 54.6466 33.9257C54.2436 34.1945 53.8471 34.6903 53.589 35.0424C53.3298 35.3948 53.2091 35.6039 53.0439 35.7024C52.8769 35.8009 52.6629 35.789 52.7343 35.5237C52.8049 35.2579 53.1599 34.7391 53.5216 34.1126C53.8838 33.4853 54.2522 32.7506 54.442 32.1365C54.6321 31.5215 54.6431 31.0257 54.5075 30.642C54.3717 30.257 54.0899 29.9826 53.7837 29.7504C53.4783 29.5186 53.1481 29.3279 52.8197 29.2777C52.4907 29.2272 52.1645 29.3166 51.8807 29.5699C51.5964 29.824 51.3549 30.2422 51.0959 30.5941C50.8377 30.9465 50.5617 31.2337 50.371 31.373C50.1809 31.5143 50.0742 31.5082 50.2741 31.0676C50.4737 30.6253 50.9806 29.7473 51.305 29.0437C51.629 28.3389 51.7707 27.8076 51.7607 27.3008C51.7512 26.7931 51.5893 26.3109 51.3233 25.9618C51.0577 25.6135 50.6859 25.3989 50.2713 25.3544C49.8563 25.3107 49.3998 25.4356 48.9604 25.7672C48.5211 26.0989 48.1005 26.6364 47.8262 26.9236C47.5508 27.2095 47.4198 27.2455 47.6608 26.8281C47.9018 26.4107 48.5159 25.538 49.5339 23.8696C50.5527 22.2017 51.9763 19.7359 52.7013 18.2887C53.4269 16.841 53.4551 16.4114 53.3889 15.955C53.3217 15.498 53.1601 15.0159 52.886 14.6333C52.6114 14.2532 52.2228 13.9727 51.8117 13.8747C51.4003 13.7756 50.9672 13.8598 50.5274 14.0518C50.0851 14.2434 49.6381 14.5419 48.1481 16.8861C46.6581 19.2284 44.1247 23.6165 42.6471 26.0791C41.1709 28.541 40.7504 29.0785 40.35 28.4853L40.35 28.4855Z"
+                            fill="#626261" />
+                    </svg>
+                </div>
+
                 <BaseTextBlock class="mb-60" :title="'Помощь «Норникеля»'">
                     <p class="mb-10">
                         В&nbsp;2017 году компания &laquo;Норникель&raquo; выделила более 70&nbsp;млн рублей
@@ -345,11 +361,11 @@
                     Границы заповедника находятся в&nbsp;7&nbsp;км от&nbsp;предприятий &laquo;Норникеля&raquo;.
                 </BaseTextBlock>
 
-                <div class="treasures__map treasures__map-2">
-                    <BaseNumberBlock class="number-block-1" :textTop="'январь 1930&nbsp;г.'"
-                        :textBottom="'дата создания'" />
-                    <BaseNumberBlock class="number-block-2" :textTop="'278 &thinsp;435&nbsp;га'" :textBottom="'площадь'" />
-                    <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-2.jpg'" />
+                <div class="treasures__map treasures__map-4">
+                    <BaseNumberBlock class="number-block-1" :textTop="'11&nbsp;мая&nbsp;1993&nbsp;г.'"
+                        :textBottom="'территория получила статус особо охраняемой'" />
+                    <BaseNumberBlock class="number-block-2" :textTop="' 4&nbsp;169&nbsp;222&nbsp;га'"
+                        :textBottom="'площадь'" />
                 </div>
 
                 <BaseTextBlock class="mb-60">
@@ -406,8 +422,150 @@
                     <BaseNumberBlock class="number-block-2" :textTop="'26,45&nbsp;млн&nbsp;рублей'"
                         :textBottom="'общая сумма грантов, которые &laquo;Заповедники Таймыра&raquo; получили от&nbsp;&laquo;Норникеля&raquo;'" />
                 </BaseTextBlock>
+
+                <div class="treasures__bear">
+                    <div class="treasures__bear-title">
+                        Белый медведь
+                    </div>
+                    <div class="treasures__bear-descr">
+                        <p class="mb-10">
+                            В&nbsp;2012 году &laquo;Норникель&raquo; выделил 7,43 млн рублей на&nbsp;проведение
+                            &laquo;переписи&raquo; белых медведей в&nbsp;Большом Арктическом заповеднике. Учёные взяли
+                            у&nbsp;животных анализы крови и&nbsp;шерсти, а&nbsp;также пометили хищников ошейниками
+                            и&nbsp;чипами.
+                        </p>
+                        <p>
+                            Но&nbsp;компания финансирует не&nbsp;только научную работу&nbsp;&mdash; иной раз
+                            ей&nbsp;приходится участвовать и&nbsp;в&nbsp;спасательных операциях, когда речь буквально идёт
+                            о&nbsp;жизни и&nbsp;смерти животных.
+                        </p>
+                        <a class="link" href="/white-bears">
+                            <div>Читать про&nbsp;Спасение белых медведей</div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="8" viewBox="0 0 20 8" fill="none">
+                                <path
+                                    d="M19.8536 4.35355C20.0488 4.15829 20.0488 3.84171 19.8536 3.64645L16.6716 0.464466C16.4763 0.269204 16.1597 0.269204 15.9645 0.464466C15.7692 0.659728 15.7692 0.976311 15.9645 1.17157L18.7929 4L15.9645 6.82843C15.7692 7.02369 15.7692 7.34027 15.9645 7.53553C16.1597 7.7308 16.4763 7.7308 16.6716 7.53553L19.8536 4.35355ZM0 4.5H19.5V3.5H0V4.5Z"
+                                    fill="black" />
+                            </svg>
+                        </a>
+                    </div>
+                    <picture>
+                        <source type="image/webp" srcset="img/treasures-bear.webp">
+                        <img src="img/treasures-bear.png" alt="">
+                    </picture>
+                </div>
             </SectionOrange>
             <SectionWhite>
+                <BaseTextBlock class="treasures__start">
+                    <picture>
+                        <source type="image/webp" srcset="img/treasures-3.webp">
+                        <img src="img/treasures-3.png" alt="">
+                    </picture>
+                    <div class="title">Заповедники Забайкальского&nbsp;дивизиона</div>
+                </BaseTextBlock>
+
+                <BaseTextBlock class="mb-60" :title="'Урюмканский заказник'" :undertitle="'Забайкальский край'">
+                    Заказник регионального значения расположен в&nbsp;Газимуро-Заводском районе Забайкальского края
+                    в&nbsp;пределах среднего течения реки Урюмкан. Расстояние от&nbsp;его границ до&nbsp;промышленных
+                    объектов &laquo;Норникеля&raquo; составляет 22&nbsp;км. По&nbsp;мнению учёных, предприятия
+                    Забайкальского дивизиона компании не&nbsp;оказывают заметного воздействия на&nbsp;биологическое
+                    разнообразие и&nbsp;экосистему заказника.
+                </BaseTextBlock>
+
+                <div class="treasures__map treasures__map-5">
+                    <BaseNumberBlock class="number-block-1" :textTop="'1986&nbsp;г.'"
+                        :textBottom="'территория получила статус особо&nbsp;охраняемой'" />
+                    <BaseNumberBlock class="number-block-2" :textTop="'24&nbsp;478&nbsp;га'" :textBottom="'площадь'" />
+                    <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-4.jpg'" />
+                </div>
+
+                <BaseTextBlock class="mb-60" :title="'Флора и фауна'">
+                    На&nbsp;территории заказника преобладают лиственничные леса с&nbsp;подлеском из&nbsp;рододендрона.
+                    Помимо промысловых животных здесь можно встретить редкие и&nbsp;исчезающие виды.
+                </BaseTextBlock>
+
+                <!---->
+
+                <BaseTextBlock class="treasures__help" :title="'Помощь «Норникеля»'">
+                    <p>
+                        В&nbsp;2021 году в&nbsp;Урюмканском заказнике на&nbsp;средства, выделенные &laquo;Норникелем&raquo;,
+                        построили визит-центр и&nbsp;несколько домиков для туристов. Также компания поддерживает научные
+                        исследования и&nbsp;просветительские проекты, проводимые сотрудниками заказника.
+                    </p>
+                    <a href="http://zabaikaloopt.ru/gku-direkciya-oopt-zabajkalskogo/oopt/zakazniki/uryumkanskij/"
+                        target="_blank" class="treasures__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <circle cx="10" cy="10" r="9.5" stroke="#D38235" />
+                            <path
+                                d="M14.5 10C14.5 12.7006 13.9516 15.1209 13.0883 16.8475C12.2101 18.604 11.0893 19.5 10 19.5C8.9107 19.5 7.78993 18.604 6.91168 16.8475C6.04839 15.1209 5.5 12.7006 5.5 10C5.5 7.29937 6.04839 4.87912 6.91168 3.15254C7.78993 1.39605 8.9107 0.5 10 0.5C11.0893 0.5 12.2101 1.39605 13.0883 3.15254C13.9516 4.87912 14.5 7.29937 14.5 10Z"
+                                stroke="#D38235" />
+                            <path d="M0.5 10H19.5" stroke="#D38235" />
+                        </svg>
+                        <div class="treasures__link-descr">
+                            Перейти на&nbsp;сайт Урюмканского заказника
+                        </div>
+                    </a>
+                </BaseTextBlock>
+
+            </SectionWhite>
+            <SectionOrange>
+                <BaseTextBlock class="mb-60" :title="'Заказник «Реликтовые дубы»'" :undertitle="'Забайкальский край'">
+                    <p class="mb-10">
+                        Заказник &laquo;Реликтовые дубы&raquo; находится на&nbsp;востоке Забайкальского края между реками
+                        Газимура, Аргуни и&nbsp;Урюмкана. Роща, в&nbsp;которой растут дубы монгольские (Quercus mongolica),
+                        возникла около 6&nbsp;тыс. лет назад. Этот вид деревьев типичен для Приамурья и&nbsp;Приморья,
+                        однако в&nbsp;Сибири он&nbsp;встречается только в&nbsp;границах заказника. Как и&nbsp;почему дубовая
+                        роща уцелела именно в&nbsp;этом месте, учёные сказать пока не&nbsp;могут.
+                    </p>
+                    <p>
+                        Заказник простирается вдоль границы между Россией и&nbsp;Китаем и&nbsp;включает в&nbsp;себя таёжные
+                        и&nbsp;лесостепные сообщества, пойменные луга и&nbsp;высокотравные луговые степи.
+                    </p>
+                </BaseTextBlock>
+
+                <div class="treasures__map treasures__map-6">
+                    <BaseNumberBlock class="number-block-1" :textTop="'октябрь&nbsp;2011&nbsp;г.'"
+                        :textBottom="'территория получила статус особо охраняемой'" />
+                    <BaseNumberBlock class="number-block-2" :textTop="'30&nbsp;400&nbsp;га'" :textBottom="'площадь'" />
+                </div>
+
+                <BaseTextBlock class="mb-100" :title="'Флора и фауна'">
+                    На&nbsp;территории заказника &laquo;Реликтовые дубы&raquo; насчитывается 56&nbsp;видов растений
+                    и&nbsp;21&nbsp;вид животных, занесённых в&nbsp;Красную книгу. Среди них&nbsp;&mdash; черноголовая
+                    иволга, большеклювая ворона, жужелица изумрудная и&nbsp;другие. Как и&nbsp;в&nbsp;случае с&nbsp;дубами,
+                    многие эти виды широко распространены на&nbsp;Дальнем Востоке, а&nbsp;в&nbsp;Сибири их&nbsp;можно
+                    обнаружить только на&nbsp;территории заказника.
+                </BaseTextBlock>
+
+                <BaseTextBlock class="treasures__help" :title="'Помощь «Норникеля»'">
+                    <p class="mb-10">
+                        Первым делом компания вложила средства в&nbsp;строительство кордона егерей, а&nbsp;также обеспечила
+                        сотрудников заказника техникой и&nbsp;средствами связи. Эта работа уже дала первые результаты:
+                        в&nbsp;&laquo;Реликтовых дубах&raquo; заметно снизился уровень браконьерства.
+                    </p>
+                    <p>
+                        Благодаря поддержке &laquo;Норникеля&raquo; в&nbsp;заказнике появятся база для научных экспедиций,
+                        дома приёма и&nbsp;экологические тропы. Кроме того, компания займётся научно-просветительской
+                        работой: поможет с&nbsp;организацией лекций для детей и&nbsp;взрослых.
+                    </p>
+                    <a href="http://www.oopt.aari.ru/oopt/%D0%A0%D0%B5%D0%BB%D0%B8%D0%BA%D1%82%D0%BE%D0%B2%D1%8B%D0%B5-%D0%B4%D1%83%D0%B1%D1%8B"
+                        target="_blank" class="treasures__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <circle cx="10" cy="10" r="9.5" stroke="#D38235" />
+                            <path
+                                d="M14.5 10C14.5 12.7006 13.9516 15.1209 13.0883 16.8475C12.2101 18.604 11.0893 19.5 10 19.5C8.9107 19.5 7.78993 18.604 6.91168 16.8475C6.04839 15.1209 5.5 12.7006 5.5 10C5.5 7.29937 6.04839 4.87912 6.91168 3.15254C7.78993 1.39605 8.9107 0.5 10 0.5C11.0893 0.5 12.2101 1.39605 13.0883 3.15254C13.9516 4.87912 14.5 7.29937 14.5 10Z"
+                                stroke="#D38235" />
+                            <path d="M0.5 10H19.5" stroke="#D38235" />
+                        </svg>
+                        <div class="treasures__link-descr">
+                            Перейти на&nbsp;сайт заказника &laquo;Реликтовые дубы&raquo;
+                        </div>
+                    </a>
+
+                    <BaseNumberBlock class="number-block-2" :textTop="'20&nbsp;млн&nbsp;рублей'"
+                        :textBottom="'&laquo;Норникель&raquo; инвестировал в&nbsp;развитие заказника &laquo;Реликтовые дубы&raquo; с&nbsp;2017 по&nbsp;2019 год'" />
+                </BaseTextBlock>
+            </SectionOrange>
+            <SectionWhite class="mb-0">
                 <BaseSidebar>
                     <p>
                         Сотрудничество с&nbsp;заповедниками&nbsp;&mdash; один из&nbsp;инструментов &laquo;Норникеля&raquo;
@@ -431,6 +589,7 @@ import BaseTextBlock from '@/components/BaseTextBlock.vue'
 import BaseSidebar from '@/components/BaseSidebar'
 import BaseNumberBlock from "@/components/BaseNumberBlock.vue";
 import BasePhoto from "@/components/BasePhoto.vue";
+import TreasuresScrollSwiper1 from "@/components/TreasuresScrollSwiper1.vue";
 
 export default {
     components: {
@@ -440,7 +599,7 @@ export default {
         BaseTextBlock,
         MainSection,
         BaseSidebar,
-        //     BaseTooltip,
+        TreasuresScrollSwiper1,
         //     BaseDropdownInfo,
         //     BaseCollageInfo,
         BasePhoto,
@@ -674,6 +833,100 @@ export default {
                 }
             }
         }
+
+        &-4 {
+            mix-blend-mode: multiply;
+            // background-image: url(../../public/img/treasures-map-4.png);
+
+            @supports (background-image: url(../../public/img/treasures-map-4.webp)) {
+                background-image: url(../../public/img/treasures-map-4.webp);
+            }
+
+            .treasures__photo-block {
+                position: absolute;
+                top: 17.8rem;
+                left: 47.5rem;
+            }
+
+            .number-block {
+                border-left: none;
+                width: 22rem;
+
+                &-1 {
+                    bottom: unset;
+                    top: 17rem;
+                    left: 72rem;
+                }
+
+                &-2 {
+                    bottom: unset;
+                    top: 17.5rem;
+                    left: 11rem;
+                }
+            }
+        }
+
+        &-5 {
+            background-image: url(../../public/img/treasures-map-5.png);
+
+            @supports (background-image: url(../../public/img/treasures-map-5.webp)) {
+                background-image: url(../../public/img/treasures-map-5.webp);
+            }
+
+            .treasures__photo-block {
+                position: absolute;
+                top: 14rem;
+                left: 58rem;
+            }
+
+            .number-block {
+                border-left: none;
+                width: 22rem;
+
+                &-1 {
+                    bottom: unset;
+                    top: 17rem;
+                    left: 72rem;
+                }
+
+                &-2 {
+                    bottom: unset;
+                    top: 17rem;
+                    left: 14.5rem;
+                }
+            }
+        }
+
+        &-6 {
+            background-image: url(../../public/img/treasures-map-6.png);
+
+            @supports (background-image: url(../../public/img/treasures-map-6.webp)) {
+                background-image: url(../../public/img/treasures-map-6.webp);
+            }
+
+            .treasures__photo-block {
+                position: absolute;
+                top: 14rem;
+                left: 58rem;
+            }
+
+            .number-block {
+                border-left: none;
+                width: 22rem;
+
+                &-1 {
+                    bottom: unset;
+                    top: 17rem;
+                    left: 72rem;
+                }
+
+                &-2 {
+                    bottom: unset;
+                    top: 17rem;
+                    left: 14.5rem;
+                }
+            }
+        }
     }
 
     &__help {
@@ -698,4 +951,131 @@ export default {
         }
     }
 
-}</style>
+    &__bear {
+        position: relative;
+        border-radius: 19px;
+        border: 1px solid var(--grey, #626261);
+        width: 67.09rem;
+        padding: 4rem 3.34rem 4rem 33rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 768px) {
+            width: unset;
+            margin: 0 9.5rem;
+            padding: 40rem 3.76rem 7.47rem 3.76rem;
+            align-items: center;
+        }
+
+        &-title {
+            margin-bottom: 1.3rem;
+            font-size: 1.527778rem;
+            font-weight: 600;
+            line-height: 130%;
+
+            @media (max-width: 768px) {
+                font-size: 4.8rem;
+                text-align: center;
+                width: 54rem;
+            }
+        }
+
+        &-descr {
+            font-size: 1.25rem;
+            font-weight: 300;
+            line-height: 130%;
+            flex-shrink: 0;
+
+            @media (max-width: 768px) {
+                font-size: 4.53334rem;
+                text-align: center;
+            }
+        }
+
+        img {
+            position: absolute;
+            display: block;
+            width: 888px;
+            height: 564px;
+            top: 0rem;
+            left: -28.366rem;
+
+            @media (max-width: 768px) {
+                width: 71.5rem;
+                height: 50.6rem;
+                left: 5.5rem;
+                top: -14.5rem;
+            }
+        }
+
+        .link {
+            margin-top: 1.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+            padding: 0.45rem 1.39rem;
+            border-radius: 32px;
+            background: #fff;
+            font-size: 1.25rem;
+            font-weight: 300;
+            color: var(--Gray-1, #333);
+            line-height: 130%;
+            transition: .3s;
+            width: max-content;
+
+            @media (max-width: 768px) {
+                padding: 3.2rem;
+                font-size: 4.8rem;
+                text-align: center;
+                width: unset;
+                border-radius: 34px
+            }
+
+            svg {
+                width: 20px;
+                height: 8px;
+
+                @media (max-width: 768px) {
+                    display: none;
+                }
+            }
+
+            @media (min-width: 769px) {
+                &:hover {
+                    color: #fff;
+                    background: var(--copper, #D38235);
+
+                    svg path {
+                        fill: #FFF;
+                    }
+                }
+            }
+        }
+    }
+
+    &__scroll-block {
+        margin-top: 4.16666rem;
+        position: relative;
+
+        &__wrap {
+            overflow: hidden;
+        }
+
+        .mobile-icon-scroll {
+            display: none;
+            position: absolute;
+            width: 25.7rem;
+            height: 14.2rem;
+            top: 3rem;
+            right: 7rem;
+
+            @media (max-width: 768px) {
+                display: block;
+            }
+        }
+
+    }
+
+}
+</style>

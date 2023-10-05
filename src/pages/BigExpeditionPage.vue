@@ -822,8 +822,8 @@ export default {
     }
 
     &-team {
-        width: 69.1875rem;
-        height: 23.6875rem;
+        width: 76.88rem;
+        height: 26.32rem;
         margin: 0 auto;
         display: block;
 

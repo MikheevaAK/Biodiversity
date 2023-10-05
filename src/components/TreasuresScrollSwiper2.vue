@@ -3,27 +3,59 @@
         <div class="treasures-2-container">
 
             <div class="treasures-2-item treasures-2-item_1">
-                <div class="treasures-2-item__title">Луток</div>
+                <div class="treasures-2-item__title">Росянка</div>
                 <div class="treasures-2-item__descr">
-                    <p class="mb-10">
-                        Эта утка&nbsp;&mdash; символ &laquo;Пасвика&raquo;. Её&nbsp;изображение с&nbsp;2021 года находится
-                        на&nbsp;логотипе заповедника.
-                    </p>
                     <p>
-                        В&nbsp;других частях России луток довольно редок, но&nbsp;в&nbsp;&laquo;Пасвике&raquo; это один
-                        из&nbsp;самых массовых и&nbsp;типичных видов.
+                        Листья этого растения покрыты капельками клейкого сока. Садящиеся на&nbsp;них насекомые оказываются
+                        в&nbsp;ловушке: они прилипают и&nbsp;уже не&nbsp;могут улететь. После этого росянка закручивает
+                        лист, полностью обволакивая свою жертву, и&nbsp;в&nbsp;течение нескольких дней переваривает добычу.
                     </p>
                 </div>
             </div>
 
             <div class="treasures-2-item treasures-2-item_2">
-                <div class="treasures-2-item__title">Жемчужница европейская</div>
+                <div class="treasures-2-item__title">Живородящая ящерица</div>
                 <div class="treasures-2-item__descr">
-                    Рекордсмен-долгожитель среди пресноводных беспозвоночных: эти моллюски могут прожить свыше 100,
-                    а&nbsp;по&nbsp;некоторым данным, более 200&nbsp;лет.
+                    Благодаря своей устойчивости к&nbsp;низким температурам этот вид ящерицы может обитать даже
+                    в&nbsp;районе Полярного круга. Зимуют эти рептилии под землёй, забираясь в&nbsp;укрытия на&nbsp;глубину
+                    до&nbsp;40&nbsp;см.
                 </div>
             </div>
 
+            <div class="treasures-2-item treasures-2-item_3">
+                <div class="treasures-2-item__title">Калипсо луковичная</div>
+                <div class="treasures-2-item__descr">
+                    Один из&nbsp;10&nbsp;видов орхидей, произрастающих на&nbsp;территории заповедника. Своё название
+                    растение получило в&nbsp;честь нимфы из&nbsp;древнегреческой мифологии&nbsp;&mdash; Калипсо.
+                </div>
+            </div>
+
+            <div class="treasures-2-item treasures-2-item_4">
+                <div class="treasures-2-item__title">Лебедь-кликун</div>
+                <div class="treasures-2-item__descr">
+                    В&nbsp;Лапландский заповедник эти птицы прилетают с&nbsp;мест зимовки в&nbsp;марте&nbsp;&mdash; начале
+                    апреля. Холода им&nbsp;не&nbsp;страшны&nbsp;&mdash; главное, чтобы была открытая вода, где лебеди могут
+                    кормиться. Эти птицы моногамны и&nbsp;образуют пару на&nbsp;всю жизнь.
+                </div>
+            </div>
+
+            <div class="treasures-2-item treasures-2-item_5">
+                <div class="treasures-2-item__title">Обыкновенный серый сорокопут</div>
+                <div class="treasures-2-item__descr">
+                    Эта крупная певчая птица&nbsp;&mdash; безжалостный охотник. Основу её&nbsp;рациона составляют мышевидные
+                    грызуны, ящерицы и&nbsp;крупные насекомые. Пойманную добычу сорокопут может запасать впрок, нанизывая
+                    жертв на&nbsp;острые сучки и&nbsp;шипы.
+                </div>
+            </div>
+
+            <div class="treasures-2-item treasures-2-item_6">
+                <div class="treasures-2-item__title">Дикий северный олень</div>
+                <div class="treasures-2-item__descr">
+                    Единственный вид оленей, у&nbsp;которого рога имеют как самцы, так и&nbsp;самки. В&nbsp;Лапландском
+                    заповеднике обитает примерно 1000 этих животных. Чтобы пережить суровые зимы, олени на&nbsp;время
+                    сбиваются в&nbsp;стада по&nbsp;100 и&nbsp;более особей.
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -46,7 +78,7 @@ export default {
             if (window.innerWidth > 768) {
                 const panels = gsap.utils.toArray(".treasures-2-container .treasures-2-item");
                 gsap.to(".treasures-2-container", {
-                    xPercent: -8.8 * (panels.length - 1),
+                    xPercent: -9.2 * (panels.length - 1),
                     ease: "none",
                     scrollTrigger: {
                         trigger: ".treasures-2",
@@ -67,20 +99,20 @@ export default {
 .treasures-2 {
     position: relative;
     overflow: hidden;
+    background-color: #F7F6F2;
 
     &-container {
         display: flex;
-        width: 178rem;
+        width: 184rem;
         height: 38.12rem;
-        background-image: url(../../public/img/treasures-scroll-1.png);
+        background-image: url(../../public/img/treasures-scroll-2.png);
         background-repeat: no-repeat;
         background-size: 100%;
 
         @media (max-width: 768px) {
-            width: 554rem;
+            width: 652rem;
             height: 100%;
-            background-position: bottom;
-            background-image: url(../../public/img/treasures-scroll-1-mobile.png);
+            background-image: url(../../public/img/treasures-scroll-2-mobile.png);
 
             &__wrap {
                 width: unset;
@@ -131,8 +163,8 @@ export default {
         }
 
         &_1 {
-            width: 38.889rem;
-            padding: 6.5278rem 15.904rem 0 5.21rem;
+            width: 27.889rem;
+            padding: 4.1rem 3.795rem 0 3.5rem;
 
             @media (max-width: 768px) {
                 width: 118rem;
@@ -141,8 +173,8 @@ export default {
         }
 
         &_2 {
-            width: 25.487rem;
-            padding: 10rem 9.1rem 0 0;
+            width: 20.487rem;
+            padding: 13.403rem 4.1rem 0 0;
 
             @media (max-width: 768px) {
                 width: 69rem;
@@ -151,8 +183,8 @@ export default {
         }
 
         &_3 {
-            width: 25.4866rem;
-            padding: 19rem 5.3472rem 0 3rem;
+            width: 23.4866rem;
+            padding: 4rem 5.3472rem 0 0;
 
             @media (max-width: 768px) {
                 width: 103rem;
@@ -161,8 +193,8 @@ export default {
         }
 
         &_4 {
-            width: 22.778rem;
-            padding: 10.97rem 7.56945rem 14.514rem 0;
+            width: 58.778rem;
+            padding: 9.97rem 38rem 0 0;
 
             @media (max-width: 768px) {
                 width: 95rem;
@@ -171,8 +203,8 @@ export default {
         }
 
         &_5 {
-            width: 48.23rem;
-            padding: 6.458rem 27.4rem 0 0;
+            width: 38.23rem;
+            padding: 10.458rem 19.4rem 0 0;
 
             @media (max-width: 768px) {
                 width: 186rem;
@@ -181,8 +213,8 @@ export default {
         }
 
         &_6 {
-            width: 16.32rem;
-            padding: 9rem 1rem 0 0;
+            width: 26.32rem;
+            padding: 3.2rem 1rem 0 0;
 
             @media (max-width: 768px) {
                 width: 81rem;

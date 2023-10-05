@@ -128,8 +128,8 @@ export default {
     .mobile-icon-scroll {
         display: none;
         position: absolute;
-        width: 25.7rem;
-        height: 14.2rem;
+        width: 12.8rem;
+        height: 11.2rem;
         top: -20rem;
         right: 7rem;
 

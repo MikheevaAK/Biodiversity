@@ -12,9 +12,11 @@
                     <ul class="team-item__list">
                         <li class="team-item__list-item">Определяли уровень загрязнения ручьёв, рек и озёр;
                         </li>
-                        <li class="team-item__list-item">Вычисляли, сколько в&nbsp;воде содержится нефтепродуктов и&nbsp;тяжёлых металлов;
+                        <li class="team-item__list-item">Вычисляли, сколько в&nbsp;воде содержится нефтепродуктов
+                            и&nbsp;тяжёлых металлов;
                         </li>
-                        <li class="team-item__list-item">Исследовали воду на&nbsp;мутность, количество взвесей и&nbsp;кислорода.
+                        <li class="team-item__list-item">Исследовали воду на&nbsp;мутность, количество взвесей
+                            и&nbsp;кислорода.
                         </li>
                     </ul>
 
@@ -170,8 +172,8 @@ export default {
     .mobile-icon-scroll {
         display: none;
         position: absolute;
-        width: 25.7rem;
-        height: 14.2rem;
+        width: 12.8rem;
+        height: 11.2rem;
         top: 55rem;
         right: 7rem;
 
@@ -201,6 +203,7 @@ export default {
 
             &:first-child {
                 width: 11rem;
+
                 @media (max-width: 768px) {
                     width: unset;
                 }
@@ -543,5 +546,4 @@ export default {
     @media (max-width: 768px) {
         display: block;
     }
-}
-</style>
+}</style>

@@ -14,10 +14,11 @@
         <div class="photo-block__modal" v-if="isShow">
             <div class="photo-block__modal-wrap" :style="{ 'background-image': image }">
                 <button @click="isShow = false" class="photo-block__button-close">
-                    <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="58" height="58" x="50" y="20" rx="20" ry="20" fill="white" />
-                        <path d="M19.3555 18.6465L39.3555 38.6465" stroke="black" stroke-linecap="round" />
-                        <path d="M39.3555 19.3535L19.3555 39.3535" stroke="black" stroke-linecap="round" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="140" height="141" viewBox="0 0 140 141" fill="none">
+                        <rect x="41" y="38" width="58" height="58" rx="29" fill="white"/>
+                        <line x1="60.3536" y1="56.6464" x2="80.3536" y2="76.6464" stroke="black" />
+                        <line x1="80.3536" y1="57.3536" x2="60.3536" y2="77.3536" stroke="black" />
+
                     </svg>
                 </button>
             </div>
@@ -76,13 +77,25 @@ export default {
         outline: none;
         cursor: pointer;
 
+        @media (max-width: 768px) {
+            width: 7.9rem;
+            height: 7.9rem;
+        }
+
         svg {
             width: 1.25rem;
             height: 1.023rem;
+
+            @media (max-width: 768px) {
+                width: 3.8rem;
+                height: 3.23rem;
+            }
         }
 
-        &:hover {
-            animation: ripple-green .9s linear infinite; 
+        @media (min-width: 769px) {
+            &:hover {
+                animation: ripple-green .9s linear infinite;
+            }
         }
     }
 
@@ -96,6 +109,11 @@ export default {
         background-color: rgba(255, 255, 255, 0.60);
         overflow: hidden;
         z-index: 3;
+
+        @media (max-width: 768px) {
+            // width: 2rem;
+            // height: 2rem;
+        }
     }
 
     &__modal-wrap {
@@ -123,6 +141,7 @@ export default {
         right: 16px;
         border: none;
         outline: none;
+        background-color: transparent;
     }
 }
 </style>

@@ -1,10 +1,10 @@
 <template>
-    <div class="treasures-1-container__wrap">
-        <div class="treasures-1-container">
+    <div class="treasures-2-container__wrap">
+        <div class="treasures-2-container">
 
-            <div class="treasures-1-item treasures-1-item_1">
-                <div class="treasures-1-item__title">Луток</div>
-                <div class="treasures-1-item__descr">
+            <div class="treasures-2-item treasures-2-item_1">
+                <div class="treasures-2-item__title">Луток</div>
+                <div class="treasures-2-item__descr">
                     <p class="mb-10">
                         Эта утка&nbsp;&mdash; символ &laquo;Пасвика&raquo;. Её&nbsp;изображение с&nbsp;2021 года находится
                         на&nbsp;логотипе заповедника.
@@ -16,47 +16,14 @@
                 </div>
             </div>
 
-            <div class="treasures-1-item treasures-1-item_2">
-                <div class="treasures-1-item__title">Жемчужница европейская</div>
-                <div class="treasures-1-item__descr">
+            <div class="treasures-2-item treasures-2-item_2">
+                <div class="treasures-2-item__title">Жемчужница европейская</div>
+                <div class="treasures-2-item__descr">
                     Рекордсмен-долгожитель среди пресноводных беспозвоночных: эти моллюски могут прожить свыше 100,
                     а&nbsp;по&nbsp;некоторым данным, более 200&nbsp;лет.
                 </div>
             </div>
 
-            <div class="treasures-1-item treasures-1-item_3">
-                <div class="treasures-1-item__title">Гапломитриум Хукера</div>
-                <div class="treasures-1-item__descr">
-                    В&nbsp;Мурманской области известно всего 10&nbsp;местонахождений этого мха, причём каждое из&nbsp;них
-                    крайне малочисленное&nbsp;&mdash; не&nbsp;более 30&nbsp;особей.
-                </div>
-            </div>
-
-            <div class="treasures-1-item treasures-1-item_4">
-                <div class="treasures-1-item__title">Акулепейра лапландская</div>
-                <div class="treasures-1-item__descr">
-                    Паук-кругопряд, обитающий на&nbsp;территории Скандинавского полуострова и&nbsp;в&nbsp;Мурманской
-                    области. На&nbsp;территории заповедника &laquo;Пасвик&raquo; удалось встретить всего двух самок.
-                </div>
-            </div>
-
-            <div class="treasures-1-item treasures-1-item_5">
-                <div class="treasures-1-item__title">Обыкновенная кутора</div>
-                <div class="treasures-1-item__descr">
-                    Эта крупная землеройка&nbsp;&mdash; отличный пловец, поэтому охотится не&nbsp;только на&nbsp;насекомых,
-                    но&nbsp;также на&nbsp;рыб и&nbsp;птенцов водоплавающих птиц. В&nbsp;её&nbsp;слюне содержится&nbsp;яд,
-                    обладающий парализующим действием. Благодаря этому кутора может делать запасы из&nbsp;живых,
-                    но&nbsp;обездвиженных животных.
-                </div>
-            </div>
-
-            <div class="treasures-1-item treasures-1-item_6">
-                <div class="treasures-1-item__title">Бородатая неясыть</div>
-                <div class="treasures-1-item__descr">
-                    Один из&nbsp;самых крупных видов неясытей. В&nbsp;отличие от&nbsp;многих других сов активна
-                    не&nbsp;только по&nbsp;ночам, но&nbsp;и&nbsp;в&nbsp;светлое время суток.
-                </div>
-            </div>
         </div>
     </div>
 </template>
@@ -77,16 +44,16 @@ export default {
     methods: {
         scrollAnimation() {
             if (window.innerWidth > 768) {
-                const panels = gsap.utils.toArray(".treasures-1-container .treasures-1-item");
-                gsap.to(".treasures-1-container", {
+                const panels = gsap.utils.toArray(".treasures-2-container .treasures-2-item");
+                gsap.to(".treasures-2-container", {
                     xPercent: -8.8 * (panels.length - 1),
                     ease: "none",
                     scrollTrigger: {
-                        trigger: ".treasures-1",
+                        trigger: ".treasures-2",
                         pin: true,
                         start: "top 10%",
                         scrub: 1,
-                        end: () => "+=" + (document.querySelector(".treasures-1-container").offsetWidth - window.innerWidth)
+                        end: () => "+=" + (document.querySelector(".treasures-2-container").offsetWidth - window.innerWidth)
                     }
                 });
             }
@@ -97,7 +64,7 @@ export default {
 
 
 <style lang="scss">
-.treasures-1 {
+.treasures-2 {
     position: relative;
     overflow: hidden;
 

@@ -3,48 +3,62 @@
         <div class="treasures-4-container">
 
             <div class="treasures-4-item treasures-4-item_1">
-                <div class="treasures-3-item__title">Овцебык</div>
+                <div class="treasures-3-item__title">Красавка</div>
                 <div class="treasures-3-item__descr">
-                    <p>
-                        Когда‑то эти животные паслись по&nbsp;соседству с&nbsp;мамонтами. Пару тысяч лет назад изменение климата и&nbsp;охота привели к&nbsp;тому, что овцебыки исчезли с&nbsp;сибирских просторов. Вновь они появились здесь только в&nbsp;1970-х годах&nbsp;&mdash; несколько десятков животных завезли из&nbsp;Канады. Сейчас на&nbsp;Таймыре обитает около 14&nbsp;тыс. овцебыков, и&nbsp;на&nbsp;окраинах плато Путорана можно встретить их&nbsp;стада.
-                    </p>
+                    Вид занесён в&nbsp;Красную книгу, а&nbsp;во&nbsp;всём мире, по&nbsp;подсчётам орнитологов, осталось
+                    не&nbsp;более 240&nbsp;тыс. этих птиц.
                 </div>
             </div>
 
-            <div class="treasures-3-item treasures-4-item_2">
-                <div class="treasures-3-item__title">Путоранский снежный баран</div>
+            <div class="treasures-4-item treasures-4-item_2">
+                <div class="treasures-3-item__title">Мандаринка</div>
                 <div class="treasures-3-item__descr">
-                    Уникальный эндемичный подвид снежного барана. Ареал его расположен на&nbsp;плато Путорана и&nbsp;более чем на&nbsp;тысячу километров удалён от&nbsp;районов распространения других подвидов снежного барана. Учёные не&nbsp;исключают, что путоранский подвид может быть реликтовым. Занесён в&nbsp;Красную книгу.
+                    Брачный наряд самца этой утки необычайно ярок и&nbsp;красочен: перья окрашены в&nbsp;жёлтый,
+                    оранжевый, синий, зелёный, чёрный и&nbsp;белый цвета. Однако в&nbsp;остальное время самцы выглядят
+                    гораздо скромнее и&nbsp;почти не&nbsp;отличаются от&nbsp;серо-коричневых самок. Не&nbsp;так давно
+                    мандаринки находились под угрозой исчезновения, но&nbsp;сейчас их&nbsp;численность постепенно
+                    восстанавливается. Занесена в&nbsp;Красную книгу.
                 </div>
             </div>
 
             <div class="treasures-4-item treasures-4-item_3">
-                <div class="treasures-3-item__title">Ястребинкa путоранская</div>
+                <div class="treasures-3-item__title">Колонок</div>
                 <div class="treasures-3-item__descr">
-                    Это растение с&nbsp;небольшими ярко-жёлтыми цветками встречается только на&nbsp;западе плато Путорана, в&nbsp;других местах пока не&nbsp;обнаружено. Занесена в&nbsp;Красную книгу Красноярского края.
+                    Зверёк средних размеров, ведёт преимущественно ночной образ жизни. Колонки нередко поселяются
+                    поблизости от&nbsp;населённых пунктов, где охотятся на&nbsp;крыс и&nbsp;мышей, но&nbsp;также могут
+                    напасть на&nbsp;домашнюю птицу и&nbsp;кошек. Занесён в&nbsp;Красную книгу.
                 </div>
             </div>
 
             <div class="treasures-4-item treasures-4-item_4">
-                <div class="treasures-3-item__title">Сибирский углозуб</div>
+                <div class="treasures-3-item__title">Корсак</div>
                 <div class="treasures-3-item__descr">
-                    Единственный вид земноводных, способный обитать в&nbsp;зоне многолетней мерзлоты. Выживать во&nbsp;время холодов и&nbsp;долгих зим животному помогает значительное количество глицерина, вырабатываемого печенью.
+                    Корсаки похожи на&nbsp;обыкновенных лис, но&nbsp;заметно мельче их&nbsp;и&nbsp;более социальны&nbsp;&mdash;
+                    нередко несколько животных селятся вместе. Во&nbsp;время опасности животное притворяется мёртвым, но&nbsp;при
+                    первой&nbsp;же возможности убегает. Корсак занесён в&nbsp;Красную книгу в&nbsp;статусе &laquo;вызывающий
+                    наименьшие опасения&raquo;.
                 </div>
             </div>
 
             <div class="treasures-4-item treasures-4-item_5">
-                <div class="treasures-3-item__title">Сапсан</div>
+                <div class="treasures-3-item__title">Кабарга</div>
                 <div class="treasures-3-item__descr">
-                    Этот сокол считается самой быстрой птицей на&nbsp;планете: во&nbsp;время пикирования он&nbsp;развивает скорость до&nbsp;322&nbsp;км/ч. Сапсан распространён практически на&nbsp;всех континентах (за&nbsp;исключением Антарктиды), однако численность его невысока&nbsp;&mdash; в&nbsp;России этот сокол внесён в&nbsp;Красную книгу.
+                    У&nbsp;этого небольшого оленя нет рогов, зато у&nbsp;самцов из-под верхней губы выступают длинные
+                    саблевидные клыки. Их&nbsp;животные используют в&nbsp;качестве турнирного оружия в&nbsp;битвах за&nbsp;самку.
+                    Известны случаи, когда во&nbsp;время таких поединков один из&nbsp;самцов кабарги смертельно ранил
+                    соперника. Животное занесено в&nbsp;Красную книгу как уязвимый вид.
                 </div>
             </div>
 
             <div class="treasures-4-item treasures-4-item_6">
-                <div class="treasures-3-item__title">Пискулька</div>
+                <div class="treasures-3-item__title">Росомаха</div>
                 <div class="treasures-3-item__descr">
-                    Своё название эта птица получила за&nbsp;характерный звук, издаваемый во&nbsp;время полёта. Занесена в&nbsp;Красную книгу России, всякая охота на&nbsp;неё запрещена.
+                    Этот представитель вида куньих достигает размеров средней собаки. Росомаха известна своей
+                    свирепостью и&nbsp;бесстрашием: она может дать отпор даже животным, значительно превосходящим её&nbsp;по&nbsp;размерам.
+                    Загнанная в&nbsp;угол способна напасть и&nbsp;на&nbsp;человека. Занесена в&nbsp;Красную книгу.
                 </div>
             </div>
+
         </div>
     </div>
 </template>
@@ -67,7 +81,7 @@ export default {
             if (window.innerWidth > 768) {
                 const panels = gsap.utils.toArray(".treasures-4-container .treasures-4-item");
                 gsap.to(".treasures-4-container", {
-                    xPercent: -9.9 * (panels.length - 1),
+                    xPercent: -9.6 * (panels.length - 1),
                     ease: "none",
                     scrollTrigger: {
                         trigger: ".treasures-4",
@@ -92,20 +106,20 @@ export default {
     &-container {
         position: relative;
         display: flex;
-        width: 243rem;
+        width: 188rem;
         height: 38.12rem;
         background-image: url(../../public/img/treasures-scroll-4.png);
         background-repeat: no-repeat;
         background-size: 100%;
 
         @media (max-width: 768px) {
-            width: 652rem;
+            width: 933rem;
             height: 100%;
             background-image: url(../../public/img/treasures-scroll-4-mobile.png);
 
             &__wrap {
                 width: unset;
-                height: 139.467rem;
+                height: 144.467rem;
                 overflow-x: scroll;
                 overflow-y: hidden;
                 scrollbar-width: none;
@@ -119,9 +133,6 @@ export default {
 
     &-item {
         position: absolute;
-        @media (max-width: 768px) {
-            height: 139.467rem;
-        }
 
         &__title {
             padding: 0.4375rem 0.625rem;
@@ -153,65 +164,76 @@ export default {
         }
 
         &_1 {
-            width: 18.7rem;
-            top: 14rem;
-            left: 46rem;
+            width: 14.7rem;
+            top: 4rem;
+            left: 6rem;
 
             @media (max-width: 768px) {
-
+                width: 71.2rem;
+                top: 48rem;
+                left: 172rem;
             }
         }
 
         &_2 {
-            width: 27.5rem;
+            width: 23.4rem;
             top: 1rem;
-            left: 86rem;
+            left: 33rem;
 
             @media (max-width: 768px) {
-
+                width: 82rem;
+                top: 0;
+                left: 331rem;
             }
         }
 
         &_3 {
             width: 18rem;
             top: 10rem;
-            left: 117rem;
+            left: 64rem;
 
             @media (max-width: 768px) {
-
+                width: 59rem;
+                top: 31rem;
+                left: 442rem;
             }
         }
 
         &_4 {
-            width: 20.778rem;
-            top: 16rem;
-            left: 137rem;
+            width: 22.778rem;
+            top: 7rem;
+            left: 97rem;
 
             @media (max-width: 768px) {
-
+                width: 72.778rem;
+                top: 53rem;
+                left: 519rem;
             }
         }
 
         &_5 {
-            width: 19.23rem;
+            width: 24.23rem;
             top: 0;
-            left: 153rem;
+            left: 131rem;
 
             @media (max-width: 768px) {
-
+                width: 71.23rem;
+                top: 0;
+                left: 588rem;
             }
         }
 
         &_6 {
-            width: 17.32rem;
-            top: 7rem;
-            left: 183rem;
+            width: 19.32rem;
+            top: 2rem;
+            left: 164rem;
 
             @media (max-width: 768px) {
-
+                width: 64.32rem;
+                top: 23rem;
+                left: 699rem;
             }
         }
-
     }
 }
 

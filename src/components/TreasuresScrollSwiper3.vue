@@ -106,13 +106,13 @@ export default {
         background-size: 100%;
 
         @media (max-width: 768px) {
-            width: 652rem;
+            width: 933rem;
             height: 100%;
-            background-image: url(../../public/img/treasures-scroll-2-mobile.png);
+            background-image: url(../../public/img/treasures-scroll-3-mobile.png);
 
             &__wrap {
                 width: unset;
-                height: 139.467rem;
+                height: 144.467rem;
                 overflow-x: scroll;
                 overflow-y: hidden;
                 scrollbar-width: none;
@@ -126,9 +126,6 @@ export default {
 
     &-item {
         position: absolute;
-        @media (max-width: 768px) {
-            height: 139.467rem;
-        }
 
         &__title {
             padding: 0.4375rem 0.625rem;
@@ -165,7 +162,9 @@ export default {
             left: 46rem;
 
             @media (max-width: 768px) {
-
+                width: 71.2rem;
+                top: 48rem;
+                left: 172rem;
             }
         }
 
@@ -175,7 +174,9 @@ export default {
             left: 86rem;
 
             @media (max-width: 768px) {
-
+                width: 82rem;
+                top: 0;
+                left: 331rem;
             }
         }
 
@@ -185,7 +186,9 @@ export default {
             left: 117rem;
 
             @media (max-width: 768px) {
-
+                width: 59rem;
+                top: 31rem;
+                left: 442rem;
             }
         }
 
@@ -195,7 +198,9 @@ export default {
             left: 137rem;
 
             @media (max-width: 768px) {
-
+                width: 72.778rem;
+                top: 53rem;
+                left: 519rem;
             }
         }
 
@@ -205,7 +210,9 @@ export default {
             left: 153rem;
 
             @media (max-width: 768px) {
-
+                width: 71.23rem;
+                top: 0;
+                left: 588rem;
             }
         }
 
@@ -215,7 +222,9 @@ export default {
             left: 183rem;
 
             @media (max-width: 768px) {
-
+                width: 64.32rem;
+                top: 23rem;
+                left: 699rem;
             }
         }
 
@@ -225,7 +234,9 @@ export default {
             left: 218rem;
 
             @media (max-width: 768px) {
-
+                width: 65.32rem;
+                top: 10rem;
+                left: 835rem;
             }
         }
     }

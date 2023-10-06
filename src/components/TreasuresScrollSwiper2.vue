@@ -167,8 +167,8 @@ export default {
             padding: 4.1rem 3.795rem 0 3.5rem;
 
             @media (max-width: 768px) {
-                width: 118rem;
-                padding: 14rem 11.46rem 0 16rem;
+                width: 105rem;
+                padding: 12rem 11.46rem 0 16rem;
             }
         }
 
@@ -177,8 +177,8 @@ export default {
             padding: 13.403rem 4.1rem 0 0;
 
             @media (max-width: 768px) {
-                width: 69rem;
-                padding: 34rem 15rem 0 0;
+                width: 67rem;
+                padding: 34rem 11rem 0 0;
             }
         }
 
@@ -187,8 +187,8 @@ export default {
             padding: 4rem 5.3472rem 0 0;
 
             @media (max-width: 768px) {
-                width: 103rem;
-                padding: 76rem 17rem 0 0;
+                width: 78rem;
+                padding: 4rem 14rem 0 0;
             }
         }
 
@@ -197,8 +197,8 @@ export default {
             padding: 9.97rem 38rem 0 0;
 
             @media (max-width: 768px) {
-                width: 95rem;
-                padding: 155px 88px 0 0;
+                width: 199rem;
+                padding: 20.97rem 131rem 0 0;
             }
         }
 
@@ -207,8 +207,8 @@ export default {
             padding: 10.458rem 19.4rem 0 0;
 
             @media (max-width: 768px) {
-                width: 186rem;
-                padding: 24rem 81rem 0 0;
+                width: 125rem;
+                padding: 36rem 60rem 0 0;
             }
         }
 
@@ -217,8 +217,8 @@ export default {
             padding: 3.2rem 1rem 0 0;
 
             @media (max-width: 768px) {
-                width: 81rem;
-                padding: 31rem 6.4rem 0 0;
+                width: 98rem;
+                padding: 13rem 15.4rem 0 0;
             }
         }
     }

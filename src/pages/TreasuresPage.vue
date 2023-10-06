@@ -495,7 +495,7 @@
                         полевых лагерей и&nbsp;привлечение волонтёров.
                     </p>
 
-                    <BaseNumberBlock class="number-block-2" :textTop="'26,45&nbsp;млн&nbsp;рублей'"
+                    <BaseNumberBlock class="number-block-2" :textTop="'26,45&nbsp;млн&nbsp;<span class=desktop-visible>рублей</span>'"
                         :textBottom="'общая сумма грантов, которые &laquo;Заповедники Таймыра&raquo; получили от&nbsp;&laquo;Норникеля&raquo;'" />
                     <a href="https://wikiway.com/russia/bolshoy-arkticheskiy-zapovednik/" target="_blank"
                         class="treasures__link">
@@ -1109,17 +1109,32 @@ export default {
                 @supports (background-image: url(../../public/img/treasures-map-3-mobile.webp)) {
                     background-image: url(../../public/img/treasures-map-3-mobile.webp);
                 }
+
+                height: 146rem;
+                background-position: bottom;
+                padding-left: 4.26667rem;
+                margin-bottom: 11rem;
             }
 
             .treasures__photo-block {
                 position: absolute;
                 top: 17.8rem;
                 left: 47.5rem;
+
+                @media (max-width: 768px) {
+                    top: 97rem;
+                    left: 37.5rem;
+                }
             }
 
             .number-block {
                 border-left: none;
                 width: 22rem;
+
+                @media (max-width: 768px) {
+                    width: unset;
+                    border-left: 1px solid #333;
+                }
 
                 &-1 {
                     bottom: unset;
@@ -1148,17 +1163,21 @@ export default {
                 @supports (background-image: url(../../public/img/treasures-map-4-mobile.webp)) {
                     background-image: url(../../public/img/treasures-map-4-mobile.webp);
                 }
-            }
 
-            .treasures__photo-block {
-                position: absolute;
-                top: 17.8rem;
-                left: 47.5rem;
+                height: 146rem;
+                background-position: bottom;
+                padding-left: 4.26667rem;
+                margin-bottom: 11rem;
             }
 
             .number-block {
                 border-left: none;
                 width: 22rem;
+
+                @media (max-width: 768px) {
+                    width: unset;
+                    border-left: 1px solid #333;
+                }
 
                 &-1 {
                     bottom: unset;
@@ -1178,8 +1197,8 @@ export default {
                 left: 45.5rem;
 
                 @media (max-width: 768px) {
-                    top: 15rem;
-                    left: 45.5rem;
+                    top: 104.5rem;
+                    left: 40.5rem;
                 }
             }
         }
@@ -1197,17 +1216,32 @@ export default {
                 @supports (background-image: url(../../public/img/treasures-map-5-mobile.webp)) {
                     background-image: url(../../public/img/treasures-map-5-mobile.webp);
                 }
+
+                height: 146rem;
+                background-position: bottom;
+                padding-left: 4.26667rem;
+                margin-bottom: 11rem;
             }
 
             .treasures__photo-block {
                 position: absolute;
                 top: 14rem;
                 left: 58rem;
+
+                @media (max-width: 768px) {
+                    top: 92rem;
+                    left: 63.5rem;
+                }
             }
 
             .number-block {
                 border-left: none;
                 width: 22rem;
+
+                @media (max-width: 768px) {
+                    width: unset;
+                    border-left: 1px solid #333;
+                }
 
                 &-1 {
                     bottom: unset;
@@ -1236,17 +1270,21 @@ export default {
                 @supports (background-image: url(../../public/img/treasures-map-6-mobile.webp)) {
                     background-image: url(../../public/img/treasures-map-6-mobile.webp);
                 }
-            }
 
-            .treasures__photo-block {
-                position: absolute;
-                top: 14rem;
-                left: 58rem;
+                height: 146rem;
+                background-position: bottom;
+                padding-left: 4.26667rem;
+                margin-bottom: 11rem;
             }
 
             .number-block {
                 border-left: none;
                 width: 22rem;
+
+                @media (max-width: 768px) {
+                    width: unset;
+                    border-left: 1px solid #333;
+                }
 
                 &-1 {
                     bottom: unset;
@@ -1266,8 +1304,8 @@ export default {
                 left: 46.5rem;
 
                 @media (max-width: 768px) {
-                    top: 14.3rem;
-                    left: 46.5rem;
+                    top: 91.6rem;
+                    left: 36rem;
                 }
             }
         }
@@ -1296,6 +1334,10 @@ export default {
             width: 21.3rem;
             bottom: 2rem;
             left: 41rem;
+
+            @media (max-width: 768px) {
+                width: unset;
+            }
         }
     }
 

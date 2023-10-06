@@ -113,7 +113,7 @@ export default {
         background-size: 100%;
 
         @media (max-width: 768px) {
-            width: 933rem;
+            width: 689rem;
             height: 100%;
             background-image: url(../../public/img/treasures-scroll-4-mobile.png);
 
@@ -169,9 +169,9 @@ export default {
             left: 6rem;
 
             @media (max-width: 768px) {
-                width: 71.2rem;
-                top: 48rem;
-                left: 172rem;
+                width: 59.2rem;
+                top: 13rem;
+                left: 14rem;
             }
         }
 
@@ -182,8 +182,8 @@ export default {
 
             @media (max-width: 768px) {
                 width: 82rem;
-                top: 0;
-                left: 331rem;
+                top: 5rem;
+                left: 118rem;
             }
         }
 
@@ -193,9 +193,9 @@ export default {
             left: 64rem;
 
             @media (max-width: 768px) {
-                width: 59rem;
+                width: 69rem;
                 top: 31rem;
-                left: 442rem;
+                left: 233rem;
             }
         }
 
@@ -205,9 +205,9 @@ export default {
             left: 97rem;
 
             @media (max-width: 768px) {
-                width: 72.778rem;
-                top: 53rem;
-                left: 519rem;
+                width: 80.778rem;
+                top: 20rem;
+                left: 355rem;
             }
         }
 
@@ -217,9 +217,9 @@ export default {
             left: 131rem;
 
             @media (max-width: 768px) {
-                width: 71.23rem;
+                width: 93rem;
                 top: 0;
-                left: 588rem;
+                left: 479rem;
             }
         }
 
@@ -229,9 +229,9 @@ export default {
             left: 164rem;
 
             @media (max-width: 768px) {
-                width: 64.32rem;
-                top: 23rem;
-                left: 699rem;
+                width: 73.32rem;
+                top: 8rem;
+                left: 600rem;
             }
         }
     }

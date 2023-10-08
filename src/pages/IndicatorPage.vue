@@ -400,6 +400,7 @@ export default {
                     trigger: ".scroll-2",
                     start: '0%',
                     scrub: true,
+                    markers: true,
                     toggleClass: { className: "active", targets: ".scroll-2-bg" }
                 },
             })

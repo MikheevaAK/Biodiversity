@@ -507,18 +507,19 @@ export default {
             });
         },
         animationBlock() {
-            this.threeScrollTrigger = gsap.timeline({
-                scrollTrigger: {
-                    trigger: ".indicator__calculation",
-                    start: 'top 10%',
-                    end: '600%',
-                    // markers: true,
-                    pin: true,
-                    scrub: true,
-                },
-            })
+            if (window.innerWidth > 768) {
+                this.threeScrollTrigger = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".indicator__calculation",
+                        start: 'top 10%',
+                        end: '600%',
+                        // markers: true,
+                        pin: true,
+                        scrub: true,
+                    },
+                })
 
-            this.threeScrollTrigger.to(".indicator__calculation-circle", {xPercent: 170 })
+                this.threeScrollTrigger.to(".indicator__calculation-circle", {xPercent: 170 })
                 .to(".indicator__calculation-circle", { xPercent: 200, opacity: 0 })
                 .to(".indicator__calculation-circle-1", { xPercent: 370, yPercent: 70 })
                 .to(".indicator__calculation-circle-2", { xPercent: 492, yPercent: 0 }, "<")
@@ -536,7 +537,39 @@ export default {
                 .to(".indicator__calculation-circle-4", { opacity: 1 }, "<")
                 .to(".indicator__calculation-circle-4", { xPercent: 150 })
 
+            } else {
+                this.threeScrollTrigger = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".indicator__calculation",
+                        start: 'top 10%',
+                        end: '600%',
+                        // markers: true,
+                        pin: true,
+                        scrub: true,
+                    },
+                })
+
+                this.threeScrollTrigger.to(".indicator__calculation-circle", {yPercent: 170 })
+                .to(".indicator__calculation-circle", { yPercent: 200, opacity: 0 })
+                .to(".indicator__calculation-circle-1", { yPercent: 370, xPercent: 70 })
+                .to(".indicator__calculation-circle-2", { yPercent: 492, xPercent: 0 }, "<")
+                .to(".indicator__calculation-circle-3", { yPercent: 483, xPercent: -80 }, "<")
+                .to(".indicator__calculation-circle-number", { display: "none" }, "<")
+                .to(".indicator__calculation-step-2", { opacity: 1 }, "<")
+                .to(".indicator__calculation-circle", { opacity: 1 })
+                .to(".indicator__calculation-circle-1", { opacity: 1, repeat: 0, rotation: 360, transformOrigin: "50px 10%", ease: "linear", })
+                .to(".indicator__calculation-circle-2", { opacity: 1, repeat: 0, rotation: 360, transformOrigin: "10px 70%", ease: "linear", }, "<")
+                .to(".indicator__calculation-circle-3", { opacity: 1, repeat: 0, rotation: 360, transformOrigin: "30px 50%", ease: "linear", }, "<")
+                .to(".indicator__calculation-circle-num", { opacity: 1 }, "<")
+                .to(".indicator__calculation-circle", { opacity: 0 })
+                .to(".indicator__calculation-circle-num", { opacity: 1 }, "<")
+                .to(".indicator__calculation-step-3", { opacity: 1 })
+                .to(".indicator__calculation-circle-4", { opacity: 1 }, "<")
+                .to(".indicator__calculation-circle-4", { xPercent: 150 })
+
+            }
         }
+           
     }
 }
 </script>
@@ -686,6 +719,14 @@ export default {
         background-position: center 5.55556rem;
         background-size: 68.3334rem 23.4723rem;
 
+        @media (max-width: 768px) {
+            height: 181.3334rem;
+            padding: 0;
+            background-image: url(../../public/img/indicator-bg-mobile.svg);
+            background-position: center 32px;
+            background-size: 246px 526px;
+        }
+
         &-steps {
             display: flex;
             gap: 8rem;
@@ -732,6 +773,10 @@ export default {
                 color: #fff;
                 font-weight: 600;
                 line-height: 130%;
+
+                @media (max-width: 768px) {
+                    display: none;
+                }
             }
         }
 
@@ -750,6 +795,10 @@ export default {
                 color: #fff;
                 font-weight: 600;
                 line-height: 130%;
+
+                @media (max-width: 768px) {
+                    display: none;
+                }
             }
         }
 
@@ -768,6 +817,9 @@ export default {
                 color: #fff;
                 font-weight: 600;
                 line-height: 130%;
+                @media (max-width: 768px) {
+                    display: none;
+                }
             }
         }
 

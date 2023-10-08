@@ -1,17 +1,33 @@
 <template>
     <nav class="nav">
         <div class="social">
-            <ul>
-                <li v-for="item in socials" :key="item.name">
-                    <a :id="item.name" target="_blank" :href="getShareLink(item.name)" class="social__link" v-html="item.icon"></a>
-                </li>
-            </ul>
+            <transition name="links">
+                <ul v-show="isOpenShare">
+                    <li v-for="item in socials" :key="item.name">
+                        <a :id="item.name" target="_blank" :href="getShareLink(item.name)" class="social__link" v-html="item.icon"></a>
+                    </li>
+                </ul>
+            </transition>
         </div>
-        <ul class="burger">
-            <!-- <li></li>
-                <li></li>
-            <li></li> -->
-        </ul>
+        <div class="burger">
+            <svg xmlns="http://www.w3.org/2000/svg" :class="{'burger_active' :isOpenLinks }" width="55" height="55" viewBox="0 0 55 55" fill="none">
+                <rect width="55" height="55" fill="#0077C8"/>
+                <path d="M16 34.1172H39.5294" :class="{'first' :isOpenLinks }" stroke="white" stroke-linecap="round"/>
+                <path d="M16 27.0586H39.5294" class="second" stroke="white" stroke-linecap="round"/>
+                <path d="M16 20H39.5294" class="third" stroke="white" stroke-linecap="round"/>
+            </svg>
+            <transition name="links">
+                <ul class="burger__list" v-show="isOpenLinks">
+                    <li class="burger__item" 
+                    v-for="(item, index) in links" 
+                    :key="index" 
+                    :class="{'burger__item_active' : item.link === $route.path}"
+                    >
+                        <a :href="item.link">{{item.title}}</a>
+                    </li>
+                </ul>
+            </transition>
+        </div>
     </nav>
 </template>
   
@@ -36,20 +52,93 @@ export default {
                     link: '',
                     icon: '<svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Group 1978"><rect id="Rectangle 8" width="55" height="55" fill="#0077C8"/><g id="Group 1993"><path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M27.5209 18C30.0122 18.0067 32.0117 20.0427 31.9999 22.5589C31.9871 25.0162 29.9545 27.0089 27.4663 27C25.0039 26.9922 22.9841 24.9528 23.0001 22.49C23.0129 20.0005 25.0338 17.9933 27.5209 18ZM27.5145 24.7039C28.7355 24.6994 29.7086 23.7192 29.7043 22.4967C29.7 21.2741 28.7248 20.3006 27.5027 20.2995C26.2699 20.2984 25.2861 21.2886 25.2958 22.5222C25.3043 23.7414 26.2891 24.7083 27.5145 24.7039Z" fill="white"/><path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M32.7117 28.85C32.1441 29.4256 31.4621 29.8426 30.7041 30.1326C29.988 30.408 29.2026 30.5462 28.426 30.638C28.5437 30.7649 28.5987 30.8272 28.6713 30.8986C29.7273 31.949 30.7855 32.9926 31.8372 34.0453C32.1958 34.4034 32.2695 34.8476 32.0726 35.2645C31.8581 35.7201 31.3752 36.0203 30.901 35.9875C30.6007 35.9671 30.3675 35.8198 30.1596 35.6135C29.3632 34.8204 28.5525 34.0419 27.7726 33.234C27.5449 32.9994 27.436 33.0436 27.2358 33.2476C26.435 34.0634 25.621 34.8679 24.8025 35.6657C24.4351 36.0249 23.9984 36.0894 23.5705 35.8844C23.1184 35.6679 22.8302 35.209 22.8522 34.749C22.8676 34.4374 23.0227 34.1994 23.2383 33.9864C24.2833 32.9552 25.3229 31.9207 26.3646 30.8873C26.4339 30.8193 26.4977 30.7468 26.5978 30.6403C25.1787 30.493 23.8972 30.1474 22.8016 29.2987C22.6652 29.1933 22.5244 29.0913 22.4012 28.9723C21.9205 28.5168 21.8732 27.9944 22.2516 27.4562C22.5772 26.9962 23.1217 26.8727 23.6893 27.1378C23.7993 27.1877 23.9027 27.2523 24.0028 27.3214C26.0467 28.7106 28.8539 28.7491 30.9043 27.3826C31.1067 27.2296 31.3246 27.1027 31.5754 27.0392C32.0649 26.9146 32.5214 27.0925 32.7843 27.5163C33.0846 28.0012 33.0813 28.4738 32.7117 28.85Z" fill="white"/></g></g></svg>'
                 },
-            ]
+            ],
+            links: [
+                {
+                    link: '/norilsk-division',
+                    title: 'Норильский дивизион',
+                },
+                {
+                    link: '/kola-division',
+                    title: 'Кольский дивизион',
+                },
+                {
+                    link: '/transbaikal-division',
+                    title: 'Забайкальский дивизион',
+                },
+                {
+                    link: '/expedition',
+                    title: 'Большая Норильская',
+                },
+                {
+                    link: '/big-expedition',
+                    title: 'Научная экспедиция',
+                },
+                {
+                    link: '/white-bears',
+                    title: 'Спасение белых медведей',
+                },
+                {
+                    link: '/pyasino',
+                    title: 'Вдохнуть жизнь в озеро',
+                },
+                {
+                    link: '/indicator',
+                    title: 'Загадочный ИПСЭ',
+                },
+                {
+                    link: '/treasures-of-biodiversity',
+                    title: 'Сокровищницы биоразнообразия',
+                },
+            ],
+            isOpenShare: false,
+            isOpenLinks: false,
         }
+    },
+    mounted() {
+        this.openShare()
+        this.openLinks()
+        document.addEventListener('click', this.dropdown)
+    },
+    beforeDestroy () {
+        document.removeEventListener('click', this.dropdown)
     },
     methods: {
         getShareLink (name) {
-        if (name === 'vk') {
-            return `https://vkontakte.ru/share.php?url=${document.location.href}&noparse=true`
-        }
-        if (name === 'ok') {
-            return `https://connect.ok.ru/offer?url=${document.location.href}`
-        }
-        if (name === 'telegram') {
-            return `https://t.me/share/url?url=${document.location.href}`;
-        }
+            if (name === 'vk') {
+                return `https://vkontakte.ru/share.php?url=${document.location.href}&noparse=true`
+            }
+            if (name === 'ok') {
+                return `https://connect.ok.ru/offer?url=${document.location.href}`
+            }
+            if (name === 'telegram') {
+                return `https://t.me/share/url?url=${document.location.href}`;
+            }
+        },
+        openShare() {
+            if (window.innerWidth > 768) { 
+                document.querySelector('.social').addEventListener("mouseover", () => {
+                    this.isOpenShare = true
+                })
+                document.querySelector('.social').addEventListener("mouseout", () => {
+                    this.isOpenShare = false
+                })
+            } else {
+                document.querySelector('.social').addEventListener("click", () => {
+                    this.isOpenShare = !this.isOpenShare
+                })
+            }
+        },
+        openLinks() {
+            document.querySelector('.burger').addEventListener("click", () => {
+                    this.isOpenLinks = !this.isOpenLinks
+                })
+        },
+        dropdown(e) {
+            if (!this.$el.contains(e.target)) {
+                this.isOpenShare = false
+                this.isOpenLinks = false
+            }
         },
     }
 }
@@ -77,25 +166,14 @@ export default {
     background-position: center;
     cursor: pointer;
 
-    // &:hover {
-    //     background-image: url(../../public/img/svg/sharing-hover.svg);
-    // }
-
     @media (max-width: 768px) {
         width: 12.77rem;
         height: 12.77rem;
     }
 
-    &:hover {
-        ul {
-            display: block;
-        }
-    }
-
     ul {
         position: absolute;
         top: 100%;
-        display: none;
     }
 
     &__link {
@@ -129,11 +207,99 @@ export default {
     background-position: center;
     width: 3.4375rem;
     height: 3.4375rem;
-    background-image: url(../../public/img/svg/burger.svg);
+    cursor: pointer;
 
     @media (max-width: 768px) {
         width: 12.77rem;
         height: 12.77rem;
+    }
+
+    @keyframes first {
+            0% {
+                transform: translate(0);
+            }
+
+            100% {
+                transform: translate(2.9rem, -1.3rem) rotate(45deg);
+            }
+        }
+
+        @keyframes third {
+            0% {
+                transform: translate(0);
+            }
+
+            100% {
+                transform: translate(-0.5rem, 3.05rem) rotate(-45deg);
+            }
+        }
+
+    &_active {
+        position: relative;
+        z-index: 3;
+        .first {
+            animation: first .3s ease;
+            transform: translate(2.9rem, -1.3rem) rotate(45deg);
+        }
+
+        .second {
+            transform: scale(0);
+        }
+        
+        .third {
+            animation: third .3s ease;
+            transform: translate(-0.5rem, 3.05rem) rotate(-45deg);
+        }
+    }
+
+    &__list {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 3.844rem 1.4rem 2.8rem 1.4rem;
+        background-color: #0077C8;
+        width: 18.519rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5374rem;
+    }
+
+    &__item {
+        color: #fff;
+        font-size: 1.25rem;
+        font-weight: 300;
+        line-height: 130%;
+
+        &_active {
+            font-weight: 600;
+        }
+
+        a {
+            transition: .3s;
+            border-bottom: 1.5px solid transparent;
+        }
+
+        &:hover a {
+            border-bottom-color: #004C97;
+        }
+    }
+}
+
+.links-enter-active {
+animation: link-in .3s;
+}
+
+.links-leave-active {
+animation: link-in .3s reverse;
+}
+
+@keyframes link-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 </style>

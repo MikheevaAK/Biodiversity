@@ -44,10 +44,13 @@
                             или избыточного вылова&nbsp;&mdash; не&nbsp;ясно.
                         </p>
                     </BaseTextBlock>
-                    <picture>
-                        <source type="image/webp" srcset="img/lake-map.webp">
-                        <img class="lake__map-img" src="img/lake-map.png">
-                    </picture>
+                    <div class="lake__map-img">
+                        <div class="circle"></div>
+                        <picture>
+                            <source type="image/webp" srcset="img/lake-map.webp">
+                            <img src="img/lake-map.png">
+                        </picture>
+                    </div>
                 </div>
 
                 <BaseTextBlock :title="'Что делает озеро рыбопродуктивным?'">
@@ -757,6 +760,7 @@ export default {
         align-items: center;
 
         &-img {
+            position: relative;
             margin-top: 1.88rem;
             width: 21.1875rem;
             height: 32.08944rem;
@@ -766,6 +770,25 @@ export default {
                 margin-top: 5.34rem;
                 width: 80.3rem;
                 height: 121.5rem;
+            }
+
+            .circle {
+                position: absolute;
+                top: 26.65rem;
+                left: 13.1rem;
+                width: 0.375rem;
+                height: 0.375rem;
+                z-index: 2;
+                background-color: #333;
+                border-radius: 100%;
+                animation: ripple-black 1s infinite;
+
+                @media (max-width: 768px) {
+                    top: 101rem;
+                    left: 49.7rem;
+                    width: 1.375rem;
+                    height: 1.375rem;
+                }
             }
         }
     }

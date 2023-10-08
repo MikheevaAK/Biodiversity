@@ -341,7 +341,7 @@ export default {
             oneScrollTrigger: null,
             twoScrollTrigger: null,
             threeScrollTrigger: null,
-            fourScrollTrigger: null,
+            ScrollTrigger: null,
             heroDescr: 'Крайний Север нередко называют сокровищницей страны — так много здесь полезных ископаемых. Однако то, что хорошо для экономики, для природы — экологическая нагрузка. С приходом человека меняется не только земля, но и вода: реки, озёра, грунтовые воды и даже многолетняя мерзлота.'
         }
     },

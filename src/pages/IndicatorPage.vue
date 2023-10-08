@@ -187,7 +187,6 @@
             </BaseTextBlock>
 
             <picture>
-                <!-- <source media="(max-width: 768px)" type="image/webp" srcset="img/kola-radius-mobile.webp"> -->
                 <source media="(max-width: 768px)" srcset="img/indicator-schedule-mobile.png">
                 <source type="image/webp" srcset="img/indicator-schedule.webp">
                 <img class="indicator__schedule" src="img/indicator-schedule.png">
@@ -301,30 +300,45 @@ export default {
     components: {
         BaseHero,
         BaseTextQuotes,
-        // SectionWhite,
         BaseTextBlock,
         MainSection,
         BaseSidebar,
-        //     BaseTooltip,
-        //     BaseDropdownInfo,
-        //     BaseCollageInfo,
-        //     BaseNumberBlock
     },
     data() {
         return {
+            oneScrollTrigger: null,
+            twoScrollTrigger: null,
+            threeScrollTrigger: null,
             heroDescr: 'Как оценить состояние экосистемы? Как&nbsp;отличить естественные процессы в&nbsp;сообществе живых организмов от&nbsp;изменений, которые происходят под&nbsp;влиянием антропогенных и&nbsp;техногенных факторов? &laquo;Норникель&raquo; уделяет большое внимание сохранению биоразнообразия, и&nbsp;для&nbsp;него это важные вопросы. Чтобы&nbsp;получить на&nbsp;них ответ и&nbsp;эффективно отслеживать изменения, компания поручила учёным разработать показатель для оценки состояния экосистем. И&nbsp;учёные разработали для компании Интегральный показатель состояния экосистем, сокращённо&nbsp;&mdash; ИПСЭ.'
         }
     },
     mounted() {
         this.$nextTick(function () {
             this.scrollAnimation()
+            this.animationBlock()
         })
+    },
+    beforeDestroy() {
+        this.oneScrollTrigger.kill()
+        this.oneScrollTrigger = null
+
+        this.twoScrollTrigger.kill()
+        this.twoScrollTrigger = null
+
+        this.threeScrollTrigger.kill()
+        this.threeScrollTrigger = null
     },
     methods: {
         scrollMobile() {
             const collageItems = Array.from(document.querySelectorAll(".scroll-bg.active"))
 
             collageItems.forEach((elem) => {
+                elem.css('background-position', '0px ' + document.scrollTop() + 'px')
+            })
+
+            const collageItems2 = Array.from(document.querySelectorAll(".scroll-2-bg.active"))
+
+            collageItems2.forEach((elem) => {
                 elem.css('background-position', '0px ' + document.scrollTop() + 'px')
             })
         },
@@ -387,7 +401,11 @@ export default {
                     });
             });
 
-            this.ScrollTrigger = gsap.to(".scroll-bg", {
+            if (window.innerWidth <= 768) {
+                this.scrollMobile()
+            }
+
+            this.oneScrollTrigger = gsap.to(".scroll-bg", {
                 scrollTrigger: {
                     trigger: ".scroll",
                     start: '0%',
@@ -395,18 +413,6 @@ export default {
                     toggleClass: { className: "active", targets: ".scroll-bg" }
                 },
             })
-            this.ScrollTrigger = gsap.to(".scroll-2-bg", {
-                scrollTrigger: {
-                    trigger: ".scroll-2",
-                    start: '0%',
-                    scrub: true,
-                    markers: true,
-                    toggleClass: { className: "active", targets: ".scroll-2-bg" }
-                },
-            })
-            if (window.innerWidth <= 768) {
-                this.scrollMobile()
-            }
 
             gsap.fromTo(".bg-1",
                 { opacity: '1' },
@@ -438,35 +444,6 @@ export default {
 
                 });
 
-            gsap.fromTo(".bg-4",
-                { opacity: '1' },
-                {
-                    opacity: '0',
-                    scrollTrigger: {
-                        trigger: ".card-4",
-                        start: 'top 0%',
-                        end: 'bottom 50%',
-                        endTrigger: '.card-5',
-                        // markers: true,
-                        scrub: true
-                    },
-
-                });
-            gsap.fromTo(".bg-5",
-                { opacity: '1' },
-                {
-                    opacity: '0',
-                    scrollTrigger: {
-                        trigger: ".card-5",
-                        start: 'top 0%',
-                        end: 'bottom 50%',
-                        endTrigger: '.card-6',
-                        // markers: true,
-                        scrub: true
-                    },
-
-                });
-
             gsap.to(".scroll-bg", {
                 scrollTrigger: {
                     trigger: ".card-3",
@@ -478,35 +455,75 @@ export default {
                 },
             });
 
-            gsap.to(".scroll-2-bg", {
-                scrollTrigger: {
-                    trigger: ".card-6",
-                    start: () => "+=100%",
-                    end: () => "+=" + (document.querySelector(".scroll-2-wrap").offsetHeight),
-                    // markers: true,
-                    scrub: true,
-                    toggleClass: { className: "remove-active", targets: ".scroll-2-bg" }
-                },
-            });
+            // this.twoScrollTrigger = gsap.to(".scroll-2-bg", {
+            //     scrollTrigger: {
+            //         trigger: ".scroll-2",
+            //         // start: 'top',
+            //         // start: () => "+=120%",
+            //         // end: () => "+=" + (document.querySelector(".scroll-2-wrap").offsetHeight),
+            //         scrub: true,
+            //         markers: true,
+            //         toggleClass: { className: "active", targets: ".scroll-2-bg" }
+            //     },
+            // })
 
-            this.animationBlock()
+            // gsap.fromTo(".bg-4",
+            //     { opacity: '1' },
+            //     {
+            //         opacity: '0',
+            //         scrollTrigger: {
+            //             trigger: ".card-4",
+            //             start: 'top 0%',
+            //             end: 'bottom 50%',
+            //             endTrigger: '.card-5',
+            //             // markers: true,
+            //             scrub: true
+            //         },
+
+            //     });
+            // gsap.fromTo(".bg-5",
+            //     { opacity: '1' },
+            //     {
+            //         opacity: '0',
+            //         scrollTrigger: {
+            //             trigger: ".card-5",
+            //             start: 'top 0%',
+            //             end: 'bottom 50%',
+            //             endTrigger: '.card-6',
+            //             // markers: true,
+            //             scrub: true
+            //         },
+
+            //     });
+
+            // gsap.to(".scroll-2-bg", {
+            //     scrollTrigger: {
+            //         trigger: ".card-6",
+            //         start: () => "+=100%",
+            //         end: () => "+=" + (document.querySelector(".scroll-2-wrap").offsetHeight),
+            //         // markers: true,
+            //         scrub: true,
+            //         toggleClass: { className: "remove-active", targets: ".scroll-2-bg" }
+            //     },
+            // });
         },
         animationBlock() {
-            let tl = gsap.timeline({
+            this.threeScrollTrigger = gsap.timeline({
                 scrollTrigger: {
                     trigger: ".indicator__calculation",
-                    end: () => "+=2000",
+                    start: 'top 10%',
+                    end: '600%',
                     // markers: true,
                     pin: true,
                     scrub: true,
                 },
             })
 
-            tl.to(".indicator__calculation-circle", { left: 460 })
-                .to(".indicator__calculation-circle", { left: 465, opacity: 0 })
-                .to(".indicator__calculation-circle-1", { left: 634, top: 194 })
-                .to(".indicator__calculation-circle-2", { left: 703, top: 247 }, "<")
-                .to(".indicator__calculation-circle-3", { left: 698, top: 188 }, "<")
+            this.threeScrollTrigger.to(".indicator__calculation-circle", {xPercent: 170 })
+                .to(".indicator__calculation-circle", { xPercent: 200, opacity: 0 })
+                .to(".indicator__calculation-circle-1", { xPercent: 370, yPercent: 70 })
+                .to(".indicator__calculation-circle-2", { xPercent: 492, yPercent: 0 }, "<")
+                .to(".indicator__calculation-circle-3", { xPercent: 483, yPercent: -80 }, "<")
                 .to(".indicator__calculation-circle-number", { display: "none" }, "<")
                 .to(".indicator__calculation-step-2", { opacity: 1 }, "<")
                 .to(".indicator__calculation-circle", { opacity: 1 })
@@ -518,7 +535,7 @@ export default {
                 .to(".indicator__calculation-circle-num", { opacity: 1 }, "<")
                 .to(".indicator__calculation-step-3", { opacity: 1 })
                 .to(".indicator__calculation-circle-4", { opacity: 1 }, "<")
-                .to(".indicator__calculation-circle-4", { left: 1075 })
+                .to(".indicator__calculation-circle-4", { xPercent: 150 })
 
         }
     }
@@ -662,35 +679,35 @@ export default {
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
-        padding: 80px;
+        padding: 5.55556rem;
         width: 100%;
-        height: 626px;
+        height: 43.4723rem;
         background-image: url(../../public/img/indicator-bg.svg);
         background-repeat: no-repeat;
-        background-position: center 80px;
-        background-size: 984px 338px;
+        background-position: center 5.55556rem;
+        background-size: 68.3334rem 23.4723rem;
 
         &-steps {
             display: flex;
-            gap: 90px;
-            width: 984px;
+            gap: 8rem;
+            width: 68.3rem;
         }
 
         &-step {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 0.556rem;
             color: #A46A32;
             opacity: 0.2;
 
             &-number {
-                font-size: 60px;
+                font-size: 4.16667rem;
                 font-weight: 300;
                 line-height: 130%;
             }
 
             &-descr {
-                font-size: 18px;
+                font-size: 1.25rem;
                 font-weight: 600;
                 line-height: 130%;
             }
@@ -698,21 +715,21 @@ export default {
 
         &-step-1 {
             opacity: 1;
+            width: 29rem;
         }
 
         &-circle-1 {
             position: absolute;
-            width: 115px;
-            height: 115px;
-            top: 95px;
-            // left: 460px;
-            left: 253px;
+            width: 7.9866rem;
+            height: 7.9866rem;
+            top: 6.5972rem;
+            left: 17.56945rem;
 
             &-number {
                 position: absolute;
-                top: 40px;
-                left: 39px;
-                font-size: 30px;
+                top: 2.7778rem;
+                left: 2.7778rem;
+                font-size: 2.08333rem;
                 color: #fff;
                 font-weight: 600;
                 line-height: 130%;
@@ -721,17 +738,16 @@ export default {
 
         &-circle-2 {
             position: absolute;
-            width: 58px;
-            height: 58px;
-            top: 217px;
-            left: 354px;
-            // left: 460px;
+            width: 4.028rem;
+            height: 4.028rem;
+            top: 15.06944rem;
+            left: 25rem;
 
             &-number {
                 position: absolute;
-                top: 11px;
-                left: 7px;
-                font-size: 30px;
+                top: 0.764rem;
+                left: 0.4861rem;
+                font-size: 2.08333rem;
                 color: #fff;
                 font-weight: 600;
                 line-height: 130%;
@@ -740,16 +756,16 @@ export default {
 
         &-circle-3 {
             position: absolute;
-            width: 88px;
-            height: 88px;
-            top: 296px;
-            left: 244px;
+            width: 6.1112rem;
+            height: 6.1112rem;
+            top: 20.55556rem;
+            left: 17rem;
 
             &-number {
                 position: absolute;
-                top: 26px;
-                left: 26px;
-                font-size: 30px;
+                top: 1.80555rem;
+                left: 1.80555rem;
+                font-size: 2.08333rem;
                 color: #fff;
                 font-weight: 600;
                 line-height: 130%;
@@ -758,18 +774,18 @@ export default {
 
         &-circle-4 {
             position: absolute;
-            width: 115px;
-            height: 115px;
-            top: 191px;
-            left: 890px;
+            width: 7.9866rem;
+            height: 7.9866rem;
+            top: 13.26388rem;
+            left: 61.9rem;
             opacity: 0;
         }
 
         &-circle-num {
             position: absolute;
-            top: 226px;
-            left: 692px;
-            font-size: 30px;
+            top: 15.7rem;
+            left: 48.1rem;
+            font-size: 2.08333rem;
             color: #fff;
             font-weight: 600;
             line-height: 130%;

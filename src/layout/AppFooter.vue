@@ -2,16 +2,15 @@
     <footer class="footer" :class="{ 'footer_orange': this.$route.path === '/big-expedition' || this.$route.path === '/' }">
         <div v-if="this.$route.path !== '/'" class="footer__top mb-100">
             <div class="footer__map">
-                <div class="footer__block footer__block-big footer__block_active"></div>
-                <div class="footer__block footer__block-small"></div>
-                <div class="footer__block footer__block-small"></div>
-                <div class="footer__block footer__block-small"></div>
-                <div class="footer__block footer__block-big"></div>
-                <div class="footer__block footer__block-small"></div>
-                <div class="footer__block footer__block-small"></div>
-                <div class="footer__block footer__block-small"></div>
-                <div class="footer__block footer__block-small"></div>
-                <div class="footer__block footer__block-small"></div>
+                <div class="footer__block footer__block-big" :class="{ 'footer__block_active': this.$route.path === '/norilsk-division'}"></div>
+                <div class="footer__block footer__block-small" :class="{ 'footer__block_active': this.$route.path === '/kola-division'}"></div>
+                <div class="footer__block footer__block-small" :class="{ 'footer__block_active': this.$route.path === '/transbaikal-division'}"></div>
+                <div class="footer__block footer__block-small" :class="{ 'footer__block_active': this.$route.path === '/expedition'}"></div>
+                <div class="footer__block footer__block-big" :class="{ 'footer__block_active': this.$route.path === '/big-expedition'}"></div>
+                <div class="footer__block footer__block-small" :class="{ 'footer__block_active': this.$route.path === '/pyasino'}"></div>
+                <div class="footer__block footer__block-big" :class="{ 'footer__block_active': this.$route.path === '/white-bears'}"></div>
+                <div class="footer__block footer__block-small" :class="{ 'footer__block_active': this.$route.path === '/indicator'}"></div>
+                <div class="footer__block footer__block-small" :class="{ 'footer__block_active': this.$route.path === '/treasures-of-biodiversity'}"></div>
             </div>
             <div class="footer__top-descr">
                 Вы&nbsp;собрали первую часть карты биоразнообразия &laquo;Норникель&raquo;.
@@ -171,7 +170,7 @@ export default {
             ],
             list4: [
                 {
-                    link: 'indicator',
+                    link: '/indicator',
                     title: 'Загадочный ИПСЭ',
                 },
                 {

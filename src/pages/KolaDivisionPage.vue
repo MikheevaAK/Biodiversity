@@ -776,6 +776,12 @@ export default {
 
 <style lang="scss">
 .kola {
+    .hero {
+        @media (min-width: 769px) {
+            background-position: top;
+        }
+    }
+    
     .big-map {
         margin-bottom: 2.7778rem;
         // height: 40.19419rem;

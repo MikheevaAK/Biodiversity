@@ -192,13 +192,13 @@
                 <img class="indicator__schedule" src="img/indicator-schedule.png">
             </picture>
 
-            <BaseTextBlock class="mb-40" :title="'Природное или техногенное воздействие?'">
+            <BaseTextBlock class="mb-100" :title="'Природное или техногенное воздействие?'">
                 Отличить сокращение численности индикаторных групп или вида по&nbsp;естественным причинам от&nbsp;тех, что
                 связаны с&nbsp;промышленным воздействием, не&nbsp;всегда бывает просто. Чтобы сделать это, учёные проводят
                 наблюдения на&nbsp;разных участках изучаемой территории.
             </BaseTextBlock>
 
-            <section class="scroll-2 mb-100">
+            <section class="scroll-2 mb-80">
                 <div class="scroll-2-bg bg-4"></div>
                 <div class="scroll-2-bg bg-5"></div>
                 <div class="scroll-2-bg bg-6"></div>
@@ -315,7 +315,6 @@ export default {
     mounted() {
         this.$nextTick(function () {
             this.scrollAnimation()
-            this.animationBlock()
         })
     },
     beforeDestroy() {
@@ -455,57 +454,57 @@ export default {
                 },
             });
 
-            // this.twoScrollTrigger = gsap.to(".scroll-2-bg", {
-            //     scrollTrigger: {
-            //         trigger: ".scroll-2",
-            //         // start: 'top',
-            //         // start: () => "+=120%",
-            //         // end: () => "+=" + (document.querySelector(".scroll-2-wrap").offsetHeight),
-            //         scrub: true,
-            //         markers: true,
-            //         toggleClass: { className: "active", targets: ".scroll-2-bg" }
-            //     },
-            // })
+            this.animationBlock()
 
-            // gsap.fromTo(".bg-4",
-            //     { opacity: '1' },
-            //     {
-            //         opacity: '0',
-            //         scrollTrigger: {
-            //             trigger: ".card-4",
-            //             start: 'top 0%',
-            //             end: 'bottom 50%',
-            //             endTrigger: '.card-5',
-            //             // markers: true,
-            //             scrub: true
-            //         },
+            this.twoScrollTrigger = gsap.to(".scroll-2-bg", {
+                scrollTrigger: {
+                    trigger: ".scroll-2",
+                    start: 'top 20%',
+                    scrub: true,
+                    // markers: true,
+                    toggleClass: { className: "active", targets: ".scroll-2-bg" }
+                },
+            })
 
-            //     });
-            // gsap.fromTo(".bg-5",
-            //     { opacity: '1' },
-            //     {
-            //         opacity: '0',
-            //         scrollTrigger: {
-            //             trigger: ".card-5",
-            //             start: 'top 0%',
-            //             end: 'bottom 50%',
-            //             endTrigger: '.card-6',
-            //             // markers: true,
-            //             scrub: true
-            //         },
+            gsap.fromTo(".bg-4",
+                { opacity: '1' },
+                {
+                    opacity: '0',
+                    scrollTrigger: {
+                        trigger: ".card-4",
+                        start: 'top 0%',
+                        end: 'bottom 50%',
+                        endTrigger: '.card-5',
+                        // markers: true,
+                        scrub: true
+                    },
 
-            //     });
+                });
+            gsap.fromTo(".bg-5",
+                { opacity: '1' },
+                {
+                    opacity: '0',
+                    scrollTrigger: {
+                        trigger: ".card-5",
+                        start: 'top 0%',
+                        end: 'bottom 50%',
+                        endTrigger: '.card-6',
+                        // markers: true,
+                        scrub: true
+                    },
 
-            // gsap.to(".scroll-2-bg", {
-            //     scrollTrigger: {
-            //         trigger: ".card-6",
-            //         start: () => "+=100%",
-            //         end: () => "+=" + (document.querySelector(".scroll-2-wrap").offsetHeight),
-            //         // markers: true,
-            //         scrub: true,
-            //         toggleClass: { className: "remove-active", targets: ".scroll-2-bg" }
-            //     },
-            // });
+                });
+
+            gsap.to(".scroll-2-bg", {
+                scrollTrigger: {
+                    trigger: ".card-6",
+                    start: () => "+=180%",
+                    end: () => "+=" + (document.querySelector(".scroll-2-wrap").offsetHeight),
+                    // markers: true,
+                    scrub: true,
+                    toggleClass: { className: "remove-active", targets: ".scroll-2-bg" }
+                },
+            });
         },
         animationBlock() {
             this.threeScrollTrigger = gsap.timeline({
@@ -804,7 +803,7 @@ export default {
             right: 0;
             z-index: 1;
             height: 100vh;
-            background-position: center;
+            background-position: top;
             background-size: 68.34rem 32.23rem;
             background-repeat: no-repeat;
 
@@ -815,6 +814,7 @@ export default {
 
             &.active {
                 background-attachment: fixed;
+                background-position: center;
                 height: 100%;
 
                 @media (max-width: 768px) {
@@ -826,7 +826,7 @@ export default {
 
                 &.remove-active {
                     background-attachment: unset;
-                    background-position: 15.9rem 310vh;
+                    background-position: 15.9rem 325vh;
                     background-size: 68.34rem 32.23rem;
 
                     @media (max-width: 768px) {

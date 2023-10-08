@@ -263,28 +263,28 @@
 
                     <BaseCollageInfo class="char" :title="'Арктический голец'" />
 
-                    <BaseDropdownInfo class="ground-beetles" :title="'Жужелицы'" :is-modal="true"
+                    <BaseDropdownInfo class="ground-beetles" :title="'Жужелицы'" :is-modal="true" :pulsation-color="'Green-Mist'"
                         :text="'Такие виды, как Amara brunnea, Pterostichus fulvescens, Notiophilus fasciatus и Nebria gyllenhali, отрицательно реагируют на&nbsp;промышленное воздействие и&nbsp;помогают исследователям фиксировать изменения в&nbsp;окружающей среде'" />
-                    <BaseDropdownInfo class="myxomycetes" :title="'Миксомицеты'" :is-modal="true"
+                    <BaseDropdownInfo class="myxomycetes" :title="'Миксомицеты'" :is-modal="true" :pulsation-color="'Green-Mist'"
                         :text="'Миксомицеты занимают промежуточное положение между растениями и&nbsp;животными: похожие внешне на&nbsp;грибы, они постоянно передвигаются и&nbsp;едят. На&nbsp;территории воздействия предприятий исследователи обнаружили 14&nbsp;видов этих существ'" />
-                    <BaseDropdownInfo class="microalgae" :title="'Микроводоросли'" :is-modal="true"
+                    <BaseDropdownInfo class="microalgae" :title="'Микроводоросли'" :is-modal="true" :pulsation-color="'Green-Mist'"
                         :text="'В&nbsp;реках и&nbsp;озёрах дивизиона биологи обнаружили два вида микроводорослей, способных рассказать об&nbsp;экологической обстановке. Похожая на&nbsp;звезду Asterionella formosa живёт только в&nbsp;чистых водоёмах, в&nbsp;то&nbsp;время как её&nbsp;антогонист Dictyosphaerium pulchellum развивается в&nbsp;загрязнённой воде'" />
 
-                    <BaseDropdownInfo class="zooplankton" :title="'Зоопланктон'" :is-modal="true"
+                    <BaseDropdownInfo class="zooplankton" :title="'Зоопланктон'" :is-modal="true" :pulsation-color="'Green-Mist'"
                         :text="'Чтобы оценить состояние водоёмов, исследователи отобрали виды зоопланктона, сигнализирующие о&nbsp;качестве воды. Например, планктонный рачок Limnocalanus macrurus любит чистую воду, а&nbsp;если начинает доминировать планктонная коловратка Brachionus sericus&nbsp;&mdash; вода загрязнена'" />
-                    <BaseDropdownInfo class="palia" :title="'Боганидская палия'" :is-modal="true"
+                    <BaseDropdownInfo class="palia" :title="'Боганидская палия'" :is-modal="true" :pulsation-color="'Green-Mist'"
                         :text="'Считается самой полезной рыбой в&nbsp;мире: кусочек рыбы в&nbsp;30&nbsp;г покрывает суточную потребность человека в&nbsp;полезных жирных кислотах. Встречается также в&nbsp;водоёмах Кольского дивизиона'" />
 
-                    <BaseDropdownInfo class="merlin_mobile" :title="'Кречет'" :color="'#71464E'" :is-modal="true"
+                    <BaseDropdownInfo class="merlin_mobile" :title="'Кречет'" :color="'#71464E'" :is-modal="true" :pulsation-color="'finn'"
                         :text="'Самая крупная птица из&nbsp;отряда соколиных. За&nbsp;последние 20&nbsp;лет её&nbsp;популяция в&nbsp;России сократилась втрое. &laquo;Норникель&raquo; вложил 50&nbsp;млн рублей в&nbsp;поддержку и&nbsp;сохранение вида в&nbsp;2022&ndash;2023&nbsp;гг'" />
 
-                    <BaseDropdownInfo class="deer_mobile" :title="'Дикий северный олень'" :color="'#71464E'"
+                    <BaseDropdownInfo class="deer_mobile" :title="'Дикий северный олень'" :color="'#71464E'" :pulsation-color="'finn'"
                         :is-modal="true"
                         :text="'Отличительная особенность этого вида&nbsp;&mdash; наличие рогов у&nbsp;самок. Наименее изученная и&nbsp;малочисленная популяция дикого северного оленя&nbsp;&mdash; гыданская, она занесена в&nbsp;Красную книгу ЯНАО. По&nbsp;данным исследований, олени почти не&nbsp;мигрируют на&nbsp;дальние расстояния и&nbsp;круглый год остаются в&nbsp;арктической тундре'" />
-                    <BaseDropdownInfo class="lycosus-moss_mobile" :title="'Плаунок плаунковидный'" :is-modal="true"
+                    <BaseDropdownInfo class="lycosus-moss_mobile" :title="'Плаунок плаунковидный'" :is-modal="true" :pulsation-color="'finn'"
                         :color="'#71464E'"
                         :text="'В&nbsp;районе Промышленного Норильска биологи обнаружили несколько участков, ценных для произрастания этого редкого вида растений. Чтобы сохранить популяции плаунка, вокруг этих участков необходимо создавать защитные зоны'" />
-                    <BaseDropdownInfo class="hare_mobile" :title="'Заяц-беляк'" :is-modal="true"
+                    <BaseDropdownInfo class="hare_mobile" :title="'Заяц-беляк'" :is-modal="true" :pulsation-color="'Green-Mist'"
                         :text="'Спасаясь от&nbsp;опасности, развивает скорость до&nbsp;60&nbsp;км/ч'" />
                 </div>
                 <BaseTextBlock class="mb-100" :tooltip="true">

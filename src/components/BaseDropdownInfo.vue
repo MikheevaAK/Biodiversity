@@ -1,7 +1,7 @@
 <template>
     <div class="dropdown-info">
         <div @click="toggleInfo" class="dropdown-info__wrap" :class="toggleClass">
-            <div class="dropdown-info__svg" :style="{ background: color }">
+            <div class="dropdown-info__svg" :style="{ background: color }" :class="`pulsation_${pulsationColor}`">
                 <svg class="dropdown-info__minus" xmlns="http://www.w3.org/2000/svg" width="12" height="2"
                     viewBox="0 0 12 2" fill="none">
                     <path d="M11 0.999996L1 1" stroke="white" stroke-width="2" stroke-linecap="round" />
@@ -63,6 +63,10 @@ export default {
         isModal: {
             type: Boolean,
             default: false
+        },
+        pulsationColor: {
+            type: String,
+            default: 'default'
         }
     },
     methods: {
@@ -225,6 +229,14 @@ export default {
 
     .z-index {
         z-index: 4;
+    }
+
+    .pulsation_Green-Mist {
+        animation: ripple-Green-Mist 1s infinite;
+    }
+
+    .pulsation_finn {
+        animation: ripple-finn 1s infinite;
     }
 }
 </style>

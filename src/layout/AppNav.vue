@@ -3,7 +3,7 @@
         <div class="social">
             <ul>
                 <li v-for="item in socials" :key="item.name">
-                    <a :id="item.name" href="#" class="social__link" v-html="item.icon"></a>
+                    <a :id="item.name" target="_blank" :href="getShareLink(item.name)" class="social__link" v-html="item.icon"></a>
                 </li>
             </ul>
         </div>
@@ -38,6 +38,19 @@ export default {
                 },
             ]
         }
+    },
+    methods: {
+        getShareLink (name) {
+        if (name === 'vk') {
+            return `https://vkontakte.ru/share.php?url=${document.location.href}&noparse=true`
+        }
+        if (name === 'ok') {
+            return `https://connect.ok.ru/offer?url=${document.location.href}`
+        }
+        if (name === 'telegram') {
+            return `https://t.me/share/url?url=${document.location.href}`;
+        }
+        },
     }
 }
 </script>

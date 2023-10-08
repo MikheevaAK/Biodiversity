@@ -215,24 +215,46 @@ export default {
     }
 
     @keyframes first {
-            0% {
-                transform: translate(0);
-            }
-
-            100% {
-                transform: translate(2.9rem, -1.3rem) rotate(45deg);
-            }
+        0% {
+            transform: translate(0);
         }
 
-        @keyframes third {
-            0% {
-                transform: translate(0);
-            }
-
-            100% {
-                transform: translate(-0.5rem, 3.05rem) rotate(-45deg);
-            }
+        100% {
+            transform: translate(2.9rem, -1.3rem) rotate(45deg);
         }
+    }
+
+    @keyframes third {
+        0% {
+            transform: translate(0);
+        }
+
+        100% {
+            transform: translate(-0.5rem, 3.05rem) rotate(-45deg);
+        }
+    }
+
+    @media (max-width: 768px) {
+        @keyframes first {
+        0% {
+            transform: translate(0);
+        }
+
+        100% {
+            transform: translate(9rem, -5rem) rotate(45deg);
+        }
+    }
+
+    @keyframes third {
+        0% {
+            transform: translate(0);
+        }
+
+        100% {
+            transform: translate(-1rem, 8rem) rotate(-45deg);
+        }
+    }
+    }
 
     &_active {
         position: relative;
@@ -240,6 +262,10 @@ export default {
         .first {
             animation: first .3s ease;
             transform: translate(2.9rem, -1.3rem) rotate(45deg);
+
+            @media (max-width: 768px) {
+                transform: translate(9rem, -5rem) rotate(45deg);
+            }
         }
 
         .second {
@@ -249,6 +275,10 @@ export default {
         .third {
             animation: third .3s ease;
             transform: translate(-0.5rem, 3.05rem) rotate(-45deg);
+
+            @media (max-width: 768px) {
+                transform: translate(-1rem, 8rem) rotate(-45deg);
+            }
         }
     }
 
@@ -262,6 +292,12 @@ export default {
         display: flex;
         flex-direction: column;
         gap: 1.5374rem;
+
+        @media (max-width: 768px) {
+            padding: 8rem 5.3333rem 10rem 5.3333rem;
+            width: 73.47rem;
+            gap: 6.4rem;
+        }
     }
 
     &__item {
@@ -269,6 +305,10 @@ export default {
         font-size: 1.25rem;
         font-weight: 300;
         line-height: 130%;
+
+        @media (max-width: 768px) {
+            font-size: 4.53334rem;
+        }
 
         &_active {
             font-weight: 600;

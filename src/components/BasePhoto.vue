@@ -11,18 +11,19 @@
             </svg>
         </button>
 
-        <div class="photo-block__modal" v-if="isShow">
-            <div class="photo-block__modal-wrap" :style="{ 'background-image': image }">
-                <button @click="isShow = false" class="photo-block__button-close">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="140" height="141" viewBox="0 0 140 141" fill="none">
-                        <rect x="41" y="38" width="58" height="58" rx="29" fill="white"/>
-                        <line x1="60.3536" y1="56.6464" x2="80.3536" y2="76.6464" stroke="black" />
-                        <line x1="80.3536" y1="57.3536" x2="60.3536" y2="77.3536" stroke="black" />
-
-                    </svg>
-                </button>
+        <transition name="fade" mode="out-in">
+            <div class="photo-block__modal" v-if="isShow">
+                <div class="photo-block__modal-wrap" :style="{ 'background-image': image }">
+                    <button @click="isShow = false" class="photo-block__button-close">
+                        <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="58" height="58" rx="29" fill="white"/>
+                        <path d="M19.3555 18.6465L39.3555 38.6465" stroke="black" stroke-linecap="round"/>
+                        <path d="M39.3555 19.3535L19.3555 39.3535" stroke="black" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
-        </div>
+        </transition>
     </div>
 </template>
 
@@ -62,8 +63,23 @@ export default {
 </script>
 
 <style lang="scss">
-.photo-block {
+.fade-enter-active {
+  animation: fade-in 0.5s;
+}
+.fade-leave-active {
+  animation: fade-in 0.5s reverse;
+}
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.photo-block {
     &__button {
         width: 2.5rem;
         height: 2.5rem;
@@ -101,7 +117,6 @@ export default {
 
     &__modal {
         position: fixed;
-        padding: 65px 52px 60px 52px;
         top: 0;
         bottom: 0;
         left: 0;
@@ -109,11 +124,6 @@ export default {
         background-color: rgba(255, 255, 255, 0.60);
         overflow: hidden;
         z-index: 3;
-
-        @media (max-width: 768px) {
-            // width: 2rem;
-            // height: 2rem;
-        }
     }
 
     &__modal-wrap {
@@ -130,18 +140,30 @@ export default {
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            max-height: 144rem;
+        }
     }
 
     &__button-close {
         position: absolute;
         z-index: 1;
-        width: 58px;
-        height: 58px;
-        top: 16px;
-        right: 16px;
+        width: 4.028rem;
+        height: 4.028rem;
+        top: 1.1111rem;
+        right: 1.1111rem;
         border: none;
         outline: none;
         background-color: transparent;
+
+        @media (max-width: 768px) {
+            width: 10.667rem;
+            height: 10.667rem;
+            top: 2.4rem;
+            right: 2.4rem;
+        }
     }
 }
 </style>

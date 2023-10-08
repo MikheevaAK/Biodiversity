@@ -59,13 +59,13 @@
                     </div>
                 </div>
 
-                <BaseTextBlock class="mb-60" :title="'Флора и фауна'">
+                <BaseTextBlock class="mb-60-40" :title="'Флора и фауна'">
                     Больше половины территории &laquo;Пасвика&raquo; покрыто сосновым лесом, а&nbsp;оставшаяся
                     часть&nbsp;&mdash; рекой и&nbsp;болотами. Заповедник создавался ради сохранения и&nbsp;изучения этих
                     природных зон и&nbsp;их&nbsp;обитателей.
                 </BaseTextBlock>
 
-                <div class="number-blocks text-block__wrap mb-60">
+                <div class="number-blocks text-block__wrap mb-60-40">
                     <BaseNumberBlock :textTop="'242&nbsp;вида'" :textBottom="'птиц'" />
                     <BaseNumberBlock :textTop="'32&nbsp;вида'" :textBottom="'млекопитающих'" />
                     <BaseNumberBlock :textTop="'1814&nbsp;видов'" :textBottom="'растений и&nbsp;грибов'" />
@@ -210,7 +210,7 @@
                     <BaseNumberBlock class="number-block-1" :textTop="'январь 1930&nbsp;г.'"
                         :textBottom="'дата создания'" />
                     <BaseNumberBlock class="number-block-2" :textTop="'278 &thinsp;435&nbsp;га'" :textBottom="'площадь'" />
-                    <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-2.jpg'" />
+                    <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-2.jpg'" :img-mobile="'img/treasures-img-2-mobile.jpg'" />
                 </div>
 
                 <BaseTextBlock class="mb-60">
@@ -229,13 +229,13 @@
                     </p>
                 </BaseTextBlock>
 
-                <BaseTextBlock class="mb-60" :title="'Флора и фауна'">
+                <BaseTextBlock class="mb-60-40" :title="'Флора и фауна'">
                     Примерно половину площади заповедника занимают старовозрастные леса естественного происхождения.
                     Появились они тут примерно 10&nbsp;тыс. лет назад, когда Кольский полуостров освободился
                     от&nbsp;последнего ледника.
                 </BaseTextBlock>
 
-                <div class="number-blocks text-block__wrap mb-60">
+                <div class="number-blocks text-block__wrap mb-60-40">
                     <BaseNumberBlock :textTop="'206&nbsp;видов'" :textBottom="'птиц'" />
                     <BaseNumberBlock :textTop="'31&nbsp;вид'" :textBottom="'млекопитающих'" />
                     <BaseNumberBlock :textTop="'2135&nbsp;видов'" :textBottom="'растений и&nbsp;грибов'" />
@@ -372,7 +372,7 @@
                         :textBottom="'территория получила статус особо охраняемой'" />
                     <BaseNumberBlock class="number-block-2" :textTop="'1&nbsp;887&nbsp;251&nbsp;га'"
                         :textBottom="'площадь'" />
-                    <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-3.jpg'" />
+                    <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-3.jpg'" :img-mobile="'img/treasures-img-3-mobile.jpg'" />
                 </div>
 
                 <BaseTextBlock class="mb-100 treasures__supervolcano">
@@ -385,13 +385,13 @@
                         :textBottom="'составил объём излившейся лавы, из&nbsp;которой сформировалось плато Путорана'" />
                 </BaseTextBlock>
 
-                <BaseTextBlock class="mb-60" :title="'Флора и фауна'">
+                <BaseTextBlock class="mb-60-40" :title="'Флора и фауна'">
                     Во&nbsp;все ледниковые периоды плато Путорана оказывалось покрыто льдами, которые уничтожали
                     растительность. Вот почему флора заповедника сравнительно молода. Тем не&nbsp;менее здесь можно увидеть
                     необычные для таких высоких широт леса и&nbsp;ковры лишайников.
                 </BaseTextBlock>
 
-                <div class="number-blocks text-block__wrap mb-60">
+                <div class="number-blocks text-block__wrap mb-60-40">
                     <BaseNumberBlock :textTop="'182&nbsp;вида'" :textBottom="'птиц'" />
                     <BaseNumberBlock :textTop="'37&nbsp;видов'" :textBottom="'млекопитающих'" />
                     <BaseNumberBlock :textTop="'1360&nbsp;видов'" :textBottom="'растений и&nbsp;грибов'" />
@@ -477,12 +477,12 @@
                     камнями и&nbsp;щебнем.
                 </BaseTextBlock>
 
-                <BaseTextBlock class="mb-60" :title="'Флора и фауна'">
+                <BaseTextBlock class="mb-60-40" :title="'Флора и фауна'">
                     На&nbsp;территории Большого Арктического заповедника нет лесов. На&nbsp;бескрайних просторах растут лишь
                     травы, мхи, лишайники и&nbsp;кое‑где&nbsp;&mdash; карликовые ивы.
                 </BaseTextBlock>
 
-                <div class="number-blocks text-block__wrap mb-60">
+                <div class="number-blocks text-block__wrap mb-60-40">
                     <BaseNumberBlock :textTop="'124&nbsp;видa'" :textBottom="'птиц'" />
                     <BaseNumberBlock :textTop="'16&nbsp;видов'" :textBottom="'млекопитающих'" />
                     <BaseNumberBlock :textTop="'518&nbsp;видов'" :textBottom="'растений и&nbsp;грибов'" />
@@ -527,23 +527,29 @@
                 </BaseTextBlock>
 
                 <div class="treasures__bear">
+                    <picture>
+                        <source media="(max-width: 768px)" type="image/webp" srcset="img/treasures-bear-mobile.webp">
+                        <source media="(max-width: 768px)" srcset="img/treasures-bear-mobile.png">
+                        <source type="image/webp" srcset="img/treasures-bear.webp">
+                        <img src="img/treasures-bear.png" alt="">
+                    </picture>
                     <div class="treasures__bear-title">
                         Белый медведь
                     </div>
                     <div class="treasures__bear-descr">
                         <p class="mb-10">
-                            В&nbsp;2012 году &laquo;Норникель&raquo; выделил 7,43 млн рублей на&nbsp;проведение
+                            В&nbsp;2012&nbsp;году &laquo;Норникель&raquo; выделил 7,43&nbsp;млн&nbsp;рублей на&nbsp;проведение
                             &laquo;переписи&raquo; белых медведей в&nbsp;Большом Арктическом заповеднике. Учёные взяли
                             у&nbsp;животных анализы крови и&nbsp;шерсти, а&nbsp;также пометили хищников ошейниками
                             и&nbsp;чипами.
                         </p>
                         <p>
-                            Но&nbsp;компания финансирует не&nbsp;только научную работу&nbsp;&mdash; иной раз
+                            Но&nbsp;компания финансирует не&nbsp;только&nbsp;научную работу&nbsp;&mdash; иной раз
                             ей&nbsp;приходится участвовать и&nbsp;в&nbsp;спасательных операциях, когда речь буквально идёт
                             о&nbsp;жизни и&nbsp;смерти животных.
                         </p>
                         <a class="link" href="/white-bears">
-                            <div>Читать про&nbsp;Спасение белых медведей</div>
+                            <div>Читать про&nbsp;Спасение белых&nbsp;медведей</div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="8" viewBox="0 0 20 8" fill="none">
                                 <path
                                     d="M19.8536 4.35355C20.0488 4.15829 20.0488 3.84171 19.8536 3.64645L16.6716 0.464466C16.4763 0.269204 16.1597 0.269204 15.9645 0.464466C15.7692 0.659728 15.7692 0.976311 15.9645 1.17157L18.7929 4L15.9645 6.82843C15.7692 7.02369 15.7692 7.34027 15.9645 7.53553C16.1597 7.7308 16.4763 7.7308 16.6716 7.53553L19.8536 4.35355ZM0 4.5H19.5V3.5H0V4.5Z"
@@ -551,10 +557,6 @@
                             </svg>
                         </a>
                     </div>
-                    <picture>
-                        <source type="image/webp" srcset="img/treasures-bear.webp">
-                        <img src="img/treasures-bear.png" alt="">
-                    </picture>
                 </div>
             </SectionOrange>
             <SectionWhite>
@@ -578,10 +580,10 @@
                     <BaseNumberBlock class="number-block-1" :textTop="'1986&nbsp;г.'"
                         :textBottom="'территория получила статус особо&nbsp;охраняемой'" />
                     <BaseNumberBlock class="number-block-2" :textTop="'24&nbsp;478&nbsp;га'" :textBottom="'площадь'" />
-                    <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-4.jpg'" />
+                    <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-4.jpg'" :img-mobile="'img/treasures-img-4-mobile.jpg'" />
                 </div>
 
-                <BaseTextBlock class="mb-60" :title="'Флора и фауна'">
+                <BaseTextBlock class="mb-40" :title="'Флора и фауна'">
                     На&nbsp;территории заказника преобладают лиственничные леса с&nbsp;подлеском из&nbsp;рододендрона.
                     Помимо промысловых животных здесь можно встретить редкие и&nbsp;исчезающие виды.
                 </BaseTextBlock>
@@ -736,6 +738,13 @@ export default {
 
 <style lang="scss">
 .treasures {
+
+    .hero {
+        @media (max-width: 768px) {
+        min-height: unset;
+        height: 193rem;
+        }
+    }
     .hero__descr {
         width: 47rem;
 
@@ -1383,8 +1392,8 @@ export default {
 
         @media (max-width: 768px) {
             width: unset;
-            margin: 0 9.5rem;
-            padding: 40rem 3.76rem 7.47rem 3.76rem;
+            margin: 0 4rem;
+            padding: 0 5.3334rem 7.47rem 5.3334rem;
             align-items: center;
         }
 
@@ -1398,6 +1407,7 @@ export default {
                 font-size: 4.8rem;
                 text-align: center;
                 width: 54rem;
+                margin-bottom:6.4rem;
             }
         }
 
@@ -1422,10 +1432,10 @@ export default {
             left: -28.366rem;
 
             @media (max-width: 768px) {
-                width: 71.5rem;
-                height: 50.6rem;
-                left: 5.5rem;
-                top: -14.5rem;
+                width: 304px;
+                height: 170px;
+                margin-bottom: 40px;
+                position: static;
             }
         }
 
@@ -1445,11 +1455,12 @@ export default {
             width: max-content;
 
             @media (max-width: 768px) {
-                padding: 3.2rem;
+                padding: 1.5rem;
                 font-size: 4.8rem;
                 text-align: center;
                 width: unset;
-                border-radius: 34px
+                border-radius: 34px;
+                margin-top: 6.4rem;
             }
 
             svg {

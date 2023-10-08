@@ -184,6 +184,9 @@
                 </BaseTextBlock>
                 <div class="in-search">
                     <div class="in-search__plane"></div>
+                    <div class="in-search__gull"></div>
+                    <div class="in-search__seagulls"></div>
+                    <div class="in-search__fish"></div>
                     <BaseTextBlock class="hidden-mobile">
                         <p>
                             На&nbsp;одних водоёмах птиц не&nbsp;было вовсе, рядом с&nbsp;другими гнездились большие
@@ -350,7 +353,8 @@ export default {
     },
     mounted() {
         this.$nextTick(function () {
-            this.scrollAnimation();
+            this.scrollAnimation()
+            this.parallax()
         })
     },
     beforeDestroy() {
@@ -655,6 +659,65 @@ export default {
                         },
                     });
             }
+        },
+        parallax() {
+            if (window.innerWidth > 768) {
+             gsap.fromTo(".in-search__plane",
+                {y: 200},
+                {
+                    y: 0,
+                    scrollTrigger: {
+                        trigger: ".in-search-section",
+                        start: 'top 50%',
+                        end: '25%',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                });
+
+                gsap.fromTo(".in-search__gull",
+                {y: 100},
+                {
+                    y: -50,
+                    scrollTrigger: {
+                        trigger: ".in-search-section",
+                        start: 'top 50%',
+                        end: '65%',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                });
+
+                gsap.fromTo(".in-search__seagulls",
+                {y: 120},
+                {
+                    y: -20,
+                    scrollTrigger: {
+                        trigger: ".in-search-section",
+                        start: 'top 50%',
+                        end: '35%',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                });
+
+                gsap.fromTo(".in-search__fish",
+                {x: 50},
+                {
+                    x: -70,
+                    scrollTrigger: {
+                        trigger: ".in-search-section",
+                        start: '65% 100%',
+                        end: '90%',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                });
+            }
         }
     }
 }
@@ -901,11 +964,74 @@ export default {
         background-size: cover;
         background-repeat: no-repeat;
 
+        @supports (background-image: url(../../public/img/plane.webp)) {
+            background-image: url(../../public/img/plane.webp);
+        }
+
         @media (max-width: 768px) {
             display: none;
         }
     }
 
+    &__gull {
+        position: absolute;
+        top: 3rem;
+        left: 53rem;
+        width: 17.153rem;
+        height: 14.028rem;
+        background-image: url(../../public/img/gull.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @supports (background-image: url(../../public/img/gull.webp)) {
+            background-image: url(../../public/img/gull.webp);
+        }
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__seagulls {
+        position: absolute;
+        top: 0rem;
+        left: 82.76rem;
+        width: 13rem;
+        height: 5rem;
+        background-image: url(../../public/img/seagulls.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @supports (background-image: url(../../public/img/seagulls.webp)) {
+            background-image: url(../../public/img/seagulls.webp);
+        }
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__fish {
+        position: absolute;
+        top: 53.8rem;
+        left: 54rem;
+        width: 28.4rem;
+        height: 11rem;
+        background-image: url(../../public/img/fish.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @supports (background-image: url(../../public/img/fish.webp)) {
+            background-image: url(../../public/img/fish.webp);
+        }
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
 }
 
 .shares {

@@ -322,7 +322,7 @@ import BaseNumberBlock from "@/components/BaseNumberBlock.vue";
 import BaseTextBlock from '@/components/BaseTextBlock.vue'
 import BaseSidebar from '@/components/BaseSidebar.vue'
 import BaseScale from '@/components/BaseScale.vue'
-// import BaseScrollBlock from '@/components/BaseScrollBlock'
+
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 

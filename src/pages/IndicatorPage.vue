@@ -551,21 +551,23 @@ export default {
 
                 this.threeScrollTrigger.to(".indicator__calculation-circle", {yPercent: 170 })
                 .to(".indicator__calculation-circle", { yPercent: 200, opacity: 0 })
-                .to(".indicator__calculation-circle-1", { yPercent: 370, xPercent: 70 })
+                .to(".indicator__calculation-circle-1", { yPercent: 350, xPercent: -95 })
                 .to(".indicator__calculation-circle-2", { yPercent: 492, xPercent: 0 }, "<")
-                .to(".indicator__calculation-circle-3", { yPercent: 483, xPercent: -80 }, "<")
+                .to(".indicator__calculation-circle-3", { yPercent: 450, xPercent: 130 }, "<")
                 .to(".indicator__calculation-circle-number", { display: "none" }, "<")
-                .to(".indicator__calculation-step-2", { opacity: 1 }, "<")
+                .to(".indicator__calculation-step-1", { display: "none", opacity: 0 }, "<")
+                .to(".indicator__calculation-step-2", { display: "block", opacity: 1 }, "<")
                 .to(".indicator__calculation-circle", { opacity: 1 })
-                .to(".indicator__calculation-circle-1", { opacity: 1, repeat: 0, rotation: 360, transformOrigin: "50px 10%", ease: "linear", })
-                .to(".indicator__calculation-circle-2", { opacity: 1, repeat: 0, rotation: 360, transformOrigin: "10px 70%", ease: "linear", }, "<")
-                .to(".indicator__calculation-circle-3", { opacity: 1, repeat: 0, rotation: 360, transformOrigin: "30px 50%", ease: "linear", }, "<")
+                .to(".indicator__calculation-circle-1", { opacity: 1, repeat: 0, rotation: -360, transformOrigin: "30px 10%", ease: "linear", })
+                .to(".indicator__calculation-circle-2", { opacity: 1, repeat: 0, rotation: -360, transformOrigin: "10px 70%", ease: "linear", }, "<")
+                .to(".indicator__calculation-circle-3", { opacity: 1, repeat: 0, rotation: -360, transformOrigin: "20px 40%", ease: "linear", }, "<")
                 .to(".indicator__calculation-circle-num", { opacity: 1 }, "<")
                 .to(".indicator__calculation-circle", { opacity: 0 })
                 .to(".indicator__calculation-circle-num", { opacity: 1 }, "<")
-                .to(".indicator__calculation-step-3", { opacity: 1 })
+                .to(".indicator__calculation-step-2", { display: "none" , opacity: 0}, "<")
+                .to(".indicator__calculation-step-3", { display: "block" , opacity: 1 }, "<")
                 .to(".indicator__calculation-circle-4", { opacity: 1 }, "<")
-                .to(".indicator__calculation-circle-4", { xPercent: 150 })
+                .to(".indicator__calculation-circle-4", { yPercent: 50 })
 
             }
         }
@@ -721,7 +723,7 @@ export default {
 
         @media (max-width: 768px) {
             height: 181.3334rem;
-            padding: 0;
+            padding: 0 0 13rem 0;
             background-image: url(../../public/img/indicator-bg-mobile.svg);
             background-position: center 32px;
             background-size: 246px 526px;
@@ -731,6 +733,12 @@ export default {
             display: flex;
             gap: 8rem;
             width: 68.3rem;
+            
+            @media (max-width: 768px) {
+                position: relative;
+                width: 59.3rem;
+                height: 58px;
+            }
         }
 
         &-step {
@@ -740,22 +748,42 @@ export default {
             color: #A46A32;
             opacity: 0.2;
 
+            @media (max-width: 768px) {
+                position: absolute;
+                display: none;
+                opacity: 0;
+            }
+
             &-number {
                 font-size: 4.16667rem;
                 font-weight: 300;
                 line-height: 130%;
+
+                @media (max-width: 768px) {
+                    display: none;
+                }
             }
 
             &-descr {
                 font-size: 1.25rem;
                 font-weight: 600;
                 line-height: 130%;
+
+                @media (max-width: 768px) {
+                    font-size: 4rem;
+                    text-align: center;
+                }
             }
         }
 
         &-step-1 {
             opacity: 1;
             width: 29rem;
+
+            @media (max-width: 768px) {
+                display: block;
+                width: unset;
+            }
         }
 
         &-circle-1 {
@@ -764,6 +792,13 @@ export default {
             height: 7.9866rem;
             top: 6.5972rem;
             left: 17.56945rem;
+
+            @media (max-width: 768px) {
+                width: 19rem;
+                height: 19rem;
+                top: 8rem;
+                left: 65rem;
+            }
 
             &-number {
                 position: absolute;
@@ -775,7 +810,9 @@ export default {
                 line-height: 130%;
 
                 @media (max-width: 768px) {
-                    display: none;
+                    top: 6.5rem;
+                    left: 6.5rem;
+                    font-size: 5rem;
                 }
             }
         }
@@ -787,6 +824,13 @@ export default {
             top: 15.06944rem;
             left: 25rem;
 
+            @media (max-width: 768px) {
+                width: 11rem;
+                height: 11rem;
+                top: 16rem;
+                left: 44.5rem;
+            }
+
             &-number {
                 position: absolute;
                 top: 0.764rem;
@@ -797,7 +841,9 @@ export default {
                 line-height: 130%;
 
                 @media (max-width: 768px) {
-                    display: none;
+                    top: 2.5rem;
+                    left: 2rem;
+                    font-size: 5rem;
                 }
             }
         }
@@ -809,6 +855,13 @@ export default {
             top: 20.55556rem;
             left: 17rem;
 
+            @media (max-width: 768px) {
+                width: 14.4rem;
+                height: 14.4rem;
+                top: 10rem;
+                left: 18rem;
+            }
+
             &-number {
                 position: absolute;
                 top: 1.80555rem;
@@ -817,8 +870,11 @@ export default {
                 color: #fff;
                 font-weight: 600;
                 line-height: 130%;
+                
                 @media (max-width: 768px) {
-                    display: none;
+                    top: 4rem;
+                    left: 4rem;
+                    font-size: 5rem;
                 }
             }
         }
@@ -830,6 +886,13 @@ export default {
             top: 13.26388rem;
             left: 61.9rem;
             opacity: 0;
+
+            @media (max-width: 768px) {
+                width: 20rem;
+                height: 20rem;
+                top: 117rem;
+                left: 40rem;
+            }
         }
 
         &-circle-num {
@@ -841,6 +904,12 @@ export default {
             font-weight: 600;
             line-height: 130%;
             opacity: 0;
+
+            @media (max-width: 768px) {
+                top: 80rem;
+                left: 46rem;
+                font-size: 5rem;
+            }
         }
     }
 

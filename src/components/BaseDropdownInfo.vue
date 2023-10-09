@@ -242,5 +242,9 @@ export default {
     .pulsation_blue {
         animation: ripple-blue-big 1s infinite;
     }
+
+    .pulsation_pantone {
+        animation: ripple-pantone 1s infinite;
+    }
 }
 </style>

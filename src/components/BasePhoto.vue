@@ -92,6 +92,7 @@ export default {
         border: none;
         outline: none;
         cursor: pointer;
+        animation: ripple-green .9s linear infinite;
 
         @media (max-width: 768px) {
             width: 7.9rem;
@@ -105,12 +106,6 @@ export default {
             @media (max-width: 768px) {
                 width: 3.8rem;
                 height: 3.23rem;
-            }
-        }
-
-        @media (min-width: 769px) {
-            &:hover {
-                animation: ripple-green .9s linear infinite;
             }
         }
     }

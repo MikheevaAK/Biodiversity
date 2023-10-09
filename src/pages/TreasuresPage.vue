@@ -548,7 +548,7 @@
                             ей&nbsp;приходится участвовать и&nbsp;в&nbsp;спасательных операциях, когда речь буквально идёт
                             о&nbsp;жизни и&nbsp;смерти животных.
                         </p>
-                        <a class="link" href="/white-bears">
+                        <a class="link" href="/white-bears" target="_blank">
                             <div>Читать про&nbsp;Спасение белых&nbsp;медведей</div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="8" viewBox="0 0 20 8" fill="none">
                                 <path

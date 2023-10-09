@@ -1,6 +1,6 @@
 <template>
     <div class="main-page">
-        <BaseHero :img="'img/hero-main.png'" :imgMobile="'img/hero6-mobile.jpg'" />
+        <BaseHero :title="'Сохраняя экосистемы'" :img="'img/hero-main.png'" :imgMobile="'img/hero6-mobile.jpg'" :descr="heroDescr" />
 
         <section class="main-page__bottom">
             <BaseAccordion class="main-page__result-faq" v-for="faq in faqs" :key="faq.id" :faq="faq" />
@@ -26,7 +26,7 @@ export default {
     },
     data() {
         return {
-            heroDescr: '&laquo;Норникель&raquo; на&nbsp;протяжении более чем десяти лет сотрудничает с&nbsp;заповедниками и&nbsp;заказниками Таймыра, Забайкалья и&nbsp;Кольского полуострова. При поддержке компании на&nbsp;особо охраняемых территориях появляются новые экологические маршруты и&nbsp;реализуются программы по&nbsp;изучению и&nbsp;сохранению редких видов животных и&nbsp;растений.',
+            heroDescr: 'Узнайте, какие подходы использует &laquo;Норникель&raquo; для сохранения природных экосистем, какая экотехнология восстановления водоёмов оказалась наиболее перспективной, где найти биологические реликты и&nbsp;как &laquo;Норникель&raquo; спасает жизни королей Арктики.',
             faqs: [
                 {
                     "question": 'Почему важно сохранять биологическое разнообразие?',
@@ -64,10 +64,26 @@ export default {
 .main-page {
     .hero {
         background-position: center;
-    }
 
-    .hero-strip {
-        display: none;
+        &-strip {
+            display: none;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        // &__
+
+        &__title {
+            color: #D38235;
+            font-weight: 600;
+            line-height: 120%;
+            text-transform: uppercase;
+            font-size: 36px;
+        }
     }
 
     &__bottom {

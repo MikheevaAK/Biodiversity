@@ -781,11 +781,10 @@ export default {
             background-position: top;
         }
     }
-    
+
     .big-map {
         margin-bottom: 2.7778rem;
-        // height: 40.19419rem;
-
+        
         @media (max-width: 768px) {
             display: flex;
             margin-bottom: 21.3334rem;

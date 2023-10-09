@@ -120,7 +120,7 @@
 
                     <div class="white-bears__what-to-do">
                         <img src="img/white-bear-meet.png" alt="">
-                        <BaseDropdownInfo :title="'Что делать, если вы встретили белого медведя?'"
+                        <BaseDropdownInfo :title="'Что делать, если вы встретили белого медведя?'" :pulsation-color="'blue'"
                             :text="'<div class=what-to-do__wrap><div class=what-to-do__wrap-left>< 10 м</div><div class=what-to-do__wrap-right>Спокойно стойте, медленно уходите;</div></div><div class=what-to-do__wrap><div class=what-to-do__wrap-left>10-15 м</div><div class=what-to-do__wrap-right>Спугните медведя голосом, свистком или ракетницей;</div></div><div class=what-to-do__wrap><div class=what-to-do__wrap-left>> 20 м</div><div class=what-to-do__wrap-right>Не давайте зверю сократить дистанцию.</div></div><p>Нельзя ложиться на&nbsp;землю и&nbsp;притворяться мёртвым: медведь может принять вас за&nbsp;тюленя&nbsp;&mdash; свою привычную пищу&nbsp;&mdash; и&nbsp;попытается съесть.</p>'"
                             :color="'#0077C8'" />
                     </div>

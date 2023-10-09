@@ -238,5 +238,9 @@ export default {
     .pulsation_finn {
         animation: ripple-finn 1s infinite;
     }
+
+    .pulsation_blue {
+        animation: ripple-blue-big 1s infinite;
+    }
 }
 </style>

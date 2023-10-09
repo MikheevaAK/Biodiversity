@@ -561,12 +561,6 @@ export default {
 
 <style lang="scss">
 .transbaikal {
-    .hero {
-        @media (min-width: 769px) {
-            background-position: top;
-        }
-    }
-
     .big-map {
         @media (max-width: 768px) {
             display: flex;

@@ -68,7 +68,7 @@ export default {
     min-height: 100vh;
     width: 100%;
     max-width: 100rem;
-    background-position: right;
+    background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
     

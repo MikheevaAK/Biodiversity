@@ -118,7 +118,7 @@ export default {
         right: 0;
         background-color: rgba(255, 255, 255, 0.60);
         overflow: hidden;
-        z-index: 3;
+        z-index: 20;
     }
 
     &__modal-wrap {

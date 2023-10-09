@@ -6,7 +6,7 @@
             </svg>
         </div>
         <div class="block-info__text">
-            <div class="block-info__title" v-if="title">{{ title }}</div>
+            <div class="block-info__title" v-if="title" v-html="title"></div>
             <p v-html="text"></p>
         </div>
     </div>

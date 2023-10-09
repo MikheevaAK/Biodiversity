@@ -45,7 +45,7 @@
                         </div>
                     </div>
                 </BigMap>
-                <section class="scroll mb-100">
+                <section class="scroll">
                     <div class="scroll-bg bg-1">
                     </div>
                     <div class="scroll-bg bg-2">

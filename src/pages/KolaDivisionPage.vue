@@ -306,12 +306,12 @@
                 <div class="collage mb-100">
                     <BaseCollageInfo class="golden-eagle" :title="'Беркут'" :color="'#71464E'"
                         :text="'Самый крупный из&nbsp;орлов: размах крыльев достигает 230&nbsp;см при длине тела до&nbsp;93&nbsp;см. Беркуты чувствительны к&nbsp;беспокойству со&nbsp;стороны человека, чаще обитают в&nbsp;горах и&nbsp;реже на&nbsp;равнинных ландшафтах. За&nbsp;последние столетия вид исчез из&nbsp;многих районов из-за массового истребления, пестицидов, увеличения числа городов и&nbsp;изъятия земель под&nbsp;хозяйственные нужды'" />
-                    <BaseDropdownInfo class="golden-eagle_mobile" :title="'Беркут'" :is-modal="true" :color="'#71464E'"
+                    <BaseDropdownInfo class="golden-eagle_mobile" :title="'Беркут'" :is-modal="true" :color="'#71464E'" :pulsation-color="'finn'"
                         :text="'Самый крупный из&nbsp;орлов: размах крыльев достигает 230&nbsp;см при длине тела до&nbsp;93&nbsp;см. Беркуты чувствительны к&nbsp;беспокойству со&nbsp;стороны человека, чаще обитают в&nbsp;горах и&nbsp;реже на&nbsp;равнинных ландшафтах. За&nbsp;последние столетия вид исчез из&nbsp;многих районов из-за массового истребления, пестицидов, увеличения числа городов и&nbsp;изъятия земель под&nbsp;хозяйственные нужды'" />
 
                     <BaseCollageInfo class="belobrovik" :title="'Белобровик'"
                         :text="'Меняет пение в&nbsp;разных ситуациях: оповещает при&nbsp;опасности и&nbsp;подзывает, если найдена пища'" />
-                    <BaseDropdownInfo class="belobrovik_mobile" :title="'Белобровик'" :is-modal="true"
+                    <BaseDropdownInfo class="belobrovik_mobile" :title="'Белобровик'" :is-modal="true" :pulsation-color="'Green-Mist'"
                         :text="'Меняет пение в&nbsp;разных ситуациях: оповещает при&nbsp;опасности и&nbsp;подзывает, если найдена пища'" />
 
                     <BaseCollageInfo class="tap-dancing" :title="'Чечётка'"
@@ -326,13 +326,13 @@
                     <BaseCollageInfo class="yurok" :title="'Юрок'" />
                     <BaseCollageInfo class="warbler" :title="'Пеночка-весничка'" />
 
-                    <BaseDropdownInfo class="ground-beetles" :title="'Жужелицы'" :is-modal="true"
+                    <BaseDropdownInfo class="ground-beetles" :title="'Жужелицы'" :is-modal="true" :pulsation-color="'Green-Mist'"
                         :text="'В&nbsp;Кольском дивизионе исследователи обнаружили 14&nbsp;видов жужелиц, из&nbsp;них два были назначены индикаторами: Carabus glabratus и&nbsp;Amara brunnea. Carabus glabratus отрицательно реагирует на&nbsp;промышленное воздействие: чем оно интенсивнее, тем меньше плотность вида на&nbsp;территории. Amara brunnea, в&nbsp;свою очередь, увеличивает численность в&nbsp;районах с&nbsp;интенсивным воздействием и&nbsp;постепенно снижает ближе к&nbsp;фоновым территориям'" />
 
-                    <BaseDropdownInfo class="spiders" :title="'Пауки'" :is-modal="true"
+                    <BaseDropdownInfo class="spiders" :title="'Пауки'" :is-modal="true" :pulsation-color="'Green-Mist'"
                         :text="'Наименьшее видовое разнообразие пауков учёные отметили в&nbsp;зонах интенсивного воздействия дивизиона. Индикаторами среди обнаруженных видов стали три бродячих паука-охотника: Паук-волк, Паук-гназофида и&nbsp;Паук-мешкопряд. Пауки-волки составляют основу населения, они не&nbsp;строят ловчих сетей, быстро передвигаются и&nbsp;активно заселяют новые участки'" />
 
-                    <BaseDropdownInfo class="ants" :title="'Муравьи'" :is-modal="true"
+                    <BaseDropdownInfo class="ants" :title="'Муравьи'" :is-modal="true" :pulsation-color="'Green-Mist'"
                         :text="'Из&nbsp;12&nbsp;видов муравьёв, обнаруженных участниками Экспедиции в&nbsp;Кольском дивизионе, четыре представителя рода Formica стали индикаторами: Северный чёрный муравей, Красноголовый муравей, Волосистый лесной муравей и&nbsp;Кровавый муравей-рабовладелец. Распределение и&nbsp;численность этих муравьёв помогли учёным подтвердить предположения о&nbsp;поясах воздействия промышленных объектов на&nbsp;природу дивизиона'" />
 
                     <BaseCollageInfo class="shrew" :title="'Бурозубка'" />
@@ -342,7 +342,7 @@
                         :color="'#71464E'" />
 
                     <BaseDropdownInfo class="fingerroot" :title="'Пальчатокоренник пятнистый'" :is-modal="true"
-                        :width="'10rem'" :color="'#71464E'"
+                        :width="'10rem'" :color="'#71464E'" :pulsation-color="'finn'"
                         :text="'Пятнышки на&nbsp;листьях этого северного представителя орхидей в&nbsp;народе считались следами слёз, которые обронила кукушка от&nbsp;одиночества, поэтому ещё одно название этого вида&nbsp;&mdash; &laquo;кукушкины слёзки&raquo;. Развитие семян пальчатокоренника возможно в&nbsp;симбиозе с&nbsp;определёнными видами грибов, а&nbsp;зацветает растение на&nbsp;6&ndash;8 год после прорастания'" />
 
                     <BaseCollageInfo class="ledum" :title="'Багульник болотный'" :width="'10rem'" />
@@ -351,16 +351,16 @@
                     <BaseCollageInfo class="swan" :title="'Лебедь-кликун'" :color="'#71464E'"
                         :text="'Получил название за&nbsp;громкие, трубные крики, которые часто издает в&nbsp;полёте. Способен развить скорость до&nbsp;80&nbsp;км/ч. Является Национальным символом Финляндии'" />
 
-                    <BaseDropdownInfo class="broody" :title="'Клуша'" :is-modal="true" :color="'#71464E'"
+                    <BaseDropdownInfo class="broody" :title="'Клуша'" :is-modal="true" :color="'#71464E'" :pulsation-color="'finn'"
                         :text="'Представители этого вида чаек были встречены участниками Большой Научной экспедиции в&nbsp;зонах интенсивного воздействия предприятий Мончегорска и&nbsp;Мурманска. Кроме крупных водоёмов, птиц привлекают сюда пищевые отходы на&nbsp;свалках. На&nbsp;численность вида негативно влияет заселение мест обитания людьми и&nbsp;загрязнение воздуха промышленными выбросами'" />
 
                     <div class="background background-2"></div>
 
-                    <BaseDropdownInfo class="zooplankton" :title="'Зоопланктон'" :is-modal="true"
+                    <BaseDropdownInfo class="zooplankton" :title="'Зоопланктон'" :is-modal="true" :pulsation-color="'Green-Mist'"
                         :text="'В&nbsp;водоёмах пояса интенсивного воздействия размножается коловратка Asplanchna priodonta, а&nbsp;в&nbsp;пробах из&nbsp;зоны незначительного воздействия и&nbsp;на&nbsp;фоновых территориях исследователи обнаружили ветвистоусого рачка Holopedium gibberum'" />
 
                     <div class="background background-3"></div>
-                    <BaseDropdownInfo class="phytoplankton" :title="'Фитопланктон'" :is-modal="true"
+                    <BaseDropdownInfo class="phytoplankton" :title="'Фитопланктон'" :is-modal="true" :pulsation-color="'Green-Mist'"
                         :text="'Зелёные водоросли Scenedesmus quadricauda встречаются только в&nbsp;пробах из&nbsp;зоны интенсивного воздействия Кольского дивизиона, а&nbsp;цианобактерия Oscillatoria amoena обитает исключительно на&nbsp;территории фона'" />
 
                     <div class="background background-4"></div>
@@ -370,7 +370,7 @@
                     <div class="background background-5"></div>
                     <BaseCollageInfo class="loach" :title="'Арктический голец'"
                         :text="'Считается самой полезной рыбой в&nbsp;мире: кусочек рыбы в&nbsp;30&nbsp;г покрывает суточную потребность человека в&nbsp;полезных жирных кислотах. Встречается также в&nbsp;водоёмах Кольского дивизиона'" />
-                    <BaseDropdownInfo class="loach_mobile" :title="'Арктический голец'" :is-modal="true"
+                    <BaseDropdownInfo class="loach_mobile" :title="'Арктический голец'" :is-modal="true" :pulsation-color="'Green-Mist'"
                         :text="'Считается самой полезной рыбой в&nbsp;мире: кусочек рыбы в&nbsp;30&nbsp;г покрывает суточную потребность человека в&nbsp;полезных жирных кислотах. Встречается также в&nbsp;водоёмах Кольского дивизиона'" />
 
                     <div class="background background-6"></div>

@@ -13,7 +13,7 @@
                 <div class="footer__block footer__block-small" :class="{ 'footer__block_active': this.$route.path === '/treasures-of-biodiversity'}"></div>
             </div>
             <div class="footer__top-descr">
-                Вы&nbsp;собрали первую часть карты биоразнообразия &laquo;Норникель&raquo;.
+                Вы&nbsp;собрали новую часть карты биоразнообразия &laquo;Норникель&raquo;.
             </div>
             <a href="/" class="footer__top-link">
                 Вернуться на&nbsp;карту

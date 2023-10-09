@@ -725,8 +725,8 @@ export default {
             height: 181.3334rem;
             padding: 0 0 13rem 0;
             background-image: url(../../public/img/indicator-bg-mobile.svg);
-            background-position: center 32px;
-            background-size: 246px 526px;
+            background-position: center 6rem;
+            background-size: 66rem 142rem;
         }
 
         &-steps {

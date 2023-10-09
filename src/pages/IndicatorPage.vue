@@ -122,6 +122,25 @@
                     </div>
                 </div>
             </section>
+            <BaseTextBlock class="mb-60">
+                <p>
+                    Если принять ИПСЭ фона = 1, то&nbsp;для зон воздействия возможны три варианта:
+                </p>
+                <div class="indicator__comparison">
+                    <div class="indicator__comparison-item">
+                        <div class="indicator__comparison-num">ИПСЭ зоны = 1</div>
+                        <div class="indicator__comparison-text">соответствие фону в&nbsp;конкретной зоне воздействия</div>
+                    </div>
+                    <div class="indicator__comparison-item">
+                        <div class="indicator__comparison-num">ИПСЭ зоны &#60; 1</div>
+                        <div class="indicator__comparison-text">в&nbsp;рассматриваемой зоне воздействия отмечаются условные потери биоразнообразия</div>
+                    </div>
+                    <div class="indicator__comparison-item">
+                        <div class="indicator__comparison-num">ИПСЭ зоны > 1</div>
+                        <div class="indicator__comparison-text">условный прирост биоразнообразия в&nbsp;рассматриваемой зоне воздействия</div>
+                    </div>
+                </div>
+            </BaseTextBlock>
 
             <BaseTextBlock class="mb-60">
                 <p class="mb-10">
@@ -286,7 +305,6 @@
 <script>
 import BaseHero from '@/layout/BaseHero.vue'
 import MainSection from '@/layout/MainSection'
-// import SectionWhite from '@/layout/SectionWhite.vue'
 import BaseTextBlock from '@/components/BaseTextBlock.vue'
 import BaseSidebar from '@/components/BaseSidebar'
 import BaseTextQuotes from '@/components/BaseTextQuotes.vue'
@@ -909,6 +927,49 @@ export default {
                 top: 80rem;
                 left: 46rem;
                 font-size: 5rem;
+            }
+        }
+    }
+
+    &__comparison {
+        margin-top: 2.2222rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.6667rem;
+        font-size: 1.25rem;
+        font-weight: 300;
+        line-height: 130%;
+
+        @media (max-width: 768px) {
+            margin-top: 6.4rem;
+            gap: 6.4rem;
+            font-size: 4.53334rem;
+        }
+
+        &-item {
+            display: flex;
+            @media (max-width: 768px) {
+                flex-direction: column;
+            }
+        }
+
+        &-num {
+            margin-right: 1.6rem;
+            width: 10rem;
+            height: 1.7rem; 
+            padding: 0.1rem 0.7rem;
+            border-radius: 20px;
+            color: #FFF;
+            font-weight: 600;
+            flex-shrink: 0;
+            background: linear-gradient(270deg, #A3550C -42.51%, #D38235 19.39%, #F9C492 114.21%), #CEEDFF;
+        
+            @media (max-width: 768px) {
+                margin-right: 0;
+                margin-bottom: 3.2rem;
+                width: 37rem;
+                height: 6.4rem;
+                padding: 0.5rem 2rem;
             }
         }
     }

@@ -705,6 +705,10 @@ export default {
                     border-right: none;
                     border-left: 1px solid #333333;
                 }
+
+                &__top {
+                    color: #D38235;
+                }
             }
         }
 

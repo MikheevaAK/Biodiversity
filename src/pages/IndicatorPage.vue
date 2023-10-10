@@ -622,7 +622,7 @@ export default {
             right: 0;
             z-index: 1;
             height: 100vh;
-            background-position: 0 -3rem;
+            background-position: bottom 3rem right 0;
             background-size: contain;
             background-repeat: no-repeat;
 

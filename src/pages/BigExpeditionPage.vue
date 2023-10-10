@@ -601,6 +601,14 @@ export default {
             min-height: unset;
             height: 212rem;
         }
+
+        &__descr {
+            width: 52rem;
+
+            @media (max-width: 768px) {
+                width: unset;
+            }
+        }
     }
 
     .text-center {

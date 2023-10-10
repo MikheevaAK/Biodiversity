@@ -708,13 +708,14 @@ export default {
                 });
 
                 gsap.fromTo(".in-search__fish",
-                {x: 50},
+                {x: 60},
                 {
-                    x: -70,
+                    x: -10,
                     scrollTrigger: {
                         trigger: ".in-search-section",
-                        start: '65% 100%',
-                        end: '90%',
+                        start: '45% 100%',
+                        end: '85% 100%',
+                        ease: "ease-in-out", 
                         // markers: true,
                         scrub: true
                     },

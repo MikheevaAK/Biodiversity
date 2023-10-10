@@ -202,8 +202,8 @@
                     <BaseCollageInfo class="puffy" :title="'Пухляк'"
                         :text="'Устраивает повсюду множество кладовых из&nbsp;семян и&nbsp;помнит, где они находятся'" />
 
-                    <BaseCollageInfo class="warbler" :title="'Толстоклювая пеночка'"
-                        :text="'Поёт свою песню, каждый раз меняя тональность, поэтому разные специалисты описывают её&nbsp;голос по-разному'" />
+                    <BaseDropdownInfo :is-modal="true" class="warbler" :title="'Толстоклювая пеночка'" :pulsation-color="'Green-Mist'"
+                    :text="'Поёт свою песню, каждый раз меняя тональность, поэтому разные специалисты описывают её&nbsp;голос по-разному'" />
 
                     <BaseCollageInfo class="mottled-breast" :title="'Сибирская пестрогрудка'" :color="'#71464E'"
                         :text="'Голосом напоминает жужжание электропроводов'" />
@@ -223,9 +223,6 @@
                     <BaseCollageInfo class="shrew" :title="'Бурозубка'"
                         :text="'Быстро стареет из-за необычайно интенсивного обмена веществ'" />
 
-                    <BaseCollageInfo class="hare" :title="'Заяц-беляк'"
-                        :text="'Широко расставленные глаза помогают быстрее заметить опасность и&nbsp;убежать. Спасаясь, развивает скорость до&nbsp;60&nbsp;км/ч. Обитает также в&nbsp;Норильском дивизионе'" />
-
                     <BaseCollageInfo class="black-cohosh" :title="'Клопогон даурский'" :color="'#71464E'"
                         :text="'Живописное лекарственное растение отпугивает насекомых сильным запахом'" />
 
@@ -235,9 +232,8 @@
                     <BaseCollageInfo class="grouse" :title="'Рябчик'"
                         :text="'Российская популяция&nbsp;вида самая многочисленная&nbsp;&mdash; около 40&nbsp;млн птиц'" />
 
-                    <BaseCollageInfo class="mouse" :title="'Восточноазиатская мышь'"
-                        :text="'Природный носитель возбудителей не&nbsp;менее десятка опасных для человека заболеваний, среди которых: японский энцефалит, туляремия и&nbsp;геморрагическая лихорадка'" />
-
+                    <BaseDropdownInfo :is-modal="true" class="mouse" :title="'Восточноазиатская мышь'" :pulsation-color="'Green-Mist'"
+                    :text="'Природный носитель возбудителей не&nbsp;менее десятка опасных для человека заболеваний, среди которых: японский энцефалит, туляремия и&nbsp;геморрагическая лихорадка'" />
 
                     <BaseCollageInfo class="krasodnev" :title="'Красоднев малый'" :color="'#71464E'"
                         :text="'Каждый цветок красоднева распускается лишь на&nbsp;один день'" />
@@ -270,7 +266,7 @@
                     <BaseDropdownInfo :is-modal="true" class="ants" :title="'Муравьи'" :pulsation-color="'Green-Mist'"
                         :text="'В&nbsp;Забайкальском дивизионе исследователи обнаружили 29&nbsp;видов муравьев, из&nbsp;них три были выбраны индикаторами состояния экосистем: Чёрный болотный муравей, Черноголовый муравей и&nbsp;Бледноногий садовый муравей'" />
 
-                    <BaseDropdownInfo :is-modal="true" class="hare_mobile" :title="'Заяц-беляк'" :pulsation-color="'Green-Mist'"
+                    <BaseDropdownInfo :is-modal="true" class="hare" :title="'Заяц-беляк'" :pulsation-color="'Green-Mist'"
                         :text="'Широко расставленные глаза помогают быстрее заметить опасность и&nbsp;убежать. Спасаясь, развивает скорость до&nbsp;60&nbsp;км/ч. Обитает также в&nbsp;Норильском дивизионе'" />
 
                     <BaseDropdownInfo :is-modal="true" class="shrew_mobile" :title="'Бурозубка'" :pulsation-color="'Green-Mist'"
@@ -754,12 +750,15 @@ export default {
         }
 
         .warbler {
-            width: 15rem;
-            top: 99rem;
-            left: 26rem;
+            position: absolute;
+            top: 100.5rem;
+            left: 30.5rem;
+
+            .dropdown-info__title {
+                max-width: 10rem;
+            }
 
             @media (max-width: 768px) {
-                width: 49rem;
                 top: 326rem;
                 left: 33rem;
             }
@@ -887,14 +886,17 @@ export default {
         }
 
         .mouse {
-            width: 17rem;
-            top: 289rem;
-            right: 16rem;
+            position: absolute;
+            top: 292rem;
+            right: 18rem;
 
             @media (max-width: 768px) {
-                width: 74rem;
-                top: 1034rem;
-                right: 10rem;
+                top: 1037rem;
+                right: 34rem;
+
+                 .dropdown-info__title {
+                    max-width: unset;
+                }
             }
         }
 
@@ -959,28 +961,20 @@ export default {
         }
 
         .hare {
-            width: 17rem;
-            top: 241rem;
-            left: 4rem;
+            position: absolute;
+            top: 245rem;
+            left: 12rem;
 
             @media (max-width: 768px) {
-                display: none;
-            }
-
-            &_mobile {
-                display: none;
-                position: absolute;
                 bottom: 885rem;
                 left: 34rem;
+                top: unset;
 
-                @media (max-width: 768px) {
-                    display: block;
-
-                    .dropdown-info__title {
-                        max-width: unset;
-                    }
+                .dropdown-info__title {
+                    max-width: unset;
                 }
             }
+            
         }
 
         .dubrovnik {

@@ -4,7 +4,7 @@
             :img="'img/hero-3.jpg'" :imgMobile="'img/hero3-mobile.jpg'" />
         <MainSection>
             <SectionWhite>
-                <BaseTextBlock class="text mb-40" :title="'Особенности дивизиона'" :tooltip="true">
+                <BaseTextBlock class="text mb-60" :title="'Особенности дивизиона'" :tooltip="true">
                     <p class="mb-10">
                         Горнодобывающие, металлургические и энергетические объекты Норильского
                         <BaseTooltip :word="'дивизиона'">
@@ -24,6 +24,12 @@
                         границ промышленного воздействия.
                     </p>
                 </BaseTextBlock>
+
+                <div class="number-blocks text-block__wrap mb-60">
+                    <BaseNumberBlock :textTop="'до&nbsp;280&nbsp;дней'" :textBottom="'устойчивых морозов'" />
+                    <BaseNumberBlock :textTop="'до&nbsp;500&nbsp;метров'" :textBottom="'толщина многолетнемёрзлых пород'" />
+                    <BaseNumberBlock :textTop="'-53&nbsp;˚С'" :textBottom="'минимальная температура'" />
+                </div>
 
                 <BigMap :circales="circales" :img="'img/division-big-map'" :imgMobile="'img/division-big-map-mobile'">
                     <BaseNumberBlock :textTop="'44 объекта'" :textBottom="'входит в Норильский дивизион'" />
@@ -93,12 +99,6 @@
                         </div>
                     </div>
                 </section>
-
-                <div class="number-blocks text-block__wrap mb-100">
-                    <BaseNumberBlock :textTop="'до&nbsp;280&nbsp;дней'" :textBottom="'устойчивых морозов'" />
-                    <BaseNumberBlock :textTop="'до&nbsp;500&nbsp;метров'" :textBottom="'толщина многолетнемёрзлых пород'" />
-                    <BaseNumberBlock :textTop="'-53&nbsp;˚С'" :textBottom="'минимальная температура'" />
-                </div>
 
                 <BaseTextBlock class="text mb-40" :title="'Зона воздействия предприятий Норильского дивизиона'"
                     :tooltip="true">

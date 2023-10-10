@@ -1,8 +1,10 @@
 <template>
     <div class="main-page">
-        <BaseHero :title="'Сохраняя экосистемы'" :img="'img/hero-main.png'" :imgMobile="'img/hero6-mobile.jpg'" :descr="heroDescr" />
+        <BaseHero :title="'Сохраняя экосистемы'" :img="'img/hero-main.png'" :imgMobile="'img/hero-main-mobile.jpg'" :descr="heroDescr" />
 
         <section class="main-page__bottom">
+            <a href=# class="main-page__bottom-link">Скачать карту в PDF</a>
+            <div class="main-page__bottom-title">Сохранение биоразнообразия</div>
             <BaseAccordion class="main-page__result-faq" v-for="faq in faqs" :key="faq.id" :faq="faq" />
         </section>
     </div>
@@ -73,15 +75,24 @@ export default {
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 19.13rem 15.1rem;
         }
 
-        // &__
+        &__wrap {
+            width: unset;
+        }
+
+        &__descr {
+            text-align: center;
+            width: 29rem;
+        }
 
         &__title {
             color: #D38235;
             font-weight: 600;
             line-height: 120%;
             text-transform: uppercase;
+            text-align: center;
             font-size: 36px;
         }
     }
@@ -92,6 +103,27 @@ export default {
 
         @media (max-width: 768px) {
             padding: 11.7334rem 5.3334rem 0 5.3334rem;
+        }
+
+        &-link {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 120px;
+            width: 277px;
+            border: 1px solid #000000;
+            padding: 18px 50px;
+            border-radius: 50px;
+            font-size: 1.25rem;
+            color: #626261;
+            font-weight: 400;
+            line-height: 130%;
+        }
+
+        &-title {
+            margin-bottom: 60px;
+            font-size: 34px;
+            font-weight: 600;
+            line-height: 130%;
         }
 
         .faq {

@@ -791,9 +791,14 @@ export default {
 .treasures {
 
     .hero {
+        @media (min-width: 769px) {
+            background-color: #E5F2F4;
+            background-position: top 1rem right 0;
+        }
+
         @media (max-width: 768px) {
-        min-height: unset;
-        height: 193rem;
+            min-height: unset;
+            height: 193rem;
         }
     }
     .hero__descr {

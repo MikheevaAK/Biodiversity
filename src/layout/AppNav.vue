@@ -214,71 +214,25 @@ export default {
         height: 12.77rem;
     }
 
-    @keyframes first {
-        0% {
-            transform: translate(0);
-        }
-
-        100% {
-            transform: translate(2.9rem, -1.3rem) rotate(45deg);
-        }
-    }
-
-    @keyframes third {
-        0% {
-            transform: translate(0);
-        }
-
-        100% {
-            transform: translate(-0.5rem, 3.05rem) rotate(-45deg);
-        }
-    }
-
-    @media (max-width: 768px) {
-        @keyframes first {
-        0% {
-            transform: translate(0);
-        }
-
-        100% {
-            transform: translate(9rem, -5rem) rotate(45deg);
-        }
-    }
-
-    @keyframes third {
-        0% {
-            transform: translate(0);
-        }
-
-        100% {
-            transform: translate(-1rem, 8rem) rotate(-45deg);
-        }
-    }
+    path {
+        transition: transform 0.25s;
     }
 
     &_active {
         position: relative;
         z-index: 3;
         .first {
-            animation: first .3s ease;
-            transform: translate(2.9rem, -1.3rem) rotate(45deg);
-
-            @media (max-width: 768px) {
-                transform: translate(9rem, -5rem) rotate(45deg);
-            }
+            transform: rotate(45deg);
+            transform-origin: 40px 33px;
         }
 
         .second {
-            transform: scale(0);
+            display: none;
         }
         
         .third {
-            animation: third .3s ease;
-            transform: translate(-0.5rem, 3.05rem) rotate(-45deg);
-
-            @media (max-width: 768px) {
-                transform: translate(-1rem, 8rem) rotate(-45deg);
-            }
+            transform: rotate(-45deg);
+            transform-origin: 35px 20px;
         }
     }
 

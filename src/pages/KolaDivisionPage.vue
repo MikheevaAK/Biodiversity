@@ -304,9 +304,7 @@
                     <BaseCollageInfo :text="'Индикаторные виды'" />
                 </div>
                 <div class="collage mb-100">
-                    <BaseCollageInfo class="golden-eagle" :title="'Беркут'" :color="'#71464E'"
-                        :text="'Самый крупный из&nbsp;орлов: размах крыльев достигает 230&nbsp;см при длине тела до&nbsp;93&nbsp;см. Беркуты чувствительны к&nbsp;беспокойству со&nbsp;стороны человека, чаще обитают в&nbsp;горах и&nbsp;реже на&nbsp;равнинных ландшафтах. За&nbsp;последние столетия вид исчез из&nbsp;многих районов из-за массового истребления, пестицидов, увеличения числа городов и&nbsp;изъятия земель под&nbsp;хозяйственные нужды'" />
-                    <BaseDropdownInfo class="golden-eagle_mobile" :title="'Беркут'" :is-modal="true" :color="'#71464E'" :pulsation-color="'finn'"
+                    <BaseDropdownInfo class="golden-eagle" :title="'Беркут'" :is-modal="true" :color="'#71464E'" :pulsation-color="'finn'"
                         :text="'Самый крупный из&nbsp;орлов: размах крыльев достигает 230&nbsp;см при длине тела до&nbsp;93&nbsp;см. Беркуты чувствительны к&nbsp;беспокойству со&nbsp;стороны человека, чаще обитают в&nbsp;горах и&nbsp;реже на&nbsp;равнинных ландшафтах. За&nbsp;последние столетия вид исчез из&nbsp;многих районов из-за массового истребления, пестицидов, увеличения числа городов и&nbsp;изъятия земель под&nbsp;хозяйственные нужды'" />
 
                     <BaseCollageInfo class="belobrovik" :title="'Белобровик'"
@@ -368,9 +366,7 @@
                         :text="'Общеизвестный индикатор органического загрязнения водоёмов'" />
 
                     <div class="background background-5"></div>
-                    <BaseCollageInfo class="loach" :title="'Арктический голец'"
-                        :text="'Считается самой полезной рыбой в&nbsp;мире: кусочек рыбы в&nbsp;30&nbsp;г покрывает суточную потребность человека в&nbsp;полезных жирных кислотах. Встречается также в&nbsp;водоёмах Кольского дивизиона'" />
-                    <BaseDropdownInfo class="loach_mobile" :title="'Арктический голец'" :is-modal="true" :pulsation-color="'Green-Mist'"
+                    <BaseDropdownInfo class="loach" :title="'Арктический голец'" :is-modal="true" :pulsation-color="'Green-Mist'"
                         :text="'Считается самой полезной рыбой в&nbsp;мире: кусочек рыбы в&nbsp;30&nbsp;г покрывает суточную потребность человека в&nbsp;полезных жирных кислотах. Встречается также в&nbsp;водоёмах Кольского дивизиона'" />
 
                     <div class="background background-6"></div>
@@ -1208,7 +1204,6 @@ export default {
     }
 
     .legend {
-        margin-bottom: 5.25rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1294,8 +1289,8 @@ export default {
             }
 
             &-3 {
-                bottom: 40rem;
-                right: 34rem;
+                bottom: 33rem;
+                right: 45rem;
                 width: 10rem;
                 height: 5rem;
 
@@ -1322,10 +1317,10 @@ export default {
             }
 
             &-5 {
-                bottom: 24rem;
-                left: 44rem;
-                width: 20rem;
-                height: 10rem;
+                bottom: 12rem;
+                left: 45rem;
+                width: 13rem;
+                height: 1rem;
 
                 @media (max-width: 768px) {
                     bottom: 54rem;
@@ -1351,23 +1346,14 @@ export default {
         }
 
         .golden-eagle {
-            width: 20.5rem;
-            top: 2rem;
-            right: 24rem;
+            position: absolute;
+            top: 23rem;
+            right: 35rem;
 
             @media (max-width: 768px) {
-                display: none;
-            }
-
-            &_mobile {
-                display: none;
-                position: absolute;
                 top: 69rem;
                 left: 7.5rem;
-
-                @media (max-width: 768px) {
-                    display: block;
-                }
+                right: 0;
             }
         }
 
@@ -1581,8 +1567,8 @@ export default {
 
         .phytoplankton {
             position: absolute;
-            bottom: 42rem;
-            right: 35rem;
+            bottom: 34rem;
+            right: 45rem;
 
             @media (max-width: 768px) {
                 bottom: 90rem;
@@ -1603,24 +1589,15 @@ export default {
         }
 
         .loach {
-            bottom: 23.5rem;
-            left: 45rem;
-            width: 19rem;
+            bottom: 12.5rem;
+            left: 46rem;
+            position: absolute;
 
             @media (max-width: 768px) {
-                display: none;
-            }
-
-            &_mobile {
-                display: none;
-                position: absolute;
                 bottom: 53rem;
                 left: 13rem;
-
-                @media (max-width: 768px) {
-                    display: block;
-                }
             }
+            
         }
 
         .grayling {

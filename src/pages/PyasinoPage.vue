@@ -710,11 +710,11 @@ export default {
                 gsap.fromTo(".in-search__fish",
                 {x: 60},
                 {
-                    x: -10,
+                    x: -60,
                     scrollTrigger: {
                         trigger: ".in-search-section",
-                        start: '45% 100%',
-                        end: '85% 100%',
+                        start: '55% 100%',
+                        end: '90%',
                         ease: "ease-in-out", 
                         // markers: true,
                         scrub: true

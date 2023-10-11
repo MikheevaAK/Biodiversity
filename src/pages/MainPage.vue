@@ -96,6 +96,9 @@ export default {
             ],
         };
     },
+    methods: {
+        
+    },
 };
 </script>
 
@@ -170,16 +173,16 @@ export default {
         &-item {
             position: relative;
             display: flex;
-            width: 360px;
-            height: 500px;
+            width: 25rem;
+            height: 34.7223rem;
             background-position: center;
             background-repeat: no-repeat;
             background-size: 100%; 
             transition: all .3s ease;
-            font-size: 22px;
+            font-size: 1.527777rem;
             font-weight: 400;
             line-height: 110%;
-            padding: 0 0 62px 35px;
+            padding: 0 0 4rem 2rem;
             align-items: end;
 
             &:hover {
@@ -195,22 +198,21 @@ export default {
                 position: absolute;
                 transition: all .3s ease;
                 content: '';
-                width: 24px;
-                height: 24px;
-                right: 35px;
-                bottom: 35px;
+                width: 1.667rem;
+                height: 1.667rem;
+                right: 2.4rem;
+                bottom: 2.4rem;
+                background-size: contain;
                 background-repeat: no-repeat;
                 background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3e%3cpath d='M3.20312 20.4563L21.9461 1.71338' stroke='%23333333' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M22 22.6357L22 1.63574L1 1.63574' stroke='%23333333' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
             }
 
             
             &_big {
-                width: 720px;
-                height: 500px;
+                width: 50rem;
             }
 
             
-
             &-1 {
                 background-image: url(../../public/img/main-map-1.png);
 

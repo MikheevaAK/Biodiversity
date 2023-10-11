@@ -189,6 +189,7 @@ export default {
             position: absolute;
             width: 2.014rem;
             height: 2.014rem;
+            transition: all .5s ease-out;
 
             @media (max-width: 768px) {
                 width: 7.734rem;
@@ -212,7 +213,7 @@ export default {
         font-weight: 300;
         font-size: 1.25rem;
         line-height: 130%;
-        transition: .5s;
+        transition: all .5s ease-out;
 
         @media (max-width: 768px) {
             font-size: 4.8rem;
@@ -220,7 +221,7 @@ export default {
 
         &.open {
             padding-bottom: 2.09rem;
-            height: max-content;
+            height: auto;
             // overflow: visible;
 
             @media (max-width: 768px) {

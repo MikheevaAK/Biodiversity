@@ -369,7 +369,7 @@ export default {
 
         &-link {
             font-size: 1.25rem;
-            font-weight: 300;
+            font-weight: 600;
             line-height: 130%;
             transition: color .3s ease;
 

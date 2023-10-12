@@ -256,10 +256,21 @@
                         рассчитать количество загрязняющих веществ в&nbsp;исследованных водоёмах.
                     </p>
                 </BaseTextBlock>
-                <picture>
-                    <source type="image/webp" srcset="img/measurements-mobile.webp">
-                    <img class="step-two__img-measurements" src="img/measurements.png" alt="">
-                </picture>
+                <div class="step-two__img-measurements">
+                    <picture>
+                        <source media="(max-width: 768px)" type="image/webp" srcset="img/measurements-mobile.webp">
+                        <source media="(max-width: 768px)" srcset="img/measurements-mobile.png">
+                        <source type="image/webp" srcset="img/measurements.webp">
+                        <img src="img/measurements.png" alt="">
+                    </picture>
+
+                    <div class="measurements-tool">
+                        <picture>
+                            <source type="image/webp" srcset="img/measurements-tool.webp">
+                            <img src="img/measurements-tool.png" alt="">
+                        </picture>
+                    </div>
+                </div>
 
                 <BaseSidebar class="padding-hide">
                     <p>
@@ -911,15 +922,33 @@ export default {
         }
 
         &-measurements {
+            position: relative;
             display: block;
-            margin: 1.35rem auto 2.5rem auto;
-            width: 51.125rem;
-            height: 23.0625rem;
+            margin: -2rem auto 2.5rem auto;
+            width: 56.806rem;
+            height: 28.681em;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
 
             @media (max-width: 768px) {
-                margin: 2.4rem auto 10.5rem auto;
+                margin: 0 auto 10.5rem auto;
                 width: 100%;
                 height: 53.0625rem;
+            }
+
+            .measurements-tool {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 14.0977rem;
+                height: 11.4588rem;
+
+                @media (max-width: 768px) {
+                    display: none;
+                }
             }
         }
     }

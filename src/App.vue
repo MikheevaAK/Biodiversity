@@ -15,6 +15,9 @@ export default {
   components: {
     AppNav,
     AppFooter
-  }
+  },
+  mounted() {
+    sessionStorage.setItem(this.$route.path, true)
+  },
 }
 </script>

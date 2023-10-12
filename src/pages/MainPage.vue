@@ -20,32 +20,12 @@
         </section>
     
         <section class="main-page__map">
-            <a href="/norilsk-division" class="main-page__map-item main-page__map-item_big main-page__map-item-1">
-                Норильский <br/>дивизион 
-            </a>
-            <a href="/kola-division" class="main-page__map-item main-page__map-item-2">
-                Кольский <br/>дивизион</a>
-            <a href="/transbaikal-division" class="main-page__map-item main-page__map-item-3">
-                Забайкальский <br/>дивизион 
-            </a>
-            <a href="/expedition" class="main-page__map-item main-page__map-item-4">
-                Норильская <br/>Экспедиция 
-            </a>
-            <a href="/big-expedition" class="main-page__map-item main-page__map-item_big main-page__map-item-5">
-                Научная <br/>Экспедиция 
-            </a>
-            <a href="/pyasino" class="main-page__map-item main-page__map-item-6">
-                Вдохнуть жизнь <br/>в озеро
-            </a>
-            <a href="/white-bears" class="main-page__map-item main-page__map-item_big main-page__map-item-7">
-                Спасение <br/>белых медведей
-            </a>
-            <a href="/indicator" class="main-page__map-item main-page__map-item-8">
-                Загадочный <br/>ИПСЭ
-            </a>
-            <a href="/treasures-of-biodiversity" class="main-page__map-item main-page__map-item-9">
-                Сокровищницы <br/>биоразнообразия
-            </a>
+            <a v-for="item in links" 
+                :href="item.link" 
+                :key="item.id" 
+                class="main-page__map-item" 
+                :class="[`main-page__map-item-${item.id}`, isBig(item.big), isActive(item)]"
+                v-html="item.title"></a>
         </section>
     
         <section class="main-page__bottom">
@@ -94,10 +74,71 @@ export default {
                     isOpen: false,
                 },
             ],
-        };
+            links: [
+                {
+                    id: 1,
+                    title: 'Норильский <br/>дивизион',
+                    link: '/norilsk-division',
+                    big: true
+                },
+                {
+                    id: 2,
+                    title: 'Кольский <br/>дивизион',
+                    link: '/kola-division',
+                },
+                {
+                    id: 3,
+                    title: 'Забайкальский <br/>дивизион ',
+                    link: '/transbaikal-division',
+                },
+                {
+                    id: 4,
+                    title: 'Норильская <br/>Экспедиция',
+                    link: '/expedition',
+                },
+                {
+                    id: 5,
+                    title: 'Научная <br/>Экспедиция',
+                    link: '/big-expedition',
+                    big: true
+                },
+                {
+                    id: 6,
+                    title: 'Вдохнуть жизнь <br/>в озеро',
+                    link: '/pyasino',                },
+                {
+                    id: 7,
+                    title: 'Спасение <br/>белых медведей',
+                    link: '/white-bears',
+                    big: true
+                },
+                {
+                    id: 8,
+                    title: 'Загадочный <br/>ИПСЭ',
+                    link: '/indicator',
+                },
+                {
+                    id: 9,
+                    title: 'Сокровищницы <br/>биоразнообразия',
+                    link: '/treasures-of-biodiversity',
+                },
+            ],
+            store: sessionStorage
+        }
+    },
+    watch: {
+        store: {
+            handler() {},
+            deep: true
+        }
     },
     methods: {
-        
+        isBig(item) {
+            return item ? 'main-page__map-item_big' : ''
+        },
+        isActive(item) {
+            return this.store.getItem(item.link) ? `main-page__map-item-${item.id}_active` : ''
+        }
     },
 };
 </script>
@@ -185,6 +226,11 @@ export default {
             padding: 0 0 4rem 2rem;
             align-items: end;
 
+            @media(max-width: 768px) {
+                width: 100%;
+                height: 138.667rem;
+            }
+
             &:hover {
                 color: #D38235;
 
@@ -210,78 +256,119 @@ export default {
             
             &_big {
                 width: 50rem;
+                @media(max-width: 768px) {
+                    width: 100%;
+                }
             }
 
             
             &-1 {
-                background-image: url(../../public/img/main-map-1.png);
+                background-image: url(../../public/img/main-map-1-mobile.png);
 
-                &:hover {
-                    background-image: url(../../public/img/main-map-1-active.png);
+                @media(min-width: 769px) {
+                    background-image: url(../../public/img/main-map-1.png);
+
+                    &:hover,
+            &_active {
+                        background-image: url(../../public/img/main-map-1-active.png);
+                    }
                 }
             }
 
             &-2 {
-                background-image: url(../../public/img/main-map-2.png);
+                background-image: url(../../public/img/main-map-2-mobile.png);
 
-                &:hover {
-                    background-image: url(../../public/img/main-map-2-active.png);
+                @media(min-width: 769px) {
+                    background-image: url(../../public/img/main-map-2.png);
+
+                    &:hover,
+            &_active {
+                        background-image: url(../../public/img/main-map-2-active.png);
+                    }
                 }
             }
 
             &-3 {
-                background-image: url(../../public/img/main-map-3.png);
+                background-image: url(../../public/img/main-map-3-mobile.png);
+                @media(min-width: 769px) {
+                    background-image: url(../../public/img/main-map-3.png);
 
-                &:hover {
-                    background-image: url(../../public/img/main-map-3-active.png);
+                    &:hover,
+            &_active {
+                        background-image: url(../../public/img/main-map-3-active.png);
+                    }
                 }
             }
 
             &-4 {
-                background-image: url(../../public/img/main-map-4.png);
+                background-image: url(../../public/img/main-map-4-mobile.png);
+                @media(min-width: 769px) {
+                    background-image: url(../../public/img/main-map-4.png);
 
-                &:hover {
-                    background-image: url(../../public/img/main-map-4-active.png);
+                    &:hover,
+            &_active {
+                        background-image: url(../../public/img/main-map-4-active.png);
+                    }
                 }
             }
 
-            &-5 {
-                background-image: url(../../public/img/main-map-5.png);
+            &-5{
+                background-image: url(../../public/img/main-map-5-mobile.png);
+                @media(min-width: 769px) {
+                    background-image: url(../../public/img/main-map-5.png);
 
-                &:hover {
-                    background-image: url(../../public/img/main-map-5-active.png);
+                    &:hover,
+            &_active  {
+                        background-image: url(../../public/img/main-map-5-active.png);
+                    }
                 }
             }
 
             &-6 {
-                background-image: url(../../public/img/main-map-6.png);
+                background-image: url(../../public/img/main-map-6-mobile.png);
+                @media(min-width: 769px) {
+                    background-image: url(../../public/img/main-map-6.png);
 
-                &:hover {
-                    background-image: url(../../public/img/main-map-6-active.png);
+                    &:hover,
+            &_active {
+                        background-image: url(../../public/img/main-map-6-active.png);
+                    }
                 }
             }
 
             &-7 {
-                background-image: url(../../public/img/main-map-7.png);
+                background-image: url(../../public/img/main-map-7-mobile.png);
+                @media(min-width: 769px) {
+                    background-image: url(../../public/img/main-map-7.png);
 
-                &:hover {
-                    background-image: url(../../public/img/main-map-7-active.png);
+                    &:hover,
+            &_active {
+                        background-image: url(../../public/img/main-map-7-active.png);
+                    }
                 }
             }
 
             &-8 {
-                background-image: url(../../public/img/main-map-8.png);
+                background-image: url(../../public/img/main-map-8-mobile.png);
+                @media(min-width: 769px) {
+                    background-image: url(../../public/img/main-map-8.png);
 
-                &:hover {
-                    background-image: url(../../public/img/main-map-8-active.png);
+                    &:hover,
+                    &_active {
+                        background-image: url(../../public/img/main-map-8-active.png);
+                    }
                 }
             }
 
             &-9 {
-                background-image: url(../../public/img/main-map-9.png);
+                background-image: url(../../public/img/main-map-9-mobile.png);
+                @media(min-width: 769px) {
+                    background-image: url(../../public/img/main-map-9.png);
 
-                &:hover {
-                    background-image: url(../../public/img/main-map-9-active.png);
+                    &:hover,
+                    &_active {
+                        background-image: url(../../public/img/main-map-9-active.png);
+                    }
                 }
             }
         }

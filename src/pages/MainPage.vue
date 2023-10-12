@@ -29,7 +29,7 @@
         </section>
     
         <section class="main-page__bottom">
-            <a href="#" class="main-page__bottom-link">Скачать карту в PDF</a>
+            <a href="#" v-if="store.length === 10" class="main-page__bottom-link">Скачать карту в PDF</a>
             <div class="main-page__bottom-title">Сохранение биоразнообразия</div>
             <BaseAccordion class="main-page__result-faq" v-for="faq in faqs" :key="faq.id" :faq="faq" />
         </section>
@@ -146,7 +146,7 @@ export default {
 <style lang="scss">
 .main-page {
     .hero {
-        // background-position: center;
+        background-position: top center;
         &-strip {
             display: none;
         }
@@ -156,7 +156,7 @@ export default {
             align-items: center;
             height: 100%;
             min-height: 100vh;
-            padding: 233px 0 0 0;
+            padding: 32vh 0 0 0;
         }
         &__wrap {
             width: unset;
@@ -171,14 +171,18 @@ export default {
             line-height: 120%;
             text-transform: uppercase;
             text-align: center;
-            font-size: 36px;
-            margin-bottom: 27px;
+            font-size: 2.5rem;
+            margin-bottom: 1.6rem;
         }
     }
     &__top {
         padding: 2.36rem 13.2rem 2.639rem 5.2086rem;
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 768px) {
+            padding: 26px 9.5rem 42px 9.5rem;
+        }
         &-descr {
             padding: 0.56rem 0 0 1.945rem;
             width: 45rem;
@@ -186,6 +190,13 @@ export default {
             font-size: 1.25rem;
             font-weight: 300;
             line-height: 130%;
+
+            @media (max-width: 768px) {
+                padding: 0;
+                margin-bottom: 44px;
+                width: unset;
+                font-size: 17px;
+            }
         }
         &-text {
             padding-left: 1.95rem;
@@ -195,6 +206,12 @@ export default {
             font-weight: 300;
             line-height: 130%;
             width: 40rem;
+
+            @media (max-width: 768px) {
+                padding-left: 10px;
+                font-size: 18px;
+                width: unset;
+            }
         }
         &-info {
             font-size: 1.042rem;
@@ -206,6 +223,12 @@ export default {
         img {
             width: 11.46rem;
             height: 7.014rem;
+        }
+
+        &-right {
+            @media (max-width: 768px) {
+                display: none;
+            }
         }
     }
     &__map {
@@ -397,6 +420,11 @@ export default {
             font-size: 2.36111rem;
             font-weight: 600;
             line-height: 130%;
+
+            @media (max-width: 768px) {
+                margin-bottom: 8.5334rem;
+                font-size: 7.46667rem;
+            }
         }
         .faq {
             @media (max-width: 768px) {

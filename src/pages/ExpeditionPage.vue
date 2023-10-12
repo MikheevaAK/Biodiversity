@@ -381,7 +381,12 @@
                         <source type="image/webp" srcset="img/step-3-scena.webp">
                         <img class="scena" src="img/step-3-scena.png" alt="">
                     </picture>
-
+                    <div class="scena-boat">
+                        <picture>
+                            <source type="image/webp" srcset="img/scena-boat.webp">
+                            <img class="scena" src="img/scena-boat.png" alt="">
+                        </picture>
+                    </div>
                 </div>
                 <BaseSidebar>
                     <p>
@@ -427,6 +432,7 @@ export default {
         this.$nextTick(function () {
             this.sidebarAnimation();
             this.textAnimation();
+            this.parallax()
         })
     },
     data() {
@@ -504,6 +510,37 @@ export default {
                         },
                     })
             })
+        },
+        parallax() {
+            if (window.innerWidth > 768) {
+                gsap.fromTo(".measurements-tool",
+                {y: 40},
+                {
+                    y: -10,
+                    scrollTrigger: {
+                        trigger: ".step-two__img-measurements",
+                        start: 'top 75%',
+                        end: '35%',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                })
+
+                gsap.fromTo(".scena-boat",
+                {y: 40},
+                {
+                    y: 5,
+                    scrollTrigger: {
+                        trigger: ".scena__wrap",
+                        start: 'top 75%',
+                        end: '35%',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                })
+            }
         }
     }
 }
@@ -941,8 +978,8 @@ export default {
 
             .measurements-tool {
                 position: absolute;
-                top: 0;
-                left: 0;
+                top: 11rem;
+                left: 33rem;
                 width: 14.0977rem;
                 height: 11.4588rem;
 
@@ -1012,10 +1049,28 @@ export default {
         }
 
         &__wrap {
+            position: relative;
             margin: 3.75rem 0 2.5rem 0;
 
             @media (max-width: 768px) {
                 margin: 13.3334rem 0 10.6666rem 0;
+            }
+
+            .scena-boat {
+                position: absolute;
+                top: 12rem;
+                left: 77rem;
+                width: 239px;
+                height: 147px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                @media (max-width: 768px) {
+                    display: none;
+                }
             }
         }
     }

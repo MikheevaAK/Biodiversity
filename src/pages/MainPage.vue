@@ -32,7 +32,7 @@
             </section>
         
             <section class="main-page__bottom">
-                <a href="#" v-if="store.length === 10" class="main-page__bottom-link">Скачать карту в PDF</a>
+                <a href="file-test.pdf" download v-if="store.length === 10" class="main-page__bottom-link">Скачать карту в PDF</a>
                 <div class="main-page__bottom-title">Сохранение биоразнообразия</div>
                 <BaseAccordion class="main-page__result-faq" v-for="faq in faqs" :key="faq.id" :faq="faq" />
             </section>

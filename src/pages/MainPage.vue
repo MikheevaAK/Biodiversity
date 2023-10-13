@@ -137,7 +137,7 @@ export default {
                     link: '/treasures-of-biodiversity',
                 },
             ],
-            store: sessionStorage
+            store: localStorage
         }
     },
     watch: {

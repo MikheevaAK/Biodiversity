@@ -17,7 +17,7 @@ export default {
     AppFooter
   },
   mounted() {
-    sessionStorage.setItem(this.$route.path, true)
+    localStorage.setItem(this.$route.path, true)
   },
 }
 </script>

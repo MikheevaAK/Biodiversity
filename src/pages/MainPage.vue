@@ -1,38 +1,42 @@
 <template>
     <div class="main-page">
-        <BaseHero :title="'Сохраняя экосистемы'" :img="'img/hero-main.png'" :imgMobile="'img/hero-main-mobile.jpg'" :descr="heroDescr" />
-        <section class="main-page__top">
-            <div class="main-page__top-left">
-                <div class="main-page__top-descr">
-                    &laquo;Норникель&raquo; известен во&nbsp;всём мире как крупнейший производитель палладия и&nbsp;никеля. Мы&nbsp;работаем в&nbsp;северных широтах нашей страны&nbsp;&mdash; там, где экосистема особенно хрупка и&nbsp;уязвима. Вот почему в&nbsp;последние
-                    годы компания всё больше внимания уделяет экологическим проектам и&nbsp;заботится о&nbsp;биоразнообразии.
+        <BaseHero :img="'img/hero-main.png'" :imgMobile="'img/hero-main-mobile.png'" :isButton="true"/>
+        <main id="main">
+            <section class="main-page__top">
+                <div class="main-page__top-left">
+                    <div class="main-page__top-descr">
+                        &laquo;Норникель&raquo; известен во&nbsp;всём мире как крупнейший производитель палладия и&nbsp;никеля. Мы&nbsp;работаем в&nbsp;северных широтах нашей страны&nbsp;&mdash; там, где экосистема особенно хрупка и&nbsp;уязвима. Вот почему в&nbsp;последние
+                        годы компания всё больше внимания уделяет экологическим проектам и&nbsp;заботится о&nbsp;биоразнообразии.
+                    </div>
+                    <div class="main-page__top-text">
+                        Изучая раздел за&nbsp;разделом, соберите карту проектов &laquo;Норникеля&raquo; по&nbsp;сохранению экосистем.
+                    </div>
                 </div>
-                <div class="main-page__top-text">
-                    Изучая раздел за&nbsp;разделом, соберите карту проектов &laquo;Норникеля&raquo; по&nbsp;сохранению экосистем.
+                <div class="main-page__top-right">
+                    <div class="main-page__top-info">
+                        Собрав карту целиком, вы&nbsp;сможете скачать её&nbsp;в&nbsp;формате постера
+                    </div>
+                    <img src="img/map-info.png" alt="" />
                 </div>
-            </div>
-            <div class="main-page__top-right">
-                <div class="main-page__top-info">
-                    Собрав карту целиком, вы&nbsp;сможете скачать её&nbsp;в&nbsp;формате постера
-                </div>
-                <img src="img/map-info.png" alt="" />
-            </div>
-        </section>
-    
-        <section class="main-page__map">
-            <a v-for="item in links" 
-                :href="item.link" 
-                :key="item.id" 
-                class="main-page__map-item" 
-                :class="[`main-page__map-item-${item.id}`, isBig(item.big), isActive(item)]"
-                v-html="item.title"></a>
-        </section>
-    
-        <section class="main-page__bottom">
-            <a href="#" v-if="store.length === 10" class="main-page__bottom-link">Скачать карту в PDF</a>
-            <div class="main-page__bottom-title">Сохранение биоразнообразия</div>
-            <BaseAccordion class="main-page__result-faq" v-for="faq in faqs" :key="faq.id" :faq="faq" />
-        </section>
+            </section>
+        
+            <section class="main-page__map">
+                <a v-for="item in links" 
+                    :href="item.link" 
+                    :key="item.id" 
+                    class="main-page__map-item" 
+                    :class="[`main-page__map-item-${item.id}`, isBig(item.big), isActive(item)]">
+                    <div class="main-page__map-item-time">{{item.time}}</div>
+                    <div class="main-page__map-item-title" v-html="item.title"></div>
+                    </a>
+            </section>
+        
+            <section class="main-page__bottom">
+                <a href="#" v-if="store.length === 10" class="main-page__bottom-link">Скачать карту в PDF</a>
+                <div class="main-page__bottom-title">Сохранение биоразнообразия</div>
+                <BaseAccordion class="main-page__result-faq" v-for="faq in faqs" :key="faq.id" :faq="faq" />
+            </section>
+        </main>
     </div>
 </template>
 
@@ -78,48 +82,58 @@ export default {
                 {
                     id: 1,
                     title: 'Норильский <br/>дивизион',
+                    time: '8 минут',
                     link: '/norilsk-division',
                     big: true
                 },
                 {
                     id: 2,
                     title: 'Кольский <br/>дивизион',
+                    time: '9 минут',
                     link: '/kola-division',
                 },
                 {
                     id: 3,
                     title: 'Забайкальский <br/>дивизион ',
+                    time: '8 минут',
                     link: '/transbaikal-division',
                 },
                 {
                     id: 4,
                     title: 'Норильская <br/>Экспедиция',
+                    time: '6 минут',
                     link: '/expedition',
                 },
                 {
                     id: 5,
                     title: 'Научная <br/>Экспедиция',
+                    time: '12 минут',
                     link: '/big-expedition',
                     big: true
                 },
                 {
                     id: 6,
                     title: 'Вдохнуть жизнь <br/>в озеро',
-                    link: '/pyasino',                },
+                    time: '5 минут',
+                    link: '/pyasino',                
+                },
                 {
                     id: 7,
                     title: 'Спасение <br/>белых медведей',
+                    time: '10 минут',
                     link: '/white-bears',
                     big: true
                 },
                 {
                     id: 8,
                     title: 'Загадочный <br/>ИПСЭ',
+                    time: '9 минут',
                     link: '/indicator',
                 },
                 {
                     id: 9,
                     title: 'Сокровищницы <br/>биоразнообразия',
+                    time: '15 минут',
                     link: '/treasures-of-biodiversity',
                 },
             ],
@@ -156,24 +170,36 @@ export default {
             align-items: center;
             height: 100%;
             min-height: 100vh;
-            padding: 32vh 0 0 0;
+            padding: 30vh 0 0 0;
+
+            @media(min-width: 1441px) {
+                padding: 17vw 0 0 0;
+            }
         }
         &__wrap {
             width: unset;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        &__descr {
-            text-align: center;
-            width: 29rem;
-        }
-        &__title {
-            color: #d38235;
-            font-weight: 600;
-            line-height: 120%;
-            text-transform: uppercase;
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 1.6rem;
-        }
+        // &__descr {
+        //     text-align: center;
+        //     width: 411px;
+        //     font-size: 18px;
+        //     @media(min-width: 1441px) {
+        //         font-size: 1.250vw;
+        //         width: 29vw;
+        //     }
+        // }
+        // &__title {
+        //     color: #d38235;
+        //     font-weight: 600;
+        //     line-height: 120%;
+        //     text-transform: uppercase;
+        //     text-align: center;
+        //     font-size: 36px;
+        //     margin-bottom: 25px;
+        // }
     }
     &__top {
         padding: 2.36rem 13.2rem 2.639rem 5.2086rem;
@@ -252,6 +278,8 @@ export default {
             @media(max-width: 768px) {
                 width: 100%;
                 height: 138.667rem;
+                padding: 0 0 5.34rem 5.34rem;
+                font-size: 4.8rem;
             }
 
             &:hover {
@@ -274,6 +302,10 @@ export default {
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3e%3cpath d='M3.20312 20.4563L21.9461 1.71338' stroke='%23333333' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M22 22.6357L22 1.63574L1 1.63574' stroke='%23333333' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+            
+                @media(max-width: 768px) {
+                    display: none;
+                }
             }
 
             
@@ -284,15 +316,32 @@ export default {
                 }
             }
 
+            &-time {
+                position: absolute;
+                top: 2.9rem;
+                right: 2.45rem;
+                font-size: 1.319445rem;
+                font-weight: 300;
+
+                @media(max-width: 768px) {
+                    top: 6.6666rem;
+                    right: 5.07rem;
+                    font-size: 5.06667rem;
+                }
+            }
+
             
             &-1 {
                 background-image: url(../../public/img/main-map-1-mobile.png);
+                &_active {
+                    background-image: url(../../public/img/main-map-1-mobile-active.png);
+                }
 
                 @media(min-width: 769px) {
                     background-image: url(../../public/img/main-map-1.png);
 
                     &:hover,
-            &_active {
+                    &_active {
                         background-image: url(../../public/img/main-map-1-active.png);
                     }
                 }
@@ -301,11 +350,14 @@ export default {
             &-2 {
                 background-image: url(../../public/img/main-map-2-mobile.png);
 
+                &_active {
+                    background-image: url(../../public/img/main-map-2-mobile-active.png);
+                }
                 @media(min-width: 769px) {
                     background-image: url(../../public/img/main-map-2.png);
 
                     &:hover,
-            &_active {
+                    &_active {
                         background-image: url(../../public/img/main-map-2-active.png);
                     }
                 }
@@ -313,11 +365,14 @@ export default {
 
             &-3 {
                 background-image: url(../../public/img/main-map-3-mobile.png);
+                &_active {
+                    background-image: url(../../public/img/main-map-3-mobile-active.png);
+                }
                 @media(min-width: 769px) {
                     background-image: url(../../public/img/main-map-3.png);
 
                     &:hover,
-            &_active {
+                    &_active {
                         background-image: url(../../public/img/main-map-3-active.png);
                     }
                 }
@@ -325,11 +380,14 @@ export default {
 
             &-4 {
                 background-image: url(../../public/img/main-map-4-mobile.png);
+                &_active {
+                    background-image: url(../../public/img/main-map-4-mobile-active.png);
+                }
                 @media(min-width: 769px) {
                     background-image: url(../../public/img/main-map-4.png);
 
                     &:hover,
-            &_active {
+                    &_active {
                         background-image: url(../../public/img/main-map-4-active.png);
                     }
                 }
@@ -337,11 +395,14 @@ export default {
 
             &-5{
                 background-image: url(../../public/img/main-map-5-mobile.png);
+                &_active {
+                    background-image: url(../../public/img/main-map-5-mobile-active.png);
+                }
                 @media(min-width: 769px) {
                     background-image: url(../../public/img/main-map-5.png);
 
                     &:hover,
-            &_active  {
+                    &_active  {
                         background-image: url(../../public/img/main-map-5-active.png);
                     }
                 }
@@ -349,11 +410,14 @@ export default {
 
             &-6 {
                 background-image: url(../../public/img/main-map-6-mobile.png);
+                &_active {
+                    background-image: url(../../public/img/main-map-6-mobile-active.png);
+                }
                 @media(min-width: 769px) {
                     background-image: url(../../public/img/main-map-6.png);
 
                     &:hover,
-            &_active {
+                    &_active {
                         background-image: url(../../public/img/main-map-6-active.png);
                     }
                 }
@@ -361,11 +425,14 @@ export default {
 
             &-7 {
                 background-image: url(../../public/img/main-map-7-mobile.png);
+                &_active {
+                    background-image: url(../../public/img/main-map-7-mobile-active.png);
+                }
                 @media(min-width: 769px) {
                     background-image: url(../../public/img/main-map-7.png);
 
                     &:hover,
-            &_active {
+                    &_active {
                         background-image: url(../../public/img/main-map-7-active.png);
                     }
                 }
@@ -373,6 +440,9 @@ export default {
 
             &-8 {
                 background-image: url(../../public/img/main-map-8-mobile.png);
+                &_active {
+                    background-image: url(../../public/img/main-map-8-mobile-active.png);
+                }
                 @media(min-width: 769px) {
                     background-image: url(../../public/img/main-map-8.png);
 
@@ -385,6 +455,9 @@ export default {
 
             &-9 {
                 background-image: url(../../public/img/main-map-9-mobile.png);
+                &_active {
+                    background-image: url(../../public/img/main-map-9-mobile-active.png);
+                }
                 @media(min-width: 769px) {
                     background-image: url(../../public/img/main-map-9.png);
 
@@ -405,7 +478,6 @@ export default {
         &-link {
             display: block;
             margin: 0 auto;
-            margin-bottom: 8.3333rem;
             width: 19.2366rem;
             border: 1px solid #000000;
             padding: 0.8rem 3.4722rem;
@@ -414,8 +486,16 @@ export default {
             color: #626261;
             font-weight: 400;
             line-height: 130%;
+
+            @media (max-width: 768px) {
+                font-size: 4.8rem;
+                width: 73.88rem;
+                padding: 3rem 14rem;
+            }
         }
+
         &-title {
+            margin-top: 8.3333rem;
             margin-bottom: 4.16666rem;
             font-size: 2.36111rem;
             font-weight: 600;
@@ -423,6 +503,7 @@ export default {
 
             @media (max-width: 768px) {
                 margin-bottom: 8.5334rem;
+                margin-top: 24rem;
                 font-size: 7.46667rem;
             }
         }

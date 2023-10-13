@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <main class="main">
         <slot></slot>
     </main>
 </template>
@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style lang="scss">
-main {
+.main {
     padding: 3.75rem 0 2.5rem 0;
 }
 </style>

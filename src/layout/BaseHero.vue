@@ -41,6 +41,12 @@
             </div>
         </div>
 
+        <div v-if="isButton" class="hero__button" @click.prevent="scrollToMain()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                <path d="M30.4508 18.0598C30.4508 18.3748 30.3458 18.5848 30.1358 18.7948L21.7358 27.1948C21.3158 27.6148 20.6858 27.6148 20.2658 27.1948L11.8658 18.7948C11.4458 18.3748 11.4458 17.7448 11.8658 17.3248C12.2858 16.9048 12.9158 16.9048 13.3358 17.3248L21.0008 24.9898L28.6658 17.3248C29.0858 16.9048 29.7158 16.9048 30.1358 17.3248C30.3458 17.5348 30.4508 17.8498 30.4508 18.0598Z" fill="white"/>
+                <path d="M42 21C42 32.55 32.55 42 21 42C9.45 42 -4.13073e-07 32.55 -9.17939e-07 21C-1.12448e-06 16.275 1.575 11.865 4.41 8.085C4.725 7.665 5.46 7.56 5.88 7.875C6.3 8.19 6.405 8.925 6.09 9.345C3.465 12.705 2.1 16.8 2.1 21C2.1 31.395 10.605 39.9 21 39.9C31.395 39.9 39.9 31.395 39.9 21C39.9 10.605 31.395 2.1 21 2.1C17.64 2.1 14.28 3.045 11.34 4.725C10.815 5.04 10.185 4.83 9.87 4.41C9.555 3.885 9.765 3.255 10.185 2.94C13.545 1.05 17.22 -7.5271e-07 21 -9.17939e-07C32.55 -1.42281e-06 42 9.45 42 21Z" fill="white"/>
+            </svg>
+        </div>
         <div class="hero-strip"></div>
     </div>
 </template>
@@ -62,6 +68,10 @@ export default {
         imgMobile: {
             type: String,
             default: ''
+        },
+        isButton: {
+            type: Boolean,
+            default: false
         }
     },
     computed: {
@@ -72,6 +82,17 @@ export default {
                 return 'url(' + this.imgMobile + ')'
             }
             
+        }
+    },
+    methods: {
+        scroll() {
+            const el = document.getElementById('main');
+            const y = el.getBoundingClientRect().top + window.screenY;
+
+            window.scrollBy({ top: y, behavior: 'smooth' });
+        },
+        scrollToMain() {
+            this.scroll()
         }
     }
 }
@@ -167,6 +188,18 @@ export default {
             width: 23.5rem;
             height: 5rem;
         }
+    }
+
+    &__button {
+        position: absolute;
+            bottom: 5rem;
+            left: 50rem;
+            width: 42px;
+            height: 42px;
+
+            @media (max-width: 768px) {
+                bottom: 17rem;
+            }
     }
 }
 </style>

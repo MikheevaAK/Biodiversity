@@ -26,7 +26,7 @@
                         а&nbsp;также вдоль Северного морского пути.
                     </p>
 
-                    <a class="link" href="/expedition">
+                    <a class="link" href="/expedition" target="_blank">
                         <div>Читать про Норильскую экспедицию</div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="8" viewBox="0 0 20 8" fill="none">
                             <path

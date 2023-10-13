@@ -10,7 +10,7 @@
                     <div class="map-item__title">Норильский дивизион</div>
                     <div class="map-item__descr">Группа объектов в&nbsp;районе Норильска&nbsp;и&nbsp;Талнаха</div>
                 </div>
-                <a class="link" href="/norilsk-division">
+                <a class="link" href="/norilsk-division" target="_blank">
                     <div>Перейти в&nbsp;раздел дивизиона</div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="8" viewBox="0 0 20 8" fill="none">
                         <path
@@ -29,7 +29,7 @@
                     <div class="map-item__title">Забайкальский дивизион</div>
                     <div class="map-item__descr">Быстринский ГОК</div>
                 </div>
-                <a class="link" href="/transbaikal-division">
+                <a class="link" href="/transbaikal-division" target="_blank">
                     <div>Перейти в&nbsp;раздел дивизиона</div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="8" viewBox="0 0 20 8" fill="none">
                         <path
@@ -48,7 +48,7 @@
                     <div class="map-item__title">Кольский дивизион</div>
                     <div class="map-item__descr">Мончегорск, Никель, Заполярный</div>
                 </div>
-                <a class="link" href="/kola-division">
+                <a class="link" href="/kola-division" target="_blank">
                     <div>Перейти в&nbsp;раздел дивизиона</div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="8" viewBox="0 0 20 8" fill="none">
                         <path

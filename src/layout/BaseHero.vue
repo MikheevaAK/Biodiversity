@@ -196,6 +196,7 @@ export default {
             left: 50rem;
             width: 42px;
             height: 42px;
+            cursor: pointer;
 
             @media (max-width: 768px) {
                 bottom: 17rem;

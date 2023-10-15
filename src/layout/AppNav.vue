@@ -55,6 +55,10 @@ export default {
             ],
             links: [
                 {
+                    link: '/',
+                    title: 'Главная',
+                },
+                {
                     link: '/norilsk-division',
                     title: 'Норильский дивизион',
                 },
@@ -240,7 +244,7 @@ export default {
         position: absolute;
         top: 0;
         right: 0;
-        padding: 3.844rem 1.4rem 2.8rem 1.4rem;
+        padding: 3.844rem 1.4rem 2.8rem 0;
         background-color: #0077C8;
         width: 18.519rem;
         display: flex;
@@ -248,7 +252,7 @@ export default {
         gap: 1.5374rem;
 
         @media (max-width: 768px) {
-            padding: 8rem 5.3333rem 10rem 5.3333rem;
+            padding: 8rem 5.3333rem 10rem 0;
             width: 73.47rem;
             gap: 6.4rem;
         }
@@ -259,13 +263,30 @@ export default {
         font-size: 1.25rem;
         font-weight: 300;
         line-height: 130%;
+        padding-left: 1.4rem;
 
         @media (max-width: 768px) {
             font-size: 4.53334rem;
+            padding-left: 5.3333rem;
         }
 
         &_active {
+            position: relative;
             font-weight: 600;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                background-color: #FD7F07;
+                width: 0.3477rem;
+
+                @media (max-width: 768px) {
+                    width: 1.334rem;
+                }
+            }
         }
 
         a {

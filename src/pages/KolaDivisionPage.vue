@@ -304,6 +304,8 @@
                     <BaseCollageInfo :text="'Индикаторные виды'" />
                 </div>
                 <div class="collage mb-100">
+                    <div class="collage__golden-eagle"></div>
+                    <div class="collage__bluethroat"></div>
                     <BaseDropdownInfo class="golden-eagle" :title="'Беркут'" :is-modal="true" :color="'#71464E'" :pulsation-color="'finn'"
                         :text="'Самый крупный из&nbsp;орлов: размах крыльев достигает 230&nbsp;см при длине тела до&nbsp;93&nbsp;см. Беркуты чувствительны к&nbsp;беспокойству со&nbsp;стороны человека, чаще обитают в&nbsp;горах и&nbsp;реже на&nbsp;равнинных ландшафтах. За&nbsp;последние столетия вид исчез из&nbsp;многих районов из-за массового истребления, пестицидов, увеличения числа городов и&nbsp;изъятия земель под&nbsp;хозяйственные нужды'" />
 
@@ -373,6 +375,8 @@
                     <BaseCollageInfo class="grayling" :title="'Европейский хариус'" :color="'#71464E'"
                         :text="'Вес рыбы может достигать 6,7&nbsp;кг'" />
 
+                    <div class="collage__swan"></div>
+                    <div class="collage__grayling"></div>
                 </div>
                 <BaseTextBlock class="mb-100">
                     <p class="mb-10">
@@ -644,7 +648,8 @@ export default {
     },
     mounted() {
         this.$nextTick(function () {
-            this.scrollAnimation();
+            this.scrollAnimation()
+            this.parallax()
         })
     },
     methods: {
@@ -765,6 +770,65 @@ export default {
                     toggleClass: { className: "remove-active", targets: ".scroll-bg" }
                 },
             });
+        },
+        parallax() {
+            if (window.innerWidth > 768) {
+                gsap.fromTo(".collage__golden-eagle",
+                {y: 50},
+                {
+                    y: -10,
+                    scrollTrigger: {
+                        trigger: ".collage",
+                        start: 'top 100%',
+                        end: '15%',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                });
+
+                gsap.fromTo(".collage__bluethroat",
+                {y: 45},
+                {
+                    y: -15,
+                    scrollTrigger: {
+                        trigger: ".collage",
+                        start: '23% 100%',
+                        end: '35%',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                });
+
+                gsap.fromTo(".collage__swan",
+                {y: 30},
+                {
+                    y: -10,
+                    scrollTrigger: {
+                        trigger: ".collage",
+                        start: '75% 100%',
+                        end: 'bottom',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                });
+
+                gsap.fromTo(".collage__grayling",
+                {y: 40},
+                {
+                    y: -10,
+                    scrollTrigger: {
+                        trigger: ".collage",
+                        start: '90% 100%',
+                        end: '100%',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                });
+            }
         }
     }
 }
@@ -1342,6 +1406,86 @@ export default {
                     width: 31rem;
                     height: 14rem;
                 }
+            }
+        }
+
+        &__golden-eagle {
+            position: absolute;
+            width: 54rem;
+            height: 44.66rem;
+            top: 1rem;
+            left: 45rem;
+            background-image: url(../../public/img/collage-kola-golden-eagle.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom;
+
+            @supports (background-image: url(../../public/img/collage-kola-golden-eagle.webp)) {
+                background-image: url(../../public/img/collage-kola-golden-eagle.webp);
+            }
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        &__bluethroat {
+            position: absolute;
+            width: 23.9rem;
+            height: 20.7rem;
+            top: 80.5rem;
+            left: 62.5rem;
+            background-image: url(../../public/img/collage-kola-bluethroat.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom;
+
+            @supports (background-image: url(../../public/img/collage-kola-bluethroat.webp)) {
+                background-image: url(../../public/img/collage-kola-bluethroat.webp);
+            }
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        &__swan {
+            position: absolute;
+            width: 41.32rem;
+            height: 30.2088rem;
+            top: 261.5rem;
+            left: 3.6rem;
+            background-image: url(../../public/img/collage-kola-swan.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom;
+
+            @supports (background-image: url(../../public/img/collage-kola-swan.webp)) {
+                background-image: url(../../public/img/collage-kola-swan.webp);
+            }
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        &__grayling {
+            position: absolute;
+            width: 34.7223rem;
+            height: 25.4866rem;
+            top: 299.7rem;
+            left: 63.7rem;
+            background-image: url(../../public/img/collage-kola-grayling.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom;
+
+            @supports (background-image: url(../../public/img/collage-kola-grayling.webp)) {
+                background-image: url(../../public/img/collage-kola-grayling.webp);
+            }
+
+            @media (max-width: 768px) {
+                display: none;
             }
         }
 

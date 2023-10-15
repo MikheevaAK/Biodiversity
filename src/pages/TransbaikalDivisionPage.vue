@@ -758,6 +758,10 @@ export default {
                 max-width: 10rem;
             }
 
+            .dropdown-info__text {
+                padding-top: 3.56rem;
+            }
+
             @media (max-width: 768px) {
                 top: 326rem;
                 left: 33rem;

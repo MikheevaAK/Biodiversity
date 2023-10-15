@@ -236,6 +236,9 @@
                             экологических сообществ жужелиц.
                         </p>
                     </BaseSidebar>
+
+                    <div class="big-expedition__insects-bug"></div>
+                    <div class="big-expedition__insects-spider"></div>
                 </div>
 
                 <div class="big-expedition__birds">
@@ -296,6 +299,8 @@
                             затруднились даже выделить зоны воздействия.
                         </p>
                     </BaseSidebar>
+
+                    <div class="big-expedition__birds-animation"></div>
                 </div>
                 <div class="big-expedition__animals">
                     <BaseTextBlock class="mb-40" :title="'Млекопитающие'">
@@ -487,8 +492,9 @@ export default {
     },
     mounted() {
         this.$nextTick(function () {
-            this.sidebarAnimation();
-            this.textAnimation();
+            this.sidebarAnimation()
+            this.textAnimation()
+            this.parallax()
         })
     },
     methods: {
@@ -531,6 +537,53 @@ export default {
                         },
                     })
             })
+        },
+         parallax() {
+            if (window.innerWidth > 768) {
+                gsap.fromTo(".big-expedition__birds-animation",
+                {y: 90},
+                {
+                    y: 0,
+                    scrollTrigger: {
+                        trigger: ".big-expedition__birds",
+                        start: '50% 100%',
+                        end: '100%',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                });
+
+                gsap.fromTo(".big-expedition__insects-bug",
+                {y: 40, x: -10,},
+                {
+                    y: -0,
+                    x: 0,
+                    scrollTrigger: {
+                        trigger: ".big-expedition__insects",
+                        start: '60% 100%',
+                        end: '100%',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                });
+
+                gsap.fromTo(".big-expedition__insects-spider",
+                {y: 60, x: -50},
+                {
+                    y: 0,
+                    x: 0,
+                    scrollTrigger: {
+                        trigger: ".big-expedition__insects",
+                        start: '40% 100%',
+                        end: '100%',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                });
+            }
         }
     }
 }
@@ -937,8 +990,9 @@ export default {
     }
 
     &__insects {
+        position: relative;
         padding-bottom: 24rem;
-        background-image: url(../../public/img/big-expedition-insects.webp);
+        background-image: url(../../public/img/big-expedition-insects.png);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: bottom;
@@ -1025,12 +1079,53 @@ export default {
         .sidebar {
             width: 46rem;
         }
+
+        &-bug {
+            position: absolute;
+            top: 58rem;
+            left: 2rem;
+            width: 5.36rem;
+            height: 5.903rem;
+            background-image: url(../../public/img/big-expedition-insects-bug.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom;
+
+            @supports (background-image: url(../../public/img/big-expedition-insects-bug.webp)) {
+                background-image: url(../../public/img/big-expedition-insects-bug.webp);
+            }
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        &-spider {
+            position: absolute;
+            top: 58rem;
+            left: 33rem;
+            width: 10.78rem;
+            height: 9.67rem;
+            background-image: url(../../public/img/big-expedition-insects-spider.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom;
+
+            @supports (background-image: url(../../public/img/big-expedition-insects-spider.webp)) {
+                background-image: url(../../public/img/big-expedition-insects-spider.webp);
+            }
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
     }
 
     &__birds {
+        position: relative;
         margin-bottom: 3.4722rem;
         padding-bottom: 29rem;
-        background-image: url(../../public/img/big-expedition-birds.webp);
+        background-image: url(../../public/img/big-expedition-birds.png);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: bottom;
@@ -1123,6 +1218,26 @@ export default {
 
         .sidebar {
             width: 51rem;
+        }
+
+        &-animation {
+            position: absolute;
+            top: 36rem;
+            left: 64rem;
+            width: 31.667rem;
+            height: 28.8889rem;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url(../../public/img/big-expedition-eagle.webp);
+
+            @supports (background-image: url(../../public/img/big-expedition-eagle.webp)) {
+                background-image: url(../../public/img/big-expedition-eagle.webp);
+            }
+
+            @media (max-width: 768px) {
+                display: none;
+            }
         }
     }
 

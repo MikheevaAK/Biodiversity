@@ -1011,19 +1011,19 @@ export default {
 
             @media (max-width: 768px) {
                 &.bg-1 {
-                    background-image: url(../../public/img/map-1-mobile.jpg);
+                    background-image: url(../../public/img/pasvik-1-mobile.jpg);
                 }
 
                 &.bg-2 {
-                    background-image: url(../../public/img/map-2-mobile.jpg);
+                    background-image: url(../../public/img/pasvik-2-mobile.jpg);
                 }
 
                 &.bg-3 {
-                    background-image: url(../../public/img/map-3-mobile.jpg);
+                    background-image: url(../../public/img/pasvik-3-mobile.jpg);
                 }
 
                 &.bg-4 {
-                    background-image: url(../../public/img/map-3-mobile.jpg);
+                    background-image: url(../../public/img/pasvik-4-mobile.jpg);
                 }
             }
         }

@@ -612,7 +612,7 @@ export default {
                 bottom: -1.5rem;
 
                 @media (max-width: 768px) {
-                    bottom: -9.5rem;
+                    bottom: -10.5rem;
                 }
             }
         }

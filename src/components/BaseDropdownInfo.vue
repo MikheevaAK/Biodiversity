@@ -168,7 +168,7 @@ export default {
 
     &__text {
         position: absolute;
-        width: 18.6rem;
+        width: 19.6rem;
         padding: 2.56rem 0.62rem 0.88rem 3.13rem;
         border-radius: 0.25rem;
         background: #FFF;

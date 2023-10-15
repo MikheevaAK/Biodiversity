@@ -220,14 +220,11 @@
                     <BaseCollageInfo class="willow-warbler" :title="'Пеночка-весничка'"
                         :text="'Кроме Норильского обитает также в&nbsp;Кольском дивизионе'" />
 
-                    <BaseCollageInfo class="merlin" :title="'Кречет'" :color="'#71464E'"
-                        :text="'Самая крупная птица из&nbsp;отряда соколиных. За&nbsp;последние 20&nbsp;лет её&nbsp;популяция в&nbsp;России сократилась втрое. &laquo;Норникель&raquo; вложил 50&nbsp;млн&nbsp;рублей в&nbsp;поддержку и&nbsp;сохранение вида в&nbsp;2022&ndash;2023&nbsp;гг.'" />
+                    <BaseDropdownInfo class="merlin" :title="'Кречет'" :color="'#71464E'" :is-modal="true" :pulsation-color="'finn'"
+                    :text="'Самая крупная птица из&nbsp;отряда соколиных. За&nbsp;последние 20&nbsp;лет её&nbsp;популяция в&nbsp;России сократилась втрое. &laquo;Норникель&raquo; вложил 50&nbsp;млн рублей в&nbsp;поддержку и&nbsp;сохранение вида в&nbsp;2022&ndash;2023&nbsp;гг'" />
 
                     <BaseCollageInfo class="oatmeal" :title="'Полярная овсянка'" />
                     <BaseCollageInfo class="larch" :title="'Лиственница сибирская'" :color="'#71464E'" />
-
-                    <BaseCollageInfo class="deer" :title="'Дикий северный олень'" :color="'#71464E'"
-                        :text="'Отличительная особенность этого вида&nbsp;&mdash; наличие рогов у&nbsp;самок. Наименее изученная и&nbsp;малочисленная популяция дикого северного оленя&nbsp;&mdash; гыданская, она занесена в&nbsp;Красную книгу ЯНАО. По&nbsp;данным исследований, олени почти не&nbsp;мигрируют на&nbsp;дальние расстояния и&nbsp;круглый год остаются в&nbsp;арктической тундре'" />
 
                     <BaseCollageInfo class="ptarmigan" :title="'Белая куропатка'"
                         :text="'Тело птицы сохраняет&nbsp;постоянную температуру 45ºC'" />
@@ -246,7 +243,7 @@
                     <BaseCollageInfo class="hare" :title="'Заяц-беляк'"
                         :text="'Спасаясь от&nbsp;опасности, развивает скорость до&nbsp;60&nbsp;км/ч. Обитает также в&nbsp;Забайкальском дивизионе'" />
 
-                    <BaseCollageInfo class="plover" :title="'Золотистая ржанка'" :color="'#71464E'"
+                    <BaseDropdownInfo class="plover" :title="'Золотистая ржанка'" :color="'#71464E'" :is-modal="true" :pulsation-color="'finn'"
                         :text="'В&nbsp;древности считалось, что один взгляд на&nbsp;эту пёструю птичку излечивает от&nbsp;желтухи'" />
 
                     <BaseCollageInfo class="gooseberry" :title="'Гуменник'" :color="'#71464E'"
@@ -257,9 +254,6 @@
 
                     <BaseCollageInfo class="swan" :title="'Лебедь-кликун'" :color="'#71464E'"
                         :text="'Мощными крыльями может отразить атаку мелких хищников. Встречается также в&nbsp;Кольском дивизионе'" />
-
-                    <BaseCollageInfo class="lycosus-moss" :title="'Плаунок плаунковидный'" :color="'#71464E'"
-                        :text="'В&nbsp;районе Промышленного Норильска биологи обнаружили несколько участков, ценных для произрастания этого редкого вида растений. Чтобы сохранить популяции плаунка, вокруг этих участков необходимо создавать защитные зоны'" />
 
                     <BaseCollageInfo class="char" :title="'Арктический голец'" />
 
@@ -275,15 +269,12 @@
                     <BaseDropdownInfo class="palia" :title="'Боганидская палия'" :is-modal="true" :pulsation-color="'Green-Mist'"
                         :text="'Считается самой полезной рыбой в&nbsp;мире: кусочек рыбы в&nbsp;30&nbsp;г покрывает суточную потребность человека в&nbsp;полезных жирных кислотах. Встречается также в&nbsp;водоёмах Кольского дивизиона'" />
 
-                    <BaseDropdownInfo class="merlin_mobile" :title="'Кречет'" :color="'#71464E'" :is-modal="true" :pulsation-color="'finn'"
-                        :text="'Самая крупная птица из&nbsp;отряда соколиных. За&nbsp;последние 20&nbsp;лет её&nbsp;популяция в&nbsp;России сократилась втрое. &laquo;Норникель&raquo; вложил 50&nbsp;млн рублей в&nbsp;поддержку и&nbsp;сохранение вида в&nbsp;2022&ndash;2023&nbsp;гг'" />
-
-                    <BaseDropdownInfo class="deer_mobile" :title="'Дикий северный олень'" :color="'#71464E'" :pulsation-color="'finn'"
+                    <BaseDropdownInfo class="deer" :title="'Дикий северный олень'" :color="'#71464E'" :pulsation-color="'finn'"
                         :is-modal="true"
                         :text="'Отличительная особенность этого вида&nbsp;&mdash; наличие рогов у&nbsp;самок. Наименее изученная и&nbsp;малочисленная популяция дикого северного оленя&nbsp;&mdash; гыданская, она занесена в&nbsp;Красную книгу ЯНАО. По&nbsp;данным исследований, олени почти не&nbsp;мигрируют на&nbsp;дальние расстояния и&nbsp;круглый год остаются в&nbsp;арктической тундре'" />
-                    <BaseDropdownInfo class="lycosus-moss_mobile" :title="'Плаунок плаунковидный'" :is-modal="true" :pulsation-color="'finn'"
+                    <BaseDropdownInfo class="lycosus-moss" :title="'Плаунок плаунковидный'" :is-modal="true" :pulsation-color="'finn'"
                         :color="'#71464E'"
-                        :text="'В&nbsp;районе Промышленного Норильска биологи обнаружили несколько участков, ценных для произрастания этого редкого вида растений. Чтобы сохранить популяции плаунка, вокруг этих участков необходимо создавать защитные зоны'" />
+                        :text="'В&nbsp;районе Промышленного Норильска биологи обнаружили несколько участков, ценных для&nbsp;произрастания этого редкого вида растений. Чтобы&nbsp;сохранить популяции плаунка, вокруг этих участков необходимо создавать защитные зоны'" />
                     <BaseDropdownInfo class="hare_mobile" :title="'Заяц-беляк'" :is-modal="true" :pulsation-color="'Green-Mist'"
                         :text="'Спасаясь от&nbsp;опасности, развивает скорость до&nbsp;60&nbsp;км/ч'" />
                 </div>
@@ -1111,15 +1102,8 @@ export default {
             }
         }
 
-        .dropdown-info__wrap {
-            @media (max-width: 768px) {
-                // z-index: 1;
-            }
-        }
-
         .dropdown-info__text {
             @media (max-width: 768px) {
-                // position: static;
                 width: 93.34rem;
                 padding: 10.6667rem 5.3333rem 3.7333rem 12.2666rem;
             }
@@ -1224,24 +1208,13 @@ export default {
         }
 
         .merlin {
-            width: 20rem;
+            position: absolute;
             top: 94rem;
-            right: 37.3rem;
+            left: 44rem;
 
             @media (max-width: 768px) {
-                display: none;
-            }
-
-            &_mobile {
-                position: absolute;
-                display: none;
                 top: 135rem;
                 left: 12rem;
-
-                @media (max-width: 768px) {
-                    display: block;
-                }
-
             }
         }
 
@@ -1267,27 +1240,17 @@ export default {
             }
         }
 
-        .deer {
-            width: 22rem;
-            top: 132.2rem;
-            right: 33rem;
+        .deer {     
+            position: absolute;
+            top: 143rem;
+            left: 42rem;
 
             @media (max-width: 768px) {
-                display: none;
-            }
-
-            &_mobile {
-                display: none;
-                position: absolute;
                 top: 301rem;
                 left: 5rem;
 
-                @media (max-width: 768px) {
-                    display: block;
-
-                    .dropdown-info__title {
-                        max-width: unset;
-                    }
+                .dropdown-info__title {
+                    max-width: unset;
                 }
             }
         }
@@ -1386,14 +1349,16 @@ export default {
         }
 
         .plover {
-            width: 14rem;
-            top: 238.3rem;
-            right: 36rem;
+            position: absolute;
+            top: 241rem;
+            left: 49rem;
 
             @media (max-width: 768px) {
-                width: 59rem;
-                top: 509rem;
-                right: 34rem;
+                top: 513rem;
+                left: 13rem;
+                .dropdown-info__title {
+                    max-width: unset;
+                }
             }
         }
 
@@ -1434,26 +1399,33 @@ export default {
         }
 
         .lycosus-moss {
-            width: 20rem;
-            top: 253.69rem;
-            left: 19rem;
+            position: absolute;
+            top: 255rem;
+            left: 18rem;
 
-            @media (max-width: 768px) {
-                display: none;
+            .dropdown-info__title {
+                max-width: 12rem;
             }
 
-            &_mobile {
-                display: none;
-                position: absolute;
+            .dropdown-info__text {
+                padding-top: 3.56rem;
+            }
+
+            .dropdown-info__wrap {
+                align-items: flex-start;
+            }
+
+            @media (max-width: 768px) {
+                top: unset;
                 bottom: 193rem;
-                left: 2rem;
+                left: 4rem;
 
-                @media (max-width: 768px) {
-                    display: block;
+                .dropdown-info__wrap {
+                    align-items: center;
+                }
 
-                    .dropdown-info__title {
-                        max-width: unset;
-                    }
+                .dropdown-info__title {
+                    max-width: unset;
                 }
             }
         }
@@ -1478,7 +1450,6 @@ export default {
             position: absolute;
             bottom: 24.4rem;
             left: 46rem;
-
 
             .dropdown-info__text {
                 padding: 3.56rem 0.62rem 0.88rem 3.13rem;

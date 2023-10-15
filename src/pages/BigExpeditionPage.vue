@@ -1498,10 +1498,10 @@ export default {
 
     .text-block__wrap {
         width: 36rem;
+        z-index: 2;
 
         @media (max-width: 768px) {
             width: unset;
-            z-index: 2;
         }
     }
 

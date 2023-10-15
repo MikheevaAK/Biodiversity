@@ -206,6 +206,10 @@
                         <BaseCollageInfo :text="'Индикаторные виды'" />
                     </div>
 
+                    <div class="collage__eagle"></div>
+                    <div class="collage__merlin"></div>
+                    <div class="collage__loach"></div>
+                    <div class="collage__loon"></div>
                     <BaseCollageInfo class="eagle" :title="'Орлан-белохвост'" :color="'#71464E'"
                         :text="'Размах его крыльев достигает 2,4&nbsp;м. Птица нередко питается падалью и&nbsp;считается природным санитаром'" />
 
@@ -577,7 +581,8 @@ export default {
     },
     mounted() {
         this.$nextTick(function () {
-            this.scrollAnimation();
+            this.scrollAnimation()
+            this.parallax()
         })
     },
     methods: {
@@ -683,6 +688,65 @@ export default {
                     toggleClass: { className: "remove-active", targets: ".scroll-bg" }
                 },
             });
+        },
+        parallax() {
+            if (window.innerWidth > 768) {
+                gsap.fromTo(".collage__eagle",
+                {y: 65},
+                {
+                    y: -15,
+                    scrollTrigger: {
+                        trigger: ".collage",
+                        start: 'top 100%',
+                        end: '15%',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                });
+
+                gsap.fromTo(".collage__merlin",
+                {y: 50},
+                {
+                    y: -10,
+                    scrollTrigger: {
+                        trigger: ".collage",
+                        start: '23% 100%',
+                        end: '35%',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                });
+
+                gsap.fromTo(".collage__loach",
+                {y: 50},
+                {
+                    y: -0,
+                    scrollTrigger: {
+                        trigger: ".collage",
+                        start: '90% 100%',
+                        end: 'bottom',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                });
+
+                gsap.fromTo(".collage__loon",
+                {y: 35},
+                {
+                    y: -10,
+                    scrollTrigger: {
+                        trigger: ".collage",
+                        start: '80% 100%',
+                        end: '100%',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                });
+            }
         }
     }
 }
@@ -1081,11 +1145,12 @@ export default {
     .collage {
         position: relative;
         margin-bottom: 1.25rem;
-        height: 349rem;
+        height: 347rem;
         width: 100%;
         background-image: url(../../public/img/collage.png);
         background-repeat: no-repeat;
         background-size: contain;
+        background-position: bottom;
         z-index: 11;
 
         @supports (background-image: url(../../public/img/collage.webp)) {
@@ -1138,6 +1203,82 @@ export default {
                     line-height: 130%;
                 }
 
+            }
+        }
+
+        &__eagle {
+            position: absolute;
+            top: 0rem;
+            left: 8rem;
+            width: 52.2223rem;
+            height: 47.5rem;
+            background-image: url(../../public/img/collage-eagle.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            @supports (background-image: url(../../public/img/collage-eagle.webp)) {
+                background-image: url(../../public/img/collage-eagle.webp);
+            }
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        &__merlin {
+            position: absolute;
+            top: 87.7rem;
+            left: 12.3rem;
+            width: 38rem;
+            height: 27rem;
+            background-image: url(../../public/img/merlin.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            @supports (background-image: url(../../public/img/merlin.webp)) {
+                background-image: url(../../public/img/merlin.webp);
+            }
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        &__loach {
+            position: absolute;
+            top: 316rem;
+            left: 6.3rem;
+            width: 29.167rem;
+            height: 11.528rem;
+            background-image: url(../../public/img/collage-loach.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            @supports (background-image: url(../../public/img/collage-loach.webp)) {
+                background-image: url(../../public/img/collage-loach.webp);
+            }
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        &__loon {
+            position: absolute;
+            top: 281rem;
+            left: 47.3rem;
+            width: 30.903rem;
+            height: 23.75rem;
+            background-image: url(../../public/img/collage-loon.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            @supports (background-image: url(../../public/img/collage-loon.webp)) {
+                background-image: url(../../public/img/collage-loon.webp);
+            }
+
+            @media (max-width: 768px) {
+                display: none;
             }
         }
 

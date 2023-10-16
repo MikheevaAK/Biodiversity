@@ -192,15 +192,22 @@ export default {
 
     &__button {
         position: absolute;
-            bottom: 5rem;
-            left: 50rem;
-            width: 42px;
-            height: 42px;
-            cursor: pointer;
+        bottom: 5rem;
+        left: 50rem;
+        width: 42px;
+        height: 42px;
+        cursor: pointer;
 
-            @media (max-width: 768px) {
-                bottom: 17rem;
-            }
+        animation-duration: 1.2s;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+        animation-name: scroll;
+        background: none repeat scroll;
+
+
+        @media (max-width: 768px) {
+            bottom: 17rem;
+        }
     }
 }
 </style>

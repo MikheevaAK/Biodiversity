@@ -209,7 +209,7 @@ export default {
 
     .answer {
         height: 0;
-        overflow-y: scroll;
+        overflow-y: hidden;
         font-weight: 300;
         font-size: 1.25rem;
         line-height: 130%;

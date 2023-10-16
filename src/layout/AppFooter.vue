@@ -25,22 +25,22 @@
             <div class="footer__mid-img"></div>
             <div class="footer__mid-wrap">
                 <ul class="footer__mid-list">
-                    <li class="footer__mid-link" v-for="(link, index) in list1" :key="index">
+                    <li class="footer__mid-link" :class="{'disable' : link.link === $route.path}" v-for="(link, index) in list1" :key="index">
                         <a :href="link.link">{{ link.title }}</a>
                     </li>
                 </ul>
                 <ul class="footer__mid-list">
-                    <li class="footer__mid-link" v-for="(link, index) in list2" :key="index">
+                    <li class="footer__mid-link" :class="{'disable' : link.link === $route.path}" v-for="(link, index) in list2" :key="index">
                         <a :href="link.link">{{ link.title }}</a>
                     </li>
                 </ul>
                 <ul class="footer__mid-list">
-                    <li class="footer__mid-link" v-for="(link, index) in list3" :key="index">
+                    <li class="footer__mid-link" :class="{'disable' : link.link === $route.path}" v-for="(link, index) in list3" :key="index">
                         <a :href="link.link">{{ link.title }}</a>
                     </li>
                 </ul>
                 <ul class="footer__mid-list">
-                    <li class="footer__mid-link" v-for="(link, index) in list4" :key="index">
+                    <li class="footer__mid-link" :class="{'disable' : link.link === $route.path}" v-for="(link, index) in list4" :key="index">
                         <a :href="link.link">{{ link.title }}</a>
                     </li>
                 </ul>
@@ -209,13 +209,13 @@ export default {
             position: relative;
             display: inline-block;
             padding: 1.125rem 3.375rem;
-            color: var(--white, #FFF);
+            color: #fff;
             text-align: center;
             font-size: 1.25rem;
             font-weight: 400;
             line-height: 130%;
             border-radius: 3.125rem;
-            background: var(--copper, #D38235);
+            background: #D38235;
             transition: all .25s ease-out;
             z-index: 10;
 
@@ -381,8 +381,14 @@ export default {
                 font-size: 4.8rem;
             }
 
-            &:hover {
+            &:not(.disable):hover {
                 color: #D38235;
+            }
+
+
+            &.disable {
+                pointer-events: none;
+                color: #BDBDBD;
             }
         }
     }

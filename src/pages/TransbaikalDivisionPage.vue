@@ -193,6 +193,11 @@
                         <BaseCollageInfo :text="'Охраняемые виды'" :color="'#71464E'" />
                         <BaseCollageInfo :text="'Индикаторные виды'" />
                     </div>
+                    <div class="collage__eagle"></div>
+                    <div class="collage__harrier"></div>
+                    <div class="collage__fish"></div>
+                    <div class="collage__curlew"></div>
+
                     <BaseCollageInfo class="eagle" :title="'Большой подорлик'" :color="'#71464E'"
                         :text="'Размах крыльев в&nbsp;2,5&nbsp;раза длиннее тела&nbsp;—&nbsp;около 180&nbsp;см'" />
 
@@ -507,7 +512,8 @@ export default {
     },
     mounted() {
         this.$nextTick(function () {
-            this.scrollAnimation();
+            this.scrollAnimation()
+            this.parallax()
         })
     },
     methods: {
@@ -550,6 +556,65 @@ export default {
                         },
                     });
             });
+        },
+        parallax() {
+            if (window.innerWidth > 768) {
+                gsap.fromTo(".collage__eagle",
+                {y: 115},
+                {
+                    y: -20,
+                    scrollTrigger: {
+                        trigger: ".collage",
+                        start: 'top 100%',
+                        end: '12%',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                });
+
+                gsap.fromTo(".collage__harrier",
+                {y: 55},
+                {
+                    y: -15,
+                    scrollTrigger: {
+                        trigger: ".collage",
+                        start: '15% 100%',
+                        end: '22%',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                });
+
+                gsap.fromTo(".collage__fish",
+                {y: 35},
+                {
+                    y: -12,
+                    scrollTrigger: {
+                        trigger: ".collage",
+                        start: '93% 100%',
+                        end: 'bottom',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                });
+
+                gsap.fromTo(".collage__curlew",
+                {y: 50},
+                {
+                    y: -15,
+                    scrollTrigger: {
+                        trigger: ".collage",
+                        start: '78% 100%',
+                        end: '88%',
+                        // markers: true,
+                        scrub: true
+                    },
+
+                });
+            }
         }
     }
 }
@@ -710,6 +775,86 @@ export default {
 
             @supports (background-image: url(../../public/img/collage-2-mobile.webp)) {
                 background-image: url(../../public/img/collage-2-mobile.webp);
+            }
+        }
+
+        &__eagle {
+            position: absolute;
+            top: 8.4rem;
+            left: 9.9rem;
+            width: 43.4723rem;
+            height: 44.028rem;
+            background-image: url(../../public/img/collage-2-eagle.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom;
+
+            @supports (background-image: url(../../public/img/collage-2-eagle.webp)) {
+                background-image: url(../../public/img/collage-2-eagle.webp);
+            }
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        &__harrier {
+            position: absolute;
+            top: 45.4rem;
+            left: 1.1rem;
+            width: 38.405rem;
+            height: 54.306rem;
+            background-image: url(../../public/img/collage-2-harrier.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom;
+
+            @supports (background-image: url(../../public/img/collage-2-harrier.webp)) {
+                background-image: url(../../public/img/collage-2-harrier.webp);
+            }
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        &__curlew {
+            position: absolute;
+            top: 305rem;
+            left: 45.4rem;
+            width: 36.667rem;
+            height: 34.67rem;
+            background-image: url(../../public/img/collage-2-curlew.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom;
+
+            @supports (background-image: url(../../public/img/collage-2-curlew.webp)) {
+                background-image: url(../../public/img/collage-2-curlew.webp);
+            }
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        &__fish {
+            position: absolute;
+            top: 356.6rem;
+            left: 61.8rem;
+            width: 26.53rem;
+            height: 20rem;
+            background-image: url(../../public/img/collage-2-fish.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom;
+
+            @supports (background-image: url(../../public/img/collage-2-fish.webp)) {
+                background-image: url(../../public/img/collage-2-fish.webp);
+            }
+
+            @media (max-width: 768px) {
+                display: none;
             }
         }
 

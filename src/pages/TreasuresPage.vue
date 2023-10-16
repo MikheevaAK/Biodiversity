@@ -645,7 +645,7 @@
                     <BaseNumberBlock class="number-block-1" :textTop="'октябрь&nbsp;2011&nbsp;г.'"
                         :textBottom="'территория получила статус особо охраняемой'" />
                     <BaseNumberBlock class="number-block-2" :textTop="'30&nbsp;400&nbsp;га'" :textBottom="'площадь'" />
-                    <div class="map-circale"></div>
+                    <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-5.jpg'" :img-mobile="'img/treasures-img-5-mobile.jpg'" />
                 </div>
 
                 <BaseTextBlock class="mb-100" :title="'Флора и фауна'">
@@ -1394,13 +1394,14 @@ export default {
                 }
             }
 
-            .map-circale {
-                top: 14.3rem;
-                left: 46.5rem;
+            .treasures__photo-block {
+                position: absolute;
+                top: 23.3rem;
+                left: 42.5rem;
 
                 @media (max-width: 768px) {
-                    top: 91.6rem;
-                    left: 36rem;
+                    top: 111.6rem;
+                    left: 24rem;
                 }
             }
         }

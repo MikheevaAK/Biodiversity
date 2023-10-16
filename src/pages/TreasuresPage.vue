@@ -22,7 +22,7 @@
                     <p class="mobile-visible">
                         Границы заповедника находятся в&nbsp;15&nbsp;км от&nbsp;предприятий &laquo;Норникеля&raquo;
                     </p>
-
+                </BaseTextBlock>
                     <div class="treasures__map treasures__map-1-mobile">
                         <BaseNumberBlock class="number-block-2" :textTop="'14&nbsp;687&nbsp;га'"
                             :textBottom="'площадь заповедника'" />
@@ -30,6 +30,7 @@
                             :textBottom="'дата создания'" />
                         <BasePhoto class="treasures__photo-block" :img-mobile="'img/treasures-img-1-mobile.jpg'" />
                     </div>
+                <BaseTextBlock>
                     <p>
                         Это первый заповедник в&nbsp;нашей стране, созданный после
                         распада
@@ -1118,8 +1119,8 @@ export default {
                 display: block;
                 background-image: url(../../public/img/treasures-map-1-mobile.png);
                 background-position: bottom;
-                margin-left: -4.26667rem;
                 padding-left: 4.26667rem;
+                margin: 0 auto;
                 margin-bottom: 10rem;
                 margin-top: 11rem;
                 height: 144rem;

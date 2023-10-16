@@ -158,6 +158,7 @@ export default {
 
     @media (max-width: 768px) {
         right: 4rem;
+        max-height: 12.77rem;
     }
 }
 

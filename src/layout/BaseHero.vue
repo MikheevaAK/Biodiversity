@@ -193,11 +193,10 @@ export default {
     &__button {
         position: absolute;
         bottom: 5rem;
-        left: 50rem;
+        left: calc(50% - 21px);
         width: 42px;
         height: 42px;
         cursor: pointer;
-
         animation-duration: 1.2s;
         animation-fill-mode: both;
         animation-iteration-count: infinite;

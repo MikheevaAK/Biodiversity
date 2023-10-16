@@ -28,7 +28,15 @@
                     :class="[`main-page__map-item-${item.id}`, isBig(item.big), isActive(item)]">
                     <div class="main-page__map-item-time">{{item.time}}</div>
                     <div class="main-page__map-item-title" v-html="item.title"></div>
-                    <div class="main-page__map-active"></div>
+                    <picture>
+                        <source media="(max-width: 768px)" :srcset="`img/main-map-${item.id}-mobile-active.jpg`">
+                        <img :src="`img/main-map-${item.id}-active.jpg`" alt="">
+                    </picture>
+                    
+                    <picture>
+                        <source media="(max-width: 768px)" :srcset="`img/main-map-${item.id}-mobile.jpg`">
+                        <img class="notActive" :src="`img/main-map-${item.id}.jpg`" alt="">
+                    </picture>
                 </a>
             </section>
 
@@ -91,19 +99,19 @@ export default {
                     id: 2,
                     title: 'Кольский <br/>дивизион',
                     time: '9 минут',
-                    link: '/kola-division',
+                    link: '/kola-division'
                 },
                 {
                     id: 3,
                     title: 'Забайкальский <br/>дивизион ',
                     time: '8 минут',
-                    link: '/transbaikal-division',
+                    link: '/transbaikal-division'
                 },
                 {
                     id: 4,
                     title: 'Норильская <br/>Экспедиция',
                     time: '6 минут',
-                    link: '/expedition',
+                    link: '/expedition'
                 },
                 {
                     id: 5,
@@ -116,7 +124,7 @@ export default {
                     id: 6,
                     title: 'Вдохнуть жизнь <br/>в озеро',
                     time: '5 минут',
-                    link: '/pyasino',                
+                    link: '/pyasino'            
                 },
                 {
                     id: 7,
@@ -129,13 +137,13 @@ export default {
                     id: 8,
                     title: 'Загадочный <br/>ИПСЭ',
                     time: '9 минут',
-                    link: '/indicator',
+                    link: '/indicator'
                 },
                 {
                     id: 9,
                     title: 'Сокровищницы <br/>биоразнообразия',
                     time: '15 минут',
-                    link: '/treasures-of-biodiversity',
+                    link: '/treasures-of-biodiversity'
                 },
             ],
             store: localStorage
@@ -301,121 +309,33 @@ export default {
                     font-size: 5.06667rem;
                 }
             }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: -1;
+                transition: all .3s ease;
+            }
             
-            &-1 {
-                background-image: url(../../public/img/main-map-1-mobile.jpg);
-                &_active {
-                    background-image: url(../../public/img/main-map-1-mobile-active.jpg);
-                }
-                @media(min-width: 769px) {
-                    background-image: url(../../public/img/main-map-1.jpg);
-                    &:hover,
-                    &_active {
-                        background-image: url(../../public/img/main-map-1-active.jpg);
-                    }
-                }
-            }
-            &-2 {
-                background-image: url(../../public/img/main-map-2-mobile.jpg);
-                &_active {
-                    background-image: url(../../public/img/main-map-2-mobile-active.jpg);
-                }
-                @media(min-width: 769px) {
-                    background-image: url(../../public/img/main-map-2.jpg);
-                    &:hover,
-                    &_active {
-                        background-image: url(../../public/img/main-map-2-active.jpg);
-                    }
-                }
-            }
-            &-3 {
-                background-image: url(../../public/img/main-map-3-mobile.jpg);
-                &_active {
-                    background-image: url(../../public/img/main-map-3-mobile-active.jpg);
-                }
-                @media(min-width: 769px) {
-                    background-image: url(../../public/img/main-map-3.jpg);
-                    &:hover,
-                    &_active {
-                        background-image: url(../../public/img/main-map-3-active.jpg);
-                    }
-                }
-            }
-            &-4 {
-                background-image: url(../../public/img/main-map-4-mobile.jpg);
-                &_active {
-                    background-image: url(../../public/img/main-map-4-mobile-active.jpg);
-                }
-                @media(min-width: 769px) {
-                    background-image: url(../../public/img/main-map-4.jpg);
-                    &:hover,
-                    &_active {
-                        background-image: url(../../public/img/main-map-4-active.jpg);
-                    }
-                }
-            }
-            &-5{
-                background-image: url(../../public/img/main-map-5-mobile.jpg);
-                &_active {
-                    background-image: url(../../public/img/main-map-5-mobile-active.jpg);
-                }
-                @media(min-width: 769px) {
-                    background-image: url(../../public/img/main-map-5.jpg);
-                    &:hover,
-                    &_active  {
-                        background-image: url(../../public/img/main-map-5-active.jpg);
-                    }
-                }
-            }
-            &-6 {
-                background-image: url(../../public/img/main-map-6-mobile.jpg);
-                &_active {
-                    background-image: url(../../public/img/main-map-6-mobile-active.jpg);
-                }
-                @media(min-width: 769px) {
-                    background-image: url(../../public/img/main-map-6.jpg);
-                    &:hover,
-                    &_active {
-                        background-image: url(../../public/img/main-map-6-active.jpg);
-                    }
-                }
-            }
-            &-7 {
-                background-image: url(../../public/img/main-map-7-mobile.jpg);
-                &_active {
-                    background-image: url(../../public/img/main-map-7-mobile-active.jpg);
-                }
-                @media(min-width: 769px) {
-                    background-image: url(../../public/img/main-map-7.jpg);
-                    &:hover,
-                    &_active {
-                        background-image: url(../../public/img/main-map-7-active.jpg);
-                    }
-                }
-            }
-            &-8 {
-                background-image: url(../../public/img/main-map-8-mobile.jpg);
-                &_active {
-                    background-image: url(../../public/img/main-map-8-mobile-active.jpg);
-                }
-                @media(min-width: 769px) {
-                    background-image: url(../../public/img/main-map-8.jpg);
-                    &:hover,
-                    &_active {
-                        background-image: url(../../public/img/main-map-8-active.jpg);
-                    }
-                }
-            }
+            &-1,
+            &-2,
+            &-3,
+            &-4,
+            &-5,
+            &-6,
+            &-7,
+            &-8,
             &-9 {
-                background-image: url(../../public/img/main-map-9-mobile.jpg);
-                &_active {
-                    background-image: url(../../public/img/main-map-9-mobile-active.jpg);
+                &_active .notActive {
+                        opacity: 0;
                 }
+
                 @media(min-width: 769px) {
-                    background-image: url(../../public/img/main-map-9.jpg);
-                    &:hover,
-                    &_active {
-                        background-image: url(../../public/img/main-map-9-active.jpg);
+                    &:hover .notActive {
+                        opacity: 0;
                     }
                 }
             }

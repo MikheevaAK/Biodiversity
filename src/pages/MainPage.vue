@@ -28,7 +28,8 @@
                     :class="[`main-page__map-item-${item.id}`, isBig(item.big), isActive(item)]">
                     <div class="main-page__map-item-time">{{item.time}}</div>
                     <div class="main-page__map-item-title" v-html="item.title"></div>
-                    </a>
+                    <div class="main-page__map-active"></div>
+                </a>
             </section>
 
             <section class="main-page__bottom">
@@ -181,24 +182,7 @@ export default {
             flex-direction: column;
             align-items: center;
         }
-        // &__descr {
-        //     text-align: center;
-        //     width: 411px;
-        //     font-size: 18px;
-        //     @media(min-width: 1441px) {
-        //         font-size: 1.250vw;
-        //         width: 29vw;
-        //     }
-        // }
-        // &__title {
-        //     color: #d38235;
-        //     font-weight: 600;
-        //     line-height: 120%;
-        //     text-transform: uppercase;
-        //     text-align: center;
-        //     font-size: 36px;
-        //     margin-bottom: 25px;
-        // }
+
     }
     &__top {
         padding: 2.36rem 13.2rem 2.639rem 5.2086rem;

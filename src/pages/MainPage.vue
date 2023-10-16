@@ -332,17 +332,17 @@ export default {
 
             
             &-1 {
-                background-image: url(../../public/img/main-map-1-mobile.png);
+                background-image: url(../../public/img/main-map-1-mobile.jpg);
                 &_active {
-                    background-image: url(../../public/img/main-map-1-mobile-active.png);
+                    background-image: url(../../public/img/main-map-1-mobile-active.jpg);
                 }
 
                 @media(min-width: 769px) {
-                    background-image: url(../../public/img/main-map-1.png);
+                    background-image: url(../../public/img/main-map-1.jpg);
 
                     &:hover,
                     &_active {
-                        background-image: url(../../public/img/main-map-1-active.png);
+                        background-image: url(../../public/img/main-map-1-active.jpg);
                     }
                 }
             }

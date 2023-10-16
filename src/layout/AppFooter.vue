@@ -75,7 +75,7 @@
                         target="_blank">Инфографика</a>
                 </p>
             </div>
-            <div class="footer__bottom-right" v-if="this.$route.path !== '/'">
+            <div class="footer__bottom-right" :class="{'main-page' : this.$route.path === '/'}">
                 <a href="https://t.me/nornickel_official" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -484,6 +484,12 @@ export default {
 
                 &:last-child:hover svg circle {
                     fill: var(--copper, #D38235);
+                }
+            }
+
+            &.main-page {
+                @media (max-width: 768px) {
+                    display: none;
                 }
             }
         }

@@ -15,7 +15,7 @@
             <div class="footer__top-descr">
                 Вы&nbsp;собрали новую часть карты биоразнообразия &laquo;Норникель&raquo;.
             </div>
-            <a href="/" class="footer__top-link">
+            <a href="/#map" class="footer__top-link">
                 Вернуться на&nbsp;карту
             </a>
         </div>

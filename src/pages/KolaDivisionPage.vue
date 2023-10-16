@@ -774,13 +774,13 @@ export default {
         parallax() {
             if (window.innerWidth > 768) {
                 gsap.fromTo(".collage__golden-eagle",
-                {y: 50},
+                {y: 115},
                 {
-                    y: -10,
+                    y: -15,
                     scrollTrigger: {
                         trigger: ".collage",
                         start: 'top 100%',
-                        end: '15%',
+                        end: '10%',
                         // markers: true,
                         scrub: true
                     },
@@ -788,13 +788,13 @@ export default {
                 });
 
                 gsap.fromTo(".collage__bluethroat",
-                {y: 45},
+                {y: 55},
                 {
                     y: -15,
                     scrollTrigger: {
                         trigger: ".collage",
-                        start: '23% 100%',
-                        end: '35%',
+                        start: '24% 100%',
+                        end: '29%',
                         // markers: true,
                         scrub: true
                     },

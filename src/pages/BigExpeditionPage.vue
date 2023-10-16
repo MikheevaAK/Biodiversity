@@ -541,13 +541,13 @@ export default {
          parallax() {
             if (window.innerWidth > 768) {
                 gsap.fromTo(".big-expedition__birds-animation",
-                {y: 90},
+                {y: 105},
                 {
-                    y: 0,
+                    y: -10,
                     scrollTrigger: {
                         trigger: ".big-expedition__birds",
                         start: '50% 100%',
-                        end: '100%',
+                        end: '70%',
                         // markers: true,
                         scrub: true
                     },

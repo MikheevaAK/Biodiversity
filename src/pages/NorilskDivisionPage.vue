@@ -692,13 +692,13 @@ export default {
         parallax() {
             if (window.innerWidth > 768) {
                 gsap.fromTo(".collage__eagle",
-                {y: 65},
+                {y: 105},
                 {
-                    y: -15,
+                    y: -20,
                     scrollTrigger: {
                         trigger: ".collage",
                         start: 'top 100%',
-                        end: '15%',
+                        end: '13%',
                         // markers: true,
                         scrub: true
                     },
@@ -706,13 +706,13 @@ export default {
                 });
 
                 gsap.fromTo(".collage__merlin",
-                {y: 50},
+                {y: 55},
                 {
-                    y: -10,
+                    y: -15,
                     scrollTrigger: {
                         trigger: ".collage",
-                        start: '23% 100%',
-                        end: '35%',
+                        start: '25% 100%',
+                        end: '33%',
                         // markers: true,
                         scrub: true
                     },

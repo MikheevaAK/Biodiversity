@@ -21,6 +21,7 @@
                         <path d="M39.3555 19.3535L19.3555 39.3535" stroke="black" stroke-linecap="round"/>
                         </svg>
                     </button>
+                    <a v-if="linkUrl" target="_blank" :href="linkUrl" class="photo-block__modal-link">{{ linkTitle }}</a>
                 </div>
             </div>
         </transition>
@@ -37,7 +38,15 @@ export default {
         imgMobile: {
             type: String,
             default: ''
-        }
+        },
+        linkTitle: {
+            type: String,
+            default: ''
+        },
+        linkUrl: {
+            type: String,
+            default: ''
+        },
     },
     data() {
         return {
@@ -119,6 +128,18 @@ export default {
         background-color: rgba(255, 255, 255, 0.60);
         overflow: hidden;
         z-index: 20;
+
+        &-link {
+            position: absolute;
+            bottom: 1.389rem;
+            left: 1.67rem;
+            color:#FFF;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 130%;
+            text-decoration-line: underline;
+            text-decoration-skip-ink: none;
+        }
     }
 
     &__modal-wrap {

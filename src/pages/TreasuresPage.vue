@@ -372,7 +372,7 @@
                         :textBottom="'территория получила статус особо охраняемой'" />
                     <BaseNumberBlock class="number-block-2" :textTop="'1&nbsp;887&nbsp;251&nbsp;га'"
                         :textBottom="'площадь'" />
-                    <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-3.jpg'" :img-mobile="'img/treasures-img-3-mobile.jpg'" />
+                    <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-3.jpg'" :img-mobile="'img/treasures-img-3-mobile.jpg'"  :link-title="'Фото: jxandreani, CC BY 2.0.'" :link-url="'https://creativecommons.org/licenses/by/2.0/'" />
                 </div>
 
                 <BaseTextBlock class="mb-100 treasures__supervolcano">
@@ -580,7 +580,7 @@
                     <BaseNumberBlock class="number-block-1" :textTop="'1986&nbsp;г.'"
                         :textBottom="'территория получила статус особо&nbsp;охраняемой'" />
                     <BaseNumberBlock class="number-block-2" :textTop="'24&nbsp;478&nbsp;га'" :textBottom="'площадь'" />
-                    <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-4.jpg'" :img-mobile="'img/treasures-img-4-mobile.jpg'" />
+                    <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-4.jpg'" :img-mobile="'img/treasures-img-4-mobile.jpg'" :link-title="'Фото Bondarevich Evgeniy, CC BY-SA 4.0.'" :link-url="'https://creativecommons.org/licenses/by-sa/4.0/'" />
                 </div>
 
                 <BaseTextBlock class="mb-40" :title="'Флора и фауна'">

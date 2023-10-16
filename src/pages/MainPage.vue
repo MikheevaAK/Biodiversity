@@ -371,9 +371,9 @@ export default {
                 }
             }
             &-5{
-                background-image: url(../../public/img/main-map-5-mobile.png);
+                background-image: url(../../public/img/main-map-5-mobile.jpg);
                 &_active {
-                    background-image: url(../../public/img/main-map-5-mobile-active.png);
+                    background-image: url(../../public/img/main-map-5-mobile-active.jpg);
                 }
                 @media(min-width: 769px) {
                     background-image: url(../../public/img/main-map-5.jpg);

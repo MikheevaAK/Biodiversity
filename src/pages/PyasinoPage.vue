@@ -93,7 +93,7 @@
                     <div class="scroll-card card-3 text-block__descr">
                         На&nbsp;вершине этой пищевой или, как её&nbsp;называют учёные, трофической цепи&nbsp;&mdash;
                         водоплавающие птицы. Они поедают рыбу, а&nbsp;помёт&nbsp;&mdash; продукт
-                        их&nbsp;жизнедеятельности,&nbsp;&mdash; попадает в&nbsp;воду и&nbsp;становится питательной
+                        их&nbsp;жизнедеятельности&nbsp;&mdash; попадает в&nbsp;воду и&nbsp;становится питательной
                         средой
                         для фитопланктона. Круг замыкается.
                     </div>
@@ -183,7 +183,7 @@
                         </p>
                     </div>
                     <BaseNumberBlock class="hidden-mobile" :textTop="'21 озеро'"
-                                     :textBottom="'обследовали учёные в ходе экспедиции'"/>
+                                     :textBottom="'обследовали учёные в&nbsp;ходе экспедиции'"/>
                 </BaseTextBlock>
                 <div class="in-search">
                     <div class="in-search__plane"></div>

@@ -1,6 +1,6 @@
 <template>
     <div class="division">
-        <BaseHero :title="'Норильский дивизион. Природные сокровища южного Таймыра'" :descr="heroDescr"
+        <BaseHero :title="'Норильский дивизион. Природные сокровища Южного Таймыра'" :descr="heroDescr"
             :img="'img/hero-3.jpg'" :imgMobile="'img/hero3-mobile.jpg'" />
         <MainSection>
             <SectionWhite>
@@ -100,12 +100,12 @@
                     </div>
                 </section>
 
-                <BaseTextBlock class="text mb-40" :title="'Зона воздействия предприятий Норильского дивизиона'"
+                <BaseTextBlock class="text text-w mb-40" :title="'Зона воздействия предприятий Норильского дивизиона'"
                     :tooltip="true">
                     <p class="mb-10">
                         По&nbsp;данным Большой научной экспедиции 2022&nbsp;года, радиус воздействия Норильского
                         промышленного района
-                        на&nbsp;растительный и&nbsp;животный мир южного Таймыра&nbsp;&mdash; не&nbsp;больше 10&nbsp;км.
+                        на&nbsp;растительный и&nbsp;животный мир Южного Таймыра&nbsp;&mdash; не&nbsp;больше 10&nbsp;км.
                     </p>
                     <p>
                         Эффект от&nbsp;промышленной нагрузки наиболее выражен на&nbsp;расстоянии до&nbsp;1&nbsp;км,
@@ -231,7 +231,7 @@
                     <BaseCollageInfo class="larch" :title="'Лиственница сибирская'" :color="'#71464E'" />
 
                     <BaseCollageInfo class="ptarmigan" :title="'Белая куропатка'"
-                        :text="'Тело птицы сохраняет&nbsp;постоянную температуру 45ºC'" />
+                        :text="'Тело птицы сохраняет&nbsp;постоянную температуру 45&nbsp;ºC'" />
 
                     <BaseCollageInfo class="shrew" :title="'Тундряная бурозубка'"
                         :text="'За&nbsp;сутки может съесть в&nbsp;4&nbsp;раза больше, чем весит'" />
@@ -266,7 +266,7 @@
                     <BaseDropdownInfo class="myxomycetes" :title="'Миксомицеты'" :is-modal="true" :pulsation-color="'Green-Mist'"
                         :text="'Миксомицеты занимают промежуточное положение между растениями и&nbsp;животными: похожие внешне на&nbsp;грибы, они постоянно передвигаются и&nbsp;едят. На&nbsp;территории воздействия предприятий исследователи обнаружили 14&nbsp;видов этих существ'" />
                     <BaseDropdownInfo class="microalgae" :title="'Микроводоросли'" :is-modal="true" :pulsation-color="'Green-Mist'"
-                        :text="'В&nbsp;реках и&nbsp;озёрах дивизиона биологи обнаружили два вида микроводорослей, способных рассказать об&nbsp;экологической обстановке. Похожая на&nbsp;звезду Asterionella formosa живёт только в&nbsp;чистых водоёмах, в&nbsp;то&nbsp;время как её&nbsp;антогонист Dictyosphaerium pulchellum развивается в&nbsp;загрязнённой воде'" />
+                        :text="'В&nbsp;реках и&nbsp;озёрах дивизиона биологи обнаружили два вида микроводорослей, способных рассказать об&nbsp;экологической обстановке. Похожая на&nbsp;звезду Asterionella formosa живёт только в&nbsp;чистых водоёмах, в&nbsp;то&nbsp;время как её&nbsp;антагонист Dictyosphaerium pulchellum развивается в&nbsp;загрязнённой воде'" />
 
                     <BaseDropdownInfo class="zooplankton" :title="'Зоопланктон'" :is-modal="true" :pulsation-color="'Green-Mist'"
                         :text="'Чтобы оценить состояние водоёмов, исследователи отобрали виды зоопланктона, сигнализирующие о&nbsp;качестве воды. Например, планктонный рачок Limnocalanus macrurus любит чистую воду, а&nbsp;если начинает доминировать планктонная коловратка Brachionus sericus&nbsp;&mdash; вода загрязнена'" />
@@ -754,6 +754,16 @@ export default {
 
 <style lang="scss">
 .division {
+    .text-w {
+        .text-block__title {
+            width: 30rem;
+
+            @media (max-width: 768px) {
+                width: unset;
+            }
+        }
+    }
+
     .big-map {
         margin-bottom: 3.81rem;
         height: 40.19419rem;

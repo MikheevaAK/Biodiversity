@@ -169,7 +169,12 @@ export default {
 <style lang="scss">
 .main-page {
     .hero {
-        background-position: top center;
+        background-position: bottom;
+
+        @media (max-height: 40.972vw) and (min-width: 769px) {
+            background-position: center;
+        }
+
         &-strip {
             display: none;
         }
@@ -179,10 +184,6 @@ export default {
             align-items: center;
             height: 100%;
             min-height: 100vh;
-            padding: 30vh 0 0 0;
-            @media(min-width: 1441px) {
-                padding: 17vw 0 0 0;
-            }
         }
         &__wrap {
             width: unset;

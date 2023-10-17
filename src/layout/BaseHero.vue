@@ -1,5 +1,5 @@
 <template>
-    <div class="hero" :style="{ 'background-image': image }">
+    <div class="hero" :style="{ 'background-image': this.$route.path !== '/' ?  image : ''}">
         <div class="container">
             <a href="/" class="hero__link">
                 <svg  v-if="this.$route.path === '/'" xmlns="http://www.w3.org/2000/svg" width="118" height="27" viewBox="0 0 118 27" fill="none">

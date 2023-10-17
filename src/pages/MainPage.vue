@@ -1,6 +1,6 @@
 <template>
     <div class="main-page">
-        <BaseHero :img="'img/hero-main.png'" :imgMobile="'img/hero-main-mobile.png'" :isButton="true"/>
+        <BaseHero :isButton="true"/>
         <main id="main">
             <section class="main-page__top">
                 <div class="main-page__top-left">
@@ -170,6 +170,19 @@ export default {
 .main-page {
     .hero {
         background-position: bottom;
+        background-image: url(../../public/img/hero-main.png);
+
+        @supports (background-image: url(../../public/img/hero-main.webp)) {
+            background-image: url(../../public/img/hero-main.webp);
+        }
+
+        @media (max-width: 768px) {
+            background-image: url(../../public/img/hero-main-mobile.png);
+
+            @supports (background-image: url(../../public/img/hero-main-mobile.webp)) {
+            background-image: url(../../public/img/hero-main-mobile.webp);
+        }
+        }
 
         @media (max-height: 40.972vw) and (min-width: 769px) {
             background-position: center;

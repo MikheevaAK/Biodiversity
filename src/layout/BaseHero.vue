@@ -110,7 +110,7 @@ export default {
     
 
     @media (max-width: 768px) {
-        background-position: bottom;
+        background-position: top;
     }
 
     &-strip {

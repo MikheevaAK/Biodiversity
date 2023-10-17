@@ -41,7 +41,7 @@
             </section>
 
             <section class="main-page__bottom">
-                <a href="file-test.pdf" download v-if="store.length === 10" class="main-page__bottom-link">Скачать карту в&nbsp;PDF</a>
+                <a href="file-test.pdf" download v-if="store.length === 10" class="main-page__bottom-link">Скачать карту в PDF</a>
                 <div class="main-page__bottom-title">Сохранение биоразнообразия</div>
                 <BaseAccordion class="main-page__result-faq" v-for="faq in faqs" :key="faq.id" :faq="faq" />
             </section>
@@ -374,7 +374,7 @@ export default {
             line-height: 130%;
             @media (max-width: 768px) {
                 font-size: 4.8rem;
-                width: 73.88rem;
+                width: 74rem;
                 padding: 3rem 14rem;
             }
         }

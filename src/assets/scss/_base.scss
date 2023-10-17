@@ -118,6 +118,14 @@ svg {
     }
 }
 
+.mt-10 {
+    margin-top: 0.625rem;
+
+    @media (max-width: 768px) {
+        margin-top: 2.6667rem;
+    }
+}
+
 //28px
 .mb-28 {
     margin-bottom: 1.94445rem;

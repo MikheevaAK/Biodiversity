@@ -8,9 +8,9 @@
                 </picture>
                 <div class="transbaikal-scroll-item__text-block">
                     <div class="transbaikal-scroll-item__title">Чистый воздух</div>
-                    <div>Сократить выбросы в атмосферу помогают:</div>
+                    <div>Сократить выбросы в&nbsp;атмосферу помогают:</div>
                     <ul class="transbaikal-scroll-item__list">
-                        <li class="transbaikal-scroll-item__list-item">уловители золы и пыли
+                        <li class="transbaikal-scroll-item__list-item">уловители золы и&nbsp;пыли
                         </li>
                         <li class="transbaikal-scroll-item__list-item">электрофильтры
                         </li>

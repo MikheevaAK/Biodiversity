@@ -1,7 +1,7 @@
 <template>
     <div class="text-block__wrap" :class="{ 'text-block__wrap-index': tooltip }">
         <h3 v-if="title" class="text-block__title">
-            {{ title }}
+            <span v-html="title"></span>
             <div v-if="undertitle" class="text-block__undertitle">{{ undertitle }}</div>
         </h3>
         <div class="text-block__descr">

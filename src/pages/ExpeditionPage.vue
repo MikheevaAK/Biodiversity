@@ -69,7 +69,7 @@
                 <BigMap :circales="circales" :img="'img/expedition-big-map'" :imgMobile="'img/expedition-big-map-mobile'">
                     <BaseTextBlock class="text" :title="'Карта исследований'">
                         <p class="text-block__descr mb-40">
-                            Исследования проводились по нескольким направлениям: поверхностные воды и&nbsp;донные
+                            Исследования проводились по&nbsp;нескольким направлениям: поверхностные воды и&nbsp;донные
                             отложения,
                             почва и&nbsp;многолетнемёрзлый грунт, флора и&nbsp;фауна Арктики. Учёные обследовали десятки
                             природных
@@ -147,9 +147,9 @@
 
                     <div class="number-blocks text-block__wrap">
                         <BaseNumberBlock :textTop="'6 рек'" :textBottom="'посетили в ходе экспедиции'" />
-                        <BaseNumberBlock :textTop="'> 1 000 км'" :textBottom="'преодолели по земле, воде и воздуху'" />
+                        <BaseNumberBlock :textTop="'> 1 000 км'" :textBottom="'преодолели по земле, воде и&nbsp;воздуху'" />
                         <BaseNumberBlock :textTop="'2&nbsp;000&nbsp;проб'"
-                            :textBottom="'собрали в процессе исследований'" />
+                            :textBottom="'собрали в&nbsp;процессе исследований'" />
                     </div>
 
                     <BaseTextBlock class="mb-40">
@@ -198,7 +198,7 @@
                         <div class="step-start__item">
                             <div class="step-start__item-number">1</div>
                             <div class="step-start__item-descr">
-                                Оценить динамику загрязнений в окрестностях пострадавшей ТЭЦ
+                                Оценить динамику загрязнений в&nbsp;окрестностях пострадавшей ТЭЦ
                             </div>
                         </div>
                         <div class="step-start__item">
@@ -211,8 +211,8 @@
                 </div>
                 <BaseTextBlock class="" :title="'Маршрут'">
                     <p class="text-block__descr">
-                        Участники второго этапа экспедиции прошли тем же маршрутом, что и их предшественники: от реки
-                        Далдыкан до слияния рек Пясина и Дудыпта.
+                        Участники второго этапа экспедиции прошли тем же маршрутом, что и&nbsp;их предшественники: от&nbsp;реки
+                        Далдыкан до&nbsp;слияния рек Пясина и&nbsp;Дудыпта.
                     </p>
                 </BaseTextBlock>
                 <div class="step-two__map">
@@ -223,11 +223,11 @@
                         </li>
                         <li class="step-two__map-item">
                             <span class="step-two__item-number">2</span>
-                            <span class="step-two__item-text">Слияние рек Далдыкан и Амбарная</span>
+                            <span class="step-two__item-text">Слияние рек Далдыкан и&nbsp;Амбарная</span>
                         </li>
                         <li class="step-two__map-item">
                             <span class="step-two__item-number">3</span>
-                            <span class="step-two__item-text">Слияние р. Амбарная и оз. Пясино</span>
+                            <span class="step-two__item-text">Слияние р. Амбарная и&nbsp;оз. Пясино</span>
                         </li>
                         <li class="step-two__map-item">
                             <span class="step-two__item-number">4</span>
@@ -235,7 +235,7 @@
                         </li>
                         <li class="step-two__map-item">
                             <span class="step-two__item-number">5</span>
-                            <span class="step-two__item-text">Слияние рек Пясина и Дудыпта</span>
+                            <span class="step-two__item-text">Слияние рек Пясина и&nbsp;Дудыпта</span>
                         </li>
                     </ul>
                     <picture>
@@ -290,7 +290,7 @@
                     <div class="step-start__period">июль – сентябрь 2022 года</div>
                     <div class="step-start__descr">
                         Участниками третьего сезона Большой Норильской экспедиции стали учёные из 14 научных организаций
-                        Новосибирска, Тюмени, Томска, Красноярска и Якутска. <br /> Они поставили перед собой задачи:
+                        Новосибирска, Тюмени, Томска, Красноярска и&nbsp;Якутска. <br /> Они поставили перед собой задачи:
                     </div>
                     <svg class="step-start__lines" width="458" height="65" viewBox="0 0 458 65" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -330,8 +330,7 @@
                         <p class="mb-10">
                             В&nbsp;2021&ndash;2022 годах компания начала восстанавливать хозяйственную
                             и&nbsp;экологическую ценность
-                            земель и
-                            водных объектов, пострадавших от&nbsp;разлива топлива.
+                            земель и&nbsp;водных объектов, пострадавших от&nbsp;разлива топлива.
                         </p>
                         <p class="mb-10">
                             Кроме того, в&nbsp;&laquo;Норникеле&raquo; разработали программы, которые позволят изучить
@@ -365,10 +364,10 @@
                 </BaseTextBlock>
                 <BaseSidebar class="padding-hide">
                     <p>
-                        Арктические экосистемы показали, что могут хорошо восстанавливаться,
+                        Арктические экосистемы показали, что&nbsp;могут хорошо восстанавливаться,
                         а&nbsp;микроорганизмы&nbsp;&mdash;
                         эффективно очищать воду от&nbsp;органического загрязнения. Чтобы это происходило, необходимо
-                        снизить техногенную нагрузку на&nbsp;близлежащие к&nbsp;производству территории. Для этого нужно
+                        снизить техногенную нагрузку на&nbsp;близлежащие к&nbsp;производству территории. Для&nbsp;этого нужно
                         модернизировать водоочистные установки и&nbsp;установки очистки производственных выбросов,
                         реализовать серный проект. Иными словами, в&nbsp;полном объёме реализовать Экологическую
                         стратегию &laquo;Норникеля&raquo;.

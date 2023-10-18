@@ -468,7 +468,7 @@
                         :textBottom="'территория получила статус особо охраняемой'" />
                     <BaseNumberBlock class="number-block-2" :textTop="' 4&nbsp;169&nbsp;222&nbsp;га'"
                         :textBottom="'площадь'" />
-                    <div class="map-circale"></div>
+                    <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-4.jpg'" :img-mobile="'img/treasures-img-4-mobile.jpg'"  :link-title="'Фото: jxandreani, CC BY 2.0.'" :link-url="'https://creativecommons.org/licenses/by/2.0/'" />
                 </div>
 
                 <BaseTextBlock class="mb-60">
@@ -581,7 +581,7 @@
                     <BaseNumberBlock class="number-block-1" :textTop="'1986&nbsp;г.'"
                         :textBottom="'территория получила статус особо&nbsp;охраняемой'" />
                     <BaseNumberBlock class="number-block-2" :textTop="'24&nbsp;478&nbsp;га'" :textBottom="'площадь'" />
-                    <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-4.jpg'" :img-mobile="'img/treasures-img-4-mobile.jpg'" :link-title="'Фото Bondarevich Evgeniy, CC BY-SA 4.0.'" :link-url="'https://creativecommons.org/licenses/by-sa/4.0/'" />
+                    <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-5.jpg'" :img-mobile="'img/treasures-img-5-mobile.jpg'" :link-title="'Фото Bondarevich Evgeniy, CC BY-SA 4.0.'" :link-url="'https://creativecommons.org/licenses/by-sa/4.0/'" />
                 </div>
 
                 <BaseTextBlock class="mb-40" :title="'Флора и фауна'">
@@ -646,7 +646,7 @@
                     <BaseNumberBlock class="number-block-1" :textTop="'октябрь&nbsp;2011&nbsp;г.'"
                         :textBottom="'территория получила статус особо охраняемой'" />
                     <BaseNumberBlock class="number-block-2" :textTop="'30&nbsp;400&nbsp;га'" :textBottom="'площадь'" />
-                    <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-5.jpg'" :img-mobile="'img/treasures-img-5-mobile.jpg'" />
+                    <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-6.jpg'" :img-mobile="'img/treasures-img-6-mobile.jpg'" />
                 </div>
 
                 <BaseTextBlock class="mb-100" :title="'Флора и фауна'">
@@ -1026,24 +1026,6 @@ export default {
 
     }
 
-    .map-circale {
-        position: absolute;
-        width: 0.9724rem;
-        height: 0.9724rem;
-        border-radius: 100%;
-        transition-timing-function: ease-in;
-        transition-duration: 0.7s;
-        transition: all 2.3s;
-        z-index: 2;
-        background-color: rgba(#009CA6, 1);
-        animation: ripple-green 0.9s infinite;
-
-        @media (max-width: 768px) {
-            width: 2rem;
-            height: 2rem;
-        }
-    }
-
     &__map {
         position: relative;
         height: 36.667rem;
@@ -1288,13 +1270,14 @@ export default {
                 }
             }
 
-            .map-circale {
-                top: 15rem;
-                left: 45.5rem;
+            .treasures__photo-block {
+                position: absolute;
+                top: 15.2rem;
+                left: 44.1rem;
 
                 @media (max-width: 768px) {
-                    top: 104.5rem;
-                    left: 40.5rem;
+                    top: 104rem;
+                    left: 34.5rem;
                 }
             }
         }

@@ -256,7 +256,9 @@
                     <BaseCollageInfo class="swan" :title="'Лебедь-кликун'" :color="'#71464E'"
                         :text="'Мощными крыльями может отразить атаку мелких хищников. Встречается также в&nbsp;Кольском дивизионе'" />
 
-                    <BaseCollageInfo class="char" :title="'Арктический голец'" />
+                    <BaseCollageInfo class="palia" :title="'Боганидская палия'" />
+                    <BaseDropdownInfo class="char" :title="'Арктический голец'" :is-modal="true" :pulsation-color="'Green-Mist'"
+                        :text="'Считается самой полезной рыбой в&nbsp;мире: кусочек рыбы в&nbsp;30&nbsp;г покрывает суточную потребность человека в&nbsp;полезных жирных кислотах. Встречается также в&nbsp;водоёмах Кольского дивизиона'" />
 
                     <BaseDropdownInfo class="ground-beetles" :title="'Жужелицы'" :is-modal="true" :pulsation-color="'Green-Mist'"
                         :text="'Такие виды, как Amara brunnea, Pterostichus fulvescens, Notiophilus fasciatus и Nebria gyllenhali, отрицательно реагируют на&nbsp;промышленное воздействие и&nbsp;помогают исследователям фиксировать изменения в&nbsp;окружающей среде'" />
@@ -267,9 +269,7 @@
 
                     <BaseDropdownInfo class="zooplankton" :title="'Зоопланктон'" :is-modal="true" :pulsation-color="'Green-Mist'"
                         :text="'Чтобы оценить состояние водоёмов, исследователи отобрали виды зоопланктона, сигнализирующие о&nbsp;качестве воды. Например, планктонный рачок Limnocalanus macrurus любит чистую воду, а&nbsp;если начинает доминировать планктонная коловратка Brachionus sericus&nbsp;&mdash; вода загрязнена'" />
-                    <BaseDropdownInfo class="palia" :title="'Боганидская палия'" :is-modal="true" :pulsation-color="'Green-Mist'"
-                        :text="'Считается самой полезной рыбой в&nbsp;мире: кусочек рыбы в&nbsp;30&nbsp;г покрывает суточную потребность человека в&nbsp;полезных жирных кислотах. Встречается также в&nbsp;водоёмах Кольского дивизиона'" />
-
+                    
                     <BaseDropdownInfo class="deer" :title="'Дикий северный олень'" :color="'#71464E'" :pulsation-color="'finn'"
                         :is-modal="true"
                         :text="'Отличительная особенность этого вида&nbsp;&mdash; наличие рогов у&nbsp;самок. Наименее изученная и&nbsp;малочисленная популяция дикого северного оленя&nbsp;&mdash; гыданская, она занесена в&nbsp;Красную книгу ЯНАО. По&nbsp;данным исследований, олени почти не&nbsp;мигрируют на&nbsp;дальние расстояния и&nbsp;круглый год остаются в&nbsp;арктической тундре'" />
@@ -1566,37 +1566,31 @@ export default {
         }
 
         .char {
-            width: 11rem;
+            position: absolute;
             top: 316.8rem;
             left: 24rem;
 
             @media (max-width: 768px) {
-                width: 33rem;
                 top: 772rem;
                 left: 52rem;
 
-                .block-info__title {
+                .dropdown-info__title {
                     font-size: 3.2rem;
+                    max-width: 33rem;
                 }
             }
         }
 
         .palia {
-            position: absolute;
-            bottom: 24.4rem;
+            bottom: 21.4rem;
             left: 46rem;
-
-            .dropdown-info__text {
-                padding: 3.56rem 0.62rem 0.88rem 3.13rem;
-            }
 
             @media (max-width: 768px) {
                 bottom: 44.4rem;
                 left: 10rem;
 
-                .dropdown-info__title {
+                .block-info__title {
                     font-size: 3.2rem;
-                    max-width: 33rem;
                 }
             }
         }
@@ -1625,8 +1619,8 @@ export default {
 
         .microalgae {
             position: absolute;
-            bottom: 43rem;
-            left: 21rem;
+            bottom: 41rem;
+            left: 20rem;
 
             @media (max-width: 768px) {
                 bottom: 86rem;
@@ -1640,7 +1634,7 @@ export default {
 
         .zooplankton {
             position: absolute;
-            bottom: 38rem;
+            bottom: 37rem;
             right: 39rem;
 
             @media (max-width: 768px) {

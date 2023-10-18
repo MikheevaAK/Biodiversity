@@ -468,7 +468,7 @@
                         :textBottom="'территория получила статус особо охраняемой'" />
                     <BaseNumberBlock class="number-block-2" :textTop="' 4&nbsp;169&nbsp;222&nbsp;га'"
                         :textBottom="'площадь'" />
-                    <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-4.jpg'" :img-mobile="'img/treasures-img-4-mobile.jpg'"  :link-title="'Фото: jxandreani, CC BY 2.0.'" :link-url="'https://creativecommons.org/licenses/by/2.0/'" />
+                    <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-4.jpg'" :img-mobile="'img/treasures-img-4-mobile.jpg'" />
                 </div>
 
                 <BaseTextBlock class="mb-60">

@@ -622,7 +622,7 @@ export default {
             z-index: 1;
             height: 100vh;
             background-position: bottom 3rem right 0;
-            background-size: contain;
+            background-size: 100%;
             background-repeat: no-repeat;
 
             @media (max-width: 768px) {

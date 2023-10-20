@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <link rel="preload" href="img/loader.gif" as="image">
+    <script>
+      if(document.location.pathname === '/') {
+        // <link rel="preload" href="img/hero-main.webp" as="image">
+        let head = document.head
+        let link = document.createElement('link');
+
+          link.rel = 'preload';
+          link.href = 'img/hero-main.webp';
+          link.as = 'image';
+
+          head.appendChild(link)
+      }
+    </script>
+
     <title>Сохраняя экосистемы</title>
   </head>
   <body>

@@ -14,10 +14,11 @@
             };
         },
         mounted() {
+            setTimeout(() => {
+                this.show = false;
+            }, 5000)
             window.addEventListener('load', () => {
-                 setTimeout(() => {
-                    this.show = false;
-                }, 500)
+                this.show = false
             })
         },
     }

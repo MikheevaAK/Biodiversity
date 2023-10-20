@@ -100,9 +100,9 @@ export default {
             share: {
                 title: 'Сохраняя экосистемы',
                 text: 'Интерактивный проект об экологических проектах «Норникеля» по сохранению природных экосистем',
-                tgImg: `${document.location.href}img/opengraph-telegram.jpg`,
-                vkImg: `${document.location.href}img/opengraph-vk.jpg`
-            }
+                tgImg: `${document.location.origin}/img/opengraph-telegram.jpg`,
+                vkImg: `${document.location.origin}/img/opengraph-vk.jpg`
+            },
         }
     },
     mounted() {

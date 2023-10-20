@@ -360,8 +360,8 @@
                         </div>
                     </div>
                     <div class="habitat-map__wrap">
-                        <div v-if="!isModile" class="habitat-map__title">Карта обитания охраняемых видов</div>
-                        <div v-if="isModile" class="habitat-map__title">Зона воздействия предприятий и виды</div>
+                        <div v-if="!isMobile" class="habitat-map__title">Карта обитания охраняемых видов</div>
+                        <div v-if="isMobile" class="habitat-map__title">Зона воздействия предприятий и виды</div>
                         <div class="habitat-map__list">
                             <div class="habitat-map__list-item-wrap">
                                 <div class="habitat-map__list-item">
@@ -496,6 +496,7 @@ export default {
     },
     data() {
         return {
+            isMobile: (window.innerWidth <= 768),
             circales: [
                 {
                     color: 'green',

@@ -14,14 +14,27 @@ import PreloaderPage from './layout/PreloaderPage.vue'
 
 export default {
   name: 'App',
+  data() {
+    return {
+      store: localStorage
+    }
+  },  
   components: {
     AppNav,
     AppFooter,
     PreloaderPage
   },
   mounted() {
-    localStorage.setItem(this.$route.path, true)
+    this.store.setItem(this.$route.path, true)
   },
+  watch: {
+        store: {
+            handler() {
+                console.log(1)
+            },
+            deep: true
+        }
+    },
 }
 </script>
 

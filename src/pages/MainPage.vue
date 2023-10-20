@@ -149,12 +149,6 @@ export default {
             store: localStorage
         }
     },
-    watch: {
-        store: {
-            handler() {},
-            deep: true
-        }
-    },
     methods: {
         isBig(item) {
             return item ? 'main-page__map-item_big' : ''

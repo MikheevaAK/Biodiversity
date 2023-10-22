@@ -2,7 +2,7 @@
   <div class="app">
     <PreloaderPage  />
     <AppNav />
-      <router-view :key="$route.fullPath"></router-view>
+      <router-view :key="this.$route.path"></router-view>
     <AppFooter />
   </div>
 </template>
@@ -20,7 +20,15 @@ export default {
     PreloaderPage
   },
   mounted() {
-    localStorage.setItem(this.$route.path, true)
+    localStorage.setItem((this.$route.path).slice(1), true)
+    window.addEventListener( "pageshow", function ( event ) {
+        var historyTraversal = event.persisted || 
+                              ( typeof window.performance != "undefined" && 
+                                    window.performance.navigation.type === 2 );
+        if ( historyTraversal ) {
+          window.location.reload();
+        }
+      });
   },
 }
 </script>

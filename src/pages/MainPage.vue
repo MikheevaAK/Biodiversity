@@ -154,7 +154,7 @@ export default {
             return item ? 'main-page__map-item_big' : ''
         },
         isActive(item) {
-            return this.store.getItem(item.link) ? `main-page__map-item-${item.id}_active` : ''
+            return this.store.getItem((item.link).slice(1)) ? `main-page__map-item-${item.id}_active` : ''
         }
     },
 };

@@ -1,13 +1,11 @@
 <template>
     <nav class="nav">
         <div class="social">
-            <transition name="links">
-                <ul v-show="isOpenShare">
-                    <li v-for="item in socials" :key="item.name">
-                        <a :id="item.name" target="_blank" :href="getShareLink(item.name)" class="social__link" v-html="item.icon"></a>
-                    </li>
-                </ul>
-            </transition>
+            <ul v-show="isOpenShare">
+                <li v-for="item in socials" :key="item.name">
+                    <a :id="item.name" target="_blank" :href="getShareLink(item.name)" class="social__link" v-html="item.icon"></a>
+                </li>
+            </ul>
         </div>
         <div class="burger">
             <svg xmlns="http://www.w3.org/2000/svg" :class="{'burger_active' :isOpenLinks }" width="55" height="55" viewBox="0 0 55 55" fill="none">
@@ -122,7 +120,7 @@ export default {
                 return `https://connect.ok.ru/offer?url=${document.location.href}&title=${this.share.title}&description=${this.share.text}&imageUrl=${this.share.vkImg}`
             }
             if (name === 'telegram') {
-                return `https://t.me/share/url?url=${document.location.href}&title=${this.share.title}&text=${this.share.text}&image=${this.share.tgImg}`;
+                return `https://t.me/share/url?url=${document.location.href}&title=${this.share.title}&text=${this.share.text}`
             }
         },
         openShare() {

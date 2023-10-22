@@ -116,10 +116,10 @@ export default {
     methods: {
         getShareLink (name) {
             if (name === 'vk') {
-                return `https://vkontakte.ru/share.php?url=${document.location.href}&title=${this.share.title}&description=${this.share.text}&image=${this.share.vkImg}&noparse=false`
+                return `https://vkontakte.ru/share.php?url=${document.location.href}&title=${this.share.title}&image=${this.share.vkImg}&noparse=false`
             }
             if (name === 'ok') {
-                return `https://connect.ok.ru/offer?url=${document.location.href}&title=${this.share.title}&imageUrl=${this.share.vkImg}`
+                return `https://connect.ok.ru/offer?url=${document.location.href}&title=${this.share.title}&description=${this.share.text}&imageUrl=${this.share.vkImg}`
             }
             if (name === 'telegram') {
                 return `https://t.me/share/url?url=${document.location.href}&title=${this.share.title}&description=${this.share.text}&image=${this.share.tgImg}`;

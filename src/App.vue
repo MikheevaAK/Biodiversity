@@ -2,7 +2,7 @@
   <div class="app">
     <PreloaderPage  />
     <AppNav />
-      <router-view></router-view>
+      <router-view :key="$route.fullPath"></router-view>
     <AppFooter />
   </div>
 </template>
@@ -13,28 +13,15 @@ import AppFooter from '@/layout/AppFooter.vue'
 import PreloaderPage from './layout/PreloaderPage.vue'
 
 export default {
-  name: 'App',
-  data() {
-    return {
-      store: localStorage
-    }
-  },  
+  name: 'App', 
   components: {
     AppNav,
     AppFooter,
     PreloaderPage
   },
   mounted() {
-    this.store.setItem(this.$route.path, true)
+    localStorage.setItem(this.$route.path, true)
   },
-  watch: {
-        store: {
-            handler() {
-                console.log(1)
-            },
-            deep: true
-        }
-    },
 }
 </script>
 

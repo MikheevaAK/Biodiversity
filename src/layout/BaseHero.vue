@@ -103,7 +103,7 @@ export default {
     position: relative;
     min-height: 100vh;
     width: 100%;
-    max-width: 100rem;
+    max-width: 100vw;
     background-position: top right;
     background-size: cover;
     background-repeat: no-repeat;

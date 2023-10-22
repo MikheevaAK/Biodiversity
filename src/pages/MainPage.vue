@@ -205,7 +205,7 @@ export default {
         display: flex;
         justify-content: space-between;
         @media (max-width: 768px) {
-            padding: 26px 9.5rem 42px 9.5rem;
+            padding: 4.845rem 9.5rem 7.83rem 9.5rem;
         }
         &-descr {
             padding: 0.56rem 0 0 1.945rem;
@@ -216,9 +216,9 @@ export default {
             line-height: 130%;
             @media (max-width: 768px) {
                 padding: 0;
-                margin-bottom: 44px;
+                margin-bottom: 8.2rem;
                 width: unset;
-                font-size: 17px;
+                font-size: 4.53334rem;
             }
         }
         &-text {
@@ -230,8 +230,8 @@ export default {
             line-height: 130%;
             width: 40rem;
             @media (max-width: 768px) {
-                padding-left: 10px;
-                font-size: 18px;
+                padding-left: 2.6666rem;
+                font-size: 4.8rem;
                 width: unset;
             }
         }
@@ -258,7 +258,7 @@ export default {
         &-item {
             position: relative;
             display: flex;
-            width: 25rem;
+            width: 25vw;
             height: 34.7223rem;
             background-position: center;
             background-repeat: no-repeat;
@@ -300,7 +300,7 @@ export default {
             }
             
             &_big {
-                width: 50rem;
+                width: 50vw;
                 @media(max-width: 768px) {
                     width: 100%;
                 }

@@ -99,7 +99,7 @@ export default {
             isOpenLinks: false,
             share: {
                 title: 'Сохраняя экосистемы',
-                text: 'Интерактивный проект об экологических проектах «Норникеля» по сохранению природных экосистем',
+                text: 'Интерактивный проект об экологических проектах «Норникеля» по сохранению природных экосистем.',
                 tgImg: `${document.location.origin}/img/opengraph-telegram.jpg`,
                 vkImg: `${document.location.origin}/img/opengraph-vk.jpg`
             },
@@ -122,7 +122,7 @@ export default {
                 return `https://connect.ok.ru/offer?url=${document.location.href}&title=${this.share.title}&description=${this.share.text}&imageUrl=${this.share.vkImg}`
             }
             if (name === 'telegram') {
-                return `https://t.me/share/url?url=${document.location.href}&title=${this.share.title}&description=${this.share.text}&image=${this.share.tgImg}`;
+                return `https://t.me/share/url?url=${document.location.href}&title=${this.share.title}&text=${this.share.text}&image=${this.share.tgImg}`;
             }
         },
         openShare() {

@@ -13,7 +13,7 @@
     <meta property = " og:type " content = " веб-сайт " >  
     <meta property = " og:title " content = " Сохраняя экосистемы " >  
     <meta property = " og:description " content = " Интерактивный проект об экологических проектах «Норникеля» по сохранению устойчивости экосистем." >  
-    <!-- <meta property = " og:image " content = "https://biodiversity-seven.vercel.app/img/opengraph-telegram.jpg" > -->
+    <meta property = " og:image " content = "https://biodiversity-seven.vercel.app/img/opengraph-telegram.jpg" >
 
     <script>
       let head = document.head
@@ -23,10 +23,11 @@
       meta.content = `https://biodiversity-seven.vercel.app/img/opengraph-telegram.jpg`;
       head.appendChild(meta)
 
-      meta.setAttribute('name', 'twitter:image');
+      let metaUrl = document.createElement('meta');
+      metaUrl.setAttribute('name', 'twitter:image');
       // meta.content = `${document.location.origin}/img/opengraph-telegram.jpg`;
-      meta.content = `https://biodiversity-seven.vercel.app/img/opengraph-telegram.jpg`;
-      head.appendChild(meta)
+      metaUrl.content = `https://biodiversity-seven.vercel.app/img/opengraph-telegram.jpg`;
+      head.appendChild(metaUrl)
     </script>
     <!-- Мета-теги Твиттера -->
     <meta name = " twitter:card " content = " summary_large_image " >  
@@ -34,7 +35,7 @@
     <meta property = " twitter:url " content = " https://biodiversity-seven.vercel.app/ " >  
     <meta name = " twitter:title " content = " Сохраняя экосистемы " >  
     <meta name = " twitter:description " content = " Интерактивный проект об экологических проектах «Норникеля» по сохранению устойчивости экосистем." >  
-    <!-- <meta name = " twitter:image " content = "https://biodiversity-seven.vercel.app/img/opengraph-telegram.jpg" > -->
+    <meta name = " twitter:image " content = "https://biodiversity-seven.vercel.app/img/opengraph-telegram.jpg" >
         
     <script>
       if(document.location.pathname === '/') {

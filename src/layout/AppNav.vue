@@ -120,7 +120,7 @@ export default {
                 return `https://connect.ok.ru/offer?url=${document.location.href}&title=${this.share.title}&description=${this.share.text}&imageUrl=${this.share.vkImg}`
             }
             if (name === 'telegram') {
-                return `https://t.me/share/url?url=${document.location.href}&title=${this.share.title}&text=${this.share.text}`
+                return `https://t.me/share/url?url=${document.location.href}&title=${this.share.title}`
             }
         },
         openShare() {

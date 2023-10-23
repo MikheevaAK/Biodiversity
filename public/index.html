@@ -8,13 +8,9 @@
     <script>
       let head = document.head
       let meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:image');
+      meta.setAttribute('property', 'twitter:image');
       meta.content = `${document.location.origin}/img/opengraph-telegram.jpg`;
       head.appendChild(meta)
-      let metaUrl = document.createElement('meta');
-      metaUrl.setAttribute('property', 'og:image:secure_url');
-      metaUrl.content = `${document.location.origin}/img/opengraph-telegram.jpg`;
-      head.appendChild(metaUrl)
 
       if(document.location.pathname === '/') {
         let head = document.head

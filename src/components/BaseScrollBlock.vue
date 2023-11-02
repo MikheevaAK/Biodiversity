@@ -59,7 +59,6 @@ export default {
                         start: 'top 0%',
                         end: 'bottom 50%',
                         endTrigger: '.card-2',
-                        // markers: true,
                         scrub: true
                     },
 
@@ -74,7 +73,6 @@ export default {
                         start: 'top 0%',
                         end: 'bottom 50%',
                         endTrigger: '.card-3',
-                        // markers: true,
                         scrub: true,
                     },
 
@@ -89,7 +87,6 @@ export default {
                         start: 'top 0%',
                         end: 'bottom 50%',
                         endTrigger: '.card-4',
-                        // markers: true,
                         scrub: true,
                     },
 
@@ -100,7 +97,6 @@ export default {
                     trigger: ".card-4",
                     start: () => "+=120%",
                     end: () => "+=" + (document.querySelector(".scroll-wrap").offsetHeight),
-                    // markers: true,
                     scrub: true,
                     toggleClass: { className: "remove-active", targets: ".scroll-bg" }
                 },

@@ -390,7 +390,6 @@ export default {
                             end: 'bottom 75%',
                             trigger: elem,
                             scrub: true,
-                            // markers: true,
                         },
                     });
             });
@@ -408,7 +407,6 @@ export default {
                             start: '0% 100%',
                             end: 'bottom 75%',
                             trigger: elem,
-                            // markers: true,
                             scrub: true,
                         },
                     });
@@ -459,7 +457,6 @@ export default {
                         start: 'top 0%',
                         end: 'bottom 50%',
                         endTrigger: '.card-3',
-                        // markers: true,
                         scrub: true,
                     },
 

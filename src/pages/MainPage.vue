@@ -41,7 +41,7 @@
             </section>
 
             <section class="main-page__bottom">
-                <a href="file-test.pdf" download v-if="store.length === 10" class="main-page__bottom-link">Скачать карту в PDF</a>
+                <a href="A4_poster_Nornickel.pdf" download v-if="store.length === 10" class="main-page__bottom-link">Скачать карту в PDF</a>
                 <div class="main-page__bottom-title">Сохранение биоразнообразия</div>
                 <BaseAccordion class="main-page__result-faq" v-for="faq in faqs" :key="faq.id" :faq="faq" />
             </section>
@@ -268,7 +268,7 @@ export default {
             font-weight: 400;
             line-height: 110%;
             padding: 0 0 4rem 2rem;
-            align-items: end;
+            align-items: flex-end;
             @media(max-width: 768px) {
                 width: 100%;
                 height: 138.667rem;

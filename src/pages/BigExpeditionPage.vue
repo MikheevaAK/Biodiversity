@@ -531,7 +531,6 @@ export default {
                             start: '0% 100%',
                             end: 'bottom 75%',
                             trigger: elem,
-                            // markers: true,
                             scrub: true,
                         },
                     })
@@ -547,7 +546,6 @@ export default {
                         trigger: ".big-expedition__birds",
                         start: '50% 100%',
                         end: '70%',
-                        // markers: true,
                         scrub: true
                     },
 
@@ -1365,7 +1363,6 @@ export default {
             @media (max-width: 768px) {
                 width: unset;
                 left: 0;
-                // top: 2rem;
             }
 
             img {

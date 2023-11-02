@@ -470,7 +470,6 @@ export default {
 
                 @media (max-width: 768px) {
                     width: 79rem;
-                    // padding-left: 5rem;
                 }
             }
         }

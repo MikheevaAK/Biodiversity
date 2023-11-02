@@ -222,7 +222,6 @@ export default {
         &.open {
             padding-bottom: 2.09rem;
             height: auto;
-            // overflow: visible;
 
             @media (max-width: 768px) {
                 padding-bottom: 8rem;

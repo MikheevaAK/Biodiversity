@@ -350,8 +350,7 @@ export default {
         BaseSidebar,
         BaseScale,
         MainSection,
-        BaseNumberBlock,
-        // BaseScrollBlock
+        BaseNumberBlock
     },
     mounted() {
         this.$nextTick(function () {
@@ -408,7 +407,6 @@ export default {
                             start: '0% 100%',
                             end: 'bottom 75%',
                             trigger: elem,
-                            // markers: true,
                             scrub: true,
                         },
                     });
@@ -465,7 +463,6 @@ export default {
                         start: 'top 0%',
                         end: 'bottom 50%',
                         endTrigger: '.card-4',
-                        // markers: true,
                         scrub: true,
                     },
 
@@ -522,7 +519,6 @@ export default {
                             trigger: ".shares__wrap",
                             start: 'top 50%',
                             end: 'bottom 40%',
-                            // markers: true,
                             scrub: true,
                         },
                     });
@@ -536,7 +532,6 @@ export default {
                             trigger: ".shares__wrap",
                             start: 'top 75%',
                             end: 'bottom 60%',
-                            // markers: true,
                             scrub: true,
                         },
                     });
@@ -566,7 +561,6 @@ export default {
                             trigger: ".shares__wrap",
                             start: 'top 75%',
                             end: 'bottom 60%',
-                            // markers: true,
                             scrub: true,
                         },
                     });

@@ -1324,7 +1324,6 @@ export default {
     .habitat-map {
         position: relative;
         margin-bottom: 4.5rem;
-        // height: 40rem;
 
         @media (max-width: 768px) {
             height: unset;

@@ -1,5 +1,9 @@
 <template>
     <nav class="nav">
+        <div class="lang" @click="changeLang">
+            <span v-if="lang === 'ru'">RU</span>
+            <span v-else>EN</span>
+        </div>
         <div class="social">
             <ul v-show="isOpenShare">
                 <li v-for="item in socials" :key="item.name">
@@ -16,12 +20,16 @@
             </svg>
             <transition name="links">
                 <ul class="burger__list" v-show="isOpenLinks">
+                    <li class="burger__item burger__item_display" @click="changeLang">
+                        <span v-if="lang === 'ru'">RU</span>
+                        <span v-else>EN</span>
+                    </li>
                     <li class="burger__item" 
                     v-for="(item, index) in links" 
                     :key="index" 
                     :class="{'burger__item_active' : item.link === $route.path}"
                     >
-                        <a :href="item.link">{{item.title}}</a>
+                        <a :href="item.link">{{ lang === 'ru' ? item.title : item.titleEn}}</a>
                     </li>
                 </ul>
             </transition>
@@ -55,42 +63,52 @@ export default {
                 {
                     link: '/',
                     title: 'Главная',
+                    titleEn: 'Home'
                 },
                 {
                     link: '/norilsk-division',
                     title: 'Норильский дивизион',
+                    titleEn: 'Norilsk Division'
                 },
                 {
                     link: '/kola-division',
                     title: 'Кольский дивизион',
+                    titleEn: 'Kola Division'
                 },
                 {
                     link: '/transbaikal-division',
                     title: 'Забайкальский дивизион',
+                    titleEn: 'Trans-Baikal Division'
                 },
                 {
                     link: '/expedition',
                     title: 'Большая Норильская',
+                    titleEn: 'Norilsk Expedition'
                 },
                 {
                     link: '/big-expedition',
                     title: 'Научная экспедиция',
+                    titleEn: 'Scientific Expedition '
                 },
                 {
                     link: '/white-bears',
                     title: 'Спасение белых медведей',
+                    titleEn: 'Protecting polar bears'
                 },
                 {
                     link: '/pyasino',
                     title: 'Вдохнуть жизнь в озеро',
+                    titleEn: 'Revitalising Lake Pyasino'
                 },
                 {
                     link: '/indicator',
                     title: 'Загадочный ИПСЭ',
+                    titleEn: 'Integral Indicator of Ecosystem Health'
                 },
                 {
                     link: '/treasures-of-biodiversity',
                     title: 'Сокровищницы биоразнообразия',
+                    titleEn: 'Biodiversity havens'
                 },
             ],
             isOpenShare: false,
@@ -103,15 +121,28 @@ export default {
             },
         }
     },
+    computed: {
+        lang () {
+            return this.$store.state.lang
+        }
+    },
     mounted() {
         this.openShare()
         this.openLinks()
         document.addEventListener('click', this.dropdown)
+
+        if (localStorage.lang) {
+            this.$store.state.lang = localStorage.lang
+        }
     },
     beforeDestroy () {
         document.removeEventListener('click', this.dropdown)
     },
     methods: {
+        changeLang() {
+            this.$store.state.lang === 'ru' ? this.$store.state.lang = 'en' : this.$store.state.lang = 'ru'
+            localStorage.lang = this.$store.state.lang
+        },
         getShareLink (name) {
             if (name === 'vk') {
                 return `https://vkontakte.ru/share.php?url=${document.location.href}&title=${this.share.title}&image=${this.share.vkImg}&noparse=false`
@@ -163,6 +194,30 @@ export default {
     @media (max-width: 768px) {
         right: 4rem;
         max-height: 12.77rem;
+    }
+}
+
+.lang {
+    position: relative;
+    width: 3.4375rem;
+    height: 3.4375rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.1875rem;
+    font-weight: 300;
+    line-height: 2.25rem;
+    background-color: #0077C8;
+    transition: all .2s linear;
+
+    &:hover {
+        background-color: #00589C;
+    }
+
+    @media (max-width: 768px) {
+        display: none;
     }
 }
 
@@ -257,7 +312,7 @@ export default {
         gap: 1.5374rem;
 
         @media (max-width: 768px) {
-            padding: 8rem 5.3333rem 10rem 0;
+            padding: 8rem 8.3333rem 10rem 0;
             width: 73.47rem;
             gap: 6.4rem;
         }
@@ -291,6 +346,14 @@ export default {
                 @media (max-width: 768px) {
                     width: 1.334rem;
                 }
+            }
+        }
+
+        &_display {
+            display: none;
+
+            @media (max-width: 768px) {
+                display: block;
             }
         }
 

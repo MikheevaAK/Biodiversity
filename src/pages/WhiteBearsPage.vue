@@ -99,7 +99,7 @@
                             <div class="thunderstorm-arctic__nutrition-item">
                                 <img src="img/narwhal.png" alt="">
                                 <div class="thunderstorm-arctic__nutrition-item-descr">
-                                    Туши выброшенных на&nbsp;берег китов, нарвалов, белуг; мёртвых птиц и&nbsp;наземных млекопитающих
+                                    Туши выброшенных на&nbsp;берег китов, нарвалов, белух; мёртвых птиц и&nbsp;наземных млекопитающих
                                 </div>
                             </div>
                             <div class="thunderstorm-arctic__nutrition-item">

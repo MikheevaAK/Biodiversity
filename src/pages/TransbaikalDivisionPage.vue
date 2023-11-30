@@ -1,21 +1,37 @@
 <template>
     <div class="transbaikal">
-        <BaseHero :title="'Забайкальский дивизион. Природа в&nbsp;окрестностях Быстринского комбината'" :descr="heroDescr"
+        <BaseHero :title="lang === 'ru' ? 'Забайкальский дивизион. Природа в&nbsp;окрестностях Быстринского комбината' : 'Trans-Baikal Division. Bystrinsky GOK’s neighbouring wildlife'" :descr="lang === 'ru' ? heroDescr : heroDescrEn"
             :img="'img/hero4.jpg'" :imgMobile="'img/hero4-mobile.jpg'" />
         <MainSection>
             <SectionWhite>
-                <BaseTextBlock class="text mb-40" :title="'Особенности дивизиона'" :tooltip="true">
-                    Забайкальский
-                    <BaseTooltip :word="'дивизион'">
-                        Компании объединяют в&nbsp;дивизион предприятия одного региона или&nbsp;объекты с&nbsp;общей задачей,
+                <BaseTextBlock class="text mb-40" :title="lang === 'ru' ? 'Особенности дивизиона' : 'Division profile'" :tooltip="true">
+                    <span v-if="lang === 'ru'">
+                        Забайкальский
+                </span>
+                <span v-else>
+                    Nornickel’s Trans-Baikal 
+                </span>
+                    <BaseTooltip :word="lang === 'ru' ? 'дивизион' : 'Division'">
+                        <span v-if="lang === 'ru'">
+                            Компании объединяют в&nbsp;дивизион предприятия одного региона или&nbsp;объекты с&nbsp;общей задачей,
                         например, перевозкой сырья или&nbsp;энергоснабжением. Деление на&nbsp;дивизионы (от&nbsp;французского
                         слова
                         division&nbsp;&mdash; &laquo;разделение&raquo;) упрощает управление крупной организацией.
+                </span>
+                <span v-else>
+                    Companies create divisions by grouping together enterprises or facilities in the same region or with shared tasks, such as feedstock transportation or energy supply. Divisions help streamline the management of large organisations.
+                </span>
                     </BaseTooltip>
-                    «Норникеля» отвечает за&nbsp;разработку золото-железо-медных руд Быстринского
+                    
+                    <span v-if="lang === 'ru'">
+                     «Норникеля» отвечает за&nbsp;разработку золото-железо-медных руд Быстринского
                     месторождения. Сегодня это крупнейший проект в&nbsp;отрасли, начатый с&nbsp;нуля, на&nbsp;неосвоенных территориях.
                     Это позволило компании уже на&nbsp;старте внедрить передовые практики добычи и&nbsp;переработки руды, в&nbsp;том
                     числе сокращающие воздействие на&nbsp;окружающую среду.
+                </span>
+                <span v-else>
+                     oversees the development of gold-iron-copper deposits at the Bystrinskoye Deposit. The Bystrinsky GOK stands as the industry’s largest greenfield project started from scratch in untapped territories. Since its inception, it has embraced advanced mining and ore processing solutions, with a particular focus on minimising environmental impacts.
+                </span>
                 </BaseTextBlock>
 
                 <BigMap :circales="circales" :img="'img/transbaikal-big-map'" class="mb-100"
@@ -27,7 +43,14 @@
                                 <circle cx="7" cy="7" r="7" fill="#654EA3" />
                             </svg>
 
-                            <div class="circale-block__text">Промышленные объекты</div>
+                            <div class="circale-block__text">
+                            <span v-if="lang === 'ru'">
+                                Промышленные объекты
+                </span>
+                <span v-else>
+                    Industrial facilities
+                </span>
+                            </div>
                         </div>
                         <div class="circale-block">
                             <svg class="circale-block__img" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
@@ -35,26 +58,39 @@
                                 <circle cx="7" cy="7" r="7" fill="#009CA6" />
                             </svg>
 
-                            <div class="circale-block__text">Особо охраняемые природные территории</div>
+                            <div class="circale-block__text">
+                            <span v-if="lang === 'ru'">
+                                Особо охраняемые природные территории
+                </span>
+                <span v-else>
+                    Specially protected natural areas
+                </span>
+                            </div>
                         </div>
                     </div>
                 </BigMap>
-                <!-- scroll -->
 
-                <BaseTextBlock class="text mb-40 max-width" :title="'Быстринский горно-обогатительный комбинат'">
-                    <p>
+                <BaseTextBlock class="text mb-40 max-width" :title="lang === 'ru' ? 'Быстринский горно-обогатительный комбинат' : 'Bystrinsky GOK'">
+                    <p v-if="lang === 'ru'">
                         Комбинат расположился в&nbsp;труднодоступной местности Газимуро-Заводского района Забайкальского
                         края. Здесь перерабатывают руду Быстринского месторождения и&nbsp;получают медный, магнетитовый
                         и&nbsp;золотосодержащий концентраты.
                     </p>
+
+                    <p v-else>
+                        Bystrinsky GOK is located in a remote area of the Gazimuro-Zavodsky District, Trans-Baikal Territory. It processes ores from the Bystrinskoye Deposit to produce copper, magnetite and gold concentrates.
+                    </p>
                 </BaseTextBlock>
 
-                <BaseTextBlock class="text mb-40" :title="'Урюмканский заказник'">
-                    <p>
+                <BaseTextBlock class="text mb-40" :title="lang === 'ru' ? 'Урюмканский заказник' : 'Uryumkan Nature Reserve'">
+                    <p v-if="lang === 'ru'">
                         Созданный в&nbsp;80-х природный заказник сохраняет экосистемы Забайкалья и&nbsp;поддерживает
                         экологический баланс. Промышленные объекты дивизиона расположены на&nbsp;расстоянии 22&nbsp;км
                         от&nbsp;границ заказника и,&nbsp;по&nbsp;мнению исследователей, не&nbsp;влияют на&nbsp;его природных
                         обитателей.
+                    </p>
+                    <p v-else>
+                        Established in the 1980s, the Uryumkan Nature Reserve protects the ecosystems of the Trans-Baikal Territory while maintaining the local environmental balance. It is located 22 km away from the industrial facilities of Nornickel’s Trans-Baikal Division, which are said by scientists to have no impact on its wildlife.
                     </p>
                 </BaseTextBlock>
 
@@ -66,10 +102,13 @@
                 </picture>
 
                 <div class="transbaikal-scroll mb-100">
-                    <BaseTextBlock class="text" :title="'Экотехнологии Быстринского ГОК'">
-                        <p>
+                    <BaseTextBlock class="text" :title="lang === 'ru' ? 'Экотехнологии Быстринского ГОК' : 'Bystrinsky GOK’s sustainable technologies'">
+                        <p v-if="lang === 'ru'">
                             При создании &laquo;Быстры&raquo; и&nbsp;её&nbsp;инфраструктуры использовались передовые
                             технологии, сокращающие экологический след предприятия.
+                        </p>
+                        <p v-else>
+                            Bystrinsky GOK and its infrastructure were developed using advanced technologies that effectively reduce its environmental footprint.
                         </p>
                     </BaseTextBlock>
                     <svg class="mobile-icon-scroll" xmlns="http://www.w3.org/2000/svg" width="49" height="43"
@@ -88,9 +127,10 @@
                     <TransbaikalScrollSwiper />
                 </div>
 
-                <BaseTextBlock class="text mb-40" :title="'Зона воздействия предприятий Забайкальского&nbsp;дивизиона'"
+                <BaseTextBlock class="text mb-40" :title="lang === 'ru' ?'Зона воздействия предприятий Забайкальского&nbsp;дивизиона' : 'Impact area the Trans-Baikal Division’s facilities'"
                     :tooltip="true">
-                    <p class="mb-10">
+                    <span v-if="lang === 'ru'">
+                        <p class="mb-10">
                         По&nbsp;данным Большой Научной экспедиции, зона воздействия объектов &laquo;Норникеля&raquo;
                         на&nbsp;экосистемы дивизиона ограничена радиусом 10&nbsp;км.
                     </p>
@@ -114,6 +154,24 @@
                             наблюдения за&nbsp;природой в&nbsp;зонах воздействия.
                         </BaseTooltip> территорий.
                     </p>
+                </span>
+                <span v-else>
+                    <p class="mb-10">
+                        According to&nbsp;the Big Scientific Expedition data, the impact that Nornickel&rsquo;s Trans-Baikal facilities have on&nbsp;neighbouring ecosystems is&nbsp;limited to&nbsp;10&nbsp;km.
+                    </p>
+                    <p class="mb-10">
+                        The area of&nbsp;intensive impact goes no&nbsp;further than 1&nbsp;km from Bystrinsky GOK&rsquo;s boundaries, where scientists have observed changes in&nbsp;the composition of&nbsp;certain species.
+                    </p>
+                    <p class="mb-10">
+                        Apart from soil and vegetation disturbances of&nbsp;a&nbsp;technical nature, the shift in&nbsp;local environmental balance is&nbsp;also due to&nbsp;a&nbsp;natural anomaly: the Bystrinskoye Deposit&rsquo;s lands are biologically unproductive as&nbsp;they contain elevated levels of&nbsp;arsenic, which is&nbsp;a&nbsp;carcinogen.
+                    </p>
+                    <p>
+                        As&nbsp;we&nbsp;get further from Bystrinsky GOK&rsquo;s facilities, the signs of&nbsp;industrial impact diminish, going down to&nbsp;the levels observed in&nbsp;the 
+                        <BaseTooltip :word="'background'">
+                            In the background areas, researchers found no traces of industrial impact, and the ecosystems there are in their original, pristine state. The state of biodiversity in the background areas is taken as a reference point, and these data are used to monitor nature in the affected areas.
+                        </BaseTooltip> areas.
+                    </p>
+                </span>
                 </BaseTextBlock>
                 <div class="transbaikal-radius mb-60">
                     <picture>
@@ -124,20 +182,29 @@
                     </picture>
                 </div>
                 <BaseSidebar>
-                    <p>
+                    <p v-if="lang === 'ru'">
                         Состояние природного окружения дивизиона подтверждает эффективность экологических технологий,
                         которые были использованы при&nbsp;строительстве Быстринского ГОК. Воздействие комбината
                         на&nbsp;экосистемы не&nbsp;выходит за&nbsp;территорию промышленных объектов.
+                    </p>
+                    <p v-else>
+                        The state of ecosystems within the Trans-Baikal Division’s impact area attests to the effectiveness of Bystrinsk GOK's environmental solutions, with its footprint limited to the area where the industrial facilities are located.
                     </p>
                 </BaseSidebar>
             </SectionWhite>
             <SectionOrange>
                 <BaseTextBlock class="text mb-60 mb-60-m" :tooltip="true">
                     <div class="section-orange__title">
-                        Кто обитает в&nbsp;Забайкалье
+                        
+                        <span v-if="lang === 'ru'">
+                            Кто обитает в&nbsp;Забайкалье
+                </span>
+                <span v-else>
+                    Biodiversity in&nbsp;the&nbsp;Trans&nbsp;Baikal&nbsp;Territory
+                </span>
                     </div>
                     <div class="section-orange__descr">
-                        <p>
+                        <p v-if="lang === 'ru'">
                             В&nbsp;зоне, прилегающей к&nbsp;Быстринскому комбинату, участники Большой Научной экспедиции
                             обнаружили несколько
                             <BaseTooltip :word="'охраняемых'">
@@ -155,11 +222,24 @@
                             </BaseTooltip>
                             виды для будущих наблюдений за&nbsp;местной экосистемой.
                         </p>
+                        <p v-else>
+                            In the area adjacent to Bystrinsky GOK, the Big Scientific Expedition identified several 
+                            <BaseTooltip :word="'protected'">
+                                Rare or endangered species whose numbers are declining or have already declined to dangerous levels. They are given the status of protected species and included in national or regional Red Data Books. Their conservation status prohibits hunting, as well as restricting construction and other economic activities in the habitats of red-listed plants and mushrooms.
+                            </BaseTooltip>  plant and bird species, and also selected 
+                            <BaseTooltip :word="'indicator'">
+                                Researchers select indicator species from the organisms that are typical for the region and most sensitive to deviations in the state of the natural environment. If there are changes in the composition of an indicator species, it is possible that something has gone wrong in the ecosystem.
+                            </BaseTooltip>
+                            species for further biodiversity monitoring.
+                        
+                        </p>
                     </div>
                 </BaseTextBlock>
                 <div class="flora-and-fauna">
-                    <BaseTextBlock :title="'Флора'">
-                        <p class="mb-10">
+                    <BaseTextBlock :title="lang === 'ru' ? 'Флора' : 'Flora'">
+                        
+                        <span v-if="lang === 'ru'">
+                            <p class="mb-10">
                             В&nbsp;районе дивизиона горные хребты чередуются с&nbsp;межгорными долинами. Такой рельеф
                             создаёт условия для&nbsp;высокого разнообразия местной растительности.
 
@@ -169,10 +249,22 @@
                             по&nbsp;площади занимают луга, на&nbsp;южных склонах хребтов формируются степи.
                             По&nbsp;межгорным долинам протекают реки, образуя болота, заболоченные и&nbsp;пойменные луга.
                         </p>
-                        <BaseNumberBlock class="" :textTop="'245 видов'" :textBottom="'сосудистых растений'" />
+                </span>
+                <span v-else>
+                    <p class="mb-10">
+                        The Trans-Baikal Division’s area features alternating mountain ranges and valleys, creating favourable conditions for a high diversity of local plant species.
+
+                        </p>
+                        <p>
+                            Forests of larch, pine, birch and aspen dominate the landscape, meadows occupy the second largest area, and steppes are found on the southern slopes of the ridges. The valleys are home to rivers, which give rise to bogs, wetlands and flood meadows.
+                        </p>
+                </span>
+                        <BaseNumberBlock class="" :textTop="lang === 'ru' ? '245 видов': '245 species'" :textBottom="lang === 'ru' ? 'сосудистых растений' : 'of vascular plants'" />
                     </BaseTextBlock>
-                    <BaseTextBlock :title="'Фауна'">
-                        <p class="mb-10">
+                    <BaseTextBlock :title="lang === 'ru' ? 'Фауна' : 'Fauna'">
+                        
+                        <span v-if="lang === 'ru'">
+                            <p class="mb-10">
                             Среди животных встречаются в&nbsp;основном таёжные виды и&nbsp;некоторые представители
                             лесостепной и&nbsp;приамурской природных зон. Типичные обитатели дивизиона&nbsp;&mdash; лоси,
                             сибирские косули, горностаи и&nbsp;соболи. В&nbsp;лесах водятся лисицы и&nbsp;волки.
@@ -182,24 +274,33 @@
                             распространены рябчик и&nbsp;глухарь. Разнообразие птиц становится гораздо богаче в&nbsp;тёплое
                             время года.
                         </p>
+                </span>
+                <span v-else>
+                    <p class="mb-10">
+                        The local fauna is predominantly comprised of taiga species, with some examples from forest steppes and the Amur Region biome. Elk, Siberian roe deer, stoat and sable are common inhabitants in this region. Foxes and wolves are also present in the forests.
+                        </p>
+                        <p>
+                            Parus major, waxwing and bullfinch are among the bird species wintering in this area, with hazel grouse and capercaillie local examples of the grouse family. In summer, the diversity of species diversity becomes much richer.
+                        </p>
+                </span>
                         <div class="wrap-numbers">
-                            <BaseNumberBlock class="" :textTop="'56&nbsp;видов'" :textBottom="'птиц'" />
-                            <BaseNumberBlock class="" :textTop="'21&nbsp;вид'" :textBottom="'млекопитающих'" />
+                            <BaseNumberBlock class="" :textTop="lang === 'ru' ? '56&nbsp;видов' : '56 bird'" :textBottom="lang === 'ru' ? 'птиц' : 'species'" />
+                            <BaseNumberBlock class="" :textTop="lang === 'ru' ? '21&nbsp;вид' : '21&nbsp;mammal'" :textBottom="lang === 'ru' ? 'млекопитающих' : 'species'" />
                         </div>
                     </BaseTextBlock>
                 </div>
                 <div class="collage mb-100">
                     <div class="legend">
-                        <BaseCollageInfo :text="'Охраняемые виды'" :color="'#71464E'" />
-                        <BaseCollageInfo :text="'Индикаторные виды'" />
+                        <BaseCollageInfo :text="lang === 'ru' ?'Охраняемые виды' : 'Protected species'" :color="'#71464E'" />
+                        <BaseCollageInfo :text="lang === 'ru' ?'Индикаторные виды' : 'Indicator species'" />
                     </div>
                     <div class="collage__eagle"></div>
                     <div class="collage__harrier"></div>
                     <div class="collage__fish"></div>
                     <div class="collage__curlew"></div>
 
-                    <BaseCollageInfo class="eagle" :title="'Большой подорлик'" :color="'#71464E'"
-                        :text="'Размах крыльев в&nbsp;2,5&nbsp;раза длиннее тела&nbsp;—&nbsp;около 180&nbsp;см'" />
+                    <BaseCollageInfo class="eagle" :title="lang === 'ru' ? 'Большой подорлик' : 'Greater spotted eagle'" :color="'#71464E'"
+                        :text="lang === 'ru' ? 'Размах крыльев в&nbsp;2,5&nbsp;раза длиннее тела&nbsp;—&nbsp;около 180&nbsp;см' : 'Wingspan of circa 180 cm, 2.5x body length'" />
 
                     <BaseCollageInfo class="harrier" :title="'Полевой лунь'" :color="'#71464E'"
                         :text="'Самки крупнее самцов почти в&nbsp;два раза и&nbsp;весят до&nbsp;600&nbsp;г'" />
@@ -289,79 +390,171 @@
                 <div class="habitat-map">
                     <div class="habitat-map__legend">
                         <div class="habitat-map__legend-top">
-                            <div class="habitat-map__legend-title">Зона воздействия предприятий</div>
+                            <div class="habitat-map__legend-title">
+                            <span v-if="lang === 'ru'">
+                                                    Зона воздействия предприятий
+                                </span>
+                                <span v-else>
+                                    Protected species habitat map
+                                </span></div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
                                     fill="none">
                                     <circle cx="7" cy="7" r="7" fill="#D38235" />
                                 </svg>
-                                <div>Интенсивная</div>
+                               <div v-if="lang === 'ru'">Интенсивная</div>
+                                <div v-else>Severe exposure</div>
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
                                     fill="none">
                                     <circle cx="7" cy="7" r="7" fill="#FFEC42" />
                                 </svg>
-                                <div>Умеренная</div>
+                                <div v-if="lang === 'ru'">Умеренная</div>
+                                <div v-else>Moderate exposure</div>
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
                                     fill="none">
                                     <circle cx="7" cy="7" r="7" fill="#009CA6" />
                                 </svg>
-                                <div>Незначительная</div>
+                                <div v-if="lang === 'ru'">Незначительная</div>
+                                <div v-else>Insignificant exposure</div>
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                                     fill="none">
                                     <circle cx="8" cy="8" r="7" fill="white" stroke="#333333" />
                                 </svg>
-                                <div>Фоновая</div>
+                                <div v-if="lang === 'ru'">Фоновая</div>
+                                <div v-else>Background exposure</div>
                             </div>
                         </div>
                         <div class="habitat-map__legend-bottom">
                             <div class="habitat-map__legend-title">Виды</div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                1 – Касатка
+                                
+                                 <span v-if="lang === 'ru'">
+                                          1 – Касатка  
+                                </span>
+                                <span v-else>
+                                    1 – Falcated duck
+                                </span>
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                2 – Большой подорлик
+                                
+                                <span v-if="lang === 'ru'">
+                                          2 – Большой подорлик  
+                                </span>
+                                <span v-else>
+                                    2 – Greater spotted eagle
+                                </span>
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                3 – Полевой лунь
+                                
+                                <span v-if="lang === 'ru'">
+                                           3 – Полевой лунь 
+                                </span>
+                                <span v-else>
+                                    3 – Hen harrier
+                                </span>
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                4 – Большой кроншнеп
+                                
+                                <span v-if="lang === 'ru'">
+                                            4 – Большой кроншнеп
+                                </span>
+                                <span v-else>
+                                    4 – Eurasian curlew
+                                </span>
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                5 – Журавль-красавка
+                                
+                                <span v-if="lang === 'ru'">
+                                   5 – Журавль-красавка         
+                                </span>
+                                <span v-else>
+                                    5 – Demoiselle crane
+                                </span>
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                6 – Дубровник
+                                
+                                <span v-if="lang === 'ru'">
+                                 6 – Дубровник           
+                                </span>
+                                <span v-else>
+                                    6 – Yellow-breasted bunting
+                                </span>
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                7 – Сибирская&nbsp;пестрогрудка
+                                
+                                <span v-if="lang === 'ru'">
+                                   7 – Сибирская&nbsp;пестрогрудка         
+                                </span>
+                                <span v-else>
+                                    7 – Chinese bush warbler
+                                </span>
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                8 – Рябина сибирская
+                                
+                                <span v-if="lang === 'ru'">
+                                      8 – Рябина сибирская      
+                                </span>
+                                <span v-else>
+                                    8 – Siberian rowan
+                                </span>
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                9 – Лилия карликовая
+                               
+                                <span v-if="lang === 'ru'">
+                                         9 – Лилия карликовая    
+                                </span>
+                                <span v-else>
+                                    9 – Lilium pumilum
+                                </span>
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                10 – Красоднев малый
+                                
+                                <span v-if="lang === 'ru'">
+                                     10 – Красоднев малый       
+                                </span>
+                                <span v-else>
+                           10 – Dwarf daylily
+                                </span>
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                11 – Клопогон даурский
+                                
+                                <span v-if="lang === 'ru'">
+                                         11 – Клопогон даурский   
+                                </span>
+                                <span v-else>
+                                    11 – Bugbane
+                                </span>
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                12 – Венерин башмачок
+                                
+                                <span v-if="lang === 'ru'">
+                                      12 – Венерин башмачок      
+                                </span>
+                                <span v-else>
+                                    12 – Lady slipper orchard
+                                </span>
                             </div>
                         </div>
                     </div>
                     <div class="habitat-map__wrap">
-                        <div v-if="!isMobile" class="habitat-map__title">Карта обитания охраняемых видов</div>
-                        <div v-if="isMobile" class="habitat-map__title">Зона воздействия предприятий и виды</div>
+                        <div v-if="!isMobile" class="habitat-map__title"><span v-if="lang === 'ru'">
+                                        Карта обитания охраняемых видов
+                        </span>
+                            <span v-else>
+                            Protected species habitat map
+                        </span></div>
+                        <div v-if="isMobile" class="habitat-map__title"><span v-if="lang === 'ru'">
+                                        Зона воздействия предприятий и виды
+                        </span>
+                            <span v-else>
+                            Protected species habitat map
+                        </span></div>
                         <div class="habitat-map__list">
                             <div class="habitat-map__list-item-wrap">
                                 <div class="habitat-map__list-item">
@@ -369,12 +562,18 @@
                                         fill="none">
                                         <circle cx="7" cy="7" r="7" fill="#D38235" />
                                     </svg>
-                                    <div>Интенсивная</div>
+                                    <div v-if="lang === 'ru'">Интенсивная</div>
+                                    <div v-else>Severe exposure</div>
                                 </div>
-                                <ul class="habitat-map__list-list">
+                                <ul v-if="lang === 'ru'" class="habitat-map__list-list">
                                     <li>Касатка</li>
                                     <li>Венерин башмачок</li>
                                     <li>Клопогон даурский</li>
+                                </ul>
+                                <ul v-else class="habitat-map__list-list">
+                                    <li>Falcated duck</li>
+                                    <li>Lady slipper orchard</li>
+                                    <li>Bugbane</li>
                                 </ul>
                             </div>
 
@@ -384,13 +583,20 @@
                                         fill="none">
                                         <circle cx="7" cy="7" r="7" fill="#FFEC42" />
                                     </svg>
-                                    <div>Умеренная</div>
+                                    <div v-if="lang === 'ru'">Умеренная</div>
+                                    <div v-else>Moderate exposure</div>
                                 </div>
-                                <ul class="habitat-map__list-list">
+                                <ul v-if="lang === 'ru'" class="habitat-map__list-list">
                                     <li>Большой кроншнеп</li>
                                     <li>Журавль-красавка</li>
                                     <li>Рябина сибирская</li>
                                     <li>Клопогон даурский</li>
+                                </ul>
+                                <ul v-else class="habitat-map__list-list">
+                                    <li>Greater spotted eagle</li>
+                                    <li>Demoiselle crane</li>
+                                    <li>Siberian rowan</li>
+                                    <li>Bugbane</li>
                                 </ul>
                             </div>
 
@@ -400,13 +606,20 @@
                                         fill="none">
                                         <circle cx="7" cy="7" r="7" fill="#009CA6" />
                                     </svg>
-                                    <div>Незначительная</div>
+                                    <div v-if="lang === 'ru'">Незначительная</div>
+                                    <div v-else>Insignificant exposure</div>
                                 </div>
-                                <ul class="habitat-map__list-list">
+                                <ul v-if="lang === 'ru'" class="habitat-map__list-list">
                                     <li>Полевой лунь</li>
                                     <li>Сибирская пестрогрудка</li>
                                     <li>Лилия карликовая</li>
                                     <li>Красоднев малый</li>
+                                </ul>
+                                <ul v-else class="habitat-map__list-list">
+                                    <li>Hen harrier</li>
+                                    <li>Chinese bush warbler</li>
+                                    <li>Lilium pumilum</li>
+                                    <li>Dwarf daylily</li>
                                 </ul>
                             </div>
 
@@ -416,13 +629,20 @@
                                         fill="none">
                                         <circle cx="8" cy="8" r="7" fill="white" stroke="#333333" />
                                     </svg>
-                                    <div>Фоновая</div>
+                                    <div v-if="lang === 'ru'">Фоновая</div>
+                                    <div v-else>Background exposure</div>
                                 </div>
-                                <ul class="habitat-map__list-list">
+                                <ul v-if="lang === 'ru'" class="habitat-map__list-list">
                                     <li>Большой подорлик</li>
                                     <li>Венерин башмачок</li>
                                     <li>Дубровник</li>
                                     <li>Красоднев малый</li>
+                                </ul>
+                                <ul v-else class="habitat-map__list-list">
+                                    <li>Eurasian curlew</li>
+                                    <li>Lady slipper orchard</li>
+                                    <li>Yellow-breasted bunting</li>
+                                    <li>Dwarf daylily</li>
                                 </ul>
                             </div>
 
@@ -430,11 +650,23 @@
                     </div>
                     <div class="habitat-map__city habitat-map__city-1">
                         <div class="habitat-map__city-circale"></div>
-                        <span>Быстринский ГОК</span>
+                     
+                        <span v-if="lang === 'ru'">
+                            Быстринский ГОК
+                </span>
+                <span v-else>
+                    Bystrinsky GOK
+                </span>
                     </div>
                     <div class="habitat-map__city habitat-map__city-2">
                         <div class="habitat-map__city-circale"></div>
-                        <span>село Газимурский Завод</span>
+                        
+                        <span v-if="lang === 'ru'">
+                            село Газимурский Завод
+                </span>
+                <span v-else>
+                    Gazimursky Zavod
+                </span>
                     </div>
                     <picture>
                         <source media="(max-width: 768px)" srcset="img/habitat-map-mobile.png">
@@ -444,17 +676,22 @@
 
                 </div>
                 <BaseTextBlock class="mb-40">
-                    <p>
+                    <p v-if="lang === 'ru'">
                         Некоторые редкие виды могут проживать в&nbsp;зонах воздействия предприятий, несмотря на&nbsp;шум или&nbsp;другие факторы воздействия. Ведь для их&nbsp;выживания главное&nbsp;&mdash; наличие корма
                         и&nbsp;отсутствие беспокойства со&nbsp;стороны человека.
                     </p>
+                    <p v-else>
+                        Some rare species can live in the areas affected by the facilities, despite noise or other impacts. After all, their survival depends on the availability of food and absence of human disturbance.</p>
                 </BaseTextBlock>
                 <BaseSidebar>
-                    <p>
+                    <p v-if="lang === 'ru'">
                         Усиление промышленного воздействия природными факторами требует от&nbsp;&laquo;Норникеля&raquo;
                         внимательного отношения к&nbsp;состоянию экосистем дивизиона. Компания совместно с&nbsp;учёными
                         продолжит исследования в&nbsp;районе месторождения, чтобы сделать эти места максимально безопасными
                         для&nbsp;их&nbsp;обитателей.
+                    </p>
+                    <p v-else>
+                        As natural factors may intensify industrial impacts, Nornickel needs to carefully monitor the health of local ecosystems. The company will keep working with scientists to continue the Bystrinskoye Deposit area research efforts, with a view to ensuring maximum safety for the local flora and fauna.
                     </p>
                 </BaseSidebar>
             </SectionOrange>
@@ -507,7 +744,13 @@ export default {
                     number: '2'
                 }
             ],
+            heroDescrEn: 'Which species neighbour one of Nornickel’s most hi-tech and&nbsp;advanced&nbsp;divisions?',
             heroDescr: 'Кто обитает на&nbsp;территории одного из&nbsp;самых современных и&nbsp;технологичных дивизионов &laquo;Норникеля&raquo;'
+        }
+    },
+    computed: {
+        lang() {
+            return this.$store.state.lang
         }
     },
     mounted() {

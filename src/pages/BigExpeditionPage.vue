@@ -1,12 +1,14 @@
 <template>
     <div class="big-expedition">
-        <BaseHero :title="'Большая научная экспедиция'" :descr="heroDescr" :img="'img/hero7.jpg'"
+        <BaseHero :title="lang === 'ru' ? 'Большая научная экспедиция' : 'The Big Scientific Expedition'" :descr="lang === 'ru' ? heroDescr : heroDescrEn" :img="'img/hero7.jpg'"
             :imgMobile="'img/hero7-mobile.jpg'" />
         <MainSection>
             <SectionWhite>
                 <BaseTextBlock class="mb-100">
                     <p class="mb-10">
-                        Авария 2020 года на&nbsp;норильской ТЭЦ-3 привела к&nbsp;значительным изменениям
+                    
+                        <span v-if="lang === 'ru'">
+                            Авария 2020 года на&nbsp;норильской ТЭЦ-3 привела к&nbsp;значительным изменениям
                         в&nbsp;экологической
                         политике &laquo;Норникеля&raquo; и&nbsp;в&nbsp;сознании работников. В&nbsp;компании решили
                         не&nbsp;просто снизить воздействие производств на&nbsp;окружающую среду до&nbsp;минимальных
@@ -15,19 +17,30 @@
                         экосистем. Но&nbsp;без достоверной научной информации понять, что для&nbsp;этого требуется, невозможно.
                         Первым шагом в&nbsp;правильном направлении стала Большая Норильская экспедиция, которая прошла
                         с&nbsp;2020 по&nbsp;2022&nbsp;годы.
+                        </span>
+                        <span v-else>
+                            An&nbsp;accident at&nbsp;Norilsk HPP-3 in&nbsp;2020 led to&nbsp;significant changes in&nbsp;Nornickel&rsquo;s environmental policy and corporate mindset. Not only did the company decide to&nbsp;minimise the impact of&nbsp;its operations on&nbsp;the environment, but also to&nbsp;achieve zero net losses of&nbsp;biodiversity and gradually restore the disturbed ecosystems. To&nbsp;figure out how to&nbsp;do&nbsp;this, we&nbsp;needed to&nbsp;gather reliable scientific data. The first step in&nbsp;that direction was the Great Norilsk Expedition between 2020 and 2022.
+                        </span>
                     </p>
                     <p class="mb-28">
-                        &laquo;Норникель&raquo; и&nbsp;Сибирское отделение Российской академии наук решили продолжить
+                        
+                        <span v-if="lang === 'ru'">
+                            &laquo;Норникель&raquo; и&nbsp;Сибирское отделение Российской академии наук решили продолжить
                         сотрудничество. Так&nbsp;родилась идея Большой научной экспедиции. Она стартовала одновременно
                         с&nbsp;завершением Большой Норильской экспедиции. Компании было важно оценить воздействие всех своих
                         производств не&nbsp;только на&nbsp;Таймыре, но&nbsp;и&nbsp;в&nbsp;других регионах деятельности
                         Компании:
                         на&nbsp;Кольском полуострове, в&nbsp;Забайкалье и&nbsp;в&nbsp;Ямало-Ненецком автономном округе,
                         а&nbsp;также вдоль Северного морского пути.
+                </span>
+                <span v-else>
+                    After that, Nornickel and the Siberian branch of&nbsp;the Russian Academy of&nbsp;Sciences agreed to&nbsp;continue their partnership, harbouring the idea of&nbsp;the Big Scientific Expedition, which started immediately after the end of&nbsp;the Great Norilsk Expedition. For&nbsp;us it&nbsp;was important to&nbsp;assess the impact of&nbsp;our operations both in&nbsp;Taimyr and across other regions where we&nbsp;have a&nbsp;presence&nbsp;&mdash; on&nbsp;the Kola Peninsula, in&nbsp;the Trans-Baikal Territory, in&nbsp;the Yamal-Nenets Autonomous Area and along the Northern Sea Route.
+                </span>
                     </p>
 
                     <a class="link" href="/expedition" target="_blank">
-                        <div>Читать про Норильскую экспедицию</div>
+                        <div v-if="lang === 'ru'">Читать про Норильскую экспедицию</div>
+                        <div v-else>More about the Great Norilsk Expedition</div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="8" viewBox="0 0 20 8" fill="none">
                             <path
                                 d="M19.8536 4.35355C20.0488 4.15829 20.0488 3.84171 19.8536 3.64645L16.6716 0.464466C16.4763 0.269204 16.1597 0.269204 15.9645 0.464466C15.7692 0.659728 15.7692 0.976311 15.9645 1.17157L18.7929 4L15.9645 6.82843C15.7692 7.02369 15.7692 7.34027 15.9645 7.53553C16.1597 7.7308 16.4763 7.7308 16.6716 7.53553L19.8536 4.35355ZM0 4.5H19.5V3.5H0V4.5Z"
@@ -37,23 +50,35 @@
                 </BaseTextBlock>
                 <div class="big-expedition__tasks">
                     <div class="big-expedition__tasks-title title">
-                        Задачи Большой научной экспедиции
+                        
+                        <span v-if="lang === 'ru'">
+                            Задачи Большой научной экспедиции
+                </span>
+                <span v-else>
+                    The&nbsp;Big&nbsp;Scientific&nbsp;Expedition: objectives
+                </span>
                     </div>
 
                     <div class="big-expedition__tasks-wrap">
                         <div class="big-expedition__tasks-img-block">
                             <img src="img/tasks-block.png" alt="">
-                            <div>Определить мероприятия <br />для сохранения биоразнообразия <br />животных и&nbsp;растений
-                            </div>
+                            <div v-if="lang === 'ru'">Определить мероприятия <br />для сохранения биоразнообразия <br />животных и&nbsp;растений</div>
+                            <div v-else>Develop an action plan <br />to preserve the biodiversity <br />of flora and fauna</div>
                         </div>
                         <div class="big-expedition__tasks-item big-expedition__tasks-item_1">
                             <div class="big-expedition__tasks-number">
                                 1
                             </div>
                             <div class="big-expedition__tasks-text">
-                                Изучить, какое воздействие на&nbsp;биоразнообразие экосистем оказывает деятельность
+                                
+                                <span v-if="lang === 'ru'">
+                                    Изучить, какое воздействие на&nbsp;биоразнообразие экосистем оказывает деятельность
                                 предприятий
                                 «Норникеля»
+                </span>
+                <span v-else>
+                    Study the impact of&nbsp;Nornickel's operations on&nbsp;the biodiversity of ecosystems
+                </span>
                             </div>
                         </div>
                         <div class="big-expedition__tasks-item big-expedition__tasks-item_2">
@@ -61,8 +86,14 @@
                                 2
                             </div>
                             <div class="big-expedition__tasks-text">
-                                Опробовать на&nbsp;практике методы, которые позволяют отследить изменения в&nbsp;состоянии
+                               
+                                <span v-if="lang === 'ru'">
+                                    Опробовать на&nbsp;практике методы, которые позволяют отследить изменения в&nbsp;состоянии
                                 экосистем на&nbsp;ранних этапах, когда они&nbsp;ещё&nbsp;незаметны&nbsp;глазу
+                </span>
+                <span v-else>
+                    Test methods to monitor changes in the health of&nbsp;ecosystems at early stages when they are invisible
+                </span>
                             </div>
                         </div>
                         <div class="big-expedition__tasks-item big-expedition__tasks-item_3">
@@ -70,7 +101,13 @@
                                 3
                             </div>
                             <div class="big-expedition__tasks-text">
-                                Определить степень негативного воздействия (уровень условных потерь биоразнообразия)
+                                
+                                <span v-if="lang === 'ru'">
+                                    Определить степень негативного воздействия (уровень условных потерь биоразнообразия)
+                </span>
+                <span v-else>
+                    Determine the degree of&nbsp;negative impact (notional biodiversity losses)
+                </span>
                             </div>
                         </div>
                         <div class="big-expedition__tasks-item big-expedition__tasks-item_4">
@@ -78,33 +115,55 @@
                                 4
                             </div>
                             <div class="big-expedition__tasks-text">
-                                Изучить и&nbsp;оценить текущее состояние экосистем, разнообразие растений и&nbsp;животных
+                                
+                                <span v-if="lang === 'ru'">
+                                    Изучить и&nbsp;оценить текущее состояние экосистем, разнообразие растений и&nbsp;животных
+                </span>
+                <span v-else>
+                    Analyse the current state of&nbsp;ecosystems and the biodiversity of flora and fauna
+                </span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <BaseTextBlock class="big-expedition__tasks-before mb-60 text-center">
-                    Кроме того, в&nbsp;ходе экспедиции учёные разрабатывали и&nbsp;апробировали методы, которые позволяют
+                    
+                    <span v-if="lang === 'ru'">
+                        Кроме того, в&nbsp;ходе экспедиции учёные разрабатывали и&nbsp;апробировали методы, которые позволяют
                     провести чёткую границу между естественными причинами изменения экосистем и&nbsp;изменениями из-за
                     промышленного воздействия.
+                </span>
+                <span v-else>
+                    During the expedition, researchers developed and tested methods to draw a clear line between natural causes of changes and those resulting from industrial activities.
+                </span>
                 </BaseTextBlock>
                 <BaseSidebar class="mb-100">
-                    <p>
+                    <p v-if="lang === 'ru'">
                         &laquo;Норникель&raquo; работает над сохранением 14&nbsp;морских экосистем и&nbsp;15&nbsp;экосистем
                         суши. Сотрудничество с&nbsp;научными организациями&nbsp;&mdash; одно из&nbsp;обязательств, взятых
                         компанией в&nbsp;рамках экологической стратегии.
                     </p>
+                    <p v-else>
+                        Nornickel is&nbsp;determined to&nbsp;preserve 14&nbsp;marine and 15&nbsp;land ecosystems. Cooperation with research institutions is&nbsp;a&nbsp;commitment made by&nbsp;the сompany as&nbsp;part of&nbsp;its environmental strategy.
+                    </p>
                 </BaseSidebar>
-                <BaseTextBlock class="mb-40 big-expedition__start-expedition" :title="'Старт экспедиции'">
-                    Полевой этап работ Большой научной экспедиции начался весной 2022&nbsp;года. Несколько групп учёных
+                <BaseTextBlock class="mb-40 big-expedition__start-expedition" :title="lang === 'ru' ? 'Старт экспедиции' : 'Start of the expedition'">
+                    
+                    <span v-if="lang === 'ru'">
+                        Полевой этап работ Большой научной экспедиции начался весной 2022&nbsp;года. Несколько групп учёных
                     отправились в&nbsp;локации производственной активности &laquo;Норникеля&raquo;, чтобы обследовать
                     территории
                     в&nbsp;радиусе примерно 15&nbsp;км вокруг промышленных площадок.
+                </span>
+                <span v-else>
+                    The fieldwork phase of&nbsp;the Big Scientific Expedition commenced in&nbsp;the spring of&nbsp;2022. Several teams of&nbsp;researchers visited Nornickel&rsquo;s production sites to&nbsp;explore areas within the a&nbsp;radius of&nbsp;around 15&nbsp;km.
+                </span>
                 </BaseTextBlock>
                 <div class="big-expedition__tasks-map mb-100">
-                    <img src="img/tasks-block-map.svg" alt="">
-                    <BaseNumberBlock :textTop="'в&nbsp;5&nbsp;регионах'"
-                        :textBottom="'провели полевые работы всего&nbsp;за&nbsp;восемь месяцев'" />
+                    <img v-if="lang === 'ru'" src="img/tasks-block-map.svg" alt="">
+                    <img v-else src="img/tasks-block-map-en.svg" alt="">
+                    <BaseNumberBlock :textTop="lang === 'ru' ? 'в&nbsp;5&nbsp;регионах' : 'in&nbsp;5&nbsp;regions'"
+                        :textBottom="lang === 'ru' ? 'провели полевые работы всего&nbsp;за&nbsp;восемь месяцев' : 'field studies were completed in&nbsp;just 8&nbsp;months'" />
                 </div>
 
                 <div class="map">
@@ -124,7 +183,9 @@
                 </div>
 
                 <BaseTextBlock class="mb-100">
-                    <p class="mb-10">
+                    
+                    <span v-if="lang === 'ru'">
+                        <p class="mb-10">
                         Необъятность сибирских и&nbsp;арктических просторов&nbsp;&mdash; не&nbsp;единственная сложность,
                         с&nbsp;которой столкнулись учёные. Немало проблем доставили сложный ландшафт, суровый климат
                         и&nbsp;трудности с&nbsp;логистикой: в&nbsp;некоторые районы можно было добраться только
@@ -137,31 +198,56 @@
                         автономного
                         округа.
                     </p>
-                    <BaseNumberBlock class="big-expedition__number_width" :textTop="'71&nbsp;300&nbsp;км&sup2;'"
-                        :textBottom="'общая площадь территории, в&nbsp;пределах которой проводился сбор научных проб'" />
+                </span>
+                <span v-else>
+                    <p class="mb-10">
+                        The vastness of&nbsp;the Siberian and Arctic territories was one of&nbsp;challenges faced by&nbsp;the researchers. Others were the complicated terrain, harsh climate and logistical hurdles, as&nbsp;some areas could only be&nbsp;reached by&nbsp;helicopter. This is&nbsp;why every field study was a&nbsp;full-scale mini expedition.                    </p>
+                    <p>
+                        The researchers examined well-known areas such as&nbsp;Taimyr, as&nbsp;well as&nbsp;previously unexplored ones. The latter included gas fields on&nbsp;the Gyda Peninsula, in&nbsp;the Yamal-Nenets Autonomous Area.
+                    </p>
+                </span>
+                    <BaseNumberBlock class="big-expedition__number_width" :textTop="lang === 'ru' ? '71&nbsp;300&nbsp;км&sup2;' : '71,300&nbsp;sq&nbsp;km'"
+                        :textBottom="lang === 'ru' ? 'общая площадь территории, в&nbsp;пределах которой проводился сбор научных проб' : 'total sampling area'" />
                 </BaseTextBlock>
-                <BaseTextBlock class="mb-40" :title="'Участники экспедиции'">
-                    Большая научная экспедиция объединила представителей 13&nbsp;научно-исследовательских институтов, вузов
+                <BaseTextBlock class="mb-40" :title="lang === 'ru' ? 'Участники экспедиции' : 'Participants'">
+                    
+                    <span v-if="lang === 'ru'">
+                        Большая научная экспедиция объединила представителей 13&nbsp;научно-исследовательских институтов, вузов
                     и&nbsp;заповедников.
+                </span>
+                <span v-else>
+                    The Big Scientific Expedition brought together representatives from 13&nbsp;research institutes, universities and nature reserves.
+                </span>
                 </BaseTextBlock>
 
                 <img class="big-expedition-team mb-100" src="img/big-expedition-team.webp" alt="">
 
                 <div class="big-expedition__plants mb-100">
                     <div class="big-expedition__plants-title title">
-                        Предварительные результаты
+                        <span v-if="lang === 'ru'">
+                            Предварительные результаты
+                </span>
+                <span v-else>
+                    Preliminary findings
+                </span>
                     </div>
                     <BaseTextBlock class="text">
-                        Во&nbsp;время полевых работ участники экспедиции изучили различные группы организмов, растений,
+                        <span v-if="lang === 'ru'">
+                            Во&nbsp;время полевых работ участники экспедиции изучили различные группы организмов, растений,
                         а&nbsp;также почвы. Полученные данные позволили им&nbsp;понять, как промышленные объекты
                         &laquo;Норникеля&raquo; влияют на&nbsp;экосистемы. Так, удалось выделить зоны интенсивного,
                         умеренного
                         и&nbsp;незначительного воздействия. Каждая из&nbsp;них характеризуется своими условиями обитания,
                         что
                         сказывается на&nbsp;видовом разнообразии.
+                </span>
+                <span v-else>
+                    During fieldwork, the teams studied various groups of&nbsp;organisms, plants and soils to&nbsp;evaluate how Nornickel&rsquo;s operations affect the ecosystems. The areas were classified according to&nbsp;the degree of&nbsp;impact (significant, moderate, insignificant). Each has its own habitat conditions impacting biodiversity.
+                </span>
                     </BaseTextBlock>
-                    <BaseTextBlock class="mb-60" :title="'Почвы, растительность и&nbsp;грибы'">
-                        <p class="mb-10">
+                    <BaseTextBlock class="mb-60" :title="lang === 'ru' ? 'Почвы, растительность и&nbsp;грибы' : 'Soils, plants and fungi'">
+<span v-if="lang === 'ru'">
+    <p class="mb-10">
                             Во&nbsp;время изучения почв во&nbsp;всех трёх промышленных дивизионах учёные обнаружили
                             несколько
                             природных геохимических аномалий. Так,&nbsp;в&nbsp;Забайкалье они выявили участки с&nbsp;высоким
@@ -177,32 +263,51 @@
                             из&nbsp;рудных тел легко мигрируют в&nbsp;почву. Это явление учёные называют геохимической
                             аномалией.
                         </p>
-
+                </span>
+                <span v-else>
+                    <p class="mb-10">
+                        Soil studies across all the three divisions revealed several natural geochemical anomalies. The Trans-Baikal Division has areas with a&nbsp;high concentration of&nbsp;arsenic compounds in&nbsp;its soils, while in&nbsp;the Norilsk and Kola divisions, the expedition found soils with a&nbsp;high nickel, copper and chromium content.
+                        </p>
+                        <p>
+                            Importantly, researchers identified not only local contamination of&nbsp;relatively small areas, but also a&nbsp;natural phenomenon as&nbsp;mining and concentration facilities are located in&nbsp;areas where metal-rich ores come close to&nbsp;the Earth&rsquo;s crust and metals easily migrate from ore bodies to&nbsp;the soil. This phenomenon is&nbsp;called a&nbsp;geochemical anomaly.
+                        </p>
+                </span>
                         <div class="position-info">
                             <img src="img/plants.png" alt="">
-                            <div class="position-info__descr">Загрязнение почвы напрямую&nbsp;не&nbsp;ограничивает
+                            <div class="position-info__descr">
+                                <span v-if="lang === 'ru'">
+                                    Загрязнение почвы напрямую&nbsp;не&nbsp;ограничивает
                                 распространение
                                 грибов
                                 по&nbsp;разным зонам воздействия в&nbsp;Норильском дивизионе.
+                </span>
+                <span v-else>
+                    Soil contamination does not directly limit the spread of fungi across various impact areas in Norilsk Division.
+                </span>
                             </div>
-                            <BaseDropdownInfo :title="'Что не так с почвой?'" :color="'#D38235'" :pulsation-color="'pantone'"
-                                :text="'Из-за&nbsp;природного дефицита фосфора и&nbsp;калия почвы в&nbsp;Норильском дивизионе слабо- и&nbsp;среднеплодородны. Они пригодны для растений, которые нетребовательны к&nbsp;уровню минерального питания.'" />
+                            <BaseDropdownInfo :title="lang === 'ru' ? 'Что не так с почвой?' : 'What is wrong with the soil?'" :color="'#D38235'" :pulsation-color="'pantone'"
+                                :text="lang === 'ru' ? 'Из-за&nbsp;природного дефицита фосфора и&nbsp;калия почвы в&nbsp;Норильском дивизионе слабо- и&nbsp;среднеплодородны. Они пригодны для растений, которые нетребовательны к&nbsp;уровню минерального питания.' : 'Due to the natural deficiency of phosphorus and potassium, soils in the Norilsk Division have low to medium fertility. They are suitable for plants not requiring large amounts of mineral nutrients.'" />
                         </div>
                     </BaseTextBlock>
                     <BaseSidebar class="mb-100">
-                        <p>
+                        <p v-if="lang === 'ru'">
                             По&nbsp;мнению исследователей, высокие концентрации химических элементов на&nbsp;этих участках
                             угрожают разнообразию растений и&nbsp;животных, а&nbsp;потому необходимо при помощи различных
                             мероприятий привести показатели почв к&nbsp;благоприятным значениям там,
                             где&nbsp;это&nbsp;возможно.
                             К&nbsp;сожалению, в&nbsp;местах геохимических аномалий это&nbsp;невозможно.
                         </p>
+                        <p v-else>
+                            According to&nbsp;researchers, high concentrations of&nbsp;chemical elements in&nbsp;these areas threaten the biodiversity of&nbsp;plants and animals, which makes it&nbsp;necessary to&nbsp;take steps to&nbsp;bring soil indicators to&nbsp;a&nbsp;more favourable level where possible. Unfortunately, this is&nbsp;impossible in&nbsp;areas with geochemical anomalies.
+                        </p>
                     </BaseSidebar>
                 </div>
 
                 <div class="big-expedition__insects">
-                    <BaseTextBlock class="mb-40" :title="'Насекомые и пауки'">
-                        <p class="mb-10">
+                    <BaseTextBlock class="mb-40" :title="lang === 'ru' ? 'Насекомые и пауки' : 'Insects and spiders'">
+                        
+                        <span v-if="lang === 'ru'">
+                            <p class="mb-10">
                             Работа предприятий &laquo;Норникеля&raquo;, по&nbsp;мнению участников Большой научной
                             экспедиции,
                             не&nbsp;оказывает серьёзного влияния на&nbsp;жизнь насекомых. Например, в&nbsp;Норильском
@@ -219,21 +324,33 @@
                             выбросы, но&nbsp;и&nbsp;пожары, которые возникают вблизи городов и&nbsp;посёлков из-за человека.
                             Кроме того, северные широты сами по&nbsp;себе не&nbsp;отличаются богатым разнообразием.
                         </p>
+                </span>
+                <span v-else>
+                    <p class="mb-10">
+                        The expedition found that Nornickel&rsquo;s operations do&nbsp;not affect insects much. In&nbsp;the Norilsk Division for instance, ground beetles thrive both in&nbsp;close proximity to&nbsp;industrial sites and far away from them. Emissions have a&nbsp;pronounced negative impact on&nbsp;four beetle species only. 
+                        </p>
+                        <p>
+                            As&nbsp;regards&nbsp;In the Kola Division, local spider diversity is&nbsp;directly linked to&nbsp;the wealth of&nbsp;vegetation across the examined areas&nbsp;&mdash; the fewer plants, the fewer arachnids live in&nbsp;the area. However, the biologists attribute the scarcity of&nbsp;flora not only to&nbsp;industrial emissions but also to&nbsp;human-caused fires that occur near towns and settlements. Additionally, northern latitudes do&nbsp;not boast a&nbsp;wealth of&nbsp;plants.
+                        </p>
+                </span>
 
                         <div class="position-info">
                             <img src="img/bug.png" alt="">
                             <BaseNumberBlock :textTop="'1 402'"
-                                :textBottom="'экземпляра жужелиц собрано только в Норильском регионе'" />
-                            <BaseDropdownInfo :title="'Как удалось поймать так много?'" :color="'#D38235'" :pulsation-color="'pantone'"
-                                :text="'Для ловли беспозвоночных учёные используют различные виды почвенных ловушек, энтомологические сачки и… пластиковые тарелки жёлтого цвета, которые привлекают насекомых.'" />
+                                :textBottom="lang === 'ru' ? 'экземпляра жужелиц собрано только в Норильском регионе' : 'ground beetles collected in the Norilsk Industrial District only'" />
+                            <BaseDropdownInfo :title="lang === 'ru' ?'Как удалось поймать так много?': 'How did the expedition manage to catch so many?'" :color="'#D38235'" :pulsation-color="'pantone'"
+                                :text="lang === 'ru' ? 'Для ловли беспозвоночных учёные используют различные виды почвенных ловушек, энтомологические сачки и… пластиковые тарелки жёлтого цвета, которые привлекают насекомых.' : 'To catch invertebrates, biologists use various soil traps, sweep nets and yellow plastic plates to attract insects the insects.'" />
                         </div>
                     </BaseTextBlock>
                     <BaseSidebar class="mb-100">
-                        <p>
+                        <p v-if="lang === 'ru'">
                             Концентрация загрязняющих веществ на&nbsp;исследовательских полигонах всех четырёх дивизионов
                             &laquo;Норникеля&raquo; не&nbsp;достигает значений, способных существенно повлиять
                             на&nbsp;свойства
                             экологических сообществ жужелиц.
+                        </p>
+                        <p v-else>
+                            Contaminant concentrations in researched areas across all four of Nornickel's divisions do not reach a level that may produce a significant impact on ground beetle ecosystems.
                         </p>
                     </BaseSidebar>
 
@@ -242,8 +359,10 @@
                 </div>
 
                 <div class="big-expedition__birds">
-                    <BaseTextBlock class="mb-40" :title="'Птицы'">
-                        <p class="mb-10">
+                    <BaseTextBlock class="mb-40" :title="lang === 'ru' ? 'Птицы' : 'Birds'">
+                       
+                        <span v-if="lang === 'ru'">
+                            <p class="mb-10">
                             На&nbsp;орнитофауну Норильского дивизиона значительно влияют изменения ландшафта
                             и&nbsp;отторжение
                             территорий под строительство новых промышленных объектов. Вмешательство человека&nbsp;&mdash;
@@ -270,10 +389,28 @@
                             и&nbsp;Карского
                             морей, отличалось незначительно&nbsp;&mdash; 29&nbsp;и&nbsp;24&nbsp;вида соответственно.
                         </p>
+                </span>
+                <span v-else>
+                    <p class="mb-10">
+                        Changes in&nbsp;landscape and utilisation of&nbsp;land to&nbsp;build new industrial facilities have a&nbsp;significant impact on&nbsp;the avifauna of&nbsp;Norilsk Division. Human disturbance such as&nbsp;open-pit mining in&nbsp;bird habitats forces birds to&nbsp;leave nest sites and search for new ones. There are very few birds living in&nbsp;the immediate vicinity of&nbsp;industrial facilities, with many more of&nbsp;them found several kilometres away.
+                        </p>
+                        <p class="mb-10">
+                            Across the three divisions, avifauna diversity varies greatly between the cold and warm seasons as&nbsp;many bird species migrate to&nbsp;southern locations in&nbsp;winter.
+                        </p>
+                        <p class="mb-10">
+                            Ornithologists were also able to&nbsp;watch birds while navigating along the Northern Sea Route. Those were mostly seabirds such as&nbsp;the great cormorant, European shag, northern gannet, great skua, and king eider, and some protected species, including the peregrine falcon and horned lark. 
+                        </p>
+                    
+                        <p>
+                            Bird diversity recorded over the Barents and Kara seas in&nbsp;summer and autumn differed slightly (29&nbsp;and 24&nbsp;species, respectively).
+                        </p>
+                </span>
                         <div class="position-info">
                             <img src="img/big-expedition-bird.png" alt="">
                             <div class="position-info__descr">
-                                <p class="mb-10">
+                               
+                                <span v-if="lang === 'ru'">
+                                    <p class="mb-10">
                                     В&nbsp;Кольском дивизионе наибольшее видовое богатство птиц орнитологи выявили
                                     в&nbsp;зоне
                                     значительного воздействия предприятий.
@@ -283,13 +420,24 @@
                                     расположенных
                                     в&nbsp;зоне значительного воздействия, и&nbsp;живущих там видов околоводных птиц.
                                 </p>
+                </span>
+                <span v-else>
+                    <p class="mb-10">
+                        In&nbsp;the Kola Division, ornithologists identified the greatest diversity of&nbsp;bird species found in&nbsp;the area of&nbsp;significant industrial impact.
+                                </p>
+                                <p>
+This is&nbsp;attributed to&nbsp;the local abundance of&nbsp;natural bodies of&nbsp;water, which are home to&nbsp;semi-aquatic species.
+                                </p>
+                </span>
                             </div>
-                            <BaseDropdownInfo :title="'Почему ещё так может происходить?'" :color="'#D38235'" :pulsation-color="'pantone'"
-                                :text="'Промышленные и&nbsp;хозяйственные здания, расположенные рядом жилые массивы привлекают так называемых синантропных птиц&nbsp;&mdash; виды, которые живут рядом с&nbsp;человеком и&nbsp;зависят от&nbsp;его деятельности. Это воробьи, голуби и&nbsp;вороны. При удалении от&nbsp;промышленных объектов и&nbsp;городов, структура сообщества птиц резко меняется: синантропные виды и&nbsp;чайки исчезают, а&nbsp;вместо них появляются охотничьи виды.'" />
+                            <BaseDropdownInfo :title="lang === 'ru' ? 'Почему ещё так может происходить?' : 'What other factors might be at play?'" :color="'#D38235'" :pulsation-color="'pantone'"
+                                :text="lang === 'ru' ? 'Промышленные и&nbsp;хозяйственные здания, расположенные рядом жилые массивы привлекают так называемых синантропных птиц&nbsp;&mdash; виды, которые живут рядом с&nbsp;человеком и&nbsp;зависят от&nbsp;его деятельности. Это воробьи, голуби и&nbsp;вороны. При удалении от&nbsp;промышленных объектов и&nbsp;городов, структура сообщества птиц резко меняется: синантропные виды и&nbsp;чайки исчезают, а&nbsp;вместо них появляются охотничьи виды.' : 'Industrial and administrative buildings along with residential areas attract so-called synanthropic bird species living in&nbsp;close proximity to&nbsp;and dependant on&nbsp;humans. These are sparrows, pigeons and crows. Away from industrial sites and towns, avifauna changes dramatically, with synanthropes and seagulls replaced by&nbsp;game birds.'" />
                         </div>
                     </BaseTextBlock>
                     <BaseSidebar class="mb-100">
-                        <p class="mb-10">
+                        
+                        <span v-if="lang === 'ru'">
+                            <p class="mb-10">
                             Наиболее значительное воздействие на&nbsp;сообщества птиц предприятия &laquo;Норникеля&raquo;
                             оказывают в&nbsp;Норильском промышленном районе.
                         </p>
@@ -298,13 +446,19 @@
                             учёные
                             затруднились даже выделить зоны воздействия.
                         </p>
+                </span>
+                <span v-else>
+                    While Nornickel's operations in the Norilsk Industrial District have the most significant impact on local bird populations, in the neighbouring Yamal-Nenets Autonomous Area, the impact is so negligible that the researchers had difficulties identifying any specific impact areas.
+                </span>
                     </BaseSidebar>
 
                     <div class="big-expedition__birds-animation"></div>
                 </div>
                 <div class="big-expedition__animals">
-                    <BaseTextBlock class="mb-40" :title="'Млекопитающие'">
-                        <p class="mb-10">
+                    <BaseTextBlock class="mb-40" :title="lang === 'ru' ? 'Млекопитающие' : 'Mammals'">
+                       
+                        <span v-if="lang === 'ru'">
+                            <p class="mb-10">
                             Как&nbsp;и&nbsp;в&nbsp;случае с&nbsp;птицами, на&nbsp;видовое разнообразие млекопитающих влияют
                             не&nbsp;только изменение ландшафта и&nbsp;промышленное воздействие на&nbsp;воздух, воду
                             и&nbsp;почву, но&nbsp;и&nbsp;простое изъятие территорий.
@@ -320,25 +474,38 @@
                             опасных
                             их&nbsp;врагов&nbsp;— охотников.
                         </p>
+                </span>
+                <span v-else>
+                    <p class="mb-10">
+                        As&nbsp;with birds, mammal diversity is&nbsp;linked to&nbsp;changes in&nbsp;landscape and industrial pollution of&nbsp;air, water and soils, as&nbsp;well as&nbsp;loss of&nbsp;habitats.
+                        </p>
+                        <p>
+                            The expedition revealed that immediately outside the industrial area, the health of&nbsp;some ecosystems remained largely unchanged or&nbsp;even improved in&nbsp;some cases. In&nbsp;the Trans-Baikal Territory for example, shrubs have grown along roads leading to&nbsp;Nornickel sites, providing food and shelter for roe deer and hares. Truck noise does not frighten animals, and there are no&nbsp;hunters around, their worst enemy.
+                        </p>
+                </span>
                         <div class="position-info">
                             <img src="img/squirrel.png" alt="">
-                            <BaseNumberBlock :textTop="'7 видов'"
-                                :textBottom="'млекопитающих обнаружили в&nbsp;Кольском дивизионе в&nbsp;зимний период'" />
-                            <BaseDropdownInfo :title="'Какие виды обнаружили учёные?'" :color="'#D38235'" :pulsation-color="'pantone'"
-                                :text="'Исследователям удалось встретить белку, зайца-беляка, лесную куницу, горностая, росомаху, лисицу и&nbsp;лося. Численность всех видов невелика.'" />
+                            <BaseNumberBlock :textTop="lang === 'ru' ? '7 видов' : '7 mammal'"
+                                :textBottom="lang === 'ru' ?'млекопитающих обнаружили в&nbsp;Кольском дивизионе в&nbsp;зимний период': 'species identified in the Kola Division area in winter'" />
+                            <BaseDropdownInfo :title="lang === 'ru' ?'Какие виды обнаружили учёные?' : 'Which species were identified?'" :color="'#D38235'" :pulsation-color="'pantone'"
+                                :text="lang === 'ru' ? 'Исследователям удалось встретить белку, зайца-беляка, лесную куницу, горностая, росомаху, лисицу и&nbsp;лося. Численность всех видов невелика.' : 'The researchers encountered squirrels, mountain hares, pine martens, stoats, wolverines, foxes and elks, However, their populations are relatively small.'" />
                         </div>
                     </BaseTextBlock>
                     <BaseSidebar class="mb-100">
-                        <p>
+                        <p v-if="lang === 'ru'" >
                             Учёные пришли к&nbsp;выводу, что&nbsp;наличие убежища, воды и&nbsp;пищи для&nbsp;животных
                             гораздо
                             важнее помех от&nbsp;предприятий.
                         </p>
+                        <p v-else>
+                            The researchers concluded that the availability of&nbsp;shelter, food and water is&nbsp;far more important for animals, and outweighs the impact of&nbsp;industrial disturbances.</p>
                     </BaseSidebar>
                 </div>
                 <div class="big-expedition__water-animals">
-                    <BaseTextBlock class="mb-40" :title="'Морские млекопитающие'">
-                        <p class="mb-10">
+                    <BaseTextBlock class="mb-40" :title="lang === 'ru' ? 'Морские млекопитающие' : 'Marine mammals'">
+                        
+                        <span v-if="lang === 'ru'">
+                            <p class="mb-10">
                             На&nbsp;жизнь морских обитателей влияют шум, издаваемый судами, а&nbsp;также возможные разливы
                             нефтепродуктов. Второй фактор наиболее опасен: попадая на&nbsp;кожу, топливо оставляет
                             химические
@@ -354,17 +521,28 @@
                             перемещаются суда компании. Все&nbsp;встречи с&nbsp;морскими млекопитающими фиксировались
                             в&nbsp;судовом дневнике исследований.
                         </p>
+                </span>
+                <span v-else>
+                    <p class="mb-10">
+                        Marine mammals suffer from noises produced by&nbsp;vessels, and oil spills. The latter are more dangerous as&nbsp;the fuel&rsquo;s contact with skin results in&nbsp;chemical burns and impacts the air and heat exchange in&nbsp;the body, which can have fatal consequences.
+                        </p>
+                        <p>
+                            The Big Scientific Expedition used Nornickel&rsquo;s vessel to&nbsp;conduct their studies. The vessel with researchers on&nbsp;board followed the regular route, with all encounters with mammals registered in&nbsp;the dedicated logbook.
+                        </p>
+                </span>
                         <div class="position-info">
                             <img src="img/whale.png" alt="">
-                            <BaseNumberBlock :textTop="'5 видов'"
-                                :textBottom="'китообразных водятся в&nbsp;районе Северного морского пути на&nbsp;участке от&nbsp;Мурманска до&nbsp;Дудинки'" />
+                            <BaseNumberBlock :textTop="lang === 'ru' ? '5 видов' : '5 species'"
+                                :textBottom="lang === 'ru' ? 'китообразных водятся в&nbsp;районе Северного морского пути на&nbsp;участке от&nbsp;Мурманска до&nbsp;Дудинки' : 'of whales are found along the Northern Sea Route from Murmansk to Dudinka'" />
 
-                            <BaseDropdownInfo :title="'Каких китов встретили учёные?'" :color="'#D38235'" :pulsation-color="'pantone'"
-                                :text="'В&nbsp;этом районе водятся морская свинья, северный малый полосатик, белуха, а&nbsp;также два вида крупных китов: горбач и&nbsp;финвал.'" />
+                            <BaseDropdownInfo :title="lang === 'ru' ? 'Каких китов встретили учёные?' : 'Which whale species were encountered?'" :color="'#D38235'" :pulsation-color="'pantone'"
+                                :text="lang === 'ru' ?'В&nbsp;этом районе водятся морская свинья, северный малый полосатик, белуга, а&nbsp;также два вида крупных китов: горбач и&nbsp;финвал.' : 'This area is home to the harbour porpoise, common minke whale, beluga whale and two big species – humpback and fin whales.'" />
                         </div>
                     </BaseTextBlock>
                     <BaseSidebar>
-                        <p class="mb-10">
+                        
+                        <span v-if="lang === 'ru'">
+                            <p class="mb-10">
                             За&nbsp;время работ на&nbsp;судах «Норникеля» при&nbsp;переходе по&nbsp;Северному морскому пути
                             не&nbsp;происходило разлива нефтепродуктов. Не&nbsp;отмечался он&nbsp;и&nbsp;во&nbsp;время
                             стоянок
@@ -376,20 +554,41 @@
                             обращения
                             с&nbsp;судовыми сточными водами.
                         </p>
+                </span>
+                <span v-else>
+                    <p class="mb-10">
+                        No&nbsp;fuel spills occurred during the navigation of&nbsp;Nornickel vessels along the Northern Sea Route or&nbsp;mooring in&nbsp;the ports of&nbsp;Dudinka and Murmansk as&nbsp;part of&nbsp;the expedition.
+                        </p>
+                        <p>
+                            This is&nbsp;due to&nbsp;the company&rsquo;s proactive measures in&nbsp;place to&nbsp;prevent accidents and ensure full compliance with vessel wastewater handling requirements.
+                        </p>
+                </span>
                     </BaseSidebar>
                 </div>
             </SectionWhite>
             <SectionOrange>
                 <div class="big-expedition__result mb-60">
                     <div class="big-expedition__result-title title">
-                        Выводы учёных
+                        
+                        <span v-if="lang === 'ru'">
+                            Выводы учёных
+                </span>
+                <span v-else>
+                    Findings
+                </span>
                     </div>
                     <BaseTextBlock class="text">
-                        Первый этап Большой научной экспедиции завершился осенью 2022&nbsp;года. Проведённые комплексные
+                        
+                        <span v-if="lang === 'ru'">
+                            Первый этап Большой научной экспедиции завершился осенью 2022&nbsp;года. Проведённые комплексные
                         исследования, как признают учёные, позволили получить совершенно новые для науки данные.
+                </span>
+                <span v-else>
+                    Phase one of the Big Scientific Expedition ended in the autumn of 2022, having provided the scientists with completely new scientific data obtained as part of their comprehensive research.
+                </span>
                     </BaseTextBlock>
 
-                    <div class="big-expedition__result-wrap">
+                    <div v-if="lang === 'ru'" class="big-expedition__result-wrap">
                         <div class="big-expedition__result-item">
                             <div class="big-expedition__result-text">Устойчивость к&nbsp;загрязнениям</div>
                             <div class="big-expedition__result-descr">
@@ -424,13 +623,37 @@
                         </div>
                     </div>
 
+                    <div v-else class="big-expedition__result-wrap">
+                        <div class="big-expedition__result-item">
+                            <div class="big-expedition__result-text">Resilience&nbsp;to contamination</div>
+                            <div class="big-expedition__result-descr">
+                                Biocoenoses have proven to&nbsp;be&nbsp;very resilient to&nbsp;industrial emissions if&nbsp;they are located outside the operating site. The impact of&nbsp;Nornickel operations on&nbsp;ecosystems has been found to&nbsp;be&nbsp;on&nbsp;par with that of&nbsp;a&nbsp;city. A&nbsp;more significant potential damage comes from tailing dams, which needs to&nbsp;be&nbsp;taken into account when rehabilitating land.
+                            </div>
+                        </div>
+                        <div class="big-expedition__result-item">
+                            <div class="big-expedition__result-text">Tracking changes</div>
+                            <div class="big-expedition__result-descr">
+                                To&nbsp;ensure a&nbsp;reliable assessment of&nbsp;ecosystems, researchers need to&nbsp;account for natural internal changes in&nbsp;all components. Soils and plant communities are relatively stable in&nbsp;time, while animal populations experience pronounced changes. It&nbsp;takes two or&nbsp;three years of&nbsp;monitoring to&nbsp;obtain accurate results.
+                            </div>
+                        </div>
+                        <div class="big-expedition__result-item">
+                            <div class="big-expedition__result-text">Need to continue research</div>
+                            <div class="big-expedition__result-descr">
+                                Phase two of&nbsp;the Big Scientific Expedition around Nornickel sites is&nbsp;taking place in&nbsp;2023 and is&nbsp;now underway. Its participants perform an&nbsp;in-depth research and monitor biodiversity indicators identified a&nbsp;year ago. This work will be&nbsp;followed by&nbsp;a&nbsp;genetic analysis of&nbsp;various components and the compiling of&nbsp;DNA libraries. Three to&nbsp;five years of&nbsp;research are needed to&nbsp;get reliable evidence-based data.
+                            </div>
+                        </div>
+                    </div>
+
                     <BaseAccordion class="big-expedition__result-faq" v-for="faq in faqs" :key="faq.id" :faq="faq" />
                 </div>
                 <BaseSidebar>
-                    <p>
+                    <p v-if="lang === 'ru'" >
                         Научная обоснованность и&nbsp;достоверность данных про биоразнообразие&nbsp;&mdash; основа для&nbsp;принятия решений в&nbsp;области сохранения биологического разнообразия. Именно поэтому
                         &laquo;Норникель&raquo; обращается к&nbsp;авторитетным научным организациям, чтобы
                         их&nbsp;сотрудники проводили исследования и&nbsp;мониторинг в&nbsp;этой сфере.
+                    </p>
+                    <p v-else>
+                        Evidence-based reliable data lie at the heart of decision-making when it comes to biodiversity conservation. This is why Nornickel engages experts from reputable research organisations to conduct studies and monitor relevant indicators.
                     </p>
                 </BaseSidebar>
             </SectionOrange>
@@ -469,20 +692,27 @@ export default {
     },
     data() {
         return {
+            heroDescrEn: 'Three Russian regions covered, dozens of&nbsp;researchers engaged, hundreds of&nbsp;samples taken and thousands of&nbsp;kilometres travelled&nbsp;&mdash; this is&nbsp;how phase one of&nbsp;the Big Scientific Expedition launched by&nbsp;Nornickel unfolded in&nbsp;2022. The team simultaneously studied ecosystems in&nbsp;the Krasnoyarsk and Trans-Baikal territories, on&nbsp;the Kola Peninsula, along a&nbsp;section of&nbsp;the Northern Sea Route and around Nornickel&rsquo;s Yenisey river ports in&nbsp;what was Russia&rsquo;s largest research effort in&nbsp;the entire post-Soviet period.',
             heroDescr: 'Три региона страны, десятки учёных, сотни взятых на&nbsp;анализ проб, тысячи километров пути&nbsp;&mdash; в&nbsp;2022 году по&nbsp;инициативе &laquo;Норникеля&raquo; стартовал первый этап Большой научной экспедиции. Работы по&nbsp;изучению экосистем проводились одновременно в&nbsp;Красноярском крае, на&nbsp;Кольском полуострове и&nbsp;в&nbsp;Забайкалье, а&nbsp;также на&nbsp;отрезке Северного морского пути и&nbsp;вокруг территорий речных портов компании на&nbsp;Енисее. Ничего сопоставимого по&nbsp;масштабу в&nbsp;нашей стране не&nbsp;было за&nbsp;весь постсоветский период.',
             faqs: [
                 {
                     "question": 'Устойчивость к&nbsp;загрязнениям?',
+                    "questionEn": 'Resilience to contamination',
+                    "answerEn": 'Biocoenoses have proven to&nbsp;be&nbsp;very resilient to&nbsp;industrial emissions if&nbsp;they are located outside the operating site. The impact of&nbsp;Nornickel operations on&nbsp;ecosystems has been found to&nbsp;be&nbsp;on&nbsp;par with that of&nbsp;a&nbsp;city. A&nbsp;more significant potential damage comes from tailing dams, which needs to&nbsp;be&nbsp;taken into account when rehabilitating land.',
                     "answer": 'Биоценозы демонстрируют хорошую устойчивость к&nbsp;промышленным выбросам, если только не&nbsp;находятся на&nbsp;территории работающего предприятия. Уровень&nbsp;же воздействия производственных объектов компании &laquo;Норникель&raquo; на&nbsp;экосистемы оказался сопоставим с&nbsp;воздействием города. Более серьёзную нагрузку оказывают хвостохранилища, и&nbsp;это нужно будет учитывать при рекультивации земель.',
                     "isOpen": false
                 },
                 {
                     "question": 'Изучение в&nbsp;динамике',
+                    "questionEn": 'Tracking changes',
+                    "answerEn": 'To&nbsp;ensure a&nbsp;reliable assessment of&nbsp;ecosystems, researchers need to&nbsp;account for natural internal changes in&nbsp;all components. Soils and plant communities are relatively stable in&nbsp;time, while animal populations experience pronounced changes. It&nbsp;takes two or&nbsp;three years of&nbsp;monitoring to&nbsp;obtain accurate results.',
                     "answer": 'Относительно надёжно оценить состояние экосистем можно только с&nbsp;учётом естественной внутренней динамики всех компонентов. Например, почвы и&nbsp;растительные сообщества достаточно стабильны во&nbsp;времени. Животные, напротив, характеризуются выраженной популяционной динамикой. Получить адекватный результат можно минимум за&nbsp;два, а&nbsp;то&nbsp;и&nbsp;три года наблюдений.',
                     "isOpen": false
                 },
                 {
                     "question": 'Необходимость&nbsp;продолжать исследования',
+                    "questionEn": 'Need to continue research',
+                    "answerEn": 'Phase two of&nbsp;the Big Scientific Expedition around Nornickel sites is&nbsp;taking place in&nbsp;2023 and is&nbsp;now underway. Its participants perform an&nbsp;in-depth research and monitor biodiversity indicators identified a&nbsp;year ago. This work will be&nbsp;followed by&nbsp;a&nbsp;genetic analysis of&nbsp;various components and the compiling of&nbsp;DNA libraries. Three to&nbsp;five years of&nbsp;research are needed to&nbsp;get reliable evidence-based data.',
                     "answer": 'В&nbsp;течение 2023 года на&nbsp;территориях вокруг промышленных объектов &laquo;Норникеля&raquo; проходит второй этап Большой научной экспедиции. Её&nbsp;участники занимаются углублёнными исследованиями и&nbsp;наблюдением за&nbsp;выявленными годом ранее параметрами биоразнообразия. По&nbsp;итогам работы учёные проведут генетический анализ различных компонентов систем и&nbsp;составят ДНК-библиотеки. Чтобы получить достоверные и&nbsp;научно обоснованные данные, исследования нужно проводить от&nbsp;3&nbsp;до&nbsp;5&nbsp;лет.',
                     "isOpen": false
                 }
@@ -495,6 +725,11 @@ export default {
             this.textAnimation()
             this.parallax()
         })
+    },
+    computed: {
+        lang() {
+            return this.$store.state.lang
+        }
     },
     methods: {
         textAnimation() {

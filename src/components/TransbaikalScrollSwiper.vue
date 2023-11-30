@@ -6,7 +6,7 @@
                     <source type="image/webp" srcset="img/filter-1.webp">
                     <img class="transbaikal-scroll-item__img" src="img/filter-1.png" alt="">
                 </picture>
-                <div class="transbaikal-scroll-item__text-block">
+                <div v-if="lang === 'ru'" class="transbaikal-scroll-item__text-block">
                     <div class="transbaikal-scroll-item__title">Чистый воздух</div>
                     <div>Сократить выбросы в&nbsp;атмосферу помогают:</div>
                     <ul class="transbaikal-scroll-item__list">
@@ -21,6 +21,20 @@
                         </li>
                     </ul>
                 </div>
+                <div v-else class="transbaikal-scroll-item__text-block">
+                    <div class="transbaikal-scroll-item__title">Clean air</div>
+                    <div>Solutions to reduce air emissions:</div>
+                    <ul class="transbaikal-scroll-item__list">
+                        <li class="transbaikal-scroll-item__list-item">ash and dust collectors
+                        </li>
+                        <li class="transbaikal-scroll-item__list-item">electrostatic precipitators
+                        </li>
+                        <li class="transbaikal-scroll-item__list-item">vehicles and machinery with catalytic converters
+                        </li>
+                        <li class="transbaikal-scroll-item__list-item">high-quality fuel
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="transbaikal-scroll-item cycle">
                 <picture>
@@ -30,12 +44,16 @@
 
                 <div class="transbaikal-scroll-item__text-block">
 
-                    <div class="transbaikal-scroll-item__title">Меньший расход воды</div>
+                    <div class="transbaikal-scroll-item__title" v-if="lang === 'ru'">Меньший расход воды</div>
+                    <div class="transbaikal-scroll-item__title" v-else>Reduced water consumption</div>
 
-                    <div>Использованная на&nbsp;предприятии вода проходит многоступенчатую систему очистки, а&nbsp;затем
+                    <div v-if="lang === 'ru'">Использованная на&nbsp;предприятии вода проходит многоступенчатую систему очистки, а&nbsp;затем
                         возвращается на&nbsp;следующий технологический цикл.</div>
-                    <BaseNumberBlock class="" :textTop="'92%&nbsp;воды'"
-                        :textBottom="'используется на производстве повторно'" />
+                        <div v-else>
+                            The facility’s waste water undergoes multi-stage treatment and is then fed back into the process cycle.
+                        </div>
+                    <BaseNumberBlock class="" :textTop="lang === 'ru' ? '92%&nbsp;воды' : '92%&nbsp;of&nbsp;water'"
+                        :textBottom="lang === 'ru' ? 'используется на производстве повторно' : 'is reused'" />
                 </div>
             </div>
             <div class="transbaikal-scroll-item disposal">
@@ -44,7 +62,7 @@
                     <img class="transbaikal-scroll-item__img" src="img/disposal.png" alt="">
                 </picture>
 
-                <div class="transbaikal-scroll-item__text-block">
+                <div v-if="lang === 'ru'" class="transbaikal-scroll-item__text-block">
                     <div class="transbaikal-scroll-item__title">Безопасная утилизация отходов</div>
                     <div>Полигон отходов комбината оснащён:</div>
                     <ul class="transbaikal-scroll-item__list">
@@ -58,7 +76,20 @@
                         </li>
                     </ul>
                 </div>
-
+                <div v-else class="transbaikal-scroll-item__text-block">
+                    <div class="transbaikal-scroll-item__title">Safe waste disposal</div>
+                    <div>Bystrinsky GOK’s waste landfill features:</div>
+                    <ul class="transbaikal-scroll-item__list">
+                        <li class="transbaikal-scroll-item__list-item">a drainage system
+                        </li>
+                        <li class="transbaikal-scroll-item__list-item">pumping stations
+                        </li>
+                        <li class="transbaikal-scroll-item__list-item">treatment facilities
+                        </li>
+                        <li class="transbaikal-scroll-item__list-item">geomembrane preventing soil contamination
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="transbaikal-scroll-item hydroelectric-station">
                 <picture>
@@ -67,12 +98,16 @@
                 </picture>
 
                 <div class="transbaikal-scroll-item__text-block">
-                    <div class="transbaikal-scroll-item__title">Возобновляемые источники энергии</div>
-                    <div>&laquo;Быстра&raquo; уже использует мощности ГЭС как альтернативу углеродному топливу
+                    <div v-if="lang === 'ru'" class="transbaikal-scroll-item__title">Возобновляемые источники энергии</div>
+                    <div v-else class="transbaikal-scroll-item__title">Renewable energy sources</div>
+                    <div v-if="lang === 'ru'">&laquo;Быстра&raquo; уже использует мощности ГЭС как альтернативу углеродному топливу
                         и&nbsp;прорабатывает варианты реализации проекта по&nbsp;установке солнечной электростанции (СЭС).
                     </div>
-                    <BaseNumberBlock class="" :textTop="'~34%&nbsp;энергии'"
-                        :textBottom="'поступает&nbsp;на&nbsp;комбинат&nbsp;от&nbsp;ГЭС'" />
+                    <div v-else>
+                        Bystrinsky GOK is already using hydro power as an alternative to carbon fuel and is exploring options to build a solar power plant.
+                    </div>
+                    <BaseNumberBlock class="" :textTop="lang === 'ru' ? '~34%&nbsp;энергии' : '~34%'"
+                        :textBottom="lang === 'ru' ? 'поступает&nbsp;на&nbsp;комбинат&nbsp;от&nbsp;ГЭС' : 'share of hydro power in the energy mix'" />
 
                 </div>
             </div>
@@ -114,7 +149,12 @@ export default {
                 });
             }
         }
-    }
+    },
+    computed: {
+        lang() {
+            return this.$store.state.lang
+        }
+    },
 }
 </script>
 

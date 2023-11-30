@@ -3,15 +3,33 @@
         <div class="map-container">
             <div class="map-item">
                 <picture>
-                    <source type="image/webp" srcset="img/map-big-expedition-1.webp">
-                    <img src="img/map-big-expedition-1.png" alt="">
+                    <source type="image/webp" :srcset="lang === 'ru' ? 'img/map-big-expedition-1.webp' :'img/map-big-expedition-1-en.webp' ">
+                    <img :src="lang === 'ru' ? 'img/map-big-expedition-1.png' : 'img/map-big-expedition-1-en.png'" alt="">
                 </picture>
                 <div class="map-item__text">
-                    <div class="map-item__title">Норильский дивизион</div>
-                    <div class="map-item__descr">Группа объектов в&nbsp;районе Норильска&nbsp;и&nbsp;Талнаха</div>
+                    <div class="map-item__title">
+                        <span v-if="lang === 'ru'">
+                            Норильский дивизион
+                </span>
+                <span v-else>
+                    Norilsk Division
+                </span></div>
+                    <div class="map-item__descr">
+                        <span v-if="lang === 'ru'">
+                            Группа объектов в&nbsp;районе Норильска&nbsp;и&nbsp;Талнаха
+                </span>
+                <span v-else>
+                    A cluster of facilities around Norilsk and&nbsp;Talnakh
+                </span></div>
                 </div>
                 <a class="link" href="/norilsk-division" target="_blank">
-                    <div>Перейти в&nbsp;раздел дивизиона</div>
+                    <div>
+                        <span v-if="lang === 'ru'">
+                            Перейти в&nbsp;раздел дивизиона
+                </span>
+                <span v-else>
+                    Go to the Division section
+                </span></div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="8" viewBox="0 0 20 8" fill="none">
                         <path
                             d="M19.8536 4.35355C20.0488 4.15829 20.0488 3.84171 19.8536 3.64645L16.6716 0.464466C16.4763 0.269204 16.1597 0.269204 15.9645 0.464466C15.7692 0.659728 15.7692 0.976311 15.9645 1.17157L18.7929 4L15.9645 6.82843C15.7692 7.02369 15.7692 7.34027 15.9645 7.53553C16.1597 7.7308 16.4763 7.7308 16.6716 7.53553L19.8536 4.35355ZM0 4.5H19.5V3.5H0V4.5Z"
@@ -22,15 +40,33 @@
 
             <div class="map-item">
                 <picture>
-                    <source type="image/webp" srcset="img/map-big-expedition-2.webp">
-                    <img src="img/map-big-expedition-2.png" alt="">
+                    <source type="image/webp" :srcset="lang === 'ru' ? 'img/map-big-expedition-2.webp' :'img/map-big-expedition-2-en.webp' ">
+                    <img :src="lang === 'ru' ? 'img/map-big-expedition-2.png' : 'img/map-big-expedition-2-en.png'" alt="">
                 </picture>
                 <div class="map-item__text">
-                    <div class="map-item__title">Забайкальский дивизион</div>
-                    <div class="map-item__descr">Быстринский ГОК</div>
+                    <div class="map-item__title">
+                    <span v-if="lang === 'ru'">
+                        Забайкальский дивизион
+                </span>
+                <span v-else>
+                    Trans-Baikal Division
+                </span></div>
+                    <div class="map-item__descr">
+                    <span v-if="lang === 'ru'">
+                        Быстринский ГОК
+                </span>
+                <span v-else>Bystrinsky GOK
+                   
+                </span></div>
                 </div>
                 <a class="link" href="/transbaikal-division" target="_blank">
-                    <div>Перейти в&nbsp;раздел дивизиона</div>
+                    <div>
+                    <span v-if="lang === 'ru'">
+                        Перейти в&nbsp;раздел дивизиона
+                </span>
+                <span v-else>
+                    Go to the Division section
+                </span></div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="8" viewBox="0 0 20 8" fill="none">
                         <path
                             d="M19.8536 4.35355C20.0488 4.15829 20.0488 3.84171 19.8536 3.64645L16.6716 0.464466C16.4763 0.269204 16.1597 0.269204 15.9645 0.464466C15.7692 0.659728 15.7692 0.976311 15.9645 1.17157L18.7929 4L15.9645 6.82843C15.7692 7.02369 15.7692 7.34027 15.9645 7.53553C16.1597 7.7308 16.4763 7.7308 16.6716 7.53553L19.8536 4.35355ZM0 4.5H19.5V3.5H0V4.5Z"
@@ -41,15 +77,30 @@
 
             <div class="map-item">
                 <picture>
-                    <source type="image/webp" srcset="img/map-big-expedition-3.webp">
-                    <img src="img/map-big-expedition-3.png" alt="">
+                    <source type="image/webp" :srcset="lang === 'ru' ? 'img/map-big-expedition-3.webp' :'img/map-big-expedition-3-en.webp' ">
+                    <img :src="lang === 'ru' ? 'img/map-big-expedition-3.png' : 'img/map-big-expedition-3-en.png'" alt="">
                 </picture>
                 <div class="map-item__text">
-                    <div class="map-item__title">Кольский дивизион</div>
-                    <div class="map-item__descr">Мончегорск, Никель, Заполярный</div>
+                    <div class="map-item__title"><span v-if="lang === 'ru'">
+                        Кольский дивизион
+                </span>
+                <span v-else>
+                    Kola Division
+                </span></div>
+                    <div class="map-item__descr"><span v-if="lang === 'ru'">
+                        Мончегорск, Никель, Заполярный
+                </span>
+                <span v-else>
+                    Monchegorsk, Nickel, Zapolyarny
+                </span></div>
                 </div>
                 <a class="link" href="/kola-division" target="_blank">
-                    <div>Перейти в&nbsp;раздел дивизиона</div>
+                    <div><span v-if="lang === 'ru'">
+                        Перейти в&nbsp;раздел дивизиона
+                </span>
+                <span v-else>
+                    Go to the Division section
+                </span></div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="8" viewBox="0 0 20 8" fill="none">
                         <path
                             d="M19.8536 4.35355C20.0488 4.15829 20.0488 3.84171 19.8536 3.64645L16.6716 0.464466C16.4763 0.269204 16.1597 0.269204 15.9645 0.464466C15.7692 0.659728 15.7692 0.976311 15.9645 1.17157L18.7929 4L15.9645 6.82843C15.7692 7.02369 15.7692 7.34027 15.9645 7.53553C16.1597 7.7308 16.4763 7.7308 16.6716 7.53553L19.8536 4.35355ZM0 4.5H19.5V3.5H0V4.5Z"
@@ -60,12 +111,16 @@
 
             <div class="map-item">
                 <picture>
-                    <source type="image/webp" srcset="img/map-big-expedition-4.webp">
-                    <img src="img/map-big-expedition-4.png" alt="">
+                    <source type="image/webp" :srcset="lang === 'ru' ? 'img/map-big-expedition-4.webp' :'img/map-big-expedition-4-en.webp' ">
+                    <img :src="lang === 'ru' ? 'img/map-big-expedition-4.png' : 'img/map-big-expedition-4-en.png'" alt="">
                 </picture>
-                <div class="map-item__text">
+                <div v-if="lang === 'ru'" class="map-item__text">
                     <div class="map-item__title">Речные порты</div>
                     <div class="map-item__descr">Красноярский речной порт, Лесосибирский порт</div>
+                </div>
+                <div v-else class="map-item__text">
+                    <div class="map-item__title">River ports</div>
+                    <div class="map-item__descr">Krasnoyarsk River Port, Lesosibirsk Port</div>
                 </div>
             </div>
 
@@ -74,7 +129,11 @@
                     <source type="image/webp" srcset="img/map-big-expedition-5.webp">
                     <img src="img/map-big-expedition-5.png" alt="">
                 </picture>
-                <div class="map-item__text">
+                <div v-if="lang === 'ru'"  class="map-item__text">
+                    <div class="map-item__title">Северный морской путь</div>
+                    <div class="map-item__descr">Дудинка — Мурманск, Мурманский транспортный филиал</div>
+                </div>
+                <div v-else class="map-item__text">
                     <div class="map-item__title">Северный морской путь</div>
                     <div class="map-item__descr">Дудинка — Мурманск, Мурманский транспортный филиал</div>
                 </div>
@@ -95,6 +154,11 @@ export default {
         this.$nextTick(function () {
             this.scrollAnimation();
         })
+    },
+    computed: {
+        lang() {
+            return this.$store.state.lang
+        }
     },
     methods: {
         scrollAnimation() {

@@ -37,8 +37,9 @@
       let title = document.createElement('title');
       title.innerHTML = lang === 'ru' || lang == null ? 'Сохраняя экосистемы' : 'Preserving ecosystems'
       head.appendChild(title)
-      document.querySelector('meta[property="og:image"]').setAttribute("content", lang === 'ru' || lang == null ? 'https://life.nornikel.ru/img/opengraph-telegram.jpg' : 'https://life.nornikel.ru/img/opengraph-telegram-en.jpg');
-      document.querySelector('meta[name="description"]').setAttribute("content", lang === 'ru' || lang == null ? 'Интерактивный проект об экологических проектах «Норникеля» по сохранению устойчивости экосистем.' : '');
+      // исправить на https://life.nornikel.ru/img/opengraph-telegram.jpg
+      document.querySelector('meta[property="og:image"]').setAttribute("content", lang === 'ru' || lang == null ? 'https://biodiversity-seven.vercel.app/img/opengraph-telegram.jpg' : 'https://biodiversity-seven.vercel.app/img/opengraph-telegram-en.jpg');
+      document.querySelector('meta[name="description"]').setAttribute("content", lang === 'ru' || lang == null ? 'Интерактивный проект об экологических проектах «Норникеля» по сохранению устойчивости экосистем.' : 'test');
     </script>
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <link rel="preload" href="img/loader.gif" as="image">

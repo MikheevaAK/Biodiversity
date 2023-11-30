@@ -185,6 +185,13 @@ export default {
             @supports (background-image: url(../../public/img/treasures-scroll-4-en.webp)) {
                 background-image: url(../../public/img/treasures-scroll-4-en.webp);
             }
+
+            @media (max-width: 768px) {
+                background-image: url(../../public/img/treasures-scroll-4-en-mobile.png);
+            @supports (background-image: url(../../public/img/treasures-scroll-4-en-mobile.webp)) {
+                background-image: url(../../public/img/treasures-scroll-4-en-mobile.webp);
+            }
+            }
         }
     }
 

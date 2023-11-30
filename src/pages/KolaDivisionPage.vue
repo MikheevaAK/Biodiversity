@@ -542,7 +542,9 @@ In&nbsp;2020, the smelting shop that had a&nbsp;negative impact on&nbsp;the Pasv
                     <div class="collage__grayling"></div>
                 </div>
                 <BaseTextBlock class="mb-100">
-                    <p class="mb-10">
+                    
+                    <span v-if="lang === 'ru'">
+                        <p class="mb-10">
                         Заповедники Лапландский и&nbsp;&laquo;Пасвик&raquo;, по&nbsp;мнению специалистов РАН, являются
                         местами обитания, критически важными для&nbsp;природных сообществ дивизиона. На&nbsp;заповедных
                         территориях обнаружены охраняемые и&nbsp;
@@ -562,6 +564,22 @@ In&nbsp;2020, the smelting shop that had a&nbsp;negative impact on&nbsp;the Pasv
                         &laquo;Норникель&raquo; регулярно оказывает финансовую помощь заповедникам и&nbsp;спонсирует
                         программы по&nbsp;изучению и&nbsp;восстановлению видов.
                     </p>
+                </span>
+                <span v-else>
+                    <p class="mb-10">
+                        Experts from the Russian Academy of Sciences believe that the Lapland and Pasvik Nature Reserves are habitats critical for the division's natural communities. Protected and 
+                        <BaseTooltip :word="'endemic species'">
+                            A species of animal or plant that is found in a single geographic location and nowhere else. Because of their limited habitat, endemics are often listed in Red Data Books as rare or endangered species.
+                        </BaseTooltip>, as well as unique ecological systems, have been discovered in protected areas.
+                    </p>
+                    <p class="mb-10">
+                        The areas of the reserves which are exposed to industrial impact need constant monitoring. The сompany is already paying special attention to the areas affected by the now disused smelting shop in Nickel.
+                    </p>
+                    <p>
+                        Nornickel provides regular financial assistance to nature reserves and sponsors programmes to study and restore species.
+                    </p>
+                </span>
+
                 </BaseTextBlock>
 
                 <div class="habitat-map">
@@ -734,15 +752,22 @@ In&nbsp;2020, the smelting shop that had a&nbsp;negative impact on&nbsp;the Pasv
                 </div>
 
                 <BaseTextBlock class="mb-40">
-                    Некоторые редкие виды могут проживать в&nbsp;зонах воздействия предприятий, несмотря на&nbsp;шум или&nbsp;другие факторы воздействия. Ведь для&nbsp;их&nbsp;выживания главное&nbsp;&mdash; наличие корма
+                    <span v-if="lang === 'ru'">
+                        Некоторые редкие виды могут проживать в&nbsp;зонах воздействия предприятий, несмотря на&nbsp;шум или&nbsp;другие факторы воздействия. Ведь для&nbsp;их&nbsp;выживания главное&nbsp;&mdash; наличие корма
                     и&nbsp;отсутствие беспокойства со&nbsp;стороны человека.
+                </span>
+                <span v-else>
+                    Some rare species can live in the areas affected by the facilities despite the noise or other impacts. After all, their survival depends on the availability of food and absence of human disturbance.
+                </span>
+                    
                 </BaseTextBlock>
                 <BaseSidebar>
-                    <p>
+                    <p v-if="lang === 'ru'">
                         Минимизировать накопленный за&nbsp;многие десятилетия техногенный след, восстановить
                         и&nbsp;сохранить экосистемы Кольского Заполярья&nbsp;&mdash; важные пункты экологической программы
                         &laquo;Норникеля&raquo; в&nbsp;Кольском&nbsp;дивизионе.
                     </p>
+                    <p v-else>Minimising the legacy anthropogenic footprint of many decades, restoring and preserving the Kola Peninsula's ecosystems are important parts of Nornickel's environmental programme at Kola Division.</p>
                 </BaseSidebar>
             </SectionOrange>
         </MainSection>

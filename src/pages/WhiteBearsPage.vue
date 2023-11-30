@@ -379,8 +379,7 @@
                                 и&nbsp;оставили рядом с&nbsp;ней на&nbsp;прощанье несколько десятков килограммов рыбы.
                             </p>
                             <p v-else class="mb-10">
-                                Спящую после операции медведицу отвезли подальше от&nbsp;людей, в&nbsp;дикую природу,
-                                и&nbsp;оставили рядом с&nbsp;ней на&nbsp;прощанье несколько десятков килограммов рыбы.
+                                The sleeping bear was then transported away from human settlements and left with a generous supply of fish beside it.
                             </p>
                             <p v-if="lang === 'ru'">
                                 Через две недели специалисты проверили место, где оставили Монеточку. Не&nbsp;обнаружив
@@ -388,8 +387,7 @@
                             </p>
                           
                             <p v-else>
-                                Через две недели специалисты проверили место, где оставили Монеточку. Не&nbsp;обнаружив
-                                ни&nbsp;её, ни&nbsp;рыбы, поняли: хищница ожила, съела рыбу и&nbsp;ушла.
+                                After inspecting the location two weeks later, the team found no sign of Monetochka or the fish, which means that the bear awoke, ate the treat, and walked back into the wilderness.
                             </p>
                         </div>
                     </div>
@@ -872,6 +870,14 @@ export default {
 
             @supports (background-image: url(../../public/img/bear-en.webp)) {
             background-image: url(../../public/img/bear-en.webp);
+        }
+
+        @media (max-width: 768px) {
+            background-image: url(../../public/img/bear-en-mobile.png);
+
+            @supports (background-image: url(../../public/img/bear-en-mobile.webp)) {
+                background-image: url(../../public/img/bear-en-mobile.webp);
+            }
         }
         }
 

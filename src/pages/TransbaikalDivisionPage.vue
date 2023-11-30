@@ -302,49 +302,49 @@
                     <BaseCollageInfo class="eagle" :title="lang === 'ru' ? 'Большой подорлик' : 'Greater spotted eagle'" :color="'#71464E'"
                         :text="lang === 'ru' ? 'Размах крыльев в&nbsp;2,5&nbsp;раза длиннее тела&nbsp;—&nbsp;около 180&nbsp;см' : 'Wingspan of circa 180 cm, 2.5x body length'" />
 
-                    <BaseCollageInfo class="harrier" :title="'Полевой лунь'" :color="'#71464E'"
-                        :text="'Самки крупнее самцов почти в&nbsp;два раза и&nbsp;весят до&nbsp;600&nbsp;г'" />
+                    <BaseCollageInfo class="harrier" :title="lang === 'ru' ? 'Полевой лунь' : 'Hen harrier'" :color="'#71464E'"
+                        :text=" lang === 'ru' ? 'Самки крупнее самцов почти в&nbsp;два раза и&nbsp;весят до&nbsp;600&nbsp;г' : 'The females of this bird species weigh up to 600 grams, nearly twice the weight of the males.'" />
 
-                    <BaseCollageInfo class="puffy" :title="'Пухляк'"
-                        :text="'Устраивает повсюду множество кладовых из&nbsp;семян и&nbsp;помнит, где они находятся'" />
+                    <BaseCollageInfo class="puffy" :title="lang === 'ru' ?'Пухляк' : 'Willow tit'"
+                        :text="lang === 'ru' ?'Устраивает повсюду множество кладовых из&nbsp;семян и&nbsp;помнит, где они находятся' : 'The willow tit is known for its habit of creating numerous seed stores and remembering their precise locations.'" />
 
-                    <BaseDropdownInfo :is-modal="true" class="warbler" :title="'Толстоклювая пеночка'" :pulsation-color="'Green-Mist'"
-                    :text="'Поёт свою песню, каждый раз меняя тональность, поэтому разные специалисты описывают её&nbsp;голос по-разному'" />
+                    <BaseDropdownInfo :is-modal="true" class="warbler" :title="lang === 'ru' ?'Толстоклювая пеночка' : 'Radde’s warble'" :pulsation-color="'Green-Mist'"
+                    :text="lang === 'ru' ?'Поёт свою песню, каждый раз меняя тональность, поэтому разные специалисты описывают её&nbsp;голос по-разному' : 'The Radde&rsquo;s warbler changes the tonality of&nbsp;its song each time. As&nbsp;a&nbsp;result, different experts describe its vocalisations in&nbsp;various ways.'" />
 
-                    <BaseCollageInfo class="mottled-breast" :title="'Сибирская пестрогрудка'" :color="'#71464E'"
-                        :text="'Голосом напоминает жужжание электропроводов'" />
+                    <BaseCollageInfo class="mottled-breast" :title="lang === 'ru' ? 'Сибирская пестрогрудка' : 'Chinese bush warbler'" :color="'#71464E'"
+                        :text="lang === 'ru' ?'Голосом напоминает жужжание электропроводов' : 'The Chinese bush warbler sings with a low-pitched drawn-out buzz, resembling the buzzing of electrical wires.'" />
 
-                    <BaseCollageInfo class="moskovka" :title="'Московка'"
-                        :text="'Когда московка возбуждена, она приподнимает перья на&nbsp;лбу в&nbsp;виде небольшого хохолка'" />
+                    <BaseCollageInfo class="moskovka" :title="lang === 'ru' ? 'Московка' : 'Willow tit'"
+                        :text="lang === 'ru' ? 'Когда московка возбуждена, она приподнимает перья на&nbsp;лбу в&nbsp;виде небольшого хохолка' : 'When a coal tit is agitated, the black feathers on the back of its head might be raised in a small spike.'" />
 
-                    <BaseCollageInfo class="lily-dwarf" :title="'Лилия карликовая'" :color="'#71464E'"
-                        :text="'Цветы часто срывают на&nbsp;букеты, что резко ограничивает семенное размножение вида'" />
+                    <BaseCollageInfo class="lily-dwarf" :title="lang === 'ru' ? 'Лилия карликовая' : 'Lilium pumilum'" :color="'#71464E'"
+                        :text="lang === 'ru' ? 'Цветы часто срывают на&nbsp;букеты, что резко ограничивает семенное размножение вида' : 'The lilium pumilum frequently has its flowers picked for bouquets, which greatly restricts the species’ ability to reproduce through seed propagation.'" />
 
-                    <BaseCollageInfo class="rowan" :title="'Рябина сибирская'" :color="'#71464E'"
-                        :text="'Легко приспосабливается к&nbsp;новым условиям, выдерживает холод и&nbsp;засуху'" />
+                    <BaseCollageInfo class="rowan" :title="lang === 'ru' ? 'Рябина сибирская' : 'Siberian rowan'" :color="'#71464E'"
+                        :text="lang === 'ru' ? 'Легко приспосабливается к&nbsp;новым условиям, выдерживает холод и&nbsp;засуху' : 'The Siberian Rowan easily adapts to new conditions, tolerating both cold temperatures and drought.'" />
 
-                    <BaseCollageInfo class="ground-beetle" :title="'Жужелица Карабус&nbsp;крюбери'" :color="'#71464E'"
-                        :text="'Редкий, малоизученный вид, встречаются единичные особи'" />
+                    <BaseCollageInfo class="ground-beetle" :title="lang === 'ru' ? 'Жужелица Карабус&nbsp;крюбери' : 'Carabus krueperi beetle'" :color="'#71464E'"
+                        :text="lang === 'ru' ? 'Редкий, малоизученный вид, встречаются единичные особи' : 'The Carabus krueperi is a rare and understudied species, with only isolated individuals encountered.'" />
 
-                    <BaseCollageInfo class="shrew" :title="'Бурозубка'"
-                        :text="'Быстро стареет из-за необычайно интенсивного обмена веществ'" />
+                    <BaseCollageInfo class="shrew" :title="lang === 'ru' ? 'Бурозубка' :'Shrew'"
+                        :text=" lang === 'ru' ?'Быстро стареет из-за необычайно интенсивного обмена веществ' : 'The shrew ages quickly due to its exceptionally high metabolic rate.'" />
 
-                    <BaseCollageInfo class="black-cohosh" :title="'Клопогон даурский'" :color="'#71464E'"
-                        :text="'Живописное лекарственное растение отпугивает насекомых сильным запахом'" />
+                    <BaseCollageInfo class="black-cohosh" :title="lang === 'ru' ? 'Клопогон даурский' : 'Bugbane'" :color="'#71464E'"
+                        :text="lang === 'ru' ? 'Живописное лекарственное растение отпугивает насекомых сильным запахом' : 'The bugbane is a beautiful medicinal plant that repels insects with its strong odour.'" />
 
-                    <BaseCollageInfo class="spiraea-average" :title="'Спирея средняя'" />
-                    <BaseCollageInfo class="spotted-pipit" :title="'Пятнистый конёк'" />
+                    <BaseCollageInfo class="spiraea-average" :title="lang === 'ru' ? 'Спирея средняя' : 'Spiraea media'" />
+                    <BaseCollageInfo class="spotted-pipit" :title="lang === 'ru' ? 'Пятнистый конёк' : 'Olive-backed pipit'" />
 
-                    <BaseCollageInfo class="grouse" :title="'Рябчик'"
-                        :text="'Российская популяция&nbsp;вида самая многочисленная&nbsp;&mdash; около 40&nbsp;млн птиц'" />
+                    <BaseCollageInfo class="grouse" :title="lang === 'ru' ? 'Рябчик' : 'Hazel grouse'"
+                        :text="lang === 'ru' ? 'Российская популяция&nbsp;вида самая многочисленная&nbsp;&mdash; около 40&nbsp;млн птиц' : 'With approximately 40 million birds, Russia has the biggest hazel grouse population in world.'" />
 
-                    <BaseDropdownInfo :is-modal="true" class="mouse" :title="'Восточноазиатская мышь'" :pulsation-color="'Green-Mist'"
-                    :text="'Природный носитель возбудителей не&nbsp;менее десятка опасных для человека заболеваний, среди которых: японский энцефалит, туляремия и&nbsp;геморрагическая лихорадка'" />
+                    <BaseDropdownInfo :is-modal="true" class="mouse" :title="lang === 'ru' ? 'Восточноазиатская мышь' : 'Korean field mouse'" :pulsation-color="'Green-Mist'"
+                    :text="lang === 'ru' ?  'Природный носитель возбудителей не&nbsp;менее десятка опасных для человека заболеваний, среди которых: японский энцефалит, туляремия и&nbsp;геморрагическая лихорадка' : 'The Korean field mouse serves as a natural reservoir for more than a dozen diseases that are dangerous to humans, including Japanese encephalitis, tularemia and viral haemorrhagic fever.'" />
 
-                    <BaseCollageInfo class="krasodnev" :title="'Красоднев малый'" :color="'#71464E'"
-                        :text="'Каждый цветок красоднева распускается лишь на&nbsp;один день'" />
+                    <BaseCollageInfo class="krasodnev" :title="lang === 'ru' ? 'Красоднев малый' : 'Dwarf daylily'" :color="'#71464E'"
+                        :text=" lang === 'ru' ? 'Каждый цветок красоднева распускается лишь на&nbsp;один день' : 'Each dwarf daylily flower blooms for one day only.'" />
 
-                    <BaseCollageInfo class="slipper" :title="'Венерин башмачок'" :color="'#71464E'"
+                    <BaseCollageInfo class="slipper" :title="lang === 'ru' ? 'Венерин башмачок' : ''" :color="'#71464E'"
                         :text="'Имеет причудливое строение цветка, напоминающего носок обуви'" />
 
                     <BaseCollageInfo class="curlew" :title="'Большой кроншнеп'" :color="'#71464E'"

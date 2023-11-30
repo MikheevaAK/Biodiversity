@@ -258,8 +258,15 @@ export default {
             @supports (background-image: url(../../public/img/hero-main-en.webp)) {
                 background-image: url(../../public/img/hero-main-en.webp);
             }
-        }
 
+            @media (max-width: 768px) {
+            background-image: url(../../public/img/hero-main-en-mobile.png);
+
+            @supports (background-image: url(../../public/img/hero-main-en-mobile.webp)) {
+                background-image: url(../../public/img/hero-main-en-mobile.webp);
+            }
+        }
+        }
         &-strip {
             display: none;
         }

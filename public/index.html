@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name = "description" content = "Интерактивный проект об экологических проектах «Норникеля» по сохранению устойчивости экосистем.">  
-    <meta property = "og:image" content = "https://life.nornikel.ru/img/opengraph-telegram.jpg" >
+    <meta name = "description" content = "">  
+    <meta property="og:image" >
     <meta name = "twitter:card" content = "summary_large_image" >  
     <!-- Yandex.Metrika counter -->
     <!-- <script type="text/javascript" >
@@ -35,9 +35,10 @@
 
       let lang = localStorage.getItem("lang");
       let title = document.createElement('title');
-      title.innerHTML = lang === 'ru' || lang == null ? 'Сохраняя экосистемы' : 'Preserving ecosystems '
-  
+      title.innerHTML = lang === 'ru' || lang == null ? 'Сохраняя экосистемы' : 'Preserving ecosystems'
       head.appendChild(title)
+      document.querySelector('meta[property="og:image"]').setAttribute("content", lang === 'ru' || lang == null ? 'https://life.nornikel.ru/img/opengraph-telegram.jpg' : 'https://life.nornikel.ru/img/opengraph-telegram-en.jpg');
+      document.querySelector('meta[name="description"]').setAttribute("content", lang === 'ru' || lang == null ? 'Интерактивный проект об экологических проектах «Норникеля» по сохранению устойчивости экосистем.' : '');
     </script>
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <link rel="preload" href="img/loader.gif" as="image">

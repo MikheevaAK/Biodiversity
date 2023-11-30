@@ -56,13 +56,11 @@
             </section>
 
             <section class="main-page__bottom">
-                <a href="poster_Nornickel.pdf" download v-if="store.length === 10" class="main-page__bottom-link">
-                    <span v-if="lang === 'ru'">
+                <a href="poster_Nornickel.pdf" download v-if="store.length >= 10 && lang === 'ru'" class="main-page__bottom-link">
                         Скачать карту в PDF
-                    </span>
-                    <span v-else>
+                </a>
+                <a href="poster_Nornickel_.pdf" download v-if="store.length >= 10 && lang === 'en'" class="main-page__bottom-link">
                         Download map PDF
-                    </span>
                 </a>
                 <div class="main-page__bottom-title">
                     <span v-if="lang === 'ru'">

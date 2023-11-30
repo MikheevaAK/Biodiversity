@@ -108,9 +108,12 @@ export default {
             isOpenLinks: false,
             share: {
                 title: 'Сохраняя экосистемы',
+                titleEn: 'Preserving ecosystems',
                 text: 'Интерактивный проект об экологических проектах «Норникеля» по сохранению природных экосистем.',
                 tgImg: `${document.location.origin}/img/opengraph-telegram.jpg`,
-                vkImg: `${document.location.origin}/img/opengraph-vk.jpg`
+                vkImg: `${document.location.origin}/img/opengraph-vk.jpg`,
+                tgImgEn: `${document.location.origin}/img/opengraph-telegram-en.jpg`,
+                vkImgEn: `${document.location.origin}/img/opengraph-vk-en.jpg`
             },
         }
     },
@@ -138,13 +141,13 @@ export default {
         },
         getShareLink(name) {
             if (name === 'vk') {
-                return `https://vkontakte.ru/share.php?url=${document.location.href}&title=${this.share.title}&image=${this.share.vkImg}&noparse=false`
+                return `https://vkontakte.ru/share.php?url=${document.location.href}&title=${this.lang === 'ru' ? this.share.title : this.share.titleEn}&image=${this.lang === 'ru' ? this.share.vkImg : this.share.vkImgEn}&noparse=false`
             }
             if (name === 'ok') {
-                return `https://connect.ok.ru/offer?url=${document.location.href}&title=${this.share.title}&description=${this.share.text}&imageUrl=${this.share.vkImg}`
+                return `https://connect.ok.ru/offer?url=${document.location.href}&title=${this.lang === 'ru' ? this.share.title : this.share.titleEn}&description=${this.lang === 'ru' ? this.share.text : this.share.textEn}&imageUrl=${this.lang === 'ru' ? this.share.vkImg : this.share.vkImgEn}`
             }
             if (name === 'telegram') {
-                return `https://t.me/share/url?url=${document.location.href}&title=${this.share.title}`
+                return `https://t.me/share/url?url=${document.location.href}&title=${this.lang === 'ru' ? this.share.title : this.share.titleEn}`
             }
         },
         openShare() {

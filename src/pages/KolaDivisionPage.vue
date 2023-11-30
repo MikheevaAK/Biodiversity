@@ -1,11 +1,13 @@
 <template>
     <div class="kola">
-        <BaseHero :title="'Кольский дивизион. Природные обитатели Кольского Заполярья'" :descr="heroDescr"
+        <BaseHero :title="lang === 'ru' ? 'Кольский дивизион. Природные обитатели Кольского Заполярья' : 'Kola Division. Natural inhabitants of the Kola Polar Region'" :descr="lang === 'ru' ? heroDescr : heroDescrEn"
             :img="'img/hero5.jpg'" :imgMobile="'img/hero5-mobile.jpg'" />
         <MainSection>
             <SectionWhite>
-                <BaseTextBlock class="text mb-40" :title="'Особенности дивизиона'" :tooltip="true">
-                    <p class="mb-10">
+                <BaseTextBlock class="text mb-40" :title="lang === 'ru' ? 'Особенности дивизиона' : 'Division profile'" :tooltip="true">
+                    
+                    <span v-if="lang === 'ru'">
+                        <p class="mb-10">
                         Кольский
                         <BaseTooltip :word="'дивизион'">
                             Компании объединяют в&nbsp;дивизион предприятия одного региона или&nbsp;объекты с&nbsp;общей задачей,
@@ -23,9 +25,22 @@
                         Сегодня компания &laquo;Норникель&raquo; много внимания уделяет модернизации предприятий Кольского
                         дивизиона, стремясь сократить промышленный след и&nbsp;бережно относясь к&nbsp;окружающей среде.
                     </p>
+                </span>
+                <span v-else>
+                    <p class="mb-10">
+                        Nornickel's Kola
+                        <BaseTooltip :word="'Division'">
+                            Companies create divisions by grouping together enterprises or facilities in the same region or with shared tasks, such as feedstock transportation or energy supply. Divisions help streamline the management of large organisations.
+                        </BaseTooltip>
+                        comprises the facilities of Kola Mining and Metallurgical Company (MMC), which was established on the basis of the oldest nickel mining and processing enterprises, Severonickel and Pechenganickel. MMC's divisions are geographically remote from each other and form two clusters, Monchegorsk and Nickel – Zapolyarny.
+                    </p>
+                    <p>
+                        Today, Nornickel is prioritising the upgrade of the Kola Division's facilities in an effort to reduce its industrial footprint and protect the environment.
+                    </p>
+                </span>
                 </BaseTextBlock>
 
-                <BigMap :circales="circales" :img="'img/kola-big-map'" :imgMobile="'img/kola-big-map-mobile'">
+                <BigMap :circales="circales" :img="lang === 'ru' ? 'img/kola-big-map' : 'img/kola-big-map-en' " :imgMobile="lang === 'ru' ? 'img/kola-big-map-mobile' : 'img/kola-big-map-en-mobile'">
                     <div class="circales">
                         <div class="circale-block">
                             <svg class="circale-block__img" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
@@ -33,7 +48,8 @@
                                 <circle cx="7" cy="7" r="7" fill="#654EA3" />
                             </svg>
 
-                            <div class="circale-block__text">Промышленные объекты</div>
+                            <div v-if="lang === 'ru'" class="circale-block__text">Промышленные объекты</div>
+                            <div v-else class="circale-block__text">Industrial facilities</div>
                         </div>
                         <div class="circale-block">
                             <svg class="circale-block__img" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
@@ -41,7 +57,8 @@
                                 <circle cx="7" cy="7" r="7" fill="#009CA6" />
                             </svg>
 
-                            <div class="circale-block__text">Особо охраняемые природные территории</div>
+                            <div v-if="lang === 'ru'" class="circale-block__text">Особо охраняемые природные территории</div>
+                            <div v-else class="circale-block__text">Specially protected <br/>natural areas</div>
                         </div>
                     </div>
                 </BigMap>
@@ -56,37 +73,66 @@
                     </div>
                     <div class="scroll-wrap">
                         <div class="scroll-card card-1 text-block__descr">
-                            <p>Промышленная площадка «Никель — Заполярный»</p>
+                            
+                            <span v-if="lang === 'ru'">
+                                <p>Промышленная площадка «Никель — Заполярный»</p>
                             <p>
                                 Отвечает за&nbsp;разработку месторождений, расположенных между посёлком Никель
                                 и&nbsp;городом Заполярный на&nbsp;западе Мурманской области. Здесь компания добывает руду,
                                 содержащую никель, медь и&nbsp;другие полезные компоненты, а&nbsp;затем обогащает
                                 её&nbsp;на&nbsp;фабрике Заполярного, получая медно-никелевый концентрат.
                             </p>
-                            <BaseDropdownInfo :title="'Объекты'" :color="'#D38235'"
-                                :text="'<ul><li>Рудник Северный</li><li>Рудник Каула-Котсельваара</li><li>Обогатительная фабрика г. Заполярный</li></ul>'" />
+                </span>
+                <span v-else>
+                    <p>Nickel – Zapolyarny production site</p>
+                            <p>
+                                It develops deposits located between Nickel and Zapolyarny in the west of the Murmansk Region, where the сompany mines ore containing nickel, copper and other valuable components and then processes it at the zapolyarny Concentrator to obtain copper-nickel concentrate.
+                            </p>
+                </span>
+                            <BaseDropdownInfo :title="lang === 'ru' ? 'Объекты' : 'Facilities'" :color="'#D38235'"
+                                :text="lang === 'ru' ? '<ul><li>Рудник Северный</li><li>Рудник Каула-Котсельваара</li><li>Обогатительная фабрика г. Заполярный</li></ul>' : '<ul><li>Severny Mine</li><li>Kaula-Kotselvaara Mine</li><li>Zapolyarny Concentrator</li></ul>'" />
                         </div>
                         <div class="scroll-card card-2 text-block__descr">
-                            <p>Заповедник «Пасвик»</p>
+                  
+
+                            <span v-if="lang === 'ru'">
+                                <p>Заповедник «Пасвик»</p>
                             <p>
                                 Призван сохранить северные сосновые леса, обширные болотные угодья мирового значения
                                 и&nbsp;фауны водоплавающих птиц Мурманской области. Территория заповедника находится
                                 в&nbsp;юго-западном направлении от&nbsp;промышленной площадки &laquo;Никель&nbsp;&mdash;
                                 Заполярный&raquo;.
                             </p>
+                </span>
+                <span v-else>
+                    <p>Pasvik Nature Reserve</p>
+                            <p>
+                                It was established to preserve northern pine forests, extensive wetlands of global importance and water birds of the Murmansk Region. The nature reserve is located to the south-west of the Nickel – Zapolyarny production site.
+                            </p>
+                </span>
                         </div>
                         <div class="scroll-card card-3 text-block__descr">
-                            <p>Промышленная площадка «Мончегорск»</p>
+                           
+                            <span v-if="lang === 'ru'">
+                                <p>Промышленная площадка «Мончегорск»</p>
                             <p>Расположена юго-западнее жилой застройки города Мончегорск, в&nbsp;центральной части региона.
                                 Объединяет металлургические объекты Кольской ГМК, где производят катодные никель
                                 и&nbsp;медь, карбонильный никель, электролитный кобальт, концентраты драгоценных металлов,
                                 меди и&nbsp;никеля, а&nbsp;также серную кислоту.
                             </p>
-                            <BaseDropdownInfo :title="'Объекты'" :color="'#D38235'"
-                                :text="'<ul><li>Рафинировочный цех</li><li>Химико-металлургический цех</li><li>Цеха электролиза никеля №1 и №2</li></ul>'" />
+                </span>
+                <span v-else>
+                    <p>Monchegorsk production site</p>
+                            <p>The site is located to the south-west of the residential area of Monchegorsk, in the central part of the region. It includes the metallurigical facilities of Kola MMC, which produce copper and nickel cathodes, nickel carbonyl, electrolytic cobalt, concentrates of precious metals, copper and nickel, and sulphuric acid.
+                            </p>
+                </span>
+                            <BaseDropdownInfo :title="lang === 'ru' ? 'Объекты' : 'Facilities'" :color="'#D38235'"
+                                :text="lang === 'ru' ? '<ul><li>Рафинировочный цех</li><li>Химико-металлургический цех</li><li>Цеха электролиза никеля №1 и №2</li></ul>' : '<ul><li>Refining shop</li><li>Chemical and metallurgical shop</li><li>Nickel tankhouses No. 1 and No. 2</li></ul>'" />
                         </div>
                         <div class="scroll-card card-4 text-block__descr">
-                            <p>Лапландский заповедник</p>
+                            
+                            <span v-if="lang === 'ru'">
+                                <p>Лапландский заповедник</p>
                             <p>Ближайший и&nbsp;важнейший для&nbsp;восстановления и&nbsp;сохранения разнообразия видов
                                 в&nbsp;районе воздействия промышленных объектов Мончегорской площадки. Заповедник был создан
                                 для&nbsp;охраны западной популяции горно-тундровой формы дикого северного оленя и&nbsp;отдельных
@@ -99,12 +145,23 @@
                                 в&nbsp;пояса умеренного и&nbsp;незначительного воздействия предприятий
                                 &laquo;Норникеля&raquo;.
                             </p>
+                </span>
+                <span v-else>
+                    <p>Lapland Nature Reserve</p>
+                            <p>The reserve is the nearest and most important for the restoration and conservation of species diversity in the area affected by the industrial facilities on the Monchegorsk site. It was established to protect the western population of the alpine-tundra wild reindeer, and some ecosystems unique to the Kola Peninsula. Part of the reserve's
+                                <BaseTooltip :word="'buffer zone'">
+                                    Safety zones that protect and maintain the viability of protected plants, a group of plants or an entire natural area. No tree felling, hunting, or motorised traffic are allowed in the buffer zones.
+                                </BaseTooltip> is in the area of moderate and insignificant impact of Nornickel's operations.
+                            </p>
+                </span>
                         </div>
                     </div>
                 </section>
 
-                <BaseTextBlock class="text mb-40" :title="'Модернизация производства'">
-                    <p class="mb-10">
+                <BaseTextBlock class="text mb-40" :title="lang === 'ru' ? 'Модернизация производства' : 'Production upgrade'">
+                    
+                    <span v-if="lang === 'ru'">
+                        <p class="mb-10">
                         Сегодня &laquo;Норникель&raquo; активно модернизирует действующие предприятия Кольской ГМК
                         и&nbsp;закрывает устаревшие, опираясь на&nbsp;современное видение экологичного производства.
                     </p>
@@ -116,6 +173,18 @@
                         <b>2021 год</b>&nbsp;&mdash; В&nbsp;Мончегорске была остановлена рафинировочная медная площадка,
                         производящая медь по&nbsp;устаревшей технологии.
                     </p>
+                </span>
+                <span v-else>
+                    <p class="mb-10">
+                        At the moment Nornickel is actively upgrading Kola MMC's existing facilities and shutting down obsolete ones, based on the modern vision of eco-friendly production.
+                    </p>
+                    <p class="mb-10">
+                        <b>2020</b>&nbsp;&mdash; the company shut down one of the region’s oldest production facilities, a smelting shop in Nickel. 
+                    </p>
+                    <p>
+                        <b>2021</b>&nbsp;&mdash; Nornickel shut down a copper refining facility in Monchegorsk, which had been producing copper using outdated technology.
+                    </p>
+                </span>
                 </BaseTextBlock>
 
                 <div class="modernization">
@@ -137,7 +206,13 @@
                             <div class="modernization__mid-bg"></div>
                         </div>
                         <div class="modernization__item-bottom">
-                            Объём выбросов SO₂ в&nbsp;районе&nbsp;п.&nbsp;Никель&nbsp;и&nbsp;г.&nbsp;Заполярный
+                            
+                            <span v-if="lang === 'ru'">
+                                Объём выбросов SO₂ в&nbsp;районе&nbsp;п.&nbsp;Никель&nbsp;и&nbsp;г.&nbsp;Заполярный
+                </span>
+                <span v-else>
+                    SO₂ emissionsin the area of Nickel and Zapolyarny
+                </span>
                         </div>
                     </div>
                     <div class="modernization__item">
@@ -158,13 +233,21 @@
                             <div class="modernization__mid-bg"></div>
                         </div>
                         <div class="modernization__item-bottom">
-                            Общий объём выбросов SO₂ предприятиями Кольского&nbsp;дивизиона
+                            
+                            <span v-if="lang === 'ru'">
+                                Общий объём выбросов SO₂ предприятиями Кольского&nbsp;дивизиона
+                </span>
+                <span v-else>
+                    Total SO₂ emissions by Kola Division
+                </span>
                         </div>
                     </div>
                 </div>
 
-                <BaseTextBlock class="text text-w mb-40" :title="'Зона воздействия предприятий Кольского&nbsp;дивизиона'">
-                    <p class="mb-10">
+                <BaseTextBlock class="text text-w mb-40" :title="lang === 'ru' ? 'Зона воздействия предприятий Кольского&nbsp;дивизиона' : 'Impact zone of Kola Division’s facilities'">
+                    
+                    <span v-if="lang === 'ru'">
+                        <p class="mb-10">
                         Опираясь на&nbsp;состояние экосистем в&nbsp;регионе, участники Большой Научной экспедиции определили
                         предполагаемый радиус общего промышленного воздействия — 16 км от&nbsp;объектов промышленных
                         площадок
@@ -193,10 +276,31 @@
                         воздействие на&nbsp;территории «Пасвика». За&nbsp;пределами 16&nbsp;км состояние среды исследователи
                         расценивают как&nbsp;фоновое.
                     </p>
+                </span>
+                <span v-else>
+                    <p class="mb-10">
+                        Based on&nbsp;the condition of&nbsp;the ecosystems in&nbsp;the region, the Big Scientific Expedition assessed the radius of&nbsp;the estimated general industrial impact as&nbsp;being 16&nbsp;km from the facilities of&nbsp;the Monchegorsk and Nickel&nbsp;&mdash; Zapolyarny operations. The 2022 studies assessed the total area affected by&nbsp;Kola MMC&rsquo;s industrial sites and other facilities with anthropogenic impact.
+                    </p>
+                    <p class="mb-10">
+                        The transformation of&nbsp;natural communities is&nbsp;directly related to&nbsp;the intensity of&nbsp;this impact. The research shows that the most notable changes are found within 1&ndash;3&nbsp;km from the facilities.
+                    </p>
+                    <p class="mb-10">
+                        The area of&nbsp;moderate and insignificant impact lies at&nbsp;a&nbsp;distance of&nbsp;3&ndash;16&nbsp;km from the production sites, and until 2020&nbsp;it covered a&nbsp;part of&nbsp;the Pasvik Nature Reserve and the Lapland Nature Reserve. In&nbsp;just three years, the areas in&nbsp;question have seen strong recovery due to&nbsp;the reduction of&nbsp;the negative impact of&nbsp;seven decades.
+                    </p>
+                    <p class="mb-10">
+                        The areas of&nbsp;legacy impact were taken into consideration by&nbsp;studies in&nbsp;2022 and 2023&nbsp;as sites where an&nbsp;ongoing monitoring process is&nbsp;recommended.
+In&nbsp;2020, the smelting shop that had a&nbsp;negative impact on&nbsp;the Pasvik area was closed in&nbsp;Nickel.
+                    </p>
+                    <p>
+                        At&nbsp;a&nbsp;distance beyond 16&nbsp;km, the researchers regard the state of&nbsp;the environment as&nbsp;background.
+                    </p>
+                </span>
                 </BaseTextBlock>
                 <div class="transbaikal-radius mb-60">
                     <div class="transbaikal-radius__wrap">
-                        <div class="transbaikal-radius__wrap-top mb-10">> 16 км</div>
+                        
+                        <span v-if="lang === 'ru'">
+                            <div class="transbaikal-radius__wrap-top mb-10">> 16 км</div>
                         <div class="transbaikal-radius__wrap-mid mb-10">Фоновая зона</div>
                         <div class="transbaikal-radius__wrap-bottom">
                             За пределами этого радиуса показатели биоразнообразия приняты за
@@ -207,30 +311,50 @@
                                 эти данные для&nbsp;наблюдения за&nbsp;природой в&nbsp;зонах воздействия.
                             </BaseTooltip>
                         </div>
+                </span>
+                <span v-else>
+                    <div class="transbaikal-radius__wrap-top mb-10">> 16 km</div>
+                        <div class="transbaikal-radius__wrap-mid mb-10">Background area</div>
+                        <div class="transbaikal-radius__wrap-bottom">
+                            Outside this radius, biodiversity indicators are taken as 
+                            <BaseTooltip :word="'background'">
+                                In the background areas, researchers found no traces of industrial impact, and the ecosystems there are in their original, pristine state. The state of the biodiversity in the background areas is taken as a reference point, and these data are used to monitor the nature in the affected territories.
+                            </BaseTooltip> values.
+                        </div>
+                </span>
                     </div>
                     <picture>
-                        <source media="(max-width: 768px)" type="image/webp" srcset="img/kola-radius-mobile.webp">
-                        <source media="(max-width: 768px)" srcset="img/kola-radius-mobile.png">
-                        <source type="image/webp" srcset="img/kola-radius.webp">
-                        <img src="img/kola-radius.png" alt="">
+                        <source media="(max-width: 768px)" type="image/webp" :srcset="lang === 'ru' ? 'img/kola-radius-mobile.webp' :'img/kola-radius-en-mobile.webp' ">
+                        <source media="(max-width: 768px)" :srcset="lang === 'ru' ? 'img/kola-radius-mobile.png' : 'img/kola-radius-en-mobile.png'">
+                        <source type="image/webp" :srcset="lang === 'ru' ? 'img/kola-radius.webp' : 'img/kola-radius-en.webp'">
+                        <img :src="lang === 'ru' ? 'img/kola-radius.png' : 'img/kola-radius-en.png'" alt="">
                     </picture>
                 </div>
                 <BaseSidebar>
-                    <p>
+                    <p v-if="lang === 'ru'">
                         На&nbsp;состоянии природных сообществ дивизиона особенно сказывается изъятие территорий
                         и&nbsp;крайне высокое
                         содержание металлов в&nbsp;почве, связанной с&nbsp;природной аномалией. Эти факторы снижают видовое
                         разнообразие и&nbsp;продуктивность местных экосистем.
+                    </p>
+                    <p v-else>
+                        The Division's natural animal populations are particularly affected by the appropriation of habitats and extremely high levels of metals in the soil associated with a natural anomaly. These factors reduce the diversity of species diversity and productivity of local ecosystems.
                     </p>
                 </BaseSidebar>
             </SectionWhite>
             <SectionOrange>
                 <BaseTextBlock class="text mb-60 mb-60-m" :tooltip="true">
                     <div class="section-orange__title">
-                        Кто обитает в&nbsp;Кольском&nbsp;Заполярье
+                        
+                        <span v-if="lang === 'ru'">
+                            Кто обитает в&nbsp;Кольском&nbsp;Заполярье
+                </span>
+                <span v-else>
+                    Which species inhabit the&nbsp;Polar&nbsp;Region?
+                </span>
                     </div>
                     <div class="section-orange__descr">
-                        <p>
+                        <p v-if="lang === 'ru'">
                             В&nbsp;зоне, прилегающей к&nbsp;промышленным площадкам &laquo;Мончегорск&raquo;
                             и&nbsp;&laquo;Никель&nbsp;&mdash; Заполярный&raquo;, участники Большой Научной экспедиции
                             обнаружили несколько
@@ -251,11 +375,23 @@
                                 что-то пошло не&nbsp;так.
                             </BaseTooltip> растений и&nbsp;животных.
                         </p>
+                        <p v-else>
+                            In the area adjacent to the Monchegorsk and Nickel – Zapolyarny production sites, the Big Scientific Expedition discovered several 
+                            <BaseTooltip :word="'protected plant and bird species'">
+                                Rare or endangered species whose numbers are declining or have already declined to dangerous levels. They are given the status of protected species and included in national or regional Red Data Books. Their conservation status prohibits hunting, as well as restricting construction and other economic activities in the habitats of red-listed plants and mushrooms.
+                            </BaseTooltip>
+                             and identified spots critical for the life and wellbeing of local animal populations. 
+                            <BaseTooltip :word="'Indicator species'">
+                                Researchers select indicator species from the organisms that are typical of the region and most sensitive to deviations in the state of the natural environment. If there are changes in the composition of an indicator species, it is possible that something has gone wrong in the ecosystem.
+                            </BaseTooltip> were also selected for further biodiversity monitoring.
+                        </p>
                     </div>
                 </BaseTextBlock>
                 <div class="flora-and-fauna">
-                    <BaseTextBlock :title="'Флора'">
-                        <p class="mb-10">
+                    <BaseTextBlock :title=" lang === 'ru' ? 'Флора' : 'Flora'">
+                       
+                        <span v-if="lang === 'ru'">
+                            <p class="mb-10">
                             В&nbsp;районе Заполярного и&nbsp;посёлка Никель преобладают лесотундровые невысокие древесные
                             растения и&nbsp;кустарники, участки
                             <BaseTooltip :word="'криволесья'">
@@ -270,10 +406,24 @@
                             в&nbsp;основном редкостойные, разделённые озёрами и&nbsp;болотами. Гористые участки добавляют
                             к&nbsp;местной растительности тундровые виды кустарников и&nbsp;трав.
                         </p>
-                        <BaseNumberBlock class="" :textTop="'54 вида'" :textBottom="'сосудистых растений'" />
+                </span>
+                <span v-else>
+                    <p class="mb-10">
+                        In the vicinity of Zapolyarny and Nickel, forest-tundra low woody plants and shrubs prevail with
+                            <BaseTooltip :word="'krummholz'">
+                                The facilities near Monchegorsk are located in the northern taiga zone mostly, with woodlands separated by lakes and bogs. Upland areas add tundra species of shrubs and grasses to the native vegetation.
+                            </BaseTooltip> areas alternating with wetlands. Mosses and lichens are ubiquitous as well as northern berries such as blueberry, cloudberry, lingonberry and cranberry.
+                        </p>
+                        <p>
+                            The facilities near Monchegorsk are located in the northern taiga zone mostly, with woodlands separated by lakes and bogs. Upland areas add tundra species of shrubs and grasses to the native vegetation.
+                        </p>
+                </span>
+                        <BaseNumberBlock class="" :textTop=" lang === 'ru' ? '54 вида' : '54 species'" :textBottom="lang === 'ru' ?'сосудистых растений' : 'of vascular plants'" />
                     </BaseTextBlock>
-                    <BaseTextBlock :title="'Фауна'">
-                        <p class="mb-10">
+                    <BaseTextBlock :title="lang === 'ru' ?'Фауна': 'Fauna'">
+                     
+                        <span v-if="lang === 'ru'">
+                            <p class="mb-10">
                             Животный мир в&nbsp;окрестностях промплощадок &laquo;Мончегорск&raquo;
                             и&nbsp;&laquo;Никель&nbsp;&mdash;&nbsp;Заполярный&raquo;, как и&nbsp;на&nbsp;всей территории Крайнего
                             Севера, не&nbsp;слишком разнообразен. Видовым богатством отличаются лишь птицы, причём
@@ -290,24 +440,37 @@
                             Озёра и&nbsp;реки дивизиона богаты разными видами рыб: сиг, хариус, радужная форель, голец,
                             в&nbsp;больших количествах водятся окунь и&nbsp;щука.
                         </p>
+                </span>
+                <span v-else>
+                    <p class="mb-10">
+                        The fauna in the vicinity of the Monchegorsk and Nickel – Zapolyarny production sites can hardly be called diverse, just like everywhere across the Far North. Only birds boast a rich variety of species, which is higher in the severely exposed area near buildings, due to 
+                            <BaseTooltip :word="'synanthropic'">
+                                Synanthropic insects, birds, animals, and plants have learnt to live alongside humans. They use residential structures as habitats and can feed on human food stocks or waste.
+                            </BaseTooltip>
+                            and water birds. The proximity of forests attracts willow ptarmigan and grouse. 
+                        </p>
+                        <p>
+                            The lakes and rivers of the division are rich in various fish species, including whitefish, grayling, rainbow trout, and char, as well as abundant numbers of perch and pike.
+                        </p>
+                </span>
                         <div class="wrap-numbers">
-                            <BaseNumberBlock class="" :textTop="'44&nbsp;вида'"
-                                :textBottom="'птиц в&nbsp;районе Мончегорска'" />
-                            <BaseNumberBlock class="" :textTop="'48&nbsp;видов'"
-                                :textBottom="'птиц&nbsp;в&nbsp;окрестностях&nbsp;площадки «Никель&nbsp;—&nbsp;Заполярный»'" />
+                            <BaseNumberBlock class="" :textTop="lang === 'ru' ? '44&nbsp;вида' : '44&nbsp;species'"
+                                :textBottom="lang === 'ru' ? 'птиц в&nbsp;районе Мончегорска' : 'bird in the Monchegorsk neighbourhood'" />
+                            <BaseNumberBlock class="" :textTop="lang === 'ru' ? '48&nbsp;видов' : '48&nbsp;species'"
+                                :textBottom="lang === 'ru' ? 'птиц&nbsp;в&nbsp;окрестностях&nbsp;площадки «Никель&nbsp;—&nbsp;Заполярный»' : 'bird in the area of Nickel – Zapolyarny'" />
                         </div>
                     </BaseTextBlock>
                 </div>
 
                 <div class="legend">
-                    <BaseCollageInfo :text="'Охраняемые виды'" :color="'#71464E'" />
-                    <BaseCollageInfo :text="'Индикаторные виды'" />
+                    <BaseCollageInfo :text="lang === 'ru' ?'Охраняемые виды' : 'Protected species'" :color="'#71464E'" />
+                        <BaseCollageInfo :text="lang === 'ru' ?'Индикаторные виды' : 'Indicator species'" />
                 </div>
                 <div class="collage mb-100">
                     <div class="collage__golden-eagle"></div>
                     <div class="collage__bluethroat"></div>
-                    <BaseDropdownInfo class="golden-eagle" :title="'Беркут'" :is-modal="true" :color="'#71464E'" :pulsation-color="'finn'"
-                        :text="'Самый крупный из&nbsp;орлов: размах крыльев достигает 230&nbsp;см при длине тела до&nbsp;93&nbsp;см. Беркуты чувствительны к&nbsp;беспокойству со&nbsp;стороны человека, чаще обитают в&nbsp;горах и&nbsp;реже на&nbsp;равнинных ландшафтах. За&nbsp;последние столетия вид исчез из&nbsp;многих районов из-за массового истребления, пестицидов, увеличения числа городов и&nbsp;изъятия земель под&nbsp;хозяйственные нужды'" />
+                    <BaseDropdownInfo class="golden-eagle" :title="lang === 'ru' ? 'Беркут' : 'Golden eagle'" :is-modal="true" :color="'#71464E'" :pulsation-color="'finn'"
+                        :text="lang === 'ru' ? 'Самый крупный из&nbsp;орлов: размах крыльев достигает 230&nbsp;см при длине тела до&nbsp;93&nbsp;см. Беркуты чувствительны к&nbsp;беспокойству со&nbsp;стороны человека, чаще обитают в&nbsp;горах и&nbsp;реже на&nbsp;равнинных ландшафтах. За&nbsp;последние столетия вид исчез из&nbsp;многих районов из-за массового истребления, пестицидов, увеличения числа городов и&nbsp;изъятия земель под&nbsp;хозяйственные нужды' : 'The largest eagle with a wingspan reaching 230&nbsp;cm and a body length of up to 93&nbsp;cm. Golden eagles are sensitive to human activity, more often inhabiting mountains than flat landscapes. The species has disappeared from many areas over the past few centuries due to mass extermination, pesticides, the growing number of cities, and development of land by humans..'" />
 
                     <BaseCollageInfo class="belobrovik" :title="'Белобровик'"
                         :text="'Меняет пение в&nbsp;разных ситуациях: оповещает при&nbsp;опасности и&nbsp;подзывает, если найдена пища'" />
@@ -641,6 +804,7 @@ export default {
                     number: '4'
                 },
             ],
+            heroDescrEn: 'Flora and fauna near Nornickel’s industrial assets in the Murmansk Region',
             heroDescr: 'Растительный и&nbsp;животный мир рядом с&nbsp;промышленными площадками &laquo;Норникеля&raquo; в&nbsp;Мурманской области'
         }
     },

@@ -200,7 +200,7 @@
                             Кто обитает в&nbsp;Забайкалье
                 </span>
                 <span v-else>
-                    Biodiversity in&nbsp;the&nbsp;Trans&nbsp;Baikal&nbsp;Territory
+                    Biodiversity <br/>in&nbsp;the&nbsp;Trans&nbsp;Baikal Territory
                 </span>
                     </div>
                     <div class="section-orange__descr">
@@ -1582,33 +1582,82 @@ export default {
                 background-image: url(../../public/img/collage-2-en.webp);
             }
 
-            // @media (max-width: 768px) {
-            // background-image: url(../../public/img/collage-2-en-mobile.png);
+            @media (max-width: 768px) {
+            background-image: url(../../public/img/collage-2-en-mobile.png);
 
-            // @supports (background-image: url(../../public/img/collage-2-en-mobile.webp)) {
-            //     background-image: url(../../public/img/collage-2-en-mobile.webp);
-            // }
-        // }
+            @supports (background-image: url(../../public/img/collage-2-en-mobile.webp)) {
+                background-image: url(../../public/img/collage-2-en-mobile.webp);
+            }
+            }
 
             .dubrovnik {
                 right: 11rem;
+
+                @media (max-width: 768px) {
+                    right: 15rem;
+
+                    .dropdown-info__title {
+                        max-width: 35rem;
+                    }
+                }
             }
 
             .lily-dwarf {
                 top: 130rem;
+
+                @media (max-width: 768px) {
+                    top: 494rem;
+                    right: 35rem;
+                }
             }
 
             .ground-beetle {
                 top: 162rem;
                 left: 26rem;
+
+                @media (max-width: 768px) {
+                    top: 830rem;
+                    left: 48rem;
+                }
+            }
+
+            .mottled-breast {
+                @media (max-width: 768px) {
+                    top: 300rem;
+                }
+            }
+
+            .slipper {
+                @media (max-width: 768px) {
+                    right: 22rem;
+                }
+            }
+
+            .killer-whale {
+                @media (max-width: 768px) {
+                    bottom: 84rem;
+                    left: 56rem;
+                }
+            } 
+
+            .background-text-1 {
+                width: 25rem;
             }
 
             .rowan {
                 right: 13rem;
+
+                @media (max-width: 768px) {
+                    right: 41rem;
+                }
             }
 
             .curlew {
                 top: 300rem;
+
+                @media (max-width: 768px) {
+                    top: 1142rem;
+                }
             }
         }
     }

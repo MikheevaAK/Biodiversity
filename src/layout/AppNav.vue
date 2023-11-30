@@ -133,8 +133,7 @@ export default {
     },
     methods: {
         changeLang() {
-            this.$store.state.lang === 'ru' ? this.$store.state.lang = 'en' : this.$store.state.lang = 'ru'
-            localStorage.lang = this.$store.state.lang
+            localStorage.lang = this.$store.state.lang === 'ru' ? 'en' : 'ru'
             window.location.reload()
         },
         getShareLink(name) {

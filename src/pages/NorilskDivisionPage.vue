@@ -39,7 +39,7 @@
                     <BaseNumberBlock :textTop="lang === 'ru' ? '-53&nbsp;˚С' : '–53 ˚С'" :textBottom="lang === 'ru' ? 'минимальная температура' : 'minimum temperature'" />
                 </div>
     
-                <BigMap :circales="circales" :img="lang === 'ru' ? 'img/division-big-map' : 'img/division-big-map-en'" :imgMobile="'img/division-big-map-mobile'">
+                <BigMap :circales="circales" :img="lang === 'ru' ? 'img/division-big-map' : 'img/division-big-map-en'" :imgMobile="lang === 'ru' ? 'img/division-big-map-mobile' : 'img/division-big-map-en-mobile'">
                     <BaseNumberBlock :textTop="lang === 'ru' ? '44 объекта' : '44 facilities'" :textBottom="lang === 'ru' ? 'входит в Норильский дивизион' : 'part of Norilsk Division'" />
                     <div class="circales">
                         <div class="circale-block">

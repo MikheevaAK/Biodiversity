@@ -35,7 +35,7 @@
 
       let lang = localStorage.getItem("lang");
       let title = document.createElement('title');
-      title.innerHTML = lang === 'ru' ? 'Сохраняя экосистемы' : 'Preserving ecosystems '
+      title.innerHTML = lang === 'ru' || lang == null ? 'Сохраняя экосистемы' : 'Preserving ecosystems '
   
       head.appendChild(title)
     </script>

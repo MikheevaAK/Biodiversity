@@ -289,7 +289,7 @@
                         </div>
                     </BaseTextBlock>
                 </div>
-                <div class="collage mb-100">
+                <div class="collage mb-100" :class="{'collage_en' : lang === 'en'}">
                     <div class="legend">
                         <BaseCollageInfo :text="lang === 'ru' ?'Охраняемые виды' : 'Protected species'" :color="'#71464E'" />
                         <BaseCollageInfo :text="lang === 'ru' ?'Индикаторные виды' : 'Indicator species'" />
@@ -1574,6 +1574,41 @@ export default {
                         right: 72rem;
                     }
                 }
+            }
+        }
+        &_en {
+            background-image: url(../../public/img/collage-2-en.png);
+            @supports (background-image: url(../../public/img/collage-2-en.webp)) {
+                background-image: url(../../public/img/collage-2-en.webp);
+            }
+
+            // @media (max-width: 768px) {
+            // background-image: url(../../public/img/collage-2-en-mobile.png);
+
+            // @supports (background-image: url(../../public/img/collage-2-en-mobile.webp)) {
+            //     background-image: url(../../public/img/collage-2-en-mobile.webp);
+            // }
+        // }
+
+            .dubrovnik {
+                right: 11rem;
+            }
+
+            .lily-dwarf {
+                top: 130rem;
+            }
+
+            .ground-beetle {
+                top: 162rem;
+                left: 26rem;
+            }
+
+            .rowan {
+                right: 13rem;
+            }
+
+            .curlew {
+                top: 300rem;
             }
         }
     }

@@ -199,9 +199,9 @@
                     </BaseTextBlock>
     
                     <div class="number-blocks text-block__wrap">
-                        <BaseNumberBlock :textTop="lang === 'ru' ? '6 рек' : '6 rivers'" :textBottom="ang === 'ru' ? 'посетили в ходе экспедиции' : 'visited during the&nbsp;expedition'" />
-                        <BaseNumberBlock :textTop="lang === 'ru' ? '> 1 000 км': '> 1,000&nbsp;km'" :textBottom="ang === 'ru' ? 'преодолели по земле, воде и&nbsp;воздуху' : 'covered by land, water and&nbsp;air'" />
-                        <BaseNumberBlock :textTop="lang === 'ru' ? '2&nbsp;000&nbsp;проб' : '2,000&nbsp;samples'" :textBottom="ang === 'ru' ? 'собрали в&nbsp;процессе исследований': 'collected <br/>during the research'" />
+                        <BaseNumberBlock :textTop="lang === 'ru' ? '6 рек' : '6&nbsp;rivers'" :textBottom="lang === 'ru' ? 'посетили в ходе экспедиции' : 'visited during the&nbsp;expedition'" />
+                        <BaseNumberBlock :textTop="lang === 'ru' ? '> 1 000 км': '>&nbsp;1,000&nbsp;km'" :textBottom="lang === 'ru' ? 'преодолели по земле, воде и&nbsp;воздуху' : 'covered by land, water and&nbsp;air'" />
+                        <BaseNumberBlock :textTop="lang === 'ru' ? '2&nbsp;000&nbsp;проб' : '2,000&nbsp;samples'" :textBottom="lang === 'ru' ? 'собрали в&nbsp;процессе исследований': 'collected <br/>during the research'" />
                     </div>
     
                     <BaseTextBlock class="mb-40">

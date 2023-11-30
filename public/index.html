@@ -24,18 +24,23 @@
     <noscript><div><img src="https://mc.yandex.ru/watch/95434301" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
     <!-- /Yandex.Metrika counter -->
     <script>
-      if(document.location.pathname === '/') {
-        let head = document.head
+      let head = document.head
+      if(document.location.pathname === '/') {  
         let link = document.createElement('link');
           link.rel = 'preload';
           link.href = 'img/hero-main.webp';
           link.as = 'image';
           head.appendChild(link)
       }
+
+      let lang = localStorage.getItem("lang");
+      let title = document.createElement('title');
+      title.innerHTML = lang === 'ru' ? 'Сохраняя экосистемы' : 'Preserving ecosystems '
+  
+      head.appendChild(title)
     </script>
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <link rel="preload" href="img/loader.gif" as="image">
-    <title>Сохраняя экосистемы</title>
   </head>
   <body>
     <div id="app"></div>

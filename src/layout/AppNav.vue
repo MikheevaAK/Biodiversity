@@ -13,22 +13,18 @@
         </div>
         <div class="burger">
             <svg xmlns="http://www.w3.org/2000/svg" :class="{'burger_active' :isOpenLinks }" width="55" height="55" viewBox="0 0 55 55" fill="none">
-                <rect width="55" height="55" fill="#0077C8"/>
-                <path d="M16 34.1172H39.5294" :class="{'first' :isOpenLinks }" stroke="white" stroke-linecap="round"/>
-                <path d="M16 27.0586H39.5294" class="second" stroke="white" stroke-linecap="round"/>
-                <path d="M16 20H39.5294" class="third" stroke="white" stroke-linecap="round"/>
-            </svg>
+                    <rect width="55" height="55" fill="#0077C8"/>
+                    <path d="M16 34.1172H39.5294" :class="{'first' :isOpenLinks }" stroke="white" stroke-linecap="round"/>
+                    <path d="M16 27.0586H39.5294" class="second" stroke="white" stroke-linecap="round"/>
+                    <path d="M16 20H39.5294" class="third" stroke="white" stroke-linecap="round"/>
+                </svg>
             <transition name="links">
                 <ul class="burger__list" v-show="isOpenLinks">
                     <li class="burger__item burger__item_display" @click="changeLang">
                         <span v-if="lang === 'ru'">RU</span>
                         <span v-else>EN</span>
                     </li>
-                    <li class="burger__item" 
-                    v-for="(item, index) in links" 
-                    :key="index" 
-                    :class="{'burger__item_active' : item.link === $route.path}"
-                    >
+                    <li class="burger__item" v-for="(item, index) in links" :key="index" :class="{'burger__item_active' : item.link === $route.path}">
                         <a :href="item.link">{{ lang === 'ru' ? item.title : item.titleEn}}</a>
                     </li>
                 </ul>
@@ -38,12 +34,10 @@
 </template>
   
 <script>
-
 export default {
     data() {
         return {
-            socials: [
-                {
+            socials: [{
                     name: 'telegram',
                     link: '',
                     icon: '<svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Group 1974"><rect id="Rectangle 8" width="55" height="55" fill="#0077C8"/><g id="Group 1973"><path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M35.4949 19H35.1923L18.3303 25.6892C18.1278 25.7932 17.9264 26.1075 18.0265 26.3155C18.0265 26.4206 18.229 26.5246 18.3303 26.6298L22.4701 28.1978L24.0856 33.4229C24.1868 33.7361 24.3893 33.8412 24.6919 33.7361C24.7932 33.7361 24.7932 33.7361 24.8944 33.6321L27.2152 31.7509C27.4177 31.5418 27.8215 31.5418 28.0229 31.7509L32.1628 34.8858C32.3653 35.095 32.669 34.991 32.8704 34.7818C32.8704 34.6767 32.9716 34.6767 32.9716 34.5727L36 19.5223C35.8988 19.3131 35.6963 19 35.4949 19ZM31.9614 22.5543L25.3984 28.9281C25.1959 29.1372 24.9934 29.4504 24.9934 29.7635L24.792 31.5406C24.792 31.6446 24.6908 31.7498 24.5895 31.7498C24.4894 31.7498 24.3882 31.6446 24.3882 31.5406L23.9337 29.9726L23.4803 28.4046C23.3791 28.0915 23.4803 27.6732 23.7829 27.4641L31.7589 22.344H31.9614V22.552V22.5543Z" fill="white"/></g></g></svg>'
@@ -59,8 +53,7 @@ export default {
                     icon: '<svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Group 1978"><rect id="Rectangle 8" width="55" height="55" fill="#0077C8"/><g id="Group 1993"><path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M27.5209 18C30.0122 18.0067 32.0117 20.0427 31.9999 22.5589C31.9871 25.0162 29.9545 27.0089 27.4663 27C25.0039 26.9922 22.9841 24.9528 23.0001 22.49C23.0129 20.0005 25.0338 17.9933 27.5209 18ZM27.5145 24.7039C28.7355 24.6994 29.7086 23.7192 29.7043 22.4967C29.7 21.2741 28.7248 20.3006 27.5027 20.2995C26.2699 20.2984 25.2861 21.2886 25.2958 22.5222C25.3043 23.7414 26.2891 24.7083 27.5145 24.7039Z" fill="white"/><path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M32.7117 28.85C32.1441 29.4256 31.4621 29.8426 30.7041 30.1326C29.988 30.408 29.2026 30.5462 28.426 30.638C28.5437 30.7649 28.5987 30.8272 28.6713 30.8986C29.7273 31.949 30.7855 32.9926 31.8372 34.0453C32.1958 34.4034 32.2695 34.8476 32.0726 35.2645C31.8581 35.7201 31.3752 36.0203 30.901 35.9875C30.6007 35.9671 30.3675 35.8198 30.1596 35.6135C29.3632 34.8204 28.5525 34.0419 27.7726 33.234C27.5449 32.9994 27.436 33.0436 27.2358 33.2476C26.435 34.0634 25.621 34.8679 24.8025 35.6657C24.4351 36.0249 23.9984 36.0894 23.5705 35.8844C23.1184 35.6679 22.8302 35.209 22.8522 34.749C22.8676 34.4374 23.0227 34.1994 23.2383 33.9864C24.2833 32.9552 25.3229 31.9207 26.3646 30.8873C26.4339 30.8193 26.4977 30.7468 26.5978 30.6403C25.1787 30.493 23.8972 30.1474 22.8016 29.2987C22.6652 29.1933 22.5244 29.0913 22.4012 28.9723C21.9205 28.5168 21.8732 27.9944 22.2516 27.4562C22.5772 26.9962 23.1217 26.8727 23.6893 27.1378C23.7993 27.1877 23.9027 27.2523 24.0028 27.3214C26.0467 28.7106 28.8539 28.7491 30.9043 27.3826C31.1067 27.2296 31.3246 27.1027 31.5754 27.0392C32.0649 26.9146 32.5214 27.0925 32.7843 27.5163C33.0846 28.0012 33.0813 28.4738 32.7117 28.85Z" fill="white"/></g></g></svg>'
                 },
             ],
-            links: [
-                {
+            links: [{
                     link: '/',
                     title: 'Главная',
                     titleEn: 'Home'
@@ -122,7 +115,7 @@ export default {
         }
     },
     computed: {
-        lang () {
+        lang() {
             return this.$store.state.lang
         }
     },
@@ -135,15 +128,16 @@ export default {
             this.$store.state.lang = localStorage.lang
         }
     },
-    beforeDestroy () {
+    beforeDestroy() {
         document.removeEventListener('click', this.dropdown)
     },
     methods: {
         changeLang() {
             this.$store.state.lang === 'ru' ? this.$store.state.lang = 'en' : this.$store.state.lang = 'ru'
             localStorage.lang = this.$store.state.lang
+            window.location.reload()
         },
-        getShareLink (name) {
+        getShareLink(name) {
             if (name === 'vk') {
                 return `https://vkontakte.ru/share.php?url=${document.location.href}&title=${this.share.title}&image=${this.share.vkImg}&noparse=false`
             }
@@ -155,7 +149,7 @@ export default {
             }
         },
         openShare() {
-            if (window.innerWidth > 768) { 
+            if (window.innerWidth > 768) {
                 document.querySelector('.social').addEventListener("mouseover", () => {
                     this.isOpenShare = true
                 })
@@ -170,8 +164,8 @@ export default {
         },
         openLinks() {
             document.querySelector('.burger').addEventListener("click", () => {
-                    this.isOpenLinks = !this.isOpenLinks
-                })
+                this.isOpenLinks = !this.isOpenLinks
+            })
         },
         dropdown(e) {
             if (!this.$el.contains(e.target)) {
@@ -190,7 +184,6 @@ export default {
     right: 1.25rem;
     z-index: 20;
     display: flex;
-
     @media (max-width: 768px) {
         right: 4rem;
         max-height: 12.77rem;
@@ -211,11 +204,9 @@ export default {
     line-height: 2.25rem;
     background-color: #0077C8;
     transition: all .2s linear;
-
     &:hover {
         background-color: #00589C;
     }
-
     @media (max-width: 768px) {
         display: none;
     }
@@ -229,37 +220,30 @@ export default {
     background-size: 100%;
     background-position: center;
     cursor: pointer;
-
     @media (max-width: 768px) {
         width: 12.77rem;
         height: 12.77rem;
     }
-
     ul {
         position: absolute;
         top: 100%;
     }
-
     &__link {
         display: block;
         width: 3.4375rem;
         height: 3.4375rem;
-
         svg {
             width: 3.4375rem;
             height: 3.4375rem;
-
             @media (max-width: 768px) {
                 width: 12.77rem;
                 height: 12.77rem;
             }
         }
-
         @media (max-width: 768px) {
             width: 12.77rem;
             height: 12.77rem;
         }
-
         &:hover svg path {
             fill: #004C97;
         }
@@ -272,16 +256,13 @@ export default {
     width: 3.4375rem;
     height: 3.4375rem;
     cursor: pointer;
-
     @media (max-width: 768px) {
         width: 12.77rem;
         height: 12.77rem;
     }
-
     path {
         transition: transform 0.25s;
     }
-
     &_active {
         position: relative;
         z-index: 3;
@@ -289,17 +270,14 @@ export default {
             transform: rotate(45deg);
             transform-origin: 40px 33px;
         }
-
         .second {
             display: none;
         }
-        
         .third {
             transform: rotate(-45deg);
             transform-origin: 35px 20px;
         }
     }
-
     &__list {
         position: absolute;
         top: 0;
@@ -310,30 +288,25 @@ export default {
         display: flex;
         flex-direction: column;
         gap: 1.5374rem;
-
         @media (max-width: 768px) {
             padding: 8rem 8.3333rem 10rem 0;
             width: 73.47rem;
             gap: 6.4rem;
         }
     }
-
     &__item {
         color: #fff;
         font-size: 1.25rem;
         font-weight: 300;
         line-height: 130%;
         padding-left: 1.4rem;
-
         @media (max-width: 768px) {
             font-size: 4.53334rem;
             padding-left: 5.3333rem;
         }
-
         &_active {
             position: relative;
             font-weight: 600;
-
             &::after {
                 content: '';
                 position: absolute;
@@ -342,26 +315,21 @@ export default {
                 bottom: 0;
                 background-color: #FD7F07;
                 width: 0.3477rem;
-
                 @media (max-width: 768px) {
                     width: 1.334rem;
                 }
             }
         }
-
         &_display {
             display: none;
-
             @media (max-width: 768px) {
                 display: block;
             }
         }
-
         a {
             transition: .3s;
             border-bottom: 1.5px solid transparent;
         }
-
         &:hover a {
             border-bottom-color: #004C97;
         }
@@ -369,18 +337,17 @@ export default {
 }
 
 .links-enter-active {
-animation: link-in .3s;
+    animation: link-in .3s;
 }
 
 .links-leave-active {
-animation: link-in .3s reverse;
+    animation: link-in .3s reverse;
 }
 
 @keyframes link-in {
     0% {
         opacity: 0;
     }
-
     100% {
         opacity: 1;
     }

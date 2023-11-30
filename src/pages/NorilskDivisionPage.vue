@@ -305,7 +305,7 @@
                     <BaseCollageInfo class="lentils" :title="lang === 'ru' ? 'Чечевица' : 'Common rosefinch'" :text="lang === 'ru' ? 'Издаёт ритмичные звуки, в&nbsp;которых слышится: <br/>&laquo;Че-че-ви-цу?&raquo;' : 'Makes a&nbsp;melodic short whistle often rendered as&nbsp;&laquo;pleased to&nbsp;meet you&raquo;.'"
                     />
     
-                    <BaseCollageInfo class="willow-warbler" :title="lang === 'ru' ? 'Пеночка-весничка' : 'Willow warbler'" :text="lang === 'ru' ? 'Кроме Норильского обитает также в&nbsp;Кольском дивизионе' : 'Apart from the Norilsk Division, it&nbsp;is&nbsp;also found in&nbsp;the Kola Division&rsquo;s area'"
+                    <BaseCollageInfo class="willow-warbler" :title="lang === 'ru' ? 'Пеночка-весничка' : 'Willow warbler'" :text="lang === 'ru' ? 'Кроме Норильского обитает также в&nbsp;Кольском дивизионе' : 'Apart from the Norilsk Division, it is also found in the Kola Division’s&nbsp;area'"
                     />
     
                     <BaseDropdownInfo class="merlin" :title="lang === 'ru' ? 'Кречет' : 'Gyrfalcon'" :color="'#71464E'" :is-modal="true" :pulsation-color="'finn'" :text="lang === 'ru' ? 'Самая крупная птица из&nbsp;отряда соколиных. За&nbsp;последние 20&nbsp;лет её&nbsp;популяция в&nbsp;России сократилась втрое. &laquo;Норникель&raquo; вложил 50&nbsp;млн рублей в&nbsp;поддержку и&nbsp;сохранение вида в&nbsp;2022&ndash;2023&nbsp;гг' : 'The largest bird in&nbsp;the Falconidae family. Over the past 20&nbsp;years, its population in&nbsp;Russia has plummeted threefold. In&nbsp;2022&ndash;2023, Nornickel invested RUB 50&nbsp;mln to&nbsp;support and preserve the species'"

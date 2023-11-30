@@ -650,6 +650,11 @@ export default {
             this.parallax()
         })
     },
+    computed: {
+        lang() {
+            return this.$store.state.lang
+        }
+    },
     methods: {
         onResize() {
             this.isMobile = (window.innerWidth <= 768);

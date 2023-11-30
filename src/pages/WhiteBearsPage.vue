@@ -1,31 +1,49 @@
 <template>
     <div class="white-bears">
-        <BaseHero :title="'Как «Норникель» помогает сохранить популяцию белого медведя'" :descr="heroDescr"
+        <BaseHero :title="lang === 'ru' ? 'Как «Норникель» помогает сохранить популяцию белого медведя' : 'Protecting polar bears'" :descr="lang === 'ru' ? heroDescr : heroDescrEn"
             :img="'img/hero6.jpg'" :imgMobile="'img/hero6-mobile.jpg'" />
         <MainSection>
             <SectionWhite>
                 <BaseTextBlock class="mb-60">
-                    В&nbsp;России действуют сразу несколько программ по&nbsp;сохранению этого вида, и&nbsp;активное участие
+                    
+                    <span v-if="lang === 'ru'">
+                        В&nbsp;России действуют сразу несколько программ по&nbsp;сохранению этого вида, и&nbsp;активное участие
                     в&nbsp;них на&nbsp;протяжении многих лет принимает &laquo;Норникель&raquo;. В&nbsp;компании отмечают,
                     что эта работа по&nbsp;сохранению биоразнообразия в&nbsp;целом и&nbsp;локальные программы
                     по&nbsp;сохранению отдельных видов необходимы для&nbsp;поддержания жизни на&nbsp;планете.
+                </span>
+                <span v-else>
+                    Multiple programmes are in place to preserve this species in the country, with Nornickel being their long-standing and active contributor and supporter. We believe that the efforts to conserve biodiversity on a broader scale as well as individual species locally are crucial for sustaining life on Earth.
+                </span>
                 </BaseTextBlock>
             </SectionWhite>
 
             <BaseTextBlock class="mb-40 text-center width-525 bg-white">
                 <div class="title">
-                    Гроза Заполярья
+                    
+                    <span v-if="lang === 'ru'">
+                        Гроза Заполярья
+                </span>
+                <span v-else>
+                    The Arctic's  mighty wanderer
+                </span>
                 </div>
                 <div class="text-center">
-                    Белый медведь&nbsp;&mdash; один из&nbsp;крупнейших сухопутных хищников на&nbsp;Земле. Своё
+                   
+                    <span v-if="lang === 'ru'">
+                        Белый медведь&nbsp;&mdash; один из&nbsp;крупнейших сухопутных хищников на&nbsp;Земле. Своё
                     название
                     он&nbsp;получил из&#8209;за цвета шубы&nbsp;&mdash; он&nbsp;варьируется от&nbsp;чисто белого
                     до&nbsp;желтоватого. Большую часть своей жизни эти медведи проводят, дрейфуя по&nbsp;морю
                     на&nbsp;льдинах, но&nbsp;иногда забираются вглубь материка на&nbsp;десятки километров.
+                </span>
+                <span v-else>
+                    The polar bear is the largest land carnivore on the planet. The colour of its coat ranges from pure white to a yellowish hue and it spends most of its life drifting on sea ice, with occasional sightings well inland.
+                </span>
                 </div>
             </BaseTextBlock>
             <section class="section-blue">
-                <div class="thunderstorm-arctic">
+                <div class="thunderstorm-arctic" :class="{'thunderstorm-arctic_en' : lang === 'en'}">
                     <div class="thunderstorm-arctic__icon-bear">
                         <svg width="150" height="78" viewBox="0 0 150 78" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -44,37 +62,86 @@
                         </svg>
                     </div>
                     <div class="thunderstorm-arctic__descr">
-                        Длинные морда и&nbsp;шея помогают медведю ловить тюленей в&nbsp;снежных норах и&nbsp;лунках
+                        
+
+                        <span v-if="lang === 'ru'">
+                            Длинные морда и&nbsp;шея помогают медведю ловить тюленей в&nbsp;снежных норах и&nbsp;лунках
                         во&nbsp;льду.
+                </span>
+                <span v-else>
+                    The polar bear’s elongated muzzle and neck enable it to capture seals in snowy dens and breathing holes in the ice.
+                </span>
                     </div>
                     <div class="thunderstorm-arctic__item thunderstorm-arctic__item_paw">
                         <img src="img/paw.png" alt="">
-                        <div class="thunderstorm-arctic__item-title">Сцепление со льдом</div>
+                        <div class="thunderstorm-arctic__item-title">
+                            <span v-if="lang === 'ru'">
+                                Сцепление со льдом
+                </span>
+                <span v-else>
+                    Ice grip
+                </span></div>
                         <div class="thunderstorm-arctic__item-descr">
-                            Подошвы лап покрыты шерстью, что&nbsp;спасает от&nbsp;холода, а&nbsp;шероховатые подушечки
+                            
+                            <span v-if="lang === 'ru'">
+                                Подошвы лап покрыты шерстью, что&nbsp;спасает от&nbsp;холода, а&nbsp;шероховатые подушечки
                             пальцев
                             не&nbsp;дают скользить по&nbsp;льду. Крепкие длинные когти помогают медведям рыть берлоги
                             и&nbsp;выбираться из&nbsp;воды на&nbsp;льдины.
+                </span>
+                <span v-else>
+                    Rough paw pads give polar bears a nonslip grip, and thick fur between the pads keeps their feet warm. Strong, long claws help the bears dig dens and pull themselves out of the water onto ice floes.
+                </span>
                         </div>
                     </div>
                     <div class="thunderstorm-arctic__item thunderstorm-arctic__item_hairs">
                         <img src="img/hairs.png" alt="">
-                        <div class="thunderstorm-arctic__item-title">Ворсинки — прозрачные&nbsp;и&nbsp;полые</div>
+                        <div class="thunderstorm-arctic__item-title">
+                            <span v-if="lang === 'ru'">
+                                Ворсинки — прозрачные&nbsp;и&nbsp;полые
+                </span>
+                <span v-else>
+                    Translucent and hollow hair shafts
+                </span></div>
                         <div class="thunderstorm-arctic__item-descr">
-                            Потому что лишены пигмента. Иногда живущие в&nbsp;зоопарках медведи на&nbsp;какое&#8209;то время
+                            
+                            <span v-if="lang === 'ru'">
+                                Потому что лишены пигмента. Иногда живущие в&nbsp;зоопарках медведи на&nbsp;какое&#8209;то время
                             зеленеют&nbsp;&mdash; из&#8209;за&nbsp;плохой фильтрации воды в&nbsp;бассейне внутрь волосков
                             поселяются
                             микроскопические водоросли.
+                </span>
+                <span v-else>
+                    The polar bear’s fur lacks pigmentation, making it appear white. Bears kept in captivity are exposed to poorly filtered water in pools, so metimes turn green due to the algae growing in their hairs' hollow cores.
+                </span>
                         </div>
                     </div>
                     <div class="thunderstorm-arctic__item thunderstorm-arctic__item_leather">
                         <img src="img/leather.png" alt="">
-                        <div class="thunderstorm-arctic__item-title">Кожа чёрного цвета</div>
-                        <div class="thunderstorm-arctic__item-descr">Благодаря этому она поглощает больше солнечного света,
-                            что, как&nbsp;предполагают учёные, помогает животным согреться.</div>
+                        <div class="thunderstorm-arctic__item-title">
+                            <span v-if="lang === 'ru'">
+                                Кожа чёрного цвета
+                </span>
+                <span v-else>
+                    Black skin
+                </span></div>
+                        <div class="thunderstorm-arctic__item-descr">
+                            <span v-if="lang === 'ru'">
+                                Благодаря этому она поглощает больше солнечного света,
+                            что, как&nbsp;предполагают учёные, помогает животным согреться.
+                </span>
+                <span v-else>
+                    Polar bears have black skin under their fur, which absorbs maximum sunlight helping the animals warm up.
+                </span></div>
                     </div>
                     <div class="thunderstorm-arctic__nutrition">
-                        <div class="thunderstorm-arctic__nutrition-title">Основа питания</div>
+                        <div class="thunderstorm-arctic__nutrition-title">
+                            <span v-if="lang === 'ru'">
+                                Основа питания
+                </span>
+                <span v-else>
+                    Diet
+                </span></div>
                         <div class="thunderstorm-arctic__nutrition-line">
                             <svg width="470" height="130" viewBox="0 0 470 130" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -93,41 +160,63 @@
                             <div class="thunderstorm-arctic__nutrition-item">
                                 <img src="img/fur-seal.png" alt="">
                                 <div class="thunderstorm-arctic__nutrition-item-descr">
-                                    Ластоногие
+                                    <span v-if="lang === 'ru'">
+                                        Ластоногие
+                </span>
+                <span v-else>
+                    Seals and other pinnipeds
+                </span>
+                                    
                                 </div>
                             </div>
                             <div class="thunderstorm-arctic__nutrition-item">
                                 <img src="img/narwhal.png" alt="">
                                 <div class="thunderstorm-arctic__nutrition-item-descr">
-                                    Туши выброшенных на&nbsp;берег китов, нарвалов, белух; мёртвых птиц и&nbsp;наземных млекопитающих
+                                    
+                                    <span v-if="lang === 'ru'">
+                                        Туши выброшенных на&nbsp;берег китов, нарвалов, белух; мёртвых птиц и&nbsp;наземных млекопитающих
+                </span>
+                <span v-else>
+                    Carcasses of stranded beluga whales, grey whales and narwhals; dead birds and terrestrial mammals
+                </span>
                                 </div>
                             </div>
                             <div class="thunderstorm-arctic__nutrition-item">
                                 <img src="img/white-bear-fish.png" alt="">
                                 <div class="thunderstorm-arctic__nutrition-item-descr">
-                                    Жирная морская рыба
+                                    
+                                    <span v-if="lang === 'ru'">
+                                        Жирная морская рыба
+                </span>
+                <span v-else>
+                    Oily sea fish
+                </span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <BaseTextBlock class="mb-100" :tooltip="true">
-                    <p>
+                    <p v-if="lang === 'ru'">
                         В&nbsp;обжитых людьми местах медведи нередко питаются ещё и&nbsp;на&nbsp;свалках или разоряют склады
                         полярников. Порой это приводит к&nbsp;серьёзным проблемам: животные получают травмы или у&nbsp;них
                         возникают проблемы с&nbsp;пищеварением.
                     </p>
 
+                    <p v-else>In areas of human habitation, bears frequently turn to raiding the garbage dumps or storage sites of polar explorers, which is a common cause of issues like injuries or digestive troubles.</p>
+
                     <div class="white-bears__what-to-do">
                         <img src="img/white-bear-meet.png" alt="">
-                        <BaseDropdownInfo :title="'Что делать, если вы встретили белого медведя?'" :pulsation-color="'blue'"
-                            :text="'<div class=what-to-do__wrap><div class=what-to-do__wrap-left>< 10 м</div><div class=what-to-do__wrap-right>Спокойно стойте, медленно уходите;</div></div><div class=what-to-do__wrap><div class=what-to-do__wrap-left>10-15 м</div><div class=what-to-do__wrap-right>Спугните медведя голосом, свистком или ракетницей;</div></div><div class=what-to-do__wrap><div class=what-to-do__wrap-left>> 20 м</div><div class=what-to-do__wrap-right>Не давайте зверю сократить дистанцию.</div></div><p>Нельзя ложиться на&nbsp;землю и&nbsp;притворяться мёртвым: медведь может принять вас за&nbsp;тюленя&nbsp;&mdash; свою привычную пищу&nbsp;&mdash; и&nbsp;попытается съесть.</p>'"
+                        <BaseDropdownInfo :title="lang === 'ru' ? 'Что делать, если вы встретили белого медведя?' : 'What to do if you encounter a polar bear:'" :pulsation-color="'blue'"
+                            :text="lang === 'ru' ? '<div class=what-to-do__wrap><div class=what-to-do__wrap-left>< 10 м</div><div class=what-to-do__wrap-right>Спокойно стойте, медленно уходите;</div></div><div class=what-to-do__wrap><div class=what-to-do__wrap-left>10-15 м</div><div class=what-to-do__wrap-right>Спугните медведя голосом, свистком или ракетницей;</div></div><div class=what-to-do__wrap><div class=what-to-do__wrap-left>> 20 м</div><div class=what-to-do__wrap-right>Не давайте зверю сократить дистанцию.</div></div><p>Нельзя ложиться на&nbsp;землю и&nbsp;притворяться мёртвым: медведь может принять вас за&nbsp;тюленя&nbsp;&mdash; свою привычную пищу&nbsp;&mdash; и&nbsp;попытается съесть.</p>' : '<div class=what-to-do__wrap><div class=what-to-do__wrap-left>< 10 m</div><div class=what-to-do__wrap-right>Stay calm and slowly back away.</div></div><div class=what-to-do__wrap><div class=what-to-do__wrap-left>10–15 m</div><div class=what-to-do__wrap-right>Deter the bear using your voice, a whistle, or a flare.</div></div><div class=what-to-do__wrap><div class=what-to-do__wrap-left>> 20 m</div><div class=what-to-do__wrap-right>Keep your distance and try to get further away.</div></div><p>Never lie down and play dead! The bear may mistake you for a seal, its natural prey, and pounce.</p>'"
                             :color="'#0077C8'" />
                     </div>
                 </BaseTextBlock>
 
-                <BaseTextBlock :title="'Учёт и контроль'" class="mb-60">
-                    <p class="mb-10">
+                <BaseTextBlock :title="lang === 'ru' ? 'Учёт и контроль' : 'Counts and monitoring'" class="mb-60">
+
+                    <span v-if="lang === 'ru'">
+                        <p class="mb-10">
                         В&nbsp;России известны три популяции белых медведей: карско-баренцевоморская,
                         чукотско-аляскинская и&nbsp;самая маленькая&nbsp;&mdash; лаптевская. В&nbsp;2012 году компания
                         &laquo;Норникель&raquo; выделила более 7&nbsp;млн рублей Большому Арктическому заповеднику,
@@ -138,22 +227,33 @@
                         на&nbsp;острове Врангеля. Эта экспедиция также состоялась благодаря поддержке
                         &laquo;Норникеля&raquo;.
                     </p>
+                </span>
+                <span v-else>
+                    <p class="mb-10">
+                        Russia is&nbsp;home to&nbsp;three known populations of&nbsp;polar bears: the Kara-Barents, the Chukotka-Alaska and the Laptev populations, with the latter being the smallest one. In&nbsp;2012, Nornickel provided over RUB 7&nbsp;million in&nbsp;financing to&nbsp;the Big Arctic Reserve to&nbsp;count the bears living in&nbsp;the Kara Sea.
+                    </p>
+                    <p>
+                        In&nbsp;2022, another polar bear population survey was conducted with the support of&nbsp;Nornickel&nbsp;&mdash; this time in&nbsp;Chukotka, on&nbsp;Wrangel Island.
+                    </p>
+                </span>
                 </BaseTextBlock>
                 <div class="thunderstorm-arctic__map mb-100">
                     <picture>
                         <source media="(max-width: 768px)" type="image/webp"
-                            srcset="img/thunderstorm-arctic-map-mobile.webp">
-                        <source media="(max-width: 768px)" srcset="img/thunderstorm-arctic-map-mobile.png">
-                        <source type="image/webp" srcset="img/thunderstorm-arctic-map.webp">
-                        <img src="img/thunderstorm-arctic-map.png" alt="">
+                            :srcset="lang === 'ru' ? 'img/thunderstorm-arctic-map-mobile.webp' : 'img/thunderstorm-arctic-map-en-mobile.webp'">
+                        <source media="(max-width: 768px)" :srcset="lang === 'ru' ? 'img/thunderstorm-arctic-map-mobile.png' : 'img/thunderstorm-arctic-map-en-mobile.png'">
+                        <source type="image/webp" :srcset="lang === 'ru' ? 'img/thunderstorm-arctic-map.webp' : 'img/thunderstorm-arctic-map-en.webp'">
+                        <img :src="lang === 'ru' ? 'img/thunderstorm-arctic-map.png' : 'img/thunderstorm-arctic-map-en.png'" alt="">
                     </picture>
 
                     <div class="circale-block circale-block_1"></div>
                     <div class="circale-block circale-block_2"></div>
                 </div>
-                <BaseTextBlock :title="'Просветительская работа'" class="white-bears__educational-work mb-60"
+                <BaseTextBlock :title="lang === 'ru' ? 'Просветительская работа' : 'Raising awareness'" class="white-bears__educational-work mb-60"
                     :tooltip="true">
-                    <p class="mb-10">
+                    
+                    <span v-if="lang === 'ru'">
+                        <p class="mb-10">
                         Занимается &laquo;Норникель&raquo; и&nbsp;просветительской работой. С&nbsp;2018 года работает проект
                         &laquo;Сохраним белого медведя&raquo;. На&nbsp;сайте проекта можно прочитать о&nbsp;полярных
                         хищниках и&nbsp;узнать о&nbsp;наиболее интересных научных исследованиях. В&nbsp;разделе
@@ -166,6 +266,15 @@
                         И&nbsp;в&nbsp;ситуациях, когда речь идёт о&nbsp;жизни и&nbsp;смерти, &laquo;Норникель&raquo; активно
                         включается в&nbsp;работу, помогая техникой и&nbsp;специалистами.
                     </p>
+                </span>
+                <span v-else>
+                    <p class="mb-10">
+                        Nornickel actively participates in&nbsp;raising awareness of&nbsp;the challenges faced by&nbsp;polar bears. Since 2018, it&nbsp;has been supporting the Save the Polar Bear campaign. The project&rsquo;s website offers a&nbsp;wealth of&nbsp;information about the polar predators while also presenting fascinating scientific findings. Additionally, the &laquo;Responsibility&raquo; section highlights the legal repercussions faced by&nbsp;poachers and individuals involved in&nbsp;the illicit trade of&nbsp;bear skins. By&nbsp;engaging in&nbsp;these initiatives, Nornickel strives to&nbsp;help combat illegal hunting. 
+                    </p>
+                    <p>
+                        On&nbsp;top of&nbsp;its ongoing activities, the company is&nbsp;always ready to&nbsp;step in&nbsp;to&nbsp;help save animals in&nbsp;critical situations by&nbsp;providing technical equipment and deploying experts.
+                    </p>
+                </span>
                     <a href="https://spasimishku.ru/" target="_blank" class="white-bears__educational-work-link">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <circle cx="10" cy="10" r="9.5" stroke="#004C97" />
@@ -175,7 +284,13 @@
                             <path d="M0.5 10H19.5" stroke="#004C97" />
                         </svg>
                         <div class="white-bears__educational-work-descr">
-                            Перейти на&nbsp;сайт проекта «Сохраним&nbsp;белого&nbsp;медведя»
+                            
+                            <span v-if="lang === 'ru'">
+                                Перейти на&nbsp;сайт проекта «Сохраним&nbsp;белого&nbsp;медведя»
+                </span>
+                <span v-else>
+                    Go to the Save the Polar Bear campaign website
+                </span>
                         </div>
                     </a>
                 </BaseTextBlock>
@@ -185,11 +300,23 @@
             <SectionWhite>
                 <BaseTextBlock class="mb-40 text-center width-525">
                     <div class="title">
-                        Помощь медведице Монеточке
+                        
+                        <span v-if="lang === 'ru'">
+                            Помощь медведице Монеточке
+                </span>
+                <span v-else>
+                   Saving a female cub called Monetochka
+                </span>
                     </div>
                     <div class="text-center">
-                        В&nbsp;июле 2022 года в&nbsp;посёлок Диксон забрела истощённая молодая медведица. В&nbsp;последние
+                  
+                        <span v-if="lang === 'ru'">
+                            В&nbsp;июле 2022 года в&nbsp;посёлок Диксон забрела истощённая молодая медведица. В&nbsp;последние
                         годы животные здесь частые гости, и&nbsp;местных жителей этим давно не&nbsp;удивишь.
+                </span>
+                <span v-else>
+                    In July 2022, an exhausted female bear cub wandered into the village of Dikson. This was to no surprise to the local residents, as such encounters have become commonplace here in recent years.
+                </span>
                     </div>
                 </BaseTextBlock>
                 <section class="scroll mb-100">
@@ -203,38 +330,64 @@
                     </div>
                     <div class="scroll-wrap">
                         <div class="scroll-card card-1 text-block__descr">
-                            Хищница вела себя необычно&nbsp;&mdash; будто просила о&nbsp;помощи.
+                            
+                            <span v-if="lang === 'ru'">
+                                Хищница вела себя необычно&nbsp;&mdash; будто просила о&nbsp;помощи.
                             И&nbsp;действительно&nbsp;&mdash; в&nbsp;зубах она сжимала банку из-под сгущёнки,
                             а&nbsp;в&nbsp;язык зверя глубоко врезалась острая крышка. Вероятно, медведица нашла угощение
                             на&nbsp;свалке, но, пытаясь полакомиться, угодила в&nbsp;ловушку.
+                </span>
+                <span v-else>
+                    However, the cub exhibited unusual behaviour, as if pleading for help from humans. It turned out it had got a sharp-edged condensed milk can stuck in its mouth and wedged on its tongue. It must have found the dangerous treat at a garbage dump and got into difficulties when attempting to enjoy it.
+                </span>
                         </div>
                         <div class="scroll-card card-2 text-block__descr">
-                            <p>
+                            <p v-if="lang === 'ru'">
                                 Жители посёлка не&nbsp;сумели самостоятельно вытащить банку из&nbsp;пасти Монеточки (так
                                 назвали животное) и&nbsp;обратились за&nbsp;помощью к&nbsp;специалистам. Уже
                                 на&nbsp;следующий день в&nbsp;Норильск прибыли ветеринары Московского зоопарка, откуда
                                 на&nbsp;вертолёте, предоставленном компанией &laquo;Норникель&raquo;, их&nbsp;переправили
                                 в&nbsp;Диксон.
                             </p>
+                            <p v-else>
+                                The residents of the village were unable to remove the can on their own, so they reached out to professionals to help Monetochka (the name given to the animal). The next day vets from the Moscow Zoo arrived in Norilsk and were swiftly taken further to Dikson by a helicopter provided by Nornickel.</p>
                             <div class="card-2__descr">
                                 <img src="img/cell.png" alt="">
-                                <p>
+                                <p v-if="lang === 'ru'">
                                     На&nbsp;Норильском механическом заводе изготовили специальную клетку для&nbsp;безопасной перевозки медведицы
+                                </p>
+                                <p v-else>
+                                    The Company’s Mechanical Plant in Norilsk manufactured a custom-built cage for the safe transportation of the animal.
                                 </p>
                             </div>
                         </div>
                         <div class="scroll-card card-3 text-block__descr">
-                            Обезвоженную и&nbsp;обессилевшую Монеточку обнаружили неподалёку от&nbsp;аэропорта Диксона.
+                         
+                            <span v-if="lang === 'ru'">
+                                Обезвоженную и&nbsp;обессилевшую Монеточку обнаружили неподалёку от&nbsp;аэропорта Диксона.
                             Ветеринары усыпили хищницу и&nbsp;всего за&nbsp;10&nbsp;минут удалили из&nbsp;её&nbsp;пасти
                             банку. Операция, по&nbsp;словам врачей, животному не&nbsp;потребовалась&nbsp;&mdash; язык
                             заживёт самостоятельно.
+                </span>
+                <span v-else>
+                    Monetochka, dehydrated and exhausted, was found not far from Dikson airport. The vets sedated the cub and successfully removed the can from its mouth in just ten minutes. Fortunately, the medical team determined that Monetochka’s tongue would heal naturally, meaning no further intervention was needed.
+                </span>
                         </div>
                         <div class="scroll-card card-4 text-block__descr">
-                            <p class="mb-10">
+                            <p v-if="lang === 'ru'" class="mb-10">
                                 Спящую после операции медведицу отвезли подальше от&nbsp;людей, в&nbsp;дикую природу,
                                 и&nbsp;оставили рядом с&nbsp;ней на&nbsp;прощанье несколько десятков килограммов рыбы.
                             </p>
-                            <p>
+                            <p v-else class="mb-10">
+                                Спящую после операции медведицу отвезли подальше от&nbsp;людей, в&nbsp;дикую природу,
+                                и&nbsp;оставили рядом с&nbsp;ней на&nbsp;прощанье несколько десятков килограммов рыбы.
+                            </p>
+                            <p v-if="lang === 'ru'">
+                                Через две недели специалисты проверили место, где оставили Монеточку. Не&nbsp;обнаружив
+                                ни&nbsp;её, ни&nbsp;рыбы, поняли: хищница ожила, съела рыбу и&nbsp;ушла.
+                            </p>
+                          
+                            <p v-else>
                                 Через две недели специалисты проверили место, где оставили Монеточку. Не&nbsp;обнаружив
                                 ни&nbsp;её, ни&nbsp;рыбы, поняли: хищница ожила, съела рыбу и&nbsp;ушла.
                             </p>
@@ -243,12 +396,24 @@
                 </section>
                 <BaseTextBlock class="mb-40 text-center width-525">
                     <div class="title">
-                        Диксон из&nbsp;Диксона
+                        
+                        <span v-if="lang === 'ru'">
+                            Диксон из&nbsp;Диксона
+                </span>
+                <span v-else>
+                    Dikson from Dikson
+                </span>
                     </div>
                     <div class="text-center">
-                        Ещё одним медведем, которому понадобилась экстренная помощь, стал Диксон. И&nbsp;совместный опыт,
+                       
+                        <span v-if="lang === 'ru'">
+                            Ещё одним медведем, которому понадобилась экстренная помощь, стал Диксон. И&nbsp;совместный опыт,
                         который сотрудники &laquo;Норникеля&raquo;, Росприроднадзора и&nbsp;ветеринары столичного зоопарка
                         получили во&nbsp;время операции по&nbsp;спасению Монеточки, очень пригодился.
+                </span>
+                <span v-else>
+                    Dikson, another bear in need of emergency rescue, benefitted greatly from the lessons learnt during the efforts of Nornickel, Russia’s environmental watchdog Rosprirodnadzor, and the Moscow Zoo vets to save Monetochka.
+                </span>
                     </div>
                 </BaseTextBlock>
                 <section class="scroll-2 mb-100">
@@ -260,29 +425,50 @@
                     </div>
                     <div class="scroll-2-wrap">
                         <div class="scroll-2-card card-5 text-block__descr">
-                            В&nbsp;начале сентября 2022 года жители Диксона обнаружили на&nbsp;окраине посёлка раненого
+                            
+                            <span v-if="lang === 'ru'">
+                                В&nbsp;начале сентября 2022 года жители Диксона обнаружили на&nbsp;окраине посёлка раненого
                             молодого медведя. Зверь неподвижно лежал на&nbsp;спине, а&nbsp;его задние лапы оказались
                             парализованы. По&nbsp;всей видимости, его подстрелил какой‑то охотник. Медлить было
                             нельзя&nbsp;&mdash; животному грозила неминуемая гибель от&nbsp;кровопотери, голода
                             и&nbsp;жажды.
+                </span>
+                <span v-else>
+                    In early September 2022, some residents of Dikson made a startling discovery on the outskirts of the village – a young male bear with severe injuries. The animal lay motionless on its back with its hind legs paralysed, presumably as a result of being shot by an unidentified hunter. The situation required immediate action since the bear faced imminent death due to blood loss, hunger and thirst.
+                </span>
                         </div>
                         <div class="scroll-2-card card-6 text-block__descr">
-                            Хищника сотрудники &laquo;Норникеля&raquo;, совместно с&nbsp;ветеринарами, доставили
+                            
+                            <span v-if="lang === 'ru'">
+                                Хищника сотрудники &laquo;Норникеля&raquo;, совместно с&nbsp;ветеринарами, доставили
                             с&nbsp;севера Таймыра в&nbsp;Москву. Врачам удалось совершить чудо: они спасли жизнь медведю
                             и&nbsp;во&nbsp;время операции извлекли из&nbsp;его тела более 30&nbsp;шариков картечи.
                             К&nbsp;сожалению, прогноз ветеринаров неутешительный: ходить животное больше не&nbsp;сможет,
                             а&nbsp;значит, вернуться в&nbsp;дикую природу ему не&nbsp;суждено.
+                </span>
+                <span v-else>
+                    In a joint effort, Nornickel employees and vets successfully transported the predator from the northern region of Taymyr to Moscow. The medical team achieved a remarkable feat by saving the bear’s life and extracting over 30 shotgun pellets from its body during the surgery. Regrettably, the vets delivered a disheartening prognosis saying that the bear was permanently disabled, rendering its return to the wild impossible.
+                </span>
                         </div>
                         <div class="scroll-2-card card-7 text-block__descr">
-                            Медведя решили оставить в&nbsp;Московском зоопарке. Для него разработали уникальную программу
+                            
+                            <span v-if="lang === 'ru'">
+                                Медведя решили оставить в&nbsp;Московском зоопарке. Для него разработали уникальную программу
                             реабилитации&nbsp;&mdash; прежде нигде в&nbsp;мире такую работу не&nbsp;проводили со&nbsp;столь
                             крупным хищником. Диксон оказался любопытным и&nbsp;дружелюбным животным: он&nbsp;охотно шёл
                             на&nbsp;контакт с&nbsp;зоологами и&nbsp;выполнял все их&nbsp;задания.
+                </span>
+                <span v-else>
+                    The choice was made to keep the bear under the care of the Moscow Zoo, which developed an unprecedented rehabilitation programme never before used with a predator of this size. Remarkably, Dikson displayed a curious and affable nature, willingly interacting with the zoologists and completing all the tasks they gave him.
+                </span>
                         </div>
                     </div>
                 </section>
-                <BaseTextBlock class="mb-100" :title="'После спасения'">
-                    <p class="mb-10">
+                <BaseTextBlock class="mb-100" :title="lang === 'ru' ? 'После спасения' : 'After the rescue'">
+                    
+
+                    <span v-if="lang === 'ru'">
+                        <p class="mb-10">
                         За&nbsp;спасение Монеточки и&nbsp;Диксона глава Росприроднадзора Светлана Радионова вручила
                         сотрудникам Московского зоопарка и&nbsp;представителям &laquo;Норникеля&raquo; благодарственные
                         письма и&nbsp;награды.
@@ -299,17 +485,41 @@
                         не&nbsp;напрасны: медведь прожил последний год, окружённый вниманием, любовью и&nbsp;заботой, успел
                         стать любимцем не&nbsp;только зоопарка, но&nbsp;и&nbsp;всей России!
                     </p>
+                </span>
+                <span v-else>
+                    <p class="mb-10">
+                        Svetlana Radionova, Head of&nbsp;Rosprirodnadzor, presented letters of&nbsp;appreciation and awards to&nbsp;the employees of&nbsp;the Moscow Zoo and representatives of&nbsp;Nornickel for their efforts in&nbsp;saving Monetochka and Dikson.
+                    </p>
+                    <p class="mb-10">
+                        According to&nbsp;the doctors&rsquo; prognosis, Dikson&rsquo;s recovery was expected to&nbsp;take at&nbsp;least 18&nbsp;months. However, in&nbsp;the autumn of&nbsp;2023, the bear&rsquo;s condition rapidly deteriorated: it&nbsp;exhibited a&nbsp;decreased appetite and hardly ever ventured into the outdoor enclosure. Sadly, on&nbsp;20&nbsp;September, the news arrived that Dikson had passed away in&nbsp;his sleep due to&nbsp;acute cardiac and pulmonary failure.
+                    </p>
+                    <p>
+                        This came as&nbsp;a&nbsp;devastating blow to&nbsp;the zoo&rsquo;s staff. However, the collective efforts of&nbsp;those involved in&nbsp;rescuing the injured predator, facilitating its transportation to&nbsp;Moscow, and overseeing its rehabilitation were not in&nbsp;vain. The bear lived its final year surrounded by&nbsp;attention, love and care, becoming a&nbsp;cherished figure not only within the zoo but across the entire of&nbsp;Russia.
+                    </p>
+                </span>
                 </BaseTextBlock>
                 <div class="white-bears__new-ward mb-100">
                     <div class="white-bears__new-ward-title">
-                        Новый подопечный&nbsp;— кречет
+                       
+                        <span v-if="lang === 'ru'">
+                            Новый подопечный&nbsp;— кречет
+                </span>
+                <span v-else>
+                    The&nbsp;gyrfalcon:&nbsp;yet another&nbsp;supported species
+                </span>
                     </div>
                     <div class="white-bears__new-ward-descr">
-                        С&nbsp;2023 года компания также помогает в&nbsp;сохранении самого крупного сокола
+                      
+                        <span v-if="lang === 'ru'">
+                            С&nbsp;2023 года компания также помогает в&nbsp;сохранении самого крупного сокола
                         на&nbsp;планете&nbsp;&mdash; кречета. На&nbsp;эти цели она уже выделила 50&nbsp;млн рублей. Кречеты
                         используются в&nbsp;качестве ловчих в&nbsp;соколиной охоте и&nbsp;высоко ценятся в&nbsp;странах
                         Ближнего Востока. Российские браконьеры незаконно отлавливают этих птиц и&nbsp;отправляют
                         за&nbsp;границу.
+                </span>
+                <span v-else>
+                    Since 2023, Nornickel has also been assisting in the conservation of the gyrfalcon, the largest falcon species on the planet. It has already allocated RUB 50 million the this cause. Gyrfalcons are used in falconry as skilled hunters and are highly valued in Middle Eastern countries. Russian poachers illegally capture these birds and smuggle them abroad.
+                </span>
                     </div>
                     <picture>
                         <source type="image/webp" srcset="img/merlin.webp">
@@ -317,10 +527,13 @@
                     </picture>
                 </div>
                 <BaseSidebar>
-                    <p>
+                    <p v-if="lang === 'ru'">
                         Уже более десяти лет &laquo;Норникель&raquo; участвует в&nbsp;спасении белых медведей.
                         В&nbsp;последние годы компания расширяет количество своих программ в&nbsp;области изучения
                         и&nbsp;сохранения биоразнообразия, в&nbsp;том числе редких видов.
+                    </p>
+                    <p v-else>
+                        For over a decade, Nornickel has been involved in the rescue and conservation of polar bears. In recent years, the сompany has been expanding its range of programmes focused on researching and preserving biodiversity, including rare species.
                     </p>
                 </BaseSidebar>
             </SectionWhite>
@@ -351,7 +564,13 @@ export default {
     },
     data() {
         return {
+            heroDescrEn: 'In the past, polar bears reigned supreme over the entire Arctic, with no serious adversaries in the north. However, the combined effects of global climate change and human presence have pushed these magnificent predators to the brink of extinction. Today, scientists estimate that there are no more than 25,000 polar bears left worldwide, with approximately 5,000 to 6,000 of them found in Russia.',
             heroDescr: 'Когда‑то вся Арктика принадлежала белым медведям: на&nbsp;Севере не&nbsp;было зверей, которые могли&nbsp;бы на&nbsp;равных соперничать с&nbsp;ними. Но&nbsp;глобальное изменение климата и&nbsp;соседство с&nbsp;людьми привело полярных хищников на&nbsp;грань вымирания: сейчас, по&nbsp;оценкам учёных, в&nbsp;мире осталось не&nbsp;более 25&nbsp;тыс. особей, из&nbsp;них 5&ndash;6&nbsp;тыс. живут на&nbsp;территории нашей страны.'
+        }
+    },
+    computed: {
+        lang() {
+            return this.$store.state.lang
         }
     },
     mounted() {
@@ -648,6 +867,14 @@ export default {
             }
         }
 
+        &_en {
+            background-image: url(../../public/img/bear-en.png);
+
+            @supports (background-image: url(../../public/img/bear-en.webp)) {
+            background-image: url(../../public/img/bear-en.webp);
+        }
+        }
+
         &__icon-bear {
             position: absolute;
             width: 10.35rem;
@@ -801,14 +1028,12 @@ export default {
             }
 
             &-title {
-                margin-bottom: 1.38889rem;
                 font-size: 1.04167rem;
                 font-weight: 600;
                 line-height: 130%;
 
                 @media (max-width: 768px) {
                     font-size: 4.53334rem;
-                    margin-bottom: 2.67rem;
                 }
             }
 

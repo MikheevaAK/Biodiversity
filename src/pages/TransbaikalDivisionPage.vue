@@ -34,8 +34,8 @@
                 </span>
                 </BaseTextBlock>
 
-                <BigMap :circales="circales" :img="'img/transbaikal-big-map'" class="mb-100"
-                    :imgMobile="'img/transbaikal-big-map-mobile'">
+                <BigMap :circales="circales" :img="lang === 'ru' ? 'img/transbaikal-big-map' : 'img/transbaikal-big-map-en'" class="mb-100"
+                    :imgMobile="lang === 'ru' ? 'img/transbaikal-big-map-mobile' : 'img/transbaikal-big-map-en-mobile'">
                     <div class="circales">
                         <div class="circale-block">
                             <svg class="circale-block__img" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
@@ -95,10 +95,10 @@
                 </BaseTextBlock>
 
                 <picture>
-                    <source media="(max-width: 768px)" type="image/webp" srcset="img/area-mobile.webp">
-                    <source media="(max-width: 768px)" srcset="img/area-mobile.png">
-                    <source type="image/webp" srcset="img/area.webp">
-                    <img class="mb-100" src="img/area.png" alt="">
+                    <source media="(max-width: 768px)" type="image/webp" :srcset="lang === 'ru' ? 'img/area-mobile.webp' : 'img/area-en-mobile.webp'">
+                    <source media="(max-width: 768px)" :srcset="lang === 'ru' ? 'img/area-mobile.png' : 'img/area-en-mobile.png'">
+                    <source type="image/webp" :srcset="lang === 'ru' ? 'img/area.webp' : 'img/area-en.webp'">
+                    <img class="mb-100" :src="lang === 'ru' ? 'img/area.png' : 'img/area-en.png'" alt="">
                 </picture>
 
                 <div class="transbaikal-scroll mb-100">
@@ -175,10 +175,10 @@
                 </BaseTextBlock>
                 <div class="transbaikal-radius mb-60">
                     <picture>
-                        <source media="(max-width: 768px)" type="image/webp" srcset="img/transbaikal-radius-mobile.webp">
-                        <source media="(max-width: 768px)" srcset="img/transbaikal-radius-mobile.png">
-                        <!-- <source type="image/webp" srcset="img/transbaikal-radius.webp"> -->
-                        <img src="img/transbaikal-radius.png" alt="">
+                        <source media="(max-width: 768px)" type="image/webp" :srcset="lang === 'ru' ?'img/transbaikal-radius-mobile.webp' :'img/transbaikal-radius-en-mobile.webp'">
+                        <source media="(max-width: 768px)" :srcset="lang === 'ru' ? 'img/transbaikal-radius-mobile.png': 'img/transbaikal-radius-en-mobile.png'">
+                        <source type="image/webp" :srcset="lang === 'ru' ? '' : 'img/transbaikal-radius-en.webp'">
+                        <img :src="lang === 'ru' ? 'img/transbaikal-radius.png' : 'img/transbaikal-radius-en.png'" alt="">
                     </picture>
                 </div>
                 <BaseSidebar>

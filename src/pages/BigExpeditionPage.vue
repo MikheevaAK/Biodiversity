@@ -273,7 +273,7 @@
                         </p>
                 </span>
                         <div class="position-info">
-                            <img src="img/plants.png" alt="">
+                            <img :class="{'position-info__img_en' : lang === 'en'}" src="img/plants.png" alt="">
                             <div class="position-info__descr">
                                 <span v-if="lang === 'ru'">
                                     Загрязнение почвы напрямую&nbsp;не&nbsp;ограничивает
@@ -303,7 +303,7 @@
                     </BaseSidebar>
                 </div>
 
-                <div class="big-expedition__insects">
+                <div class="big-expedition__insects" :class="{'big-expedition__insects_en' : lang === 'en'}">
                     <BaseTextBlock class="mb-40" :title="lang === 'ru' ? 'Насекомые и пауки' : 'Insects and spiders'">
                         
                         <span v-if="lang === 'ru'">
@@ -1195,6 +1195,11 @@ export default {
                 }
             }
 
+            
+            .position-info__img_en {
+                top: -17rem;
+            }
+
             &__descr {
                 font-size: 1.042rem;
                 margin-bottom: 0.75rem;
@@ -1305,6 +1310,12 @@ export default {
                 width: unset;
                 left: 0;
                 top: 2rem;
+            }
+        }
+
+        &_en {
+            .position-info .dropdown-info__text {
+                padding: 5.31rem 0.62rem 0.88rem 3.13rem;
             }
         }
 

@@ -126,16 +126,16 @@
 
             <div class="map-item">
                 <picture>
-                    <source type="image/webp" srcset="img/map-big-expedition-5.webp">
-                    <img src="img/map-big-expedition-5.png" alt="">
+                    <source type="image/webp" :srcset="lang === 'ru' ? 'img/map-big-expedition-5.webp' :'img/map-big-expedition-5-en.webp' ">
+                    <img :src="lang === 'ru' ? 'img/map-big-expedition-5.png' : 'img/map-big-expedition-5-en.png'" alt="">
                 </picture>
                 <div v-if="lang === 'ru'"  class="map-item__text">
                     <div class="map-item__title">Северный морской путь</div>
                     <div class="map-item__descr">Дудинка — Мурманск, Мурманский транспортный филиал</div>
                 </div>
                 <div v-else class="map-item__text">
-                    <div class="map-item__title">Северный морской путь</div>
-                    <div class="map-item__descr">Дудинка — Мурманск, Мурманский транспортный филиал</div>
+                    <div class="map-item__title">Northern Sea Route</div>
+                    <div class="map-item__descr">Dudinka – Murmansk, Murmansk Transport Division</div>
                 </div>
             </div>
         </div>

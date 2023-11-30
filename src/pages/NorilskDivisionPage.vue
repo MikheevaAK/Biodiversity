@@ -20,7 +20,7 @@
                                                         где ещё сохранилась «вечная мерзлота», в&nbsp;гористой местности. Предприятия образуют плотную
                                                         промышленную сеть, поэтому состояние природного окружения на&nbsp;этих территориях требует большого
                                                         внимания со&nbsp;стороны компании.</span>
-                        <span v-else>are located in a permafrost area, in mountainous terrain. The facilities are part of a dense industrial network, so the company needs to focus closely on the condition of the natural environment in these areas.</span>
+                        <span v-else> are located in a permafrost area, in mountainous terrain. The facilities are part of a dense industrial network, so the company needs to focus closely on the condition of the natural environment in these areas.</span>
                     </p>
                     <p>
                         <span v-if="lang === 'ru'">
@@ -29,7 +29,7 @@
                                                         Красноярского края компания начала с&nbsp;исследования наземной и&nbsp;водной флоры и&nbsp;фауны и&nbsp;определения
                                                         границ промышленного воздействия.
                                                         </span>
-                        <span v-else>Nornickel recognises its responsibility for the environment and pays meticulous attention to the health of ecosystems across its divisions. We started restoring the environmental balance in the north of the Krasnoyarsk Territory by exploring terrestrial and aquatic flora and fauna and identifying areas affected by industrial activity.</span>
+                        <span v-else> Nornickel recognises its responsibility for the environment and pays meticulous attention to the health of ecosystems across its divisions. We started restoring the environmental balance in the north of the Krasnoyarsk Territory by exploring terrestrial and aquatic flora and fauna and identifying areas affected by industrial activity.</span>
                     </p>
                 </BaseTextBlock>
     

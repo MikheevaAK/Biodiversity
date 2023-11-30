@@ -1,5 +1,5 @@
 <template>
-    <div class="treasures-3-container__wrap" :class="{'treasures-3-container__wrap_en' : lang === 'en'}">
+    <div class="treasures-3-container__wrap">
         <div v-if="lang === 'ru'" class="treasures-3-container">
 
             <div class="treasures-3-item treasures-3-item_1">
@@ -178,10 +178,6 @@ export default {
                 &::-webkit-scrollbar {
                     width: 0;
                 }
-
-                &_en {
-                    height: 152.467rem;
-                }
             }
         }
 
@@ -194,7 +190,6 @@ export default {
 
             @media (max-width: 768px) {
                 background-size: 100%;
-                width: 982rem;
                 background-image: url(../../public/img/treasures-scroll-3-en-mobile.png);
             @supports (background-image: url(../../public/img/treasures-scroll-3-en-mobile.webp)) {
                 background-image: url(../../public/img/treasures-scroll-3-en-mobile.webp);

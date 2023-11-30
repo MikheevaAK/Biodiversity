@@ -466,77 +466,77 @@ In&nbsp;2020, the smelting shop that had a&nbsp;negative impact on&nbsp;the Pasv
                     <BaseCollageInfo :text="lang === 'ru' ?'Охраняемые виды' : 'Protected species'" :color="'#71464E'" />
                         <BaseCollageInfo :text="lang === 'ru' ?'Индикаторные виды' : 'Indicator species'" />
                 </div>
-                <div class="collage mb-100">
+                <div class="collage mb-100" :class="{'collage_en' : lang === 'en'}">
                     <div class="collage__golden-eagle"></div>
                     <div class="collage__bluethroat"></div>
                     <BaseDropdownInfo class="golden-eagle" :title="lang === 'ru' ? 'Беркут' : 'Golden eagle'" :is-modal="true" :color="'#71464E'" :pulsation-color="'finn'"
                         :text="lang === 'ru' ? 'Самый крупный из&nbsp;орлов: размах крыльев достигает 230&nbsp;см при длине тела до&nbsp;93&nbsp;см. Беркуты чувствительны к&nbsp;беспокойству со&nbsp;стороны человека, чаще обитают в&nbsp;горах и&nbsp;реже на&nbsp;равнинных ландшафтах. За&nbsp;последние столетия вид исчез из&nbsp;многих районов из-за массового истребления, пестицидов, увеличения числа городов и&nbsp;изъятия земель под&nbsp;хозяйственные нужды' : 'The largest eagle with a wingspan reaching 230&nbsp;cm and a body length of up to 93&nbsp;cm. Golden eagles are sensitive to human activity, more often inhabiting mountains than flat landscapes. The species has disappeared from many areas over the past few centuries due to mass extermination, pesticides, the growing number of cities, and development of land by humans..'" />
 
-                    <BaseCollageInfo class="belobrovik" :title="'Белобровик'"
-                        :text="'Меняет пение в&nbsp;разных ситуациях: оповещает при&nbsp;опасности и&nbsp;подзывает, если найдена пища'" />
-                    <BaseDropdownInfo class="belobrovik_mobile" :title="'Белобровик'" :is-modal="true" :pulsation-color="'Green-Mist'"
-                        :text="'Меняет пение в&nbsp;разных ситуациях: оповещает при&nbsp;опасности и&nbsp;подзывает, если найдена пища'" />
+                    <BaseCollageInfo class="belobrovik" :title=" lang === 'ru' ? 'Белобровик' : 'Redwing'"
+                        :text="lang === 'ru' ? 'Меняет пение в&nbsp;разных ситуациях: оповещает при&nbsp;опасности и&nbsp;подзывает, если найдена пища' : 'Changes its song in different situations: alerts in case of danger and calls when food is found'" />
+                    <BaseDropdownInfo class="belobrovik_mobile" :title="lang === 'ru' ? 'Белобровик' : 'Redwing'" :is-modal="true" :pulsation-color="'Green-Mist'"
+                        :text="lang === 'ru' ? 'Меняет пение в&nbsp;разных ситуациях: оповещает при&nbsp;опасности и&nbsp;подзывает, если найдена пища' : 'Changes its song in different situations: alerts in case of danger and calls when food is found'" />
 
-                    <BaseCollageInfo class="tap-dancing" :title="'Чечётка'"
-                        :text="'Песня чечётки напоминает перестук каблуков в&nbsp;танце'" />
+                    <BaseCollageInfo class="tap-dancing" :title="lang === 'ru' ? 'Чечётка' : 'Common redpoll'"
+                        :text="lang === 'ru' ? 'Песня чечётки напоминает перестук каблуков в&nbsp;танце' : 'The common redpoll’s song sounds like a tapdance'" />
 
-                    <BaseCollageInfo class="bluethroat" :title="'Варакушка'"
-                        :text="'Прекрасный имитатор: в&nbsp;пении заимствует звуки у&nbsp;других птиц'" />
+                    <BaseCollageInfo class="bluethroat" :title="lang === 'ru' ? 'Варакушка' : 'Bluethroat'"
+                        :text=" lang === 'ru' ?'Прекрасный имитатор: в&nbsp;пении заимствует звуки у&nbsp;других птиц' : 'Excellent imitator of other birds’ sounds and songs'" />
 
-                    <BaseCollageInfo class="redstart-coot" :title="'Горихвостка-лысушка'"
-                        :text="'Красный хвост самцов, слегка подёргиваясь, напоминает горящее пламя&nbsp;&mdash; &laquo;горихвост&raquo;'" />
+                    <BaseCollageInfo class="redstart-coot" :title="lang === 'ru' ? 'Горихвостка-лысушка' : 'Redstart'"
+                        :text="lang === 'ru' ? 'Красный хвост самцов, слегка подёргиваясь, напоминает горящее пламя&nbsp;&mdash; &laquo;горихвост&raquo;' : 'The red tail of the males, when slightly twitching, resembles a burning flame'" />
 
-                    <BaseCollageInfo class="yurok" :title="'Юрок'" />
-                    <BaseCollageInfo class="warbler" :title="'Пеночка-весничка'" />
+                    <BaseCollageInfo class="yurok" :title="lang === 'ru' ?'Юрок' : 'Brambling'" />
+                    <BaseCollageInfo class="warbler" :title="lang === 'ru' ? 'Пеночка-весничка' : 'Willow warbler'" />
 
-                    <BaseDropdownInfo class="ground-beetles" :title="'Жужелицы'" :is-modal="true" :pulsation-color="'Green-Mist'"
-                        :text="'В&nbsp;Кольском дивизионе исследователи обнаружили 14&nbsp;видов жужелиц, из&nbsp;них два были назначены индикаторами: Carabus glabratus и&nbsp;Amara brunnea. Carabus glabratus отрицательно реагирует на&nbsp;промышленное воздействие: чем оно интенсивнее, тем меньше плотность вида на&nbsp;территории. Amara brunnea, в&nbsp;свою очередь, увеличивает численность в&nbsp;районах с&nbsp;интенсивным воздействием и&nbsp;постепенно снижает ближе к&nbsp;фоновым территориям'" />
+                    <BaseDropdownInfo class="ground-beetles" :title="lang === 'ru' ?'Жужелицы' : 'Ground beetles'" :is-modal="true" :pulsation-color="'Green-Mist'"
+                        :text="lang === 'ru' ?'В&nbsp;Кольском дивизионе исследователи обнаружили 14&nbsp;видов жужелиц, из&nbsp;них два были назначены индикаторами: Carabus glabratus и&nbsp;Amara brunnea. Carabus glabratus отрицательно реагирует на&nbsp;промышленное воздействие: чем оно интенсивнее, тем меньше плотность вида на&nbsp;территории. Amara brunnea, в&nbsp;свою очередь, увеличивает численность в&nbsp;районах с&nbsp;интенсивным воздействием и&nbsp;постепенно снижает ближе к&nbsp;фоновым территориям' : 'In the Kola Division, the researchers detected 14 ground beetle species, of which two were designated as indicators: Carabus glabratus and Amara brunnea. Carabus glabratus reacts negatively to industrial impact: the more intense it is, the lower the density of the species in the area. The abundance of Amara brunnea, in turn, increases in severely exposed areas and gradually decreases closer to background areas.'" />
 
-                    <BaseDropdownInfo class="spiders" :title="'Пауки'" :is-modal="true" :pulsation-color="'Green-Mist'"
-                        :text="'Наименьшее видовое разнообразие пауков учёные отметили в&nbsp;зонах интенсивного воздействия дивизиона. Индикаторами среди обнаруженных видов стали три бродячих паука-охотника: Паук-волк, Паук-гназофида и&nbsp;Паук-мешкопряд. Пауки-волки составляют основу населения, они не&nbsp;строят ловчих сетей, быстро передвигаются и&nbsp;активно заселяют новые участки'" />
+                    <BaseDropdownInfo class="spiders" :title="lang === 'ru' ? 'Пауки' : 'Spiders'" :is-modal="true" :pulsation-color="'Green-Mist'"
+                        :text="lang === 'ru' ? 'Наименьшее видовое разнообразие пауков учёные отметили в&nbsp;зонах интенсивного воздействия дивизиона. Индикаторами среди обнаруженных видов стали три бродячих паука-охотника: Паук-волк, Паук-гназофида и&nbsp;Паук-мешкопряд. Пауки-волки составляют основу населения, они не&nbsp;строят ловчих сетей, быстро передвигаются и&nbsp;активно заселяют новые участки' : 'Researchers noted the lowest species diversity of spiders in the severely exposed areas of the division. Indicators among the species detected were three wandering huntsman spiders: the wolf spider, the ground spider, and the sac spider. Wolf spiders form the core of the population. They do not weave webs; they move quickly and actively inhabit new areas.'" />
 
-                    <BaseDropdownInfo class="ants" :title="'Муравьи'" :is-modal="true" :pulsation-color="'Green-Mist'"
-                        :text="'Из&nbsp;12&nbsp;видов муравьёв, обнаруженных участниками Экспедиции в&nbsp;Кольском дивизионе, четыре представителя рода Formica стали индикаторами: Северный чёрный муравей, Красноголовый муравей, Волосистый лесной муравей и&nbsp;Кровавый муравей-рабовладелец. Распределение и&nbsp;численность этих муравьёв помогли учёным подтвердить предположения о&nbsp;поясах воздействия промышленных объектов на&nbsp;природу дивизиона'" />
+                    <BaseDropdownInfo class="ants" :title="lang === 'ru' ? 'Муравьи' : 'Ants'" :is-modal="true" :pulsation-color="'Green-Mist'"
+                        :text="lang === 'ru' ? 'Из&nbsp;12&nbsp;видов муравьёв, обнаруженных участниками Экспедиции в&nbsp;Кольском дивизионе, четыре представителя рода Formica стали индикаторами: Северный чёрный муравей, Красноголовый муравей, Волосистый лесной муравей и&nbsp;Кровавый муравей-рабовладелец. Распределение и&nbsp;численность этих муравьёв помогли учёным подтвердить предположения о&nbsp;поясах воздействия промышленных объектов на&nbsp;природу дивизиона' : 'Out of the 12 ant species found by the Expedition in the Kola Division, four representatives of the genus Formica were designated as indicators: the palaearctic carpenter ant, wood ant, hairy wood ant, and blood-red ant. The distribution and abundance of these ant species helped scientists to confirm their assumptions about belts of industrial facilities’ impact on the nature of the division.'" />
 
-                    <BaseCollageInfo class="shrew" :title="'Бурозубка'" />
-                    <BaseCollageInfo class="vole" :title="'Красно-серая полёвка'" />
+                    <BaseCollageInfo class="shrew" :title="lang === 'ru' ?'Бурозубка' : 'Shrew'" />
+                    <BaseCollageInfo class="vole" :title="lang === 'ru' ?'Красно-серая полёвка' : 'Grey red-backed vole'" />
 
-                    <BaseCollageInfo class="kokushnik" :title="'Кокушник комарниковый'" :width="'10rem'"
+                    <BaseCollageInfo class="kokushnik" :title="lang === 'ru' ? 'Кокушник комарниковый' : 'Fragrant orchid'" :width="'10rem'"
                         :color="'#71464E'" />
 
-                    <BaseDropdownInfo class="fingerroot" :title="'Пальчатокоренник пятнистый'" :is-modal="true"
+                    <BaseDropdownInfo class="fingerroot" :title="lang === 'ru' ? 'Пальчатокоренник пятнистый' : 'Heath spotted-orchid'" :is-modal="true"
                         :width="'10rem'" :color="'#71464E'" :pulsation-color="'finn'"
-                        :text="'Пятнышки на&nbsp;листьях этого северного представителя орхидей в&nbsp;народе считались следами слёз, которые обронила кукушка от&nbsp;одиночества, поэтому ещё одно название этого вида&nbsp;&mdash; &laquo;кукушкины слёзки&raquo;. Развитие семян пальчатокоренника возможно в&nbsp;симбиозе с&nbsp;определёнными видами грибов, а&nbsp;зацветает растение на&nbsp;6&ndash;8 год после прорастания'" />
+                        :text="lang === 'ru' ? 'Пятнышки на&nbsp;листьях этого северного представителя орхидей в&nbsp;народе считались следами слёз, которые обронила кукушка от&nbsp;одиночества, поэтому ещё одно название этого вида&nbsp;&mdash; &laquo;кукушкины слёзки&raquo;. Развитие семян пальчатокоренника возможно в&nbsp;симбиозе с&nbsp;определёнными видами грибов, а&nbsp;зацветает растение на&nbsp;6&ndash;8 год после прорастания' : 'In&nbsp;Russia, spots on&nbsp;the leaves of&nbsp;this northern orchid were popularly believed to&nbsp;be&nbsp;traces of&nbsp;tears dropped by&nbsp;the cuckoo because of&nbsp;its loneliness, so&nbsp;another name for this species is&nbsp;&laquo;cuckoo tears&raquo;. Heath spotted-orchid seeds develop in&nbsp;symbiosis with certain fungi species, and the plant blooms 6&ndash;8 years after germination.'" />
 
-                    <BaseCollageInfo class="ledum" :title="'Багульник болотный'" :width="'10rem'" />
+                    <BaseCollageInfo class="ledum" :title="lang === 'ru' ?'Багульник болотный' : 'Marsh Labrador tea'" :width="'10rem'" />
 
                     <div class="background background-1"></div>
-                    <BaseCollageInfo class="swan" :title="'Лебедь-кликун'" :color="'#71464E'"
-                        :text="'Получил название за&nbsp;громкие, трубные крики, которые часто издает в&nbsp;полёте. Способен развить скорость до&nbsp;80&nbsp;км/ч. Является Национальным символом Финляндии'" />
+                    <BaseCollageInfo class="swan" :title="lang === 'ru' ?'Лебедь-кликун' : 'Whooper swan'" :color="'#71464E'"
+                        :text="lang === 'ru' ?'Получил название за&nbsp;громкие, трубные крики, которые часто издает в&nbsp;полёте. Способен развить скорость до&nbsp;80&nbsp;км/ч. Является Национальным символом Финляндии' : 'The bird received its name because of the deep honking call it often emits in flight. It can reach a speed of up to 80 km/h. The whooper swan is the national bird of Finland'" />
 
-                    <BaseDropdownInfo class="broody" :title="'Клуша'" :is-modal="true" :color="'#71464E'" :pulsation-color="'finn'"
-                        :text="'Представители этого вида чаек были встречены участниками Большой Научной экспедиции в&nbsp;зонах интенсивного воздействия предприятий Мончегорска и&nbsp;Мурманска. Кроме крупных водоёмов, птиц привлекают сюда пищевые отходы на&nbsp;свалках. На&nbsp;численность вида негативно влияет заселение мест обитания людьми и&nbsp;загрязнение воздуха промышленными выбросами'" />
+                    <BaseDropdownInfo class="broody" :title="lang === 'ru' ?'Клуша' : 'Lesser black-backed gull'" :is-modal="true" :color="'#71464E'" :pulsation-color="'finn'"
+                        :text="lang === 'ru' ?'Представители этого вида чаек были встречены участниками Большой Научной экспедиции в&nbsp;зонах интенсивного воздействия предприятий Мончегорска и&nbsp;Мурманска. Кроме крупных водоёмов, птиц привлекают сюда пищевые отходы на&nbsp;свалках. На&nbsp;численность вида негативно влияет заселение мест обитания людьми и&nbsp;загрязнение воздуха промышленными выбросами' : 'The Big Scientific Expedition found this gull species in severely exposed areas of the Monchegorsk and Murmansk facilities. As well as large bodies of water, the birds are attracted by food waste in rubbish dumps. The abundance of the species is negatively affected by human settlements in its habitats and air pollution from industrial emissions.'" />
 
                     <div class="background background-2"></div>
 
-                    <BaseDropdownInfo class="zooplankton" :title="'Зоопланктон'" :is-modal="true" :pulsation-color="'Green-Mist'"
-                        :text="'В&nbsp;водоёмах пояса интенсивного воздействия размножается коловратка Asplanchna priodonta, а&nbsp;в&nbsp;пробах из&nbsp;зоны незначительного воздействия и&nbsp;на&nbsp;фоновых территориях исследователи обнаружили ветвистоусого рачка Holopedium gibberum'" />
+                    <BaseDropdownInfo class="zooplankton" :title="lang === 'ru' ?'Зоопланктон': 'Zooplankton'" :is-modal="true" :pulsation-color="'Green-Mist'"
+                        :text="lang === 'ru' ?'В&nbsp;водоёмах пояса интенсивного воздействия размножается коловратка Asplanchna priodonta, а&nbsp;в&nbsp;пробах из&nbsp;зоны незначительного воздействия и&nbsp;на&nbsp;фоновых территориях исследователи обнаружили ветвистоусого рачка Holopedium gibberum' : 'The rotifer Asplanchna priodonta reproduces itself in the bodies of water of the severely exposed area. The researchers also found the water flea Holopedium gibberum in samples from the insignificantly exposed area and in background areas.'" />
 
                     <div class="background background-3"></div>
-                    <BaseDropdownInfo class="phytoplankton" :title="'Фитопланктон'" :is-modal="true" :pulsation-color="'Green-Mist'"
-                        :text="'Зелёные водоросли Scenedesmus quadricauda встречаются только в&nbsp;пробах из&nbsp;зоны интенсивного воздействия Кольского дивизиона, а&nbsp;цианобактерия Oscillatoria amoena обитает исключительно на&nbsp;территории фона'" />
+                    <BaseDropdownInfo class="phytoplankton" :title="lang === 'ru' ?'Фитопланктон' : 'Phytoplankton'" :is-modal="true" :pulsation-color="'Green-Mist'"
+                        :text="lang === 'ru' ?'Зелёные водоросли Scenedesmus quadricauda встречаются только в&nbsp;пробах из&nbsp;зоны интенсивного воздействия Кольского дивизиона, а&nbsp;цианобактерия Oscillatoria amoena обитает исключительно на&nbsp;территории фона' : 'The green algae Scenedesmus quadricauda are found only in samples from the severely exposed area of the Kola Division, and the cyanobacteria Oscillatoria amoena live exclusively in the background area.'" />
 
                     <div class="background background-4"></div>
-                    <BaseCollageInfo class="tubifex" :title="'Трубочник обыкновенный'"
-                        :text="'Общеизвестный индикатор органического загрязнения водоёмов'" />
+                    <BaseCollageInfo class="tubifex" :title="lang === 'ru' ?'Трубочник обыкновенный' : 'Sludge worm'"
+                        :text="lang === 'ru' ?'Общеизвестный индикатор органического загрязнения водоёмов' : 'A well-known indicator of organic pollution in bodies of water'" />
 
                     <div class="background background-5"></div>
-                    <BaseDropdownInfo class="loach" :title="'Арктический голец'" :is-modal="true" :pulsation-color="'Green-Mist'"
-                        :text="'Считается самой полезной рыбой в&nbsp;мире: кусочек рыбы в&nbsp;30&nbsp;г покрывает суточную потребность человека в&nbsp;полезных жирных кислотах. Встречается также в&nbsp;водоёмах Кольского дивизиона'" />
+                    <BaseDropdownInfo class="loach" :title="lang === 'ru' ? 'Арктический голец' : 'Arctic char'" :is-modal="true" :pulsation-color="'Green-Mist'"
+                        :text="lang === 'ru' ?'Считается самой полезной рыбой в&nbsp;мире: кусочек рыбы в&nbsp;30&nbsp;г покрывает суточную потребность человека в&nbsp;полезных жирных кислотах. Встречается также в&nbsp;водоёмах Кольского дивизиона' : 'It is considered the most nutritious fish in the world: a 30 g piece covers the daily requirement of healthy fatty acids. It also inhabits Norilsk Division’s bodies of water.'" />
 
                     <div class="background background-6"></div>
-                    <BaseCollageInfo class="grayling" :title="'Европейский хариус'" :color="'#71464E'"
-                        :text="'Вес рыбы может достигать 6,7&nbsp;кг'" />
+                    <BaseCollageInfo class="grayling" :title="lang === 'ru' ?'Европейский хариус' : 'European grayling'" :color="'#71464E'"
+                        :text="lang === 'ru' ?'Вес рыбы может достигать 6,7&nbsp;кг' : 'The fish can reach a&nbsp;weight of&nbsp;6.7&nbsp;kg'" />
 
                     <div class="collage__swan"></div>
                     <div class="collage__grayling"></div>
@@ -1613,6 +1613,7 @@ export default {
             }
         }
 
+
         .dropdown-info__text {
             @media (max-width: 768px) {
                 width: 93.34rem;
@@ -2058,6 +2059,54 @@ export default {
                 bottom: 50rem;
                 right: 6rem;
                 width: 40rem;
+            }
+        }
+    
+        &_en {
+            background-image: url(../../public/img/kola-collage-en.png);
+            @supports (background-image: url(../../public/img/kola-collage-en.webp)) {
+                background-image: url(../../public/img/kola-collage-en.webp);
+            }
+
+            @media (max-width: 768px) {
+            background-image: url(../../public/img/kola-collage-en-mobile.png);
+
+            @supports (background-image: url(../../public/img/kola-collage-en-mobile.webp)) {
+                background-image: url(../../public/img/kola-collage-en-mobile.webp);
+            }
+        }
+
+            .ground-beetles {
+                width: 9rem;
+                left: 9.5rem;
+                
+                .dropdown-info__text {
+                    padding: 3.56rem 0.62rem 0.88rem 3.13rem;
+                }
+
+                @media (max-width: 768px) {
+                    left: 11.5rem;
+                }
+            }
+
+            .broody {
+                width: 11rem;
+                bottom: 68.7rem;
+                right: 34.5rem;
+
+                .dropdown-info__text {
+                    padding: 3.56rem 0.62rem 0.88rem 3.13rem;
+                }
+
+                @media (max-width: 768px) {
+                    width: unset;
+                    bottom: 128.7rem;
+                    right: 7.5rem;
+
+                    .dropdown-info__title {
+                        max-width: 23rem;
+                    }
+                }
             }
         }
     }

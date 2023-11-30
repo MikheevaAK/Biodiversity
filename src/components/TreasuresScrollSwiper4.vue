@@ -60,7 +60,7 @@
             </div>
 
         </div>
-        <div v-else class="treasures-4-container">
+        <div v-else class="treasures-4-container treasures-4-container_en">
 
 <div class="treasures-4-item treasures-4-item_1">
     <div class="treasures-3-item__title">Demoiselle crane</div>
@@ -177,6 +177,13 @@ export default {
                 &::-webkit-scrollbar {
                     width: 0;
                 }
+            }
+        }
+
+        &_en {
+            background-image: url(../../public/img/treasures-scroll-4-en.png);
+            @supports (background-image: url(../../public/img/treasures-scroll-4-en.webp)) {
+                background-image: url(../../public/img/treasures-scroll-4-en.webp);
             }
         }
     }

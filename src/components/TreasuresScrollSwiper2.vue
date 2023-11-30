@@ -1,6 +1,6 @@
 <template>
     <div class="treasures-2-container__wrap">
-        <div class="treasures-2-container">
+        <div  v-if="lang === 'ru'" class="treasures-2-container">
 
             <div class="treasures-2-item treasures-2-item_1">
                 <div class="treasures-2-item__title">Росянка</div>
@@ -57,6 +57,52 @@
                 </div>
             </div>
         </div>
+        <div v-else class="treasures-2-container">
+
+<div class="treasures-2-item treasures-2-item_1">
+    <div class="treasures-2-item__title">Sundews</div>
+    <div class="treasures-2-item__descr">
+        <p>
+            The leaves of this plant are topped with sticky secretions, which attract insects and entrap them with the mucilage, preventing their escape. After that, the leaves roll in to envelop and clog the prey, with the digestion process taking several days.
+        </p>
+    </div>
+</div>
+
+<div class="treasures-2-item treasures-2-item_2">
+    <div class="treasures-2-item__title">Viviparous lizard</div>
+    <div class="treasures-2-item__descr">
+        Thanks to its exceptional hardiness to the cold, this species of lizard can survive even near the Arctic Circle. They spend winters underground, hibernating in soil layers up to 40 cm deep.
+    </div>
+</div>
+
+<div class="treasures-2-item treasures-2-item_3">
+    <div class="treasures-2-item__title">Calypso orchid</div>
+    <div class="treasures-2-item__descr">
+        It is one of the ten species of orchid growing in the reserve. The plant takes its name from the nymph Calypso in Greek mythology.
+    </div>
+</div>
+
+<div class="treasures-2-item treasures-2-item_4">
+    <div class="treasures-2-item__title">Whooper swan</div>
+    <div class="treasures-2-item__descr">
+        These birds arrive in the Lapland Nature Reserve in March and early April from their wintering sites. Not afraid of the cold, they need open water to feed. Whooper swans form monogamous pairs and mate for life.
+    </div>
+</div>
+
+<div class="treasures-2-item treasures-2-item_5">
+    <div class="treasures-2-item__title">Wild reindeer</div>
+    <div class="treasures-2-item__descr">
+        This large songbird species is a ruthless hunter. Small rodents, lizards, and large insects are the bulk of its prey. Sometimes great grey shrikes can store their prey by impaling it upon sharp branches and thorns.
+    </div>
+</div>
+
+<div class="treasures-2-item treasures-2-item_6">
+    <div class="treasures-2-item__title">Great grey shrike</div>
+    <div class="treasures-2-item__descr">
+        This is the only species of reindeer in which both males and females grow antlers. The Lapland Nature Reserve is home to around 1,000 of these animals. To survive the harsh winters, reindeer form temporary herds of 100 or more animals.
+    </div>
+</div>
+</div>
     </div>
 </template>
 
@@ -72,6 +118,11 @@ export default {
         this.$nextTick(function () {
             this.scrollAnimation();
         })
+    },
+    computed: {
+        lang() {
+            return this.$store.state.lang
+        }
     },
     methods: {
         scrollAnimation() {

@@ -1,6 +1,6 @@
 <template>
     <div class="treasures-1-container__wrap">
-        <div class="treasures-1-container">
+        <div v-if="lang === 'ru'" class="treasures-1-container">
 
             <div class="treasures-1-item treasures-1-item_1">
                 <div class="treasures-1-item__title">Луток</div>
@@ -58,6 +58,56 @@
                 </div>
             </div>
         </div>
+        <div v-else class="treasures-1-container">
+
+<div class="treasures-1-item treasures-1-item_1">
+    <div class="treasures-1-item__title">Smew</div>
+    <div class="treasures-1-item__descr">
+        <p class="mb-10">
+            This species of duck is a symbol of Pasvik and has been part of the nature reserve's logo since 2021.
+        </p>
+        <p>
+         
+While a relatively rare duck for other Russian regions, the smew is one of the most populous and common species in Pasvik.
+        </p>
+    </div>
+</div>
+
+<div class="treasures-1-item treasures-1-item_2">
+    <div class="treasures-1-item__title">Freshwater pearl mussel</div>
+    <div class="treasures-1-item__descr">
+        This is one of the longest-living invertebrates in existence: it can live more than 100 years and even more than 200, according to some data.
+    </div>
+</div>
+
+<div class="treasures-1-item treasures-1-item_3">
+    <div class="treasures-1-item__title">Hooker's flapwort</div>
+    <div class="treasures-1-item__descr">
+        The Murmansk Region is known to have only ten locations inhabited by this liverwort species, each of them with extremely low population numbers of no more than 30 plants.
+    </div>
+</div>
+
+<div class="treasures-1-item treasures-1-item_4">
+    <div class="treasures-1-item__title">Aculepeira lapponica</div>
+    <div class="treasures-1-item__descr">
+        This is the orb-weaving spider found on the Scandinavian Peninsula and in the Murmansk Region. Only two female spiders of this species have been spotted in the Pasvik nature reserve.
+    </div>
+</div>
+
+<div class="treasures-1-item treasures-1-item_5">
+    <div class="treasures-1-item__title">Eurasian water shrew</div>
+    <div class="treasures-1-item__descr">
+        This large shrew is a good swimmer that hunts for fish and waterfowl chicks in addition to insects. The Eurasian water shrew has venomous saliva with strong paralytic properties. This enables the shrew to move its paralysed prey to a store and keep it to eat later.
+    </div>
+</div>
+
+<div class="treasures-1-item treasures-1-item_6">
+    <div class="treasures-1-item__title">Great grey owl</div>
+    <div class="treasures-1-item__descr">
+        It is One of the largest species of wood owls. Unlike many other owls, great grey owls are active not only during the night but also in daytime.
+    </div>
+</div>
+</div>
     </div>
 </template>
 
@@ -73,6 +123,11 @@ export default {
         this.$nextTick(function () {
             this.scrollAnimation();
         })
+    },
+    computed: {
+        lang() {
+            return this.$store.state.lang
+        }
     },
     methods: {
         scrollAnimation() {

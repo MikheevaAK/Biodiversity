@@ -1,6 +1,6 @@
 <template>
     <div class="treasures-4-container__wrap">
-        <div class="treasures-4-container">
+        <div v-if="lang === 'ru'" class="treasures-4-container">
 
             <div class="treasures-4-item treasures-4-item_1">
                 <div class="treasures-3-item__title">Красавка</div>
@@ -60,6 +60,51 @@
             </div>
 
         </div>
+        <div v-else class="treasures-4-container">
+
+<div class="treasures-4-item treasures-4-item_1">
+    <div class="treasures-3-item__title">Demoiselle crane</div>
+    <div class="treasures-3-item__descr">
+        This species is listed in the Red Data Book, and ornithologists estimate that no more than 240,000 demoiselle cranes are currently in existence globally.
+    </div>
+</div>
+
+<div class="treasures-4-item treasures-4-item_2">
+    <div class="treasures-3-item__title">Mandarin duck</div>
+    <div class="treasures-3-item__descr">
+        Male mandarin ducks change to their colourful plumage during the mating season, with their feathers coloured yellow, orange, blue, green, and black and white. However, the rest of the time males keep a much lower profile and look almost identical to the grey and brown females. Not so long ago, mandarin ducks were endangered, but right now their populations are gradually recovering. It is listed in the Red Data Book.
+    </div>
+</div>
+
+<div class="treasures-4-item treasures-4-item_3">
+    <div class="treasures-3-item__title">Siberian weasel</div>
+    <div class="treasures-3-item__descr">
+        A medium-sized and a predominantly nocturnal creature. Siberian weasels often live not far from human settlements, where they hunt rats and mice and sometimes can also attack poultry and cats. The species is listed in the Red Data Book.
+    </div>
+</div>
+
+<div class="treasures-4-item treasures-4-item_4">
+    <div class="treasures-3-item__title">Corsac fox</div>
+    <div class="treasures-3-item__descr">
+        Corsac foxes look like typical foxes but are noticeably smaller and more social, with several animals often living together. In times of danger, corsacs feign death – only to escape at their first chance. Corsacs are listed in the Red Data Book as a species of least-concern.
+    </div>
+</div>
+
+<div class="treasures-4-item treasures-4-item_5">
+    <div class="treasures-3-item__title">Siberian musk deer</div>
+    <div class="treasures-3-item__descr">
+        These medium-sized deer have no antlers but have long tusks that project downward from their mouth, which they use to compete with other males for females. There are known cases of male dusk deer fatally wounding their opponents this way. The animal is included in the Red Data Book as a vulnerable species.
+    </div>
+</div>
+
+<div class="treasures-4-item treasures-4-item_6">
+    <div class="treasures-3-item__title">Wolverine</div>
+    <div class="treasures-3-item__descr">
+        This member of the marten species reaches the size of an average dog. Wolverines are known for their great ferocity and strength out of proportion to their size, with relative attack even humans when desperate. The wolverine is red-listed.
+    </div>
+</div>
+
+</div>
     </div>
 </template>
 
@@ -75,6 +120,11 @@ export default {
         this.$nextTick(function () {
             this.scrollAnimation();
         })
+    },
+    computed: {
+        lang() {
+            return this.$store.state.lang
+        }
     },
     methods: {
         scrollAnimation() {

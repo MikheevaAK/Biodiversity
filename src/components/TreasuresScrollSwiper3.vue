@@ -1,6 +1,6 @@
 <template>
     <div class="treasures-3-container__wrap">
-        <div class="treasures-3-container">
+        <div v-if="lang === 'ru'" class="treasures-3-container">
 
             <div class="treasures-3-item treasures-3-item_1">
                 <div class="treasures-3-item__title">Овцебык</div>
@@ -53,6 +53,59 @@
                 </div>
             </div>
         </div>
+        <div v-else class="treasures-3-container">
+
+<div class="treasures-3-item treasures-3-item_1">
+    <div class="treasures-3-item__title">Muskox</div>
+    <div class="treasures-3-item__descr">
+        <p>
+            A long time ago these animals grazed next to mammals. A couple of thousand years ago, climate change and hunting caused the muskox to disappear from the plains of Siberia. They reappeared here as late as the 1970s, when several dozen muskoxen were reintroduced from Canada. Today, Taimyr is home to around 14,000 muskoxen, with their herds seen on the outskirts of the Putoranа Plateau.
+        </p>
+    </div>
+</div>
+
+<div class="treasures-3-item treasures-3-item_2">
+    <div class="treasures-3-item__title">Putorana snow sheep</div>
+    <div class="treasures-3-item__descr">
+        This is a unique endemic subspecies of the bighorn sheep. The range of the Putoranа snow sheep is the Putoranа Plateau, which is more than a thousand kilometres away from where other subspecies of the snow sheep are found. Researchers believe that the Putorana subspecies might well be a relict one. It is listed in the Red Data Book.
+    </div>
+</div>
+
+<div class="treasures-3-item treasures-3-item_3">
+    <div class="treasures-3-item__title">Hieracium putoranicum</div>
+    <div class="treasures-3-item__descr">
+        This plant with small bright yellow flowers is found only in the west of the Putorana Plateau and has not yet been seen anywhere else. It is included in the Krasnoyarsk Territory’s Red Data Book.
+    </div>
+</div>
+
+<div class="treasures-3-item treasures-3-item_4">
+    <div class="treasures-3-item__title">Siberian salamander</div>
+    <div class="treasures-3-item__descr">
+        This is the only amphibian species capable of living in the permafrost area. To survive the cold weather and long winters, the salamander relies on high levels of glycerine produced by its liver.
+    </div>
+</div>
+
+<div class="treasures-3-item treasures-3-item_5">
+    <div class="treasures-3-item__title">Peregrine falcon</div>
+    <div class="treasures-3-item__descr">
+        This falcon is considered to be the fastest bird on the planet: during its high-speed dive, it can reach up to 322 km/h. The peregrine is common on almost all the continents except Antarctica, but its populations are fairly low, making it a red-listed species in Russia.
+    </div>
+</div>
+
+<div class="treasures-3-item treasures-3-item_6">
+    <div class="treasures-3-item__title">Lesser white-fronted goose</div>
+    <div class="treasures-3-item__descr">
+        This bird is known for its musical laugh-like honking call and is listed in the Red Data Book of Russia, with any hunting prohibited.
+    </div>
+</div>
+
+<div class="treasures-3-item treasures-3-item_7">
+    <div class="treasures-3-item__title">Muksun</div>
+    <div class="treasures-3-item__descr">
+        In the recent past, it was one of the main commercial fish species in the Yenisei, Pyasina, Taimyr and Khatanga basins. However, over the past few years, muksun populations have been rapidly declining.
+    </div>
+</div>
+</div>
     </div>
 </template>
 
@@ -68,6 +121,11 @@ export default {
         this.$nextTick(function () {
             this.scrollAnimation();
         })
+    },
+    computed: {
+        lang() {
+            return this.$store.state.lang
+        }
     },
     methods: {
         scrollAnimation() {

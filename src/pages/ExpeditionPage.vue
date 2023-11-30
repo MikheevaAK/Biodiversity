@@ -399,7 +399,7 @@
             <section class="step-three">
                 <div class="step-start mb-100">
                     <img class="step-start__img" src="img/step-3.png">
-                    <div class="step-start__title">Третий этап
+                    <div class="step-start__title">
                         <span v-if="lang === 'ru'">
                                 Третий этап
                     </span>

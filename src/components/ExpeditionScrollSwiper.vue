@@ -7,7 +7,7 @@
                     <img class="team-item__img" src="img/hydrochemist.png" alt="">
                 </picture>
                 <div class="team-item__text-block">
-                    <div class="team-item__title">Гидрохимики
+                    <div class="team-item__title">
                         <span v-if="lang === 'ru'">
                                         Гидрохимики
                             </span>

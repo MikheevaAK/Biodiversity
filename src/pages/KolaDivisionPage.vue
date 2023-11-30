@@ -585,55 +585,109 @@ In&nbsp;2020, the smelting shop that had a&nbsp;negative impact on&nbsp;the Pasv
                 <div class="habitat-map">
                     <div class="habitat-map__legend">
                         <div class="habitat-map__legend-top">
-                            <div class="habitat-map__legend-title">Зона воздействия предприятий</div>
+                            <div class="habitat-map__legend-title">
+                                <span v-if="lang === 'ru'">
+                                    Зона воздействия предприятий
+                </span>
+                <span v-else>
+                    Affected area
+                </span>
+                            </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
                                     fill="none">
                                     <circle cx="7" cy="7" r="7" fill="#D38235" />
                                 </svg>
-                                <div>Интенсивная</div>
+                                <div v-if="lang === 'ru'">Интенсивная</div>
+                                <div v-else>Severe exposure</div>
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
                                     fill="none">
                                     <circle cx="7" cy="7" r="7" fill="#FFEC42" />
                                 </svg>
-                                <div>Умеренная</div>
+                                <div v-if="lang === 'ru'">Умеренная</div>
+                                <div v-else>Moderate exposure</div>
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
                                     fill="none">
                                     <circle cx="7" cy="7" r="7" fill="#009CA6" />
                                 </svg>
-                                <div>Незначительная</div>
+                                <div v-if="lang === 'ru'">Незначительная</div>
+                                <div v-else>Insignificant exposure</div>
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                                     fill="none">
                                     <circle cx="8" cy="8" r="7" fill="white" stroke="#333333" />
                                 </svg>
-                                <div>Фоновая</div>
+                                <div v-if="lang === 'ru'">Фоновая</div>
+                                <div v-else>Background exposure</div>
                             </div>
                         </div>
                         <div class="habitat-map__legend-bottom">
-                            <div class="habitat-map__legend-title">Виды</div>
-                            <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                1 – Клуша
+                            <div class="habitat-map__legend-title">
+                                <span v-if="lang === 'ru'">
+                                                Виды
+                            </span>
+                                <span v-else>
+                                Species
+                            </span>
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                2 – Беркут
+                                
+                                <span v-if="lang === 'ru'">
+                                    1 – Клуша
+                </span>
+                <span v-else>
+                    1 – Lesser black-backed gull
+                </span>
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                3 – Лебедь-кликун
+                                
+                                <span v-if="lang === 'ru'">
+                   2 – Беркут
+                </span>
+                <span v-else>
+                    2 – Golden eagle
+                </span>
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                4 – Европейский хариус
+                               
+                                <span v-if="lang === 'ru'">
+                    3 – Лебедь-кликун
+                </span>
+                <span v-else>
+                    3 – Whooper swan
+                </span>
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                5 – Пальчатокоренник пятнистый
+                               
+                                <span v-if="lang === 'ru'">
+                                    4 – Европейский хариус
+                </span>
+                <span v-else>
+                    4 – European grayling
+                </span>
                             </div>
                             <div class="habitat-map__legend-top-item habitat-map__legend-text">
-                                6 – Кокушник комарниковый
+                               
+                                <span v-if="lang === 'ru'">
+                                    5 – Пальчатокоренник пятнистый
+                </span>
+                <span v-else>
+                    5 – Heath spotted-orchid
+                </span>
+                            </div>
+                            <div class="habitat-map__legend-top-item habitat-map__legend-text">
+                              
+                                <span v-if="lang === 'ru'">
+                                    6 – Кокушник комарниковый
+                </span>
+                <span v-else>
+                    6 – Fragrant orchid
+                </span>
                             </div>
                         </div>
                     </div>
@@ -647,11 +701,16 @@ In&nbsp;2020, the smelting shop that had a&nbsp;negative impact on&nbsp;the Pasv
                                         fill="none">
                                         <circle cx="7" cy="7" r="7" fill="#D38235" />
                                     </svg>
-                                    <div>Интенсивная</div>
+                                   <div v-if="lang === 'ru'">Интенсивная</div>
+                                    <div v-else>Severe exposure</div>
                                 </div>
-                                <ul class="habitat-map__list-list">
+                                <ul v-if="lang === 'ru'" class="habitat-map__list-list">
                                     <li>Клуша</li>
                                     <li>Беркут</li>
+                                </ul>
+                                <ul v-else class="habitat-map__list-list">
+                                    <li>Lesser black-backed gull</li>
+                                    <li>Golden eagle</li>
                                 </ul>
                             </div>
 
@@ -661,11 +720,16 @@ In&nbsp;2020, the smelting shop that had a&nbsp;negative impact on&nbsp;the Pasv
                                         fill="none">
                                         <circle cx="7" cy="7" r="7" fill="#FFEC42" />
                                     </svg>
-                                    <div>Умеренная</div>
+                                   <div v-if="lang === 'ru'">Умеренная</div>
+                                    <div v-else>Moderate exposure</div>
                                 </div>
-                                <ul class="habitat-map__list-list">
+                                <ul v-if="lang === 'ru'" class="habitat-map__list-list">
                                     <li>Европейский хариус</li>
                                     <li>Кокушник комарниковый</li>
+                                </ul>
+                                 <ul v-else class="habitat-map__list-list">
+                                    <li>European grayling</li>
+                                    <li>Fragrant orchid</li>
                                 </ul>
                             </div>
 
@@ -675,13 +739,20 @@ In&nbsp;2020, the smelting shop that had a&nbsp;negative impact on&nbsp;the Pasv
                                         fill="none">
                                         <circle cx="7" cy="7" r="7" fill="#009CA6" />
                                     </svg>
-                                    <div>Незначительная</div>
+                                    <div v-if="lang === 'ru'">Незначительная</div>
+                                    <div v-else>Insignificant exposure</div>
                                 </div>
-                                <ul class="habitat-map__list-list">
+                                <ul v-if="lang === 'ru'" class="habitat-map__list-list">
                                     <li>Беркут</li>
                                     <li>Лебедь-кликун</li>
                                     <li>Европейский хариус</li>
                                     <li>Пальчатокоренник пятнистый</li>
+                                </ul>
+                                <ul v-else class="habitat-map__list-list">
+                                    <li>Golden eagle</li>
+                                    <li>Whooper swan</li>
+                                    <li>European grayling</li>
+                                    <li>Heath spotted-orchid</li>
                                 </ul>
                             </div>
 
@@ -691,21 +762,39 @@ In&nbsp;2020, the smelting shop that had a&nbsp;negative impact on&nbsp;the Pasv
                                         fill="none">
                                         <circle cx="8" cy="8" r="7" fill="white" stroke="#333333" />
                                     </svg>
-                                    <div>Фоновая</div>
+                                    <div v-if="lang === 'ru'">Фоновая</div>
+                                    <div v-else>Background exposure</div>
                                 </div>
-                                <ul class="habitat-map__list-list">
+                                <ul v-if="lang === 'ru'" class="habitat-map__list-list">
                                     <li>Лебедь-кликун</li>
                                     <li>Европейский хариус</li>
                                     <li>Кокушник комарниковый</li>
+                                </ul>
+                                <ul v-else class="habitat-map__list-list">
+                                    <li>Whooper swan</li>
+                                    <li>European grayling</li>
+                                    <li>Fragrant orchid</li>
                                 </ul>
                             </div>
 
                         </div>
                         <div class="habitat-map__buttons">
                             <div class="habitat-map__button" :class="{ 'habitat-map__button_active': idMap === map1 }"
-                                @click="idMap = 1">Мончегорск</div>
+                                @click="idMap = 1">
+                                <span v-if="lang === 'ru'">
+                                    Мончегорск
+                </span>
+                <span v-else>
+                    Monchegorsk
+                </span></div>
                             <div class="habitat-map__button" :class="{ 'habitat-map__button_active': idMap === map2 }"
-                                @click="idMap = 2">Никель — Заполярный</div>
+                                @click="idMap = 2">
+                                <span v-if="lang === 'ru'">
+                                    Никель — Заполярный
+                </span>
+                <span v-else>
+                    Nickel – Zapolyarny
+                </span></div>
                         </div>
                     </div>
 
@@ -726,27 +815,43 @@ In&nbsp;2020, the smelting shop that had a&nbsp;negative impact on&nbsp;the Pasv
                     <div v-show="idMap === 1">
                         <div class="habitat-map__city habitat-map__city-1">
                             <div class="habitat-map__city-circale"></div>
-                            <span>Мончегорск</span>
+                            <span v-if="lang === 'ru'">Мончегорск</span>
+                            <span v-else>Monchegorsk</span>
                         </div>
                         <div class="habitat-map__river">
-                            Имандра
+                            
+                            <span v-if="lang === 'ru'">
+                                Имандра
+                </span>
+                <span v-else>
+                    Imandra
+                </span>
                         </div>
                     </div>
                     <div v-show="idMap === 2">
                         <div class="habitat-map__city habitat-map__city-2">
                             <div class="habitat-map__city-circale"></div>
-                            <span>Никель</span>
+                            <span v-if="lang === 'ru'">Никель</span>
+                            <span v-else>Nickel</span>
                         </div>
                         <div class="habitat-map__city habitat-map__city-3">
                             <div class="habitat-map__city-circale"></div>
-                            <span>Заполярный</span>
+                            <span v-if="lang === 'ru'">Заполярный</span>
+                            <span v-else>Zapolyarny</span>
                         </div>
                         <div class="habitat-map__city habitat-map__city-4">
                             <div class="habitat-map__city-circale"></div>
-                            <span>Мурманск</span>
+                            <span v-if="lang === 'ru'">Мурманск</span>
+                            <span v-else>Murmansk</span>
                         </div>
                         <div class="habitat-map__name-sea">
-                            Баренцево <br />море
+                           
+                            <span v-if="lang === 'ru'">
+                                Баренцево <br />море
+                </span>
+                <span v-else>
+                    Barents Sea
+                </span>
                         </div>
                     </div>
                 </div>

@@ -42,7 +42,7 @@
                                 </span>
                     </p>
                 </BaseTextBlock>
-                <div class="treasures__map treasures__map-1-mobile">
+                <div class="treasures__map treasures__map-1-mobile" :class="{'treasures__map-1-mobile_en' : lang === 'en'}">
                     <BaseNumberBlock class="number-block-2" :textTop="lang === 'ru' ? '14&nbsp;687&nbsp;га' : '14,687&nbsp;ha'" :textBottom="lang === 'ru' ? 'площадь заповедника' : 'total area of the nature reserve'" />
                     <BaseNumberBlock class="number-block-1" :textTop="lang === 'ru' ? '16&nbsp;июля 1992&nbsp;г.' : '16&nbsp;July&nbsp;1992'" :textBottom="lang === 'ru' ? 'дата создания' : 'date of creation'" />
                     <BasePhoto class="treasures__photo-block" :img-mobile="'img/treasures-img-1-mobile.jpg'" />
@@ -64,7 +64,7 @@
                     </p>
                 </BaseTextBlock>
     
-                <div class="treasures__map treasures__map-1">
+                <div class="treasures__map treasures__map-1" :class="{'treasures__map-1_en' : lang === 'en'}">
                     <BaseNumberBlock class="number-block-2" :textTop="lang === 'ru' ? '14&nbsp;687&nbsp;га' : '14,687&nbsp;ha'" :textBottom="lang === 'ru' ? 'площадь заповедника' : 'total area of the nature reserve'" />
                     <BaseNumberBlock class="number-block-1" :textTop="lang === 'ru' ? '16&nbsp;июля 1992&nbsp;г.' : '16&nbsp;July&nbsp;1992'" :textBottom="lang === 'ru' ? 'дата создания' : 'date of creation'" />
                     <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-1.jpg'" />
@@ -318,7 +318,7 @@
                         </span>
                 </BaseTextBlock>
     
-                <div class="treasures__map treasures__map-2">
+                <div class="treasures__map treasures__map-2" :class="{'treasures__map-2_en' : lang === 'en'}">
                     <BaseNumberBlock class="number-block-1" :textTop="lang === 'ru' ?  'январь 1930&nbsp;г.' : 'January&nbsp;1930'" :textBottom="lang === 'ru' ?  'дата создания' : 'date of creation'" />
                     <BaseNumberBlock class="number-block-2" :textTop="lang === 'ru' ?  '278 &thinsp;435&nbsp;га' : '278,435&nbsp;ha'" :textBottom="lang === 'ru' ?  'площадь' : 'total area'" />
                     <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-2.jpg'" :img-mobile="'img/treasures-img-2-mobile.jpg'" />
@@ -572,7 +572,7 @@
                         </span>
                 </BaseTextBlock>
     
-                <div class="treasures__map treasures__map-3">
+                <div class="treasures__map treasures__map-3" :class="{'treasures__map-3_en' : lang === 'en'}">
                     <BaseNumberBlock class="number-block-1" :textTop="lang === 'ru' ? 'декабрь&nbsp;1988&nbsp;г.' :'December&nbsp;1988'" :textBottom="lang === 'ru' ? 'территория получила статус особо охраняемой' : 'territory awarded specially protected status'" />
                     <BaseNumberBlock class="number-block-2" :textTop="lang === 'ru' ? '1&nbsp;887&nbsp;251&nbsp;га': '1,887,251&nbsp;ha'" :textBottom="lang === 'ru' ? 'площадь' : 'total area'" />
                     <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-3.jpg'" :img-mobile="'img/treasures-img-3-mobile.jpg'" :link-title="lang === 'ru' ? 'Фото: jxandreani, CC BY 2.0.' : 'Photo: jxandreani, CC BY 2.0.'" :link-url="'https://creativecommons.org/licenses/by/2.0/'"
@@ -711,7 +711,7 @@
                         </span>
                 </BaseTextBlock>
     
-                <div class="treasures__map treasures__map-4">
+                <div class="treasures__map treasures__map-4" :class="{'treasures__map-4_en' : lang === 'en'}">
                     <BaseNumberBlock class="number-block-1" :textTop="lang === 'ru' ? '11&nbsp;мая&nbsp;1993&nbsp;г.' : '11&nbsp;May&nbsp;1993'" :textBottom="lang === 'ru' ? 'территория получила статус особо охраняемой' : 'territory awarded specially protected status'" />
                     <BaseNumberBlock class="number-block-2" :textTop="lang === 'ru' ? ' 4&nbsp;169&nbsp;222&nbsp;га' : '4,169,222&nbsp;ha'" :textBottom="lang === 'ru' ? 'площадь' : 'total area'" />
                     <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-4.jpg'" :img-mobile="'img/treasures-img-4-mobile.jpg'" />
@@ -859,7 +859,7 @@ That said, the company goes beyond financing only research: sometimes it&nbsp;al
                 </span>
                 </BaseTextBlock>
     
-                <div class="treasures__map treasures__map-5">
+                <div class="treasures__map treasures__map-5" :class="{'treasures__map-5_en' : lang === 'en'}">
                     <BaseNumberBlock class="number-block-1" :textTop="lang === 'ru' ?  '1986&nbsp;г.' : '1986'" :textBottom="lang === 'ru' ?  'территория получила статус особо&nbsp;охраняемой' : 'territory awarded specially protected status'" />
                     <BaseNumberBlock class="number-block-2" :textTop="lang === 'ru' ?  '24&nbsp;478&nbsp;га' : '24,478&nbsp;ha'" :textBottom="lang === 'ru' ?  'площадь' : 'total area'" />
                     <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-5.jpg'" :img-mobile="'img/treasures-img-5-mobile.jpg'" :link-title="lang === 'ru' ? 'Фото Bondarevich Evgeniy, CC BY-SA 4.0.' : 'Photo Bondarevich Evgeniy, CC BY-SA 4.0.'" :link-url="'https://creativecommons.org/licenses/by-sa/4.0/'" />
@@ -942,7 +942,7 @@ That said, the company goes beyond financing only research: sometimes it&nbsp;al
                 </span>
                 </BaseTextBlock>
     
-                <div class="treasures__map treasures__map-6">
+                <div class="treasures__map treasures__map-6" :class="{'treasures__map-6_en' : lang === 'en'}">
                     <BaseNumberBlock class="number-block-1" :textTop="lang === 'ru' ? 'октябрь&nbsp;2011&nbsp;г.' : 'October&nbsp;2011'" :textBottom="lang === 'ru' ? 'территория получила статус особо охраняемой' : 'territory awarded specially protected status'" />
                     <BaseNumberBlock class="number-block-2" :textTop="lang === 'ru' ? '30&nbsp;400&nbsp;га' : '30,400&nbsp;ha'" :textBottom="lang === 'ru' ? 'площадь' : 'total area'" />
                     <BasePhoto class="treasures__photo-block" :img="'img/treasures-img-6.jpg'" :img-mobile="'img/treasures-img-6-mobile.jpg'" />
@@ -1315,6 +1315,13 @@ export default {
             @supports (background-image: url(../../public/img/treasures-map-1.webp)) {
                 background-image: url(../../public/img/treasures-map-1.webp);
             }
+
+            &_en {
+                background-image: url(../../public/img/treasures-map-1-en.png);
+            @supports (background-image: url(../../public/img/treasures-map-1-en.webp)) {
+                background-image: url(../../public/img/treasures-map-1-en.webp);
+            }
+            }
             @media (max-width: 768px) {
                 display: none;
             }
@@ -1362,6 +1369,13 @@ export default {
                 @supports (background-image: url(../../public/img/treasures-map-1-mobile.webp)) {
                     background-image: url(../../public/img/treasures-map-1-mobile.webp);
                 }
+
+                &_en {
+                background-image: url(../../public/img/treasures-map-1-en-mobile.png);
+            @supports (background-image: url(../../public/img/treasures-map-1-en-mobile.webp)) {
+                background-image: url(../../public/img/treasures-map-1-en-mobile.webp);
+            }
+            }
                 .treasures__photo-block {
                     position: absolute;
                     top: 87rem;
@@ -1374,6 +1388,13 @@ export default {
             @supports (background-image: url(../../public/img/treasures-map-2.webp)) {
                 background-image: url(../../public/img/treasures-map-2.webp);
             }
+
+            &_en {
+                background-image: url(../../public/img/treasures-map-2-en.png);
+            @supports (background-image: url(../../public/img/treasures-map-2-en.webp)) {
+                background-image: url(../../public/img/treasures-map-2-en.webp);
+            }
+            }
             @media (max-width: 768px) {
                 background-image: url(../../public/img/treasures-map-2-mobile.png);
                 @supports (background-image: url(../../public/img/treasures-map-2-mobile.webp)) {
@@ -1383,6 +1404,13 @@ export default {
                 background-position: bottom;
                 padding-left: 4.26667rem;
                 margin-bottom: 11rem;
+
+                &_en {
+                background-image: url(../../public/img/treasures-map-2-en-mobile.png);
+            @supports (background-image: url(../../public/img/treasures-map-2-en-mobile.webp)) {
+                background-image: url(../../public/img/treasures-map-2-en-mobile.webp);
+            }
+            }
             }
             .treasures__photo-block {
                 position: absolute;
@@ -1418,6 +1446,13 @@ export default {
             @supports (background-image: url(../../public/img/treasures-map-3.webp)) {
                 background-image: url(../../public/img/treasures-map-3.webp);
             }
+
+            &_en {
+                background-image: url(../../public/img/treasures-map-3-en.png);
+            @supports (background-image: url(../../public/img/treasures-map-3-en.webp)) {
+                background-image: url(../../public/img/treasures-map-3-en.webp);
+            }
+            }
             @media (max-width: 768px) {
                 background-image: url(../../public/img/treasures-map-3-mobile.png);
                 @supports (background-image: url(../../public/img/treasures-map-3-mobile.webp)) {
@@ -1427,6 +1462,13 @@ export default {
                 background-position: bottom;
                 padding-left: 4.26667rem;
                 margin-bottom: 11rem;
+
+                &_en {
+                background-image: url(../../public/img/treasures-map-3-en-mobile.png);
+            @supports (background-image: url(../../public/img/treasures-map-3-en-mobile.webp)) {
+                background-image: url(../../public/img/treasures-map-3-en-mobile.webp);
+            }
+            }
             }
             .treasures__photo-block {
                 position: absolute;
@@ -1461,6 +1503,13 @@ export default {
             @supports (background-image: url(../../public/img/treasures-map-4.webp)) {
                 background-image: url(../../public/img/treasures-map-4.webp);
             }
+
+            &_en {
+                background-image: url(../../public/img/treasures-map-4-en.png);
+            @supports (background-image: url(../../public/img/treasures-map-4-en.webp)) {
+                background-image: url(../../public/img/treasures-map-4-en.webp);
+            }
+            }
             @media (max-width: 768px) {
                 background-image: url(../../public/img/treasures-map-4-mobile.png);
                 @supports (background-image: url(../../public/img/treasures-map-4-mobile.webp)) {
@@ -1470,6 +1519,13 @@ export default {
                 background-position: bottom;
                 padding-left: 4.26667rem;
                 margin-bottom: 11rem;
+
+                &_en {
+                background-image: url(../../public/img/treasures-map-4-en-mobile.png);
+            @supports (background-image: url(../../public/img/treasures-map-4-en-mobile.webp)) {
+                background-image: url(../../public/img/treasures-map-4-en-mobile.webp);
+            }
+            }
             }
             .number-block {
                 border-left: none;
@@ -1504,6 +1560,13 @@ export default {
             @supports (background-image: url(../../public/img/treasures-map-5.webp)) {
                 background-image: url(../../public/img/treasures-map-5.webp);
             }
+
+            &_en {
+                background-image: url(../../public/img/treasures-map-5-en.png);
+            @supports (background-image: url(../../public/img/treasures-map-5-en.webp)) {
+                background-image: url(../../public/img/treasures-map-5-en.webp);
+            }
+            }
             @media (max-width: 768px) {
                 background-image: url(../../public/img/treasures-map-5-mobile.png);
                 @supports (background-image: url(../../public/img/treasures-map-5-mobile.webp)) {
@@ -1513,6 +1576,13 @@ export default {
                 background-position: bottom;
                 padding-left: 4.26667rem;
                 margin-bottom: 11rem;
+
+                &_en {
+                background-image: url(../../public/img/treasures-map-5-en-mobile.png);
+            @supports (background-image: url(../../public/img/treasures-map-5-en-mobile.webp)) {
+                background-image: url(../../public/img/treasures-map-5-en-mobile.webp);
+            }
+            }
             }
             .treasures__photo-block {
                 position: absolute;
@@ -1547,6 +1617,13 @@ export default {
             @supports (background-image: url(../../public/img/treasures-map-6.webp)) {
                 background-image: url(../../public/img/treasures-map-6.webp);
             }
+
+            &_en {
+                background-image: url(../../public/img/treasures-map-6-en.png);
+            @supports (background-image: url(../../public/img/treasures-map-6-en.webp)) {
+                background-image: url(../../public/img/treasures-map-6-en.webp);
+            }
+            }
             @media (max-width: 768px) {
                 background-image: url(../../public/img/treasures-map-6-mobile.png);
                 @supports (background-image: url(../../public/img/treasures-map-6-mobile.webp)) {
@@ -1556,6 +1633,13 @@ export default {
                 background-position: bottom;
                 padding-left: 4.26667rem;
                 margin-bottom: 11rem;
+
+                &_en {
+                background-image: url(../../public/img/treasures-map-6-en-mobile.png);
+            @supports (background-image: url(../../public/img/treasures-map-6-en-mobile.webp)) {
+                background-image: url(../../public/img/treasures-map-6-en-mobile.webp);
+            }
+            }
             }
             .number-block {
                 border-left: none;

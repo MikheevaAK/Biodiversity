@@ -344,47 +344,61 @@
                     <BaseCollageInfo class="krasodnev" :title="lang === 'ru' ? 'Красоднев малый' : 'Dwarf daylily'" :color="'#71464E'"
                         :text=" lang === 'ru' ? 'Каждый цветок красоднева распускается лишь на&nbsp;один день' : 'Each dwarf daylily flower blooms for one day only.'" />
 
-                    <BaseCollageInfo class="slipper" :title="lang === 'ru' ? 'Венерин башмачок' : ''" :color="'#71464E'"
-                        :text="'Имеет причудливое строение цветка, напоминающего носок обуви'" />
+                    <BaseCollageInfo class="slipper" :title="lang === 'ru' ? 'Венерин башмачок' : 'Lady slipper orchard'" :color="'#71464E'"
+                        :text="lang === 'ru' ?'Имеет причудливое строение цветка, напоминающего носок обуви' : 'The flowers of the lady slipper orchid resemble the toe of a shoe or slipper.'" />
 
-                    <BaseCollageInfo class="curlew" :title="'Большой кроншнеп'" :color="'#71464E'"
-                        :text="'Изогнутый клюв птицы достигает 140&nbsp;мм'" />
+                    <BaseCollageInfo class="curlew" :title="lang === 'ru' ? 'Большой кроншнеп' : 'Eurasian curlew'" :color="'#71464E'"
+                        :text="lang === 'ru' ? 'Изогнутый клюв птицы достигает 140&nbsp;мм' : 'The distinctive long, downcurved bill of the Eurasian Curlew can reach up to 140 mm in length.'" />
 
-                    <BaseCollageInfo class="crane" :title="'Журавль-красавка'" :color="'#71464E'"
-                        :text="'Самый маленький из&nbsp;журавлей, его рост меньше метра'" />
+                    <BaseCollageInfo class="crane" :title="lang === 'ru' ? 'Журавль-красавка': 'Demoiselle crane'" :color="'#71464E'"
+                        :text=" lang === 'ru' ? 'Самый маленький из&nbsp;журавлей, его рост меньше метра' : 'The demoiselle crane is the smallest species of crane, with a height of less than one metre.'" />
 
-                    <BaseCollageInfo class="ledum" :title="'Багульник болотный'"
-                        :text="'В&nbsp;народных поверьях багульнику приписывались приворотные свойства'" />
+                    <BaseCollageInfo class="ledum" :title="lang === 'ru' ? 'Багульник болотный' : 'Marsh Labrador tea'"
+                        :text=" lang === 'ru' ? 'В&nbsp;народных поверьях багульнику приписывались приворотные свойства' : 'In folk beliefs, Marsh Labrador tea was associated with the power to aid in love spells.'" />
                     <div class="background background-1"></div>
                     <div class="background background-2"></div>
                     <div class="background background-3"></div>
                     <div class="background background-4"></div>
-                    <div class="background-text background-text-1">Амурский горчак</div>
-                    <div class="background-text background-text-2">Пескарь сибирский</div>
+                    <div class="background-text background-text-1">
+                    <span v-if="lang === 'ru'">
+                        Амурский горчак
+                </span>
+                <span v-else>
+                    Amur bitterling
+                </span>
+                    </div>
+                    <div class="background-text background-text-2">
+                    <span v-if="lang === 'ru'">
+                        Пескарь сибирский
+                </span>
+                <span v-else>
+                    Siberian <br/>gudgeon
+                </span>
+                    </div>
 
-                    <BaseDropdownInfo :is-modal="true" class="dubrovnik" :title="'Дубровник'" :color="'#71464E'" :pulsation-color="'finn'"
-                        :text="'Имеет китайское происхождение. В&nbsp;19&nbsp;веке вид проник в&nbsp;Европу и&nbsp;очень быстро освоил её: в&nbsp;1920-х годах птичек с&nbsp;яркой внешностью можно было встретить уже в&nbsp;Финляндии. За&nbsp;последнее время популяция дубровника в&nbsp;мире сократилась на&nbsp;90%, вид занесён в&nbsp;Красную книгу России'" />
-                    <BaseDropdownInfo :is-modal="true" class="moskovka_mobile" :title="'Московка'" :pulsation-color="'Green-Mist'"
-                        :text="'Во&nbsp;время когда московка возбуждена, она приподнимает перья на&nbsp;лбу в&nbsp;виде небольшого хохолка.'" />
-                    <BaseDropdownInfo :is-modal="true" class="siberian-deer" :title="'Сибирская косуля'" :pulsation-color="'Green-Mist'"
-                        :text="'Как показали исследования, численность сибирских косуль рядом с&nbsp;Быстринским ГОК и&nbsp;на&nbsp;территории за&nbsp;пределами радиуса промышленного воздействия одинаковая. Вид встречается настолько часто, что учёные РАН выбрали его индикатором состояния экосистем дивизиона'" />
+                    <BaseDropdownInfo :is-modal="true" class="dubrovnik" :title="lang === 'ru' ? 'Дубровник' : 'Yellow-breasted bunting'" :color="'#71464E'" :pulsation-color="'finn'"
+                        :text="lang === 'ru' ?'Имеет китайское происхождение. В&nbsp;19&nbsp;веке вид проник в&nbsp;Европу и&nbsp;очень быстро освоил её: в&nbsp;1920-х годах птичек с&nbsp;яркой внешностью можно было встретить уже в&nbsp;Финляндии. За&nbsp;последнее время популяция дубровника в&nbsp;мире сократилась на&nbsp;90%, вид занесён в&nbsp;Красную книгу России' : 'The yellow-breasted bunting, originally from China, made its way to Europe in the 19th century and quickly colonised the continent. By the 1920s, these eye-catching birds could already be spotted in Finland. However, in recent times, the global population of the yellow-breasted bunting has declined by 90%, leading to its inclusion in the Red Data Book of Russia.'" />
+                    <BaseDropdownInfo :is-modal="true" class="moskovka_mobile" :title="lang === 'ru' ? 'Московка' : 'Willow tit'" :pulsation-color="'Green-Mist'"
+                        :text=" lang === 'ru' ? 'Во&nbsp;время когда московка возбуждена, она приподнимает перья на&nbsp;лбу в&nbsp;виде небольшого хохолка.' : 'When a coal tit is agitated, the black feathers on the back of its head might be raised in a small spike.'" />
+                    <BaseDropdownInfo :is-modal="true" class="siberian-deer" :title="lang === 'ru' ? 'Сибирская косуля' : 'Siberian roe deer'" :pulsation-color="'Green-Mist'"
+                        :text="lang === 'ru' ? 'Как показали исследования, численность сибирских косуль рядом с&nbsp;Быстринским ГОК и&nbsp;на&nbsp;территории за&nbsp;пределами радиуса промышленного воздействия одинаковая. Вид встречается настолько часто, что учёные РАН выбрали его индикатором состояния экосистем дивизиона' : 'Research findings revealed that there is no difference in the population numbers of the Siberian roe deer near Bystrinsky GOK and in areas unaffected by its operations. The Russian Academy of Sciences selected this frequently encountered species as a reference to monitor the health of local ecosystems.'" />
 
-                    <BaseDropdownInfo :is-modal="true" class="ants" :title="'Муравьи'" :pulsation-color="'Green-Mist'"
-                        :text="'В&nbsp;Забайкальском дивизионе исследователи обнаружили 29&nbsp;видов муравьёв, из&nbsp;них три были выбраны индикаторами состояния экосистем: Чёрный болотный муравей, Черноголовый муравей и&nbsp;Бледноногий садовый муравей'" />
+                    <BaseDropdownInfo :is-modal="true" class="ants" :title="lang === 'ru' ? 'Муравьи' : 'Ants'" :pulsation-color="'Green-Mist'"
+                        :text="lang === 'ru' ? 'В&nbsp;Забайкальском дивизионе исследователи обнаружили 29&nbsp;видов муравьёв, из&nbsp;них три были выбраны индикаторами состояния экосистем: Чёрный болотный муравей, Черноголовый муравей и&nbsp;Бледноногий садовый муравей' : 'In the Trans-Baikal Division area, the researchers identified a total of 29 ant species, selecting three of them as reference species to monitor the health of local ecosystems, namely the Formica picea, Formica uralensis and Lasius alienus.'" />
 
-                    <BaseDropdownInfo :is-modal="true" class="hare" :title="'Заяц-беляк'" :pulsation-color="'Green-Mist'"
-                        :text="'Широко расставленные глаза помогают быстрее заметить опасность и&nbsp;убежать. Спасаясь, развивает скорость до&nbsp;60&nbsp;км/ч. Обитает также в&nbsp;Норильском дивизионе'" />
+                    <BaseDropdownInfo :is-modal="true" class="hare" :title="lang === 'ru' ? 'Заяц-беляк' : 'Mountain hare'" :pulsation-color="'Green-Mist'"
+                        :text=" lang === 'ru' ? 'Широко расставленные глаза помогают быстрее заметить опасность и&nbsp;убежать. Спасаясь, развивает скорость до&nbsp;60&nbsp;км/ч. Обитает также в&nbsp;Норильском дивизионе' : 'The mountain hare&rsquo;s eyes are on&nbsp;the sides of&nbsp;the head, allowing for a&nbsp;wide field of&nbsp;vision. It&nbsp;reaches speeds of&nbsp;up&nbsp;to&nbsp;60&nbsp;km/h whilst escaping predators. This species is&nbsp;also found in&nbsp;the Norilsk Division area.'" />
 
-                    <BaseDropdownInfo :is-modal="true" class="shrew_mobile" :title="'Бурозубка'" :pulsation-color="'Green-Mist'"
-                        :text="'Быстро стареет из-за необычайно интенсивного обмена веществ'" />
+                    <BaseDropdownInfo :is-modal="true" class="shrew_mobile" :title="lang === 'ru' ? 'Бурозубка' : 'Shrew'" :pulsation-color="'Green-Mist'"
+                        :text="lang === 'ru' ? 'Быстро стареет из-за необычайно интенсивного обмена веществ' : 'The shrew ages quickly due to its exceptionally high metabolic rate.'" />
 
 
-                    <BaseDropdownInfo :is-modal="true" class="maksimovichs-vole" :title="'Полёвка Максимовича'" :pulsation-color="'Green-Mist'"
-                        :text="'Доминирует среди других 10&nbsp;видов грызунов на&nbsp;территории всех зон воздействия Забайкальского дивизиона. Рядом с&nbsp;Быстринским комбинатом исследователи отметили особенно высокий уровень доминирования, поэтому выбрали полёвку Максимовича видом-индикатором'" />
-                    <BaseDropdownInfo :is-modal="true" class="killer-whale" :title="'Касатка'" :color="'#71464E'" :pulsation-color="'finn'"
-                        :text="'Охота&nbsp;&mdash; одна из&nbsp;причин сокращения численности этого вида уток. В&nbsp;брачный период самцы касаток приобретают выразительный элегантный окрас, из-за чего становятся желанным трофеем'" />
-                    <BaseDropdownInfo :is-modal="true" class="zooplankton-2" :title="'Зоопланктон'" :pulsation-color="'Green-Mist'"
-                        :text="'В&nbsp;водоёмах Забайкалья учёные использовали три вида как индикаторы степени воздействия: планктонная коловратка Lophocharis oxysternon присутствовала только в&nbsp;реках фоновых территорий, личинки подёнок Ephoron nigridorsum не&nbsp;обнаруживались в&nbsp;зоне интенсивного воздействия, а&nbsp;отделить пояса интенсивного и&nbsp;умеренного воздействия помогли личинки веснянок Agnetina extremа'" />
+                    <BaseDropdownInfo :is-modal="true" class="maksimovichs-vole" :title="lang === 'ru' ? 'Полёвка Максимовича' : 'Maximowicz’s vole'" :pulsation-color="'Green-Mist'"
+                        :text="lang === 'ru' ? 'Доминирует среди других 10&nbsp;видов грызунов на&nbsp;территории всех зон воздействия Забайкальского дивизиона. Рядом с&nbsp;Быстринским комбинатом исследователи отметили особенно высокий уровень доминирования, поэтому выбрали полёвку Максимовича видом-индикатором' : 'This species is the dominant rodent type among the ten which are found in the zones of influence of the Trans-Baikal Division. Noticing a particularly high level of dominance near the Bystrinskiy factory, researchers chose Maksimowicz’s Vole as an indicator species'" />
+                    <BaseDropdownInfo :is-modal="true" class="killer-whale" :title="lang === 'ru' ? 'Касатка' : 'Falcated duck'" :color="'#71464E'" :pulsation-color="'finn'"
+                        :text="lang === 'ru' ? 'Охота&nbsp;&mdash; одна из&nbsp;причин сокращения численности этого вида уток. В&nbsp;брачный период самцы касаток приобретают выразительный элегантный окрас, из-за чего становятся желанным трофеем' : 'Hunting is one of the reasons for the declining population of the falcated duck. During the breeding season, males acquire a striking and elegant plumage, which enhances their attractiveness to potential mates.'" />
+                    <BaseDropdownInfo :is-modal="true" class="zooplankton-2" :title="lang === 'ru' ? 'Зоопланктон' : 'Zooplankton'" :pulsation-color="'Green-Mist'"
+                        :text="lang === 'ru' ? 'В&nbsp;водоёмах Забайкалья учёные использовали три вида как индикаторы степени воздействия: планктонная коловратка Lophocharis oxysternon присутствовала только в&nbsp;реках фоновых территорий, личинки подёнок Ephoron nigridorsum не&nbsp;обнаруживались в&nbsp;зоне интенсивного воздействия, а&nbsp;отделить пояса интенсивного и&nbsp;умеренного воздействия помогли личинки веснянок Agnetina extremа' : 'The scientists selected three reference species of zooplankton to monitor the health of local bodies of water in the Trans-Baikal Territory. The Lophocharis oxysternon scarab beetle was found only in rivers across the background areas, the larvae of the Ephoron nigridorsum mayflies were not encountered in the area of intense impact, and the larvae of the Agnetina extrema stoneflies helped distinguish between the areas of intense and moderate impact.'" />
 
                 </div>
                 <div class="habitat-map">

@@ -110,7 +110,7 @@ export default {
                 title: 'Сохраняя экосистемы',
                 titleEn: 'Preserving ecosystems',
                 text: 'Интерактивный проект об экологических проектах «Норникеля» по сохранению природных экосистем.',
-                textEn: 'Test',
+                textEn: 'The interactive digital story about Nornikel’s ecological projects aims to preserve ecosystem resilience',
                 tgImg: `${document.location.origin}/img/opengraph-telegram.jpg`,
                 vkImg: `${document.location.origin}/img/opengraph-vk.jpg`,
                 tgImgEn: `${document.location.origin}/img/opengraph-telegram-en.jpg`,

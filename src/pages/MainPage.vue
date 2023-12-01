@@ -237,24 +237,25 @@ export default {
             }
         }
 
-        @media (max-height: 50.677vw) and (min-width: 769px) {
-            background-position: center;
-            background-image: url(../../public/img/hero-main-size.png);
+        @media (max-height: 53vw) and (min-width: 769px) {
+            background-position: top;
+            min-height: 130vh;
+            // background-image: url(../../public/img/hero-main-size.png);
 
-            @supports (background-image: url(../../public/img/hero-main-size.webp)) {
-                background-image: url(../../public/img/hero-main-size.webp);
-            }
+            // @supports (background-image: url(../../public/img/hero-main-size.webp)) {
+            //     background-image: url(../../public/img/hero-main-size.webp);
+            // }
         }
-
-        @media (max-height: 40.972vw) and (min-width: 769px) {
-            background-position: center;
-        }
-
         &_en {
             background-image: url(../../public/img/hero-main-en.png);
 
             @supports (background-image: url(../../public/img/hero-main-en.webp)) {
                 background-image: url(../../public/img/hero-main-en.webp);
+            }
+
+            @media (max-height: 53vw) and (min-width: 769px) {
+                background-position: top;
+                min-height: 130vh;
             }
 
             @media (max-width: 768px) {

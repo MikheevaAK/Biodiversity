@@ -398,7 +398,7 @@
                     Уровень воды в&nbsp;реке может заметно повыситься относительно многолетних значений из-за аномально снежной зимы. В&nbsp;результате паводка под водой окажутся те&nbsp;территории, которые обычно не&nbsp;затапливает. На&nbsp;биоразнообразии это скажется
                     негативно, однако причины у&nbsp;таких изменений будут исключительно природными.
                 </p>
-                <p else>
+                <p v-else>
                     Due to an abnormally snowy winter, the river's water level may rise dramatically compared to historical values, swamping areas that are not usually affected by spring floods. This will have an adverse impact on the biodiversity, but the reasons for such changes will be purely natural.
                 </p>
             </BaseTextQuotes>
